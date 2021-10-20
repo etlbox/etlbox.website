@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div>
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.lead | safeHTML }}</p>
+  <article>
+      {{ .Content }}
+  </article>
+</div>
+{{ end }}

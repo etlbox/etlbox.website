@@ -1,0 +1,82 @@
+/* Background */ .chroma { background-color: #f8f9fa }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err {  }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+/* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+/* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* Keyword */ .chroma .k { color: #569cd6 }
+/* KeywordConstant */ .chroma .kc { color: #569cd6 }
+/* KeywordDeclaration */ .chroma .kd { color: #569cd6 }
+/* KeywordNamespace */ .chroma .kn { color: #569cd6 }
+/* KeywordPseudo */ .chroma .kp { color: #569cd6 }
+/* KeywordReserved */ .chroma .kr { color: #569cd6 }
+/* KeywordType */ .chroma .kt { color: #2b91af }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na {  color: #2b91af }
+/* NameBuiltin */ .chroma .nb {  color: #2b91af }
+/* NameBuiltinPseudo */ .chroma .bp {  color: #2b91af }
+/* NameClass */ .chroma .nc { color: #2b91af }
+/* NameConstant */ .chroma .no {  color: #2b91af }
+/* NameDecorator */ .chroma .nd {  color: #2b91af }
+/* NameEntity */ .chroma .ni {  color: #2b91af }
+/* NameException */ .chroma .ne {   color: #2b91af}
+/* NameFunction */ .chroma .nf {  color: #2b91af }
+/* NameFunctionMagic */ .chroma .fm {  color: #2b91af }
+/* NameLabel */ .chroma .nl {  color: #2b91af }
+/* NameNamespace */ .chroma .nn {  color: #2b91af }
+/* NameOther */ .chroma .nx {  color: #2b91af }
+/* NameProperty */ .chroma .py {  color: #2b91af }
+/* NameTag */ .chroma .nt {  color: #2b91af }
+/* NameVariable */ .chroma .nv {  color: #2b91af }
+/* NameVariableClass */ .chroma .vc {  color: #2b91af }
+/* NameVariableGlobal */ .chroma .vg {  color: #2b91af }
+/* NameVariableInstance */ .chroma .vi {  color: #2b91af }
+/* NameVariableMagic */ .chroma .vm {  color: #2b91af }
+/* Literal */ .chroma .l {  }
+/* LiteralDate */ .chroma .ld {  }
+/* LiteralString */ .chroma .s { color: #d69d85 }
+/* LiteralStringAffix */ .chroma .sa { color: #d69d85 }
+/* LiteralStringBacktick */ .chroma .sb { color: #d69d85 }
+/* LiteralStringChar */ .chroma .sc { color: #d69d85 }
+/* LiteralStringDelimiter */ .chroma .dl { color: #d69d85 }
+/* LiteralStringDoc */ .chroma .sd { color: #d69d85 }
+/* LiteralStringDouble */ .chroma .s2 { color: #d69d85 }
+/* LiteralStringEscape */ .chroma .se { color: #d69d85 }
+/* LiteralStringHeredoc */ .chroma .sh { color: #d69d85 }
+/* LiteralStringInterpol */ .chroma .si { color: #d69d85 }
+/* LiteralStringOther */ .chroma .sx { color: #d69d85 }
+/* LiteralStringRegex */ .chroma .sr { color: #d69d85 }
+/* LiteralStringSingle */ .chroma .s1 { color: #d69d85 }
+/* LiteralStringSymbol */ .chroma .ss { color: #d69d85 }
+/* LiteralNumber */ .chroma .m {  }
+/* LiteralNumberBin */ .chroma .mb {  }
+/* LiteralNumberFloat */ .chroma .mf {  }
+/* LiteralNumberHex */ .chroma .mh {  }
+/* LiteralNumberInteger */ .chroma .mi {  }
+/* LiteralNumberIntegerLong */ .chroma .il {  }
+/* LiteralNumberOct */ .chroma .mo {  }
+/* Operator */ .chroma .o {  }
+/* OperatorWord */ .chroma .ow { color: #569cd6 }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: #008000 }
+/* CommentHashbang */ .chroma .ch { color: #008000 }
+/* CommentMultiline */ .chroma .cm { color: #008000 }
+/* CommentSingle */ .chroma .c1 { color: #008000 }
+/* CommentSpecial */ .chroma .cs { color: #008000 }
+/* CommentPreproc */ .chroma .cp { color: #569cd6 }
+/* CommentPreprocFile */ .chroma .cpf { color: #569cd6 }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd {  }
+/* GenericEmph */ .chroma .ge { font-style: italic }
+/* GenericError */ .chroma .gr {  }
+/* GenericHeading */ .chroma .gh { font-weight: bold }
+/* GenericInserted */ .chroma .gi {  }
+/* GenericOutput */ .chroma .go {  }
+/* GenericPrompt */ .chroma .gp { font-weight: bold }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { font-weight: bold }
+/* GenericTraceback */ .chroma .gt {  }
+/* GenericUnderline */ .chroma .gl {  }
+/* TextWhitespace */ .chroma .w {  }

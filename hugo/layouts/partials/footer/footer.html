@@ -1,0 +1,18 @@
+<footer class="footer text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-first order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Crafted with <img src="/images/heart.svg?dp={{ .RelPermalink | safeURL }}" heigth="16" width="16" />&nbsp;in Berlin.<br/><i class="bi-envelope"></i><a href="/support/options/">&nbsp;ETLBox Office</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-last order-lg-last text-lg-end">
+        <ul class="list-inline">
+          {{ range .Site.Menus.footer -}}
+            <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+          {{ end -}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+[build]
+  publish = "public"
+  functions = "functions"
+
+[build.environment]
+  HUGO_VERSION = "0.80.0"
+  NODE_VERSION = "15.5.1"
+  NPM_VERSION = "7.3.0"  
+  GOOGLE_ANALYTICS_ID = "UA-177207474-1"
+
+[context.production]
+  command = "hugo -b $URL --gc --minify && npm run build:functions"
+
+[context.deploy-preview]
+  command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"
+
+[context.branch-deploy]
+  command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"
+
+[[redirects]]
+  from = "/images/heart.svg"
+  to = "/.netlify/functions/request"
+  status = 200
+  force = true
+  
+[[redirects]]  
+  from = "/book-a-demo"
+  to = "https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/servicedesk"
+  to = "https://etlbox.atlassian.net/servicedesk/customer/portals"
+  status = 302
+  force = true
+
+#[plugins]
+  #package = "netlify-plugin-checklinks"
