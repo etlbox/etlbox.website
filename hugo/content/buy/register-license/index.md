@@ -36,8 +36,11 @@ If you add it to the sources of your project, make sure that the option `Copy to
 
 ##### Azure functions / Azure web app:
 
-By default, output files are copied into an app data directory. It is recommended to use option 1 instead.
-If you need to use the file, you can add a resource to your project. Add the license file into the resource file. The file is now embedded as a resource and the license check is able to read the license from the resource.
+Using Azure functions or Azure web apps, Option 1 is the recommended option to register the license key. 
+
+There are different deployment methods available for your Azure Function or Web App. Some deployments methods will give you access to the file system on your Azure File Storage. In this case you can copy the etlbox.lic file into the same folder where your executable resides.
+
+If you are using the Zip deploy method, you won't have access to the files on your file storage. If you still want to use the file based approach, you can add the etlbox.lic file as a resource to your project. The file is now embedded as a resource and the license check is able to extract the license from the resource file automatically. 
 
 #### Option 3:
 
@@ -47,17 +50,16 @@ Before you execute a data flow, add the following line to your code:
 LicenseCheck.LicenseKey = "content_of_license_file";
 ```
 
+This will work in any environment.
+
 ## FAQ
 
 #### How long is my license valid?
 
-The implemented license check in ETLBox will basically just verify if the date at the beginning of the license string is still in the future. For non trial licenses, there is an additional grace period where the license will still work for some days after this date (though a warning is written into the log file).
+The implemented license check in ETLBox will basically just verify if the date at the beginning of the license string is still in the future. For non trial licenses, there is an additional grace period where the license will still work for 90 days after this date (though a warning is written into the log file).
 
 #### Why is there no online license check?
 
-Security is a matter that we take seriously. We don't want to create any vulnerabilities by adding unnecessary web request to your code base.
-The only web request that ETBox will make are the ones that you explicitly trigger, e.g. if you use the JsonSource with an URL to get data from a web service. Other than that, ETLBox won't try to connect anywhere else. That's why the whole license is implemented off line.
+Security is a matter that we take seriously. We don't want to create any vulnerabilities by adding unnecessary web requests to your code base.
+The only web request that ETBox will make are the ones that you explicitly trigger, e.g. if you use the JsonSource with an URL to get data from a web service. Other than that, ETLBox won't try to connect anywhere else. That's why the whole license is implemented offline.
 
-#### I have an annual license - why is my issued license key valid for more than 2 years?
-
-We don't want to force you to change the key every year manually. To reduce your efforts here, the issued key is valid for a longer time period. Billing will be still be made annually.

@@ -29,8 +29,7 @@ Simply add it to your project using your nuget package manager.
 dotnet add package ETLBox
 ```
 
-The connectors are in separate packages - depending on your needs, choose the right connector package from the list. Pick the {{< link-ext url="https://www.nuget.org/packages/ETLBox.SQLServer/" text="ETLBox.SQLServer" >}} package if you want to connect to a (Azure) SQLServer database, or choose {{< link-ext url="https://www.nuget.org/packages/ETLBox.Json/" text="ETLBox.Csv" >}}  if you want to load data from a Json file or REST endpoint. 
-
+The connectors are in separate packages - depending on your needs, choose the right connector package from the list. Pick the {{< link-ext url="https://www.nuget.org/packages/ETLBox.SqlServer/" text="ETLBox.SqlServer" >}} package if you want to connect to a (Azure) SQLServer database, or choose {{< link-ext url="https://www.nuget.org/packages/ETLBox.Json/" text="ETLBox.Json" >}}  if you want to load data from a Json file or REST endpoint. 
 
 ## Data and Control Flow
 
