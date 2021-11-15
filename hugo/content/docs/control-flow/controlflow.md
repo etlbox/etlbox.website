@@ -319,3 +319,42 @@ data.Rows.Add(values3);
 SqlTask.BulkInsert(connection, "Bulk insert demo data", data, "TableName");
 ```
 
+### Bulk deletes
+
+You can use the `BulkDelete` method exposed on the `SqlTask` to perform a batch delete on the database. 
+It allows you to delete data from a table by passing a `TableData` object which contains the columns names and the values of each column which you would like to delete.
+The `SqlTask` will then exceute a single `DELETE` statement on your database that removes all matching records in one execution.
+ 
+Here is an example:
+
+```Sql
+CREATE TABLE BulkDeleteTable(
+  Id INT NOT NULL,
+  Value1 VARCHAR(100) NULL;
+  Value2 VARCHAR(100) NULL
+)
+INSERT INTO dest (Id,Value1,Value2) VALUES (1, 'A', 'Test1');
+INSERT INTO dest (Id,Value1,Value2) VALUES (2, 'B' , 'Test2');
+INSERT INTO dest (Id,Value1,Value2) VALUES (3, 'C', 'Test3');
+INSERT INTO dest (Id,Value1,Value2) VALUES (4, 'D', 'Test4');
+```
+
+```C#
+TableData data = new TableData(new TableDefinition() {
+    Name = "BulkDeleteTable",
+    Columns = new List<TableColumn>() {
+                    new TableColumn() { Name = "Id"},
+                    new TableColumn() { Name = "Value1"}
+    }
+});
+
+var row1 = new object[] { 1, "A" };
+var row2 = new object[] { 2, "B" };
+var row2 = new object[] { 4, "X" }; //no match!
+data.Rows.Add(row1);
+data.Rows.Add(row2);
+
+SqlTask.BulkDelete(SqlConnection, data);
+```
+
+This will delete the first two rows (with Id 1 and 2), because the value in the columns 'Id' and 'Value1' matched with the provided data.
