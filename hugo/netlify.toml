@@ -23,6 +23,12 @@
   status = 200
   force = true
   
+[[redirects]]
+  from = "/demo/api/orders"
+  to = "/.netlify/functions/orders"
+  status = 200
+  force = true
+      
 [[redirects]]  
   from = "/book-a-demo"
   to = "https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/"
