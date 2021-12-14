@@ -16,7 +16,7 @@ toc: true
 The text source let you read data from any text file. It will read every line from the source which can be transformed with a ParseLineAction - this allows you to parse the line into your data object as you like. As you need to define how a line in your file is converted into an object yourself, this source is not as convenient as other sources, but offers the most flexibility when reading text files in a non common format. 
 
 
-Let's go through an exmaple. If your text file look like this:
+Let's go through an example. If your text file look like this:
 
 ```
 1--A
@@ -61,7 +61,7 @@ source.ParseLineAction = (line, progressCount) =>
 
 ### Using arrays
 
-Your input type could also be an array. If you define an array as input type, you can set the size of the array in the property `ArraySize`. Because the TextSource does the array initialization for you, this value will define the max number of elements accessable in the area. The default is 10. 
+Your input type could also be an array. If you define an array as input type, you can set the size of the array in the property `ArraySize`. Because the TextSource does the array initialization for you, this value will define the max number of elements accessible in the area. The default is 10. 
 
 ```C#
 TextSource<string[]> source = new TextSource<string[]>();
@@ -93,9 +93,19 @@ TextDestination<MyTextRow> dest = new TextDestination<MyTextRow>("outputFile.txt
 dest.WriteLineFunc = (row,progressCount) => $"{row.Id}--{ro}.Text}";
 ```
 
+### Write header information
+
+If you want to add one or multiple header rows at the beginning of your destination file, you can use the `WriteHeaderFunc` function. This function must return a string that is written in the destination before the first row is processed. The header can span across multiple rows if needed. 
+
+```C#
+TextDestination<MyTextRow> dest = new TextDestination<MyTextRow>("res/TextDestination/InitialWriteTest.txt");
+dest.WriteHeaderFunc = () => "This is the first row"+Environment.NewLine+"Id  Value";
+dest.WriteLineFunc = tr => $"{tr.Id}  {tr.Text}";
+```
+
 ### Using dynamic objects
 
-Instead of an object you can use the ExandoObject with the default implementation.
+Instead of an object you can use the ExpandoObject with the default implementation.
 
 ```C#
 TextDestination dest = new TextDestination("outputFile.txt");
