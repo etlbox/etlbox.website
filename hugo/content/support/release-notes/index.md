@@ -5,6 +5,32 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.5.2
+
+#### Features
+
+- Streaming sources enhanced with RowModificationAction that allows to enrich rows with the current stream meta data or to modify rows before they are sent into the output buffer
+- LookupTransformation: Property IgnoreDataTypes renamed to UseExactNumericTypes
+- DbMerge supports duplicate filtering with the new flag 'FilterDuplicates'
+- TextDestination: Added WriteHeaderFunc which writes a custom header line as first row into output file
+- ColumnMap attribute extended with property "IgnoreColumn" which allows to ignore particular columns when reading or writing into a database
+
+
+#### Bug
+
+- .NET 3.1 and .NET standard version contains references to 3.1 system packages, .NET 5  only references 5.0 system packages
+- DbMerge now ignores flawed rows (redirected via LinkErrorTo) in delta output
+- Improved exception handling for SqlTask.ExecuteReader
+- SqlServer: fixed bug when reading column definition from tables containing HIERACHYID, GEOGRAPHY or GEOMETRY data type
+- CreateTableTask: Fixed bug that prevented keywords to be used as default values
+- TableDefinition in SqlServer: Sql specific keywords in default values (e.g. GETDATE) are now correctly read
+- DbMerge: will throw exception if a readonly variable is used incorrectly as CompareColumn
+- DbSource/DbDestination/DbMerge: Improved exception message if a column mapping with duplicate column names is provided
+- Fixed bug when parsing sql statements that contained column names in single quotes
+- Using GetNextUri/HasNextUri, error message improved if status code response is not 200
+- Fixed in DbMerge: If input row is null, Exception is thrown: "TargetException: Non-static method requires a target"
+- Lookup: retrieved column values are now converted automatically into type of destination property
+
 ## Version 2.5.1
 
 #### Features 
