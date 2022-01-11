@@ -14,7 +14,7 @@ toc: true
 
 # Syncing tables with Merge
 
-ETLbox can be used to integrate data from different source and write them into different destinations. 
+ETLBox can be used to integrate data from different source and write them into different destinations. 
 Most of the time you will use tables in a database as target. 
 A very common use case here is to keep a source and destination tables "in sync". 
 
@@ -93,9 +93,12 @@ public class MyMergeRow : MergeableRow
     public int Key { get; set; }
 
     [CompareColumn]
+    [UpdateColumn]
     public string Value { get; set; }
 }
 ```
+
+{{< alert text="You only need to provide the IdColumn. Update or Compare columns are optional. If no Compare columns are defined, automatically all non id columns will be used for comparison. Vice versa for the Update columns." >}}
 
 In our scenario we have a source table that would look like this:
 
@@ -112,6 +115,8 @@ Key |Value         |
 2   |XXX           
 3   |Test - Exists 
 4   |Test - Deleted
+
+{{< alert text="All compare columns must be writable, so make sure they have a setter assigned." >}}
 
 ### Setting up the data flow
 
@@ -192,6 +197,7 @@ public class MyMergeRow : MergeableRow
     [IdColumn]
     public long Key { get; set; }
     [CompareColumn]
+    [UpdateColumn]
     public string Value { get; set; }
     [DeleteColumn(true)]
     public bool DeleteThisRow { get; set; }
@@ -329,6 +335,18 @@ public class MySimpleRow : IMergeableRow
 Overwriting the Equals method and using the IdColumn attribute is optional. If no IdColumn
 is passed, then you would need to use the `UseTruncateMethod`.
 
-If you use the ExpanoObject, the properties ChangeDate and ChangeAction are appended automatically.
+If you use the ExpandoObject, the properties ChangeDate and ChangeAction are appended automatically.
 You will need to pass at least one IdColumn to the `MergeProperties.IdColumns` when using the dynamic approach.
 
+### Duplicate detection
+
+The `DbMerge` has the flag `FindDuplicate` which by default is set to false. If set to true, the DbMerge will store 
+already processed input data additionally in an internal lookup table. If another records with the same id arrives in this component, 
+this record is then identified as a duplicate and will be treated as update instead (the default is that the DbMerge would try to insert both records, which likely results in an exception.
+
+Please note that this will heavenly increase memory consumption as all of your input data is additionally stored in a dictionary before it is inserted into the destination. 
+
+```C#
+DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
+merge.FilterDuplicates = true;
+```

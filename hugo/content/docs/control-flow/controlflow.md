@@ -110,7 +110,7 @@ If you are interesting in retrieving a TableDefinition object from an existing d
 the static method `FromTableName` on the `TableDefinition` class:
 
 ```C#
-TableDefinition.FromTableName("demoTable", connectionManager);
+TableDefinition.FromTableName(connectionManager, "demoTable");
 ```
 
 ### Views

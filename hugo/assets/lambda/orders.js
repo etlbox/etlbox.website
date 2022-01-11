@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {
         "customerData": [
           {
             "OrderNumber": 10100,
-            "CustomerName": 1,
+            "CustomerId": 1,
             "Description": "T-Shirts: 7"
           },
           {
