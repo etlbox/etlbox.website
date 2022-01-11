@@ -41,5 +41,17 @@
   status = 302
   force = true
 
+[[redirects]]  
+  from = "/std-eula"
+  to = "https://www.etlbox.net/buy/licenses/standard-eula/"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/rf-eula"
+  to = "https://www.etlbox.net/buy/licenses/royality-free-eula/"
+  status = 302
+  force = true
+
 #[plugins]
   #package = "netlify-plugin-checklinks"
