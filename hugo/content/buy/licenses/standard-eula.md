@@ -22,16 +22,16 @@ Subject to the payment of the fee required and subject to the terms and conditio
 If We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.
 
 3. DISTRIBUTION
-You may distribute the Software in any applications, frameworks, or elements (collectively referred to as an “Application” or “Applications”) that you develop using the Software in accordance with this License Agreement, provided that such distribution does not violate the restrictions set forth in section 4 of this License Agreement. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement affixed to, incorporated in or otherwise applied in connection with the Software.
+You may distribute the Software company wide in any applications, frameworks, or elements (collectively referred to as an “Application” or “Applications”) that you develop using the Software in accordance with this License Agreement, provided that such distribution does not violate the restrictions set forth in section 4 of this License Agreement. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement affixed to, incorporated in or otherwise applied in connection with the Software.
 
-You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. For example, if You install the Software on a customer’s server, that customer is not permitted to use the Software independently of Your application, and must be informed as such.
+You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. You are required to ensure that all Applications using the Software are only distributed to servers which are directly under Your control or the control of Your company. 
 
 You will not owe Us any royalties for Your distribution of the Software in accordance with this License Agreement.
 
 4. PROHIBITED USES
 You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You are explicitly not allowed to redistribute the Software or Modifications as part of any product that can be described as a development toolkit or library, an application builder, a website builder or any product that is intended for use by software, application, or website developers or designers. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
 
-You may not redistribute the Software as part of a product, "appliance" or "virtual server". You may not redistribute the Software on any server which is not directly under Your control.
+**You may not redistribute the Software as part of a product, "appliance" or "virtual server". You may not redistribute the Software on any server which is not directly under Your control.**
 
 UNDER NO CIRCUMSTANCES MAY YOU USE THE SOFTWARE FOR A PRODUCT THAT IS INTENDED FOR SOFTWARE OR APPLICATION DEVELOPMENT PURPOSES.
 
