@@ -15,6 +15,7 @@ toc: true
 
 The text source let you read data from any text file. It will read every line from the source which can be transformed with a ParseLineAction - this allows you to parse the line into your data object as you like. As you need to define how a line in your file is converted into an object yourself, this source is not as convenient as other sources, but offers the most flexibility when reading text files in a non common format. 
 
+{{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
 Let's go through an example. If your text file look like this:
 

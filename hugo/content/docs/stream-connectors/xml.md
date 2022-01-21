@@ -15,6 +15,8 @@ toc: true
 
 If you need to work with xml code, make sure to add the latest {{< link-ext text="ETLBox.Xml" url="https://www.nuget.org/packages/ETLBox.Xml/" >}} package to your project. The xml integration is based on `System.Xml`.
 
+{{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
+
 ## XmlSource
 
 The xml source let you read data from a xml source.

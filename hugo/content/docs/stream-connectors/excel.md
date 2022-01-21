@@ -17,6 +17,8 @@ If you need to read from excel files, make sure to add the latest nuget package 
 
 The Excel connector can read excel from a source pr create a new excel. The ExcelDestination has some limitations regarding performance and the max number of rows. If you need to generate Excel output, consider to create csv files instead (using the `CsvDestination`) which can also be opened with Excel. 
 
+{{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
+
 ## ExcelSource
 
 An Excel source reads data from a xls or xlsx file. By default the excel reader will try to read all data in the file. You can specify a sheet name and a range 

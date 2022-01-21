@@ -17,6 +17,8 @@ The {{< link-ext url="https://nuget.org/packages/ETLBox.Json" text="ETLBox.Json"
 
 The json connector package is based on {{< link-ext text="Json.NET by Newtonsoft" url="https://www.newtonsoft.com/json" >}}.
 
+{{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
+
 ## JsonSource
 
 Json Source let you read a json. 

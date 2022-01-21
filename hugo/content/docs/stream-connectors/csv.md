@@ -17,6 +17,8 @@ The {{< link-ext url="https://nuget.org/packages/ETLBox.Csv" text="ETLBox.Csv" >
 
 The csv connector package is based on the {{< link-ext text="CsvHelper library created by Josh Close" url="https://joshclose.github.io/CsvHelper/" >}}. Both classes expose the `CsvHelper.Configuration` property which can be used to directly configure the import/export settings of csv helper. You can find {{< link-ext url="https://joshclose.github.io/CsvHelper/examples/configuration/" text="examples how to configure in the CsvHelper documentation" >}}. E.g. you can change the delimiter or the separator values. 
 
+{{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
+
 ## CsvSource
 
 A CsvSource simple reads data from a csv file or from a web service endpoint. 
