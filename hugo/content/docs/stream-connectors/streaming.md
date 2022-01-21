@@ -20,6 +20,7 @@ ETLBox currently supports the following data storage types:
 - Xml
 - Excel 
 - Text
+- Parquet
 
 This article covers functionalities that are shared by all of these data types. 
 
@@ -35,7 +36,7 @@ Once the data is read from one of these types into a data flow, all transformati
 
 ### Streaming data 
 
-All data that is read or written with these connectors supports streaming. Streaming for a source means that data will be send into a data flow while it is still read from the source. Imagine you receive a json from a webservice that contains a lot of data - ETLBox will start reading the data from the input stream of the web resonponse. Every element of the data that was already received will be send to the connected components immediately. So while the source server is still transferring data, the ETLBox data will already start processing the data received. 
+All data that is read or written with these connectors supports streaming. Streaming for a source means that data will be send into a data flow while it is still read from the source. Imagine you receive a json from a webservice that contains a lot of data - ETLBox will start reading the data from the input stream of the web response. Every element of the data that was already received will be send to the connected components immediately. So while the source server is still transferring data, the ETLBox data will already start processing the data received. 
 
 If you source is sending you data faster than your data flow process, each connector will use an internal buffer to store the already received data. The buffer size can be adjusted with the `MaxBufferSize` property available on each connector.
 
