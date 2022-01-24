@@ -167,3 +167,26 @@ source.CreateStreamReader = url =>
   return reader;
 };
 ```
+
+#### Modify or enrich rows directly after reading
+
+Each streaming source offers the `RowModificationAction`. This Action (`Action<TOutput, StreamMetaData>`) allows to modify a record directly after it is read from the source and before it is send to the next component. While processing of data in other components can happen asynchronously, the execution of this action is synchronous for the source and always occurs after each record was read and before a new record is read. (Execution of reading a row and invoking this action will take place in the same thread). 
+
+One usage example would be to get the URI used for the current record (when combined with `GetNextUri`/`HasNextUri`). 
+
+```C#
+public class MySimpleRow
+{
+    public string CurrentUri { get; set; }
+    public int ProcessingNumber { get; set; }
+}
+
+int i = 0;
+source.GetNextUri = smd => $"localhost/test/{i++}";
+source.HasNextUri = smd => i<10;
+
+source.RowModificationAction = (row, smd) => {
+    row.ProcessingNumber = smd.ProcessedRows;
+    row.CurrentUri = smd.RequestUri;
+};
+```
