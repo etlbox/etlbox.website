@@ -316,7 +316,7 @@ public class MyMergeRow : MergeableRow
 As you can see, you can also use the `CompareColumn` attribute on each property that you want to use for identifying
 existing records. 
 
-### Using the IMergabeRow interface
+### Using the IMergableRow interface
 
 Sometimes, you want do the implementation of the IMergeableRow interface yourself. Here is an example implementation:
 
@@ -350,3 +350,20 @@ Please note that this will heavenly increase memory consumption as all of your i
 DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
 merge.FilterDuplicates = true;
 ```
+
+## Dynamic objects
+
+The above examples for the `DbMerge` make use of strongly typed objects (POCOs). The DbMerge also supports the usage of the dynamic `ExpandoObject`. 
+When using the `ExandoObject`, the properties `ChangeAction` and `ChangeDate` are added automatically to the object.
+
+You can set the MergeProperties using the `MergeProperties` object, which contains properties for `IdColumns`, `ComareColumns` and `UpdateColumns`. 
+
+```C#
+DbMerge dest = new DbMerge(SqlConnection, "DBMergeDynamicDeltaDestination") {
+    MergeMode = MergeMode.Delta
+};
+dest.MergeProperties.IdColumns.Add(new IdColumn() { IdPropertyName = "Id" });
+dest.MergeProperties.CompareColumns.Add(new CompareColumn() { ComparePropertyName = "CompareCol" });
+dest.MergeProperties.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteCol", DeleteOnMatchValue = true });
+```
+
