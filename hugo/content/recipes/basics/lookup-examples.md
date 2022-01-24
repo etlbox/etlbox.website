@@ -1,7 +1,7 @@
 ---
-title: "Lookup examples"
+title: "Data lookup"
 description: "Various examples how to use the lookup transformation"
-lead: "This article contains examples which show how to use the lookup transformation."
+lead: "This article contains examples which show how to use the lookup transformation and shows other techniques to lookup data.."
 draft: false
 images: []
 menu:
@@ -249,7 +249,7 @@ foreach (var row in dest.Data)
 //Order:4711 Name:Jim Id:2
 ```
 
-## Additional examples
+## Additional examples for LookupTransformation
 
 the following example are additional examples to demonstrate the usage of the lookup.
 
@@ -378,6 +378,102 @@ public void OverwritingComparisonInObject()
     PrintFile("output1.csv");
 }
 ```
+## Alternatives to LookupTransformation
+
+### BatchedRowTransformation
+
+You can also utilize the RowTransformation or the BatchRowTransformation to enrich your data with custom code. 
+Below an example for the BatchRowTransformation. 
+We used the BatchTransformation so that we can execute one sql statement for a set of data - 100 in this example. If we would execute the statement for every row, the lookup could become very slow (depending on your database connection speed). 
+
+```C#
+public class Order
+{
+    public int OrderNumber { get; set; }
+    public string CustomerName { get; set; }
+    public int? CustomerId { get; set; }
+}
+
+public class Customer
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+var orderSource = new MemorySource<Order>();
+orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
+orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
+
+var batchTrans = new BatchTransformation<Order>()
+{
+    BatchSize = 100,
+    BatchTransformationFunc =
+    batch =>
+    {
+        var names = string.Join(",", batch.Select(cust => $"'{cust.CustomerName}'"));
+        string curName =""; int curId =0;
+        Dictionary<string, int> idByName = new Dictionary<string, int>();
+        var sql = new SqlTask()
+        {
+            ConnectionManager = SqlConnection,
+            Sql = $"SELECT DISTINCT Name, Id FROM CustomerTable WHERE Name IN ({names})",
+            AfterRowReadAction = () => { idByName.Add(curName, curId); },
+            Actions = new List<Action<object>>() {
+                name => curName = (string)name,
+                id => curId = (int)id
+            }
+        };
+        sql.ExecuteReader();
+        foreach (var row in batch)
+            row.CustomerId = idByName[row.CustomerName];
+        return batch;
+    }
+};
+var dest = new MemoryDestination<Order>();
+orderSource.LinkTo(batchTrans).LinkTo(dest);
+Network.Execute(orderSource);
+
+foreach (var result in dest.Data)
+    Console.WriteLine($"Customer {result.CustomerName} has id {result.CustomerId}");
+```
+
+### MergeJoin 
+
+Instead of using the lookup, a MergeJoin could also be used to enrich data from two tables or other data sources. 
+
+{{< alert text="The MergeJoin works best when the input data from both sorted is already sorted by the joining key!" >}}
+
+```C#
+var orderSource = new MemorySource<Order>();
+orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
+orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
+var customerSource = new MemorySource<Customer>();
+customerSource.DataAsList.Add(new Customer() { Id = 1, Name = "John" });
+customerSource.DataAsList.Add(new Customer() { Id = 2, Name = "Jim"});
+
+var join = new MergeJoin<Order, Customer, Order>(
+    (leftRow, rightRow) =>
+    {
+        if (rightRow == null || leftRow == null) //NoMatch
+    return null;
+        else
+            return new Order() { CustomerId = rightRow.Id, CustomerName = leftRow.CustomerName, OrderNumber = leftRow.OrderNumber };
+
+    });
+
+join.ComparisonFunc = (leftRow, rightRow) => string.Compare(leftRow.CustomerName, rightRow.Name);
+
+var dest = new MemoryDestination<Order>();
+orderSource.LinkTo(join.LeftInput);
+customerSource.LinkTo(join.RightInput);
+join.LinkTo(dest);
+
+Network.Execute(orderSource, customerSource);
+
+foreach (var result in dest.Data)
+    Console.WriteLine($"Customer {result.CustomerName} has id {result.CustomerId}");
+```
+
 
 ## Code on Github
 
