@@ -88,25 +88,6 @@ ControlFlow.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integr
 var source = new DbSource("SourceTable");
 ```
 
-## Transactions 
-
-Each connection manager allows you to begin, commit or rollback a transaction. Usage is quite simple 
-
-```C#
-SqlConnectionManager sqlServerConn = 
-    new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
-
-sqlServerConn.BeginTransaction();
-//Run some sql or start a data flow 
-if (success)
-  sqlServerConn.CommitTransaction();
-else 
-  sqlServerConn.RollbackTransaction();
-```
-
-`BeginTransaction` let you optionally define the isolation level of the transaction. Most databases are using an isolation level comparable to `Serializable` or `Snapshot` as the default level. If you define a different transaction level for a transaction, make sure that your database does support this level. 
-
-
 ## Connection string wrapper
 
 When you create a new connection manager, you have the choice to either pass the connection string directly or you
@@ -177,7 +158,9 @@ DbSource<MySimpleRow> source = new DbSource<MySimpleRow>(conn)
 Same for DbDestination - the property name is `DestinationTableDefinition` there. 
 
 
-## Connection Pooling & LeaveOpen
+## Connection management
+
+### Connection pooling
 
 The implementation of all connection managers is based on Microsoft ADO.NET and makes use of the underlying 
 connection pooling. [Please see here for more details of connection pooling.](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling)
@@ -192,9 +175,64 @@ the pool so that it can be reused by other components or tasks when needed.
 Please note that the connection pooling only works for the same connection strings. For every connection string that differs there
 is going to be a separate pool 
 
-This behavior - returning connections back to the pool when the work is done - does work very well in a scenario 
+### Reusing connection managers 
+
+By default, you can always reuse a connection manager as often as you like. ETLBox will always create a clone of the provided connection manager object, and in combination with the ADO.NET connection pooling it will be automatically decided if a new connection needs to be created or if an existing connection can be reused. 
+You can modify this behaviour either by setting the `LeaveOpen` property to true or by starting a transaction. 
+
+### LeaveOpen 
+
+This behaviour - returning connections back to the pool when the work is done - does work very well in a scenario 
 with concurrent tasks. There may be a use-case where you don't won't to query your database in parallel and you 
 want to leave the connection open, avoiding the pooling.
 
-For this scenario you can use the `LeaveOpen` property on the connection managers
+For this scenario you can use the `LeaveOpen` property on the connection managers.
+
+```C#
+var sqlServerConn = 
+    new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+sqlServerConn.LeaveOpen = true;
+```
+
+### Transactions 
+
+Each connection manager allows you to begin, commit or rollback a transaction. Usage is quite simple 
+
+```C#
+SqlConnectionManager sqlServerConn = 
+    new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+
+sqlServerConn.BeginTransaction();
+//Run some sql or start a data flow 
+if (success)
+  sqlServerConn.CommitTransaction();
+else 
+  sqlServerConn.RollbackTransaction();
+```
+
+`BeginTransaction` let you optionally define the isolation level of the transaction. Most databases are using an isolation level comparable to `Serializable` or `Snapshot` as the default level. If you define a different transaction level for a transaction, make sure that your database does support this level. 
+
+If you are starting a transaction, the connection will stay open and connected with your database during the lifetime of the transaction.
+When starting a Transaction, the property `LeaveOpen` will be set implicitly to true, indicating that a transaction has been started and the connection needs to stay alive until the connection is either commit or rolled back. When using a transaction, the connection can't be returned to the connection pool while the transaction is still alive. 
+
+{{< alert text="If you are using the same connection manager for other operations, make sure that you want to have this operations part of your transaction. Keep in mind that components in a data flow are executed asynchronously, so you might need more than one connection manager for simultaneous database operations using transactions." >}}
+
+#### Avoiding conflicts when using transactions
+
+Here is a simple example where you want to use 2 connection managers: If you have a database table where you want to insert data within a transaction scope, while you want to read data from the same database, you will need two connection managers to avoid conflicts:
+
+```C#
+var sqlConnSource = new SqlConnectionManager("...");
+var sqlConnDest = new SqlConnectionManager("...");
+
+sqlConnDest.BeginTransaction();
+var source = new DbSource(sqlConnSource,"Table1");
+var dest = new DbDestination(sqlConnDest, "Table1Copy");
+source.LinkTo(dest);
+Network.Execute(source);
+sqlConnDest.Commit();
+```
+
+
+
 
