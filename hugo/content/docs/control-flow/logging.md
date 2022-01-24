@@ -1,5 +1,5 @@
 ---
-title: "About logging"
+title: "Logging"
 description: "Details about logging in ETLBox"
 lead: "On top of NLog, ETLBox offers you support to create a simple but still powerful database logging, which is simple to set up
 and eays to maintain."
@@ -219,8 +219,9 @@ it will create a log entry with an action 'START'. When it's done with its execu
 another log entry with action type 'END'
 
 ```C#
-SqlTask.ExecuteNonQuery("some sql", "Select 1 as test");
-Sequence.Execute("some custom code", () => { });
+LogSection.Execute("some custom code", () => { 
+    SqlTask.ExecuteNonQuery("some sql", "Select 1 as test");
+});
 ```
 
 If you want to produce your own log output, you can use the `LogTask`. This will create only one row in your log output, with 
@@ -230,13 +231,12 @@ the TaskAction "LOG". The message here would be "Some warning!".
 LogTask.Warn("Some warning!");
 ```
 
-Also you can define the nlog level with the log task. E.g.:_ 
+Also you can define the nlog level with the log task. E.g.:
 
 ```C#
 LogTask.Trace("Some text!");
 LogTask.Debug("Some text!");
 LogTask.Info("Some text!");
-LogTask.Warn("Some text!");
 LogTask.Error("Some text!");
 LogTask.Fatal("Some text!");
 ```
@@ -284,7 +284,7 @@ The modification to the nlog.config could  like this:
 
 ### Method 2: Add the database target programmatically
 
-Alternatively, you can use some pre-defined C# code to setup the database target programatically. 
+Alternatively, you can use some pre-defined C# code to setup the database target programmatically. 
 
 The following code snipped will do this for you:
 
@@ -472,7 +472,7 @@ $@"INSERT
 }
 ```
 
-Now, if you call any task or component that creates log output, it will automatically be logged to the newly create database table
+Now, if you call any task or component that creates log output, it will automatically be logged to the newly create database table.
 
 ## Logging of Load Processes
 
@@ -497,6 +497,7 @@ id              |Int64    |Identity
 start_date      |DateTime |
 end_date        |DateTime |
 source          |String   |
+source_id       |Int      |
 process_name    |String   |
 start_message   |String   |
 is_running      |Int16    |0 or 1
@@ -506,9 +507,8 @@ abort_message   |String   |
 was_aborted     |Int16    |0 or 1
 
 
-The table will contain information about the ETL processes that you started in your code with the `StartLoadProcessTask`.
-To end or abort a process, there is the `EndLoadProcessTask` or `AbortLoadProcessTask`. 
-
+The table will contain information about the ETL processes that you started in your code with the `Start(..)` method.
+To end or abort a process, there is the `End(..)` or `Abort(..)` methods. 
 Let's look at the following  example for logging into the load process table.
 
 ```C#
@@ -529,8 +529,5 @@ Calling the `End()` will set an end date and change the columns `is_running` to 
 
 When the load process entry is added to the table, a new id is created.
 All information about the load process (including the id) can be accessed in the current `process` variable.
-
-
-
 
 

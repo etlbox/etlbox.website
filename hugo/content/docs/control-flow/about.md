@@ -134,3 +134,16 @@ or for MySql with
 MySqlConnectionManager connectionManager = new MySqlConnectionManager("Server=10.37.128.2;Database=ETLBox_DataFlow;User Id=postgres;Password=etlboxpassword;");
 ```
 
+
+### Default ConnectionManager
+
+Every component or task related to a database operation needs to have a connection managers set in order
+to connect to the right database. Sometimes it can be cumbersome to pass the same connection manager over and over
+again. To avoid this, there is a static `ControlFlow` class that contains the property `DefaultDbConnection`.
+If you define a connection manager here, this will always be used as a fallback value if no other connection manager property was defined.
+
+```
+ControlFlow.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
+//Now you can just create a DbSource like this
+var source = new DbSource("SourceTable");
+```
