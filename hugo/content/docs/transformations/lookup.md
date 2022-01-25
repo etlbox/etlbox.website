@@ -186,6 +186,10 @@ public class Customer
 }
 ```
 
+### Lookup source types
+
+ As a source for the lookup transformation any ETLBox source component will. So instead of using the `DbSource` to read data from the a database table, you can use the `CsvSource` to read the lookup data from a csv file. Or you could use the `JsonSource` to read json data. When you use the streaming connectors (like `JsonSource`, `CsvSource` or `XmlSource`) you are not limited to read data from files - you could also change the ResourceType to e.g. `ResourceType.Http` or `ResourceType.AzureBlob` to read your lookup data either from some web endpoint or from an Azure blob. If you need to have your own logic to retrieve your lookup data, you could use the `CustomSource` to define your own logic how to gather your lookup source data. 
+
 ## Using Attributes
 
 Of course defining your own lookup function can be cumbersome sometimes. The lookup also defines a default lookup implementation, which is based on attributes in your objects. This allows you to control the data lookup without the need to write your own data retrieval function. 
