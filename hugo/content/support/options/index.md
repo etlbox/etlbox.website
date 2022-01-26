@@ -20,8 +20,7 @@ Landsberger Str. 216B
 Germany
 
 VAT Number: DE 333985271
-
-Phone: +49 151 228 42181 
+Phone: +49 172 3618 557
 {{< /nowrap-code >}}
 
 <br/>
