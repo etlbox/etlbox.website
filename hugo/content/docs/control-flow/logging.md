@@ -290,7 +290,7 @@ The following code snipped will do this for you:
 
 ```C#
 var SqlConnectionManager connection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox_Logging");
-LogTableTask.Create(connection, "etlbox_log");
+LogTask.Create(connection, "etlbox_log");
 var newTarget = new CreateDatabaseTarget(connection, "etlbox_log").GetNLogDatabaseTarget();
 NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(newTarget, NLog.LogLevel.Info);
 ```
