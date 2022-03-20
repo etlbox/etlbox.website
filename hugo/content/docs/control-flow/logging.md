@@ -290,14 +290,14 @@ The following code snipped will do this for you:
 
 ```C#
 var SqlConnectionManager connection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox_Logging");
-LogTask.Create(connection, "etlbox_log");
+LogTask.CreateLogTable(connection, "etlbox_log");
 var newTarget = new CreateDatabaseTarget(connection, "etlbox_log").GetNLogDatabaseTarget();
 NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(newTarget, NLog.LogLevel.Info);
 ```
 
 {{< alert text="The class CreateDatabaseTarget is not part of ETLBox and needs to be added manually to your project (see code at the end of this chapter). This will likely be fixed in the future" >}}
 
-In this example, `CreateLogTableTask` will create a logging table. The table structure will look like this:
+In this example, `LogTable.CreateLogTable` will create a logging table. If no table name is provided, the default table name "etlbox_log" is used. The table structure will look like this:
 
 Column name     |Data type|Remarks|
 ----------------|---------|-------|
