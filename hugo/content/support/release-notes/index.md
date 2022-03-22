@@ -5,6 +5,32 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.0
+
+#### Features
+
+- New transformation: WaitTransformation waits for other components (or TaskCompletionSources) before any data can pass
+- Postgres schema search path logic is now supported (when only a table name is provided, the search path is used to find the first matching schema)
+- LookupTransformation: PartialCacheSettings now expose SqlParameter which are applied to the LoadCacheSql
+- ETLBoxError extended with additional Information from exception source (e.g. current request URI and progress count)
+- Now supporting BulkOperations in DbDestination and DbSource (BulkUpdate, BulkDelete and BulkSelect)
+- HttpResponseMessage is now part of StreamMetaData
+- All streaming source&destinations now expose same unified constructor (string uri, ResourceType resourceType)
+- Breaking Change: SqlTask.ExecuteScalar<T> will now return T as type (was Nullable<T> before)
+
+#### Bugs
+
+- DbMerge: Erroneous rows are now properly forwarded when conversion issue during data lookup occur
+- LookupTransformation/Error linking: data conversion exceptions are now properly forwarded with improved error message
+- Fixed bug that broke GetTableListTask when table name contained spaces
+- HttpClient is not disposed anymore when cleaning up streaming source connectors
+- DbMerge: ColumnMap flag IgnoreColumn=true is now properly observed
+- DbMerge: identity columns are now ignored by default
+- Lookup: ColumnMapping is now properly observed when using DbSource as lookup source in partial cache
+- Improved exception message when type conversion of data fails
+- QueryParameter extended with additional constructor (name, value) and fixed issue with null values
+
+
 ## Version 2.5.2
 
 #### Features
@@ -16,7 +42,7 @@ draft: false
 - ColumnMap attribute extended with property "IgnoreColumn" which allows to ignore particular columns when reading or writing into a database
 
 
-#### Bug
+#### Bugs
 
 - .NET 3.1 and .NET standard version contains references to 3.1 system packages, .NET 5  only references 5.0 system packages
 - DbMerge now ignores flawed rows (redirected via LinkErrorTo) in delta output
