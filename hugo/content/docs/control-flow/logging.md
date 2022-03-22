@@ -142,7 +142,7 @@ create a Log - folder within your application directory and have a file for ever
 ```
 
 As you can see, the log output into the file is formatted using a particular NLog notation in the Layout attribute. NLog 
-does provide LayoutRenderer here which allow you to access structured log messages. You can either access the whole message
+does provide {{< link-ext url="https://github.com/NLog/NLog/wiki/MDLC-Layout-Renderer" text="LayoutRenderer" >}} which allow you to access structured log messages. You can either access the whole message
 using `${message}` or access particular items in the log message itself (with `event-properties` ) or items which are in the scope of the message (with `mdlc`). 
 
 The following items are possible values when accessing structured log messages in ETLBox
@@ -309,10 +309,10 @@ message         |String   |
 task_type       |String   |
 task_action     |String   |
 task_hash       |String   |
-source          |String   |
-load_process_id |Int64    |Id of etlbox_loadproces table
+source          |String   |(deprecated)
+load_process_id |Int64    |Id of etlbox_loadprocess table
 
-This will work on all supported database - the real data type will be reflected by the corresponding database specific type. E.g. Int64 is 
+This will work on all supported databases - the real data type will be reflected by the corresponding database specific type. E.g. Int64 is 
 a BIGINT on SqlServer and INTEGER on SqlLite
 The id column is an Identity (or auto increment) column, and the only one not nullable.
 
