@@ -5,6 +5,23 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.1
+
+#### Features
+
+- ETLBox.MySql now references MySql.Data 8.0.29
+- XmlSource offers ElementNameRetrievalFunc to change the ElementName while processing Xml data
+- DbDestination and DbMerge  support instant reading of value generated columns (e.g. computed columns, identites or default values) after inserting/updating data
+- Fixing issue where IgnoreColumn set on mutiple props without column name threw an exception
+- Meta data retrieval for procedures in SqlServer added: TableDefinition.FromProcedureName(...)
+- ETLBoxError: Original exception now retrievable with GetException()
+- New connector: (Sybase) SAP ASE
+
+#### Bug fixes 
+
+- Nullable int replaced with int type in ExcelColumn attribute \(non basic CLR types lead to issues in attributes\)
+
+
 ## Version 2.6.0
 
 #### Features
@@ -18,7 +35,7 @@ draft: false
 - All streaming source&destinations now expose same unified constructor (string uri, ResourceType resourceType)
 - Breaking Change: SqlTask.ExecuteScalar<T> will now return T as type (was Nullable<T> before)
 
-#### Bugs
+#### Bug fixes
 
 - DbMerge: Erroneous rows are now properly forwarded when conversion issue during data lookup occur
 - LookupTransformation/Error linking: data conversion exceptions are now properly forwarded with improved error message
@@ -42,7 +59,7 @@ draft: false
 - ColumnMap attribute extended with property "IgnoreColumn" which allows to ignore particular columns when reading or writing into a database
 
 
-#### Bugs
+#### Bug fixes
 
 - .NET 3.1 and .NET standard version contains references to 3.1 system packages, .NET 5  only references 5.0 system packages
 - DbMerge now ignores flawed rows (redirected via LinkErrorTo) in delta output
@@ -81,7 +98,7 @@ draft: false
 - Added support for FOREIGN KEY  constraints in `CreateTableTask` and `TableDefinition` object
 - Added Parquet source/destination
 
-#### Bugs
+#### Bug fixes
 
 - AggregationMethods Min/Max now support DateTime
 - LogThreshold set on component now prioritized over global threshold value
@@ -93,7 +110,7 @@ draft: false
 - CommandTimeout property limiting timeout for sql commands added to all connection managers
 - KeepIdentity renamed to AllowIdentityInsert in DbDestination (Breaking change)
 
-#### Bugs
+#### Bug fixes
 
 - Improved support for Db2 - internal sql updated to work on zOS and LUW version
 
@@ -104,7 +121,7 @@ draft: false
 - SqlConnectionManager exposes parameter to use row locks instead table lock for bulk insert operations
 - DbSource: Sql property now allows query parameter
 
-#### Bugs
+#### Bug fixes
 
 - Improved exception handling for DbMerge: Added check for IdColumn
 - XmlSource now correctly reads all tags if xml contains no line breaks
