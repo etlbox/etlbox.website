@@ -5,6 +5,19 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.2
+
+#### Features
+
+- Lookups now allow selecting multiple rows with same key from lookup source
+- Creating beta version for extending Entity Framework's DbContext
+- Improving support for BulkOperations (preparation for future EntityFramework support)
+- ETLBoxNotSupportException replaced with System.NotSupportedException
+
+#### Bug fixes 
+
+- GetDatabaseListTask now properly treats databases with special characters in name
+
 ## Version 2.6.1
 
 #### Features
