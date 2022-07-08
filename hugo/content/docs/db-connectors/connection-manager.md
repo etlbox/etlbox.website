@@ -30,6 +30,7 @@ Oracle    | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x
 MySql     | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
 Maria     | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
 Db2       | <i class="bi-check"></i> | <i class="bi-x"></i> | <i class="bi-x"></i>
+Sap ASE (Sybase) | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
 Microsoft Access| <i class="bi-x"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
 Other databases | <i class="bi-x"></i> | * | *
 
