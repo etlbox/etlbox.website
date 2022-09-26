@@ -5,6 +5,22 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.3
+
+#### Features
+
+- Collecting of UnparsedData can now be disabled via the CollectUnparsedData prop
+- JsonSource: The json property name that holds the data array can now be set with the PropertyNameOfDataArray prop
+- Adding EntityFramework Bulk Operations extensions for MySql
+- TableDefinition sql codes: Reduce columns for DbDestination/DbSource meta data retrieval to absolute minimum
+
+#### Bug fixes
+
+- JsonSource: Fixing bug that UnparsedData is not properly json formatting when using the Limit Property
+- Fixed bug where Primary keys were incorrectly dropped/recreated when altering a table with CreateTableTask
+- Make special version of TableDefinition.FromTableName explicitly for DbDestination or remove duplicates?
+- Adding UnparsedData support for XmlSource (disabled by default)
+
 ## Version 2.6.2
 
 #### Features
