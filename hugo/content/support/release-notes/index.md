@@ -5,6 +5,17 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.4
+
+#### Features
+
+- Network.Execute & ExecuteAsync (and same methods on components) now accept a CancellationTokenSource
+
+#### Bug fixes
+- Fixing issues in XmlSource when collecting unparsed data
+- Fixing issues in JsonSource when collecting unparsed data
+
+
 ## Version 2.6.3
 
 #### Features
