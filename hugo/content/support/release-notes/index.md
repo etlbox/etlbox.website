@@ -5,6 +5,16 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.5
+
+#### Features 
+- PostgresSql bulk insert now adds flawed data row information to Data dictionary of Exception message
+
+#### Bug fixes
+- DbSource: Fixed issue where sql was provided and properties where mapped to wrong column
+- Fixed bug when collecting unparsed data and setting limit on XmlSource or JsonSource
+- Fixed bug for GetTableListTask where table names contained an invalid quotation at the beginning
+
 ## Version 2.6.4
 
 #### Features
@@ -29,7 +39,7 @@ draft: false
 
 - JsonSource: Fixing bug that UnparsedData is not properly json formatting when using the Limit Property
 - Fixed bug where Primary keys were incorrectly dropped/recreated when altering a table with CreateTableTask
-- Make special version of TableDefinition.FromTableName explicitly for DbDestination or remove duplicates?
+- DbDestination/DbSource/DbMerge: Amount of meta data to obtain TableDefinition is reduced
 - Adding UnparsedData support for XmlSource (disabled by default)
 
 ## Version 2.6.2
