@@ -19,8 +19,8 @@ Landsberger Str. 218
 12623 Berlin 
 Germany
 
-VAT Number: DE 333985271
-Phone: +49 30 53140 8853
+VAT Number: DE333985271
+Phone: +49 30 72621 1087
 {{< /nowrap-code >}}
 
 <br/>
