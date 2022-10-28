@@ -5,6 +5,12 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.6
+
+#### Bug fixes
+
+- JsonSource/XmlSource: Fixing issue that limit property is properly observed when collecting unparsed data and using the GetNextUri/HasNextUri functions
+
 ## Version 2.6.5
 
 #### Features 
