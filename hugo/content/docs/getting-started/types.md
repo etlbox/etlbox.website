@@ -58,7 +58,7 @@ SqlTask.ExecuteNonQuery(@"CREATE TABLE demotable (
 
 public class MyNewRow {
     public int Value1 { get; set; }
-    public string AnotherValue { get; set }
+    public string AnotherValue { get; set; }
 }
 DbSource<MyNewRow> source = new DbSource<MyNewRow>("demotable");
 ```
@@ -84,7 +84,7 @@ Here is a simple example of using the `ExpandoObject`
 
 ```C#
 dynamic sampleObject = new ExpandoObject();
-sampleObject.Id = 3
+sampleObject.Id = 3;
 //Sample object now has a property "Id" of type int with the value 3
 sampleObject.Test = "Dynamic Property";
 //Adds a property "Test" of type string to sampleObject
@@ -158,7 +158,7 @@ Of course you can combine both approaches in one data flow. Some transformations
 //Creating the POCO
 public class MyRow {
     public int SourceCol1 { get; set; }
-    public int SourceCol2 { get; set }
+    public int SourceCol2 { get; set; }
 }
 
 DbSource<MyRow> source = new DbSource<MyRow>("sourceTable");
