@@ -100,15 +100,6 @@ public static void Main()
 
 ### Join with comparison
 
-A `MergeJoin` allows you to define a match and comparison function that describe which records are supposed to be joined. This behavior is similar to a LEFT/RIGHT/FULL JOIN. 
-For performance reason, the `MergeJoin` will need sorted input on both sides. The order of the rows needs to be on the property you are using the comparison for. 
-Then you can pass a ComparisonFunc<TInput1, TInput2, int> which returns an int value:
-If the ComparisonFunc is defined, records are compared regarding their sort order and only joined if they match.
-
-- It returns 0 if both records match and should be joined. 
-- It returns a value little than 0 if the record of the left input is in the sort order before the record of the right input. 
-- It returns a value greater than 0 if the record for the right input is in the order before the record from the left input.
-
 The `MergeJoin` transformation allows you to specify a match and comparison function that determines which records should be joined. This result of this function behaves similarly to a LEFT/RIGHT/FULL JOIN in SQL.
 
 For optimal performance, the `MergeJoin` requires sorted input from both sides. The rows should be ordered based on the property that is being used for comparison. 
