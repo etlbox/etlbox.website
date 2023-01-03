@@ -109,6 +109,17 @@ If the ComparisonFunc is defined, records are compared regarding their sort orde
 - It returns a value little than 0 if the record of the left input is in the sort order before the record of the right input. 
 - It returns a value greater than 0 if the record for the right input is in the order before the record from the left input.
 
+The `MergeJoin` transformation allows you to specify a match and comparison function that determines which records should be joined. This result of this function behaves similarly to a LEFT/RIGHT/FULL JOIN in SQL.
+
+For optimal performance, the `MergeJoin` requires sorted input from both sides. The rows should be ordered based on the property that is being used for comparison. 
+You can pass a `ComparisonFunc<TInput1, TInput2, int>` to the MergeJoin, which returns an integer value based on the comparison of the two input records. This comparison function is based {{<link-ext text="on the default comparison delegate" url="https://learn.microsoft.com/en-us/dotnet/api/system.comparison-1?view=net-7.0" >}}.
+
+- If the `ComparisonFunc` returns 0, both records match and should be joined.
+- If the `ComparisonFunc` returns a value less than 0, the record from the left input is considered to be in the correct sort order before the record from the right input.
+- If the `ComparisonFunc` returns a value greater than 0, the record from the right input is considered to be in the correct sort order before the record from the left input.
+
+If the `ComparisonFunc` returns 0, both records are joined and send to the output. Otherwise, the MergeJoin will send the record from the right or left side to the ouput, together with NULL value for the non matching side. 
+
 #### Join with comparison example 
 
 Here an example how this would look like

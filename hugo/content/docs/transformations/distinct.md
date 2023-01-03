@@ -78,9 +78,8 @@ public static void Main()
     var dest = new MemoryDestination<MyRow>();
 
     source.LinkTo(trans);
-    trans.LinkTo(dest, r => r != null, r => r == null);
-    source.Execute();
-    dest.Wait();
+    trans.LinkTo(dest);
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Id:{row.Id} Value:{row.Value}");
@@ -92,3 +91,48 @@ public static void Main()
 }
 ```
 
+### Processing the duplicates
+
+The Distinct also allows to send the duplicates into another data flow. This can be easily implemented with the `LinkDuplicatesTo` method. We could enhance the example above to redirect the duplicates into another destination. Of course we could also use another more complex data flow to process the duplicates. 
+
+```C#
+public class MyRow
+{
+    [DistinctColumn]
+    public int Id { get; set; }
+    [DistinctColumn]
+    public string Value { get; set; }
+}
+
+public static void Main()
+{
+    var source = new MemorySource<MyRow>();
+    source.DataAsList.Add(new MyRow() { Id = 1, Value = "A" });
+    source.DataAsList.Add(new MyRow() { Id = 2, Value = "A" });
+    source.DataAsList.Add(new MyRow() { Id = 2, Value = "B" });
+    source.DataAsList.Add(new MyRow() { Id = 1, Value = "A" });
+    source.DataAsList.Add(new MyRow() { Id = 2, Value = "A" });
+
+    var trans = new Distinct<MyRow>();
+    var dest = new MemoryDestination<MyRow>();
+    var duplicateDest = new MemoryDestination<MyRow>();
+
+    source.LinkTo(trans);
+    trans.LinkTo(dest);
+    trans.LinkDuplicatesTo(duplicateDest);
+    Network.Execute(source);
+
+    foreach (var row in dest.Data)
+        Console.WriteLine($"Id:{row.Id} Value:{row.Value}");
+
+    foreach (var row in duplicateDest.Data)
+        Console.WriteLine($"Duplicate - Id:{row.Id} Value:{row.Value}");
+
+    //Output
+    //Id:1 Value:A
+    //Id:2 Value:A
+    //Id:2 Value:B
+    //Duplicate - Id:1 Value: A
+    //Duplicate - Id:2 Value: A
+}
+```

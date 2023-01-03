@@ -87,10 +87,10 @@ If you want to get more control over the order your sources are sending data int
 source2.Post();
 source1.Post();
 dest1.Wait();
-dest2.Wat();
+dest2.Wait();
 ```
 
-This will force `source2` to send all data from its source table into the data flow. Execution will block until `source2` is done, and then it's the turn of `source1` to post all data rows. When `source1` has finished, we can at the destinations for the data flow to finish processing the data. 
+This will force `source2` to send all data from its source table into the data flow. Execution will block until `source2` is done, and then it's the turn of `source1` to post all data rows. When `source1` has finished, we can wait at the destinations for the data flow to finish processing the data. 
 
 ## Asynchronous execution
 
