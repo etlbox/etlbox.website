@@ -5,6 +5,19 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.7
+
+#### Bug fixes
+
+- Lookup: When retrieving multiple values from source, unmatched input data was filtered out - this is fixed
+
+## Features
+
+- Distinct: now offers LinkDuplicatesTo(..) to forward duplicates into separate output 
+- DbMerge: Performs implicit type cast when determining equality of CompareColumns
+- DbMerge: Records marked as deletion but not present in destination now flagged with ChangeAction NotFound
+- DbMerge: Adding ColumnConverters
+
 ## Version 2.6.6
 
 #### Bug fixes
