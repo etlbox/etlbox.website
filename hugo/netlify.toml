@@ -53,5 +53,12 @@
   status = 302
   force = true
 
+  [[redirects]]  
+  from = "/register-license/"
+  to = "https://www.etlbox.net/buy/register-license/"
+  status = 302
+  force = true
+
+
 #[plugins]
   #package = "netlify-plugin-checklinks"
