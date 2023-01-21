@@ -7,6 +7,9 @@
 /** Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
 
+@import "common/bootstrap-icons";
+
+
 /** Import highlight.js */
 // @import "highlight.js/scss/github-dark-dimmed";
 
@@ -26,6 +29,7 @@
 @import "components/forms";
 @import "components/images";
 @import "components/mermaid";
+@import "components/nowrap-code";
 @import "components/search";
 @import "components/tables";
 @import "layouts/footer";
@@ -33,3 +37,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
+@import "layouts/contact";
+@import "layouts/pricing";
+@import "layouts/home";
+@import "layouts/api-docs";
