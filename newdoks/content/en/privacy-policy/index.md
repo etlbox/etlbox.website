@@ -1,15 +1,32 @@
 ---
-title: "Privacy Policy"
-description: "We do not use cookies and we do not collect any personal data."
-date: 2020-08-27T19:23:18+02:00
-lastmod: 2020-08-27T19:23:18+02:00
-draft: true
+title: "Privacy Policy & Legal information"
+description: "We do not collect any personal data - and we are an official company in Berlin, Germany."
+draft: false
 images: []
 ---
 
-__TLDR__: We do not use cookies and we do not collect any personal data.
+## Legal Information
 
-## Website visitors
+ETLBox Office is a company located and registered in Berlin, Germany.
+
+{{< nowrap-code >}}
+ETLBox Office Andreas Lennartz 
+Landsberger Str. 218
+12623 Berlin 
+Germany
+
+VAT Number: DE333985271
+
+Phone: +49 30 72621 1087
+E-Mail: mail&commat;etlbox&period;net
+{{< /nowrap-code >}}
+
+
+## Privacy Policy
+
+We respect your privacy. We do not use cookies and we do not collect any personal data.
+
+### Website visitors
 
 - No personal information is collected.
 - No information is stored in the browser.
@@ -18,19 +35,13 @@ __TLDR__: We do not use cookies and we do not collect any personal data.
 - No information is mined and harvested for personal and behavioral trends.
 - No information is monetized.
 
-### Information we collect and what we use it for
 
-We run [Plausible](https://plausible.io/) analytics on getdoks.org. The following information is collected:
+### Disclaimer
 
-- __Page URL__. We track the page URL of each page view on this website. We use this to understand which pages have been viewed and how many times a particular page has been viewed. For example: _https://getdoks.org/_.
-- __HTTP Referrer__. We use the referrer string to understand the number of visitors referred to this website from links on other sites. For example: _https://github.com/_.
-- __Browser__. We use this to understand what browsers people use when visiting this website. This is derived from the User-Agent HTTP header. The full User-Agent is discarded. For example: _Chrome_.
-- __Operating system__. We use this to understand what operating systems people use when visiting this website. We only use the brand of the operating system and don’t include the version number or any other details. This is derived from the User-Agent HTTP header. The full User-Agent is discarded. For example: _GNU/Linux_.
-- __Device type__. We use this to understand what devices people use when visiting this website. This is derived from window.innerWidth. The actual width of the browser in pixels is discarded. For example: _Desktop_.
-- __Visitor Country__. We look up the visitor’s country using the IP address. We do not track anything more granular than the country of origin and the IP address of the visitor is discarded. We never store IP addresses in our database or logs. For example: _Canada_.
+#### Accountability for content
 
-## Contact us
+The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).
 
-[Contact us]({{< relref "contact/index.md" >}}) if you have any questions.
+#### Accountability for links
 
-Effective Date: _27th August 2020_
+Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately.
