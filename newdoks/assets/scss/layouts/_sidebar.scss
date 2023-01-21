@@ -59,7 +59,7 @@ a.docs-link {
   color: $body-color;
   display: block;
   padding: 0.125rem 0;
-  font-size: $font-size-base;
+  font-size: $font-size-base * 0.9;
 }
 
 .page-links li {
