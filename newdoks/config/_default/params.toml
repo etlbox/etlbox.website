@@ -5,6 +5,7 @@ title = "ETLBox"
 titleSeparator = "-"
 titleAddition = "a lightweight ETL library for .NET/C#"
 description = "Simple API to code ETL jobs in .NET & C#. Extremely fast data processing engine. Runs inside your applications, APIs, and jobs. Extract, filter, transform, migrate data on-the-fly."
+startPage="/docs/getting-started/quick-start/"
 
 ## Documentation
 # docsVersion = "0.3"
