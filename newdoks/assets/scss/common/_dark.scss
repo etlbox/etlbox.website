@@ -595,8 +595,8 @@ body.dark .nav .nav-item .active {
   color: $body-color-dark;
   background: $body-bg-dark;
 }
-
-body.dark .alteredColor {
+*/
+[data-dark-mode] .alteredColor {
   background: $body-color-darked-altered !important;
 }
-*/
+
