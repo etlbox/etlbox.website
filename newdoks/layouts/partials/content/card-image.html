@@ -3,11 +3,11 @@
   {{ $fillImage = site.Params.fillImage }}
 {{ end -}}
 
-{{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) }}
-{{ if not $image -}}
-  {{ $image = resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
+{{ $image := resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
+{{ if .Params.images -}}
+  {{ $image = .Resources.GetMatch (printf "**%s" (index .Params.images 0)) }}
 {{ end -}}
-
+  
 {{ $webp := printf "%s%s" $fillImage " webp" }}
 {{ $image = $image.Resize $webp}}
 
