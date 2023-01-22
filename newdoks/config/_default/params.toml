@@ -99,7 +99,6 @@ lastMod = false
   darkMode = true
   bootStrapJs = true
   breadCrumb = false
-  highLight = true
   kaTex = false
   multilingualMode = false
   docsVersioning = false
