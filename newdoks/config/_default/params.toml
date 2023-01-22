@@ -32,13 +32,14 @@ schemaLocale = "en-US"
 schemaLogo = "logos/png/logo_etlbox_512x512.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
+#schemaImage, schemaImageWidth and schemaImageHeight are not rendered if schemaType = "Organization"!
 #schemaImage = "doks.png"
 #schemaImageWidth = 1280
 #schemaImageHeight = 640
 #schemaTwitter = "https://twitter.com/getdoks"
 schemaLinkedIn = "https://www.linkedin.com/company/etlbox"
 schemaGitHub = "https://github.com/etlbox"
-#schemaSection = "blog"
+#schemaSection = "blog" --not used so far
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
