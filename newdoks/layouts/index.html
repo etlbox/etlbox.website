@@ -9,9 +9,8 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2"
-        href="{{ .Site.Params.startPage | relURL }}"
-        role="button">{{ i18n "get-started" }}</a>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.startPage | relURL }}" role="button">{{ i18n
+        "get-started" }}</a>
       <p class="meta">
         <a href="https://www.nuget.org/packages?q=etlbox" target="_blank">Try for free <i
             class="bi-box-arrow-up-right"></i>.</a>
@@ -20,7 +19,7 @@
     </div>
   </div>
 </section>
-{{ end }} 
+{{ end }}
 
 {{ define "sidebar-prefooter" }}
 <section class="section section-sm alteredColor">
@@ -194,6 +193,23 @@ Network.Execute(source); //Start the flow synchronously</pre>
 <section class="section section-sm alteredColor">
   <div class="container">
     <div class="text-center">
+      <h1><i class="bi-camera-video"></i></h1>
+      <h2>Watch our short explainer video:</h2>
+    </div>
+
+    <div class="text-center">
+      <div class="embedVideo">
+        <iframe width="560" height="349" title="ETLBox explainer video" src="https://www.youtube.com/embed/uErssvgjubg"
+          frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm">
+  <div class="container">
+    <div class="text-center">
       <h1><i class="bi-lightbulb"></i></h1>
     </div>
 
@@ -263,7 +279,7 @@ Network.Execute(source); //Start the flow synchronously</pre>
   </div>
 </section>
 
-<section class="section section-sm">
+<section class="section section-sm alteredColor">
   <div class="container">
     <div class="text-center">
       <h1><i class="bi-clipboard-check"></i></h1>
@@ -348,7 +364,7 @@ Network.Execute(source); //Start the flow synchronously</pre>
     </div>
   </div>
 </section>
-{{ end }} 
+{{ end }}
 
 {{ define "sidebar-footer" }}
 <section class="section section-sm container-fluid">
