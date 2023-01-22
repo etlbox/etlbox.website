@@ -165,6 +165,7 @@ body {
     margin-right: -1.5rem;
     padding-bottom: 4rem;
   }
+
 }
 
 .docs-toc {
@@ -284,5 +285,17 @@ body {
 @include media-breakpoint-up(md) {
   .modal-backdrop.show {
     opacity: 0;
+  }
+}
+
+/* Doks improvements */
+
+.backToTop {
+  visibility: collapse;
+}
+
+@include media-breakpoint-up(lg) {
+  .backToTop {
+    visibility: visible;
   }
 }
