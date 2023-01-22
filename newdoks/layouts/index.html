@@ -80,8 +80,7 @@
         <h2 class="h4"><i class="bi-clouds"></i>&nbsp;Runs everywhere</h2>
         <p>
           ETLBox runs on Linux, macOS, and Windows. It is written in the current
-          .NET Standard and successfully tested with the latest versions of .NET
-          Core & .NET.
+          .NET Standard and successfully tested with the latest versions of .NET.
         </p>
       </div>
     </div>
@@ -194,18 +193,29 @@ Network.Execute(source); //Start the flow synchronously</pre>
   <div class="container">
     <div class="text-center">
       <h1><i class="bi-camera-video"></i></h1>
-      <h2>Watch our short explainer video:</h2>
+      <h2>Watch our short explainer video</h2>
+      <p><a href="https://www.youtube.com/watch/uErssvgjubg"
+        target="_blank">See the video on youtube if you like to watch with subtitles. <i class="bi-box-arrow-up-right"></i></a></p>
     </div>
 
     <div class="text-center">
       <div class="embedVideo">
+        <video controls>
+          <source src="videos/etlbox_introduction.mp4" type="video/mp4">
+        </video>
+        <!-- Loading video from youtube may violate GDPR! -->
+       <!-- <div class="embedVideo">
         <iframe width="560" height="349" title="ETLBox explainer video" src="https://www.youtube.com/embed/uErssvgjubg"
           frameborder="0" allowfullscreen>
         </iframe>
       </div>
+      -->
+      </div>
     </div>
   </div>
 </section>
+
+
 
 <section class="section section-sm">
   <div class="container">
@@ -252,7 +262,7 @@ Network.Execute(source); //Start the flow synchronously</pre>
         <h2>ETLBox core concepts</h2>
 
         <p>
-          ETLBox is a data processing engine based on .NET Core, giving you the
+          ETLBox is a data processing engine based on .NET, giving you the
           power to create your own ETL processes. This engine runs inside your
           applications, APIs, and jobs to extract, filter, transform, migrate
           data on-the-fly. ETLBox speeds up your development by providing an
@@ -348,11 +358,11 @@ Network.Execute(source); //Start the flow synchronously</pre>
         <h2>100% .NET</h2>
 
         <p>
-          ETLBox is built on .NET Core and .NET Standard and runs with the
-          latest version of .NET. You write data flows and transformations in C#
+          ETLBox is built on .NET and runs with the latest version of .NET, .NET Core 
+          and .NET Framework. You can write data flows and transformations in C#
           or any of the other .NET languages you know (e.g. VisualBasic or F#).
-          You can also use your existing tools, IDEs, containers, and libraries.
-          Being built on .NET Core means it can run on all servers, operating
+          Also use your existing tools, IDEs, containers, and libraries.
+          Being built on .NET means ETLBox can run on all servers, operating
           systems, and environments.
         </p>
       </div>
