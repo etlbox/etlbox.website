@@ -600,3 +600,7 @@ body.dark .nav .nav-item .active {
   background: $body-color-darked-altered !important;
 }
 
+[data-dark-mode] .alert-warning {
+  background: $body-overlay-dark;
+  color: $body-color-dark;
+}
