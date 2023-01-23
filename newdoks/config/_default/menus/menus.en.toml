@@ -161,7 +161,57 @@
   url = "https://www.nuget.org/packages?q=etlbox"  
   weight = 490
 
- [[footer]]
-   name = "Legal & Privacy"
-   url = "/privacy-policy/"
+ [[footer_1]]
+   name = "Home"
+   url = "/"
    weight = 500
+
+ [[footer_1]]
+   name = "Docs"
+   url = "/docs/getting-started"
+   weight = 510
+
+ [[footer_1]]
+   name = "Recipes"
+   url = "/recipes/basic-example/"
+   weight = 520
+
+ [[footer_1]]
+   name = "API"
+   url = "/api/"
+   weight = 530
+
+ [[footer_2]]
+   name = "Pricing"
+   url = "/buy/pricing"
+   weight = 540
+
+ [[footer_2]]
+   name = "Support"
+   url = "/support/options"
+   weight = 550
+
+ [[footer_2]]
+   name = "Release notes"
+   url = "/support/release-notes"
+   weight = 560
+
+ [[footer_2]]
+   name = "Register license"
+   url = "/buy/register-license"
+   weight = 570
+
+ [[footer_3]]
+   name = "Contact"
+   url = "/support/contact"
+   weight = 580
+
+ [[footer_3]]
+   name = "Privacy policy"
+   url = "/privacy-policy/"
+   weight = 590
+
+ [[footer_3]]
+   name = "About us"
+   url = "/support/contact"
+   weight = 595

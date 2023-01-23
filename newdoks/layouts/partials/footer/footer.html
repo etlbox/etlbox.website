@@ -1,5 +1,42 @@
 <footer class="footer text-muted">
-  <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
+  <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} ">
+    
+      <div class="row justify-content-md-center">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" aria-label="Bootstrap">
+            <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox" width="76" height="76" />
+            <span class="fs-3 ps-2">ETLBox</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mt-4">Crafted with <img src="/images/heart.svg?dp={{ .RelPermalink | safeURL }}" alt="Heart" heigth="16" width="16" />&nbsp;in Berlin.</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Learning</h5>
+          <ul class="list-unstyled">
+            {{ range .Site.Menus.footer_1 -}}
+            <li class="mb-2"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end -}}
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Product</h5>
+          <ul class="list-unstyled">
+            {{ range .Site.Menus.footer_2 -}}
+            <li class="mb-2"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end -}}
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            {{ range .Site.Menus.footer_3 -}}
+            <li class="mb-2"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end -}}
+          </ul>
+        </div>
+      </div>
+          <!--
     <div class="row">
       <div class="col-lg-8 order-last order-lg-first">
         <ul class="list-inline">
@@ -14,5 +51,6 @@
         </ul>
       </div>
     </div>
+  -->
   </div>
 </footer>
