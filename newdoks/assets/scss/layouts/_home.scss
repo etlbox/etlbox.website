@@ -16,6 +16,24 @@
       }
 }
 
+
+#testimonials {
+    height: 10vw;
+
+    img {
+        width: 50%;
+
+    @include media-breakpoint-up(lg) {
+        width: 30%;
+      }
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
 /* When embedding video via iFrame, use this
  https://css-tricks.com/fluid-width-video/ 
 .embedVideo {

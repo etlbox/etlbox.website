@@ -22,6 +22,7 @@
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
+
 <section class="section section-sm alteredColor">
   <div class="container">
     <div class="text-center">
@@ -194,8 +195,8 @@ Network.Execute(source); //Start the flow synchronously</pre>
     <div class="text-center">
       <h1><i class="bi-camera-video"></i></h1>
       <h2>Watch our short explainer video</h2>
-      <p><a href="https://www.youtube.com/watch/uErssvgjubg"
-        target="_blank">See the video on youtube if you like to watch with subtitles. <i class="bi-box-arrow-up-right"></i></a></p>
+      <p><a href="https://www.youtube.com/watch/uErssvgjubg" target="_blank">See the video on youtube if you like to
+          watch with subtitles. <i class="bi-box-arrow-up-right"></i></a></p>
     </div>
 
     <div class="text-center">
@@ -204,7 +205,7 @@ Network.Execute(source); //Start the flow synchronously</pre>
           <source src="videos/etlbox_introduction.mp4" type="video/mp4">
         </video>
         <!-- Loading video from youtube may violate GDPR! -->
-       <!-- <div class="embedVideo">
+        <!-- <div class="embedVideo">
         <iframe width="560" height="349" title="ETLBox explainer video" src="https://www.youtube.com/embed/uErssvgjubg"
           frameborder="0" allowfullscreen>
         </iframe>
@@ -290,6 +291,62 @@ Network.Execute(source); //Start the flow synchronously</pre>
 </section>
 
 <section class="section section-sm alteredColor">
+  <div class="container text-center pb-5">
+    <h1><i class="bi-heart"></i></h1>
+    <p><em>Loved by our customers across the globe</em></p>
+    <div id="testimonials" class="mt-5 carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
+      <div class="carousel-inner  flex align-items-center">
+        <div class="carousel-item active">
+          <a href="https://www.commbank.com.au/" target="_blank">
+            <img src="images/references/cba_tb.png"  alt="Commonwealth Bank of Australia">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://brunata.dk" target="_blank">
+          <img src="images/references/brunata_logo.png"  alt="Brunata">
+        </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.deloitte.com/" target="_blank">
+          <img src="images/references/deloitte.svg"  alt="Deloitte">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://soundroyalties.com/" target="_blank">
+          <img src="images/references/sound-royalties.svg"  alt="Sound Royalties">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.meusburger.com/" target="_blank">
+          <img src="images/references/meusburger.svg" alt="Meusburger">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://novogenia.com/" target="_blank">
+          <img src="images/references/novogenia.png"  alt="Novogenia">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.iwgplc.com/" target="_blank">
+          <img src="images/references/iwg.svg"  alt="IWG PLC">
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel Buttons -->
+      <button  class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonials" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+</section>
+
+<section class="section section-sm">
   <div class="container">
     <div class="text-center">
       <h1><i class="bi-clipboard-check"></i></h1>
@@ -358,7 +415,7 @@ Network.Execute(source); //Start the flow synchronously</pre>
         <h2>100% .NET</h2>
 
         <p>
-          ETLBox is built on .NET and runs with the latest version of .NET, .NET Core 
+          ETLBox is built on .NET and runs with the latest version of .NET, .NET Core
           and .NET Framework. You can write data flows and transformations in C#
           or any of the other .NET languages you know (e.g. VisualBasic or F#).
           Also use your existing tools, IDEs, containers, and libraries.
