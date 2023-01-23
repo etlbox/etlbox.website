@@ -10,9 +10,10 @@
 
 .embedVideo video {
     width: 95%;
+    padding-bottom: 2rem;
 
     @include media-breakpoint-up(lg) {
-        width: 80%;
+        width: 50%;
       }
 }
 
