@@ -62,3 +62,18 @@ p.meta {
 .page-link:hover {
   text-decoration: none;
 }
+
+
+
+//ETLBox additions: add scrollbars to tables if they exceed the viewport
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  
+  tbody {
+    display: table;
+    width: 100%;
+ }
+}
