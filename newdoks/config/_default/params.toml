@@ -105,7 +105,7 @@ lastMod = false
   docsVersioning = false
   fullWidth = false
   navbarSticky = true
-  toTopButton = true
+  toTopButton = false #buggy, div container of button stretches over the full widht and overlays links on the same level
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
 
 [etlboxoptions]
