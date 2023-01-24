@@ -108,6 +108,9 @@ lastMod = false
   toTopButton = true
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
 
+[etlboxoptions]
+  showCTA = true #own addition
+
 [menu]
   [menu.section]
     auto = true

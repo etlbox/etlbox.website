@@ -93,6 +93,12 @@
         </form>
         {{ end -}}
 
+        {{ if .Site.Params.etlboxoptions.showCTA -}}
+        <hr class="text-black-50 my-4 d-lg-none">
+        <a class="btn btn-primary btn-md" href="/buy/pricing" role="button">Buy now</a>
+        {{- end }}
+
+        
         <hr class="text-black-50 my-4 d-lg-none">
         <ul class="nav flex-column flex-lg-row">
           {{ range .Site.Menus.social -}}
