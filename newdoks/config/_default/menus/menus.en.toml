@@ -131,7 +131,7 @@
   weight = 290    
      
 [[main]]
-  name = "Licensing  & Support"
+  name = "Product"
   weight = 300
   identifier = "licensing"
 
@@ -139,14 +139,28 @@
   name = "Pricing"
   url = "/buy/pricing/"
   identifier = "pricing"
-  weight = 300
+  weight = 310
   parent = "licensing"
 
 [[main]]
   name = "Support"
   identifier = "support"
   url = "/support/options/"
-  weight = 400
+  weight = 320
+  parent = "licensing"
+
+[[main]]
+  name = "Release notes"
+  identifier = "release-notes"
+  url = "/support/release-notes/"
+  weight = 330
+  parent = "licensing"
+
+[[main]]
+  name = "Trial key"
+  identifier = "trial"
+  url = "/support/contact/request-trial"
+  weight = 340
   parent = "licensing"
 
 #[[social]]
@@ -203,7 +217,7 @@
 
  [[footer_3]]
    name = "Contact"
-   url = "/support/contact"
+   url = "/support/options"
    weight = 580
 
  [[footer_3]]
@@ -211,7 +225,7 @@
    url = "/privacy-policy/"
    weight = 590
 
- [[footer_3]]
-   name = "About us"
-   url = "/support/contact"
-   weight = 595
+ #[[footer_3]]
+   #name = "About us"
+   #url = "/support/about"
+   #weight = 595
