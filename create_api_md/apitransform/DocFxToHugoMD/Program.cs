@@ -8,16 +8,17 @@ namespace DocFxToHugoMD
     class Program
     {
         static string DocFxApiFolder = @"C:\Users\andreaslennartz\Github\etlbox\etlbox.website\create_api_md\docfx_project\_site\api";
-        static string OutputFolder = @"./Output";
+        static string MainOutputFolder = @"./Output";
+        static string OutputFolder = "./Output/api";
 
         static void Main(string[] args) {
-            if (!Directory.Exists(OutputFolder)) {
-                Directory.CreateDirectory(OutputFolder);
+            if (!Directory.Exists(MainOutputFolder)) {
+                Directory.CreateDirectory(MainOutputFolder);
             } else {
-                Directory.Delete(OutputFolder, true);
-                Directory.CreateDirectory(OutputFolder);
+                Directory.Delete(MainOutputFolder, true);
+                Directory.CreateDirectory(MainOutputFolder);
             }
-
+           
             int weight = 10000;
             foreach (string apiHtmlFileName in Directory.GetFiles(DocFxApiFolder)) {
                 if (IsInFilterList(apiHtmlFileName)) continue;
@@ -34,7 +35,25 @@ namespace DocFxToHugoMD
                 File.WriteAllText(outputFileName, mdContent);
 
             }
+            CreateIndexFile();
         }
+
+        static void CreateIndexFile() {
+            string indexFileContent = $@"---
+title : ""API documentation""
+description: ""The auto generated API documentation of all ETLBox classes""
+draft: false
+images: []
+---
+
+The auto generated API documentation gives you an overview of all public available classes. 
+The documentation will contain generated documentation for all available ETLBox packages. 
+Below is an overview of all classes in each namespace.";
+
+
+            File.WriteAllText(Path.Combine(OutputFolder, "_index.md"), indexFileContent);
+        }
+
 
         private static bool IsInFilterList(string apiHtmlFileName) {
             string fileName = Path.GetFileName(apiHtmlFileName);
