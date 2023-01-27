@@ -86,8 +86,7 @@ Below is an overview of all classes in each namespace.";
             if (!Directory.Exists(dirName))
                 Directory.CreateDirectory(dirName);
             string fileName = Path.Combine(dirName, "_index.md");
-            File.WriteAllText(fileName, $@"
----
+            File.WriteAllText(fileName, $@"---
 title : ""{namespaceName}""
 description: ""All classes of the namespace {namespaceName}""
 draft: false

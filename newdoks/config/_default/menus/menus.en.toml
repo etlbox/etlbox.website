@@ -74,61 +74,7 @@
   name = "API"
   url = "/api/"
   identifier = "api"
-  weight = 200
-
-[[api]]
-  name = "ETLBox.Connection"
-  url = "/api/etlbox.connection/"
-  identifier = "etlbox.connection"
-  weight = 210
-
-[[api]]
-  name = "ETLBox.ControlFlow"
-  url = "/api/etlbox.controlflow/"
-  identifier = "etlbox.controlflow"
-  weight = 220
-
-[[api]]
-  name = "ETLBox.ControlFlow.Tasks"
-  url = "/api/etlbox.controlflow.tasks/"
-  identifier = "etlbox.controlflow.tasks"
-  weight = 230
-
-[[api]]
-  name = "ETLBox.DataFlow"
-  url = "/api/etlbox.dataflow/"
-  identifier = "etlbox.dataflow"
-  weight = 240
-
-[[api]]
-  name = "ETLBox.DataFlow.Connectors"
-  url = "/api/etlbox.dataflow.connectors/"
-  identifier = "etlbox.dataflow.connectors"
-  weight = 250
-
-[[api]]
-  name = "ETLBox.DataFlow.Transformations"
-  url = "/api/etlbox.dataflow.transformations/"
-  identifier = "etlbox.dataflow.transformations"
-  weight = 260  
-
-[[api]]
-  name = "ETLBox.Exceptions"
-  url = "/api/etlbox.exceptions/"
-  identifier = "etlbox.exceptions"
-  weight = 270    
-
-[[api]]
-  name = "ETLBox.Helper"
-  url = "/api/etlbox.helper/"
-  identifier = "etlbox.helper"
-  weight = 280  
-
-[[api]]
-  name = "ETLBox.Logging"
-  url = "/api/etlbox.logging/"
-  identifier = "etlbox.logging"
-  weight = 290    
+  weight = 200  
      
 [[main]]
   name = "Product"
