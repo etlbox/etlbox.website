@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10262
+weight: 10279
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogEntry">
   <h1 id="ETLBox_Logging_LogEntry" data-uid="ETLBox.Logging.LogEntry" class="text-break">Class LogEntry
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -58,12 +58,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogEntry_Action_" data-uid="ETLBox.Logging.LogEntry.Action*"></a>
   <h4 id="ETLBox_Logging_LogEntry_Action" data-uid="ETLBox.Logging.LogEntry.Action">Action</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -90,7 +90,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_EndDate" data-uid="ETLBox.Logging.LogEntry.EndDate">EndDate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -117,7 +117,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_Id" data-uid="ETLBox.Logging.LogEntry.Id">Id</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -144,7 +144,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_Level" data-uid="ETLBox.Logging.LogEntry.Level">Level</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -171,7 +171,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_LoadProcessId" data-uid="ETLBox.Logging.LogEntry.LoadProcessId">LoadProcessId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -198,7 +198,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_LogDate" data-uid="ETLBox.Logging.LogEntry.LogDate">LogDate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -225,7 +225,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_Message" data-uid="ETLBox.Logging.LogEntry.Message">Message</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -252,7 +252,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_Source" data-uid="ETLBox.Logging.LogEntry.Source">Source</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -279,7 +279,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_Stage" data-uid="ETLBox.Logging.LogEntry.Stage">Stage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -306,7 +306,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_StartDate" data-uid="ETLBox.Logging.LogEntry.StartDate">StartDate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -333,7 +333,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_TaskHash" data-uid="ETLBox.Logging.LogEntry.TaskHash">TaskHash</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -360,7 +360,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_TaskName" data-uid="ETLBox.Logging.LogEntry.TaskName">TaskName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -387,7 +387,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogEntry_TaskType" data-uid="ETLBox.Logging.LogEntry.TaskType">TaskType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

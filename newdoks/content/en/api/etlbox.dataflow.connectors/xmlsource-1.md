@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10141
+weight: 10148
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1">
   <h1 id="ETLBox_DataFlow_Connectors_XmlSource_1" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1" class="text-break">Class XmlSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Reads data from a xml source. This can be any http resource or a file.
 By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>
@@ -30,7 +30,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     <div class="level6"><span class="xref">XmlSource&lt;TOutput&gt;</span></div>
       <div class="level7"><a class="xref" href="/api/etlbox.dataflow.connectors/xmlsource">XmlSource</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -63,6 +63,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_HttpRequestMessage">DataFlowStreamSource&lt;TOutput&gt;.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_HttpResponseMessage">DataFlowStreamSource&lt;TOutput&gt;.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Encoding">DataFlowStreamSource&lt;TOutput&gt;.Encoding</a>
     </div>
     <div>
@@ -84,6 +87,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader">DataFlowStreamSource&lt;TOutput&gt;.StreamReader</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_RowModificationAction">DataFlowStreamSource&lt;TOutput&gt;.RowModificationAction</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedDataBuilder">DataFlowStreamSource&lt;TOutput&gt;.UnparsedDataBuilder</a>
     </div>
     <div>
@@ -102,10 +108,16 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnFaulted_System_Exception_">DataFlowStreamSource&lt;TOutput&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_NewMetaDataObject">DataFlowStreamSource&lt;TOutput&gt;.NewMetaDataObject</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit">DataFlowExecutableSource&lt;TOutput&gt;.Limit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsInLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsExceedingLimit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;TOutput&gt;.SourceBlock</a>
@@ -126,10 +138,22 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;TOutput&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;TOutput&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;TOutput&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TOutput&gt;.LinkTo(IDataFlowDestination&lt;TOutput&gt;)</a>
@@ -186,7 +210,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -216,7 +240,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -313,12 +337,14 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_examples"><strong>Examples</strong></h5>
   <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor">XmlSource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -326,40 +352,15 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor(System.String)">XmlSource(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlSource(string uri)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlSource(String, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -380,23 +381,90 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">uri</span></td>
-        <td></td>
+        <td><p>The source xml file name or uri</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/resourcetype">ResourceType</a></td>
         <td><span class="parametername">resourceType</span></td>
-        <td></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor(System.String)">XmlSource(String)</h4>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlSource(string uri)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source xml file name or uri</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
+  <a id="ETLBox_DataFlow_Connectors_XmlSource_1_CollectUnparsedData_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CollectUnparsedData*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_CollectUnparsedData" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CollectUnparsedData">CollectUnparsedData</h4>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override bool CollectUnparsedData { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CollectUnparsedData</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_CollectUnparsedData_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementName_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementName" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementName">ElementName</h4>
   <div class="markdown level1 summary"><p>The element name of the document that contains an item of the data to be parsed</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -419,13 +487,44 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <a id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementNameRetrievalFunc_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementNameRetrievalFunc*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementNameRetrievalFunc" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementNameRetrievalFunc">ElementNameRetrievalFunc</h4>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<StreamMetaData, string> ElementNameRetrievalFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementNameRetrievalFunc_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <a id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName">TaskName</h4>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -456,7 +555,7 @@ with a default name that can be overwritten.</p>
 Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -484,7 +583,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
   <div class="markdown level1 summary"><p>The XmlSerializer used to deserialize the xml into the used data type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -508,12 +607,14 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -523,11 +624,15 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_CheckParameter_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CloseReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CloseReader">CloseReader()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -537,11 +642,15 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_InitReader_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.InitReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_InitReader" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.InitReader">InitReader()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -551,11 +660,15 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_InitReader_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ReadAllRecords">ReadAllRecords()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads data from a xml source. This can be any http resource or a file.
+By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -565,6 +678,8 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords_examples">Examples</h5>
+  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

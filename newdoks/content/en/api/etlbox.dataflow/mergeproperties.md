@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10187
+weight: 10195
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MergeProperties">
   <h1 id="ETLBox_DataFlow_MergeProperties" data-uid="ETLBox.DataFlow.MergeProperties" class="text-break">Class MergeProperties
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A list of properties that describe on which the DbMerge can perform which merge operation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,14 +58,14 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_MergeProperties_CompareColumns_" data-uid="ETLBox.DataFlow.MergeProperties.CompareColumns*"></a>
   <h4 id="ETLBox_DataFlow_MergeProperties_CompareColumns" data-uid="ETLBox.DataFlow.MergeProperties.CompareColumns">CompareColumns</h4>
   <div class="markdown level1 summary"><p>Property names that should be use to compare if the values of a column are equal, so that
 the DbMerge can decide if the column needs to be updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -93,7 +93,7 @@ the DbMerge can decide if the column needs to be updated.</p>
   <div class="markdown level1 summary"><p>List of property names and a to-be value that tells the DbMerge if this row can be deleted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -121,7 +121,7 @@ the DbMerge can decide if the column needs to be updated.</p>
   <div class="markdown level1 summary"><p>Property names that are used to check if the columns match (id values are equal).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -150,7 +150,7 @@ the DbMerge can decide if the column needs to be updated.</p>
 Can be left empty, then all non id columns will be updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

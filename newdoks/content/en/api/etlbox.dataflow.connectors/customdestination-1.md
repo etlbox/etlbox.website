@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10101
+weight: 10104
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1">
   <h1 id="ETLBox_DataFlow_Connectors_CustomDestination_1" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1" class="text-break">Class CustomDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -27,7 +27,7 @@ toc: false
     <div class="level4"><span class="xref">CustomDestination&lt;TInput&gt;</span></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/customdestination">CustomDestination</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -98,7 +98,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -131,7 +131,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -231,12 +231,13 @@ toc: false
 var dest = new CustomDestination&lt;MyRow>();
 dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor">CustomDestination()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -244,11 +245,16 @@ dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_examples">Examples</h5>
+  <pre><code>List&lt;MyRow> rows = new List&lt;MyRow>();
+var dest = new CustomDestination&lt;MyRow>();
+dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_System_Action__0_System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0,System.Int32})">CustomDestination(Action&lt;TInput, Int32&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -275,14 +281,13 @@ dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -312,7 +317,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Each row that the CustomDestination receives is send into this Action as first input value. The second input value is the current progress count.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -336,12 +341,13 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -351,11 +357,16 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CheckParameter_examples">Examples</h5>
+  <pre><code>List&lt;MyRow> rows = new List&lt;MyRow>();
+var dest = new CustomDestination&lt;MyRow>();
+dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -382,11 +393,16 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>List&lt;MyRow> rows = new List&lt;MyRow>();
+var dest = new CustomDestination&lt;MyRow>();
+dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -396,11 +412,16 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_CustomDestination_1_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>List&lt;MyRow> rows = new List&lt;MyRow>();
+var dest = new CustomDestination&lt;MyRow>();
+dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_InitComponent_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_InitComponent" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -410,6 +431,10 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.InitComponent()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_CustomDestination_1_InitComponent_examples">Examples</h5>
+  <pre><code>List&lt;MyRow> rows = new List&lt;MyRow>();
+var dest = new CustomDestination&lt;MyRow>();
+dest.WriteAction = (row, progressCount) => rows.Add(row);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10018
+weight: 10021
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.OleDbConnectionManager">
   <h1 id="ETLBox_Connection_OleDbConnectionManager" data-uid="ETLBox.Connection.OleDbConnectionManager" class="text-break">Class OleDbConnectionManager
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
 for your database exists.
 There are some limitations to the ETLBox functionality when you use this connection manager:</p>
@@ -35,7 +35,7 @@ at least define the table and the columns names</li>
     <div class="level2"><span class="xref">OleDbConnectionManager</span></div>
       <div class="level3"><a class="xref" href="/api/etlbox.connection/sqloledbconnectionmanager">SqlOleDbConnectionManager</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">System.Data.OleDb.OleDbConnection</span>, <span class="xref">System.Data.OleDb.OleDbTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
@@ -92,7 +92,10 @@ at least define the table and the columns names</li>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.IsOdbcOrOleDbConnection</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.MaxParameterAmount</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.MaxParameterSizeSql</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.MaxParameterSizeBulkCopy</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Compatibility</a>
@@ -101,19 +104,19 @@ at least define the table and the columns names</li>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OleDbParameter&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReader(String, IEnumerable&lt;OleDbParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OleDbParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReader(String, IEnumerable&lt;OleDbParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -173,6 +176,9 @@ at least define the table and the columns names</li>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -205,12 +211,23 @@ at least define the table and the columns names</li>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OleDbConnectionManager__ctor_" data-uid="ETLBox.Connection.OleDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager__ctor" data-uid="ETLBox.Connection.OleDbConnectionManager.#ctor">OleDbConnectionManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -220,9 +237,20 @@ at least define the table and the columns names</li>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_OleDbConnectionManager__ctor_" data-uid="ETLBox.Connection.OleDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager__ctor_ETLBox_Connection_OleDbConnectionString_" data-uid="ETLBox.Connection.OleDbConnectionManager.#ctor(ETLBox.Connection.OleDbConnectionString)">OleDbConnectionManager(OleDbConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -248,13 +276,23 @@ at least define the table and the columns names</li>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OleDbConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.OleDbConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.OleDbConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -281,10 +319,20 @@ at least define the table and the columns names</li>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.ConnectionManagerType</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_IsOdbcOrOleDbConnection_" data-uid="ETLBox.Connection.OleDbConnectionManager.IsOdbcOrOleDbConnection*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_IsOdbcOrOleDbConnection" data-uid="ETLBox.Connection.OleDbConnectionManager.IsOdbcOrOleDbConnection">IsOdbcOrOleDbConnection</h4>
-  <div class="markdown level1 summary"><p>Indicates if the current connection manager is used as a OleDb or Odbc Connection.</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -311,11 +359,20 @@ at least define the table and the columns names</li>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.IsOdbcOrOleDbConnection</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_QB_" data-uid="ETLBox.Connection.OleDbConnectionManager.QB*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_QB" data-uid="ETLBox.Connection.OleDbConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -342,11 +399,20 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.QB</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_QE_" data-uid="ETLBox.Connection.OleDbConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_QE" data-uid="ETLBox.Connection.OleDbConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -372,13 +438,23 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.QE</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OleDbConnectionManager_BulkDelete_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkDelete*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk delete</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -399,8 +475,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -408,10 +483,20 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.BulkDelete(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_BulkInsert_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk insert</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -432,8 +517,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -441,9 +525,20 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.BulkInsert(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_BulkSelect_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -492,10 +587,20 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.BulkSelect(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Action, System.Action, System.Action&lt;System.Object&gt;[])</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_BulkUpdate_" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.OleDbConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -516,20 +621,17 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td><p>The column names used in the set part of the update statement</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td><p>The column names to join for the update</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -537,11 +639,20 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.BulkUpdate(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Collections.Generic.ICollection&lt;System.String&gt;)</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Connection.OleDbConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.OleDbConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
-to change back settings made to improve bulk insert performance</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -570,10 +681,20 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.CleanUpBulkInsert(System.String)</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_Clone_" data-uid="ETLBox.Connection.OleDbConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_Clone" data-uid="ETLBox.Connection.OleDbConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -592,8 +713,7 @@ to change back settings made to improve bulk insert performance</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>A instance copy of the current connection manager</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -601,11 +721,20 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Connection_OleDbConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Connection.OleDbConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Connection_OleDbConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.OleDbConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Performs preparations needed to improved
-performance of a bulk insert operation</p>
+  <div class="markdown level1 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
+for your database exists.
+There are some limitations to the ETLBox functionality when you use this connection manager:</p>
+<ul>
+<li>Most ControlFlow Tasks won't work properly, depending on your database</li>
+<li>SqlTask will work</li>
+<li>If you use special characters, you need to set the quotation begin / quotation end properties QB and QE that fit
+to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+<li>DbDestination and DbSource will only work if you provide a TableDefinition that
+at least define the table and the columns names</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

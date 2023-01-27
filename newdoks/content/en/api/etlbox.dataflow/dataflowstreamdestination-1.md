@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10157
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1">
   <h1 id="ETLBox_DataFlow_DataFlowStreamDestination_1" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1" class="text-break">Class DataFlowStreamDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -28,10 +28,11 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/csvdestination-1">CsvDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/exceldestination-1">ExcelDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/jsondestination-1">JsonDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/parquetdestination-1">ParquetDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1">TextDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/xmldestination-1">XmlDestination&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -104,7 +105,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -134,7 +135,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -233,17 +234,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_AzureBlobStorage_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.AzureBlobStorage*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_AzureBlobStorage" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.AzureBlobStorage">AzureBlobStorage</h4>
-  <div class="markdown level1 summary"><p>Use this to pass your AzureBlobStorage connection information.
-There are different methods to connect with Azure Blob Storage:
-Option 1: provide an existing BlockBlobClient
-Option 2: create BlockBlobClient based on the Uri and optional credential tokens - the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamdestination#ETLBox_DataFlow_IDataFlowStreamDestination_Uri">Uri</a> needs to be the blob url
-Option 3: create BlobkBlobClient with provided ConnectionString and ContainerName, the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamdestination#ETLBox_DataFlow_IDataFlowStreamDestination_Uri">Uri</a> is then the name of the blob</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -268,11 +265,10 @@ Option 3: create BlobkBlobClient with provided ConnectionString and ContainerNam
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_CreateStreamWriter_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CreateStreamWriter*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_CreateStreamWriter" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CreateStreamWriter">CreateStreamWriter</h4>
-  <div class="markdown level1 summary"><p>By default, stream are created internally based on Uri &amp; ResourceType.
-If you already have an existing stream, use this function to returns a new StreamWriter based on this stream.</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -297,10 +293,10 @@ If you already have an existing stream, use this function to returns a new Strea
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding">Encoding</h4>
-  <div class="markdown level1 summary"><p>Encoding used to write data into the source file or web request.</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -325,12 +321,10 @@ If you already have an existing stream, use this function to returns a new Strea
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_GetNextUri_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.GetNextUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_GetNextUri" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.GetNextUri">GetNextUri</h4>
-  <div class="markdown level1 summary"><p>This function returns the next url that is used for writing data. It will used until <a class="xref" href="/api/etlbox.dataflow/idataflowstreamdestination-1#ETLBox_DataFlow_IDataFlowStreamDestination_1_HasNextUri">HasNextUri</a> returns false.
-The incoming <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> holds information about the current progress and currently processed data row.
-This property can be used if you want to write into multiple files or send data into different web services.</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -355,11 +349,10 @@ This property can be used if you want to write into multiple files or send data 
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_HasNextUri_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HasNextUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_HasNextUri" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HasNextUri">HasNextUri</h4>
-  <div class="markdown level1 summary"><p>This func determines if the next data record should be written into another location.
-<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> has information about the current progress and currently processed data row.</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -384,10 +377,10 @@ This property can be used if you want to write into multiple files or send data 
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpClient_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpClient*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpClient" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpClient">HttpClient</h4>
-  <div class="markdown level1 summary"><p>The System.Net.HttpClient used to connect with the destination (only needed when the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamdestination#ETLBox_DataFlow_IDataFlowStreamDestination_ResourceType">ResourceType</a> is Http.</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -415,7 +408,7 @@ This property can be used if you want to write into multiple files or send data 
   <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -440,11 +433,10 @@ This property can be used if you want to write into multiple files or send data 
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpRequestMessage_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpRequestMessage*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpRequestMessage" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpRequestMessage">HttpRequestMessage</h4>
-  <div class="markdown level1 summary"><p>The System.Net.Http.HttpRequestMessage use for the request from the HttpClient. You can use the
-to add additional meta data or to change the request type (default is POST).</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -467,14 +459,68 @@ to add additional meta data or to change the request type (default is POST).</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_ResourceType_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.ResourceType*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_ResourceType" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.ResourceType">ResourceType</h4>
-  <div class="markdown level1 summary"><p>Specifies the resource type.
-Use ResourceType.File if you want to write into a file (default)
-Use ResourceType.Http to write into a web endpoint.</p>
+  <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpResponseMessage_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpResponseMessage*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_HttpResponseMessage" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.HttpResponseMessage">HttpResponseMessage</h4>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public HttpResponseMessage HttpResponseMessage { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_NewMetaDataObject_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.NewMetaDataObject*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_NewMetaDataObject" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.NewMetaDataObject">NewMetaDataObject</h4>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected StreamMetaData NewMetaDataObject { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_ResourceType_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.ResourceType*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_ResourceType" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.ResourceType">ResourceType</h4>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -502,7 +548,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
   <div class="markdown level1 summary"><p>The stream writer used for the current request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -527,10 +573,10 @@ Use ResourceType.Http to write into a web endpoint.</p>
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_Uri_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.Uri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_Uri" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.Uri">Uri</h4>
-  <div class="markdown level1 summary"><p>The Url of the webservice (e.g. <a href="https://test.com/foo">https://test.com/foo</a>) or the file name (relative or absolute)</p>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -559,7 +605,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_GetNextUri">GetNextUri</a> and <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HasNextUri">HasNextUri</a> functions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -583,12 +629,13 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -600,9 +647,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -631,9 +679,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -645,9 +694,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_CloseStream" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.CloseStream">CloseStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -657,9 +707,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitComponent_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitComponent" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -671,9 +722,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.InitComponent()</span></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitStream">InitStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -683,9 +735,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -697,9 +750,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_PrepareStreamForBatchProcessing_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.PrepareStreamForBatchProcessing*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_PrepareStreamForBatchProcessing__0___" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.PrepareStreamForBatchProcessing(`0[])">PrepareStreamForBatchProcessing(TInput[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -726,9 +780,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteData_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteData*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteData__0_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteData(`0)">WriteData(TInput)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -755,9 +810,10 @@ if you use the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestinat
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base implementation for a destination that allows writing of data in a stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

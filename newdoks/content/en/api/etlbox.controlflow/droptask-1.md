@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10036
+weight: 10039
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropTask`1">
   <h1 id="ETLBox_ControlFlow_DropTask_1" data-uid="ETLBox.ControlFlow.DropTask`1" class="text-break">Class DropTask&lt;T&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -30,7 +30,7 @@ toc: false
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/droptabletask">DropTableTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropviewtask">DropViewTask</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -108,12 +108,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_DropTask_1_ObjectName_" data-uid="ETLBox.ControlFlow.DropTask`1.ObjectName*"></a>
   <h4 id="ETLBox_ControlFlow_DropTask_1_ObjectName" data-uid="ETLBox.ControlFlow.DropTask`1.ObjectName">ObjectName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -140,7 +140,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DropTask_1_ON" data-uid="ETLBox.ControlFlow.DropTask`1.ON">ON</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -167,7 +167,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DropTask_1_Sql" data-uid="ETLBox.ControlFlow.DropTask`1.Sql">Sql</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -194,7 +194,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DropTask_1_TaskName" data-uid="ETLBox.ControlFlow.DropTask`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -220,12 +220,12 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_DropTask_1_Drop_" data-uid="ETLBox.ControlFlow.DropTask`1.Drop*"></a>
   <h4 id="ETLBox_ControlFlow_DropTask_1_Drop" data-uid="ETLBox.ControlFlow.DropTask`1.Drop">Drop()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -237,7 +237,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DropTask_1_DropIfExists" data-uid="ETLBox.ControlFlow.DropTask`1.DropIfExists">DropIfExists()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

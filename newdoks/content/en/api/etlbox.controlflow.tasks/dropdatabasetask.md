@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10057
+weight: 10060
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask">
   <h1 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask" class="text-break">Class DropDatabaseTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask</a>&lt;<a class="xref" href="/api/etlbox.controlflow.tasks/ifdatabaseexiststask">IfDatabaseExistsTask</a>&gt;</div>
     <div class="level4"><span class="xref">DropDatabaseTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -109,12 +109,13 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_examples"><strong>Examples</strong></h5>
   <pre><code>DropDatabaseTask.Delete(&quot;DemoDB&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor">DropDatabaseTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -122,11 +123,14 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_examples">Examples</h5>
+  <pre><code>DropDatabaseTask.Delete(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor(System.String)">DropDatabaseTask(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -151,14 +155,16 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_System_String__examples">Examples</h5>
+  <pre><code>DropDatabaseTask.Delete(&quot;DemoDB&quot;);</code></pre>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"><p>Drops a database. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -197,7 +203,7 @@ that does exist (e.g. a system database)</p>
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -228,7 +234,7 @@ Make sure that your default connection string points to the server itself and to
   <div class="markdown level1 summary"><p>Drops a database if the database exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -266,7 +272,7 @@ that does exist (e.g. a system database)</p>
   <div class="markdown level1 summary"><p>Drops a database if the database exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

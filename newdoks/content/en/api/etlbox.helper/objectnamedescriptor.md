@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10255
+weight: 10272
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.ObjectNameDescriptor">
   <h1 id="ETLBox_Helper_ObjectNameDescriptor" data-uid="ETLBox.Helper.ObjectNameDescriptor" class="text-break">Class ObjectNameDescriptor
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Applies database specific formatting to an object names.
 E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;schema&quot;.&quot;ViewName&quot; for Postgres</p>
 </div>
@@ -59,13 +59,13 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Helper_ObjectNameDescriptor__ctor_" data-uid="ETLBox.Helper.ObjectNameDescriptor.#ctor*"></a>
   <h4 id="ETLBox_Helper_ObjectNameDescriptor__ctor_System_String_System_String_System_String_" data-uid="ETLBox.Helper.ObjectNameDescriptor.#ctor(System.String,System.String,System.String)">ObjectNameDescriptor(String, String, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance and already parses the values. Right after initialization you can access the values in the properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -104,13 +104,13 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Helper_ObjectNameDescriptor_ObjectName_" data-uid="ETLBox.Helper.ObjectNameDescriptor.ObjectName*"></a>
   <h4 id="ETLBox_Helper_ObjectNameDescriptor_ObjectName" data-uid="ETLBox.Helper.ObjectNameDescriptor.ObjectName">ObjectName</h4>
   <div class="markdown level1 summary"><p>The name of the object that needs to have database spcific formatting applied</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -139,7 +139,7 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
 E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -168,7 +168,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -197,7 +197,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 E.g. schema.ViewName would create &quot;schema&quot;.&quot;ViewName&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -226,7 +226,7 @@ E.g. schema.ViewName would create &quot;schema&quot;.&quot;ViewName&quot;</p>
 E.g. schema.ViewName would create &quot;ViewName&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -255,7 +255,7 @@ E.g. schema.ViewName would create &quot;ViewName&quot;</p>
 E.g. &quot;schema&quot;.&quot;ViewName&quot; would create &quot;schema&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -284,7 +284,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create &quot;schema&quot;</p>
 E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema.ViewName</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -313,7 +313,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema.ViewName</p>
 E.g. &quot;schema&quot;.&quot;ViewName&quot; would create ViewName</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -342,7 +342,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create ViewName</p>
 E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

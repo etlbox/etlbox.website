@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10234
+weight: 10243
 toc: false
 ---
 
@@ -14,9 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication">
   <h1 id="ETLBox_DataFlow_Transformations_RowMultiplication" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication" class="text-break">Class RowMultiplication
-  </h1>
-  <div class="markdown level0 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -28,7 +27,7 @@ toc: false
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/rowmultiplication-2">RowMultiplication</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">RowMultiplication</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
@@ -123,7 +122,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -168,7 +167,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -251,12 +250,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor">RowMultiplication()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -268,7 +267,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor_System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject___" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject}})">RowMultiplication(Func&lt;ExpandoObject, IEnumerable&lt;ExpandoObject&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

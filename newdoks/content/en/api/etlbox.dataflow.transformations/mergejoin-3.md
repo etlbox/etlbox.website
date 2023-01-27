@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10226
+weight: 10235
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3">
   <h1 id="ETLBox_DataFlow_Transformations_MergeJoin_3" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3" class="text-break">Class MergeJoin&lt;TInput1, TInput2, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
 Each row from the left join target will be merged with a row from the right join target.
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
@@ -34,7 +34,7 @@ can be compared with a left or right join.</p>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/mergejoin">MergeJoin</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/mergejoin-1">MergeJoin&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -101,7 +101,7 @@ can be compared with a left or right join.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -134,7 +134,7 @@ can be compared with a left or right join.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -251,12 +251,19 @@ source1.LinkTo(join.LeftInput);
 source2.LinkTo(join.RightInput);
 join.LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor">MergeJoin()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,41 +271,29 @@ join.LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor(System.Func{`0,`1,`2})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public MergeJoin(Func<TInput1, TInput2, TOutput> mergeJoinFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput1, TInput2, TOutput&gt;</td>
-        <td><span class="parametername">mergeJoinFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/mergejoin-3#ETLBox_DataFlow_Transformations_MergeJoin_3_MergeJoinFunc">MergeJoinFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__System_Func__0__1_System_Int32__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor(System.Func{`0,`1,`2},System.Func{`0,`1,System.Int32})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;, Func&lt;TInput1, TInput2, Int32&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -330,13 +325,57 @@ join.LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor(System.Func{`0,`1,`2})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public MergeJoin(Func<TInput1, TInput2, TOutput> mergeJoinFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><span class="parametername">mergeJoinFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/mergejoin-3#ETLBox_DataFlow_Transformations_MergeJoin_3_MergeJoinFunc">MergeJoinFunc</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.Buffer*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.Buffer">Buffer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -359,6 +398,17 @@ join.LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer_examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.ComparisonFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.ComparisonFunc">ComparisonFunc</h4>
   <div class="markdown level1 summary"><p>If the ComparisonFunc is defined, records are compared regarding their sort order and only joined if they match.
@@ -367,7 +417,7 @@ Return a value little than 0 if the record of the left input is in the sort orde
 Return a value greater than 0 if the record for the right input is in the order before the record from the left input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -398,7 +448,7 @@ Return a value greater than 0 if the record for the right input is in the order 
   <div class="markdown level1 summary"><p>The left target of the merge join. Use this to link your source component with.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -426,7 +476,7 @@ Return a value greater than 0 if the record for the right input is in the order 
   <div class="markdown level1 summary"><p>The func that describes how both records from the left and right join target can be joined.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -454,7 +504,7 @@ Return a value greater than 0 if the record for the right input is in the order 
   <div class="markdown level1 summary"><p>The right target of the merge join. Use this to link your source component with.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -479,10 +529,16 @@ Return a value greater than 0 if the record for the right input is in the order 
   </table>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -509,11 +565,16 @@ Return a value greater than 0 if the record for the right input is in the order 
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_TaskName_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_TaskName" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -539,12 +600,19 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -554,11 +622,29 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CheckParameter_examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -585,11 +671,29 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -599,11 +703,29 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_InitComponent" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
+Each row from the left join target will be merged with a row from the right join target.
+If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
+<p>You can define a match condition that let you only merge matching records. This will change the
+match behavior a little bit.
+By assuming that the input is sorted, not matching records will be joined with null then. This
+can be compared with a left or right join.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -613,6 +735,17 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_InitComponent_examples">Examples</h5>
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

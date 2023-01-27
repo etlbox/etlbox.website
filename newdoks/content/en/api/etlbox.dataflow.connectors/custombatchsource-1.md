@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10099
+weight: 10102
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1">
   <h1 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1" class="text-break">Class CustomBatchSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
 which are then send subsequently into your data flow.</p>
 </div>
@@ -29,7 +29,7 @@ which are then send subsequently into your data flow.</p>
     <div class="level5"><span class="xref">CustomBatchSource&lt;TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/custombatchsource">CustomBatchSource</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -46,6 +46,9 @@ which are then send subsequently into your data flow.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsInLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsExceedingLimit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;TOutput&gt;.SourceBlock</a>
@@ -66,10 +69,22 @@ which are then send subsequently into your data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;TOutput&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;TOutput&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;TOutput&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TOutput&gt;.LinkTo(IDataFlowDestination&lt;TOutput&gt;)</a>
@@ -126,7 +141,7 @@ which are then send subsequently into your data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -159,7 +174,7 @@ which are then send subsequently into your data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -255,12 +270,14 @@ which are then send subsequently into your data flow.</p>
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.#ctor">CustomBatchSource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -270,9 +287,11 @@ which are then send subsequently into your data flow.</p>
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1__ctor_System_Func_System_Int32_System_Collections_Generic_IEnumerable__0___System_Predicate_System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.#ctor(System.Func{System.Int32,System.Collections.Generic.IEnumerable{`0}},System.Predicate{System.Int32})">CustomBatchSource(Func&lt;Int32, IEnumerable&lt;TOutput&gt;&gt;, Predicate&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -305,14 +324,14 @@ which are then send subsequently into your data flow.</p>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_ReadBatchFunc_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.ReadBatchFunc*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_ReadBatchFunc" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.ReadBatchFunc">ReadBatchFunc</h4>
   <div class="markdown level1 summary"><p>The function that returns a batch of data row as output. An integer value with the
 current progress count is the input of the function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -341,7 +360,7 @@ current progress count is the input of the function.</p>
 current progress count is the input of the predicate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -366,11 +385,11 @@ current progress count is the input of the predicate.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -396,12 +415,14 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -413,9 +434,11 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -444,9 +467,11 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -458,9 +483,11 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -472,9 +499,11 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.Connectors.CustomBatchSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
+which are then send subsequently into your data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

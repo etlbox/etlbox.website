@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10233
+weight: 10242
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2">
   <h1 id="ETLBox_DataFlow_Transformations_RowMultiplication_2" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2" class="text-break">Class RowMultiplication&lt;TInput, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,7 +29,7 @@ toc: false
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/rowmultiplication">RowMultiplication</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/rowmultiplication-1">RowMultiplication&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
@@ -100,7 +100,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -133,7 +133,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -234,12 +234,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor">RowMultiplication()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -249,9 +250,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_System_Func__0_System_Collections_Generic_IEnumerable__1___" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor(System.Func{`0,System.Collections.Generic.IEnumerable{`1}})">RowMultiplication(Func&lt;TInput, IEnumerable&lt;TOutput&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -278,13 +280,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_MultiplicationFunc_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.MultiplicationFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_MultiplicationFunc" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.MultiplicationFunc">MultiplicationFunc</h4>
   <div class="markdown level1 summary"><p>The transformation func that produces multiple rows for each ingoing row.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -309,10 +311,10 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -339,10 +341,10 @@ toc: false
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -369,11 +371,10 @@ toc: false
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -399,12 +400,13 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -416,9 +418,10 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -447,9 +450,10 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -461,9 +465,10 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_InitComponent" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

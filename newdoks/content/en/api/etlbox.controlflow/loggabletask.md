@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10042
+weight: 10045
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.LoggableTask">
   <h1 id="ETLBox_ControlFlow_LoggableTask" data-uid="ETLBox.ControlFlow.LoggableTask" class="text-break">Class LoggableTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -64,12 +64,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_LoggableTask__ctor_" data-uid="ETLBox.ControlFlow.LoggableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask__ctor" data-uid="ETLBox.ControlFlow.LoggableTask.#ctor">LoggableTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -78,13 +79,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_LoggableTask_DisableLogging_" data-uid="ETLBox.ControlFlow.LoggableTask.DisableLogging*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_DisableLogging" data-uid="ETLBox.ControlFlow.LoggableTask.DisableLogging">DisableLogging</h4>
-  <div class="markdown level1 summary"><p>If set to true, the component or task won't produce any log output.</p>
+  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -109,10 +110,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskHash_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskHash*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskHash" data-uid="ETLBox.ControlFlow.LoggableTask.TaskHash">TaskHash</h4>
-  <div class="markdown level1 summary"><p>Creates a unique hash value to identify the task.</p>
+  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -137,11 +138,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskName_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskName" data-uid="ETLBox.ControlFlow.LoggableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -166,10 +166,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskType_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskType*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskType" data-uid="ETLBox.ControlFlow.LoggableTask.TaskType">TaskType</h4>
-  <div class="markdown level1 summary"><p>A type description of the task or component. This is usually the class name.</p>
+  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,14 +193,14 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_" data-uid="ETLBox.ControlFlow.LoggableTask.CopyLogTaskProperties*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_" data-uid="ETLBox.ControlFlow.LoggableTask.CopyLogTaskProperties(ETLBox.ControlFlow.ILoggableTask)">CopyLogTaskProperties(ILoggableTask)</h4>
   <div class="markdown level1 summary"><p>Copies the relevant task properties from the current loggable task
 to another loggable task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

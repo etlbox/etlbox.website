@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10196
+weight: 10206
 toc: false
 ---
 
@@ -14,14 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1">
   <h1 id="ETLBox_DataFlow_Transformations_BatchTransformation_1" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1" class="text-break">Class BatchTransformation&lt;TInput&gt;
-  </h1>
-  <div class="markdown level0 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -34,7 +28,7 @@ memory to store a whole batch.</p>
     <div class="level6"><span class="xref">BatchTransformation&lt;TInput&gt;</span></div>
       <div class="level7"><a class="xref" href="/api/etlbox.dataflow.transformations/batchtransformation">BatchTransformation</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -153,7 +147,7 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -198,7 +192,7 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -296,12 +290,12 @@ memory to store a whole batch.</p>
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor">BatchTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -310,39 +304,10 @@ memory to store a whole batch.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor(System.Int32)">BatchTransformation(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public BatchTransformation(int batchSize)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">batchSize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_System_Int32_System_Func__0____0____" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor(System.Int32,System.Func{`0[],`0[]})">BatchTransformation(Int32, Func&lt;TInput[], TInput[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -368,6 +333,35 @@ memory to store a whole batch.</p>
       <tr>
         <td><span class="xref">System.Func</span>&lt;TInput[], TInput[]&gt;</td>
         <td><span class="parametername">batchTransformationFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_1__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`1.#ctor(System.Int32)">BatchTransformation(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public BatchTransformation(int batchSize)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">batchSize</span></td>
         <td></td>
       </tr>
     </tbody>

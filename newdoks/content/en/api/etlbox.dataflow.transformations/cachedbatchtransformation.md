@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10205
+weight: 10215
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation">
   <h1 id="ETLBox_DataFlow_Transformations_CachedBatchTransformation" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation" class="text-break">Class CachedBatchTransformation
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -29,7 +29,7 @@ toc: false
     <div class="level7"><a class="xref" href="/api/etlbox.dataflow.transformations/cachedbatchtransformation-1">CachedBatchTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level8"><span class="xref">CachedBatchTransformation</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -169,7 +169,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -214,7 +214,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -297,12 +297,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor">CachedBatchTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -311,10 +311,44 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_System_Int32_System_Func_System_Dynamic_ExpandoObject___System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject____" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor(System.Int32,System.Func{System.Dynamic.ExpandoObject[],System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject[]})">CachedBatchTransformation(Int32, Func&lt;ExpandoObject[], IEnumerable&lt;ExpandoObject&gt;, ExpandoObject[]&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CachedBatchTransformation(int batchSize, Func<ExpandoObject[], IEnumerable<ExpandoObject>, ExpandoObject[]> batchTransformationFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">batchSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>[], <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;, <span class="xref">System.Dynamic.ExpandoObject</span>[]&gt;</td>
+        <td><span class="parametername">batchTransformationFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor(System.Int32)">CachedBatchTransformation(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -335,40 +369,6 @@ toc: false
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">batchSize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_CachedBatchTransformation__ctor_System_Int32_System_Func_System_Dynamic_ExpandoObject___System_Collections_Generic_ICollection_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject____" data-uid="ETLBox.DataFlow.Transformations.CachedBatchTransformation.#ctor(System.Int32,System.Func{System.Dynamic.ExpandoObject[],System.Collections.Generic.ICollection{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject[]})">CachedBatchTransformation(Int32, Func&lt;ExpandoObject[], ICollection&lt;ExpandoObject&gt;, ExpandoObject[]&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CachedBatchTransformation(int batchSize, Func<ExpandoObject[], ICollection<ExpandoObject>, ExpandoObject[]> batchTransformationFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">batchSize</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>[], <span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;, <span class="xref">System.Dynamic.ExpandoObject</span>[]&gt;</td>
-        <td><span class="parametername">batchTransformationFunc</span></td>
         <td></td>
       </tr>
     </tbody>

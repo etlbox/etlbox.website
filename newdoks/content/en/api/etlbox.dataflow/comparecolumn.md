@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10085
+weight: 10087
 toc: false
 ---
 
@@ -14,11 +14,9 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CompareColumn">
   <h1 id="ETLBox_DataFlow_CompareColumn" data-uid="ETLBox.DataFlow.CompareColumn" class="text-break">Class CompareColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is included in the comparison to identify
-object that exists and needs to be updated. It it supposed
-to use with an object that either inherits from MergeableRow.
-If you implement the IMergeable interface, you need to override the Equals-method instead.</p>
+object that exists and needs to be updated.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -168,7 +166,7 @@ public sealed class CompareColumn : Attribute
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_CompareColumn_examples"><strong>Examples</strong></h5>
-  <pre><code> public class MyPoco : MergeableRow
+  <pre><code> public class MyPoco 
 {
     [IdColumn]
     public int Key { get; set; }
@@ -176,13 +174,13 @@ public sealed class CompareColumn : Attribute
     public string Value {get;set; }
 }</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_CompareColumn__ctor_" data-uid="ETLBox.DataFlow.CompareColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_CompareColumn__ctor" data-uid="ETLBox.DataFlow.CompareColumn.#ctor">CompareColumn()</h4>
   <div class="markdown level1 summary"><p>Marks this property as column used for comparison in a Merge operation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -191,13 +189,13 @@ public sealed class CompareColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_CompareColumn_ComparePropertyName_" data-uid="ETLBox.DataFlow.CompareColumn.ComparePropertyName*"></a>
   <h4 id="ETLBox_DataFlow_CompareColumn_ComparePropertyName" data-uid="ETLBox.DataFlow.CompareColumn.ComparePropertyName">ComparePropertyName</h4>
   <div class="markdown level1 summary"><p>Name of the property name used for the comparison if two rows match</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

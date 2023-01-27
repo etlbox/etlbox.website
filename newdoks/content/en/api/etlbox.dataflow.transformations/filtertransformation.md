@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10220
+weight: 10230
 toc: false
 ---
 
@@ -14,10 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.FilterTransformation">
   <h1 id="ETLBox_DataFlow_Transformations_FilterTransformation" data-uid="ETLBox.DataFlow.Transformations.FilterTransformation" class="text-break">Class FilterTransformation
-  </h1>
-  <div class="markdown level0 summary"><p>The FilterTransformation allows you to filter out rows that evaluate to a given predicate.
-By default the filter transformation will filter out null values.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -29,7 +27,7 @@ By default the filter transformation will filter out null values.</p>
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/filtertransformation-1">FilterTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">FilterTransformation</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -124,7 +122,7 @@ By default the filter transformation will filter out null values.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -157,7 +155,7 @@ By default the filter transformation will filter out null values.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -237,12 +235,12 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_FilterTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.FilterTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_FilterTransformation__ctor" data-uid="ETLBox.DataFlow.Transformations.FilterTransformation.#ctor">FilterTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -254,7 +252,7 @@ By default the filter transformation will filter out null values.</p>
   <h4 id="ETLBox_DataFlow_Transformations_FilterTransformation__ctor_System_Predicate_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.FilterTransformation.#ctor(System.Predicate{System.Dynamic.ExpandoObject})">FilterTransformation(Predicate&lt;ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10054
+weight: 10057
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask">
   <h1 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask" class="text-break">Class CreateSchemaTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
 The Create method will throw an exception if the schema already exists.
 CreateIfNotExists will only create a schema if it doesn't exists.</p>
@@ -27,7 +27,7 @@ CreateIfNotExists will only create a schema if it doesn't exists.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateSchemaTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -93,12 +93,15 @@ CreateIfNotExists will only create a schema if it doesn't exists.</p>
   <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
 CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor">CreateSchemaTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
+The Create method will throw an exception if the schema already exists.
+CreateIfNotExists will only create a schema if it doesn't exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -106,40 +109,17 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String)">CreateSchemaTask(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CreateSchemaTask(string schemaName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_examples">Examples</h5>
+  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
+CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String,System.String)">CreateSchemaTask(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
+The Create method will throw an exception if the schema already exists.
+CreateIfNotExists will only create a schema if it doesn't exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -169,13 +149,54 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String_System_String__examples">Examples</h5>
+  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
+CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String)">CreateSchemaTask(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
+The Create method will throw an exception if the schema already exists.
+CreateIfNotExists will only create a schema if it doesn't exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CreateSchemaTask(string schemaName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String__examples">Examples</h5>
+  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
+CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_AuthorizationUser_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_AuthorizationUser" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser">AuthorizationUser</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
+The Create method will throw an exception if the schema already exists.
+CreateIfNotExists will only create a schema if it doesn't exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -198,12 +219,15 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_AuthorizationUser_examples">Examples</h5>
+  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
+CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_ON_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.ON*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_ON" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.ON">ON</h4>
   <div class="markdown level1 summary"><p>The formatted schema name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -231,7 +255,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <div class="markdown level1 summary"><p>The name of the schema</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -259,7 +283,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <div class="markdown level1 summary"><p>The sql that is used to create the schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -284,11 +308,12 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
+The Create method will throw an exception if the schema already exists.
+CreateIfNotExists will only create a schema if it doesn't exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -314,14 +339,14 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create">Create()</h4>
   <div class="markdown level1 summary"><p>Runs the sql that creates the schema. If the schema already exists, an Exception is thrown.
 Works only if the database does support schema (for MySql, use the CreateDatabaseTask instead)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -330,48 +355,11 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String)">Create(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Create(IConnectionManager connectionManager, string schemaName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td><p>The name of the schema</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.String)">Create(IConnectionManager, String, String)</h4>
   <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -410,15 +398,15 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String)">Create(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String)">Create(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static void Create(string schemaName)
+    public static void Create(IConnectionManager connectionManager, string schemaName)
 ```
 
 {{< rawhtml >}}
@@ -433,6 +421,12 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
@@ -445,7 +439,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
   <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -477,30 +471,16 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists">CreateIfNotExists()</h4>
-  <div class="markdown level1 summary"><p>Runs the sql that creates the schema. Schema is only created if the schema doesn't exists.
-Works only if the database does support schema (for MySql, use the CreateDatabaseTask instead)</p>
+  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String)">Create(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void CreateIfNotExists()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CreateIfNotExists(IConnectionManager connectionManager, string schemaName)
+    public static void Create(string schemaName)
 ```
 
 {{< rawhtml >}}
@@ -515,12 +495,6 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
@@ -529,11 +503,25 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists">CreateIfNotExists()</h4>
+  <div class="markdown level1 summary"><p>Runs the sql that creates the schema. Schema is only created if the schema doesn't exists.
+Works only if the database does support schema (for MySql, use the CreateDatabaseTask instead)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void CreateIfNotExists()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, String, String)</h4>
   <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -572,15 +560,15 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String)">CreateIfNotExists(String)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead.</p>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static void CreateIfNotExists(string schemaName)
+    public static void CreateIfNotExists(IConnectionManager connectionManager, string schemaName)
 ```
 
 {{< rawhtml >}}
@@ -595,6 +583,12 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
@@ -607,7 +601,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
   <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -635,6 +629,37 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">authorizationUser</span></td>
         <td><p>Database user which is authorized for the schema</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String)">CreateIfNotExists(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CreateIfNotExists(string schemaName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td><p>The name of the schema</p>
 </td>
       </tr>
     </tbody>

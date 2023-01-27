@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10065
+weight: 10068
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask">
   <h1 id="ETLBox_ControlFlow_Tasks_GetTableListTask" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask" class="text-break">Class GetTableListTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Returns a list of all tables in the currently connected database.<br>
 Make sure to connect with the correct permissions!</p>
 </div>
@@ -27,7 +27,7 @@ Make sure to connect with the correct permissions!</p>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow.tasks/getlisttask">GetListTask</a></div>
     <div class="level4"><span class="xref">GetTableListTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -107,12 +107,14 @@ foreach (var on in alltables) {
     Console.WriteLine(&quot;Full qualified name:&quot; + on.QuotatedFullName);
 }</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetTableListTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetTableListTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.#ctor">GetTableListTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all tables in the currently connected database.<br>
+Make sure to connect with the correct permissions!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -120,13 +122,23 @@ foreach (var on in alltables) {
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_GetTableListTask__ctor_examples">Examples</h5>
+  <pre><code>    
+List&lt;ETLBox.Helper.ObjectNameDescriptor> alltables = GetTableListTask.List();
+foreach (var on in alltables) {
+    Console.WriteLine(&quot;Schema:&quot; + on.UnquotatedSchemaName);
+    Console.WriteLine(&quot;TableName:&quot; + on.UnquotatedObjectName);
+    Console.WriteLine(&quot;Full qualified name:&quot; + on.QuotatedFullName);
+}</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetTableListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetTableListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all tables in the currently connected database.<br>
+Make sure to connect with the correct permissions!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -152,13 +164,13 @@ foreach (var on in alltables) {
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow.tasks/getlisttask#ETLBox_ControlFlow_Tasks_GetListTask_TaskName">GetListTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetTableListTask_ListAll_" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.ListAll*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetTableListTask_ListAll" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.ListAll">ListAll()</h4>
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -187,7 +199,7 @@ foreach (var on in alltables) {
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

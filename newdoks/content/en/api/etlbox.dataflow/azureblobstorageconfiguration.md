@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10082
+weight: 10084
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration">
   <h1 id="ETLBox_DataFlow_AzureBlobStorageConfiguration" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration" class="text-break">Class AzureBlobStorageConfiguration
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Contains configuration details to connect with an Azure Blob Storage</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,12 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor">AzureBlobStorageConfiguration()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains configuration details to connect with an Azure Blob Storage</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -73,9 +74,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_System_String_System_String_Azure_Storage_Blobs_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor(System.String,System.String,Azure.Storage.Blobs.BlobClientOptions)">AzureBlobStorageConfiguration(String, String, BlobClientOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains configuration details to connect with an Azure Blob Storage</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -111,13 +113,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_AzureSasCredential_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.AzureSasCredential*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_AzureSasCredential" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.AzureSasCredential">AzureSasCredential</h4>
   <div class="markdown level1 summary"><p>Credentials to authenticate when connecting to the blob Url provided in the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Uri">Uri</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -145,7 +147,7 @@ toc: false
   <div class="markdown level1 summary"><p>Optional: Additional options when connecting with the <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlockBlobClient">BlockBlobClient</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -173,7 +175,7 @@ toc: false
   <div class="markdown level1 summary"><p>Optional: Additional options when opening the stream for reading</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -201,7 +203,7 @@ toc: false
   <div class="markdown level1 summary"><p>Provide an existing BlockBlobClient to connect with Azure Blob Storage</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -229,7 +231,7 @@ toc: false
   <div class="markdown level1 summary"><p>Optional: Additional options when opening the stream for writing</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -258,7 +260,7 @@ toc: false
 and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a> needs to have a value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -287,7 +289,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ConnectionString">ConnectionString</a> needs to have a value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -315,7 +317,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
   <div class="markdown level1 summary"><p>Token to authenticate when connecting to the blob Url provided in the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Uri">Uri</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -343,7 +345,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
   <div class="markdown level1 summary"><p>Token credential to authenticate when connecting to the blob Url provided in the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Uri">Uri</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

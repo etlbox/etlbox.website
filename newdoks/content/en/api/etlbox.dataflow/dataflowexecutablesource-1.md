@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10147
+weight: 10154
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1">
   <h1 id="ETLBox_DataFlow_DataFlowExecutableSource_1" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1" class="text-break">Class DataFlowExecutableSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -35,7 +35,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1">DataFlowStreamSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/errorsource">ErrorSource</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -102,7 +102,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -144,7 +144,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -242,11 +242,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_SourceTask" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.SourceTask">SourceTask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -270,12 +271,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Buffer_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Buffer*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Buffer" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Buffer">Buffer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -300,9 +302,10 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_CompleteManually_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.CompleteManually*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_CompleteManually" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.CompleteManually">CompleteManually</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -330,7 +333,7 @@ toc: false
   <div class="markdown level1 summary"><p>Reads data from the source until the limit is reached. Default is 0 (=no limit).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -353,11 +356,40 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsExceedingLimit*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsExceedingLimit">ProgressCountIsExceedingLimit</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected bool ProgressCountIsExceedingLimit { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit">ProgressCountIsInLimit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -382,10 +414,10 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -411,14 +443,13 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute">Execute()</h4>
-  <div class="markdown level1 summary"><p>Starts the data flow for all connected components (also for other sources in the network).
-Waits until all destinations run to completion.</p>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -426,12 +457,42 @@ Waits until all destinations run to completion.</p>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync">ExecuteAsync()</h4>
-  <div class="markdown level1 summary"><p>Starts the data flow asynchronously. This method will return an awaitable task that completes or faults when the flow ran to completion.</p>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute(System.Threading.CancellationToken)">Execute(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Execute(CancellationToken cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync">ExecuteAsync()</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -454,11 +515,57 @@ Waits until all destinations run to completion.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.ExecuteAsync(System.Threading.CancellationToken)">ExecuteAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task ExecuteAsync(CancellationToken cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_InitComponent_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_InitComponent" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -468,11 +575,42 @@ Waits until all destinations run to completion.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InternalPost*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InternalPost(System.Nullable{System.Threading.CancellationToken})">InternalPost(Nullable&lt;CancellationToken&gt;)</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void InternalPost(CancellationToken? cancellationToken = null)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -482,9 +620,10 @@ Waits until all destinations run to completion.</p>
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -494,10 +633,10 @@ Waits until all destinations run to completion.</p>
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Post_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Post*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Post" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Post">Post()</h4>
-  <div class="markdown level1 summary"><p>Starts the data flow synchronously. This method will return when all data was posted into the flow</p>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -505,6 +644,36 @@ Waits until all destinations run to completion.</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Post_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Post*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Post(System.Threading.CancellationToken)">Post(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Base implementation for a source that can be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Post(CancellationToken cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

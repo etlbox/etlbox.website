@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10044
+weight: 10047
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ProcedureDefinition">
   <h1 id="ETLBox_ControlFlow_ProcedureDefinition" data-uid="ETLBox.ControlFlow.ProcedureDefinition" class="text-break">Class ProcedureDefinition
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Defines a procedure</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,12 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ProcedureDefinition__ctor_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_ProcedureDefinition__ctor" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor">ProcedureDefinition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a procedure</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -72,44 +73,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_ProcedureDefinition__ctor_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_ProcedureDefinition__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor(System.String,System.String)">ProcedureDefinition(String, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ProcedureDefinition(string name, string definition)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">definition</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_ProcedureDefinition__ctor_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_ProcedureDefinition__ctor_System_String_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor(System.String,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.ProcedureParameter})">ProcedureDefinition(String, String, List&lt;ProcedureParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a procedure</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -144,14 +112,49 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_ProcedureDefinition__ctor_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_ProcedureDefinition__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.#ctor(System.String,System.String)">ProcedureDefinition(String, String)</h4>
+  <div class="markdown level1 summary"><p>Defines a procedure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ProcedureDefinition(string name, string definition)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">definition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ProcedureDefinition_Definition_" data-uid="ETLBox.ControlFlow.ProcedureDefinition.Definition*"></a>
   <h4 id="ETLBox_ControlFlow_ProcedureDefinition_Definition" data-uid="ETLBox.ControlFlow.ProcedureDefinition.Definition">Definition</h4>
   <div class="markdown level1 summary"><p>The sql code of the procudure</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,7 +182,7 @@ toc: false
   <div class="markdown level1 summary"><p>Name of the procedure</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -207,7 +210,7 @@ toc: false
   <div class="markdown level1 summary"><p>List of parameters for the procedure</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

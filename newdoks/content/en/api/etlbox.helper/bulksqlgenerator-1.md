@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10246
+weight: 10261
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.BulkSqlGenerator`1">
   <h1 id="ETLBox_Helper_BulkSqlGenerator_1" data-uid="ETLBox.Helper.BulkSqlGenerator`1" class="text-break">Class BulkSqlGenerator&lt;T&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
 Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
 </div>
@@ -76,12 +76,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1__ctor_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1__ctor_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor(ETLBox.ControlFlow.ITableData)">BulkSqlGenerator(ITableData)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -107,14 +109,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_AccessDummyTableName_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AccessDummyTableName*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_AccessDummyTableName" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AccessDummyTableName">AccessDummyTableName</h4>
   <div class="markdown level1 summary"><p>When creating a bulk insert sql statement for Access, a dummy table is needed.
 The name of the dummy table is specified here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -144,7 +146,7 @@ the DbType and Size of the parameter. This should only be necessary for SqlServe
 Default is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -174,7 +176,7 @@ The datatype is the same data types used in the table definition.
 Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition">AddDbTypesFromDefinition</a> is set to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -202,7 +204,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   <div class="markdown level1 summary"><p>The type of the database that the bulk insert statement is designed for</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -230,7 +232,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   <div class="markdown level1 summary"><p>Indicates if all data was read</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -258,7 +260,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   <div class="markdown level1 summary"><p>Indicates if the VALUES table descriptor needs the keyword ROW (MySql only)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -283,9 +285,11 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_JoinColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.JoinColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_JoinColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.JoinColumnNames">JoinColumnNames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -310,9 +314,11 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_Limit_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.Limit*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_Limit" data-uid="ETLBox.Helper.BulkSqlGenerator`1.Limit">Limit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -344,7 +350,7 @@ Nulls will then be converted into &quot;null&quot; in the statement, and no para
 is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -373,7 +379,7 @@ is used.</p>
 Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox_Helper_BulkSqlGenerator_1_UseParameterQuery">UseParameterQuery</a> is true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -401,7 +407,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   <div class="markdown level1 summary"><p>The quotatation begin character that the database uses. (E.g. '[' for SqlServer or '&quot;' for Postgres)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -429,7 +435,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   <div class="markdown level1 summary"><p>The quotatation end character that the database uses. (E.g. ']' for SqlServer or '&quot;' for Postgres)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -454,9 +460,11 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_SelectColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SelectColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_SelectColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SelectColumnNames">SelectColumnNames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -481,9 +489,11 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_SetColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SetColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_SetColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SetColumnNames">SetColumnNames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -511,7 +521,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   <div class="markdown level1 summary"><p>The data used for the bulk operation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -539,7 +549,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   <div class="markdown level1 summary"><p>The destination table name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -571,7 +581,7 @@ The most ADO.NET connectors do this automatically, but this can be useful for Po
 Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition">AddDbTypesFromDefinition</a> is set to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -599,7 +609,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   <div class="markdown level1 summary"><p>Indicates that the parameter variables in the sql have a name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -628,7 +638,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
 Default is true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -652,12 +662,14 @@ Default is true.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkDeleteStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkDeleteStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkDeleteStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkDeleteStatement">CreateBulkDeleteStatement()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -685,7 +697,7 @@ Default is true.</p>
   <div class="markdown level1 summary"><p>Create the sql that can be used as a bulk insert.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -710,9 +722,11 @@ Default is true.</p>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkSelectStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkSelectStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkSelectStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkSelectStatement">CreateBulkSelectStatement()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -737,9 +751,11 @@ Default is true.</p>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkUpdateStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkUpdateStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkUpdateStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkUpdateStatement">CreateBulkUpdateStatement()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
+Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

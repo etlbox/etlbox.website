@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10259
+weight: 10276
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.CreateErrorTableTask">
   <h1 id="ETLBox_Logging_CreateErrorTableTask" data-uid="ETLBox.Logging.CreateErrorTableTask" class="text-break">Class CreateErrorTableTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
 that occur during a data flow execution</p>
 </div>
@@ -26,7 +26,7 @@ that occur during a data flow execution</p>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateErrorTableTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -89,12 +89,14 @@ that occur during a data flow execution</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Logging_CreateErrorTableTask__ctor_" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask__ctor" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor">CreateErrorTableTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -104,9 +106,11 @@ that occur during a data flow execution</p>
 {{< rawhtml >}}
   <a id="ETLBox_Logging_CreateErrorTableTask__ctor_" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor(ETLBox.Connection.IConnectionManager,System.String)">CreateErrorTableTask(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -138,9 +142,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask__ctor_" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask__ctor_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.#ctor(System.String)">CreateErrorTableTask(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -166,12 +172,14 @@ that occur during a data flow execution</p>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_CreateErrorTableTask_DropAndCreateTable_" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreateTable*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_DropAndCreateTable" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreateTable">DropAndCreateTable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -196,9 +204,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_TableName_" data-uid="ETLBox.Logging.CreateErrorTableTask.TableName*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_TableName" data-uid="ETLBox.Logging.CreateErrorTableTask.TableName">TableName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -223,9 +233,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_TaskName_" data-uid="ETLBox.Logging.CreateErrorTableTask.TaskName*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_TaskName" data-uid="ETLBox.Logging.CreateErrorTableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -251,12 +263,14 @@ that occur during a data flow execution</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Logging_CreateErrorTableTask_Create_" data-uid="ETLBox.Logging.CreateErrorTableTask.Create*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_Create_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.Create(ETLBox.Connection.IConnectionManager,System.String)">Create(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -288,9 +302,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_Create_" data-uid="ETLBox.Logging.CreateErrorTableTask.Create*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_Create_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.Create(System.String)">Create(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -317,9 +333,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_DropAndCreate_" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreate*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_DropAndCreate_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreate(ETLBox.Connection.IConnectionManager,System.String)">DropAndCreate(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -351,9 +369,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_DropAndCreate_" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreate*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_DropAndCreate_System_String_" data-uid="ETLBox.Logging.CreateErrorTableTask.DropAndCreate(System.String)">DropAndCreate(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -380,9 +400,11 @@ that occur during a data flow execution</p>
   </table>
   <a id="ETLBox_Logging_CreateErrorTableTask_Execute_" data-uid="ETLBox.Logging.CreateErrorTableTask.Execute*"></a>
   <h4 id="ETLBox_Logging_CreateErrorTableTask_Execute" data-uid="ETLBox.Logging.CreateErrorTableTask.Execute">Execute()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
+that occur during a data flow execution</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

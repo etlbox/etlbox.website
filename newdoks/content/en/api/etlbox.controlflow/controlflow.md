@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10033
+weight: 10036
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ControlFlow">
   <h1 id="ETLBox_ControlFlow_ControlFlow" data-uid="ETLBox.ControlFlow.ControlFlow" class="text-break">Class ControlFlow
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
 Here you can set default connections string, disbale the logging for all processes or set the current stage used in your logging configuration.</p>
 </div>
@@ -59,13 +59,13 @@ Here you can set default connections string, disbale the logging for all process
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ControlFlow_DefaultDbConnection_" data-uid="ETLBox.ControlFlow.ControlFlow.DefaultDbConnection*"></a>
   <h4 id="ETLBox_ControlFlow_ControlFlow_DefaultDbConnection" data-uid="ETLBox.ControlFlow.ControlFlow.DefaultDbConnection">DefaultDbConnection</h4>
   <div class="markdown level1 summary"><p>You can store your general database connection string here. This connection will then used by all Tasks where no DB connection is excplicitly set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -89,13 +89,13 @@ Here you can set default connections string, disbale the logging for all process
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ControlFlow_ClearSettings_" data-uid="ETLBox.ControlFlow.ControlFlow.ClearSettings*"></a>
   <h4 id="ETLBox_ControlFlow_ControlFlow_ClearSettings" data-uid="ETLBox.ControlFlow.ControlFlow.ClearSettings">ClearSettings()</h4>
   <div class="markdown level1 summary"><p>Set all settings back to default (which is null or false)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

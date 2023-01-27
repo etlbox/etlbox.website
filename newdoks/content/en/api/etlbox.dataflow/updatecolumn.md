@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10242
+weight: 10253
 toc: false
 ---
 
@@ -14,12 +14,12 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.UpdateColumn">
   <h1 id="ETLBox_DataFlow_UpdateColumn" data-uid="ETLBox.DataFlow.UpdateColumn" class="text-break">Class UpdateColumn
-  </h1>
-  <div class="markdown level0 summary"><p>This attribute defines if a column is the destination is updated.
-Use the CompareColumn attribute to define if a row in the source and destination
-match. If they match, you can use the UpdateColumn to describe which columns
+</h1>
+  <div class="markdown level0 summary"><p>This attribute defines if a column in the destination is updated.
+Use the IdColumn attribute to define if a row in the destination matches with your object.
+If they match, you can use the UpdateColumn to describe which columns
 are actually updated. This is optional - if you don't provide any update columns,
-all non id columns are updated.</p>
+by default all non id columns are updated.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -169,23 +169,26 @@ public sealed class UpdateColumn : Attribute
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_UpdateColumn_examples"><strong>Examples</strong></h5>
-  <p>public class MyPoco : MergeableRow
+  <p>public class MyPoco
 {
 [IdColumn]
 public int Key { get; set; }
-[CompareColumn]
-public string HashValue { get;set; }
 [UpdateColumn]
 public string ValueToUpdate { get;set; }
-public string IgnoredValue { get;set; }</p>
-<p>}</p>
+public string IgnoredValue { get;set; }
+}</p>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_UpdateColumn__ctor_" data-uid="ETLBox.DataFlow.UpdateColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_UpdateColumn__ctor" data-uid="ETLBox.DataFlow.UpdateColumn.#ctor">UpdateColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines if a column in the destination is updated.
+Use the IdColumn attribute to define if a row in the destination matches with your object.
+If they match, you can use the UpdateColumn to describe which columns
+are actually updated. This is optional - if you don't provide any update columns,
+by default all non id columns are updated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,14 +196,23 @@ public string IgnoredValue { get;set; }</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_UpdateColumn__ctor_examples">Examples</h5>
+  <p>public class MyPoco
+{
+[IdColumn]
+public int Key { get; set; }
+[UpdateColumn]
+public string ValueToUpdate { get;set; }
+public string IgnoredValue { get;set; }
+}</p>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_UpdateColumn_UpdatePropertyName_" data-uid="ETLBox.DataFlow.UpdateColumn.UpdatePropertyName*"></a>
   <h4 id="ETLBox_DataFlow_UpdateColumn_UpdatePropertyName" data-uid="ETLBox.DataFlow.UpdateColumn.UpdatePropertyName">UpdatePropertyName</h4>
   <div class="markdown level1 summary"><p>Name of the property that is used in the update</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

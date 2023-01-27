@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10167
+weight: 10175
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowExecutableSource`1">
   <h1 id="ETLBox_DataFlow_IDataFlowExecutableSource_1" data-uid="ETLBox.DataFlow.IDataFlowExecutableSource`1" class="text-break">Interface IDataFlowExecutableSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Shared methods for sources that can be executed</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -66,10 +66,19 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Execute">IDataFlowExecutableSource.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Execute_System_Threading_CancellationToken_">IDataFlowExecutableSource.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Post">IDataFlowExecutableSource.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Post_System_Threading_CancellationToken_">IDataFlowExecutableSource.Post(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_ExecuteAsync">IDataFlowExecutableSource.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_ExecuteAsync_System_Threading_CancellationToken_">IDataFlowExecutableSource.ExecuteAsync(CancellationToken)</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>

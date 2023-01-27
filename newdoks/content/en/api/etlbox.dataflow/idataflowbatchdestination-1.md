@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10162
+weight: 10170
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination`1">
   <h1 id="ETLBox_DataFlow_IDataFlowBatchDestination_1" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination`1" class="text-break">Interface IDataFlowBatchDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">

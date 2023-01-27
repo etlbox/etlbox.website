@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10008
+weight: 10011
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.IConnectionManager">
   <h1 id="ETLBox_Connection_IConnectionManager" data-uid="ETLBox.Connection.IConnectionManager" class="text-break">Interface IConnectionManager
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Common properties and methods for all database connection managers</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -35,14 +35,14 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_IConnectionManager_CommandTimeout_" data-uid="ETLBox.Connection.IConnectionManager.CommandTimeout*"></a>
   <h4 id="ETLBox_Connection_IConnectionManager_CommandTimeout" data-uid="ETLBox.Connection.IConnectionManager.CommandTimeout">CommandTimeout</h4>
   <div class="markdown level1 summary"><p>The timeout used when executing sql commands with this connection manager.
 Default is 0 (no timeout)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -70,7 +70,7 @@ Default is 0 (no timeout)</p>
   <div class="markdown level1 summary"><p>Information about compatibility of the current connector</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -98,7 +98,7 @@ Default is 0 (no timeout)</p>
   <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -126,7 +126,7 @@ Default is 0 (no timeout)</p>
   <div class="markdown level1 summary"><p>The connection string used to establish the connection with the database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -154,7 +154,7 @@ Default is 0 (no timeout)</p>
   <div class="markdown level1 summary"><p>Indicates if the current connection is currently used in a bulk insert operation (e.g. performed by a DbDestination)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -182,7 +182,7 @@ Default is 0 (no timeout)</p>
   <div class="markdown level1 summary"><p>Indicates if the current connection manager is used as a OleDb or Odbc Connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -213,7 +213,7 @@ To keep the connection open and avoid having the connection returned to the pool
 A connnection will be left open when a bulk insert operation is executed or a transaction hase been openend and not yet commited or rolled back.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -241,7 +241,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
   <div class="markdown level1 summary"><p>Number of attempts that the connection managers tries to connect before it decides that the database is not reachable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,17 +264,45 @@ A connnection will be left open when a bulk insert operation is executed or a tr
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Connection_IConnectionManager_MaxParameterAmount_" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterAmount*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_MaxParameterAmount" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterAmount">MaxParameterAmount</h4>
-  <div class="markdown level1 summary"><p>returns the maximum amount of parameters that ca be passed into a
-sql query.</p>
+  <a id="ETLBox_Connection_IConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterSizeBulkCopy*"></a>
+  <h4 id="ETLBox_Connection_IConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    int MaxParameterAmount { get; }
+    int MaxParameterSizeBulkCopy { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_IConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterSizeSql*"></a>
+  <h4 id="ETLBox_Connection_IConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.IConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
+sql query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    int MaxParameterSizeSql { get; }
 ```
 
 {{< rawhtml >}}
@@ -299,7 +327,7 @@ sql query.</p>
 All databases use the '@' character, except Oracle which uses ':'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -328,7 +356,7 @@ All databases use the '@' character, except Oracle which uses ':'</p>
 E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -357,7 +385,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -385,7 +413,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div class="markdown level1 summary"><p>The state of the underlying ADO.NET connection</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -414,7 +442,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 A database in ETLBox means a schema in MySql.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -442,7 +470,7 @@ A database in ETLBox means a schema in MySql.</p>
   <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -472,7 +500,7 @@ In MySql, this is false because the schema here is a database in ETLBox.
 Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -496,14 +524,14 @@ Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_IConnectionManager_BeginTransaction_" data-uid="ETLBox.Connection.IConnectionManager.BeginTransaction*"></a>
   <h4 id="ETLBox_Connection_IConnectionManager_BeginTransaction" data-uid="ETLBox.Connection.IConnectionManager.BeginTransaction">BeginTransaction()</h4>
   <div class="markdown level1 summary"><p>Will start a transaction with the default isolation level.
 This will leave the underlying ADO.NET connection open until the transaction is committed or rolled back.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -517,7 +545,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 This will leave the underlying ADO.NET connection open until the transaction is committed or rolled back.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -548,7 +576,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   <div class="markdown level1 summary"><p>Performs a bulk delete</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -579,7 +607,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -610,7 +638,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   <div class="markdown level1 summary"><p>Performs a bulk select</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -665,7 +693,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -709,7 +737,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 to change back settings made to improve bulk insert performance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -740,7 +768,7 @@ to change back settings made to improve bulk insert performance</p>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -769,7 +797,7 @@ to change back settings made to improve bulk insert performance</p>
   <div class="markdown level1 summary"><p>Try to create a clone of the current connection - only possible if <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_LeaveOpen">LeaveOpen</a> is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -800,7 +828,7 @@ from the database server, it will only return the connection
 to the ADO.NET connection pool for further reuse.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -813,7 +841,7 @@ to the ADO.NET connection pool for further reuse.</p>
   <div class="markdown level1 summary"><p>Closes the connection only if leave open is set to false and no transaction or bulk insert is in progress.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -826,7 +854,7 @@ to the ADO.NET connection pool for further reuse.</p>
   <div class="markdown level1 summary"><p>Commits the current tranasction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -839,7 +867,7 @@ to the ADO.NET connection pool for further reuse.</p>
   <div class="markdown level1 summary"><p>Executes a query against the database that doesn't return any data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -888,15 +916,15 @@ to the ADO.NET connection pool for further reuse.</p>
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_ExecuteReader_" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</h4>
   <div class="markdown level1 summary"><p>Executes a query against the database that does return multiple rows in multiple columns</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    IDataReader ExecuteReader(string command, IEnumerable<QueryParameter> parameterList = null)
+    void ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -912,30 +940,39 @@ to the ADO.NET connection pool for further reuse.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">command</span></td>
+        <td><span class="parametername">commandText</span></td>
         <td><p>The sql command</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
-        <td><p>The optional list of parameters</p>
+        <td><p>The optional list of query parameters</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of rows to read</p>
+</td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">System.Data.IDataReader</span></td>
-        <td><p>A data reader to iterate through the result set</p>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td><p>This action is executed before reading the next row</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td><p>This action is executed after reading a row</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td><p>Every column in the result set will call an action with the value of the current row.
+The order of the columns corresponds with the order of the passed actions.</p>
 </td>
       </tr>
     </tbody>
@@ -945,7 +982,7 @@ to the ADO.NET connection pool for further reuse.</p>
   <div class="markdown level1 summary"><p>Executes a query against the database that does return only one row in one column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1000,7 +1037,7 @@ as all tasks and components will call this method implictly if the connection is
 If the connection is already open, nothing is done.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1014,7 +1051,7 @@ If the connection is already open, nothing is done.</p>
 performance of a bulk insert operation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1045,7 +1082,7 @@ performance of a bulk insert operation</p>
   <div class="markdown level1 summary"><p>Rolls the current transaction back.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10136
+weight: 10143
 toc: false
 ---
 
@@ -14,12 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.TextSource">
   <h1 id="ETLBox_DataFlow_Connectors_TextSource" data-uid="ETLBox.DataFlow.Connectors.TextSource" class="text-break">Class TextSource
-  </h1>
-  <div class="markdown level0 summary"><p>Reads data from a text file.
-Each line is read as a string and converted into an object by the <a class="xref" href="/api/etlbox.dataflow.connectors/textsource-1#ETLBox_DataFlow_Connectors_TextSource_1_ParseLineFunc">ParseLineFunc</a>.
-A line is defined as a sequence of characters followed by a line feed(&quot;\n&quot;), a carriage return (&quot;\r&quot;),
-or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -32,7 +28,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/textsource-1">TextSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level7"><span class="xref">TextSource</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource-1">IDataFlowStreamSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
@@ -83,10 +79,16 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_HttpRequestMessage">DataFlowStreamSource&lt;ExpandoObject&gt;.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_HttpResponseMessage">DataFlowStreamSource&lt;ExpandoObject&gt;.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Encoding">DataFlowStreamSource&lt;ExpandoObject&gt;.Encoding</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData">DataFlowStreamSource&lt;ExpandoObject&gt;.UnparsedData</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CollectUnparsedData">DataFlowStreamSource&lt;ExpandoObject&gt;.CollectUnparsedData</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CreateStreamReader">DataFlowStreamSource&lt;ExpandoObject&gt;.CreateStreamReader</a>
@@ -102,6 +104,9 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader">DataFlowStreamSource&lt;ExpandoObject&gt;.StreamReader</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_RowModificationAction">DataFlowStreamSource&lt;ExpandoObject&gt;.RowModificationAction</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedDataBuilder">DataFlowStreamSource&lt;ExpandoObject&gt;.UnparsedDataBuilder</a>
@@ -122,10 +127,16 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnFaulted_System_Exception_">DataFlowStreamSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_NewMetaDataObject">DataFlowStreamSource&lt;ExpandoObject&gt;.NewMetaDataObject</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit">DataFlowExecutableSource&lt;ExpandoObject&gt;.Limit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;ExpandoObject&gt;.ProgressCountIsInLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;ExpandoObject&gt;.ProgressCountIsExceedingLimit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -146,10 +157,22 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;ExpandoObject&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ExpandoObject&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;ExpandoObject&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ExpandoObject&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;ExpandoObject&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;ExpandoObject&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ExpandoObject&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
@@ -206,7 +229,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -236,7 +259,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -316,12 +339,12 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_TextSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_TextSource__ctor" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor">TextSource()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -330,39 +353,10 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_TextSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_TextSource__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor(System.String)">TextSource(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TextSource(string uri)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Connectors_TextSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_TextSource__ctor_System_String_System_Func_System_String_System_Int32_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor(System.String,System.Func{System.String,System.Int32,System.Dynamic.ExpandoObject})">TextSource(String, Func&lt;String, Int32, ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -388,6 +382,35 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <tr>
         <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Int32</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
         <td><span class="parametername">parseLineFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_TextSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_TextSource__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.TextSource.#ctor(System.String)">TextSource(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TextSource(string uri)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uri</span></td>
         <td></td>
       </tr>
     </tbody>

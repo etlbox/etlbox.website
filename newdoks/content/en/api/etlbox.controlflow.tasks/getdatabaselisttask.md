@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10063
+weight: 10066
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask">
   <h1 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask" class="text-break">Class GetDatabaseListTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
 In MySql, this will return a list of all schemas.</p>
 </div>
@@ -27,7 +27,7 @@ In MySql, this will return a list of all schemas.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow.tasks/getlisttask">GetListTask</a></div>
     <div class="level4"><span class="xref">GetDatabaseListTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -101,12 +101,14 @@ In MySql, this will return a list of all schemas.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_examples"><strong>Examples</strong></h5>
   <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.#ctor">GetDatabaseListTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -114,13 +116,17 @@ In MySql, this will return a list of all schemas.</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask__ctor_examples">Examples</h5>
+  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -146,13 +152,13 @@ In MySql, this will return a list of all schemas.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow.tasks/getlisttask#ETLBox_ControlFlow_Tasks_GetListTask_TaskName">GetListTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll">ListAll()</h4>
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -181,7 +187,7 @@ In MySql, this will return a list of all schemas.</p>
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

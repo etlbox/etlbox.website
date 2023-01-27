@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10059
+weight: 10062
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask">
   <h1 id="ETLBox_ControlFlow_Tasks_DropProcedureTask" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask" class="text-break">Class DropProcedureTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Drops a procedure. Use DropIfExists to drop a procedure only if it exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask</a>&lt;<a class="xref" href="/api/etlbox.controlflow.tasks/ifprocedureexiststask">IfProcedureExistsTask</a>&gt;</div>
     <div class="level4"><span class="xref">DropProcedureTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -107,12 +107,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_DropProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropProcedureTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.#ctor">DropProcedureTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Drops a procedure. Use DropIfExists to drop a procedure only if it exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -122,9 +123,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_DropProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropProcedureTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.#ctor(System.String)">DropProcedureTask(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Drops a procedure. Use DropIfExists to drop a procedure only if it exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -150,13 +152,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_DropProcedureTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.Drop*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropProcedureTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropProcedureTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"><p>Drops a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,7 +195,7 @@ toc: false
   <div class="markdown level1 summary"><p>Drops a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -224,7 +226,7 @@ toc: false
   <div class="markdown level1 summary"><p>Drops a procedure if the procedure exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -261,7 +263,7 @@ toc: false
   <div class="markdown level1 summary"><p>Drops a procedure if the procedure exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10040
+weight: 10043
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ILoggableTask">
   <h1 id="ETLBox_ControlFlow_ILoggableTask" data-uid="ETLBox.ControlFlow.ILoggableTask" class="text-break">Interface ILoggableTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -28,12 +28,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ILoggableTask_DisableLogging_" data-uid="ETLBox.ControlFlow.ILoggableTask.DisableLogging*"></a>
   <h4 id="ETLBox_ControlFlow_ILoggableTask_DisableLogging" data-uid="ETLBox.ControlFlow.ILoggableTask.DisableLogging">DisableLogging</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to true, the component or task won't produce any log output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -58,9 +59,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_ILoggableTask_TaskHash_" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskHash*"></a>
   <h4 id="ETLBox_ControlFlow_ILoggableTask_TaskHash" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskHash">TaskHash</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a unique hash value to identify the task or component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -85,9 +87,11 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_ILoggableTask_TaskName_" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_ILoggableTask_TaskName" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -112,9 +116,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_ILoggableTask_TaskType_" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskType*"></a>
   <h4 id="ETLBox_ControlFlow_ILoggableTask_TaskType" data-uid="ETLBox.ControlFlow.ILoggableTask.TaskType">TaskType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A type description of the task or component. This is usually the class name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

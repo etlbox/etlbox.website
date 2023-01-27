@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10006
+weight: 10009
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.DbConnectionString`2">
   <h1 id="ETLBox_Connection_DbConnectionString_2" data-uid="ETLBox.Connection.DbConnectionString`2" class="text-break">Class DbConnectionString&lt;T, TBuilder&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -22,6 +22,7 @@ toc: false
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DbConnectionString&lt;T, TBuilder&gt;</span></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.connection/aseconnectionstring">AseConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/db2connectionstring">Db2ConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/mysqlconnectionstring">MySqlConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/odbcconnectionstring">OdbcConnectionString</a></div>
@@ -31,7 +32,7 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.connection/sqlconnectionstring">SqlConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/sqliteconnectionstring">SQLiteConnectionString</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></div>
   </div>
@@ -89,12 +90,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionString_2__ctor_" data-uid="ETLBox.Connection.DbConnectionString`2.#ctor*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2__ctor" data-uid="ETLBox.Connection.DbConnectionString`2.#ctor">DbConnectionString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -104,9 +106,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionString_2__ctor_" data-uid="ETLBox.Connection.DbConnectionString`2.#ctor*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2__ctor_System_String_" data-uid="ETLBox.Connection.DbConnectionString`2.#ctor(System.String)">DbConnectionString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -132,13 +135,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionString_2_Builder_" data-uid="ETLBox.Connection.DbConnectionString`2.Builder*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_Builder" data-uid="ETLBox.Connection.DbConnectionString`2.Builder">Builder</h4>
   <div class="markdown level1 summary"><p>The underlying ADO.NET ConnectionStringBuilder</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -163,10 +166,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionString_2_DbName_" data-uid="ETLBox.Connection.DbConnectionString`2.DbName*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_DbName" data-uid="ETLBox.Connection.DbConnectionString`2.DbName">DbName</h4>
-  <div class="markdown level1 summary"><p>The database name</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -194,7 +197,7 @@ toc: false
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -219,10 +222,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionString_2_MasterDbName_" data-uid="ETLBox.Connection.DbConnectionString`2.MasterDbName*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_MasterDbName" data-uid="ETLBox.Connection.DbConnectionString`2.MasterDbName">MasterDbName</h4>
-  <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -247,10 +250,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionString_2_Value_" data-uid="ETLBox.Connection.DbConnectionString`2.Value*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_Value" data-uid="ETLBox.Connection.DbConnectionString`2.Value">Value</h4>
-  <div class="markdown level1 summary"><p>The connection string value, e.g. &quot;Server=localhost;Database=etlbox;&quot;</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -274,13 +277,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionString_2_Clone_" data-uid="ETLBox.Connection.DbConnectionString`2.Clone*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_Clone" data-uid="ETLBox.Connection.DbConnectionString`2.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Clones the current connection string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -309,7 +312,7 @@ toc: false
   <div class="markdown level1 summary"><p>Clones the current connection string with the master database name (if applicable)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -338,7 +341,7 @@ toc: false
   <div class="markdown level1 summary"><p>Clone the current connection string with a new database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -385,7 +388,7 @@ toc: false
   <div class="markdown level1 summary"><p>Clones the current connection string with removing the database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -414,7 +417,7 @@ toc: false
   <div class="markdown level1 summary"><p>Returns the connection string <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_Value">Value</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -441,13 +444,13 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="eii">Explicit Interface Implementations
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_Clone_" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#Clone*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_Clone" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#Clone">IDbConnectionString.Clone()</h4>
-  <div class="markdown level1 summary"><p>Creates a copy of the current connection</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -466,17 +469,16 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>A copy of the connection string</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithMasterDbName_" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#CloneWithMasterDbName*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithMasterDbName" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#CloneWithMasterDbName">IDbConnectionString.CloneWithMasterDbName()</h4>
-  <div class="markdown level1 summary"><p>Clone the current connection string with the master database</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -495,17 +497,16 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>The new connection string</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#CloneWithNewDbName*"></a>
   <h4 id="ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_System_String_" data-uid="ETLBox.Connection.DbConnectionString`2.ETLBox#Connection#IDbConnectionString#CloneWithNewDbName(System.String)">IDbConnectionString.CloneWithNewDbName(String)</h4>
-  <div class="markdown level1 summary"><p>Clone the current connection string with a new database name</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a> base</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -526,8 +527,7 @@ toc: false
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">value</span></td>
-        <td><p>The new database name</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -542,8 +542,7 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>The new connection string</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

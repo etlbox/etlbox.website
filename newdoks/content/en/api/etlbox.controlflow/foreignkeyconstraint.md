@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10037
+weight: 10040
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint">
   <h1 id="ETLBox_ControlFlow_ForeignKeyConstraint" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint" class="text-break">Class ForeignKeyConstraint
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -23,7 +23,7 @@ toc: false
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/constraint">Constraint</a></div>
     <div class="level2"><span class="xref">ForeignKeyConstraint</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iconstraint">IConstraint</a></div>
   </div>
@@ -68,12 +68,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor">ForeignKeyConstraint()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -85,7 +85,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">ForeignKeyConstraint(IList&lt;String&gt;, IList&lt;String&gt;, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -124,7 +124,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.String,System.String,System.String)">ForeignKeyConstraint(String, String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -160,12 +160,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ForeignKeyConstraint_OnDeleteCascade_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.OnDeleteCascade*"></a>
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint_OnDeleteCascade" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.OnDeleteCascade">OnDeleteCascade</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -192,7 +192,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint_ReferenceColumnNames" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.ReferenceColumnNames">ReferenceColumnNames</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -219,7 +219,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint_ReferenceTableName" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.ReferenceTableName">ReferenceTableName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

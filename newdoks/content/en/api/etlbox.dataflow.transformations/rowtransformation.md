@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10237
+weight: 10246
 toc: false
 ---
 
@@ -14,9 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.RowTransformation">
   <h1 id="ETLBox_DataFlow_Transformations_RowTransformation" data-uid="ETLBox.DataFlow.Transformations.RowTransformation" class="text-break">Class RowTransformation
-  </h1>
-  <div class="markdown level0 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -29,7 +28,7 @@ toc: false
     <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/rowtransformation-1">RowTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level7"><span class="xref">RowTransformation</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -136,7 +135,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -181,7 +180,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -264,12 +263,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation__ctor" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor">RowTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -278,39 +277,10 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_System_Func_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})">RowTransformation(Func&lt;ExpandoObject, ExpandoObject&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public RowTransformation(Func<ExpandoObject, ExpandoObject> rowTransformationFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
-        <td><span class="parametername">rowTransformationFunc</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_System_Func_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__System_Action_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject},System.Action)">RowTransformation(Func&lt;ExpandoObject, ExpandoObject&gt;, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -336,6 +306,35 @@ toc: false
       <tr>
         <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">initAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation__ctor_System_Func_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.RowTransformation.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})">RowTransformation(Func&lt;ExpandoObject, ExpandoObject&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public RowTransformation(Func<ExpandoObject, ExpandoObject> rowTransformationFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
+        <td><span class="parametername">rowTransformationFunc</span></td>
         <td></td>
       </tr>
     </tbody>

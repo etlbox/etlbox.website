@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10214
+weight: 10224
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3">
   <h1 id="ETLBox_DataFlow_Transformations_CrossJoin_3" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3" class="text-break">Class CrossJoin&lt;TInput1, TInput2, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
 The input for the first table will be loaded into memory before join starts.
 Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
@@ -31,7 +31,7 @@ The InMemory target should always be the target of the smaller amount of data to
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin">CrossJoin</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-1">CrossJoin&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -98,7 +98,7 @@ The InMemory target should always be the target of the smaller amount of data to
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -131,7 +131,7 @@ The InMemory target should always be the target of the smaller amount of data to
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -247,12 +247,16 @@ source1.LinkTo(join.InMemoryTarget);
 source2.LinkTo(join.PassingTarget);
 join.LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3__ctor" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.#ctor">CrossJoin()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -260,11 +264,25 @@ join.LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3__ctor_examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.#ctor(System.Func{`0,`1,`2})">CrossJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -291,12 +309,16 @@ join.LinkTo(dest);</code></pre>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_Buffer_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.Buffer*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_Buffer" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.Buffer">Buffer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -319,12 +341,22 @@ join.LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3_Buffer_examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_CrossJoinFunc_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CrossJoinFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CrossJoinFunc" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CrossJoinFunc">CrossJoinFunc</h4>
   <div class="markdown level1 summary"><p>The cross join function that describes how records from the both target can be joined.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -353,7 +385,7 @@ join.LinkTo(dest);</code></pre>
 Always have the smaller amount of data flown into this target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -381,7 +413,7 @@ Always have the smaller amount of data flown into this target.</p>
   <div class="markdown level1 summary"><p>Every row that the PassingTarget receives is joined with all data from the <span class="xref">ETLBox.DataFlow.Transformations.CrossJoin`3.InMemoryData</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -406,10 +438,13 @@ Always have the smaller amount of data flown into this target.</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -436,11 +471,13 @@ Always have the smaller amount of data flown into this target.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_TaskName_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_TaskName" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -466,12 +503,16 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -481,11 +522,25 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CheckParameter_examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -512,11 +567,25 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -526,11 +595,25 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_3_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_3_InitComponent" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`3.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
+The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -540,6 +623,16 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_CrossJoin_3_InitComponent_examples">Examples</h5>
+  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

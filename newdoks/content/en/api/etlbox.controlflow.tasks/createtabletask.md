@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10055
+weight: 10058
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask">
   <h1 id="ETLBox_ControlFlow_Tasks_CreateTableTask" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask" class="text-break">Class CreateTableTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateTableTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -93,12 +93,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
 });</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor">CreateTableTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -106,11 +107,17 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_examples">Examples</h5>
+  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
+new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+});</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor(ETLBox.ControlFlow.TableDefinition)">CreateTableTask(TableDefinition)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -135,11 +142,17 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_ETLBox_ControlFlow_TableDefinition__examples">Examples</h5>
+  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
+new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+});</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateTableTask(String, List&lt;TableColumn&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -169,15 +182,20 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn___examples">Examples</h5>
+  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
+new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+});</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Columns_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Columns*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Columns" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Columns">Columns</h4>
   <div class="markdown level1 summary"><p>The list of columns to create. Either use the <a class="xref" href="/api/etlbox.controlflow.tasks/createtabletask#ETLBox_ControlFlow_Tasks_CreateTableTask_TableDefinition">TableDefinition</a> or a combination of
 <a class="xref" href="/api/etlbox.controlflow.tasks/createtabletask#ETLBox_ControlFlow_Tasks_CreateTableTask_TableName">TableName</a> and <a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -206,7 +224,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 to other, database specific type names. E.g. you can remap that the type VARCHAR(8000) is created as TEXT.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -234,7 +252,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
   <div class="markdown level1 summary"><p>When creating the CREATE TABLE sql, ignore the Collation definition that a <a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a> potentially has.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -262,7 +280,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
   <div class="markdown level1 summary"><p>The sql code that is used to create the table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -291,7 +309,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 <a class="xref" href="/api/etlbox.controlflow.tasks/createtabletask#ETLBox_ControlFlow_Tasks_CreateTableTask_TableName">TableName</a> and <a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -319,7 +337,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
   <div class="markdown level1 summary"><p>The name of the table to create.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -344,11 +362,10 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -378,7 +395,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>The formatted table name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -402,12 +419,13 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter">Alter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -415,12 +433,17 @@ with a default name that can be overwritten.</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_examples">Examples</h5>
+  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
+new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+});</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)">Alter(IConnectionManager, TableDefinition)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -457,7 +480,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -500,7 +523,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -531,7 +554,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -568,7 +591,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Execute the alter statements to change the table</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -581,7 +604,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -618,7 +641,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -661,7 +684,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -692,7 +715,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -724,12 +747,30 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CheckTableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CheckTableDefinition*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CheckTableDefinition" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CheckTableDefinition">CheckTableDefinition()</h4>
+  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void CheckTableDefinition()
+```
+
+{{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CheckTableDefinition_examples">Examples</h5>
+  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
+new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+});</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create">Create()</h4>
   <div class="markdown level1 summary"><p>Executes the table creation. Throws an exception if the table exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -743,7 +784,7 @@ with a default name that can be overwritten.</p>
 Throws an exception if the table already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -781,7 +822,7 @@ Throws an exception if the table already exists.</p>
 Throws an exception if the table already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -825,7 +866,7 @@ Throws an exception if the table already exists.</p>
 Throws an exception if the table already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -857,7 +898,7 @@ Throws an exception if the table already exists.</p>
 Throws an exception if the table already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -894,7 +935,7 @@ Throws an exception if the table already exists.</p>
   <div class="markdown level1 summary"><p>Executes the table creation if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -907,7 +948,7 @@ Throws an exception if the table already exists.</p>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -944,7 +985,7 @@ Throws an exception if the table already exists.</p>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -987,7 +1028,7 @@ Throws an exception if the table already exists.</p>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1018,7 +1059,7 @@ Throws an exception if the table already exists.</p>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1056,7 +1097,7 @@ Throws an exception if the table already exists.</p>
 If the table is empty, the new table is always dropped and recreated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1070,7 +1111,7 @@ If the table is empty, the new table is always dropped and recreated.</p>
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1108,7 +1149,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1152,7 +1193,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1184,7 +1225,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

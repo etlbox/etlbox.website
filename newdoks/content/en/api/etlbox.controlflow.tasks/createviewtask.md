@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10056
+weight: 10059
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask">
   <h1 id="ETLBox_ControlFlow_Tasks_CreateViewTask" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask" class="text-break">Class CreateViewTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Creates or alters a view.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateViewTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -90,12 +90,13 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateViewTask_examples"><strong>Examples</strong></h5>
   <pre><code>CreateViewTask.CreateOrAlter(&quot;viewname&quot;,&quot;SELECT value FROM table&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor">CreateViewTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -103,11 +104,14 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_examples">Examples</h5>
+  <pre><code>CreateViewTask.CreateOrAlter(&quot;viewname&quot;,&quot;SELECT value FROM table&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor(System.String,System.String)">CreateViewTask(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -137,14 +141,16 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_System_String_System_String__examples">Examples</h5>
+  <pre><code>CreateViewTask.CreateOrAlter(&quot;viewname&quot;,&quot;SELECT value FROM table&quot;);</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_Definition_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.Definition*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_Definition" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.Definition">Definition</h4>
   <div class="markdown level1 summary"><p>The view definition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -172,7 +178,7 @@ toc: false
   <div class="markdown level1 summary"><p>The sql that is generated to create the view</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -197,11 +203,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -233,7 +238,7 @@ This part is put after the CREATE VIEW [viewname] statement
 and before the AS statement.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -261,7 +266,7 @@ and before the AS statement.</p>
   <div class="markdown level1 summary"><p>The name of the view</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -289,7 +294,7 @@ and before the AS statement.</p>
   <div class="markdown level1 summary"><p>The formatted name of the view</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -313,13 +318,13 @@ and before the AS statement.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateOrAlter(IConnectionManager, String, String)</h4>
   <div class="markdown level1 summary"><p>Creates or alter a view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -362,7 +367,7 @@ and before the AS statement.</p>
   <div class="markdown level1 summary"><p>Creates or alter a view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

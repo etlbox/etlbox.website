@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10122
+weight: 10124
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1">
   <h1 id="ETLBox_DataFlow_Connectors_MemorySource_1" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1" class="text-break">Class MemorySource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
 By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
 </div>
@@ -29,7 +29,7 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
     <div class="level5"><span class="xref">MemorySource&lt;TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/memorysource">MemorySource</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -46,6 +46,9 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsInLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsExceedingLimit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;TOutput&gt;.SourceBlock</a>
@@ -66,10 +69,22 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;TOutput&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;TOutput&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;TOutput&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TOutput&gt;.LinkTo(IDataFlowDestination&lt;TOutput&gt;)</a>
@@ -126,7 +141,7 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -159,7 +174,7 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -263,12 +278,14 @@ source.Data = new List&lt;MyRow>()
     new MyRow() { Id = 3, Value = &quot;Test3&quot; }
 };</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.#ctor">MemorySource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -276,11 +293,21 @@ source.Data = new List&lt;MyRow>()
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor_examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.#ctor(System.Collections.Generic.IEnumerable{`0})">MemorySource(IEnumerable&lt;TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -307,13 +334,13 @@ source.Data = new List&lt;MyRow>()
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_Data_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.Data*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_Data" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.Data">Data</h4>
   <div class="markdown level1 summary"><p>The .NET collection that is used to read the data from.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -341,7 +368,7 @@ source.Data = new List&lt;MyRow>()
   <div class="markdown level1 summary"><p>If the source collection implements IList&lt;T&gt; then this property will convert the collection into this interface type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -366,11 +393,11 @@ source.Data = new List&lt;MyRow>()
   </table>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -396,12 +423,14 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -411,11 +440,21 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_CheckParameter_examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -442,11 +481,21 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -456,11 +505,21 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -470,11 +529,21 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoAsyncWork_examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
+By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -484,6 +553,14 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_OnExecutionDoSynchronousWork_examples">Examples</h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

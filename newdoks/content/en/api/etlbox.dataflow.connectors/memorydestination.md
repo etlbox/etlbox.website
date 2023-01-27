@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10121
+weight: 10123
 toc: false
 ---
 
@@ -14,12 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination">
   <h1 id="ETLBox_DataFlow_Connectors_MemoryDestination" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination" class="text-break">Class MemoryDestination
-  </h1>
-  <div class="markdown level0 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -30,7 +26,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow.connectors/memorydestination-1">MemoryDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level5"><span class="xref">MemoryDestination</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -122,7 +118,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -155,7 +151,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -235,12 +231,12 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination.#ctor">MemoryDestination()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

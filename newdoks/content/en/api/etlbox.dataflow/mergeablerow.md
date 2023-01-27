@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10185
+weight: 10193
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MergeableRow">
   <h1 id="ETLBox_DataFlow_MergeableRow" data-uid="ETLBox.DataFlow.MergeableRow" class="text-break">Class MergeableRow
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Inherit from this class if you want to use your data object with a DBMerge,
 but don't want to implement <a class="xref" href="/api/etlbox.dataflow/imergeablerow">IMergeableRow</a> yourself.
 You still needs that you have flagged the id properties with the IdColumn attribute
@@ -61,14 +61,14 @@ and the properties use to identify equal object flagged with the UpdateColumn at
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_MergeableRow_ChangeAction_" data-uid="ETLBox.DataFlow.MergeableRow.ChangeAction*"></a>
   <h4 id="ETLBox_DataFlow_MergeableRow_ChangeAction" data-uid="ETLBox.DataFlow.MergeableRow.ChangeAction">ChangeAction</h4>
   <div class="markdown level1 summary"><p>The result of a merge operation - this is either 'I' for Insertion,
 'U' for Updates, 'E' for existing records (no change), and 'D' for deleted records.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -96,7 +96,7 @@ and the properties use to identify equal object flagged with the UpdateColumn at
   <div class="markdown level1 summary"><p>Date and time when the object was considered for merging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

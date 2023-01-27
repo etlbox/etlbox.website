@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10068
+weight: 10070
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask">
   <h1 id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask" class="text-break">Class IfDatabaseExistsTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Checks if a database exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/ifexiststask">IfExistsTask</a></div>
     <div class="level4"><span class="xref">IfDatabaseExistsTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -110,12 +110,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.#ctor">IfDatabaseExistsTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if a database exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -125,9 +126,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.#ctor(System.String)">IfDatabaseExistsTask(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if a database exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -153,13 +155,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask_IsExisting_" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.IsExisting*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_IfDatabaseExistsTask_IsExisting_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.IsExisting(ETLBox.Connection.IConnectionManager,System.String)">IsExisting(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"><p>Ćhecks if the database exists</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -214,7 +216,7 @@ that does exist (e.g. a system database)</p>
 (E.g. a system database)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10227
+weight: 10236
 toc: false
 ---
 
@@ -14,15 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.MergeJoin">
   <h1 id="ETLBox_DataFlow_Transformations_MergeJoin" data-uid="ETLBox.DataFlow.Transformations.MergeJoin" class="text-break">Class MergeJoin
-  </h1>
-  <div class="markdown level0 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
-Each row from the left join target will be merged with a row from the right join target.
-If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
-<p>You can define a match condition that let you only merge matching records. This will change the
-match behavior a little bit.
-By assuming that the input is sorted, not matching records will be joined with null then. This
-can be compared with a left or right join.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -33,7 +26,7 @@ can be compared with a left or right join.</p>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow.transformations/mergejoin-3">MergeJoin</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level5"><span class="xref">MergeJoin</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -136,7 +129,7 @@ can be compared with a left or right join.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -181,7 +174,7 @@ can be compared with a left or right join.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -264,12 +257,12 @@ can be compared with a left or right join.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin__ctor" data-uid="ETLBox.DataFlow.Transformations.MergeJoin.#ctor">MergeJoin()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -281,7 +274,7 @@ can be compared with a left or right join.</p>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin__ctor_System_Func_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})">MergeJoin(Func&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

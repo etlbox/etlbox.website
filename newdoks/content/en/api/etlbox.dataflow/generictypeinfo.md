@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10159
+weight: 10166
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.GenericTypeInfo">
   <h1 id="ETLBox_DataFlow_GenericTypeInfo" data-uid="ETLBox.DataFlow.GenericTypeInfo" class="text-break">Class GenericTypeInfo
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -57,12 +57,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_GenericTypeInfo__ctor_" data-uid="ETLBox.DataFlow.GenericTypeInfo.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_GenericTypeInfo__ctor_System_Type_" data-uid="ETLBox.DataFlow.GenericTypeInfo.#ctor(System.Type)">GenericTypeInfo(Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -88,12 +88,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_GenericTypeInfo_AggregateColumnAttributes_" data-uid="ETLBox.DataFlow.GenericTypeInfo.AggregateColumnAttributes*"></a>
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_AggregateColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.AggregateColumnAttributes">AggregateColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -120,7 +120,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_ColumnMapAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes">ColumnMapAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -147,7 +147,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_CompareColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.CompareColumnAttributes">CompareColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -174,7 +174,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_DeleteColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.DeleteColumnAttributes">DeleteColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -201,7 +201,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_DistinctColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.DistinctColumnAttributes">DistinctColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -228,7 +228,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_GroupColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.GroupColumnAttributes">GroupColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -255,7 +255,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_IdColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.IdColumnAttributes">IdColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -283,7 +283,7 @@ toc: false
   <div class="markdown level1 summary"><p>Indicates if the type is an array (e.g. string[])</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -311,7 +311,7 @@ toc: false
   <div class="markdown level1 summary"><p>Indicates if the type is an ExpandoObject</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -339,7 +339,7 @@ toc: false
   <div class="markdown level1 summary"><p>Indicates if the type is an strong type object (Plain old CLR object)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -366,7 +366,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_KeyColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.KeyColumnAttributes">KeyColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -393,7 +393,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_MatchColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.MatchColumnAttributes">MatchColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -421,7 +421,7 @@ toc: false
   <div class="markdown level1 summary"><p>Property info of the type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -449,7 +449,7 @@ toc: false
   <div class="markdown level1 summary"><p>Property info of the type by property name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -477,7 +477,7 @@ toc: false
   <div class="markdown level1 summary"><p>Property names of the type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -504,7 +504,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_RenameColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.RenameColumnAttributes">RenameColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -531,7 +531,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_RetrieveColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.RetrieveColumnAttributes">RetrieveColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -554,11 +554,38 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_SelectColumnAttributes_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SelectColumnAttributes*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SelectColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.SelectColumnAttributes">SelectColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<SelectColumn> SelectColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/selectcolumn">SelectColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_GenericTypeInfo_UnderlyingPropType_" data-uid="ETLBox.DataFlow.GenericTypeInfo.UnderlyingPropType*"></a>
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_UnderlyingPropType" data-uid="ETLBox.DataFlow.GenericTypeInfo.UnderlyingPropType">UnderlyingPropType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -585,7 +612,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_UpdateColumnAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.UpdateColumnAttributes">UpdateColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -608,13 +635,40 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_ValueGeneratedColumns_" data-uid="ETLBox.DataFlow.GenericTypeInfo.ValueGeneratedColumns*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_ValueGeneratedColumns" data-uid="ETLBox.DataFlow.GenericTypeInfo.ValueGeneratedColumns">ValueGeneratedColumns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<ValueGenerationColumn> ValueGeneratedColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_" data-uid="ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo*"></a>
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_ETLBox_DataFlow_AttributeType_" data-uid="ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo(ETLBox.DataFlow.AttributeType)">GatherTypeInfo(AttributeType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -659,7 +713,7 @@ toc: false
   <div class="markdown level1 summary"><p>Determines if a type is numeric.  Nullable numeric types are considered numeric.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -707,7 +761,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_GenericTypeInfo_RetrieveAdditionalTypeInfo_System_Reflection_PropertyInfo_System_Int32_" data-uid="ETLBox.DataFlow.GenericTypeInfo.RetrieveAdditionalTypeInfo(System.Reflection.PropertyInfo,System.Int32)">RetrieveAdditionalTypeInfo(PropertyInfo, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -737,15 +791,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_GenericTypeInfo_TryGetUnderlyingType_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TryGetUnderlyingType*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TryGetUnderlyingType_System_Reflection_PropertyInfo_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TryGetUnderlyingType(System.Reflection.PropertyInfo)">TryGetUnderlyingType(PropertyInfo)</h4>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.Reflection.PropertyInfo,System.Object,System.Object)">SetValueOrThrow(PropertyInfo, Object, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static Type TryGetUnderlyingType(PropertyInfo propInfo)
+    public void SetValueOrThrow(PropertyInfo propInfo, object obj, object value)
 ```
 
 {{< rawhtml >}}
@@ -764,32 +818,27 @@ toc: false
         <td><span class="parametername">propInfo</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_GenericTypeInfo_TryGetUnderlyingType_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TryGetUnderlyingType*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TryGetUnderlyingType_System_Type_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TryGetUnderlyingType(System.Type)">TryGetUnderlyingType(Type)</h4>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.String,System.Object,System.Object)">SetValueOrThrow(String, Object, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static Type TryGetUnderlyingType(Type type)
+    public void SetValueOrThrow(string propName, object obj, object value)
 ```
 
 {{< rawhtml >}}
@@ -804,23 +853,96 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TrySetValue(PropertyInfo, Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void TrySetValue(PropertyInfo propInfo, object obj, object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">propInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.String,System.Object,System.Object)">TrySetValue(String, Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void TrySetValue(string propName, object obj, object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

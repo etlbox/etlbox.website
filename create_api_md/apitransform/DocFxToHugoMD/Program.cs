@@ -72,6 +72,9 @@ Below is an overview of all classes in each namespace.";
             string fileName = Path.GetFileName(apiHtmlFileName);
             if (fileName.Count(ch => ch == '.') == 2 && fileName.StartsWith("ETLBox") && fileName.EndsWith(".html"))
                 return true;
+            string fileContent = File.ReadAllText(apiHtmlFileName);
+            if (fileContent.Contains("class=\"text-break\">Namespace"))
+                return true;
             return false;
         }
 

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10098
+weight: 10101
 toc: false
 ---
 
@@ -14,11 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination">
   <h1 id="ETLBox_DataFlow_Connectors_CustomBatchDestination" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination" class="text-break">Class CustomBatchDestination
-  </h1>
-  <div class="markdown level0 summary"><p>Define your own batch destination block.
-This block accepts all data from the flow and will create batches of incoming data
-which can be processed with the WriteBatchAction.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -30,7 +27,7 @@ which can be processed with the WriteBatchAction.</p>
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/custombatchdestination-1">CustomBatchDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">CustomBatchDestination</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -139,7 +136,7 @@ which can be processed with the WriteBatchAction.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -172,7 +169,7 @@ which can be processed with the WriteBatchAction.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -252,12 +249,12 @@ which can be processed with the WriteBatchAction.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_CustomBatchDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination.#ctor">CustomBatchDestination()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -269,7 +266,7 @@ which can be processed with the WriteBatchAction.</p>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchDestination__ctor_System_Action_System_Dynamic_ExpandoObject___System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination.#ctor(System.Action{System.Dynamic.ExpandoObject[],System.Int32})">CustomBatchDestination(Action&lt;ExpandoObject[], Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -298,7 +295,7 @@ which can be processed with the WriteBatchAction.</p>
   <h4 id="ETLBox_DataFlow_Connectors_CustomBatchDestination__ctor_System_Int32_System_Action_System_Dynamic_ExpandoObject___System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomBatchDestination.#ctor(System.Int32,System.Action{System.Dynamic.ExpandoObject[],System.Int32})">CustomBatchDestination(Int32, Action&lt;ExpandoObject[], Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

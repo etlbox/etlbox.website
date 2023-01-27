@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10174
+weight: 10182
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowStreamSource`1">
   <h1 id="ETLBox_DataFlow_IDataFlowStreamSource_1" data-uid="ETLBox.DataFlow.IDataFlowStreamSource`1" class="text-break">Interface IDataFlowStreamSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Implemented by data flow sources that allow reading data from a stream source</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -66,10 +66,19 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Execute">IDataFlowExecutableSource.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Execute_System_Threading_CancellationToken_">IDataFlowExecutableSource.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Post">IDataFlowExecutableSource.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_Post_System_Threading_CancellationToken_">IDataFlowExecutableSource.Post(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_ExecuteAsync">IDataFlowExecutableSource.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource#ETLBox_DataFlow_IDataFlowExecutableSource_ExecuteAsync_System_Threading_CancellationToken_">IDataFlowExecutableSource.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_Uri">IDataFlowStreamSource.Uri</a>
@@ -90,6 +99,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_HttpRequestMessage">IDataFlowStreamSource.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_HttpResponseMessage">IDataFlowStreamSource.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_CreateStreamReader">IDataFlowStreamSource.CreateStreamReader</a>
     </div>
     <div>
@@ -97,6 +109,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_UnparsedData">IDataFlowStreamSource.UnparsedData</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_CollectUnparsedData">IDataFlowStreamSource.CollectUnparsedData</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_AzureBlobStorage">IDataFlowStreamSource.AzureBlobStorage</a>

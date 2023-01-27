@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10024
+weight: 10027
 toc: false
 ---
 
@@ -14,8 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.PostgresConnectionString">
   <h1 id="ETLBox_Connection_PostgresConnectionString" data-uid="ETLBox.Connection.PostgresConnectionString" class="text-break">Class PostgresConnectionString
-  </h1>
-  <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
+</h1>
+  <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
 Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.connection/postgresconnectionstring">PostgresConnectionString</a>, <span class="xref">Npgsql.NpgsqlConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">PostgresConnectionString</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></div>
   </div>
@@ -103,12 +103,14 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_PostgresConnectionString__ctor_" data-uid="ETLBox.Connection.PostgresConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString__ctor" data-uid="ETLBox.Connection.PostgresConnectionString.#ctor">PostgresConnectionString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -118,9 +120,11 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_PostgresConnectionString__ctor_" data-uid="ETLBox.Connection.PostgresConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString__ctor_System_String_" data-uid="ETLBox.Connection.PostgresConnectionString.#ctor(System.String)">PostgresConnectionString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -146,13 +150,14 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_PostgresConnectionString_DbName_" data-uid="ETLBox.Connection.PostgresConnectionString.DbName*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString_DbName" data-uid="ETLBox.Connection.PostgresConnectionString.DbName">DbName</h4>
-  <div class="markdown level1 summary"><p>The database name</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,10 +184,11 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.PostgresConnectionString, Npgsql.NpgsqlConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Connection_PostgresConnectionString_DbNameKeyword_" data-uid="ETLBox.Connection.PostgresConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString_DbNameKeyword" data-uid="ETLBox.Connection.PostgresConnectionString.DbNameKeyword">DbNameKeyword</h4>
-  <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -209,10 +215,11 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.PostgresConnectionString, Npgsql.NpgsqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_Connection_PostgresConnectionString_MasterDbName_" data-uid="ETLBox.Connection.PostgresConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString_MasterDbName" data-uid="ETLBox.Connection.PostgresConnectionString.MasterDbName">MasterDbName</h4>
-  <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -238,12 +245,14 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.PostgresConnectionString, Npgsql.NpgsqlConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="operators">Operators
-  </h3>
+</h3>
   <a id="ETLBox_Connection_PostgresConnectionString_op_Implicit_" data-uid="ETLBox.Connection.PostgresConnectionString.op_Implicit*"></a>
   <h4 id="ETLBox_Connection_PostgresConnectionString_op_Implicit_System_String__ETLBox_Connection_PostgresConnectionString" data-uid="ETLBox.Connection.PostgresConnectionString.op_Implicit(System.String)~ETLBox.Connection.PostgresConnectionString">Implicit(String to PostgresConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a MySql server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

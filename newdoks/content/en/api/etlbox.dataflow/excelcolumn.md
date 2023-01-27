@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10157
+weight: 10164
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ExcelColumn">
   <h1 id="ETLBox_DataFlow_ExcelColumn" data-uid="ETLBox.DataFlow.ExcelColumn" class="text-break">Class ExcelColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute defines either which column index is mapped to the property or the
 header name that identifies the column
 By default, when reading from an excel file, a header column is expected in the first row.
@@ -179,12 +179,19 @@ public string ColumnByHeaderName { get; set; }
 public string ThirdColumnInExcel { get; set; }
 }</p>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ExcelColumn__ctor_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn__ctor" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor">ExcelColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -192,40 +199,26 @@ public string ThirdColumnInExcel { get; set; }
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_ExcelColumn__ctor_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_ExcelColumn__ctor_System_Int32_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor(System.Int32)">ExcelColumn(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ExcelColumn(int columnIndex)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">columnIndex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn__ctor_examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
   <a id="ETLBox_DataFlow_ExcelColumn__ctor_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn__ctor_System_Int32_System_String_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor(System.Int32,System.String)">ExcelColumn(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -255,11 +248,70 @@ public string ThirdColumnInExcel { get; set; }
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn__ctor_System_Int32_System_String__examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
+  <a id="ETLBox_DataFlow_ExcelColumn__ctor_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_ExcelColumn__ctor_System_Int32_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor(System.Int32)">ExcelColumn(Int32)</h4>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ExcelColumn(int columnIndex)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">columnIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn__ctor_System_Int32__examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
   <a id="ETLBox_DataFlow_ExcelColumn__ctor_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn__ctor_System_String_" data-uid="ETLBox.DataFlow.ExcelColumn.#ctor(System.String)">ExcelColumn(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -284,17 +336,32 @@ public string ThirdColumnInExcel { get; set; }
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn__ctor_System_String__examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ExcelColumn_ColumnIndex_" data-uid="ETLBox.DataFlow.ExcelColumn.ColumnIndex*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn_ColumnIndex" data-uid="ETLBox.DataFlow.ExcelColumn.ColumnIndex">ColumnIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public int? ColumnIndex { get; set; }
+    public int ColumnIndex { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -308,16 +375,31 @@ public string ThirdColumnInExcel { get; set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn_ColumnIndex_examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
   <a id="ETLBox_DataFlow_ExcelColumn_ColumnName_" data-uid="ETLBox.DataFlow.ExcelColumn.ColumnName*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn_ColumnName" data-uid="ETLBox.DataFlow.ExcelColumn.ColumnName">ColumnName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -340,11 +422,26 @@ public string ThirdColumnInExcel { get; set; }
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn_ColumnName_examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
   <a id="ETLBox_DataFlow_ExcelColumn_PropertyName_" data-uid="ETLBox.DataFlow.ExcelColumn.PropertyName*"></a>
   <h4 id="ETLBox_DataFlow_ExcelColumn_PropertyName" data-uid="ETLBox.DataFlow.ExcelColumn.PropertyName">PropertyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines either which column index is mapped to the property or the
+header name that identifies the column
+By default, when reading from an excel file, a header column is expected in the first row.
+The name of the header is used to match with the property names of the object.
+With this attribute, you can define the column index of the excel column for the property or
+a different header name for a property.
+The index starts at 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -367,5 +464,13 @@ public string ThirdColumnInExcel { get; set; }
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_ExcelColumn_PropertyName_examples">Examples</h5>
+  <p>public class MyPoco
+{
+[ExcelColumn(&quot;HeaderName&quot;)]
+public string ColumnByHeaderName { get; set; }
+[ExcelColumn(2)]
+public string ThirdColumnInExcel { get; set; }
+}</p>
 
 {{< /rawhtml >}}

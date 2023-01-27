@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10200
+weight: 10210
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2">
   <h1 id="ETLBox_DataFlow_Transformations_BlockTransformation_2" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2" class="text-break">Class BlockTransformation&lt;TInput, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
 After all data is in the buffer, the transformation function
 is executed for the complete data and the result posted into the targets.
@@ -33,7 +33,7 @@ But as this block any processing until all data is buffered, it will also need t
     <div class="level6"><span class="xref">BlockTransformation&lt;TInput, TOutput&gt;</span></div>
       <div class="level7"><a class="xref" href="/api/etlbox.dataflow.transformations/blocktransformation-1">BlockTransformation&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -149,7 +149,7 @@ But as this block any processing until all data is buffered, it will also need t
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -194,7 +194,7 @@ But as this block any processing until all data is buffered, it will also need t
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -302,12 +302,17 @@ But as this block any processing until all data is buffered, it will also need t
         return inputData;
 });</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_BlockTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BlockTransformation_2__ctor" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.#ctor">BlockTransformation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
+After all data is in the buffer, the transformation function
+is executed for the complete data and the result posted into the targets.
+The block transformations allows you to access all data in the flow in one generic collection.
+But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -315,11 +320,23 @@ But as this block any processing until all data is buffered, it will also need t
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Transformations_BlockTransformation_2__ctor_examples">Examples</h5>
+  <pre><code>BlockTransformation&lt;InputType> block = new BlockTransformation&lt;InputType>(
+    inputData => {
+        inputData.RemoveRange(1, 2);
+        inputData.Add(new InputType() { Value = 1 });
+        return inputData;
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_BlockTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BlockTransformation_2__ctor_System_Func__0____1____" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.#ctor(System.Func{`0[],`1[]})">BlockTransformation(Func&lt;TInput[], TOutput[]&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
+After all data is in the buffer, the transformation function
+is executed for the complete data and the result posted into the targets.
+The block transformations allows you to access all data in the flow in one generic collection.
+But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -346,14 +363,17 @@ But as this block any processing until all data is buffered, it will also need t
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_BlockTransformation_2_BatchSize_" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.BatchSize*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BlockTransformation_2_BatchSize" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.BatchSize">BatchSize</h4>
-  <div class="markdown level1 summary"><p>The size of each batch that is passed to the <a class="xref" href="/api/etlbox.dataflow.transformations/batchtransformation-2">BatchTransformation&lt;TInput, TOutput&gt;</a>
-Default is 1000.</p>
+  <div class="markdown level1 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
+After all data is in the buffer, the transformation function
+is executed for the complete data and the result posted into the targets.
+The block transformations allows you to access all data in the flow in one generic collection.
+But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -385,7 +405,7 @@ to return an array of output data, which doesn't need have to be the same length
 as the input array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -410,12 +430,14 @@ as the input array.</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_BlockTransformation_2_MaxBufferSize_" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.MaxBufferSize*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BlockTransformation_2_MaxBufferSize" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.MaxBufferSize">MaxBufferSize</h4>
-  <div class="markdown level1 summary"><p>Each component can have one or more buffers to improve throughput and allow faster processing of data.
-Set this value to restrict the number of rows that can be stored in the buffer.
-The default value is -1 (unlimited)</p>
+  <div class="markdown level1 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
+After all data is in the buffer, the transformation function
+is executed for the complete data and the result posted into the targets.
+The block transformations allows you to access all data in the flow in one generic collection.
+But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -442,11 +464,14 @@ The default value is -1 (unlimited)</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a></div>
   <a id="ETLBox_DataFlow_Transformations_BlockTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BlockTransformation_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.BlockTransformation`2.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
+After all data is in the buffer, the transformation function
+is executed for the complete data and the result posted into the targets.
+The block transformations allows you to access all data in the flow in one generic collection.
+But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

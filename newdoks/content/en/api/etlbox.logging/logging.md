@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10263
+weight: 10280
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.Logging">
   <h1 id="ETLBox_Logging_Logging" data-uid="ETLBox.Logging.Logging" class="text-break">Class Logging
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
 Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
 </div>
@@ -59,11 +59,13 @@ Here you can set default connections string, disable the logging for all process
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <h4 id="ETLBox_Logging_Logging_DEFAULTLOADPROCESSTABLENAME" data-uid="ETLBox.Logging.Logging.DEFAULTLOADPROCESSTABLENAME">DEFAULTLOADPROCESSTABLENAME</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
+Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -90,7 +92,7 @@ Here you can set default connections string, disable the logging for all process
   <div class="markdown level1 summary"><p>The default log table name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -114,14 +116,14 @@ Here you can set default connections string, disable the logging for all process
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_Logging_CurrentLoadProcess_" data-uid="ETLBox.Logging.Logging.CurrentLoadProcess*"></a>
   <h4 id="ETLBox_Logging_Logging_CurrentLoadProcess" data-uid="ETLBox.Logging.Logging.CurrentLoadProcess">CurrentLoadProcess</h4>
   <div class="markdown level1 summary"><p>If you used the logging task StartLoadProces (and created the corresponding load process table before)
 then this Property will hold the current load process information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -151,7 +153,7 @@ public static LoadProcess CurrentLoadProcess { get; }
 Logging can be enabled/disabled for all components individually using the DisableLogging property on each component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,7 +181,7 @@ Logging can be enabled/disabled for all components individually using the Disabl
   <div class="markdown level1 summary"><p>TableName of the current load process logging table</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -205,9 +207,11 @@ public static string LoadProcessTable { get; set; }
   </table>
   <a id="ETLBox_Logging_Logging_LogInstance_" data-uid="ETLBox.Logging.Logging.LogInstance*"></a>
   <h4 id="ETLBox_Logging_Logging_LogInstance" data-uid="ETLBox.Logging.Logging.LogInstance">LogInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
+Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -235,7 +239,7 @@ public static string LoadProcessTable { get; set; }
   <div class="markdown level1 summary"><p>TableName of the current log process logging table</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,7 +268,7 @@ public static string LogTable { get; set; }
   <div class="markdown level1 summary"><p>For logging purposes only. If the stage is set, you can access the stage value in the logging configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -289,13 +293,13 @@ public static string STAGE { get; set; }
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Logging_Logging_ClearSettings_" data-uid="ETLBox.Logging.Logging.ClearSettings*"></a>
   <h4 id="ETLBox_Logging_Logging_ClearSettings" data-uid="ETLBox.Logging.Logging.ClearSettings">ClearSettings()</h4>
   <div class="markdown level1 summary"><p>Set all settings back to default (which is null or false)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

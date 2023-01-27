@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10156
+weight: 10163
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ETLBoxError">
   <h1 id="ETLBox_DataFlow_ETLBoxError" data-uid="ETLBox.DataFlow.ETLBoxError" class="text-break">Class ETLBoxError
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The generic ETLBox Exception. Contains serialized information about the error.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,13 +58,41 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
-  <a id="ETLBox_DataFlow_ETLBoxError_ErrorText_" data-uid="ETLBox.DataFlow.ETLBoxError.ErrorText*"></a>
-  <h4 id="ETLBox_DataFlow_ETLBoxError_ErrorText" data-uid="ETLBox.DataFlow.ETLBoxError.ErrorText">ErrorText</h4>
-  <div class="markdown level1 summary"><p>The exceptions message as string</p>
+</h3>
+  <a id="ETLBox_DataFlow_ETLBoxError_Context_" data-uid="ETLBox.DataFlow.ETLBoxError.Context*"></a>
+  <h4 id="ETLBox_DataFlow_ETLBoxError_Context" data-uid="ETLBox.DataFlow.ETLBoxError.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Additional information about parameters used in the current processing state</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string Context { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_ETLBoxError_ErrorText_" data-uid="ETLBox.DataFlow.ETLBoxError.ErrorText*"></a>
+  <h4 id="ETLBox_DataFlow_ETLBoxError_ErrorText" data-uid="ETLBox.DataFlow.ETLBoxError.ErrorText">ErrorText</h4>
+  <div class="markdown level1 summary"><p>The exception message as a string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -92,7 +120,7 @@ toc: false
   <div class="markdown level1 summary"><p>The exception type as string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -117,10 +145,10 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_ETLBoxError_RecordAsJson_" data-uid="ETLBox.DataFlow.ETLBoxError.RecordAsJson*"></a>
   <h4 id="ETLBox_DataFlow_ETLBoxError_RecordAsJson" data-uid="ETLBox.DataFlow.ETLBoxError.RecordAsJson">RecordAsJson</h4>
-  <div class="markdown level1 summary"><p>The erroneous records serialized as json</p>
+  <div class="markdown level1 summary"><p>The erroneous record(s) serialized as json</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -148,7 +176,7 @@ toc: false
   <div class="markdown level1 summary"><p>The point in time when the error occured</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -167,6 +195,64 @@ toc: false
     <tbody>
       <tr>
         <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_ETLBoxError_Source_" data-uid="ETLBox.DataFlow.ETLBoxError.Source*"></a>
+  <h4 id="ETLBox_DataFlow_ETLBoxError_Source" data-uid="ETLBox.DataFlow.ETLBoxError.Source">Source</h4>
+  <div class="markdown level1 summary"><p>Additional information about the current state of the source during the exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string Source { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <a id="ETLBox_DataFlow_ETLBoxError_GetExcpetion_" data-uid="ETLBox.DataFlow.ETLBoxError.GetExcpetion*"></a>
+  <h4 id="ETLBox_DataFlow_ETLBoxError_GetExcpetion" data-uid="ETLBox.DataFlow.ETLBoxError.GetExcpetion">GetExcpetion()</h4>
+  <div class="markdown level1 summary"><p>The exception thrown at the source</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Exception GetExcpetion()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
         <td></td>
       </tr>
     </tbody>

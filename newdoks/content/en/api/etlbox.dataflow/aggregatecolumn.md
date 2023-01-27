@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10080
+weight: 10082
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.AggregateColumn">
   <h1 id="ETLBox_DataFlow_AggregateColumn" data-uid="ETLBox.DataFlow.AggregateColumn" class="text-break">Class AggregateColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify the aggregation property for aggregations.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -165,12 +165,13 @@ public sealed class AggregateColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_AggregateColumn__ctor_" data-uid="ETLBox.DataFlow.AggregateColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_AggregateColumn__ctor" data-uid="ETLBox.DataFlow.AggregateColumn.#ctor">AggregateColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute is used to identify the aggregation property for aggregations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -183,7 +184,7 @@ public sealed class AggregateColumn : Attribute
   <div class="markdown level1 summary"><p>Sets the property name in the aggregation output object and the aggregation method</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -216,13 +217,13 @@ public sealed class AggregateColumn : Attribute
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_AggregateColumn_AggregatedValuePropName_" data-uid="ETLBox.DataFlow.AggregateColumn.AggregatedValuePropName*"></a>
   <h4 id="ETLBox_DataFlow_AggregateColumn_AggregatedValuePropName" data-uid="ETLBox.DataFlow.AggregateColumn.AggregatedValuePropName">AggregatedValuePropName</h4>
   <div class="markdown level1 summary"><p>Property name that holds the aggregated value in the output object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -250,7 +251,7 @@ public sealed class AggregateColumn : Attribute
   <div class="markdown level1 summary"><p>Method for the aggregation (e.g. Sum, Min, Max, etc.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -278,7 +279,7 @@ public sealed class AggregateColumn : Attribute
   <div class="markdown level1 summary"><p>Property name in the input object that contains the detailed values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

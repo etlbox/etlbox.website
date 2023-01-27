@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10178
+weight: 10186
 toc: false
 ---
 
@@ -14,11 +14,9 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IdColumn">
   <h1 id="ETLBox_DataFlow_IdColumn" data-uid="ETLBox.DataFlow.IdColumn" class="text-break">Class IdColumn
-  </h1>
-  <div class="markdown level0 summary"><p>This attribute defines if the column is used as an Id for the DBMerge. It it supposed
-to use with an object that either inherits from MergeableRow or implements the IMergeable interface.
-If you do not provide this attribute, you need to override the UniqueId property
-if you inherit from MergeableRow.</p>
+</h1>
+  <div class="markdown level0 summary"><p>This attribute defines if the column is used as an Id for the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge">DbMerge</a>
+or the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination">DbDestination</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -175,13 +173,13 @@ public sealed class IdColumn : Attribute
     public string Value {get;set; }
 }</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IdColumn__ctor_" data-uid="ETLBox.DataFlow.IdColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_IdColumn__ctor" data-uid="ETLBox.DataFlow.IdColumn.#ctor">IdColumn()</h4>
   <div class="markdown level1 summary"><p>This property is used as an Id column for a Merge operation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -190,13 +188,13 @@ public sealed class IdColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IdColumn_IdPropertyName_" data-uid="ETLBox.DataFlow.IdColumn.IdPropertyName*"></a>
   <h4 id="ETLBox_DataFlow_IdColumn_IdPropertyName" data-uid="ETLBox.DataFlow.IdColumn.IdPropertyName">IdPropertyName</h4>
   <div class="markdown level1 summary"><p>Name of the property used as Id</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

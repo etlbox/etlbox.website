@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10212
+weight: 10222
 toc: false
 ---
 
@@ -14,13 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.ColumnRename">
   <h1 id="ETLBox_DataFlow_Transformations_ColumnRename" data-uid="ETLBox.DataFlow.Transformations.ColumnRename" class="text-break">Class ColumnRename
-  </h1>
-  <div class="markdown level0 summary"><p>ColumnRename allows you to rename the column or properties names of your ingoing data.
-This transformation works with objects, ExpandoObjects and arrays as input data type.<br>
-ColumnRename will always convert the input type into a (dynamic) ExpandoObject.
-Provide a column mapping with the old and the new name. The mapping can also be automatically retrieved from
-existing ColumnMap attributes. For arrays provide the array index and the new name.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -32,7 +27,7 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/columnrename-1">ColumnRename</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">ColumnRename</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -136,7 +131,7 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -166,7 +161,7 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -243,12 +238,12 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_ColumnRename__ctor_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_ColumnRename__ctor" data-uid="ETLBox.DataFlow.Transformations.ColumnRename.#ctor">ColumnRename()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -260,7 +255,7 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
   <h4 id="ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_ICollection_ETLBox_DataFlow_RenameColumn__" data-uid="ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.RenameColumn})">ColumnRename(ICollection&lt;RenameColumn&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

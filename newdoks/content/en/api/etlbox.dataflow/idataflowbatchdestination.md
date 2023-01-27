@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10163
+weight: 10171
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination">
   <h1 id="ETLBox_DataFlow_IDataFlowBatchDestination" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination" class="text-break">Interface IDataFlowBatchDestination
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -28,13 +28,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowBatchDestination_BatchSize_" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination.BatchSize*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowBatchDestination_BatchSize" data-uid="ETLBox.DataFlow.IDataFlowBatchDestination.BatchSize">BatchSize</h4>
   <div class="markdown level1 summary"><p>Batch size that is used when inserted data in batches</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

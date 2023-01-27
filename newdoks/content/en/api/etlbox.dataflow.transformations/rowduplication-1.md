@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10230
+weight: 10239
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1">
   <h1 id="ETLBox_DataFlow_Transformations_RowDuplication_1" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1" class="text-break">Class RowDuplication&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
 property if you want to duplicate only particular rows.</p>
 </div>
@@ -29,7 +29,7 @@ property if you want to duplicate only particular rows.</p>
     <div class="level5"><span class="xref">RowDuplication&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/rowduplication">RowDuplication</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
@@ -100,7 +100,7 @@ property if you want to duplicate only particular rows.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -133,7 +133,7 @@ property if you want to duplicate only particular rows.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -234,12 +234,14 @@ RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
 var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
 source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor">RowDuplication()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -247,11 +249,18 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_examples">Examples</h5>
+  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
+var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor(System.Int32)">RowDuplication(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -278,40 +287,12 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_System_Predicate__0__" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor(System.Predicate{`0})">RowDuplication(Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public RowDuplication(Predicate<TInput> canDuplicate)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">canDuplicate</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/rowduplication-1#ETLBox_DataFlow_Transformations_RowDuplication_1_CanDuplicate">CanDuplicate</a> predicate</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_System_Predicate__0__System_Int32_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor(System.Predicate{`0},System.Int32)">RowDuplication(Predicate&lt;TInput&gt;, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -343,14 +324,46 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1__ctor_System_Predicate__0__" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.#ctor(System.Predicate{`0})">RowDuplication(Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public RowDuplication(Predicate<TInput> canDuplicate)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;TInput&gt;</td>
+        <td><span class="parametername">canDuplicate</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/rowduplication-1#ETLBox_DataFlow_Transformations_RowDuplication_1_CanDuplicate">CanDuplicate</a> predicate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_CanDuplicate_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CanDuplicate*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CanDuplicate" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CanDuplicate">CanDuplicate</h4>
   <div class="markdown level1 summary"><p>A predicate that describe if a will be duplicated or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -379,7 +392,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 Default is 1 (meaning the incoming row plus one copy).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -404,10 +417,11 @@ Default is 1 (meaning the incoming row plus one copy).</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -434,10 +448,11 @@ Default is 1 (meaning the incoming row plus one copy).</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -464,11 +479,11 @@ Default is 1 (meaning the incoming row plus one copy).</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_TaskName_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_TaskName" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -494,12 +509,14 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -509,11 +526,18 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CheckParameter_examples">Examples</h5>
+  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
+var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -540,11 +564,18 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
+var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -554,11 +585,18 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowDuplication_1_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
+var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowDuplication_1_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowDuplication_1_InitComponent" data-uid="ETLBox.DataFlow.Transformations.RowDuplication`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -568,6 +606,11 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowDuplication_1_InitComponent_examples">Examples</h5>
+  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
+var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a>

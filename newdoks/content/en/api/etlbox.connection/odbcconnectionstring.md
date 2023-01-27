@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10017
+weight: 10020
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.OdbcConnectionString">
   <h1 id="ETLBox_Connection_OdbcConnectionString" data-uid="ETLBox.Connection.OdbcConnectionString" class="text-break">Class OdbcConnectionString
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string in an object.
 Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
@@ -25,7 +25,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.connection/odbcconnectionstring">OdbcConnectionString</a>, <span class="xref">System.Data.Odbc.OdbcConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">OdbcConnectionString</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></div>
   </div>
@@ -103,12 +103,14 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OdbcConnectionString__ctor_" data-uid="ETLBox.Connection.OdbcConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString__ctor" data-uid="ETLBox.Connection.OdbcConnectionString.#ctor">OdbcConnectionString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -118,9 +120,11 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 {{< rawhtml >}}
   <a id="ETLBox_Connection_OdbcConnectionString__ctor_" data-uid="ETLBox.Connection.OdbcConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString__ctor_System_String_" data-uid="ETLBox.Connection.OdbcConnectionString.#ctor(System.String)">OdbcConnectionString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -146,13 +150,14 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OdbcConnectionString_DbName_" data-uid="ETLBox.Connection.OdbcConnectionString.DbName*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString_DbName" data-uid="ETLBox.Connection.OdbcConnectionString.DbName">DbName</h4>
-  <div class="markdown level1 summary"><p>The database name</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,10 +184,11 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.OdbcConnectionString, System.Data.Odbc.OdbcConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Connection_OdbcConnectionString_DbNameKeyword_" data-uid="ETLBox.Connection.OdbcConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString_DbNameKeyword" data-uid="ETLBox.Connection.OdbcConnectionString.DbNameKeyword">DbNameKeyword</h4>
-  <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -209,10 +215,11 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.OdbcConnectionString, System.Data.Odbc.OdbcConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_Connection_OdbcConnectionString_MasterDbName_" data-uid="ETLBox.Connection.OdbcConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString_MasterDbName" data-uid="ETLBox.Connection.OdbcConnectionString.MasterDbName">MasterDbName</h4>
-  <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -238,12 +245,14 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.OdbcConnectionString, System.Data.Odbc.OdbcConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="operators">Operators
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OdbcConnectionString_op_Implicit_" data-uid="ETLBox.Connection.OdbcConnectionString.op_Implicit*"></a>
   <h4 id="ETLBox_Connection_OdbcConnectionString_op_Implicit_System_String__ETLBox_Connection_OdbcConnectionString" data-uid="ETLBox.Connection.OdbcConnectionString.op_Implicit(System.String)~ETLBox.Connection.OdbcConnectionString">Implicit(String to OdbcConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string in an object.
+Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

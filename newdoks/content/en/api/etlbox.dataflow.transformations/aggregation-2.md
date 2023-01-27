@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10193
+weight: 10203
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2">
   <h1 id="ETLBox_DataFlow_Transformations_Aggregation_2" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2" class="text-break">Class Aggregation&lt;TInput, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Aggregates data by the given aggregation methods.
 The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
 When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
@@ -30,7 +30,7 @@ When all rows have been processed by the aggregation, the aggregated values are 
     <div class="level5"><span class="xref">Aggregation&lt;TInput, TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/aggregation">Aggregation</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -101,7 +101,7 @@ When all rows have been processed by the aggregation, the aggregated values are 
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -131,7 +131,7 @@ When all rows have been processed by the aggregation, the aggregated values are 
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -246,12 +246,15 @@ var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
 var dest = new MemoryDestination&lt;MyAggRow>();
 source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor">Aggregation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -259,77 +262,28 @@ source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_System_Action__0__1__" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor(System.Action{`0,`1})">Aggregation(Action&lt;TInput, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Aggregation(Action<TInput, TOutput> aggregationAction)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;TInput, TOutput&gt;</td>
-        <td><span class="parametername">aggregationAction</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction">AggregationAction</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_System_Action__0__1__System_Func__0_System_Object__" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor(System.Action{`0,`1},System.Func{`0,System.Object})">Aggregation(Action&lt;TInput, TOutput&gt;, Func&lt;TInput, Object&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Aggregation(Action<TInput, TOutput> aggregationAction, Func<TInput, object> groupingFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;TInput, TOutput&gt;</td>
-        <td><span class="parametername">aggregationAction</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction">AggregationAction</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput, <span class="xref">System.Object</span>&gt;</td>
-        <td><span class="parametername">groupingFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc">GroupingFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_System_Action__0__1__System_Func__0_System_Object__System_Action_System_Object__1__" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor(System.Action{`0,`1},System.Func{`0,System.Object},System.Action{System.Object,`1})">Aggregation(Action&lt;TInput, TOutput&gt;, Func&lt;TInput, Object&gt;, Action&lt;Object, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -367,15 +321,87 @@ source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_System_Action__0__1__System_Func__0_System_Object__" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor(System.Action{`0,`1},System.Func{`0,System.Object})">Aggregation(Action&lt;TInput, TOutput&gt;, Func&lt;TInput, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Aggregation(Action<TInput, TOutput> aggregationAction, Func<TInput, object> groupingFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TInput, TOutput&gt;</td>
+        <td><span class="parametername">aggregationAction</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction">AggregationAction</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TInput, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">groupingFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc">GroupingFunc</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2__ctor_System_Action__0__1__" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.#ctor(System.Action{`0,`1})">Aggregation(Action&lt;TInput, TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Aggregation(Action<TInput, TOutput> aggregationAction)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TInput, TOutput&gt;</td>
+        <td><span class="parametername">aggregationAction</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction">AggregationAction</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns">AggregateColumns</h4>
   <div class="markdown level1 summary"><p>This list will be used to set the AggregationAction.
 This also works with ExpandoObjects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -405,7 +431,7 @@ Not needed if you use the <a class="xref" href="/api/etlbox.dataflow/aggregateco
 or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns">AggregateColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -434,7 +460,7 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations
 This also works with ExpandoObjects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -464,7 +490,7 @@ Not needed if you use the <a class="xref" href="/api/etlbox.dataflow/groupcolumn
 or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns">GroupColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -489,10 +515,12 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations
   </table>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -524,7 +552,7 @@ Not needed if you use the <a class="xref" href="/api/etlbox.dataflow/groupcolumn
 or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns">GroupColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -549,10 +577,12 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations
   </table>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -579,11 +609,12 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -609,12 +640,15 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -624,11 +658,28 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2_CheckParameter_examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -655,11 +706,28 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -669,11 +737,28 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_InitComponent" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -683,11 +768,28 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2_InitComponent_examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_PrepareParameter_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_PrepareParameter" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregates data by the given aggregation methods.
+The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
+When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -697,6 +799,20 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Aggregation_2_PrepareParameter_examples">Examples</h5>
+  <pre><code>public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue>(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow>();
+var dest = new MemoryDestination&lt;MyAggRow>();
+source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

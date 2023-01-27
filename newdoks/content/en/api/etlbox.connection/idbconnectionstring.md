@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10010
+weight: 10013
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.IDbConnectionString">
   <h1 id="ETLBox_Connection_IDbConnectionString" data-uid="ETLBox.Connection.IDbConnectionString" class="text-break">Interface IDbConnectionString
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The generic defintion of a connection string</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,13 +29,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_IDbConnectionString_DbName_" data-uid="ETLBox.Connection.IDbConnectionString.DbName*"></a>
   <h4 id="ETLBox_Connection_IDbConnectionString_DbName" data-uid="ETLBox.Connection.IDbConnectionString.DbName">DbName</h4>
   <div class="markdown level1 summary"><p>The database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -63,7 +63,7 @@ toc: false
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -91,7 +91,7 @@ toc: false
   <div class="markdown level1 summary"><p>The connection string value, e.g. &quot;Server=localhost;Database=etlbox;&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -115,13 +115,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_IDbConnectionString_Clone_" data-uid="ETLBox.Connection.IDbConnectionString.Clone*"></a>
   <h4 id="ETLBox_Connection_IDbConnectionString_Clone" data-uid="ETLBox.Connection.IDbConnectionString.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Creates a copy of the current connection</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -150,7 +150,7 @@ toc: false
   <div class="markdown level1 summary"><p>Clone the current connection string with the master database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,7 +179,7 @@ toc: false
   <div class="markdown level1 summary"><p>Clone the current connection string with a new database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -226,7 +226,7 @@ toc: false
   <div class="markdown level1 summary"><p>Returns the connection string <a class="xref" href="/api/etlbox.connection/idbconnectionstring#ETLBox_Connection_IDbConnectionString_Value">Value</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

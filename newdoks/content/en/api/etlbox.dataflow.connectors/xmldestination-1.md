@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10139
+weight: 10146
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1">
   <h1 id="ETLBox_DataFlow_Connectors_XmlDestination_1" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1" class="text-break">Class XmlDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -28,7 +28,7 @@ toc: false
     <div class="level5"><span class="xref">XmlDestination&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/xmldestination">XmlDestination</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -59,6 +59,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpRequestMessage">DataFlowStreamDestination&lt;TInput&gt;.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpResponseMessage">DataFlowStreamDestination&lt;TInput&gt;.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding">DataFlowStreamDestination&lt;TInput&gt;.Encoding</a>
     </div>
     <div>
@@ -84,6 +87,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnFaulted_System_Exception_">DataFlowStreamDestination&lt;TInput&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_NewMetaDataObject">DataFlowStreamDestination&lt;TInput&gt;.NewMetaDataObject</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteData__0_">DataFlowStreamDestination&lt;TInput&gt;.WriteData(TInput)</a>
@@ -152,7 +158,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -182,7 +188,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -281,12 +287,13 @@ toc: false
   <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor">XmlDestination()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -294,40 +301,15 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String)">XmlDestination(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlDestination(string uri)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_examples">Examples</h5>
+  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlDestination(String, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -348,24 +330,57 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">uri</span></td>
-        <td></td>
+        <td><p>The destination xml file name or uri</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/resourcetype">ResourceType</a></td>
         <td><span class="parametername">resourceType</span></td>
-        <td></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String)">XmlDestination(String)</h4>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlDestination(string uri)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The destination xml file name or uri</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_DynamicElementName_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.DynamicElementName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_DynamicElementName" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.DynamicElementName">DynamicElementName</h4>
   <div class="markdown level1 summary"><p>For ExpandoObject, the default xml element name is &lt;Dynamic&gt;
 Change this value for dynamic objects here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -390,10 +405,10 @@ Change this value for dynamic objects here.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_HttpContentType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.HttpContentType*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_HttpContentType" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.HttpContentType">HttpContentType</h4>
-  <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -425,7 +440,7 @@ By default an empty namespace is added - xml will be generated without any names
 which most likely is the desired behavior.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -453,7 +468,7 @@ which most likely is the desired behavior.</p>
   <div class="markdown level1 summary"><p>The name of the root element for the xml output.  Default is &lt;root&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -481,7 +496,7 @@ which most likely is the desired behavior.</p>
   <div class="markdown level1 summary"><p>The System.Xml.XmlWriterSettings for the XmlWriter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -506,11 +521,10 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -536,12 +550,13 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -551,11 +566,15 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CheckParameter_examples">Examples</h5>
+  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CloseStream" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CloseStream">CloseStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -565,11 +584,15 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CloseStream_examples">Examples</h5>
+  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_InitStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_InitStream" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.InitStream">InitStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -579,11 +602,15 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_1_InitStream_examples">Examples</h5>
+  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -610,6 +637,9 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</span></div>
+  <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_1_WriteIntoStream__0__examples">Examples</h5>
+  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

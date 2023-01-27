@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10217
+weight: 10227
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.Distinct`1">
   <h1 id="ETLBox_DataFlow_Transformations_Distinct_1" data-uid="ETLBox.DataFlow.Transformations.Distinct`1" class="text-break">Class Distinct&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -27,7 +27,7 @@ toc: false
     <div class="level5"><span class="xref">Distinct&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/distinct">Distinct</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -98,7 +98,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetCompletionTask">DataFlowComponent.SetCompletionTask()</a>
@@ -125,7 +125,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -220,12 +220,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1__ctor" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.#ctor">Distinct()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -234,14 +234,14 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns">DistinctColumns</h4>
   <div class="markdown level1 summary"><p>Defines the property names that should be used to determine
 the uniqueness of an object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,12 +264,38 @@ the uniqueness of an object.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_DuplicatesSourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DuplicatesSourceBlock*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_DuplicatesSourceBlock" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DuplicatesSourceBlock">DuplicatesSourceBlock</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ISourceBlock<TInput> DuplicatesSourceBlock { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock</span>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -296,10 +322,9 @@ the uniqueness of an object.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -326,11 +351,9 @@ the uniqueness of an object.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_TaskName_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_TaskName" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -356,12 +379,12 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -375,7 +398,7 @@ with a default name that can be overwritten.</p>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -406,7 +429,7 @@ with a default name that can be overwritten.</p>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -420,7 +443,7 @@ with a default name that can be overwritten.</p>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_InitComponent" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -434,7 +457,7 @@ with a default name that can be overwritten.</p>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_InitParameter" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.InitParameter">InitParameter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -444,11 +467,170 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>Rows that are evaluate to true will be discarded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_LinkDuplicatesTo_ETLBox_DataFlow_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkDuplicatesTo(ETLBox.DataFlow.IDataFlowDestination{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_Distinct_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_PrepareParameter" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

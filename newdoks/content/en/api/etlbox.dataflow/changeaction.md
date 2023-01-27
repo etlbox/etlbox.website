@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10083
+weight: 10085
 toc: false
 ---
 
@@ -14,9 +14,14 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ChangeAction">
   <h1 id="ETLBox_DataFlow_ChangeAction" data-uid="ETLBox.DataFlow.ChangeAction" class="text-break">Enum ChangeAction
-  </h1>
-  <div class="markdown level0 summary"><p>When comparing two data sets regarding their changes, this enumeration describe how they are different-
-Exists: Both are equal, Insert: This record is inserted, Update: This record is updated, Delete: This record is deleted.</p>
+</h1>
+  <div class="markdown level0 summary"><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
 </div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -30,7 +35,7 @@ Exists: Both are equal, Insert: This record is inserted, Update: This record is 
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -41,19 +46,69 @@ Exists: Both are equal, Insert: This record is inserted, Update: This record is 
     <tbody>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Delete">Delete</td>
-        <td></td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
+      </tr>
+      <tr>
+        <td id="ETLBox_DataFlow_ChangeAction_Duplicate">Duplicate</td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Exists">Exists</td>
-        <td></td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Insert">Insert</td>
-        <td></td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
+      </tr>
+      <tr>
+        <td id="ETLBox_DataFlow_ChangeAction_NotFound">NotFound</td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Update">Update</td>
-        <td></td>
+        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
+Exists: A record with the same id was found, but both records were equal
+Insert: A record with the id didn't exist, so this records was inserted
+Update: A record with the same id was found, and the record was updated
+Delete: A record was identifed as an deletion, and this record was deleted.
+Duplicate: A record with the same id was alread used in a previous insert/update operation
+NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

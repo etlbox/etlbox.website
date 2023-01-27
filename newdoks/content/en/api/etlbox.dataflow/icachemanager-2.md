@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10161
+weight: 10168
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ICacheManager`2">
   <h1 id="ETLBox_DataFlow_ICacheManager_2" data-uid="ETLBox.DataFlow.ICacheManager`2" class="text-break">Interface ICacheManager&lt;TInput, TCache&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -47,12 +47,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ICacheManager_2_Dict_" data-uid="ETLBox.DataFlow.ICacheManager`2.Dict*"></a>
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Dict" data-uid="ETLBox.DataFlow.ICacheManager`2.Dict">Dict</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -79,7 +79,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_GetCacheUniqueKeyFunc" data-uid="ETLBox.DataFlow.ICacheManager`2.GetCacheUniqueKeyFunc">GetCacheUniqueKeyFunc</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -106,7 +106,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_GetInputUniqueKeyFunc" data-uid="ETLBox.DataFlow.ICacheManager`2.GetInputUniqueKeyFunc">GetInputUniqueKeyFunc</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -133,11 +133,11 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Records" data-uid="ETLBox.DataFlow.ICacheManager`2.Records">Records</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    ICollection<TCache> Records { get; }
+    IEnumerable<TCache> Records { get; }
 ```
 
 {{< rawhtml >}}
@@ -151,18 +151,18 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TCache&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TCache&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ICacheManager_2_Add_" data-uid="ETLBox.DataFlow.ICacheManager`2.Add*"></a>
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Add__0_" data-uid="ETLBox.DataFlow.ICacheManager`2.Add(`0)">Add(TInput)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -191,7 +191,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Add__0___" data-uid="ETLBox.DataFlow.ICacheManager`2.Add(`0[])">Add(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -220,7 +220,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Contains__0_" data-uid="ETLBox.DataFlow.ICacheManager`2.Contains(`0)">Contains(TInput)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,7 +264,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Contains__0___" data-uid="ETLBox.DataFlow.ICacheManager`2.Contains(`0[])">Contains(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -308,7 +308,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_ICacheManager_2_Init" data-uid="ETLBox.DataFlow.ICacheManager`2.Init">Init()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

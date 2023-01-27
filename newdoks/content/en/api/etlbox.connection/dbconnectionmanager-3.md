@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10005
+weight: 10008
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.DbConnectionManager`3">
   <h1 id="ETLBox_Connection_DbConnectionManager_3" data-uid="ETLBox.Connection.DbConnectionManager`3" class="text-break">Class DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -23,6 +23,7 @@ toc: false
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/adomdconnectionmanager">AdomdConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.connection/aseconnectionmanager">AseConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/db2connectionmanager">Db2ConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager">MySqlConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager">OdbcConnectionManager</a></div>
@@ -32,7 +33,7 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.connection/sqlconnectionmanager">SqlConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.connection/sqliteconnectionmanager">SQLiteConnectionManager</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;TConnection, TTransaction&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
@@ -100,12 +101,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionManager_3__ctor_" data-uid="ETLBox.Connection.DbConnectionManager`3.#ctor*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3__ctor" data-uid="ETLBox.Connection.DbConnectionManager`3.#ctor">DbConnectionManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -115,9 +117,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionManager_3__ctor_" data-uid="ETLBox.Connection.DbConnectionManager`3.#ctor*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3__ctor_ETLBox_Connection_IDbConnectionString_" data-uid="ETLBox.Connection.DbConnectionManager`3.#ctor(ETLBox.Connection.IDbConnectionString)">DbConnectionManager(IDbConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -143,12 +146,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionManager_3_CommandTimeout_" data-uid="ETLBox.Connection.DbConnectionManager`3.CommandTimeout*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CommandTimeout" data-uid="ETLBox.Connection.DbConnectionManager`3.CommandTimeout">CommandTimeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -173,9 +177,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Compatibility_" data-uid="ETLBox.Connection.DbConnectionManager`3.Compatibility*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Compatibility" data-uid="ETLBox.Connection.DbConnectionManager`3.Compatibility">Compatibility</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -200,10 +205,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ConnectionManagerType_" data-uid="ETLBox.Connection.DbConnectionManager`3.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ConnectionManagerType" data-uid="ETLBox.Connection.DbConnectionManager`3.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -228,10 +233,10 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ConnectionString_" data-uid="ETLBox.Connection.DbConnectionManager`3.ConnectionString*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ConnectionString" data-uid="ETLBox.Connection.DbConnectionManager`3.ConnectionString">ConnectionString</h4>
-  <div class="markdown level1 summary"><p>The connection string used to establish the connection with the database</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -262,7 +267,7 @@ acquired from the connection pool. There is no guarantee that
 the same connection will be used in ETLBox components.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -287,10 +292,10 @@ the same connection will be used in ETLBox components.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_IsInBulkInsert_" data-uid="ETLBox.Connection.DbConnectionManager`3.IsInBulkInsert*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_IsInBulkInsert" data-uid="ETLBox.Connection.DbConnectionManager`3.IsInBulkInsert">IsInBulkInsert</h4>
-  <div class="markdown level1 summary"><p>Indicates if the current connection is currently used in a bulk insert operation (e.g. performed by a DbDestination)</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -315,10 +320,10 @@ the same connection will be used in ETLBox components.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection_" data-uid="ETLBox.Connection.DbConnectionManager`3.IsOdbcOrOleDbConnection*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection" data-uid="ETLBox.Connection.DbConnectionManager`3.IsOdbcOrOleDbConnection">IsOdbcOrOleDbConnection</h4>
-  <div class="markdown level1 summary"><p>Indicates if the current connection manager is used as a OleDb or Odbc Connection.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -343,13 +348,10 @@ the same connection will be used in ETLBox components.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_LeaveOpen_" data-uid="ETLBox.Connection.DbConnectionManager`3.LeaveOpen*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_LeaveOpen" data-uid="ETLBox.Connection.DbConnectionManager`3.LeaveOpen">LeaveOpen</h4>
-  <div class="markdown level1 summary"><p>By default, after every sql operation the underlying ADO.NET connection is closed and retured to the ADO.NET connection pool.
-(This is the recommended behavior)
-To keep the connection open and avoid having the connection returned to the pool, set this to true.
-A connnection will be left open when a bulk insert operation is executed or a transaction hase been openend and not yet commited or rolled back.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -374,10 +376,10 @@ A connnection will be left open when a bulk insert operation is executed or a tr
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_MaxLoginAttempts_" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxLoginAttempts*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_MaxLoginAttempts" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxLoginAttempts">MaxLoginAttempts</h4>
-  <div class="markdown level1 summary"><p>Number of attempts that the connection managers tries to connect before it decides that the database is not reachable.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -400,17 +402,44 @@ A connnection will be left open when a bulk insert operation is executed or a tr
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount_" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterAmount*"></a>
-  <h4 id="ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterAmount">MaxParameterAmount</h4>
-  <div class="markdown level1 summary"><p>returns the maximum amount of parameters that ca be passed into a
-sql query.</p>
+  <a id="ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterSizeBulkCopy*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public virtual int MaxParameterAmount { get; }
+    public virtual int MaxParameterSizeBulkCopy { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql_" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterSizeSql*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql" data-uid="ETLBox.Connection.DbConnectionManager`3.MaxParameterSizeSql">MaxParameterSizeSql</h4>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual int MaxParameterSizeSql { get; }
 ```
 
 {{< rawhtml >}}
@@ -431,11 +460,10 @@ sql query.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_PP_" data-uid="ETLBox.Connection.DbConnectionManager`3.PP*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_PP" data-uid="ETLBox.Connection.DbConnectionManager`3.PP">PP</h4>
-  <div class="markdown level1 summary"><p>The character that is used in front of parameter names in query to identify the parameter.
-All databases use the '@' character, except Oracle which uses ':'</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -460,11 +488,10 @@ All databases use the '@' character, except Oracle which uses ':'</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_QB_" data-uid="ETLBox.Connection.DbConnectionManager`3.QB*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_QB" data-uid="ETLBox.Connection.DbConnectionManager`3.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -489,11 +516,10 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_QE_" data-uid="ETLBox.Connection.DbConnectionManager`3.QE*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_QE" data-uid="ETLBox.Connection.DbConnectionManager`3.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -518,10 +544,10 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_State_" data-uid="ETLBox.Connection.DbConnectionManager`3.State*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_State" data-uid="ETLBox.Connection.DbConnectionManager`3.State">State</h4>
-  <div class="markdown level1 summary"><p>The state of the underlying ADO.NET connection</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -546,11 +572,10 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_SupportDatabases_" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportDatabases*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_SupportDatabases" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportDatabases">SupportDatabases</h4>
-  <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
-A database in ETLBox means a schema in MySql.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -575,10 +600,10 @@ A database in ETLBox means a schema in MySql.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_SupportProcedures_" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportProcedures*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_SupportProcedures" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportProcedures">SupportProcedures</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -603,12 +628,10 @@ A database in ETLBox means a schema in MySql.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_SupportSchemas_" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportSchemas*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_SupportSchemas" data-uid="ETLBox.Connection.DbConnectionManager`3.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -633,11 +656,10 @@ Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Transaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.Transaction*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Transaction" data-uid="ETLBox.Connection.DbConnectionManager`3.Transaction">Transaction</h4>
-  <div class="markdown level1 summary"><p>The current transaction. Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_BeginTransaction">BeginTransaction()</a> to start a transaction,
-and <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_CommitTransaction">CommitTransaction()</a> or <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_RollbackTransaction">RollbackTransaction()</a> to commit or rollback.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -661,14 +683,13 @@ and <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_DbConnectionManager_3_BeginTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.BeginTransaction*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BeginTransaction" data-uid="ETLBox.Connection.DbConnectionManager`3.BeginTransaction">BeginTransaction()</h4>
-  <div class="markdown level1 summary"><p>Will start a transaction with the default isolation level.
-This will leave the underlying ADO.NET connection open until the transaction is committed or rolled back.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -678,11 +699,10 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionManager_3_BeginTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.BeginTransaction*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_" data-uid="ETLBox.Connection.DbConnectionManager`3.BeginTransaction(System.Data.IsolationLevel)">BeginTransaction(IsolationLevel)</h4>
-  <div class="markdown level1 summary"><p>Will start a transaction with the given isolation level (if supported by the target database)
-This will leave the underlying ADO.NET connection open until the transaction is committed or rolled back.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -703,17 +723,16 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><span class="xref">System.Data.IsolationLevel</span></td>
         <td><span class="parametername">isolationLevel</span></td>
-        <td><p>The isolation level for the transaction</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkDelete_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkDelete*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk delete</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -734,17 +753,16 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkInsert_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkInsert*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk insert</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -765,16 +783,16 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkNonQuery*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkNonQuery(System.String,System.Collections.Generic.IEnumerable{`2})">BulkNonQuery(String, IEnumerable&lt;TParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -821,9 +839,10 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkReader_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReader*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReader(System.String,System.Collections.Generic.IEnumerable{`2},System.Action,System.Action,System.Action{System.Object}[])">BulkReader(String, IEnumerable&lt;TParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -870,9 +889,10 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkSelect_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkSelect*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -919,10 +939,10 @@ This will leave the underlying ADO.NET connection open until the transaction is 
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkUpdate_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkUpdate*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -943,30 +963,26 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td><p>The column names used in the set part of the update statement</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td><p>The column names to join for the update</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_" data-uid="ETLBox.Connection.DbConnectionManager`3.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.DbConnectionManager`3.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
-to change back settings made to improve bulk insert performance</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -987,17 +1003,16 @@ to change back settings made to improve bulk insert performance</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">tableName</span></td>
-        <td><p>Destination table name</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Clone_" data-uid="ETLBox.Connection.DbConnectionManager`3.Clone*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Clone" data-uid="ETLBox.Connection.DbConnectionManager`3.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1016,17 +1031,16 @@ to change back settings made to improve bulk insert performance</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>A instance copy of the current connection manager</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_CloneIfAllowed_" data-uid="ETLBox.Connection.DbConnectionManager`3.CloneIfAllowed*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CloneIfAllowed" data-uid="ETLBox.Connection.DbConnectionManager`3.CloneIfAllowed">CloneIfAllowed()</h4>
-  <div class="markdown level1 summary"><p>Try to create a clone of the current connection - only possible if <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_LeaveOpen">LeaveOpen</a> is false.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1045,19 +1059,16 @@ to change back settings made to improve bulk insert performance</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>The connection that was either cloned or the current connection</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Close_" data-uid="ETLBox.Connection.DbConnectionManager`3.Close*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Close" data-uid="ETLBox.Connection.DbConnectionManager`3.Close">Close()</h4>
-  <div class="markdown level1 summary"><p>Closes the connection - this will not automatically disconnect
-from the database server, it will only return the connection
-to the ADO.NET connection pool for further reuse.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1067,10 +1078,10 @@ to the ADO.NET connection pool for further reuse.</p>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionManager_3_CloseIfAllowed_" data-uid="ETLBox.Connection.DbConnectionManager`3.CloseIfAllowed*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CloseIfAllowed" data-uid="ETLBox.Connection.DbConnectionManager`3.CloseIfAllowed">CloseIfAllowed()</h4>
-  <div class="markdown level1 summary"><p>Closes the connection only if leave open is set to false and no transaction or bulk insert is in progress.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1080,10 +1091,10 @@ to the ADO.NET connection pool for further reuse.</p>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionManager_3_CommitTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.CommitTransaction*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CommitTransaction" data-uid="ETLBox.Connection.DbConnectionManager`3.CommitTransaction">CommitTransaction()</h4>
-  <div class="markdown level1 summary"><p>Commits the current tranasction.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1097,7 +1108,7 @@ to the ADO.NET connection pool for further reuse.</p>
 connection manager to the target connection manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1129,7 +1140,7 @@ connection manager to the target connection manager.</p>
 Override this method if you want to pass additional properties to the specific Ado.NET db connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1144,7 +1155,7 @@ from the database server, it will only return the connection
 to the ADO.NET connection pool for further reuse.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1154,9 +1165,10 @@ to the ADO.NET connection pool for further reuse.</p>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_DbConnectionManager_3_Dispose_" data-uid="ETLBox.Connection.DbConnectionManager`3.Dispose*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_" data-uid="ETLBox.Connection.DbConnectionManager`3.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1183,10 +1195,10 @@ to the ADO.NET connection pool for further reuse.</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteNonQuery*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes a query against the database that doesn't return any data.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1212,8 +1224,7 @@ to the ADO.NET connection pool for further reuse.</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
-        <td><p>The optional list of parameters</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1228,21 +1239,20 @@ to the ADO.NET connection pool for further reuse.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Number of affected rows.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteReader_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReader*"></a>
-  <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes a query against the database that does return multiple rows in multiple columns</p>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</h4>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null)
+    public void ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1264,33 +1274,36 @@ to the ADO.NET connection pool for further reuse.</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
-        <td><p>The optional list of parameters</p>
-</td>
+        <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td></td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">System.Data.IDataReader</span></td>
-        <td><p>A data reader to iterate through the result set</p>
-</td>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalar*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes a query against the database that does return only one row in one column.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1316,8 +1329,7 @@ to the ADO.NET connection pool for further reuse.</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
-        <td><p>The optional list of parameters</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1332,19 +1344,16 @@ to the ADO.NET connection pool for further reuse.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><p>The result</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Open_" data-uid="ETLBox.Connection.DbConnectionManager`3.Open*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Open" data-uid="ETLBox.Connection.DbConnectionManager`3.Open">Open()</h4>
-  <div class="markdown level1 summary"><p>Opens the connection to the database. Normally you don't have to do this on your own,
-as all tasks and components will call this method implictly if the connection is closed.
-If the connection is already open, nothing is done.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1361,7 +1370,7 @@ connection managers (e.g. MySqlOdbcConnectionManager for MySql or
 PostgresOdbcConnectionManager for Postgres)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1407,11 +1416,10 @@ PostgresOdbcConnectionManager for Postgres)</p>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_" data-uid="ETLBox.Connection.DbConnectionManager`3.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.DbConnectionManager`3.PrepareBulkInsert(System.String)">PrepareBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Performs preparations needed to improved
-performance of a bulk insert operation</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1432,17 +1440,16 @@ performance of a bulk insert operation</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">tableName</span></td>
-        <td><p>Destination table name</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_RollbackTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.RollbackTransaction*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_RollbackTransaction" data-uid="ETLBox.Connection.DbConnectionManager`3.RollbackTransaction">RollbackTransaction()</h4>
-  <div class="markdown level1 summary"><p>Rolls the current transaction back.</p>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1450,6 +1457,36 @@ performance of a bulk insert operation</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_" data-uid="ETLBox.Connection.DbConnectionManager`3.UseExistingDbConnection*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_" data-uid="ETLBox.Connection.DbConnectionManager`3.UseExistingDbConnection(System.Data.IDbConnection)">UseExistingDbConnection(IDbConnection)</h4>
+  <div class="markdown level1 summary"><p>The generic implementation on which all connection managers are based on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void UseExistingDbConnection(IDbConnection adoDbConnection)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><span class="parametername">adoDbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10047
+weight: 10050
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.TableColumn">
   <h1 id="ETLBox_ControlFlow_TableColumn" data-uid="ETLBox.ControlFlow.TableColumn" class="text-break">Class TableColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A column in table</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,12 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_TableColumn__ctor" data-uid="ETLBox.ControlFlow.TableColumn.#ctor">TableColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -72,127 +73,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String)">TableColumn(String, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableColumn(string name, string dataType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean)">TableColumn(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableColumn(string name, string dataType, bool allowNulls)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">allowNulls</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean)">TableColumn(String, String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">allowNulls</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isPrimaryKey</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">TableColumn(String, String, Boolean, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -237,14 +122,164 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean)">TableColumn(String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowNulls</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPrimaryKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean)">TableColumn(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name, string dataType, bool allowNulls)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowNulls</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String)">TableColumn(String, String)</h4>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name, string dataType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String)">TableColumn(String)</h4>
+  <div class="markdown level1 summary"><p>A column in table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_TableColumn_AllowNulls_" data-uid="ETLBox.ControlFlow.TableColumn.AllowNulls*"></a>
   <h4 id="ETLBox_ControlFlow_TableColumn_AllowNulls" data-uid="ETLBox.ControlFlow.TableColumn.AllowNulls">AllowNulls</h4>
   <div class="markdown level1 summary"><p>True, if the column is nullable. By default a column is not nullable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -272,7 +307,7 @@ toc: false
   <div class="markdown level1 summary"><p>The collation used for the column. Leave empty if you want to use the default collation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -300,7 +335,7 @@ toc: false
   <div class="markdown level1 summary"><p>A comment for the column (not supported by every database)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -329,7 +364,7 @@ toc: false
 Not all databases may support this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -357,7 +392,7 @@ Not all databases may support this.</p>
   <div class="markdown level1 summary"><p>The sql data type of the column (e.g. &quot;INT&quot; or &quot;VARCHAR(30)&quot;)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -386,7 +421,7 @@ Not all databases may support this.</p>
 Not all databases may support this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -414,7 +449,7 @@ Not all databases may support this.</p>
   <div class="markdown level1 summary"><p>Only SqlServer: The increment value for an identity column</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -442,7 +477,7 @@ Not all databases may support this.</p>
   <div class="markdown level1 summary"><p>Only SqlServer: The seed for and identity column</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -471,7 +506,7 @@ Not all databases may support this.</p>
 Not every database supports this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -499,7 +534,7 @@ Not every database supports this.</p>
   <div class="markdown level1 summary"><p>True if the column is part of the primary key</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -527,7 +562,7 @@ Not every database supports this.</p>
   <div class="markdown level1 summary"><p>Name of the column</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -555,7 +590,7 @@ Not every database supports this.</p>
   <div class="markdown level1 summary"><p>The corresponding .NET data type retrieved from the sql <a class="xref" href="/api/etlbox.controlflow/tablecolumn#ETLBox_ControlFlow_TableColumn_DataType">DataType</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

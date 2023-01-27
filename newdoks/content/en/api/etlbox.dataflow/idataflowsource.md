@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10171
+weight: 10179
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowSource">
   <h1 id="ETLBox_DataFlow_IDataFlowSource" data-uid="ETLBox.DataFlow.IDataFlowSource" class="text-break">Interface IDataFlowSource
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Shared properties of all source components</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -44,13 +44,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowSource_ErrorSource_" data-uid="ETLBox.DataFlow.IDataFlowSource.ErrorSource*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_ErrorSource" data-uid="ETLBox.DataFlow.IDataFlowSource.ErrorSource">ErrorSource</h4>
   <div class="markdown level1 summary"><p>The ErrorSource is the source block used for sending errors into the linked error flow.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -78,7 +78,7 @@ toc: false
   <div class="markdown level1 summary"><p>All successors that this component is linked to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

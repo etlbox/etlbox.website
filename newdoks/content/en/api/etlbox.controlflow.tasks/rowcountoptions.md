@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10074
+weight: 10076
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.RowCountOptions">
   <h1 id="ETLBox_ControlFlow_Tasks_RowCountOptions" data-uid="ETLBox.ControlFlow.Tasks.RowCountOptions" class="text-break">Enum RowCountOptions
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Used in the RowCountTask. None forces the RowCountTask to do a normal COUNT(<em>) and works on all databases.
 QuickQueryMode only works on SqlServer and uses the partition table which can be much faster on tables with a big amount of data.
 DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
@@ -31,7 +31,7 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -42,15 +42,24 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
     <tbody>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RowCountOptions_DirtyRead">DirtyRead</td>
-        <td></td>
+        <td><p>Used in the RowCountTask. None forces the RowCountTask to do a normal COUNT(<em>) and works on all databases.
+QuickQueryMode only works on SqlServer and uses the partition table which can be much faster on tables with a big amount of data.
+DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RowCountOptions_None">None</td>
-        <td></td>
+        <td><p>Used in the RowCountTask. None forces the RowCountTask to do a normal COUNT(<em>) and works on all databases.
+QuickQueryMode only works on SqlServer and uses the partition table which can be much faster on tables with a big amount of data.
+DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RowCountOptions_QuickQueryMode">QuickQueryMode</td>
-        <td></td>
+        <td><p>Used in the RowCountTask. None forces the RowCountTask to do a normal COUNT(<em>) and works on all databases.
+QuickQueryMode only works on SqlServer and uses the partition table which can be much faster on tables with a big amount of data.
+DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

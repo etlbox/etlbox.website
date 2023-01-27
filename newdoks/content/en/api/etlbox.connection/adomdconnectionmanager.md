@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.AdomdConnectionManager">
   <h1 id="ETLBox_Connection_AdomdConnectionManager" data-uid="ETLBox.Connection.AdomdConnectionManager" class="text-break">Class AdomdConnectionManager
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -24,7 +24,7 @@ toc: false
     <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">Microsoft.AnalysisServices.AdomdClient.AdomdConnection</span>, <span class="xref">Microsoft.AnalysisServices.AdomdClient.AdomdTransaction</span>, <span class="xref">Microsoft.AnalysisServices.AdomdClient.AdomdParameter</span>&gt;</div>
     <div class="level2"><span class="xref">AdomdConnectionManager</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">Microsoft.AnalysisServices.AdomdClient.AdomdConnection</span>, <span class="xref">Microsoft.AnalysisServices.AdomdClient.AdomdTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
@@ -81,7 +81,10 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.IsOdbcOrOleDbConnection</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.MaxParameterAmount</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.MaxParameterSizeSql</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.MaxParameterSizeBulkCopy</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.Compatibility</a>
@@ -90,19 +93,19 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.BulkNonQuery(String, IEnumerable&lt;AdomdParameter&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.BulkReader(String, IEnumerable&lt;AdomdParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.BulkNonQuery(String, IEnumerable&lt;AdomdParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.BulkReader(String, IEnumerable&lt;AdomdParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -162,6 +165,9 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -196,12 +202,13 @@ toc: false
   <h5 id="ETLBox_Connection_AdomdConnectionManager_examples"><strong>Examples</strong></h5>
   <pre><code>ControlFlow.DefaultDbConnection = new AdmoConnectionManager(new ConnectionString(&quot;..connection string..&quot;));</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_AdomdConnectionManager__ctor_" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager__ctor" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor">AdomdConnectionManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -209,11 +216,14 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_Connection_AdomdConnectionManager__ctor_examples">Examples</h5>
+  <pre><code>ControlFlow.DefaultDbConnection = new AdmoConnectionManager(new ConnectionString(&quot;..connection string..&quot;));</code></pre>
   <a id="ETLBox_Connection_AdomdConnectionManager__ctor_" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager__ctor_ETLBox_Connection_SqlConnectionString_" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor(ETLBox.Connection.SqlConnectionString)">AdomdConnectionManager(SqlConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -238,11 +248,14 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_Connection_AdomdConnectionManager__ctor_ETLBox_Connection_SqlConnectionString__examples">Examples</h5>
+  <pre><code>ControlFlow.DefaultDbConnection = new AdmoConnectionManager(new ConnectionString(&quot;..connection string..&quot;));</code></pre>
   <a id="ETLBox_Connection_AdomdConnectionManager__ctor_" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.AdomdConnectionManager.#ctor(System.String)">AdomdConnectionManager(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -267,14 +280,16 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_Connection_AdomdConnectionManager__ctor_System_String__examples">Examples</h5>
+  <pre><code>ControlFlow.DefaultDbConnection = new AdmoConnectionManager(new ConnectionString(&quot;..connection string..&quot;));</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_AdomdConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.AdomdConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.AdomdConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -301,11 +316,10 @@ toc: false
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.ConnectionManagerType</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_QB_" data-uid="ETLBox.Connection.AdomdConnectionManager.QB*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_QB" data-uid="ETLBox.Connection.AdomdConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -332,11 +346,10 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.QB</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_QE_" data-uid="ETLBox.Connection.AdomdConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_QE" data-uid="ETLBox.Connection.AdomdConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -362,13 +375,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.QE</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_AdomdConnectionManager_BulkDelete_" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkDelete*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk delete</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -389,8 +402,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -398,10 +410,10 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.BulkDelete(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_BulkInsert_" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk insert</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -422,8 +434,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -431,10 +442,10 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.BulkInsert(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_BulkUpdate_" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.AdomdConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -455,20 +466,17 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td><p>The column names used in the set part of the update statement</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td><p>The column names to join for the update</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -476,11 +484,10 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.BulkUpdate(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Collections.Generic.ICollection&lt;System.String&gt;)</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Connection.AdomdConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.AdomdConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
-to change back settings made to improve bulk insert performance</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -509,10 +516,10 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.CleanUpBulkInsert(System.String)</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_Clone_" data-uid="ETLBox.Connection.AdomdConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_Clone" data-uid="ETLBox.Connection.AdomdConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -531,8 +538,7 @@ to change back settings made to improve bulk insert performance</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>A instance copy of the current connection manager</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -540,11 +546,10 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdTransaction, Microsoft.AnalysisServices.AdomdClient.AdomdParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Connection_AdomdConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Connection.AdomdConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Connection_AdomdConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.AdomdConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Performs preparations needed to improved
-performance of a bulk insert operation</p>
+  <div class="markdown level1 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

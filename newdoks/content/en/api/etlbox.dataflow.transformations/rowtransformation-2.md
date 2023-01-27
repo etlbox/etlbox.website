@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10236
+weight: 10245
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2">
   <h1 id="ETLBox_DataFlow_Transformations_RowTransformation_2" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2" class="text-break">Class RowTransformation&lt;TInput, TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,7 +29,7 @@ toc: false
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/cachedrowtransformation-3">CachedRowTransformation&lt;TInput, TOutput, TCache&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/rowtransformation-1">RowTransformation&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -100,7 +100,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -133,7 +133,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -239,12 +239,13 @@ row => {
     return new OutputType() { Value = row.Value + 1 };
 });</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor">RowTransformation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -252,41 +253,17 @@ row => {
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_System_Func__0__1__" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor(System.Func{`0,`1})">RowTransformation(Func&lt;TInput, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public RowTransformation(Func<TInput, TOutput> transformationFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput, TOutput&gt;</td>
-        <td><span class="parametername">transformationFunc</span></td>
-        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow.transformations/rowtransformation-2#ETLBox_DataFlow_Transformations_RowTransformation_2_TransformationFunc">TransformationFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_System_Func__0__1__System_Action_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor(System.Func{`0,`1},System.Action)">RowTransformation(Func&lt;TInput, TOutput&gt;, Action)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -318,12 +295,44 @@ row => {
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_WasInitActionInvoked" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.WasInitActionInvoked">WasInitActionInvoked</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2__ctor_System_Func__0__1__" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.#ctor(System.Func{`0,`1})">RowTransformation(Func&lt;TInput, TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public RowTransformation(Func<TInput, TOutput> transformationFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TInput, TOutput&gt;</td>
+        <td><span class="parametername">transformationFunc</span></td>
+        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow.transformations/rowtransformation-2#ETLBox_DataFlow_Transformations_RowTransformation_2_TransformationFunc">TransformationFunc</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+</h3>
+  <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_WasInitActionInvoked" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.WasInitActionInvoked">WasInitActionInvoked</h4>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -346,14 +355,19 @@ row => {
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_WasInitActionInvoked_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_InitAction_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InitAction*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InitAction" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InitAction">InitAction</h4>
   <div class="markdown level1 summary"><p>The init action is executed shortly before the first data row is processed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -378,10 +392,10 @@ row => {
   </table>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -408,10 +422,10 @@ row => {
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -438,11 +452,10 @@ row => {
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -472,7 +485,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Each ingoing row will be transformed using this function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -496,12 +509,13 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -511,11 +525,17 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CheckParameter_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -542,11 +562,17 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -556,11 +582,17 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InitComponent" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -570,11 +602,17 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InitComponent_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeInitActionOnce_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InvokeInitActionOnce*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeInitActionOnce" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InvokeInitActionOnce">InvokeInitActionOnce()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -582,11 +620,17 @@ with a default name that can be overwritten.</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeInitActionOnce_examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <a id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeTransformationFunc_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InvokeTransformationFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeTransformationFunc__0_" data-uid="ETLBox.DataFlow.Transformations.RowTransformation`2.InvokeTransformationFunc(`0)">InvokeTransformationFunc(TInput)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -626,6 +670,11 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_RowTransformation_2_InvokeTransformationFunc__0__examples">Examples</h5>
+  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
+row => {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

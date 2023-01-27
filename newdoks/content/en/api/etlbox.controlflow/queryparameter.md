@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10046
+weight: 10049
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.QueryParameter">
   <h1 id="ETLBox_ControlFlow_QueryParameter" data-uid="ETLBox.ControlFlow.QueryParameter" class="text-break">Class QueryParameter
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A parameter used in a query</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,12 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_QueryParameter__ctor_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_QueryParameter__ctor" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor">QueryParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A parameter used in a query</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -73,9 +74,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_QueryParameter__ctor_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_QueryParameter__ctor_System_Object_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor(System.Object)">QueryParameter(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A parameter used in a query</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -101,10 +103,46 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_QueryParameter__ctor_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_QueryParameter__ctor_System_String_System_String_System_Object_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor(System.String,System.String,System.Object)">QueryParameter(String, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_ControlFlow_QueryParameter__ctor_System_String_System_Object_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor(System.String,System.Object)">QueryParameter(String, Object)</h4>
+  <div class="markdown level1 summary"><p>A parameter used in a query</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public QueryParameter(string name, object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_QueryParameter__ctor_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_QueryParameter__ctor_System_String_System_String_System_Object_" data-uid="ETLBox.ControlFlow.QueryParameter.#ctor(System.String,System.String,System.Object)">QueryParameter(String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>A parameter used in a query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -140,12 +178,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_QueryParameter_DBSize_" data-uid="ETLBox.ControlFlow.QueryParameter.DBSize*"></a>
   <h4 id="ETLBox_ControlFlow_QueryParameter_DBSize" data-uid="ETLBox.ControlFlow.QueryParameter.DBSize">DBSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A parameter used in a query</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -173,7 +212,7 @@ toc: false
   <div class="markdown level1 summary"><p>The database type parsed from the parameter type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -201,7 +240,7 @@ toc: false
   <div class="markdown level1 summary"><p>Name of the parameter</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -229,7 +268,7 @@ toc: false
   <div class="markdown level1 summary"><p>The sql parameter type (e.g. &quot;INT&quot;)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -257,7 +296,7 @@ toc: false
   <div class="markdown level1 summary"><p>The value of the parameter</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

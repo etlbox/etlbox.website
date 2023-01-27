@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10251
+weight: 10268
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.JsonPathConverter">
   <h1 id="ETLBox_Helper_JsonPathConverter" data-uid="ETLBox.Helper.JsonPathConverter" class="text-break">Class JsonPathConverter
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A JsonConverter that support json path expression in JsonProperty attributes.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -77,12 +77,13 @@ public class MySimpleRow
     public string Col2 { get; set; }
 }</code></pre>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_JsonPathConverter_CanConvert_" data-uid="ETLBox.Helper.JsonPathConverter.CanConvert*"></a>
   <h4 id="ETLBox_Helper_JsonPathConverter_CanConvert_System_Type_" data-uid="ETLBox.Helper.JsonPathConverter.CanConvert(System.Type)">CanConvert(Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A JsonConverter that support json path expression in JsonProperty attributes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -124,11 +125,15 @@ public class MySimpleRow
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Newtonsoft.Json.JsonConverter.CanConvert(System.Type)</span></div>
+  <h5 id="ETLBox_Helper_JsonPathConverter_CanConvert_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a href="https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr">https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr</a></p>
+</div>
   <a id="ETLBox_Helper_JsonPathConverter_ReadJson_" data-uid="ETLBox.Helper.JsonPathConverter.ReadJson*"></a>
   <h4 id="ETLBox_Helper_JsonPathConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_" data-uid="ETLBox.Helper.JsonPathConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">ReadJson(JsonReader, Type, Object, JsonSerializer)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A JsonConverter that support json path expression in JsonProperty attributes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -185,11 +190,15 @@ public class MySimpleRow
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Newtonsoft.Json.JsonConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)</span></div>
+  <h5 id="ETLBox_Helper_JsonPathConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a href="https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr">https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr</a></p>
+</div>
   <a id="ETLBox_Helper_JsonPathConverter_WriteJson_" data-uid="ETLBox.Helper.JsonPathConverter.WriteJson*"></a>
   <h4 id="ETLBox_Helper_JsonPathConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer_" data-uid="ETLBox.Helper.JsonPathConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">WriteJson(JsonWriter, Object, JsonSerializer)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A JsonConverter that support json path expression in JsonProperty attributes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -226,5 +235,8 @@ public class MySimpleRow
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Newtonsoft.Json.JsonConverter.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)</span></div>
+  <h5 id="ETLBox_Helper_JsonPathConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a href="https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr">https://stackoverflow.com/questions/33088462/can-i-specify-a-path-in-an-attribute-to-map-a-property-in-my-class-to-a-child-pr</a></p>
+</div>
 
 {{< /rawhtml >}}

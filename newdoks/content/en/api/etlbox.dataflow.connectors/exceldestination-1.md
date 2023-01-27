@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10111
+weight: 10114
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1">
   <h1 id="ETLBox_DataFlow_Connectors_ExcelDestination_1" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1" class="text-break">Class ExcelDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -28,7 +28,7 @@ toc: false
     <div class="level5"><span class="xref">ExcelDestination&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/exceldestination">ExcelDestination</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -59,6 +59,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpRequestMessage">DataFlowStreamDestination&lt;TInput&gt;.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpResponseMessage">DataFlowStreamDestination&lt;TInput&gt;.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding">DataFlowStreamDestination&lt;TInput&gt;.Encoding</a>
     </div>
     <div>
@@ -81,6 +84,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnFaulted_System_Exception_">DataFlowStreamDestination&lt;TInput&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_NewMetaDataObject">DataFlowStreamDestination&lt;TInput&gt;.NewMetaDataObject</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteData__0_">DataFlowStreamDestination&lt;TInput&gt;.WriteData(TInput)</a>
@@ -149,7 +155,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -179,7 +185,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -275,12 +281,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor">ExcelDestination()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -289,10 +296,48 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor(System.String)">ExcelDestination(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">ExcelDestination(String, ResourceType)</h4>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ExcelDestination(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The destination excel file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.#ctor(System.String)">ExcelDestination(String)</h4>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -313,13 +358,13 @@ toc: false
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">uri</span></td>
-        <td><p>The destination csv file name or uri</p>
+        <td><p>The destination excel file name or uri</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_ExcelColumns_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.ExcelColumns*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_ExcelColumns" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.ExcelColumns">ExcelColumns</h4>
   <div class="markdown level1 summary"><p>List of ExcelColumn attributes to map the properties with the right excel column.
@@ -328,7 +373,7 @@ specified columns require a ColumnIndex.
 If left empty, the order of the output columns is equal to the order of the properties in the object definition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -353,10 +398,10 @@ If left empty, the order of the output columns is equal to the order of the prop
   </table>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_HttpContentType_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.HttpContentType*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_HttpContentType" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.HttpContentType">HttpContentType</h4>
-  <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -386,7 +431,7 @@ If left empty, the order of the output columns is equal to the order of the prop
   <div class="markdown level1 summary"><p>The sheet name that contains the data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -414,7 +459,7 @@ If left empty, the order of the output columns is equal to the order of the prop
   <div class="markdown level1 summary"><p>If set to true, no header row is written into the output</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -439,11 +484,10 @@ If left empty, the order of the output columns is equal to the order of the prop
   </table>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -469,12 +513,13 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -486,9 +531,10 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</span></div>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_CloseStream" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.CloseStream">CloseStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -500,9 +546,10 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_InitStream_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_InitStream" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.InitStream">InitStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -514,9 +561,10 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -528,9 +576,10 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.PrepareParameter()</span></div>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

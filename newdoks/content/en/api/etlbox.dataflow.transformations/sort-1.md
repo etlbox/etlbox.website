@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10238
+weight: 10247
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.Sort`1">
   <h1 id="ETLBox_DataFlow_Transformations_Sort_1" data-uid="ETLBox.DataFlow.Transformations.Sort`1" class="text-break">Class Sort&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
@@ -29,7 +29,7 @@ This is a blocking transformation - no output will be produced until all input d
     <div class="level5"><span class="xref">Sort&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.transformations/sort">Sort</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -94,7 +94,7 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -127,7 +127,7 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -225,12 +225,14 @@ This is a blocking transformation - no output will be produced until all input d
 );
 Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Sort_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1__ctor" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor">Sort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -238,11 +240,18 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1__ctor_examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1__ctor_System_Comparison__0__" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor(System.Comparison{`0})">Sort(Comparison&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -269,12 +278,14 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize" data-uid="ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize">MaxBufferSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -299,9 +310,11 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   </table>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_ProgressCount_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.ProgressCount*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_ProgressCount" data-uid="ETLBox.DataFlow.Transformations.Sort`1.ProgressCount">ProgressCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -324,12 +337,17 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_ProgressCount_examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_SortFunction_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SortFunction*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_SortFunction" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SortFunction">SortFunction</h4>
   <div class="markdown level1 summary"><p>A System.Comparison used to sort the data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -354,10 +372,11 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   </table>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -384,10 +403,11 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -414,11 +434,11 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_TaskName_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_TaskName" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -444,12 +464,14 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -459,11 +481,18 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_CheckParameter_examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -490,11 +519,18 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -504,11 +540,18 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess_examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_InitComponent" data-uid="ETLBox.DataFlow.Transformations.Sort`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -518,11 +561,18 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_InitComponent_examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.Transformations.Sort`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts the incoming data with by the given comparison function.
+This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -564,6 +614,11 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination&lt;ETLBox.DataFlow.ETLBoxError&gt;)</span></div>
+  <h5 id="ETLBox_DataFlow_Transformations_Sort_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError___examples">Examples</h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

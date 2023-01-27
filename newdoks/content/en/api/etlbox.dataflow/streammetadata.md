@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10192
+weight: 10202
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.StreamMetaData">
   <h1 id="ETLBox_DataFlow_StreamMetaData" data-uid="ETLBox.DataFlow.StreamMetaData" class="text-break">Class StreamMetaData
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This class holds meta data about the current progress of the source.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -43,9 +43,6 @@ toc: false
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
@@ -58,12 +55,41 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
+  <a id="ETLBox_DataFlow_StreamMetaData_AdditonalData_" data-uid="ETLBox.DataFlow.StreamMetaData.AdditonalData*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_AdditonalData" data-uid="ETLBox.DataFlow.StreamMetaData.AdditonalData">AdditonalData</h4>
+  <div class="markdown level1 summary"><p>This class holds meta data about the current progress of the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public object AdditonalData { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_StreamMetaData_HttpRequestMessage_" data-uid="ETLBox.DataFlow.StreamMetaData.HttpRequestMessage*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_HttpRequestMessage" data-uid="ETLBox.DataFlow.StreamMetaData.HttpRequestMessage">HttpRequestMessage</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current http request message used for this request</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -86,16 +112,44 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_StreamMetaData_HttpResponseMessage_" data-uid="ETLBox.DataFlow.StreamMetaData.HttpResponseMessage*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_HttpResponseMessage" data-uid="ETLBox.DataFlow.StreamMetaData.HttpResponseMessage">HttpResponseMessage</h4>
+  <div class="markdown level1 summary"><p>The current http response message received for this request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public HttpResponseMessage HttpResponseMessage { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_StreamMetaData_ProcessedRows_" data-uid="ETLBox.DataFlow.StreamMetaData.ProcessedRows*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_ProcessedRows" data-uid="ETLBox.DataFlow.StreamMetaData.ProcessedRows">ProcessedRows</h4>
   <div class="markdown level1 summary"><p>Amounts of rows processed in the last request</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public int ProcessedRows { get; set; }
+    public int ProcessedRows { get; }
 ```
 
 {{< rawhtml >}}
@@ -119,11 +173,11 @@ toc: false
   <div class="markdown level1 summary"><p>Number of currently processed items</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public int ProgressCount { get; set; }
+    public int ProgressCount { get; }
 ```
 
 {{< rawhtml >}}
@@ -142,16 +196,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_StreamMetaData_UnparsedData_" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_UnparsedData" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData">UnparsedData</h4>
-  <div class="markdown level1 summary"><p>Unparsed meta data from the response. E.g. this could be unparsed json that holds the links to the next page of the response.</p>
+  <a id="ETLBox_DataFlow_StreamMetaData_RequestUri_" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_RequestUri" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri">RequestUri</h4>
+  <div class="markdown level1 summary"><p>The uri used to retrieve the current request</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string UnparsedData { get; set; }
+    public string RequestUri { get; }
 ```
 
 {{< rawhtml >}}
@@ -170,5 +224,65 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_StreamMetaData_UnparsedData_" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_UnparsedData" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData">UnparsedData</h4>
+  <div class="markdown level1 summary"><p>Unparsed meta data from the response. E.g. this could be unparsed json that holds the links to the next page of the response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string UnparsedData { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <a id="ETLBox_DataFlow_StreamMetaData_ToString_" data-uid="ETLBox.DataFlow.StreamMetaData.ToString*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_ToString" data-uid="ETLBox.DataFlow.StreamMetaData.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>This class holds meta data about the current progress of the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override string ToString()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
 
 {{< /rawhtml >}}

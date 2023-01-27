@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10032
+weight: 10035
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Constraint">
   <h1 id="ETLBox_ControlFlow_Constraint" data-uid="ETLBox.ControlFlow.Constraint" class="text-break">Class Constraint
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -25,7 +25,7 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/primarykeyconstraint">PrimaryKeyConstraint</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/uniquekeyconstraint">UniqueKeyConstraint</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iconstraint">IConstraint</a></div>
   </div>
@@ -64,12 +64,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Constraint__ctor_" data-uid="ETLBox.ControlFlow.Constraint.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Constraint__ctor" data-uid="ETLBox.ControlFlow.Constraint.#ctor">Constraint()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -81,7 +81,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_Constraint__ctor_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Constraint.#ctor(System.Collections.Generic.IList{System.String})">Constraint(IList&lt;String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -110,7 +110,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_Constraint__ctor_System_String_" data-uid="ETLBox.ControlFlow.Constraint.#ctor(System.String)">Constraint(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -136,12 +136,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Constraint_ColumnNames_" data-uid="ETLBox.ControlFlow.Constraint.ColumnNames*"></a>
   <h4 id="ETLBox_ControlFlow_Constraint_ColumnNames" data-uid="ETLBox.ControlFlow.Constraint.ColumnNames">ColumnNames</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -168,7 +168,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_Constraint_ConstraintName" data-uid="ETLBox.ControlFlow.Constraint.ConstraintName">ConstraintName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

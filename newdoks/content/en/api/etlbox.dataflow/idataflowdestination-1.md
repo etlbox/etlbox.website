@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10165
+weight: 10173
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowDestination`1">
   <h1 id="ETLBox_DataFlow_IDataFlowDestination_1" data-uid="ETLBox.DataFlow.IDataFlowDestination`1" class="text-break">Interface IDataFlowDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -61,13 +61,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowDestination_1_TargetBlock_" data-uid="ETLBox.DataFlow.IDataFlowDestination`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowDestination_1_TargetBlock" data-uid="ETLBox.DataFlow.IDataFlowDestination`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

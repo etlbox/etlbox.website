@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10035
+weight: 10038
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DbTask">
   <h1 id="ETLBox_ControlFlow_DbTask" data-uid="ETLBox.ControlFlow.DbTask" class="text-break">Class DbTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -26,7 +26,7 @@ toc: false
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/sqltask">SqlTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/xmlatask">XmlaTask</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -92,12 +92,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_DbTask__ctor_" data-uid="ETLBox.ControlFlow.DbTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask__ctor" data-uid="ETLBox.ControlFlow.DbTask.#ctor">DbTask()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -109,7 +109,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask__ctor_ETLBox_ControlFlow_ControlFlowTask_System_String_" data-uid="ETLBox.ControlFlow.DbTask.#ctor(ETLBox.ControlFlow.ControlFlowTask,System.String)">DbTask(ControlFlowTask, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -140,39 +140,10 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask__ctor_" data-uid="ETLBox.ControlFlow.DbTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.DbTask.#ctor(System.String)">DbTask(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DbTask(string sql)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_DbTask__ctor_" data-uid="ETLBox.ControlFlow.DbTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.DbTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">DbTask(String, Action, Action, Action&lt;Object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -216,7 +187,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.DbTask.#ctor(System.String,System.Action{System.Object}[])">DbTask(String, Action&lt;Object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -250,7 +221,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.DbTask.#ctor(System.String,System.String)">DbTask(String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -280,17 +251,46 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_DbTask__ctor_" data-uid="ETLBox.ControlFlow.DbTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.DbTask.#ctor(System.String)">DbTask(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbTask(string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_DbTask_Actions_" data-uid="ETLBox.ControlFlow.DbTask.Actions*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_Actions" data-uid="ETLBox.ControlFlow.DbTask.Actions">Actions</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public List<Action<object>> Actions { get; set; }
+    public ICollection<Action<object>> Actions { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -304,7 +304,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -313,7 +313,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_AfterRowReadAction" data-uid="ETLBox.ControlFlow.DbTask.AfterRowReadAction">AfterRowReadAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -340,7 +340,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_BeforeRowReadAction" data-uid="ETLBox.ControlFlow.DbTask.BeforeRowReadAction">BeforeRowReadAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -367,7 +367,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_Limit" data-uid="ETLBox.ControlFlow.DbTask.Limit">Limit</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -394,7 +394,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_Parameter" data-uid="ETLBox.ControlFlow.DbTask.Parameter">Parameter</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -421,7 +421,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_RowsAffected" data-uid="ETLBox.ControlFlow.DbTask.RowsAffected">RowsAffected</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -448,7 +448,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_Sql" data-uid="ETLBox.ControlFlow.DbTask.Sql">Sql</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -472,12 +472,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_DbTask_BulkDelete_" data-uid="ETLBox.ControlFlow.DbTask.BulkDelete*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -506,7 +506,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -531,11 +531,45 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_DbTask_BulkSelect_" data-uid="ETLBox.ControlFlow.DbTask.BulkSelect*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String})">BulkSelect(ITableData, ICollection&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void BulkSelect(ITableData data, ICollection<string> selectColumnNames)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">selectColumnNames</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_DbTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.DbTask.BulkUpdate*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -574,7 +608,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteNonQuery" data-uid="ETLBox.ControlFlow.DbTask.ExecuteNonQuery">ExecuteNonQuery()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -601,7 +635,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteReader" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReader">ExecuteReader()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -613,7 +647,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalar" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalar">ExecuteScalar()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -640,12 +674,11 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalar__1" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalar``1">ExecuteScalar&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public T? ExecuteScalar<T>()
-    where T : struct
+    public T ExecuteScalar<T>()
 ```
 
 {{< rawhtml >}}
@@ -659,7 +692,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -683,11 +716,12 @@ toc: false
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsBool" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsBool">ExecuteScalarAsBool()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool ExecuteScalarAsBool()
+    [Obsolete]
+public bool ExecuteScalarAsBool()
 ```
 
 {{< rawhtml >}}
@@ -702,6 +736,40 @@ toc: false
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose(System.String,System.Action{ETLBox.Connection.IConnectionManager})">LogErrorsAndClose(String, Action&lt;IConnectionManager&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void LogErrorsAndClose(string sqlOperationType, Action<IConnectionManager> a)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sqlOperationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>&gt;</td>
+        <td><span class="parametername">a</span></td>
         <td></td>
       </tr>
     </tbody>

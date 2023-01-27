@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10247
+weight: 10262
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DataTypeConverter">
   <h1 id="ETLBox_Helper_DataTypeConverter" data-uid="ETLBox.Helper.DataTypeConverter" class="text-break">Class DataTypeConverter
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
 various sql data types into the right database specific database or into a .NET data type.</p>
 </div>
@@ -24,7 +24,7 @@ various sql data types into the right database specific database or into a .NET 
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DataTypeConverter</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.helper/idatatypeconverter">IDataTypeConverter</a></div>
   </div>
@@ -63,14 +63,126 @@ various sql data types into the right database specific database or into a .NET 
 
 {{< rawhtml >}}
   <h3 id="methods">Methods
-  </h3>
+</h3>
+  <a id="ETLBox_Helper_DataTypeConverter_ChangeType_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType_System_Object_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType(System.Object,System.Type)">ChangeType(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
+various sql data types into the right database specific database or into a .NET data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static object ChangeType(object value, Type destinationType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">destinationType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_ChangeType_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType__1_System_Object_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType``1(System.Object)">ChangeType&lt;T&gt;(Object)</h4>
+  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
+various sql data types into the right database specific database or into a .NET data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ChangeType<T>(object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetClrType_" data-uid="ETLBox.Helper.DataTypeConverter.GetClrType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetClrType_System_Data_DbType_" data-uid="ETLBox.Helper.DataTypeConverter.GetClrType(System.Data.DbType)">GetClrType(DbType)</h4>
   <div class="markdown level1 summary"><p>Returns a .NET type for the provided DbType.
 E.g. DbType.Binary will return byte[]</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -118,7 +230,7 @@ E.g. DbType.Binary will return byte[]</p>
 manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -172,7 +284,7 @@ manager. E.g. passing the .NET data type long for SqlServer will return the stri
 E.g. the method would return the System.Data.DbType.String for the sql type 'CHAR(10)'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -216,9 +328,11 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.Type)">GetDBType(Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
+various sql data types into the right database specific database or into a .NET data type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -264,7 +378,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
 E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -312,7 +426,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
 E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -354,13 +468,59 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Helper_DataTypeConverter_GetUnderlyingType_" data-uid="ETLBox.Helper.DataTypeConverter.GetUnderlyingType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetUnderlyingType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetUnderlyingType(System.Type)">GetUnderlyingType(Type)</h4>
+  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
+various sql data types into the right database specific database or into a .NET data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Type GetUnderlyingType(Type type)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertAliasName(String, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Converts a data type alias name (e.g. an alias name
 like &quot;varchar(10)&quot; ) to the original database type name (&quot;character varying&quot;).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -410,10 +570,11 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(String, ConnectionManagerType)</h4>
-  <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
+  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
+various sql data types into the right database specific database or into a .NET data type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -434,14 +595,12 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">dataTypeName</span></td>
-        <td><p>The specific type name from a table column</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
         <td><span class="parametername">connectionType</span></td>
-        <td><p>The database connection type</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -456,8 +615,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The type used in the CREATE TABLE statement</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -467,7 +625,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

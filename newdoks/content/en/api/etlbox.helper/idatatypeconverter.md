@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10250
+weight: 10267
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.IDataTypeConverter">
   <h1 id="ETLBox_Helper_IDataTypeConverter" data-uid="ETLBox.Helper.IDataTypeConverter" class="text-break">Interface IDataTypeConverter
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Describe methods that allows to intercept the CREATE TABLE sql generation in a CreateTableTask.
 It will convert the data type that is defined in a TableColumn into a custom database specific type.</p>
 </div>
@@ -30,13 +30,13 @@ It will convert the data type that is defined in a TableColumn into a custom dat
 
 {{< rawhtml >}}
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_IDataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.IDataTypeConverter.TryConvertDbDataType*"></a>
   <h4 id="ETLBox_Helper_IDataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.IDataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(String, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

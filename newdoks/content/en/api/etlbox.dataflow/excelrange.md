@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10158
+weight: 10165
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ExcelRange">
   <h1 id="ETLBox_DataFlow_ExcelRange" data-uid="ETLBox.DataFlow.ExcelRange" class="text-break">Class ExcelRange
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Defines a range in an excel file where the data is located.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,46 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
-  <a id="ETLBox_DataFlow_ExcelRange__ctor_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ExcelRange(int startColumn, int startRow)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startColumn</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startRow</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+</h3>
   <a id="ETLBox_DataFlow_ExcelRange__ctor_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ExcelRange(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a range in an excel file where the data is located.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -137,15 +104,50 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_ExcelRange__ctor_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Defines a range in an excel file where the data is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ExcelRange(int startColumn, int startRow)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startColumn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ExcelRange_EndColumn_" data-uid="ETLBox.DataFlow.ExcelRange.EndColumn*"></a>
   <h4 id="ETLBox_DataFlow_ExcelRange_EndColumn" data-uid="ETLBox.DataFlow.ExcelRange.EndColumn">EndColumn</h4>
   <div class="markdown level1 summary"><p>The end column, column counts starts with 1.
 This is optional - if left empty, data will be read until the first blank row is found.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -174,7 +176,7 @@ This is optional - if left empty, data will be read until the first blank row is
 This is optional - if left empty, data will be read until the first blank row is found.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -202,7 +204,7 @@ This is optional - if left empty, data will be read until the first blank row is
   <div class="markdown level1 summary"><p>The start column, column count starts with 1</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -230,7 +232,7 @@ This is optional - if left empty, data will be read until the first blank row is
   <div class="markdown level1 summary"><p>The start row, row count starts with 1</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

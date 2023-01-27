@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10144
+weight: 10151
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1">
   <h1 id="ETLBox_DataFlow_DataFlowBatchDestination_1" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1" class="text-break">Class DataFlowBatchDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -30,7 +30,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/mongodbdestination-1">MongoDbDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1">RedisDestination&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -100,7 +100,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -136,7 +136,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -234,14 +234,14 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.AfterBatchWrite*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.AfterBatchWrite">AfterBatchWrite</h4>
   <div class="markdown level1 summary"><p>This action is called after a batch was successfully inserted into the destination.
 You will get a copy of the data that was used for the insertion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -270,7 +270,7 @@ You will get a copy of the data that was used for the insertion.</p>
 The default batch size is 1000.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -299,7 +299,7 @@ The default batch size is 1000.</p>
 It receives an array that represents the batch - you can modify the data itself if needed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -326,7 +326,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_UseBufferBlock" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.UseBufferBlock">UseBufferBlock</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -352,12 +352,12 @@ It receives an array that represents the batch - you can modify the data itself 
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.UseBufferBlock</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_BulkInsertData_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_BulkInsertData__0___" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData(`0[])">BulkInsertData(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -386,7 +386,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -417,7 +417,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -431,7 +431,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.FinishWrite">FinishWrite()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -443,7 +443,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.PrepareWrite">PrepareWrite()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -455,7 +455,7 @@ It receives an array that represents the batch - you can modify the data itself 
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_WriteBatch__0___" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.WriteBatch(`0[])">WriteBatch(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

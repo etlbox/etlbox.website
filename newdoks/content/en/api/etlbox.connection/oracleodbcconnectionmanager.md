@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10022
+weight: 10025
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.OracleOdbcConnectionManager">
   <h1 id="ETLBox_Connection_OracleOdbcConnectionManager" data-uid="ETLBox.Connection.OracleOdbcConnectionManager" class="text-break">Class OracleOdbcConnectionManager
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
@@ -31,7 +31,7 @@ Reduce the batch size if you encounter issues here.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager">OdbcConnectionManager</a></div>
     <div class="level3"><span class="xref">OracleOdbcConnectionManager</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">System.Data.Odbc.OdbcConnection</span>, <span class="xref">System.Data.Odbc.OdbcTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
@@ -109,7 +109,10 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.IsOdbcOrOleDbConnection</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.MaxParameterAmount</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.MaxParameterSizeSql</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.MaxParameterSizeBulkCopy</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Compatibility</a>
@@ -118,19 +121,19 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OdbcParameter&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkReader(String, IEnumerable&lt;OdbcParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OdbcParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkReader(String, IEnumerable&lt;OdbcParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -190,6 +193,9 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -222,12 +228,19 @@ Reduce the batch size if you encounter issues here.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager__ctor" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor">OracleOdbcConnectionManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -237,9 +250,16 @@ Reduce the batch size if you encounter issues here.</p>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_OracleOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager__ctor_ETLBox_Connection_OdbcConnectionString_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor(ETLBox.Connection.OdbcConnectionString)">OracleOdbcConnectionManager(OdbcConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -266,9 +286,16 @@ Reduce the batch size if you encounter issues here.</p>
   </table>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.#ctor(System.String)">OracleOdbcConnectionManager(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -294,13 +321,19 @@ Reduce the batch size if you encounter issues here.</p>
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -325,13 +358,90 @@ Reduce the batch size if you encounter issues here.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_ConnectionManagerType">OdbcConnectionManager.ConnectionManagerType</a></div>
-  <a id="ETLBox_Connection_OracleOdbcConnectionManager_PP_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.PP*"></a>
-  <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_PP" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.PP">PP</h4>
-  <div class="markdown level1 summary"><p>The character that is used in front of parameter names in query to identify the parameter.
-All databases use the '@' character, except Oracle which uses ':'</p>
+  <a id="ETLBox_Connection_OracleOdbcConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.MaxParameterSizeBulkCopy*"></a>
+  <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override int MaxParameterSizeBulkCopy { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <a id="ETLBox_Connection_OracleOdbcConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.MaxParameterSizeSql*"></a>
+  <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override int MaxParameterSizeSql { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.MaxParameterSizeSql</span></div>
+  <a id="ETLBox_Connection_OracleOdbcConnectionManager_PP_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.PP*"></a>
+  <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_PP" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.PP">PP</h4>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -358,11 +468,16 @@ All databases use the '@' character, except Oracle which uses ':'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.PP</span></div>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_QB_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.QB*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_QB" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -389,11 +504,16 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_QB">OdbcConnectionManager.QB</a></div>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_QE_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_QE" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -420,11 +540,16 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_QE">OdbcConnectionManager.QE</a></div>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_SupportDatabases_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.SupportDatabases*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_SupportDatabases" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.SupportDatabases">SupportDatabases</h4>
-  <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
-A database in ETLBox means a schema in MySql.</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -451,12 +576,16 @@ A database in ETLBox means a schema in MySql.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_SupportSchemas_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_SupportSchemas" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -482,13 +611,19 @@ Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_OracleOdbcConnectionManager_Clone_" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_OracleOdbcConnectionManager_Clone" data-uid="ETLBox.Connection.OracleOdbcConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
+  <div class="markdown level1 summary"><p>Oracle Connection manager for an ODBC connection based on ADO.NET to Sql Server.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
+<p>This means that inserting big amounts of data in a database via Odbc can be much slower
+than using the native connector.
+Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch size if you encounter issues here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -507,8 +642,7 @@ Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>A instance copy of the current connection manager</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

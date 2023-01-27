@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10131
+weight: 10137
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1">
   <h1 id="ETLBox_DataFlow_Connectors_RedisSource_1" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1" class="text-break">Class RedisSource&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
 You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
 is * which retrieves all key).
@@ -32,7 +32,7 @@ works only if your values contain json - for other values you can define your ow
     <div class="level5"><span class="xref">RedisSource&lt;TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/redissource">RedisSource</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -49,6 +49,9 @@ works only if your values contain json - for other values you can define your ow
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsInLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;TOutput&gt;.ProgressCountIsExceedingLimit</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;TOutput&gt;.SourceBlock</a>
@@ -69,10 +72,22 @@ works only if your values contain json - for other values you can define your ow
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;TOutput&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;TOutput&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;TOutput&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;TOutput&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TOutput&gt;.LinkTo(IDataFlowDestination&lt;TOutput&gt;)</a>
@@ -129,7 +144,7 @@ works only if your values contain json - for other values you can define your ow
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -162,7 +177,7 @@ works only if your values contain json - for other values you can define your ow
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -258,12 +273,17 @@ works only if your values contain json - for other values you can define your ow
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.#ctor">RedisSource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -272,7 +292,7 @@ works only if your values contain json - for other values you can define your ow
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_ConnectionString_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.ConnectionString*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_ConnectionString" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.ConnectionString">ConnectionString</h4>
   <div class="markdown level1 summary"><p>If you provide a connection  string, this component will create a new ConnectionMultiplexer object
@@ -280,7 +300,7 @@ to connect with redis. If you already have a connection object instantiated in y
 use <a class="xref" href="/api/etlbox.dataflow.connectors/redissource-1#ETLBox_DataFlow_Connectors_RedisSource_1_RedisConnection">RedisConnection</a> instead to pass it to the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -309,7 +329,7 @@ use <a class="xref" href="/api/etlbox.dataflow.connectors/redissource-1#ETLBox_D
 The default database is 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -337,7 +357,7 @@ The default database is 0.</p>
   <div class="markdown level1 summary"><p>Define your own deserialization function to read the stored data into your object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -368,7 +388,7 @@ using JsonConvert. Use <a class="xref" href="/api/etlbox.dataflow.connectors/red
 to define your own deserialization function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -396,7 +416,7 @@ to define your own deserialization function.</p>
   <div class="markdown level1 summary"><p>An existing ConnectionMultiplexer that holds a redis connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -424,7 +444,7 @@ to define your own deserialization function.</p>
   <div class="markdown level1 summary"><p>This will modify the count size used for the scan. Default is 1000.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -453,7 +473,7 @@ to define your own deserialization function.</p>
 which retrieves all keys from a database. Use e.g. ke</em> to retrieve all keys that start with &quot;ke&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -478,11 +498,14 @@ which retrieves all keys from a database. Use e.g. ke</em> to retrieve all keys 
   </table>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -508,12 +531,17 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -525,9 +553,14 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -556,9 +589,14 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -570,9 +608,14 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -584,9 +627,14 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
   <a id="ETLBox_DataFlow_Connectors_RedisSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.Connectors.RedisSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
+You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
+is * which retrieves all key).
+By default, the stored values will be deserialized using Newtonsoft.Json and JsonConvert. This
+works only if your values contain json - for other values you can define your own serialization function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

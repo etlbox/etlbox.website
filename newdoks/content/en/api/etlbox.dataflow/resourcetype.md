@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10190
+weight: 10199
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ResourceType">
   <h1 id="ETLBox_DataFlow_ResourceType" data-uid="ETLBox.DataFlow.ResourceType" class="text-break">Enum ResourceType
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The type of resource you are using for a streaming source or destination.
 E.g. you can read Json data from a file or via http from a web service.</p>
 </div>
@@ -30,7 +30,7 @@ E.g. you can read Json data from a file or via http from a web service.</p>
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -41,15 +41,21 @@ E.g. you can read Json data from a file or via http from a web service.</p>
     <tbody>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_AzureBlob">AzureBlob</td>
-        <td></td>
+        <td><p>The type of resource you are using for a streaming source or destination.
+E.g. you can read Json data from a file or via http from a web service.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_File">File</td>
-        <td></td>
+        <td><p>The type of resource you are using for a streaming source or destination.
+E.g. you can read Json data from a file or via http from a web service.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_Http">Http</td>
-        <td></td>
+        <td><p>The type of resource you are using for a streaming source or destination.
+E.g. you can read Json data from a file or via http from a web service.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

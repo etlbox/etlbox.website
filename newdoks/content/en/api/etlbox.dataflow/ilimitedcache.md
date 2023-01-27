@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10179
+weight: 10187
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ILimitedCache">
   <h1 id="ETLBox_DataFlow_ILimitedCache" data-uid="ETLBox.DataFlow.ILimitedCache" class="text-break">Interface ILimitedCache
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -28,12 +28,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ILimitedCache_MaxCacheSize_" data-uid="ETLBox.DataFlow.ILimitedCache.MaxCacheSize*"></a>
   <h4 id="ETLBox_DataFlow_ILimitedCache_MaxCacheSize" data-uid="ETLBox.DataFlow.ILimitedCache.MaxCacheSize">MaxCacheSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

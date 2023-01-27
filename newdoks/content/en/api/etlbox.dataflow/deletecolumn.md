@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10153
+weight: 10160
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DeleteColumn">
   <h1 id="ETLBox_DataFlow_DeleteColumn" data-uid="ETLBox.DataFlow.DeleteColumn" class="text-break">Class DeleteColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used to identify if the record is supposed to be deleted.
 If this attribute is set and the given value matches the column of the assigned property,
 the DbMerge will know that if the records matches (identifed by the IdColumn attribute)
@@ -178,12 +178,16 @@ public string Value {get;set; }
 public bool IsDeletion {get;set; }
 }</p>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DeleteColumn__ctor_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DeleteColumn__ctor" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor">DeleteColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines if the column is used to identify if the record is supposed to be deleted.
+If this attribute is set and the given value matches the column of the assigned property,
+the DbMerge will know that if the records matches (identifed by the IdColumn attribute)
+it should be deleted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -191,12 +195,22 @@ public bool IsDeletion {get;set; }
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_DeleteColumn__ctor_examples">Examples</h5>
+  <p>public class MyPoco : MergeableRow
+{
+[IdColumn]
+public int Key { get; set; }
+[UpdateColumn]
+public string Value {get;set; }
+[DeleteColumn(true)]
+public bool IsDeletion {get;set; }
+}</p>
   <a id="ETLBox_DataFlow_DeleteColumn__ctor_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DeleteColumn__ctor_System_Object_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor(System.Object)">DeleteColumn(Object)</h4>
   <div class="markdown level1 summary"><p>Marks this property as column that is deleted if is equal the  <a class="xref" href="/api/etlbox.dataflow/deletecolumn#ETLBox_DataFlow_DeleteColumn_DeleteOnMatchValue">DeleteOnMatchValue</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -223,13 +237,13 @@ public bool IsDeletion {get;set; }
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DeleteColumn_DeleteOnMatchValue_" data-uid="ETLBox.DataFlow.DeleteColumn.DeleteOnMatchValue*"></a>
   <h4 id="ETLBox_DataFlow_DeleteColumn_DeleteOnMatchValue" data-uid="ETLBox.DataFlow.DeleteColumn.DeleteOnMatchValue">DeleteOnMatchValue</h4>
   <div class="markdown level1 summary"><p>Marks this property as column used for a deletion check in a Merge operation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -257,7 +271,7 @@ public bool IsDeletion {get;set; }
   <div class="markdown level1 summary"><p>Name of the property that is used to decide if a row is deleted</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

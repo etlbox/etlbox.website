@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10086
+weight: 10089
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter">
   <h1 id="ETLBox_DataFlow_Connectors_ColumnConverter" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter" class="text-break">Class ColumnConverter
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -57,12 +57,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor">ColumnConverter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -74,7 +74,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor_System_String_System_Func_System_Object_System_Object__" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor(System.String,System.Func{System.Object,System.Object})">ColumnConverter(String, Func&lt;Object, Object&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -105,12 +105,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName">ColumnName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -137,7 +137,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter_ConversionFunc" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc">ConversionFunc</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

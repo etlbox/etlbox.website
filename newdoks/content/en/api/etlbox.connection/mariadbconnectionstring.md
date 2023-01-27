@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10012
+weight: 10015
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.MariaDbConnectionString">
   <h1 id="ETLBox_Connection_MariaDbConnectionString" data-uid="ETLBox.Connection.MariaDbConnectionString" class="text-break">Class MariaDbConnectionString
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a Maria Db server in an object.
 Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>
@@ -26,7 +26,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     <div class="level2"><a class="xref" href="/api/etlbox.connection/mysqlconnectionstring">MySqlConnectionString</a></div>
     <div class="level3"><span class="xref">MariaDbConnectionString</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/idbconnectionstring">IDbConnectionString</a></div>
   </div>
@@ -113,12 +113,14 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_MariaDbConnectionString__ctor_" data-uid="ETLBox.Connection.MariaDbConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionString__ctor" data-uid="ETLBox.Connection.MariaDbConnectionString.#ctor">MariaDbConnectionString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a Maria Db server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -128,9 +130,11 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_MariaDbConnectionString__ctor_" data-uid="ETLBox.Connection.MariaDbConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionString__ctor_System_String_" data-uid="ETLBox.Connection.MariaDbConnectionString.#ctor(System.String)">MariaDbConnectionString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a Maria Db server in an object.
+Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

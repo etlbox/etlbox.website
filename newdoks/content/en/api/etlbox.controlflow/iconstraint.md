@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10038
+weight: 10041
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.IConstraint">
   <h1 id="ETLBox_ControlFlow_IConstraint" data-uid="ETLBox.ControlFlow.IConstraint" class="text-break">Interface IConstraint
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -28,12 +28,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_IConstraint_ColumnNames_" data-uid="ETLBox.ControlFlow.IConstraint.ColumnNames*"></a>
   <h4 id="ETLBox_ControlFlow_IConstraint_ColumnNames" data-uid="ETLBox.ControlFlow.IConstraint.ColumnNames">ColumnNames</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -60,7 +60,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IConstraint_ConstraintName" data-uid="ETLBox.ControlFlow.IConstraint.ConstraintName">ConstraintName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

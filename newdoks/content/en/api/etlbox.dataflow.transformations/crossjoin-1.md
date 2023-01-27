@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10213
+weight: 10223
 toc: false
 ---
 
@@ -14,12 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`1">
   <h1 id="ETLBox_DataFlow_Transformations_CrossJoin_1" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`1" class="text-break">Class CrossJoin&lt;TInput&gt;
-  </h1>
-  <div class="markdown level0 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
-The input for the first table will be loaded into memory before join starts.
-Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
-The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -30,7 +26,7 @@ The InMemory target should always be the target of the smaller amount of data to
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-3">CrossJoin</a>&lt;TInput, TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">CrossJoin&lt;TInput&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -130,7 +126,7 @@ The InMemory target should always be the target of the smaller amount of data to
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -175,7 +171,7 @@ The InMemory target should always be the target of the smaller amount of data to
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -273,12 +269,12 @@ The InMemory target should always be the target of the smaller amount of data to
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_CrossJoin_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_1__ctor" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`1.#ctor">CrossJoin()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -290,7 +286,7 @@ The InMemory target should always be the target of the smaller amount of data to
   <h4 id="ETLBox_DataFlow_Transformations_CrossJoin_1__ctor_System_Func__0__0__0__" data-uid="ETLBox.DataFlow.Transformations.CrossJoin`1.#ctor(System.Func{`0,`0,`0})">CrossJoin(Func&lt;TInput, TInput, TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

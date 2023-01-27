@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10189
+weight: 10198
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RenameColumn">
   <h1 id="ETLBox_DataFlow_RenameColumn" data-uid="ETLBox.DataFlow.RenameColumn" class="text-break">Class RenameColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This property can be used in the ColumnRename transformation to rename a column.
 You can rename a property in either your strong typed or dynamic object.</p>
 </div>
@@ -166,12 +166,14 @@ public sealed class RenameColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_RenameColumn__ctor_" data-uid="ETLBox.DataFlow.RenameColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_RenameColumn__ctor" data-uid="ETLBox.DataFlow.RenameColumn.#ctor">RenameColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property can be used in the ColumnRename transformation to rename a column.
+You can rename a property in either your strong typed or dynamic object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -184,7 +186,7 @@ public sealed class RenameColumn : Attribute
   <div class="markdown level1 summary"><p>Contains information for renaming a column in a flow</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -211,14 +213,14 @@ public sealed class RenameColumn : Attribute
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_RenameColumn_ArrayIndex_" data-uid="ETLBox.DataFlow.RenameColumn.ArrayIndex*"></a>
   <h4 id="ETLBox_DataFlow_RenameColumn_ArrayIndex" data-uid="ETLBox.DataFlow.RenameColumn.ArrayIndex">ArrayIndex</h4>
   <div class="markdown level1 summary"><p>Index of the element in the array, only necessary if you use arrays
 as data type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -246,7 +248,7 @@ as data type</p>
   <div class="markdown level1 summary"><p>Current name of the column (not needed if you use this class as an attribute)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -274,7 +276,7 @@ as data type</p>
   <div class="markdown level1 summary"><p>New name of the column</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -302,7 +304,7 @@ as data type</p>
   <div class="markdown level1 summary"><p>If set to true, this column is left out when using the ColumnRename transformation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

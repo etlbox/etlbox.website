@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10164
+weight: 10172
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowComponent">
   <h1 id="ETLBox_DataFlow_IDataFlowComponent" data-uid="ETLBox.DataFlow.IDataFlowComponent" class="text-break">Interface IDataFlowComponent
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -28,14 +28,14 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowComponent_Completion_" data-uid="ETLBox.DataFlow.IDataFlowComponent.Completion*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowComponent_Completion" data-uid="ETLBox.DataFlow.IDataFlowComponent.Completion">Completion</h4>
   <div class="markdown level1 summary"><p>The completion task of the component. A component is completed when all predecessors (if any) are
 completed and the current component has completed its buffer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -64,7 +64,7 @@ completed and the current component has completed its buffer.</p>
 in the data flow faulted, the thrown exception will be stored in this property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -94,7 +94,7 @@ Set this value to restrict the number of rows that can be stored in the buffer.
 The default value is -1 (unlimited)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -122,7 +122,7 @@ The default value is -1 (unlimited)</p>
   <div class="markdown level1 summary"><p>When a component has completed and processed all rows, the OnCompletion action is executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

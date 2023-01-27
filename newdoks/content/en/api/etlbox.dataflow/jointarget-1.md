@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10181
+weight: 10189
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.JoinTarget`1">
   <h1 id="ETLBox_DataFlow_JoinTarget_1" data-uid="ETLBox.DataFlow.JoinTarget`1" class="text-break">Class JoinTarget&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowjointarget-1">DataFlowJoinTarget</a>&lt;TInput&gt;</div>
     <div class="level4"><span class="xref">JoinTarget&lt;TInput&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -73,7 +73,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -106,7 +106,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -205,12 +205,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_JoinTarget_1__ctor_" data-uid="ETLBox.DataFlow.JoinTarget`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1__ctor_ETLBox_DataFlow_DataFlowComponent_System_Action__0__" data-uid="ETLBox.DataFlow.JoinTarget`1.#ctor(ETLBox.DataFlow.DataFlowComponent,System.Action{`0})">JoinTarget(DataFlowComponent, Action&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -241,13 +242,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_JoinTarget_1_TargetBlock_" data-uid="ETLBox.DataFlow.JoinTarget`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1_TargetBlock" data-uid="ETLBox.DataFlow.JoinTarget`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -273,12 +274,13 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowJoinTarget&lt;TInput&gt;.TargetBlock</span></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_JoinTarget_1_CheckParameter_" data-uid="ETLBox.DataFlow.JoinTarget`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1_CheckParameter" data-uid="ETLBox.DataFlow.JoinTarget`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -290,9 +292,10 @@ toc: false
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_JoinTarget_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.JoinTarget`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.JoinTarget`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -321,9 +324,10 @@ toc: false
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_JoinTarget_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.JoinTarget`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.JoinTarget`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -335,9 +339,10 @@ toc: false
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_JoinTarget_1_InitComponent_" data-uid="ETLBox.DataFlow.JoinTarget`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_JoinTarget_1_InitComponent" data-uid="ETLBox.DataFlow.JoinTarget`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

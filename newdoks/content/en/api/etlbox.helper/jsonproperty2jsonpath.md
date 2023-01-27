@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10252
+weight: 10269
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.JsonProperty2JsonPath">
   <h1 id="ETLBox_Helper_JsonProperty2JsonPath" data-uid="ETLBox.Helper.JsonProperty2JsonPath" class="text-break">Class JsonProperty2JsonPath
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
 Output will be written into a property which name is defined via OutputPropertyName.</p>
 </div>
@@ -59,12 +59,14 @@ Output will be written into a property which name is defined via OutputPropertyN
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Helper_JsonProperty2JsonPath_JsonPath_" data-uid="ETLBox.Helper.JsonProperty2JsonPath.JsonPath*"></a>
   <h4 id="ETLBox_Helper_JsonProperty2JsonPath_JsonPath" data-uid="ETLBox.Helper.JsonProperty2JsonPath.JsonPath">JsonPath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
+Output will be written into a property which name is defined via OutputPropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -89,9 +91,11 @@ Output will be written into a property which name is defined via OutputPropertyN
   </table>
   <a id="ETLBox_Helper_JsonProperty2JsonPath_OutputPropertyName_" data-uid="ETLBox.Helper.JsonProperty2JsonPath.OutputPropertyName*"></a>
   <h4 id="ETLBox_Helper_JsonProperty2JsonPath_OutputPropertyName" data-uid="ETLBox.Helper.JsonProperty2JsonPath.OutputPropertyName">OutputPropertyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
+Output will be written into a property which name is defined via OutputPropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -116,9 +120,11 @@ Output will be written into a property which name is defined via OutputPropertyN
   </table>
   <a id="ETLBox_Helper_JsonProperty2JsonPath_ReQueryJsonPathOutput_" data-uid="ETLBox.Helper.JsonProperty2JsonPath.ReQueryJsonPathOutput*"></a>
   <h4 id="ETLBox_Helper_JsonProperty2JsonPath_ReQueryJsonPathOutput" data-uid="ETLBox.Helper.JsonProperty2JsonPath.ReQueryJsonPathOutput">ReQueryJsonPathOutput</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
+Output will be written into a property which name is defined via OutputPropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -143,9 +149,11 @@ Output will be written into a property which name is defined via OutputPropertyN
   </table>
   <a id="ETLBox_Helper_JsonProperty2JsonPath_SearchPropertyName_" data-uid="ETLBox.Helper.JsonProperty2JsonPath.SearchPropertyName*"></a>
   <h4 id="ETLBox_Helper_JsonProperty2JsonPath_SearchPropertyName" data-uid="ETLBox.Helper.JsonProperty2JsonPath.SearchPropertyName">SearchPropertyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
+Output will be written into a property which name is defined via OutputPropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -169,12 +177,14 @@ Output will be written into a property which name is defined via OutputPropertyN
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_JsonProperty2JsonPath_Validate_" data-uid="ETLBox.Helper.JsonProperty2JsonPath.Validate*"></a>
   <h4 id="ETLBox_Helper_JsonProperty2JsonPath_Validate" data-uid="ETLBox.Helper.JsonProperty2JsonPath.Validate">Validate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
+Output will be written into a property which name is defined via OutputPropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10003
+weight: 10006
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.Db2ConnectionManager">
   <h1 id="ETLBox_Connection_Db2ConnectionManager" data-uid="ETLBox.Connection.Db2ConnectionManager" class="text-break">Class Db2ConnectionManager
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
 Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
@@ -25,7 +25,7 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
     <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">IBM.Data.DB2.Core.DB2Connection</span>, <span class="xref">IBM.Data.DB2.Core.DB2Transaction</span>, <span class="xref">IBM.Data.DB2.Core.DB2Parameter</span>&gt;</div>
     <div class="level2"><span class="xref">Db2ConnectionManager</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">IBM.Data.DB2.Core.DB2Connection</span>, <span class="xref">IBM.Data.DB2.Core.DB2Transaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
@@ -82,7 +82,10 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsOdbcOrOleDbConnection">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.IsOdbcOrOleDbConnection</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterAmount">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.MaxParameterAmount</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeSql">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.MaxParameterSizeSql</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_MaxParameterSizeBulkCopy">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.MaxParameterSizeBulkCopy</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.Compatibility</a>
@@ -91,19 +94,19 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.BulkNonQuery(String, IEnumerable&lt;DB2Parameter&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.BulkReader(String, IEnumerable&lt;DB2Parameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.BulkNonQuery(String, IEnumerable&lt;DB2Parameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.BulkReader(String, IEnumerable&lt;DB2Parameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -163,6 +166,9 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -197,12 +203,14 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
   <h5 id="ETLBox_Connection_Db2ConnectionManager_examples"><strong>Examples</strong></h5>
   <pre><code>var db2Connection = new Db2ConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Connection_Db2ConnectionManager__ctor_" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager__ctor" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor">Db2ConnectionManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -210,11 +218,15 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_Connection_Db2ConnectionManager__ctor_examples">Examples</h5>
+  <pre><code>var db2Connection = new Db2ConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_Connection_Db2ConnectionManager__ctor_" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager__ctor_ETLBox_Connection_Db2ConnectionString_" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor(ETLBox.Connection.Db2ConnectionString)">Db2ConnectionManager(Db2ConnectionString)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -239,11 +251,15 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_Connection_Db2ConnectionManager__ctor_ETLBox_Connection_Db2ConnectionString__examples">Examples</h5>
+  <pre><code>var db2Connection = new Db2ConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_Connection_Db2ConnectionManager__ctor_" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.Db2ConnectionManager.#ctor(System.String)">Db2ConnectionManager(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -268,14 +284,17 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_Connection_Db2ConnectionManager__ctor_System_String__examples">Examples</h5>
+  <pre><code>var db2Connection = new Db2ConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Connection_Db2ConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.Db2ConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.Db2ConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -300,17 +319,17 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.ConnectionManagerType</span></div>
-  <a id="ETLBox_Connection_Db2ConnectionManager_MaxParameterAmount_" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterAmount*"></a>
-  <h4 id="ETLBox_Connection_Db2ConnectionManager_MaxParameterAmount" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterAmount">MaxParameterAmount</h4>
-  <div class="markdown level1 summary"><p>returns the maximum amount of parameters that ca be passed into a
-sql query.</p>
+  <a id="ETLBox_Connection_Db2ConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterSizeBulkCopy*"></a>
+  <h4 id="ETLBox_Connection_Db2ConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public override int MaxParameterAmount { get; }
+    public override int MaxParameterSizeBulkCopy { get; }
 ```
 
 {{< rawhtml >}}
@@ -330,14 +349,45 @@ sql query.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.MaxParameterAmount</span></div>
-  <a id="ETLBox_Connection_Db2ConnectionManager_QB_" data-uid="ETLBox.Connection.Db2ConnectionManager.QB*"></a>
-  <h4 id="ETLBox_Connection_Db2ConnectionManager_QB" data-uid="ETLBox.Connection.Db2ConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
+  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <a id="ETLBox_Connection_Db2ConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterSizeSql*"></a>
+  <h4 id="ETLBox_Connection_Db2ConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.Db2ConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override int MaxParameterSizeSql { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.MaxParameterSizeSql</span></div>
+  <a id="ETLBox_Connection_Db2ConnectionManager_QB_" data-uid="ETLBox.Connection.Db2ConnectionManager.QB*"></a>
+  <h4 id="ETLBox_Connection_Db2ConnectionManager_QB" data-uid="ETLBox.Connection.Db2ConnectionManager.QB">QB</h4>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -364,11 +414,11 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.QB</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_QE_" data-uid="ETLBox.Connection.Db2ConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_QE" data-uid="ETLBox.Connection.Db2ConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -395,11 +445,11 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.QE</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_SupportDatabases_" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportDatabases*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_SupportDatabases" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportDatabases">SupportDatabases</h4>
-  <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
-A database in ETLBox means a schema in MySql.</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -426,10 +476,11 @@ A database in ETLBox means a schema in MySql.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_SupportProcedures_" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_SupportProcedures" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportProcedures">SupportProcedures</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -454,18 +505,18 @@ A database in ETLBox means a schema in MySql.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.SupportProcedures</span></div>
-  <a id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert*"></a>
-  <h4 id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert">UseSqlBulkInsert</h4>
+  <a id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkOperations_" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkOperations*"></a>
+  <h4 id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkOperations" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkOperations">UseSqlBulkOperations</h4>
   <div class="markdown level1 summary"><p>By default bulk inserts are done using the DB2BulkCopy.
 This provides better performance, but it won't support Transactions and foreign key constraints.
 If you need support for transactions or constraints, set this flag to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool UseSqlBulkInsert { get; set; }
+    public bool UseSqlBulkOperations { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -485,13 +536,14 @@ If you need support for transactions or constraints, set this flag to true.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_Db2ConnectionManager_BulkDelete_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkDelete*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk delete</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -512,8 +564,7 @@ If you need support for transactions or constraints, set this flag to true.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -521,10 +572,11 @@ If you need support for transactions or constraints, set this flag to true.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.BulkDelete(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_BulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk insert</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -545,8 +597,7 @@ If you need support for transactions or constraints, set this flag to true.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -554,9 +605,11 @@ If you need support for transactions or constraints, set this flag to true.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.BulkInsert(ETLBox.ControlFlow.ITableData)</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_BulkSelect_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -605,10 +658,11 @@ If you need support for transactions or constraints, set this flag to true.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.BulkSelect(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Action, System.Action, System.Action&lt;System.Object&gt;[])</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_BulkUpdate_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -629,20 +683,17 @@ If you need support for transactions or constraints, set this flag to true.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td><p>Batch of data</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td><p>The column names used in the set part of the update statement</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td><p>The column names to join for the update</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -650,11 +701,11 @@ If you need support for transactions or constraints, set this flag to true.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.BulkUpdate(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Collections.Generic.ICollection&lt;System.String&gt;)</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.Db2ConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
-to change back settings made to improve bulk insert performance</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -683,10 +734,11 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.CleanUpBulkInsert(System.String)</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_Clone_" data-uid="ETLBox.Connection.Db2ConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_Clone" data-uid="ETLBox.Connection.Db2ConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -705,8 +757,7 @@ to change back settings made to improve bulk insert performance</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><p>A instance copy of the current connection manager</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -714,11 +765,11 @@ to change back settings made to improve bulk insert performance</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core.DB2Transaction, IBM.Data.DB2.Core.DB2Parameter&gt;.Clone()</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.Db2ConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(String)</h4>
-  <div class="markdown level1 summary"><p>Performs preparations needed to improved
-performance of a bulk insert operation</p>
+  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
+Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

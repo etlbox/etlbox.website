@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10108
+weight: 10111
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.DbMerge">
   <h1 id="ETLBox_DataFlow_Connectors_DbMerge" data-uid="ETLBox.DataFlow.Connectors.DbMerge" class="text-break">Class DbMerge
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -27,7 +27,7 @@ toc: false
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1">DbMerge</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">DbMerge</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -61,6 +61,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_ColumnMapping">DbMerge&lt;ExpandoObject&gt;.ColumnMapping</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_IgnoreDefaultColumnsOnInsert">DbMerge&lt;ExpandoObject&gt;.IgnoreDefaultColumnsOnInsert</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_TableName">DbMerge&lt;ExpandoObject&gt;.TableName</a>
     </div>
     <div>
@@ -76,6 +79,15 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_CacheMode">DbMerge&lt;ExpandoObject&gt;.CacheMode</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_FindDuplicates">DbMerge&lt;ExpandoObject&gt;.FindDuplicates</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_ValueGeneratedColumns">DbMerge&lt;ExpandoObject&gt;.ValueGeneratedColumns</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_ColumnConverters">DbMerge&lt;ExpandoObject&gt;.ColumnConverters</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_ConnectionManager">DbMerge&lt;ExpandoObject&gt;.ConnectionManager</a>
     </div>
     <div>
@@ -89,6 +101,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_InitComponent">DbMerge&lt;ExpandoObject&gt;.InitComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_CheckParameterAfterInternalFlowCreation">DbMerge&lt;ExpandoObject&gt;.CheckParameterAfterInternalFlowCreation()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess">DbMerge&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
@@ -154,7 +169,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -184,7 +199,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -264,46 +279,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
-  <a id="ETLBox_DataFlow_Connectors_DbMerge__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbMerge(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DbMerge(IConnectionManager connectionManager, string tableName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_DbMerge__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbMerge(IConnectionManager, String, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -339,14 +320,14 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(System.String)">DbMerge(String)</h4>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbMerge(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DbMerge(string tableName)
+    public DbMerge(IConnectionManager connectionManager, string tableName)
 ```
 
 {{< rawhtml >}}
@@ -361,6 +342,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
@@ -371,7 +357,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(System.String,System.Int32)">DbMerge(String, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -397,6 +383,35 @@ toc: false
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">batchSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge.#ctor(System.String)">DbMerge(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbMerge(string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
     </tbody>

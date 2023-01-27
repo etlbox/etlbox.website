@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10081
+weight: 10083
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.AttributeType">
   <h1 id="ETLBox_DataFlow_AttributeType" data-uid="ETLBox.DataFlow.AttributeType" class="text-break">Enum AttributeType
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -29,7 +29,7 @@ public enum AttributeType
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -87,7 +87,15 @@ public enum AttributeType
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_DataFlow_AttributeType_SelectColumn">SelectColumn</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_DataFlow_AttributeType_UpdateColumn">UpdateColumn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_DataFlow_AttributeType_ValueGenerationColumn">ValueGenerationColumn</td>
         <td></td>
       </tr>
     </tbody>

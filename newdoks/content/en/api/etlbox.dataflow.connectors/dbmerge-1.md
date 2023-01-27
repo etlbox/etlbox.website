@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10107
+weight: 10110
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1">
   <h1 id="ETLBox_DataFlow_Connectors_DbMerge_1" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1" class="text-break">Class DbMerge&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Inserts, updates and (optionally) deletes data in database target.
 Before the Merge is executed, all data from the destination is read into memory.
 A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
@@ -30,7 +30,7 @@ A delta table is generated that stores information if a records was inserted, up
     <div class="level5"><span class="xref">DbMerge&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge">DbMerge</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -100,7 +100,7 @@ A delta table is generated that stores information if a records was inserted, up
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -130,7 +130,7 @@ A delta table is generated that stores information if a records was inserted, up
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -226,46 +226,30 @@ A delta table is generated that stores information if a records was inserted, up
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbMerge(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor">DbMerge()</h4>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DbMerge(IConnectionManager connectionManager, string tableName)
+    public DbMerge()
 ```
 
 {{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbMerge(IConnectionManager, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -301,14 +285,17 @@ A delta table is generated that stores information if a records was inserted, up
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(System.String)">DbMerge(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbMerge(IConnectionManager, String)</h4>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DbMerge(string tableName)
+    public DbMerge(IConnectionManager connectionManager, string tableName)
 ```
 
 {{< rawhtml >}}
@@ -323,6 +310,11 @@ A delta table is generated that stores information if a records was inserted, up
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
@@ -331,9 +323,12 @@ A delta table is generated that stores information if a records was inserted, up
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(System.String,System.Int32)">DbMerge(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -363,14 +358,46 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(System.String)">DbMerge(String)</h4>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbMerge(string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_BatchSize_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.BatchSize*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_BatchSize" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.BatchSize">BatchSize</h4>
   <div class="markdown level1 summary"><p>The batch size used when inserted data into the database table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -401,7 +428,7 @@ If set to partial, only data is read into memory that is needed for the current 
 This will keep the memory consumption of the DbMerge much smaller.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -424,6 +451,35 @@ This will keep the memory consumption of the DbMerge much smaller.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1_ColumnConverters_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ColumnConverters*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_ColumnConverters" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ColumnConverters">ColumnConverters</h4>
+  <div class="markdown level1 summary"><p>Use a column converter to apply a conversion function to each value of a column before writing
+into the target</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<ColumnConverter> ColumnConverters { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow.connectors/columnconverter">ColumnConverter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_ColumnMapping_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ColumnMapping*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_ColumnMapping" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ColumnMapping">ColumnMapping</h4>
   <div class="markdown level1 summary"><p>Column mapping to map property to column names.
@@ -431,7 +487,7 @@ E.g. if the value of property &quot;Id&quot; should be written into the database
 then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; PropertyName: &quot;Key&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -459,7 +515,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; Pro
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -489,7 +545,7 @@ Provide a table definition if the definition of the target can't be read automat
 only to use the columns in the provided definition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -512,6 +568,67 @@ only to use the columns in the provided definition.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1_FindDuplicates_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.FindDuplicates*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_FindDuplicates" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.FindDuplicates">FindDuplicates</h4>
+  <div class="markdown level1 summary"><p>By default, the DbMerge expects the <a class="xref" href="/api/etlbox.dataflow/mergeproperties#ETLBox_DataFlow_MergeProperties_IdColumns">IdColumns</a> to be unique.
+If another record with the same id values arrives, this record is then identified as a duplicate.
+It won't be written into the destination table - the delta output will contain this record, and the
+ChangeAction is set to <a class="xref" href="/api/etlbox.dataflow/changeaction#ETLBox_DataFlow_ChangeAction_Duplicate">Duplicate</a>
+Please note that this may have an impact on the overall memory consumption, as already processed id values need to be stored internally during processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool FindDuplicates { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1_IgnoreDefaultColumnsOnInsert_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.IgnoreDefaultColumnsOnInsert*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_IgnoreDefaultColumnsOnInsert" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.IgnoreDefaultColumnsOnInsert">IgnoreDefaultColumnsOnInsert</h4>
+  <div class="markdown level1 summary"><p>If set to true, columns that have a default value declartions in the database are
+ignored when inserting data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IgnoreDefaultColumnsOnInsert { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeMode_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeMode*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeMode" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeMode">MergeMode</h4>
   <div class="markdown level1 summary"><p>Defines the type of target data which affects how deletions or insertions are handled.
@@ -520,7 +637,7 @@ Delta means that source has only delta information and deletions are deferred fr
 OnlyUpdates means that only updates are applied to the destination.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -548,7 +665,7 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   <div class="markdown level1 summary"><p>A list of property names that are used in the Merge.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -573,10 +690,12 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_SourceBlock_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_SourceBlock" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -606,7 +725,7 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   <div class="markdown level1 summary"><p>The name of the target database table for the merge.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -631,10 +750,12 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_TargetBlock_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_TargetBlock" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -661,11 +782,12 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -701,7 +823,7 @@ In order to make this work, the <a class="xref" href="/api/etlbox.dataflow.conne
 and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_DataFlow_Connectors_DbMerge_1_CacheMode">CacheMode</a> set to Full as well.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -724,13 +846,45 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1_ValueGeneratedColumns_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ValueGeneratedColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_ValueGeneratedColumns" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ValueGeneratedColumns">ValueGeneratedColumns</h4>
+  <div class="markdown level1 summary"><p>Exposes the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination-1#ETLBox_DataFlow_Connectors_DbDestination_1_ValueGeneratedColumns">ValueGeneratedColumns</a> property from the underlying
+<a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination">DbDestination</a> used for inserts/updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<ValueGenerationColumn> ValueGeneratedColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -740,11 +894,29 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
+  <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CheckParameterAfterInternalFlowCreation_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CheckParameterAfterInternalFlowCreation*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CheckParameterAfterInternalFlowCreation" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CheckParameterAfterInternalFlowCreation">CheckParameterAfterInternalFlowCreation()</h4>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void CheckParameterAfterInternalFlowCreation()
+```
+
+{{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -773,9 +945,12 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -787,9 +962,12 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_InitComponent_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_InitComponent" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -801,9 +979,12 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -847,9 +1028,12 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination&lt;ETLBox.DataFlow.ETLBoxError&gt;)</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_PrepareParameter" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -861,9 +1045,12 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_Wait_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.Wait*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_Wait" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.Wait">Wait()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts, updates and (optionally) deletes data in database target.
+Before the Merge is executed, all data from the destination is read into memory.
+A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

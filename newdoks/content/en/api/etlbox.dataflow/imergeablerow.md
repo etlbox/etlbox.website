@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10180
+weight: 10188
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IMergeableRow">
   <h1 id="ETLBox_DataFlow_IMergeableRow" data-uid="ETLBox.DataFlow.IMergeableRow" class="text-break">Interface IMergeableRow
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Represents table row in destination database when inserting data using <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1">DbMerge&lt;TInput&gt;</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,13 +29,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IMergeableRow_ChangeAction_" data-uid="ETLBox.DataFlow.IMergeableRow.ChangeAction*"></a>
   <h4 id="ETLBox_DataFlow_IMergeableRow_ChangeAction" data-uid="ETLBox.DataFlow.IMergeableRow.ChangeAction">ChangeAction</h4>
   <div class="markdown level1 summary"><p>The result of a merge operation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -64,7 +64,7 @@ toc: false
   <div class="markdown level1 summary"><p>Time when the object was considered for merging</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

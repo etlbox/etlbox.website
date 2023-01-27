@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10153
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowDestination`1">
   <h1 id="ETLBox_DataFlow_DataFlowDestination_1" data-uid="ETLBox.DataFlow.DataFlowDestination`1" class="text-break">Class DataFlowDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -29,7 +29,7 @@ toc: false
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1">DataFlowStreamDestination&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -73,7 +73,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -115,7 +115,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -213,11 +213,11 @@ toc: false
     </tbody>
   </table>
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_Buffer" data-uid="ETLBox.DataFlow.DataFlowDestination`1.Buffer">Buffer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -243,7 +243,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_InternalBatchSize" data-uid="ETLBox.DataFlow.DataFlowDestination`1.InternalBatchSize">InternalBatchSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -267,12 +267,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowDestination_1_BufferTargetAction_" data-uid="ETLBox.DataFlow.DataFlowDestination`1.BufferTargetAction*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_BufferTargetAction" data-uid="ETLBox.DataFlow.DataFlowDestination`1.BufferTargetAction">BufferTargetAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -299,7 +299,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_TargetAction" data-uid="ETLBox.DataFlow.DataFlowDestination`1.TargetAction">TargetAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -324,10 +324,9 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_DataFlowDestination_1_TargetBlock_" data-uid="ETLBox.DataFlow.DataFlowDestination`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_TargetBlock" data-uid="ETLBox.DataFlow.DataFlowDestination`1.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -354,7 +353,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_UseBufferBlock" data-uid="ETLBox.DataFlow.DataFlowDestination`1.UseBufferBlock">UseBufferBlock</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -378,12 +377,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowDestination_1_InitComponent_" data-uid="ETLBox.DataFlow.DataFlowDestination`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_InitComponent" data-uid="ETLBox.DataFlow.DataFlowDestination`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -399,7 +398,7 @@ toc: false
 If you use the error linking, any erroneous records will catched and redirected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -446,7 +445,7 @@ If you use the error linking, any erroneous records will catched and redirected.
   <div class="markdown level1 summary"><p>Waits for the completion of the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -459,7 +458,7 @@ public void Wait()
   <h4 id="ETLBox_DataFlow_DataFlowDestination_1_WriteBatch__0___" data-uid="ETLBox.DataFlow.DataFlowDestination`1.WriteBatch(`0[])">WriteBatch(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

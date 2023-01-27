@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10224
+weight: 10233
 toc: false
 ---
 
@@ -14,12 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation">
   <h1 id="ETLBox_DataFlow_Transformations_LookupTransformation" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation" class="text-break">Class LookupTransformation
-  </h1>
-  <div class="markdown level0 summary"><p>The lookup transformation enriches the incoming data with data from the lookup source.
-Data from the lookup source is read into memory when the first record arrives.
-For each incoming row, the lookup tries to find a matching record in the
-loaded source data and uses this record to enrich the ingoing data.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -31,7 +27,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2">LookupTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">LookupTransformation</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -66,7 +62,16 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_RetrievalFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrievalFunc</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_RetrieveMultipleRowsFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrieveMultipleRowsFunc</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_RetrievalByKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrievalByKeyFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_RetrieveMultipleRowsByKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrieveMultipleRowsByKeyFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_AllowMultipleRows">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.AllowMultipleRows</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_GetSourceRecordKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.GetSourceRecordKeyFunc</a>
@@ -75,7 +80,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_GetInputRecordKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.GetInputRecordKeyFunc</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_IgnoreDataTypes">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.IgnoreDataTypes</a>
+      <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_UseExactNumericTypes">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.UseExactNumericTypes</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#ETLBox_DataFlow_Transformations_LookupTransformation_2_MatchColumns">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.MatchColumns</a>
@@ -168,7 +173,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -213,7 +218,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -296,12 +301,12 @@ loaded source data and uses this record to enrich the ingoing data.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor">LookupTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -310,10 +315,44 @@ loaded source data and uses this record to enrich the ingoing data.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_ETLBox_DataFlow_IDataFlowExecutableSource_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject})">LookupTransformation(IDataFlowExecutableSource&lt;ExpandoObject&gt;, Func&lt;ExpandoObject, IEnumerable&lt;ExpandoObject&gt;, ExpandoObject&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public LookupTransformation(IDataFlowExecutableSource<ExpandoObject> source, Func<ExpandoObject, IEnumerable<ExpandoObject>, ExpandoObject> retrievalFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
+        <td><span class="parametername">retrievalFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_ETLBox_DataFlow_IDataFlowExecutableSource_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{System.Dynamic.ExpandoObject})">LookupTransformation(IDataFlowExecutableSource&lt;ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -334,40 +373,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation__ctor_ETLBox_DataFlow_IDataFlowExecutableSource_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_ICollection_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,System.Collections.Generic.ICollection{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject})">LookupTransformation(IDataFlowExecutableSource&lt;ExpandoObject&gt;, Func&lt;ExpandoObject, ICollection&lt;ExpandoObject&gt;, ExpandoObject&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public LookupTransformation(IDataFlowExecutableSource<ExpandoObject> source, Func<ExpandoObject, ICollection<ExpandoObject>, ExpandoObject> retrievalFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
-        <td><span class="parametername">retrievalFunc</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10176
+weight: 10184
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowTransformation`1">
   <h1 id="ETLBox_DataFlow_IDataFlowTransformation_1" data-uid="ETLBox.DataFlow.IDataFlowTransformation`1" class="text-break">Interface IDataFlowTransformation&lt;TOutput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Implemented by transformations that can have multiple inputs with different type and one or more outputs of the same type</p>
 </div>
   <div class="markdown level0 conceptual"></div>

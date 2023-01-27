@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10266
+weight: 10283
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogTask">
   <h1 id="ETLBox_Logging_LogTask" data-uid="ETLBox.Logging.LogTask" class="text-break">Class LogTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Used this task for custom log messages.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">LogTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -88,12 +88,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogTask__ctor_" data-uid="ETLBox.Logging.LogTask.#ctor*"></a>
   <h4 id="ETLBox_Logging_LogTask__ctor" data-uid="ETLBox.Logging.LogTask.#ctor">LogTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -102,39 +103,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Logging_LogTask__ctor_" data-uid="ETLBox.Logging.LogTask.#ctor*"></a>
-  <h4 id="ETLBox_Logging_LogTask__ctor_System_String_" data-uid="ETLBox.Logging.LogTask.#ctor(System.String)">LogTask(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public LogTask(string message)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogTask__ctor_" data-uid="ETLBox.Logging.LogTask.#ctor*"></a>
   <h4 id="ETLBox_Logging_LogTask__ctor_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.#ctor(System.String,System.Object[])">LogTask(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -164,12 +137,43 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <h4 id="ETLBox_Logging_LogTask__tableName" data-uid="ETLBox.Logging.LogTask._tableName">_tableName</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Logging_LogTask__ctor_" data-uid="ETLBox.Logging.LogTask.#ctor*"></a>
+  <h4 id="ETLBox_Logging_LogTask__ctor_System_String_" data-uid="ETLBox.Logging.LogTask.#ctor(System.String)">LogTask(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public LogTask(string message)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+</h3>
+  <h4 id="ETLBox_Logging_LogTask__tableName" data-uid="ETLBox.Logging.LogTask._tableName">_tableName</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,12 +197,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogTask_Args_" data-uid="ETLBox.Logging.LogTask.Args*"></a>
   <h4 id="ETLBox_Logging_LogTask_Args" data-uid="ETLBox.Logging.LogTask.Args">Args</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -223,9 +228,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_ContainerTypeNames_" data-uid="ETLBox.Logging.LogTask.ContainerTypeNames*"></a>
   <h4 id="ETLBox_Logging_LogTask_ContainerTypeNames" data-uid="ETLBox.Logging.LogTask.ContainerTypeNames">ContainerTypeNames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -250,9 +256,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_Message_" data-uid="ETLBox.Logging.LogTask.Message*"></a>
   <h4 id="ETLBox_Logging_LogTask_Message" data-uid="ETLBox.Logging.LogTask.Message">Message</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -277,9 +284,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_TableName_" data-uid="ETLBox.Logging.LogTask.TableName*"></a>
   <h4 id="ETLBox_Logging_LogTask_TableName" data-uid="ETLBox.Logging.LogTask.TableName">TableName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -304,9 +312,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_TaskName_" data-uid="ETLBox.Logging.LogTask.TaskName*"></a>
   <h4 id="ETLBox_Logging_LogTask_TaskName" data-uid="ETLBox.Logging.LogTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -332,12 +341,13 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogTask_ConvertToHierachy_" data-uid="ETLBox.Logging.LogTask.ConvertToHierachy*"></a>
   <h4 id="ETLBox_Logging_LogTask_ConvertToHierachy_System_Collections_Generic_List_ETLBox_Logging_LogEntry__" data-uid="ETLBox.Logging.LogTask.ConvertToHierachy(System.Collections.Generic.List{ETLBox.Logging.LogEntry})">ConvertToHierachy(List&lt;LogEntry&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -379,9 +389,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_CreateLogTable_" data-uid="ETLBox.Logging.LogTask.CreateLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_CreateLogTable" data-uid="ETLBox.Logging.LogTask.CreateLogTable">CreateLogTable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -391,9 +402,10 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_Logging_LogTask_CreateLogTable_" data-uid="ETLBox.Logging.LogTask.CreateLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_CreateLogTable_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LogTask.CreateLogTable(ETLBox.Connection.IConnectionManager,System.String)">CreateLogTable(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -425,9 +437,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_CreateLogTable_" data-uid="ETLBox.Logging.LogTask.CreateLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_CreateLogTable_System_String_" data-uid="ETLBox.Logging.LogTask.CreateLogTable(System.String)">CreateLogTable(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -454,9 +467,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_Debug_" data-uid="ETLBox.Logging.LogTask.Debug*"></a>
   <h4 id="ETLBox_Logging_LogTask_Debug" data-uid="ETLBox.Logging.LogTask.Debug">Debug()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -465,39 +479,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Logging_LogTask_Debug_" data-uid="ETLBox.Logging.LogTask.Debug*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Debug_System_String_" data-uid="ETLBox.Logging.LogTask.Debug(System.String)">Debug(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Debug(string message)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogTask_Debug_" data-uid="ETLBox.Logging.LogTask.Debug*"></a>
   <h4 id="ETLBox_Logging_LogTask_Debug_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Debug(System.String,System.Object[])">Debug(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -527,27 +513,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogTask_Error_" data-uid="ETLBox.Logging.LogTask.Error*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Error" data-uid="ETLBox.Logging.LogTask.Error">Error()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Logging_LogTask_Debug_" data-uid="ETLBox.Logging.LogTask.Debug*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Debug_System_String_" data-uid="ETLBox.Logging.LogTask.Debug(System.String)">Debug(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Error()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_Logging_LogTask_Error_" data-uid="ETLBox.Logging.LogTask.Error*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Error_System_String_" data-uid="ETLBox.Logging.LogTask.Error(System.String)">Error(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Error(string message)
+    public static void Debug(string message)
 ```
 
 {{< rawhtml >}}
@@ -569,10 +544,24 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_Error_" data-uid="ETLBox.Logging.LogTask.Error*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Error_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Error(System.String,System.Object[])">Error(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Logging_LogTask_Error" data-uid="ETLBox.Logging.LogTask.Error">Error()</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Error()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_Logging_LogTask_Error_" data-uid="ETLBox.Logging.LogTask.Error*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Error_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Error(System.String,System.Object[])">Error(String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -602,27 +591,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogTask_Fatal_" data-uid="ETLBox.Logging.LogTask.Fatal*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Fatal" data-uid="ETLBox.Logging.LogTask.Fatal">Fatal()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Logging_LogTask_Error_" data-uid="ETLBox.Logging.LogTask.Error*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Error_System_String_" data-uid="ETLBox.Logging.LogTask.Error(System.String)">Error(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Fatal()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_Logging_LogTask_Fatal_" data-uid="ETLBox.Logging.LogTask.Fatal*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Fatal_System_String_" data-uid="ETLBox.Logging.LogTask.Fatal(System.String)">Fatal(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Fatal(string message)
+    public static void Error(string message)
 ```
 
 {{< rawhtml >}}
@@ -644,10 +622,24 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_Fatal_" data-uid="ETLBox.Logging.LogTask.Fatal*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Fatal_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Fatal(System.String,System.Object[])">Fatal(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Logging_LogTask_Fatal" data-uid="ETLBox.Logging.LogTask.Fatal">Fatal()</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Fatal()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_Logging_LogTask_Fatal_" data-uid="ETLBox.Logging.LogTask.Fatal*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Fatal_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Fatal(System.String,System.Object[])">Fatal(String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -677,27 +669,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogTask_Info_" data-uid="ETLBox.Logging.LogTask.Info*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Info" data-uid="ETLBox.Logging.LogTask.Info">Info()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Logging_LogTask_Fatal_" data-uid="ETLBox.Logging.LogTask.Fatal*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Fatal_System_String_" data-uid="ETLBox.Logging.LogTask.Fatal(System.String)">Fatal(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Info()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_Logging_LogTask_Info_" data-uid="ETLBox.Logging.LogTask.Info*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Info_System_String_" data-uid="ETLBox.Logging.LogTask.Info(System.String)">Info(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Info(string message)
+    public static void Fatal(string message)
 ```
 
 {{< rawhtml >}}
@@ -719,10 +700,24 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_Info_" data-uid="ETLBox.Logging.LogTask.Info*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Info_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Info(System.String,System.Object[])">Info(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Logging_LogTask_Info" data-uid="ETLBox.Logging.LogTask.Info">Info()</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Info()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_Logging_LogTask_Info_" data-uid="ETLBox.Logging.LogTask.Info*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Info_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Info(System.String,System.Object[])">Info(String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -752,11 +747,42 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Logging_LogTask_Info_" data-uid="ETLBox.Logging.LogTask.Info*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Info_System_String_" data-uid="ETLBox.Logging.LogTask.Info(System.String)">Info(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void Info(string message)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_ReadLogTable" data-uid="ETLBox.Logging.LogTask.ReadLogTable">ReadLogTable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -780,54 +806,11 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
-  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.Connection.IConnectionManager)">ReadLogTable(IConnectionManager)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static List<LogEntry> ReadLogTable(IConnectionManager connectionManager)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.logging/logentry">LogEntry</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_Connection_IConnectionManager_System_Int64_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.Connection.IConnectionManager,System.Int64)">ReadLogTable(IConnectionManager, Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -873,10 +856,56 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
-  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_System_Int64_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(System.Int64)">ReadLogTable(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.Connection.IConnectionManager)">ReadLogTable(IConnectionManager)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static List<LogEntry> ReadLogTable(IConnectionManager connectionManager)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.logging/logentry">LogEntry</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
+  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_System_Int64_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(System.Int64)">ReadLogTable(Int64)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -918,13 +947,14 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
   <h4 id="ETLBox_Logging_LogTask_ReadLogTable_System_Nullable_System_Int64__" data-uid="ETLBox.Logging.LogTask.ReadLogTable(System.Nullable{System.Int64})">ReadLogTable(Nullable&lt;Int64&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public List<LogEntry> ReadLogTable(long? loadProcessId = default(long? ))
+    public List<LogEntry> ReadLogTable(long? loadProcessId = null)
 ```
 
 {{< rawhtml >}}
@@ -962,9 +992,10 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogTask_Trace_" data-uid="ETLBox.Logging.LogTask.Trace*"></a>
   <h4 id="ETLBox_Logging_LogTask_Trace" data-uid="ETLBox.Logging.LogTask.Trace">Trace()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -973,39 +1004,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Logging_LogTask_Trace_" data-uid="ETLBox.Logging.LogTask.Trace*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Trace_System_String_" data-uid="ETLBox.Logging.LogTask.Trace(System.String)">Trace(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Trace(string message)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogTask_Trace_" data-uid="ETLBox.Logging.LogTask.Trace*"></a>
   <h4 id="ETLBox_Logging_LogTask_Trace_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Trace(System.String,System.Object[])">Trace(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1035,27 +1038,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogTask_Warn_" data-uid="ETLBox.Logging.LogTask.Warn*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Warn" data-uid="ETLBox.Logging.LogTask.Warn">Warn()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Logging_LogTask_Trace_" data-uid="ETLBox.Logging.LogTask.Trace*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Trace_System_String_" data-uid="ETLBox.Logging.LogTask.Trace(System.String)">Trace(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Warn()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_Logging_LogTask_Warn_" data-uid="ETLBox.Logging.LogTask.Warn*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Warn_System_String_" data-uid="ETLBox.Logging.LogTask.Warn(System.String)">Warn(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Warn(string message)
+    public static void Trace(string message)
 ```
 
 {{< rawhtml >}}
@@ -1077,10 +1069,24 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_Warn_" data-uid="ETLBox.Logging.LogTask.Warn*"></a>
-  <h4 id="ETLBox_Logging_LogTask_Warn_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Warn(System.String,System.Object[])">Warn(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Logging_LogTask_Warn" data-uid="ETLBox.Logging.LogTask.Warn">Warn()</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void Warn()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_Logging_LogTask_Warn_" data-uid="ETLBox.Logging.LogTask.Warn*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Warn_System_String_System_Object___" data-uid="ETLBox.Logging.LogTask.Warn(System.String,System.Object[])">Warn(String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -1106,6 +1112,36 @@ toc: false
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Logging_LogTask_Warn_" data-uid="ETLBox.Logging.LogTask.Warn*"></a>
+  <h4 id="ETLBox_Logging_LogTask_Warn_System_String_" data-uid="ETLBox.Logging.LogTask.Warn(System.String)">Warn(String)</h4>
+  <div class="markdown level1 summary"><p>Used this task for custom log messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void Warn(string message)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
     </tbody>

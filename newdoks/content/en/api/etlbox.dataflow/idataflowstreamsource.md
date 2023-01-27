@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10175
+weight: 10183
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowStreamSource">
   <h1 id="ETLBox_DataFlow_IDataFlowStreamSource" data-uid="ETLBox.DataFlow.IDataFlowStreamSource" class="text-break">Interface IDataFlowStreamSource
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Implemented by data flow sources that allow reading data from a stream source</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,7 +29,7 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowStreamSource_AzureBlobStorage_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.AzureBlobStorage*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_AzureBlobStorage" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.AzureBlobStorage">AzureBlobStorage</h4>
   <div class="markdown level1 summary"><p>Use this to pass your AzureBlobStorage connection information.
@@ -39,7 +39,7 @@ Option 2: create BlockBlobClient based on the Uri and optional credential tokens
 Option 3: create BlockBlobClient with provided ConnectionString and ContainerName, the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_Uri">Uri</a> is then the name of the blob</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -62,13 +62,43 @@ Option 3: create BlockBlobClient with provided ConnectionString and ContainerNam
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_IDataFlowStreamSource_CollectUnparsedData_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.CollectUnparsedData*"></a>
+  <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_CollectUnparsedData" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.CollectUnparsedData">CollectUnparsedData</h4>
+  <div class="markdown level1 summary"><p>Indicates if data not parsed should be stored in the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_UnparsedData">UnparsedData</a> property (also accessable
+via the current <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> object when using the <a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_GetNextUri">GetNextUri</a>/<a class="xref" href="/api/etlbox.dataflow/idataflowstreamsource#ETLBox_DataFlow_IDataFlowStreamSource_HasNextUri">HasNextUri</a>
+pattern).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    bool CollectUnparsedData { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_IDataFlowStreamSource_CreateStreamReader_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.CreateStreamReader*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_CreateStreamReader" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.CreateStreamReader">CreateStreamReader</h4>
   <div class="markdown level1 summary"><p>By default, stream are created internally based on Uri &amp; ResourceType.
 If you already have an existing stream, use this function to returns a StreamReader based on this stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -96,7 +126,7 @@ If you already have an existing stream, use this function to returns a StreamRea
   <div class="markdown level1 summary"><p>Encoding used to read data from the source file or web request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -127,7 +157,7 @@ json data that contains references to the next page of the response.
 This property can be used if you want to read multiple files or if you want to paginate through web responses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -156,7 +186,7 @@ This property can be used if you want to read multiple files or if you want to p
 <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> has information about the current progress and other meta data from the response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -185,7 +215,7 @@ This property can be used if you want to read multiple files or if you want to p
 add or change the http request data, e.g. you can add your authorization information here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -210,11 +240,11 @@ add or change the http request data, e.g. you can add your authorization informa
   </table>
   <a id="ETLBox_DataFlow_IDataFlowStreamSource_HttpRequestMessage_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.HttpRequestMessage*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_HttpRequestMessage" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.HttpRequestMessage">HttpRequestMessage</h4>
-  <div class="markdown level1 summary"><p>The System.Net.Http.HttpRequestMessage use for the request from the HttpClient. Add your request
-message here, e.g. your POST body.</p>
+  <div class="markdown level1 summary"><p>The System.Net.Http.HttpRequestMessage used for the request in the HttpClient. Use this property
+to add additional header data type or to change the http method (e.g. for POST requests).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -237,13 +267,41 @@ message here, e.g. your POST body.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_IDataFlowStreamSource_HttpResponseMessage_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.HttpResponseMessage*"></a>
+  <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_HttpResponseMessage" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.HttpResponseMessage">HttpResponseMessage</h4>
+  <div class="markdown level1 summary"><p>The System.Net.HttpResponseMessage returned from the current request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    HttpResponseMessage HttpResponseMessage { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_IDataFlowStreamSource_ResourceType_" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.ResourceType*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamSource_ResourceType" data-uid="ETLBox.DataFlow.IDataFlowStreamSource.ResourceType">ResourceType</h4>
   <div class="markdown level1 summary"><p>Specifies the resource type. By default requests are made with HttpClient.
 Specify ResourceType.File if you want to read from a json file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -271,7 +329,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <div class="markdown level1 summary"><p>Contains all data from the stream that couldn't be processed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -299,7 +357,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <div class="markdown level1 summary"><p>The Url of the webservice (e.g. <a href="https://test.com/foo">https://test.com/foo</a>) or the file name (relative or absolute).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

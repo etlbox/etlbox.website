@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10258
+weight: 10275
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.StringExtension">
   <h1 id="ETLBox_Helper_StringExtension" data-uid="ETLBox.Helper.StringExtension" class="text-break">Class StringExtension
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Extension methods for strings</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,13 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_StringExtension_ReplaceIgnoreCase_" data-uid="ETLBox.Helper.StringExtension.ReplaceIgnoreCase*"></a>
   <h4 id="ETLBox_Helper_StringExtension_ReplaceIgnoreCase_System_String_System_String_System_String_" data-uid="ETLBox.Helper.StringExtension.ReplaceIgnoreCase(System.String,System.String,System.String)">ReplaceIgnoreCase(String, String, String)</h4>
   <div class="markdown level1 summary"><p>This replicates the functionality of case-insensitive functionality built into Replace in .Net Core.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

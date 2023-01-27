@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10039
+weight: 10042
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.IfExistsTask">
   <h1 id="ETLBox_ControlFlow_IfExistsTask" data-uid="ETLBox.ControlFlow.IfExistsTask" class="text-break">Class IfExistsTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -29,7 +29,7 @@ toc: false
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/ifschemaexiststask">IfSchemaExistsTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/iftableorviewexiststask">IfTableOrViewExistsTask</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -92,12 +92,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_IfExistsTask_DoesExist_" data-uid="ETLBox.ControlFlow.IfExistsTask.DoesExist*"></a>
   <h4 id="ETLBox_ControlFlow_IfExistsTask_DoesExist" data-uid="ETLBox.ControlFlow.IfExistsTask.DoesExist">DoesExist</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -124,7 +124,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IfExistsTask_ObjectName" data-uid="ETLBox.ControlFlow.IfExistsTask.ObjectName">ObjectName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -151,7 +151,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IfExistsTask_ON" data-uid="ETLBox.ControlFlow.IfExistsTask.ON">ON</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -178,7 +178,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IfExistsTask_OON" data-uid="ETLBox.ControlFlow.IfExistsTask.OON">OON</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -205,7 +205,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IfExistsTask_Sql" data-uid="ETLBox.ControlFlow.IfExistsTask.Sql">Sql</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -232,7 +232,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_IfExistsTask_TaskName" data-uid="ETLBox.ControlFlow.IfExistsTask.TaskName">TaskName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -258,12 +258,12 @@ toc: false
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_IfExistsTask_Exists_" data-uid="ETLBox.ControlFlow.IfExistsTask.Exists*"></a>
   <h4 id="ETLBox_ControlFlow_IfExistsTask_Exists" data-uid="ETLBox.ControlFlow.IfExistsTask.Exists">Exists()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

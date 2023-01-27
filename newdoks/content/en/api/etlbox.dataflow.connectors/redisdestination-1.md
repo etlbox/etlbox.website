@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10128
+weight: 10134
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1">
   <h1 id="ETLBox_DataFlow_Connectors_RedisDestination_1" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1" class="text-break">Class RedisDestination&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A data flow destination for Redis. Regis is a key/value store.
 You can define a key column using either a KeyColumnAttribute on your object or assign a value
 to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
@@ -31,7 +31,7 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
     <div class="level5"><span class="xref">RedisDestination&lt;TInput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination">RedisDestination</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -122,7 +122,7 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetCompletionTask">DataFlowComponent.SetCompletionTask()</a>
@@ -149,7 +149,7 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -245,12 +245,16 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
     </tbody>
   </table>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.#ctor">RedisDestination()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -260,9 +264,13 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.#ctor(System.Int32)">RedisDestination(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -288,7 +296,7 @@ The stored value will contain your serialized object using Newtonsoft.Json and J
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_ConnectionString_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.ConnectionString*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_ConnectionString" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.ConnectionString">ConnectionString</h4>
   <div class="markdown level1 summary"><p>If you provide a connection  string, this component will create a new ConnectionMultiplexer object
@@ -296,7 +304,7 @@ to connect with redis. If you already have a connection object instantiated in y
 use <a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1#ETLBox_DataFlow_Connectors_RedisDestination_1_RedisConnection">RedisConnection</a> instead to pass it to the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -325,7 +333,7 @@ use <a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1#ETL
 The default database is 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -356,7 +364,7 @@ Only one property can be used as key.
 You can also use the KeyColumn attribute instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -384,7 +392,7 @@ You can also use the KeyColumn attribute instead.</p>
   <div class="markdown level1 summary"><p>An existing ConnectionMultiplexer that holds a redis connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -413,7 +421,7 @@ You can also use the KeyColumn attribute instead.</p>
 here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -443,7 +451,7 @@ By default, your object is serialized into json. Use <a class="xref" href="/api/
 to define your own serialization function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -471,7 +479,7 @@ to define your own serialization function.</p>
   <div class="markdown level1 summary"><p>Provide additional redis parameter that are used when setting the key/value pairs in redis.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -496,11 +504,13 @@ to define your own serialization function.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -526,12 +536,16 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_BulkInsertData_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.BulkInsertData*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_BulkInsertData__0___" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.BulkInsertData(`0[])">BulkInsertData(TInput[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -560,9 +574,13 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.BulkInsertData(TInput[])</span></div>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -574,9 +592,13 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_FinishWrite_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.FinishWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.FinishWrite">FinishWrite()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -588,9 +610,13 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</span></div>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_InitParameter_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.InitParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_InitParameter" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.InitParameter">InitParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -602,9 +628,13 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -616,9 +646,13 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_PrepareWrite_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.PrepareWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.PrepareWrite">PrepareWrite()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A data flow destination for Redis. Regis is a key/value store.
+You can define a key column using either a KeyColumnAttribute on your object or assign a value
+to the KeyColumn property. If no key column is provided, a Guid is created and used as key.
+The stored value will contain your serialized object using Newtonsoft.Json and JsonConvert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

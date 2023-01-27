@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10264
+weight: 10281
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogHierarchyEntry">
   <h1 id="ETLBox_Logging_LogHierarchyEntry" data-uid="ETLBox.Logging.LogHierarchyEntry" class="text-break">Class LogHierarchyEntry
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -97,12 +97,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogHierarchyEntry__ctor_" data-uid="ETLBox.Logging.LogHierarchyEntry.#ctor*"></a>
   <h4 id="ETLBox_Logging_LogHierarchyEntry__ctor" data-uid="ETLBox.Logging.LogHierarchyEntry.#ctor">LogHierarchyEntry()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -114,7 +114,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogHierarchyEntry__ctor_ETLBox_Logging_LogEntry_" data-uid="ETLBox.Logging.LogHierarchyEntry.#ctor(ETLBox.Logging.LogEntry)">LogHierarchyEntry(LogEntry)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -140,12 +140,12 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogHierarchyEntry_Children_" data-uid="ETLBox.Logging.LogHierarchyEntry.Children*"></a>
   <h4 id="ETLBox_Logging_LogHierarchyEntry_Children" data-uid="ETLBox.Logging.LogHierarchyEntry.Children">Children</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -172,7 +172,7 @@ toc: false
   <h4 id="ETLBox_Logging_LogHierarchyEntry_Parent" data-uid="ETLBox.Logging.LogHierarchyEntry.Parent">Parent</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

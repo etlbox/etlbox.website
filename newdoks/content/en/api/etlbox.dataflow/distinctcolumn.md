@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10154
+weight: 10161
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DistinctColumn">
   <h1 id="ETLBox_DataFlow_DistinctColumn" data-uid="ETLBox.DataFlow.DistinctColumn" class="text-break">Class DistinctColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify distinct properties in an object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -165,12 +165,13 @@ public sealed class DistinctColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DistinctColumn__ctor_" data-uid="ETLBox.DataFlow.DistinctColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DistinctColumn__ctor" data-uid="ETLBox.DataFlow.DistinctColumn.#ctor">DistinctColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute is used to identify distinct properties in an object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -179,13 +180,13 @@ public sealed class DistinctColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DistinctColumn_DistinctPropertyName_" data-uid="ETLBox.DataFlow.DistinctColumn.DistinctPropertyName*"></a>
   <h4 id="ETLBox_DataFlow_DistinctColumn_DistinctPropertyName" data-uid="ETLBox.DataFlow.DistinctColumn.DistinctPropertyName">DistinctPropertyName</h4>
   <div class="markdown level1 summary"><p>Property name used in the object to identify distinct values</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10077
+weight: 10079
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask">
   <h1 id="ETLBox_ControlFlow_Tasks_TruncateTableTask" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask" class="text-break">Class TruncateTableTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Truncates a table.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">TruncateTableTask</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -90,12 +90,13 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_examples"><strong>Examples</strong></h5>
   <pre><code>TruncateTableTask.Truncate(&quot;demo.table1&quot;);</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.#ctor">TruncateTableTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Truncates a table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -103,11 +104,14 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_TruncateTableTask__ctor_examples">Examples</h5>
+  <pre><code>TruncateTableTask.Truncate(&quot;demo.table1&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.#ctor(System.String)">TruncateTableTask(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Truncates a table.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -134,13 +138,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask_Sql_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.Sql*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_Sql" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.Sql">Sql</h4>
   <div class="markdown level1 summary"><p>Sql code that is used when the task is executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -168,7 +172,7 @@ toc: false
   <div class="markdown level1 summary"><p>Name of the table that should be truncated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,11 +197,10 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>Truncates a table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -227,7 +230,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>The formatted table table name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -251,13 +254,13 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask_Truncate_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.Truncate*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_Truncate_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.Truncate(ETLBox.Connection.IConnectionManager,System.String)">Truncate(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"><p>Execute a table truncation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -294,7 +297,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 summary"><p>Execute a table truncation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

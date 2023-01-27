@@ -36,10 +36,11 @@ This will create a lot of warning, and the api html pages under _site/api.
 ### Transforming html into hugo readable format (not really markdown, more html like)
 
 Run the DocFxToHugoMD project. 
-You may need to adjust some of the exludes if needed. 
+It will generate the whole folder, including necessary _index.md files.
+
 
 ### Copy the md/html files
 
-Copy all folders in the bin/Debug/.net5.0/Output folder into the content/en/api folder of the hugo website. 
+Replace bin/Debug/.net5.0/Output/api folder with the content/en/api folder of the hugo website. 
 
 Commit/Push changes, and all done!

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10166
+weight: 10174
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.IDataFlowDestination">
   <h1 id="ETLBox_DataFlow_IDataFlowDestination" data-uid="ETLBox.DataFlow.IDataFlowDestination" class="text-break">Interface IDataFlowDestination
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -43,13 +43,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_IDataFlowDestination_Predecessors_" data-uid="ETLBox.DataFlow.IDataFlowDestination.Predecessors*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowDestination_Predecessors" data-uid="ETLBox.DataFlow.IDataFlowDestination.Predecessors">Predecessors</h4>
   <div class="markdown level1 summary"><p>All predecessors that are linked to this component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

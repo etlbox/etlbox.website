@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10034
+weight: 10037
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ControlFlowTask">
   <h1 id="ETLBox_ControlFlow_ControlFlowTask" data-uid="ETLBox.ControlFlow.ControlFlowTask" class="text-break">Class ControlFlowTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -40,7 +40,7 @@ toc: false
       <div class="level3"><a class="xref" href="/api/etlbox.logging/logsection">LogSection</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.logging/logtask">LogTask</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -94,12 +94,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_ControlFlowTask_ConnectionManager_" data-uid="ETLBox.ControlFlow.ControlFlowTask.ConnectionManager*"></a>
   <h4 id="ETLBox_ControlFlow_ControlFlowTask_ConnectionManager" data-uid="ETLBox.ControlFlow.ControlFlowTask.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -126,7 +126,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ControlFlowTask_ConnectionType" data-uid="ETLBox.ControlFlow.ControlFlowTask.ConnectionType">ConnectionType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -153,7 +153,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ControlFlowTask_QB" data-uid="ETLBox.ControlFlow.ControlFlowTask.QB">QB</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -180,7 +180,7 @@ toc: false
   <h4 id="ETLBox_ControlFlow_ControlFlowTask_QE" data-uid="ETLBox.ControlFlow.ControlFlowTask.QE">QE</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

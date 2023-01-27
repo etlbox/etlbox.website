@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10073
+weight: 10075
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.RecoveryModel">
   <h1 id="ETLBox_ControlFlow_Tasks_RecoveryModel" data-uid="ETLBox.ControlFlow.Tasks.RecoveryModel" class="text-break">Enum RecoveryModel
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The sql server recovery models.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -29,7 +29,7 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -40,19 +40,23 @@ toc: false
     <tbody>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_BulkLogged">BulkLogged</td>
-        <td></td>
+        <td><p>The sql server recovery models.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Default">Default</td>
-        <td></td>
+        <td><p>The sql server recovery models.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Full">Full</td>
-        <td></td>
+        <td><p>The sql server recovery models.</p>
+</td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Simple">Simple</td>
-        <td></td>
+        <td><p>The sql server recovery models.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

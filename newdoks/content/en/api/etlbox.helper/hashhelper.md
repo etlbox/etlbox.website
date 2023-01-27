@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10249
+weight: 10265
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.HashHelper">
   <h1 id="ETLBox_Helper_HashHelper" data-uid="ETLBox.Helper.HashHelper" class="text-break">Class HashHelper
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This class creates unique strings containing hash values.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -58,13 +58,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Helper_HashHelper_CreateChar40Hash_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash*"></a>
   <h4 id="ETLBox_Helper_HashHelper_CreateChar40Hash_ETLBox_ControlFlow_ILoggableTask_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash(ETLBox.ControlFlow.ILoggableTask)">CreateChar40Hash(ILoggableTask)</h4>
   <div class="markdown level1 summary"><p>Creates a unique hash string from a loggable task</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -111,7 +111,7 @@ toc: false
   <div class="markdown level1 summary"><p>Creates a 40 character unique hash string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -158,7 +158,7 @@ toc: false
   <div class="markdown level1 summary"><p>Addition of the hash values for a list of object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

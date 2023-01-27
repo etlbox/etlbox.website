@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.exceptions"
-weight: 10243
+weight: 10260
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Exceptions.ETLBoxException">
   <h1 id="ETLBox_Exceptions_ETLBoxException" data-uid="ETLBox.Exceptions.ETLBoxException" class="text-break">Class ETLBoxException
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>The generic ETLBox Exception. See inner exception for more details.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -24,7 +24,7 @@ toc: false
     <div class="level1"><span class="xref">System.Exception</span></div>
     <div class="level2"><span class="xref">ETLBoxException</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
   </div>
@@ -96,12 +96,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Exceptions_ETLBoxException__ctor_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor*"></a>
   <h4 id="ETLBox_Exceptions_ETLBoxException__ctor" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor">ETLBoxException()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic ETLBox Exception. See inner exception for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -110,39 +111,11 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Exceptions_ETLBoxException__ctor_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor*"></a>
-  <h4 id="ETLBox_Exceptions_ETLBoxException__ctor_System_String_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor(System.String)">ETLBoxException(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ETLBoxException(string message)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Exceptions_ETLBoxException__ctor_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor*"></a>
   <h4 id="ETLBox_Exceptions_ETLBoxException__ctor_System_String_System_Exception_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor(System.String,System.Exception)">ETLBoxException(String, Exception)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The generic ETLBox Exception. See inner exception for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -172,9 +145,43 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Exceptions_ETLBoxException__ctor_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor*"></a>
+  <h4 id="ETLBox_Exceptions_ETLBoxException__ctor_System_String_" data-uid="ETLBox.Exceptions.ETLBoxException.#ctor(System.String)">ETLBoxException(String)</h4>
+  <div class="markdown level1 summary"><p>The generic ETLBox Exception. See inner exception for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ETLBoxException(string message)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="/api/etlbox.helper/exceptionextensions#ETLBox_Helper_ExceptionExtensions_DataTryAdd_System_Exception_System_String_System_Object_">ExceptionExtensions.DataTryAdd(Exception, String, Object)</a>
   </div>
 
 {{< /rawhtml >}}

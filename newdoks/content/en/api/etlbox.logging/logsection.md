@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10265
+weight: 10282
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogSection">
   <h1 id="ETLBox_Logging_LogSection" data-uid="ETLBox.Logging.LogSection" class="text-break">Class LogSection
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">LogSection</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -88,12 +88,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogSection__ctor_" data-uid="ETLBox.Logging.LogSection.#ctor*"></a>
   <h4 id="ETLBox_Logging_LogSection__ctor_System_String_" data-uid="ETLBox.Logging.LogSection.#ctor(System.String)">LogSection(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -119,14 +120,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogSection_TaskName_" data-uid="ETLBox.Logging.LogSection.TaskName*"></a>
   <h4 id="ETLBox_Logging_LogSection_TaskName" data-uid="ETLBox.Logging.LogSection.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -152,12 +152,13 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute_System_Action_" data-uid="ETLBox.Logging.LogSection.Execute(System.Action)">Execute(Action)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -184,9 +185,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute_System_String_System_Action_" data-uid="ETLBox.Logging.LogSection.Execute(System.String,System.Action)">Execute(String, Action)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -218,9 +220,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__1_System_Action___0____0_" data-uid="ETLBox.Logging.LogSection.Execute``1(System.Action{``0},``0)">Execute&lt;t1&gt;(Action&lt;t1&gt;, t1)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -267,9 +270,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__1_System_String_System_Action___0____0_" data-uid="ETLBox.Logging.LogSection.Execute``1(System.String,System.Action{``0},``0)">Execute&lt;t1&gt;(String, Action&lt;t1&gt;, t1)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -321,9 +325,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__2_System_Action___0___1____0___1_" data-uid="ETLBox.Logging.LogSection.Execute``2(System.Action{``0,``1},``0,``1)">Execute&lt;t1, t2&gt;(Action&lt;t1, t2&gt;, t1, t2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -379,9 +384,10 @@ with a default name that can be overwritten.</p>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__2_System_String_System_Action___0___1____0___1_" data-uid="ETLBox.Logging.LogSection.Execute``2(System.String,System.Action{``0,``1},``0,``1)">Execute&lt;t1, t2&gt;(String, Action&lt;t1, t2&gt;, t1, t2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

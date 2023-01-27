@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10148
+weight: 10155
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1">
   <h1 id="ETLBox_DataFlow_DataFlowJoinTarget_1" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1" class="text-break">Class DataFlowJoinTarget&lt;TInput&gt;
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>A target block base implementation</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -27,7 +27,7 @@ toc: false
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/jointarget-1">JoinTarget&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -71,7 +71,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -116,7 +116,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -215,13 +215,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowJoinTarget_1_TargetBlock_" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowJoinTarget_1_TargetBlock" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -245,12 +245,13 @@ toc: false
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_DataFlowJoinTarget_1_CreateLinkInInternalFlow_" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1.CreateLinkInInternalFlow*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowJoinTarget_1_CreateLinkInInternalFlow_ETLBox_DataFlow_DataFlowComponent_" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1.CreateLinkInInternalFlow(ETLBox.DataFlow.DataFlowComponent)">CreateLinkInInternalFlow(DataFlowComponent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A target block base implementation</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.connectors"
-weight: 10134
+weight: 10141
 toc: false
 ---
 
@@ -14,10 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.TextDestination">
   <h1 id="ETLBox_DataFlow_Connectors_TextDestination" data-uid="ETLBox.DataFlow.Connectors.TextDestination" class="text-break">Class TextDestination
-  </h1>
-  <div class="markdown level0 summary"><p>Writes data into a text file. Each line in the output is created by calling the
-<a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1#ETLBox_DataFlow_Connectors_TextDestination_1_WriteLineFunc">WriteLineFunc</a> or by invoking ToString() on the object.</p>
-</div>
+</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -29,7 +27,7 @@ toc: false
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1">TextDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">TextDestination</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowstreamdestination-1">IDataFlowStreamDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
@@ -46,6 +44,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1#ETLBox_DataFlow_Connectors_TextDestination_1_WriteLineFunc">TextDestination&lt;ExpandoObject&gt;.WriteLineFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1#ETLBox_DataFlow_Connectors_TextDestination_1_WriteHeaderFunc">TextDestination&lt;ExpandoObject&gt;.WriteHeaderFunc</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/textdestination-1#ETLBox_DataFlow_Connectors_TextDestination_1_CheckParameter">TextDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
@@ -78,6 +79,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpRequestMessage">DataFlowStreamDestination&lt;ExpandoObject&gt;.HttpRequestMessage</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpResponseMessage">DataFlowStreamDestination&lt;ExpandoObject&gt;.HttpResponseMessage</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding">DataFlowStreamDestination&lt;ExpandoObject&gt;.Encoding</a>
     </div>
     <div>
@@ -106,6 +110,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CleanUpOnFaulted_System_Exception_">DataFlowStreamDestination&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_NewMetaDataObject">DataFlowStreamDestination&lt;ExpandoObject&gt;.NewMetaDataObject</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteData__0_">DataFlowStreamDestination&lt;ExpandoObject&gt;.WriteData(ExpandoObject)</a>
@@ -174,7 +181,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -204,7 +211,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -284,12 +291,12 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_Connectors_TextDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_TextDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor">TextDestination()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -298,39 +305,10 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_TextDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_TextDestination__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor(System.String)">TextDestination(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TextDestination(string fileName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Connectors_TextDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_TextDestination__ctor_System_String_System_Func_System_Dynamic_ExpandoObject_System_String__" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor(System.String,System.Func{System.Dynamic.ExpandoObject,System.String})">TextDestination(String, Func&lt;ExpandoObject, String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -356,6 +334,35 @@ toc: false
       <tr>
         <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">writeLineFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_TextDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_TextDestination__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.TextDestination.#ctor(System.String)">TextDestination(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TextDestination(string fileName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
         <td></td>
       </tr>
     </tbody>

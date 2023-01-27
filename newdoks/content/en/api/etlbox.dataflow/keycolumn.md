@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10182
+weight: 10190
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.KeyColumn">
   <h1 id="ETLBox_DataFlow_KeyColumn" data-uid="ETLBox.DataFlow.KeyColumn" class="text-break">Class KeyColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used as as Key when the object is stored in a
 Key/Value database (e.g. Couchbase or Redis). The key column must either be of type string
 or implement the ToString() method.</p>
@@ -174,13 +174,13 @@ public sealed class KeyColumn : Attribute
     public string Value {get;set; }
 }</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_KeyColumn__ctor_" data-uid="ETLBox.DataFlow.KeyColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_KeyColumn__ctor" data-uid="ETLBox.DataFlow.KeyColumn.#ctor">KeyColumn()</h4>
   <div class="markdown level1 summary"><p>This property is used as an Key column when inserting data into a Key/Value store</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -189,13 +189,13 @@ public sealed class KeyColumn : Attribute
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_KeyColumn_KeyPropertyName_" data-uid="ETLBox.DataFlow.KeyColumn.KeyPropertyName*"></a>
   <h4 id="ETLBox_DataFlow_KeyColumn_KeyPropertyName" data-uid="ETLBox.DataFlow.KeyColumn.KeyPropertyName">KeyPropertyName</h4>
   <div class="markdown level1 summary"><p>Name of the property used for the Key - must be of type string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

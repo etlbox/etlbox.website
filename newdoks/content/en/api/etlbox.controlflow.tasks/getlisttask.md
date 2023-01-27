@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow.tasks"
-weight: 10064
+weight: 10067
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Tasks.GetListTask">
   <h1 id="ETLBox_ControlFlow_Tasks_GetListTask" data-uid="ETLBox.ControlFlow.Tasks.GetListTask" class="text-break">Class GetListTask
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
 In MySql, this will return a list of all schemas.</p>
 </div>
@@ -29,7 +29,7 @@ In MySql, this will return a list of all schemas.</p>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/gettablelisttask">GetTableListTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/getviewlisttask">GetViewListTask</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
   </div>
@@ -94,12 +94,14 @@ In MySql, this will return a list of all schemas.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_GetListTask_examples"><strong>Examples</strong></h5>
   <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.#ctor">GetListTask()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -107,14 +109,16 @@ In MySql, this will return a list of all schemas.</p>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_ControlFlow_Tasks_GetListTask__ctor_examples">Examples</h5>
+  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_ObjectNames_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.ObjectNames*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_ObjectNames" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.ObjectNames">ObjectNames</h4>
   <div class="markdown level1 summary"><p>A list containing all databases after executing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -139,9 +143,11 @@ In MySql, this will return a list of all schemas.</p>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_Sql_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.Sql*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_Sql" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.Sql">Sql</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -164,11 +170,15 @@ In MySql, this will return a list of all schemas.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_GetListTask_Sql_examples">Examples</h5>
+  <pre><code>GetDatabaseListTask.List();</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -193,13 +203,17 @@ In MySql, this will return a list of all schemas.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
+  <h5 id="ETLBox_ControlFlow_Tasks_GetListTask_TaskName_examples">Examples</h5>
+  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.RetrieveAll*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.RetrieveAll">RetrieveAll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
+In MySql, this will return a list of all schemas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -222,6 +236,8 @@ In MySql, this will return a list of all schemas.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll_examples">Examples</h5>
+  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

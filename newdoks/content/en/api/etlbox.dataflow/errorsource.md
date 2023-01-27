@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10155
+weight: 10162
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ErrorSource">
   <h1 id="ETLBox_DataFlow_ErrorSource" data-uid="ETLBox.DataFlow.ErrorSource" class="text-break">Class ErrorSource
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Works as a source component for any errors. Another component
 can use this source to redirect errors into the error data flow.</p>
 </div>
@@ -28,7 +28,7 @@ can use this source to redirect errors into the error data flow.</p>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
     <div class="level5"><span class="xref">ErrorSource</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
@@ -47,6 +47,9 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit">DataFlowExecutableSource&lt;ETLBoxError&gt;.ProgressCountIsInLimit</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsExceedingLimit">DataFlowExecutableSource&lt;ETLBoxError&gt;.ProgressCountIsExceedingLimit</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock">DataFlowExecutableSource&lt;ETLBoxError&gt;.SourceBlock</a>
     </div>
     <div>
@@ -59,10 +62,22 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute">DataFlowExecutableSource&lt;ETLBoxError&gt;.Execute()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ETLBoxError&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post">DataFlowExecutableSource&lt;ETLBoxError&gt;.Post()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Post_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ETLBoxError&gt;.Post(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_InternalPost_System_Nullable_System_Threading_CancellationToken__">DataFlowExecutableSource&lt;ETLBoxError&gt;.InternalPost(Nullable&lt;CancellationToken&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync">DataFlowExecutableSource&lt;ETLBoxError&gt;.ExecuteAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ETLBoxError&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
@@ -119,7 +134,7 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -158,7 +173,7 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
@@ -241,12 +256,14 @@ can use this source to redirect errors into the error data flow.</p>
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ErrorSource__ctor_" data-uid="ETLBox.DataFlow.ErrorSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource__ctor" data-uid="ETLBox.DataFlow.ErrorSource.#ctor">ErrorSource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -255,12 +272,14 @@ can use this source to redirect errors into the error data flow.</p>
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ErrorSource_CompleteManually_" data-uid="ETLBox.DataFlow.ErrorSource.CompleteManually*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_CompleteManually" data-uid="ETLBox.DataFlow.ErrorSource.CompleteManually">CompleteManually</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -290,7 +309,7 @@ can use this source to redirect errors into the error data flow.</p>
   <div class="markdown level1 summary"><p>If set to another error source, all message send to this source will redirected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -314,12 +333,14 @@ can use this source to redirect errors into the error data flow.</p>
     </tbody>
   </table>
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_ErrorSource_CheckParameter_" data-uid="ETLBox.DataFlow.ErrorSource.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_CheckParameter" data-uid="ETLBox.DataFlow.ErrorSource.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -334,7 +355,7 @@ can use this source to redirect errors into the error data flow.</p>
   <div class="markdown level1 summary"><p>Serialized a row using the default json serialization</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -394,9 +415,11 @@ can use this source to redirect errors into the error data flow.</p>
   </table>
   <a id="ETLBox_DataFlow_ErrorSource_InitComponent_" data-uid="ETLBox.DataFlow.ErrorSource.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_InitComponent" data-uid="ETLBox.DataFlow.ErrorSource.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -408,9 +431,11 @@ can use this source to redirect errors into the error data flow.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.InitComponent()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -422,9 +447,11 @@ can use this source to redirect errors into the error data flow.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.OnExecutionDoAsyncWork()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Works as a source component for any errors. Another component
+can use this source to redirect errors into the error data flow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -435,15 +462,15 @@ can use this source to redirect errors into the error data flow.</p>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.OnExecutionDoSynchronousWork()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_Send_" data-uid="ETLBox.DataFlow.ErrorSource.Send*"></a>
-  <h4 id="ETLBox_DataFlow_ErrorSource_Send_System_Exception_System_String_" data-uid="ETLBox.DataFlow.ErrorSource.Send(System.Exception,System.String)">Send(Exception, String)</h4>
+  <h4 id="ETLBox_DataFlow_ErrorSource_Send_System_Exception_System_String_System_String_System_String_" data-uid="ETLBox.DataFlow.ErrorSource.Send(System.Exception,System.String,System.String,System.String)">Send(Exception, String, String, String)</h4>
   <div class="markdown level1 summary"><p>Sends the error message into the error data flow</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Send(Exception e, string jsonRow)
+    public void Send(Exception e, string jsonRow, string errorContext = null, string sourceInfo = null)
 ```
 
 {{< rawhtml >}}
@@ -467,6 +494,18 @@ can use this source to redirect errors into the error data flow.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">jsonRow</span></td>
         <td><p>The serialized erroneous row</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorContext</span></td>
+        <td><p>Additional error information</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceInfo</span></td>
+        <td><p>Additional source information</p>
 </td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.transformations"
-weight: 10195
+weight: 10205
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.AggregationMethod">
   <h1 id="ETLBox_DataFlow_Transformations_AggregationMethod" data-uid="ETLBox.DataFlow.Transformations.AggregationMethod" class="text-break">Enum AggregationMethod
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Transformations</h6>
@@ -28,7 +28,7 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="fields">Fields
-  </h3>
+</h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>

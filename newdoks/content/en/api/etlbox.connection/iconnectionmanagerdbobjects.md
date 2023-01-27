@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.connection"
-weight: 10009
+weight: 10012
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Connection.IConnectionManagerDbObjects">
   <h1 id="ETLBox_Connection_IConnectionManagerDbObjects" data-uid="ETLBox.Connection.IConnectionManagerDbObjects" class="text-break">Interface IConnectionManagerDbObjects
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.Connection</h6>
@@ -28,13 +28,13 @@ toc: false
 
 {{< rawhtml >}}
   <h3 id="methods">Methods
-  </h3>
+</h3>
   <a id="ETLBox_Connection_IConnectionManagerDbObjects_CheckIfTableOrViewExists_" data-uid="ETLBox.Connection.IConnectionManagerDbObjects.CheckIfTableOrViewExists*"></a>
   <h4 id="ETLBox_Connection_IConnectionManagerDbObjects_CheckIfTableOrViewExists_System_String_" data-uid="ETLBox.Connection.IConnectionManagerDbObjects.CheckIfTableOrViewExists(System.String)">CheckIfTableOrViewExists(String)</h4>
   <div class="markdown level1 summary"><p>Describes how the connection manager can check if a table or view exists</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -81,7 +81,7 @@ toc: false
   <div class="markdown level1 summary"><p>Describe how the table meta data can be read from the database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#

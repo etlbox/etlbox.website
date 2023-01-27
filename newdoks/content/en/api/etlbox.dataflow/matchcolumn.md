@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10183
+weight: 10191
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MatchColumn">
   <h1 id="ETLBox_DataFlow_MatchColumn" data-uid="ETLBox.DataFlow.MatchColumn" class="text-break">Class MatchColumn
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>This attribute defines that this property is used to match with the property of the object
 used in the Source for a Lookup identified by the given lookupSourcePropertyName.</p>
 </div>
@@ -179,12 +179,14 @@ public class MyDataRow
     public string Value { get; set; }
 }</code></pre>
   <h3 id="constructors">Constructors
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_MatchColumn__ctor_" data-uid="ETLBox.DataFlow.MatchColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_MatchColumn__ctor" data-uid="ETLBox.DataFlow.MatchColumn.#ctor">MatchColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This attribute defines that this property is used to match with the property of the object
+used in the Source for a Lookup identified by the given lookupSourcePropertyName.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -192,12 +194,25 @@ public class MyDataRow
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_MatchColumn__ctor_examples">Examples</h5>
+  <pre><code>public class MyLookupData
+{
+    [MatchColumn(&quot;Id&quot;)]
+    public string LookupId { get; set; }
+    [RetrieveColumn(&quot;Value&quot;)]
+    public string LookupValue { get; set; }
+}
+public class MyDataRow
+{
+    public string Id { get; set; }
+    public string Value { get; set; }
+}</code></pre>
   <a id="ETLBox_DataFlow_MatchColumn__ctor_" data-uid="ETLBox.DataFlow.MatchColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_MatchColumn__ctor_System_String_" data-uid="ETLBox.DataFlow.MatchColumn.#ctor(System.String)">MatchColumn(String)</h4>
   <div class="markdown level1 summary"><p>This property is used to check if is matches with the lookup data .</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -224,13 +239,13 @@ public class MyDataRow
     </tbody>
   </table>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <a id="ETLBox_DataFlow_MatchColumn_InputPropertyName_" data-uid="ETLBox.DataFlow.MatchColumn.InputPropertyName*"></a>
   <h4 id="ETLBox_DataFlow_MatchColumn_InputPropertyName" data-uid="ETLBox.DataFlow.MatchColumn.InputPropertyName">InputPropertyName</h4>
   <div class="markdown level1 summary"><p>Name of the property in the input data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
@@ -258,7 +273,7 @@ public class MyDataRow
   <div class="markdown level1 summary"><p>Name of the corresponding column in the lookup object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
