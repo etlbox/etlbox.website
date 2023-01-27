@@ -3,13 +3,19 @@
 .api .card {
     margin: 1rem;
     font-size: $font-size-sm;
-    width: 23rem;
+    //width: 23rem;
   }
+
 .api .card .card-header {
-    background-color: #999;
+    color:$body-color;
     font-weight: 700;
     font-size: $font-size-base;
 }
+
+[data-dark-mode] .api .card .card-header {
+    color: $body-color-dark;
+}
+  
 
 .api-content {
     font-size: $font-size-base;
