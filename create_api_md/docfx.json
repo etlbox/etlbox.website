@@ -1,0 +1,172 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.AnalysisServices"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Couchbase"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Csv"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Db2"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.MySql"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.SqlServer"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Excel"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Json"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MariaDb"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MongoDb"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MySql"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Odbc"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.OleDb"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Oracle"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Parquet"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Postgres"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Redis"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SapAse"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SQLite"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer"
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Xml"
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "template": [
+      "statictoc",
+      "templates"
+    ],
+    "globalMetadata": {
+      "_disableFooter": true,
+      "_disableContribution": true,
+      "_disableNavbar": true,
+      "_disableBreadcrumb": true,
+      "_disableToc": true,
+      "_disableAffix": true,
+      "_enableSearch": false
+    },
+    "markdownEngineName": "markdig"
+  }
+}
