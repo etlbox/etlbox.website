@@ -387,8 +387,7 @@ The default batch size is 1000.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_ParquetDestination_1_HttpContentType_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination`1.HttpContentType*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetDestination_1_HttpContentType" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination`1.HttpContentType">HttpContentType</h4>
-  <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

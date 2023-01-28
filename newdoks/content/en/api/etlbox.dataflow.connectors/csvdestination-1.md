@@ -434,7 +434,7 @@ You can modify the context before data is written.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_CsvDestination_1_HttpContentType_" data-uid="ETLBox.DataFlow.Connectors.CsvDestination`1.HttpContentType*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvDestination_1_HttpContentType" data-uid="ETLBox.DataFlow.Connectors.CsvDestination`1.HttpContentType">HttpContentType</h4>
-  <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
+  <div class="markdown level1 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

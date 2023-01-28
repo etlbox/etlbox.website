@@ -15,8 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.ParquetSource">
   <h1 id="ETLBox_DataFlow_Connectors_ParquetSource" data-uid="ETLBox.DataFlow.Connectors.ParquetSource" class="text-break">Class ParquetSource
 </h1>
-  <div class="markdown level0 summary"><p>Reads data from a parquet source. While reading the data from the file, data is also asynchronously posted into the targets.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -349,8 +348,7 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_Connectors_ParquetSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetSource__ctor" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor">ParquetSource()</h4>
-  <div class="markdown level1 summary"><p>Reads data from a parquet source. While reading the data from the file, data is also asynchronously posted into the targets.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -362,8 +360,7 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_ParquetSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetSource__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor(System.String,ETLBox.DataFlow.ResourceType)">ParquetSource(String, ResourceType)</h4>
-  <div class="markdown level1 summary"><p>Reads data from a parquet source. While reading the data from the file, data is also asynchronously posted into the targets.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -397,8 +394,7 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_Connectors_ParquetSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetSource__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.ParquetSource.#ctor(System.String)">ParquetSource(String)</h4>
-  <div class="markdown level1 summary"><p>Reads data from a parquet source. While reading the data from the file, data is also asynchronously posted into the targets.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

@@ -15,8 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.CsvDestination">
   <h1 id="ETLBox_DataFlow_Connectors_CsvDestination" data-uid="ETLBox.DataFlow.Connectors.CsvDestination" class="text-break">Class CsvDestination
 </h1>
-  <div class="markdown level0 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -295,8 +294,7 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_Connectors_CsvDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.CsvDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.CsvDestination.#ctor">CsvDestination()</h4>
-  <div class="markdown level1 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -308,8 +306,7 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_CsvDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.CsvDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvDestination__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.CsvDestination.#ctor(System.String)">CsvDestination(String)</h4>
-  <div class="markdown level1 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

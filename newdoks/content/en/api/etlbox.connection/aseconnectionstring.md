@@ -180,7 +180,7 @@ toc: false
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.AseConnectionString, System.Data.Common.DbConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Connection_AseConnectionString_DbNameKeyword_" data-uid="ETLBox.Connection.AseConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Connection_AseConnectionString_DbNameKeyword" data-uid="ETLBox.Connection.AseConnectionString.DbNameKeyword">DbNameKeyword</h4>
-  <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
+  <div class="markdown level1 summary"><p>A helper class for encapsulating a connection string to a (Sybase) SAP ASE database in an object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

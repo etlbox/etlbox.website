@@ -15,9 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.CsvSource">
   <h1 id="ETLBox_DataFlow_Connectors_CsvSource" data-uid="ETLBox.DataFlow.Connectors.CsvSource" class="text-break">Class CsvSource
 </h1>
-  <div class="markdown level0 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
-Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -356,9 +354,7 @@ Data is read a as string from the source and dynamically converted into the corr
 </h3>
   <a id="ETLBox_DataFlow_Connectors_CsvSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvSource__ctor" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor">CsvSource()</h4>
-  <div class="markdown level1 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
-Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -370,9 +366,7 @@ Data is read a as string from the source and dynamically converted into the corr
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_CsvSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvSource__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor(System.String,ETLBox.DataFlow.ResourceType)">CsvSource(String, ResourceType)</h4>
-  <div class="markdown level1 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
-Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -406,9 +400,7 @@ Data is read a as string from the source and dynamically converted into the corr
   </table>
   <a id="ETLBox_DataFlow_Connectors_CsvSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CsvSource__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.CsvSource.#ctor(System.String)">CsvSource(String)</h4>
-  <div class="markdown level1 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
-Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

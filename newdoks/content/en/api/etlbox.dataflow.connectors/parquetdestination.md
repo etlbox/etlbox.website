@@ -15,8 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination">
   <h1 id="ETLBox_DataFlow_Connectors_ParquetDestination" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination" class="text-break">Class ParquetDestination
 </h1>
-  <div class="markdown level0 summary"><p>Implemented by data flow destinations that allow writing data in a stream</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -306,8 +305,7 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor">ParquetDestination()</h4>
-  <div class="markdown level1 summary"><p>Implemented by data flow destinations that allow writing data in a stream</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -319,8 +317,7 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor(System.String,ETLBox.DataFlow.ResourceType)">ParquetDestination(String, ResourceType)</h4>
-  <div class="markdown level1 summary"><p>Implemented by data flow destinations that allow writing data in a stream</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -354,8 +351,7 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ParquetDestination__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.ParquetDestination.#ctor(System.String)">ParquetDestination(String)</h4>
-  <div class="markdown level1 summary"><p>Implemented by data flow destinations that allow writing data in a stream</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
