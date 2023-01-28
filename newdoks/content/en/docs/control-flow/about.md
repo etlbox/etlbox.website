@@ -21,7 +21,7 @@ to create some tables for logging or to retrieve the whole log as Json.
 
 Control Flow Tasks reside in the `ETLBox.ControlFlow.Tasks` namespace - tasks for logging in the `ETLBox.Logging` namespace.
 
-## General Idea behind Control Flow Task
+## General idea behind Control Flow Task
 
 Control Flow Tasks are a set of tasks to manage, alter or query a database. With one single line of code you will be able to create 
 a table or fire some sql on your database - you write your code in C#, and in the background database code for your specific 
@@ -103,7 +103,7 @@ properties and methods of the object.
 ### Configure a task
 
 But there is more. Let's assume you want to count the rows on a pretty big table, a "normal" row count perhaps would take some time. 
-So RowCount has a property called `QuickQueryMode`. If set to true, a sql statement that queries the partition tables is then executed. 
+So RowCount has a property called `QuickQueryMode` (which will only be quick on SqlServer). If set to true, a sql statement that queries the partition tables is then executed. 
 
 ```C#
 RowCountTask task = new RowCountTask("demotable") 
