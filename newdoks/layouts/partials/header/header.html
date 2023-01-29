@@ -98,38 +98,12 @@
 
 <!-- Load Algolia scripts -->
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js"></script>
 
 <style>
   
   
-  .algolia-autocomplete {
-    width: 100%;
-  }
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 100%;
-  }
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #999;
-    border-top: none;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #B2D7FF;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-  
+ 
 </style>
 
 
@@ -141,13 +115,15 @@
   
 var client = algoliasearch("JCLW0GC290","5fe5189716b04e69368671dd944ef1b0");
 var index = client.initIndex("etlbox");
-autocomplete('#search-input', { hint: false }, [
+//dropdownMenuContainer: "#suggestions"
+autocomplete('#search-input', { hint: true, debug:true }, [
   {
     source: autocomplete.sources.hits(index, { hitsPerPage: 10 }),
       displayKey: 'title',
        templates: {
           suggestion: function(suggestion) {
-            return suggestion._highlightResult.content.value;
+            console.log(suggestion);
+            return "<a href=\"xxx.html\"><span class=\"suggestion__title\">"+ suggestion._highlightResult.title.value + "</span><spanvclass=\"suggestion__description\">" + suggestion._highlightResult.description.value + "</span></a>";
           },
           empty: function(suggestion) {
             return 'No result';
