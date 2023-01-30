@@ -1,14 +1,7 @@
-var search = document.getElementById('search-input');
-if (search !== null) {
-  document.addEventListener('keydown', inputFocus);
-}
-function inputFocus(e) {
-  if (e.ctrlKey && e.key === '/' ) {
-    e.preventDefault();
-    search.focus();
-  }
-  if (e.key === 'Escape' ) {
-    search.blur();
-    //suggestions.classList.add('d-none');
-  }
-}
+algoliasearchNetlify({
+  appId: 'LSPSESA5TO',
+  apiKey: '197f03635c0f8841b57b6daa0b8e8f73',
+  siteId: 'c975bf38-6508-465e-98ed-0f61c02a80d9',
+  branch: 'main',
+  selector: 'div#search-box',
+});

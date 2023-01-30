@@ -86,56 +86,17 @@
         {{- end }}
 
         {{ if $showFlexSearch -}}
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+        
         <hr class="text-black-50 my-4 d-lg-none">
-        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+        <div id="search-box" class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2 d-none d-sm-block"></div>
+
+        <!--<form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
           <input id="search-input" class="form-control is-search" type="search" placeholder="{{ i18n "search-text" }}" aria-label="{{ i18n "search-text" }}" autocomplete="off">
           <div id="suggestions" class="shadow bg-white rounded d-none"></div>
-        </form>
-
-        
-        
-        <!-- Search input -->
-
-<!-- Load Algolia scripts -->
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js"></script>
-
-<style>
-  
-  
- 
-</style>
-
-
-
-
-<!-- Initialise search -->
-<script>
- 
-  
-var client = algoliasearch("JCLW0GC290","5fe5189716b04e69368671dd944ef1b0");
-var index = client.initIndex("etlbox");
-//dropdownMenuContainer: "#suggestions"
-autocomplete('#search-input', { hint: true, debug:true }, [
-  {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 10 }),
-      displayKey: 'title',
-       templates: {
-          suggestion: function(suggestion) {
-            console.log(suggestion);
-            return "<a href=\"xxx.html\"><span class=\"suggestion__title\">"+ suggestion._highlightResult.title.value + "</span><spanvclass=\"suggestion__description\">" + suggestion._highlightResult.description.value + "</span></a>";
-          },
-          empty: function(suggestion) {
-            return 'No result';
-          }
-        }
-    }
-  ]).on("autocomplete:selected",function(event, suggestion, dataset, context) {
-    console.log(event, suggestion, dataset, context);
-    window.location.assign(suggestion.permalink);
-  });
-</script>
-<!-- Remove here! -->
+        </form>-->        
         {{ end -}}
 
         {{ if .Site.Params.etlboxoptions.showCTA -}}
