@@ -124,3 +124,6 @@ rel  = "sitemap"
   [markup.highlight]
     noClasses = false
 
+[security]
+	[security.exec]
+		allow = ['^go$', '^npx$', '^postcss$', '^babel$']
