@@ -1,3 +1,4 @@
+
 algoliasearchNetlify({
   appId: 'LSPSESA5TO',
   apiKey: '197f03635c0f8841b57b6daa0b8e8f73',

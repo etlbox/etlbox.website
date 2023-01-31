@@ -33,10 +33,6 @@
 
 {{ $showFlexSearch := .Site.Params.options.flexSearch }}
 
-{{ if $showFlexSearch -}}
-  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
-{{ end -}}
-
 {{ if .Site.Params.options.darkMode -}}
   {{ $darkMode := resources.Get "js/darkmode.js" -}}
   {{ $darkMode := $darkMode | js.Build -}}

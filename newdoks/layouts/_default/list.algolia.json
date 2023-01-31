@@ -36,6 +36,9 @@
     {{- .Scratch.SetInMap "temp" "weight" $hit.Weight -}}
     {{- .Scratch.SetInMap "temp" "wordcount" $hit.WordCount -}}
     {{- .Scratch.SetInMap "temp" "section" $hit.Section -}}
+
+
+    
     {{/* Include valid page vars */}}
     {{- range $key, $param := (.Scratch.Get "temp") -}}
       {{- if in $validVars $key -}}
