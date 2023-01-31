@@ -101,7 +101,9 @@
 
         {{ if .Site.Params.etlboxoptions.showCTA -}}
         <hr class="text-black-50 my-4 d-lg-none">
-        <a class="btn btn-primary btn-md" href="/buy/pricing" role="button">Buy now</a>
+        <span class="align-items-center d-flex">
+        <a class="btn btn-primary btn-sm" href="/buy/pricing" role="button">Buy now</a>
+        </span>
         {{- end }}
 
         
@@ -109,7 +111,7 @@
         <ul class="nav flex-column flex-lg-row">
           {{ range .Site.Menus.social -}}
             <li class="nav-item">
-              <a class="nav-link social-link" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="ms-2 d-lg-none text-center">{{ .Name | safeHTML }}</span></a>
+              <a class="nav-link social-link mt-1" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="ms-2 d-lg-none text-center">{{ .Name | safeHTML }}</span></a>
             </li>
           {{ end -}}
         </ul>
