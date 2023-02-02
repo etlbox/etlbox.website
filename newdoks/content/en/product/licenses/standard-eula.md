@@ -3,10 +3,9 @@ title: "Standard End-user License Agreement"
 description: "The standard end-user license agreement for most packages."
 lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
 draft: false
-aliases: "/articles/buy/eula.html"
 ---
 
-If you plan to purchase the REDISTRIBUTABLE package, please see our [Royality-free EULA](/buy/licenses/royality-free-eula/).
+If you plan to purchase the REDISTRIBUTABLE package, please see our [Royality-free EULA](/product/licenses/royality-free-eula/).
 
 {{< nowrap-code >}}
 (C) 2020 ETLBox Office Andreas Lennartz

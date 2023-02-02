@@ -3,13 +3,12 @@ title: "Royalty-free End-user License Agreement"
 description: "The royality free EULA for the REDISTRIBUTABLE license."
 lead: "The royality-free EULA allows redistribution of ETLBox and comes with the REDISTRIBUTABLE package."
 draft: false
-aliases: "/articles/buy/royalty_free_eula.html"
 ---
 
-For all other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/buy/licenses/standard-eula/).
+For all other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/product/licenses/standard-eula/).
 
 {{< nowrap-code >}}
-(C) 2020 ETLBox Office Andreas Lennartz
+(C) 2023 ETLBox Office Andreas Lennartz
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 

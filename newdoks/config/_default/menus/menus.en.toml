@@ -79,35 +79,34 @@
 [[main]]
   name = "Product"
   weight = 300
-  identifier = "licensing"
+  identifier = "product"
 
 [[main]]
   name = "Pricing"
-  url = "/buy/pricing/"
+  url = "/pricing/"
   identifier = "pricing"
   weight = 310
-  parent = "licensing"
 
 [[main]]
   name = "Support"
   identifier = "support"
   url = "/support/options/"
   weight = 320
-  parent = "licensing"
+  parent = "product"
 
 [[main]]
   name = "Release notes"
   identifier = "release-notes"
-  url = "/support/release-notes/"
+  url = "/product/release-notes/"
   weight = 330
-  parent = "licensing"
+  parent = "product"
 
 [[main]]
-  name = "Trial key"
+  name = "Try yourself"
   identifier = "trial"
-  url = "/support/contact/request-trial"
+  url = "/product/get-trial"
   weight = 340
-  parent = "licensing"
+  parent = "product"
 
 #[[social]]
 #  name = "Twitter"
@@ -128,12 +127,12 @@
 
  [[footer_1]]
    name = "Docs"
-   url = "/docs/getting-started"
+   url = "/docs/getting-started/quick-start"
    weight = 510
 
  [[footer_1]]
    name = "Recipes"
-   url = "/recipes/basic-example/"
+   url = "/recipes/basics/basic-example/"
    weight = 520
 
  [[footer_1]]
@@ -143,32 +142,27 @@
 
  [[footer_2]]
    name = "Pricing"
-   url = "/buy/pricing"
+   url = "/pricing"
    weight = 540
 
  [[footer_2]]
-   name = "Support"
-   url = "/support/options"
-   weight = 550
-
- [[footer_2]]
-   name = "Release notes"
-   url = "/support/release-notes"
+   name = "Try yourself"
+   url = "/product/get-trial"
    weight = 560
 
  [[footer_2]]
-   name = "Register license"
-   url = "/buy/register-license"
+   name = "Release notes"
+   url = "/product/release-notes"
    weight = 570
 
  [[footer_3]]
-   name = "Contact"
+   name = "Support"
    url = "/support/options"
    weight = 580
 
  [[footer_3]]
    name = "Privacy policy"
-   url = "/privacy-policy/"
+   url = "/support/privacy-policy/"
    weight = 590
 
  #[[footer_3]]

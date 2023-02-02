@@ -23,8 +23,3 @@ VAT Number: DE333985271
 Phone: +49 30 72621 1087
 {{< /nowrap-code >}}
 
-<br/>
-
-### Release Notes
-
-[See our release notes page for the latest information about changes for each version](/support/release-notes/).
