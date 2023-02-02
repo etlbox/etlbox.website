@@ -25,7 +25,7 @@
   package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
-    baseUrl = "https://doks.netlify.app/"
+    baseUrl = "https://etlbox.netlify.app/"
     sitemapPath = "/sitemap.xml"
     ignorePeriod = 0
     providers = [
@@ -40,3 +40,39 @@
   port = 8888
   publish = "public"
   autoLaunch = false
+
+[[redirects]]
+  from = "/demo/api/orders"
+  to = "/.netlify/functions/orders"
+  status = 200
+  force = true
+      
+[[redirects]]  
+  from = "/book-a-demo"
+  to = "https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/servicedesk"
+  to = "https://etlbox.atlassian.net/servicedesk/customer/portals"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/std-eula"
+  to = "https://www.etlbox.net/buy/licenses/standard-eula/"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/rf-eula"
+  to = "https://www.etlbox.net/buy/licenses/royality-free-eula/"
+  status = 302
+  force = true
+
+[[redirects]]  
+  from = "/register-license/"
+  to = "https://www.etlbox.net/buy/register-license/"
+  status = 302
+  force = true
