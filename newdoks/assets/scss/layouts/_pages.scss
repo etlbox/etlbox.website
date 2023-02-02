@@ -72,4 +72,10 @@ table {
   overflow-x: auto;
   white-space: nowrap;
   
+
+  @include media-breakpoint-up(md) {
+    display: table;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
