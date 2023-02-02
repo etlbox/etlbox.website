@@ -108,9 +108,6 @@ rel  = "sitemap"
     source = "layouts"
     target = "layouts"
   [[module.mounts]]
-    source = "node_modules/flexsearch"
-    target = "assets/js/vendor/flexsearch"
-  [[module.mounts]]
     source = "node_modules/mermaid"
     target = "assets/js/vendor/mermaid"
   [[module.mounts]]

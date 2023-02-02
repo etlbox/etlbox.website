@@ -42,7 +42,7 @@ schemaGitHub = "https://github.com/etlbox"
 #schemaSection = "blog" --not used so far
 
 ## Sitelinks Search Box
-siteLinksSearchBox = false
+#siteLinksSearchBox = false - not used?
 
 ## Chrome Browser
 themeColor = "#fff"
@@ -81,7 +81,7 @@ alertText = "New version out now!"
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/etlbox/etlbox.website"
+docsRepo = "https://github.com/etlbox/etlbox.website/hugo/"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = true
@@ -107,8 +107,8 @@ lastMod = false
   toTopButton = false #buggy, div container of button stretches over the full widht and overlays links on the same level
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
 
-[etlboxoptions]
-  showCTA = true #own addition
+[etlboxoptions] #own addition
+  showCTA = true 
 
 [menu]
   [menu.section]
