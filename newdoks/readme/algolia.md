@@ -1,5 +1,3 @@
-# ETLBox website
-
 ## Algolia - First try
 
 Used this configuration guide: https://www.mcmurray.co.nz/blog/hugo-search-with-algolia/create-the-index/
