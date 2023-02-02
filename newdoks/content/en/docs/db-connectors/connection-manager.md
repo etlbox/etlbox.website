@@ -23,16 +23,16 @@ These relational database are currently **fully** supported with ETLBox:
 
 Database  | Native support | Odbc support | OleDb support
 ----------|:--------------:|:------------:|:-------------:
-Sql Server| <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-check"></i>
-Postgres  | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-SQLite    | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-Oracle    | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-MySql     | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-Maria     | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-Db2       | <i class="bi-check"></i> | <i class="bi-x"></i> | <i class="bi-x"></i>
-Sap ASE (Sybase) | <i class="bi-check"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-Microsoft Access| <i class="bi-x"></i> | <i class="bi-check"></i> | <i class="bi-x"></i>
-Other databases | <i class="bi-x"></i> | * | *
+Sql Server| ✓ | ✓ | ✓
+Postgres  | ✓ | ✓ | X
+SQLite    | ✓ | ✓ | X
+Oracle    | ✓ | ✓ | X
+MySql     | ✓ | ✓ | X
+Maria     | ✓ | ✓ | X
+Db2       | ✓ | X | X
+Sap ASE (Sybase) | ✓ | ✓ | X
+Microsoft Access| X | ✓ | X
+Other databases | X | * | *
 
 *: There is a limited support for other databases as well - you can use the generic Odbc or OleDb connection manager to access these databases. Please note that using these connections comes with some major limitations. 
 
@@ -42,9 +42,9 @@ There are source and destinations components available for the following NoSql d
 
 Database | Type   | Source  | Destination | Other components
 ---------|------  |:-----------------:|:--------------------:|:-------:
-MongoDb  |Document|<i class="bi-check"></i>|<i class="bi-check"></i>|<i class="bi-x"></i>
-Couchbase|Document|<i class="bi-check"></i>|<i class="bi-check"></i>|<i class="bi-x"></i>
-Redis    |Key-Value|<i class="bi-check"></i>|<i class="bi-check"></i>|<i class="bi-x"></i>
+MongoDb  |Document|✓|✓|X
+Couchbase|Document|✓|✓|✓
+Redis    |Key-Value|✓|✓|X
 
 ## Connection manager
 
