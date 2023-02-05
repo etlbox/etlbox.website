@@ -23,7 +23,7 @@ So why wait? Sign up for your free trial today and experience the power and vers
 If you don't exceed the limit of 5000 rows per dataflow, you can use them directly in your data flow. If you want to test ETLBox without any limitations,  simply click on the link below to access the trial form and get your trial license instantly - you can start using ETLBox right away!
 
 {{< center >}}
-{{< link-ext url="https://www.nuget.org/packages?q=etlbox" text="Open the ETLBox trial registriation form" >}} <br/>
+{{< link-ext url="https://www.nuget.org/packages?q=etlbox" text="Open the ETLBox trial registration form" >}} <br/>
 <b>Don't miss this opportunity to take your data processing to the next level with ETLBox.</b>
 {{</ center >}}
 
