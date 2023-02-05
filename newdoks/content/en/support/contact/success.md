@@ -1,10 +1,10 @@
 ---
-title: "Success"
+title: "We will get back to you!"
 description: "Thanks for your request"
 draft: false
 ---
 
-We successfully received your request. Normally we get back to you within 24 hours. 
+We successfully received your request. Normally you will hear from us within 24 hours. 
 
 #### No response received yet?
 

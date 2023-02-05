@@ -1,0 +1,32 @@
+<form class="contactforms" name="complete-purchase-form" method="POST" data-netlify="true" action="/support/success">
+    <div class="row form-group">
+        <label class="col-sm-4" for="email">Main contact mail (required)</label>
+        <div class="col-sm-5">
+            <input class="form-control" type="email" id="email" name="contactemail" placeholder="Enter main contact email"
+                required="required" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <label class="col-sm-4" for="email">Second contact mail</label>
+        <div class="col-sm-5">
+            <input class="form-control" type="email" id="secondemail" name="secondemail" placeholder="Enter alternative email"
+                 />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <label class="col-sm-4" for="message">Additional notes</label>
+        <div class="col-sm-5">
+            <textarea class="form-control" rows="10" id="message" name="contactmessage"
+                placeholder="Enter additional notes"></textarea>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-5">
+            <button type="submit" class="btn btn-primary">Complete purchase <i class="bi-check"></i></button>
+        </div>
+    </div>
+</form>
