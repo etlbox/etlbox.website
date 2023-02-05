@@ -5,25 +5,32 @@ draft: false
 images: []
 ---
 
-## Why bother? 
+## Discover the Power of ETLBox
 
-ETLBox is a powerful and versatile C# library for performing Extract, Transform, Load (ETL) operations. Whether you need to move data from one database to another, or process large amounts of data for business intelligence purposes, ETLBox provides a comprehensive set of tools to streamline your work. With a simple and intuitive API, you can quickly and easily extract data from various sources, transform it into the desired format, and load it into your target system. ETLBox is highly customizable and flexible, allowing you to easily adapt it to your specific needs. So if you're looking for a reliable and efficient way to perform ETL operations, give ETLBox a try!
+Stop wasting time on manual and time-consuming data processing tasks. ETLBox is a powerful and versatile C# library for performing Extract, Transform, Load (ETL) operations. With its simple and intuitive API, you can quickly and easily extract data from various sources, transform it into the desired format, and load it into your target system. Whether you need to move data from one database to another or process large amounts of data for business intelligence purposes, ETLBox provides a comprehensive set of tools to streamline your work. It's highly customizable and flexible, so you can easily adapt it to your specific needs.
 
-### Sign up
+### Sign Up for Your Free Trial
 
-Sign up for a free trial of ETLBox and see for yourself why it's the best C# library for ETL operations. Our trial license gives you full access to all of ETLBox's features, so you can test drive the library and see how it can streamline your data processing tasks. Whether you're a data analyst, developer, or data scientist, ETLBox makes it easy to perform complex ETL operations with just a few lines of code.
+See why ETLBox is the best C# library for ETL operations with a free trial of our powerful library. Our trial license gives you full access to all of ETLBox's features, so you can test drive the library and see how it can streamline your data processing tasks. Whether you're a data analyst, developer, or data scientist, ETLBox makes it easy to perform complex ETL operations with just a few lines of code.
 
-So why wait? Sign up for your free trial today and experience the power and versatility of ETLBox for yourself. Just add the publicly available NuGet packages to your project:
+#### Nuget - free until 5000 rows
+
+Get started today by adding the publicly available NuGet packages to your project:
 
 {{< center >}}
 {{< img-simple src="nuget-logo.svg" width="150">}}<br />
-{{< link-ext url="https://www.nuget.org/packages?q=etlbox" text="See all available ETLBox packages" >}} 
+{{< link-ext url="https://www.nuget.org/packages?q=etlbox" text="See all available ETLBox packages" >}}
 {{</ center >}}
 
-If you don't exceed the limit of 5000 rows per dataflow, you can use them directly in your data flow. If you want to test ETLBox without any limitations,  simply click on the link below to access the trial form and get your trial license instantly - you can start using ETLBox right away!
+You will need to add this package to your project. If you don't exceed the limit of 5000 rows per dataflow, everything will work out of the box. 
+
+#### Unlimited rows
+
+For unlimited testing, simply click on the link below to access the trial form and get your trial license instantly. After registering the trial license key, the 5000 rows per DataFlow restriction on the publicly available nuget package is removed. 
 
 {{< center >}}
+{{< img-simple src="logo_etlbox_64x64.svg" width="38">}} <b>ETLBox Portal</b><br />
 {{< link-ext url="https://etlbox.app" text="Open the ETLBox trial registration form" >}} <br/>
-<b>Don't miss this opportunity to take your data processing to the next level with ETLBox.</b>
 {{</ center >}}
 
+Don't miss this opportunity to streamline your ETL operations with the powerful and versatile ETLBox library.
