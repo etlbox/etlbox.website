@@ -88,3 +88,9 @@
   to = "https://www.etlbox.net/product/register-license/"
   status = 302
   force = true
+
+[[redirects]]  
+  from = "/privacy-policy"
+  to = "https://www.etlbox.net/support/privacy-policy/"
+  status = 302
+  force = true
