@@ -47,10 +47,38 @@ public class ExcelData {
 }
 
 ExcelSource<ExcelData> source = 
-    new ExcelSource<ExcelData> ("src/DataFlow/ExcelDataFile.xlsx");
+    new ExcelSource<ExcelData> ("ExcelDataFile.xlsx");
 ```
 
-You can change this behavior with the Attribute `ExcelColumn`. Here you can either define a different header name used for matching for a property. Or you can set the column index  or the property - the first column would be 0, the 2nd column 1, ... When you using the column index, you can read also from ExcelFile that have no header row. In this case, you need to set the property `HasNoHeader` to true when using the ExcelSource.
+### ExcelColumn Attribute
+
+You can change this behaviour with the Attribute `ExcelColumn`. Here you can either define a different header name used for matching for a property. Or you can set the column index  or the property - the first column would be 0, the 2nd column 1, ... 
+
+So for our example, you could also create a POCO like this when using the ExcelColum attribute to define the mapping:
+
+```C#
+public class ExcelData {
+    [ExcelColumn(1)]
+    public int SecondColumn { get; set; }
+    [ExcelColumn("Col1")]
+    public string FirstColumn { get; set; }
+}
+```
+
+You can either define the attributes directly on your object. Alternatively, you can use the `ExcelColumns` property to manually define your attribute. You could achieve the same behaviour like above with the following code:
+
+```C#
+ExcelSource<ExcelData> source = new ExcelSource<ExcelData>("ExcelDataFile.xlsx");
+source.ExcelColumns = new[] {
+    new ExcelColumn() { ColumnIndex = 1, PropertyName = "SecondColumn" },
+    new ExcelColumn() { ColumnName = "Col1", PropertyName = "FirstColumn" }
+};
+```
+
+
+### Excel without header
+
+When you using the ExcelColumn attribute with column index, you can read also from ExcelFile that has no header row. In this case, you need to set the property `HasNoHeader` to true when using the ExcelSource.
 
 Usage example for an excel file that contains no header. This could like this:
 
@@ -81,6 +109,8 @@ ExcelSource<ExcelData> source =
 The ExcelRange does not need to define the full range. It is sufficient if you just set the starting coordinates. The end of the
 data can be automatically determined from the underlying ExcelDataReader.
 
+#### Ignoring empty rows
+
 The ExcelSource has a property `IgnoreBlankRows`. This can be set to true, and all rows which cells are completely empty
 are ignored when reading data from your source. 
 
@@ -91,10 +121,21 @@ The ExcelSource comes like all other components with the ability to work with dy
 Just define your ExcelSource like this:
 
 ```C#
-ExcelSource source = new ExcelSource("src/DataFlow/ExcelDataFile.xlsx");
+ExcelSource source = new ExcelSource("ExcelDataFile.xlsx");
 ```
 
 This will internally create an ExpandoObject for further processing. The property name will automatically be determined by the header column. If you don't have a header column, the property names would be `Column1` for the first, `Column2` for the second column and so on. 
+
+If you want to have different property names in your created ExpandoObject than the defined header names, you could also set the mapping manually using the `ExcelColumns` property:
+
+```C#
+ExcelSource source = new ExcelSource("ExcelDataFile.xlsx");
+
+source.ExcelColumns = new[] {
+    new ExcelColumn() { ColumnName = "HeaderName", PropertyName = "OwnPropName" },
+    new ExcelColumn() { ColumnIndex = 1, PropertyName = "AnotherPropName" }
+};
+```
 
 ### Read field headers
 
@@ -108,7 +149,7 @@ string[] headers = source.ReadFieldHeaders();
 
 ## ExcelDestination
 
-You can use the ExcelDestination to create Excel files. Excel only allow to create files with a maximum of 1 million rows. The Excel destination does not support streaming of data directly into an excel file - all rows that need to be written into the destination are stored in memory first. When all data has arrived at the ExcelDestination, it will then be read from memory and saved in the destination file. 
+You can use the ExcelDestination to create Excel files. Excel only allows to create files with a maximum of 1 million rows. The Excel destination does not support streaming of data directly into an excel file - all rows that need to be written into the destination are stored in memory first. When all data has arrived at the ExcelDestination, it will then be read from memory and saved in the destination file. 
 
 ### Example
 
