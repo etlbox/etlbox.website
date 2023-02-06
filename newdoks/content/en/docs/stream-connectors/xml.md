@@ -134,7 +134,7 @@ XmlSource source = new XmlSource("demo2.xml", ResourceType.File)
 };
 ```
 
-#### Handling attributes with dynamic objects
+### Handling attributes with dynamic objects
 
 When reading attributes using the dynamic approach, the property names of attributes will have an @ sign in front of their names. This makes it difficult to access these properties,e.g. in a RowTransformation when converting the row in a dynamic object. So when we reuse the xml file from above again:
 
@@ -259,3 +259,4 @@ var dest = new XmlDestination("XmlDynamicObject.xml", ResourceType.File);
 source.LinkTo(dest);
 Network.Execute(source);
 ```
+
