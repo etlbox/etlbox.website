@@ -50,6 +50,59 @@ public class MyRow
 XmlSource<MyRow> source = new XmlSource<MyRow>("source.xml", ResourceType.File);
 ```
 
+You can take full advantage of all Microsoft XmlSerializer attributes. Here is another example that utilizes XmlElement to map xml elements with a property in an object, and also an object type to access the attributes. It also show how to set up the namespace.
+
+Consider the following xml file:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.w3.org/2005/Atom">
+  <comment>Hello, world!</comment>
+  <entry>
+    <id>TestId_1</id>
+    <category term="TermA" scheme="http://scheme1.test" />
+  </entry>
+  <entry>
+    <id>TestId_2</id>
+    <category term="TermB" scheme="http://scheme2.test" />
+  </entry>
+```
+
+You can read this file using the following code:
+
+```C#
+[XmlRoot("entry", Namespace = "http://www.w3.org/2005/Atom")]
+public class MyRow
+{
+    [XmlElement("id")]
+    public string Id{ get; set; }
+    [XmlElement("category")]
+    public Category Category { get; set; }
+}
+
+[XmlRoot("category", Namespace = "http://www.w3.org/2005/Atom")]
+public class Category
+{
+    [XmlAttribute("term")]
+    public string Term { get; set; }
+    [XmlAttribute("scheme")]
+    public string Schema { get; set; }
+}
+
+XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
+//If necessary, you can change the Xml readder settings 
+//source.XmlReaderSettings = new System.Xml.XmlReaderSettings() { }
+MemoryDestination <MyRow> destination = new MemoryDestination<MyRow>();
+
+source.LinkTo(destination);
+Network.Execute(source);
+
+foreach (var entry in destination.Data) {
+    Console.WriteLine($"Id: {entry.Id}, Term: {entry.Category.Term}, Title: {entry.Category.Schema}");
+}
+```
+
+
 ### Using dynamic objects
 
 XmlSource does also support the dynamic ExpandoObject. If you want to use it, you can define an ElementName that contains the data you actually
