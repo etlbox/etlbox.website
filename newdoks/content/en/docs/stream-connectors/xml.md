@@ -134,6 +134,91 @@ XmlSource source = new XmlSource("demo2.xml", ResourceType.File)
 };
 ```
 
+#### Handling attributes with dynamic objects
+
+When reading attributes using the dynamic approach, the property names of attributes will have an @ sign in front of their names. This makes it difficult to access these properties,e.g. in a RowTransformation when converting the row in a dynamic object. So when we reuse the xml file from above again:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.w3.org/2005/Atom">
+  <comment>Hello, world!</comment>
+  <entry>
+    <id>TestId_1</id>
+    <category term="TermA" scheme="http://scheme1.test" />
+  </entry>
+  <entry>
+    <id>TestId_2</id>
+    <category term="TermB" scheme="http://scheme2.test" />
+  </entry>
+```
+
+When we try to access the attributes in a RowTransformation, the following code won't work:
+
+```C#
+XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
+RowTransformation rowTrans = new RowTransformation();
+source.LinkTo(rowTrans);
+rowTrans.TransformationFunc = row => {
+    dynamic r = row as ExpandoObject;
+    r.category.@term //@ is not allowed as a property name!
+    ...//won't compile
+}
+```
+
+Instead, we need to convert the relevant `ExpandoObject` into an `IDictionary<string,object>` first: 
+
+```C#
+XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
+RowTransformation rowTrans = new RowTransformation();
+source.LinkTo(rowTrans);
+rowTrans.TransformationFunc = row => {
+    dynamic r = row as ExpandoObject;
+    var category = r.category as IDictionary<string,object>;
+    var categoryTerm = catgegory["@term"];
+    ...
+};
+```
+
+### Ignoring DTD processing
+
+If you need to process a xml file with a DTD definition, you might want to change the XmlReader settings to ignore parsing of the DTD:
+
+```C#
+XmlSource<MySimpleRow> source = new XmlSource<MySimpleRow>("XmlWithDTD.xml", ResourceType.File);
+source.XmlReaderSettings.DtdProcessing = System.Xml.DtdProcessing.Ignore;
+```
+
+### Unparsed data
+
+If you want to access parts from the xml which are not part of your processed data, you can set the property `CollectUnparsedData` to true. By default, only data that can be written in object which are sent into the dataflow are processed. Activating this feature will also read the rest of the Xml file. You can access the unparsed data in the property `UnparsedData` of the Xml source. If you use the  `GetNextUri`/`HasNextUri` pattern to paginate through your source data, you can access the unparsed data of the current page in the `StreamMetaData.UnparsedData` property.
+
+Here is an example for accessing `UnparsedData` directly in the component:
+
+```C#
+XmlSource<MySimpleRow> source = new XmlSource<MySimpleRow>("UnparsedData.xml", ResourceType.File);
+source.CollectUnparsedData = true;
+source.LinkTo(dest);
+Network.Execute(source);
+Console.WriteLine(source.UnparsedData);
+```
+
+The next example show how to access unparsed data in the `StreamMetaData` object:
+
+```C#
+var source = new XmlSource<MySimpleRow>();
+source.ResourceType = ResourceType.File;
+source.CollectUnparsedData = true;
+
+source.GetNextUri = meta => {
+    Console.WriteLine(meta.UnparsedData); 
+    return $"res/XmlSource/TodosWithLink_NextPage.xml";
+};
+source.HasNextUri = meta => {
+    Console.WriteLine(meta.UnparsedData); 
+    return true;
+};
+```
+
 ## XmlDestination
 
 The xml destination will use the same XmlSerializer to serialize the data and write them into an xml file.
@@ -164,3 +249,13 @@ Could create an output that looks like this:
 </Root>
 ```
 
+### XmlDestination with dynamic object
+
+The XmlDestination also supports creating xml output from dynamic objects. 
+
+```C#
+var source = new DbSource(SqlConnection, "Table");
+var dest = new XmlDestination("XmlDynamicObject.xml", ResourceType.File);
+source.LinkTo(dest);
+Network.Execute(source);
+```
