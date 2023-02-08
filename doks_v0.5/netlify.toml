@@ -3,7 +3,7 @@
   functions = "functions"
 
 [functions]
-  directory = "assets/js/lambda"
+  directory = "assets/lambda"
 
 [build.environment]
   NODE_VERSION = "16.16.0"
