@@ -45,7 +45,7 @@
         <p>
           Always wanted to create your ETL jobs test driven? Still wondering if your data flow will still work
           after you latest change?
-          Look no further. ETLBox integrates with all common test framework like xUnit, NUnit 
+          Look no further. ETLBox integrates with all common test framework like xUnit, NUnit
           or MSTest. Now you can write test for any part or logic of your data pipeline.
         </p>
       </div>
@@ -145,42 +145,46 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tablecopy" role="tabpanel" aria-labelledby="tablecopy-tab">
-              <pre class="prism-code language-dotnet">
-string mySqlConnString = 
-  @"Server=localhost;Database=ETLBox;Uid=user;Pwd=password;";
-string postgresConnString = 
-  @"Server=.;Initial Catalog=ETLBox;Trusted_Connection=true;";
+      
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">mySqlConnString</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl">  <span class="s">@&#34;Server=localhost;Database=ETLBox;Uid=user;Pwd=password;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">postgresConnString</span> <span class="p">=</span> 
+</span></span><span class="line"><span class="cl">  <span class="s">@&#34;Server=.;Initial Catalog=ETLBox;Trusted_Connection=true;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">sourceCon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MySqlConnectionManager</span><span class="p">(</span><span class="n">mySqlConnString</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">destCon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PostgresConnectionManager</span><span class="p">(</span><span class="n">postgresConnString</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">source</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DbSource</span><span class="p">(</span><span class="n">sourceCon</span><span class="p">,</span> <span class="s">&#34;SourceTableName&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">dest</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DbDestination</span><span class="p">(</span><span class="n">destCon</span><span class="p">,</span> <span class="s">&#34;DestTableName&#34;</span><span class="p">);</span>                
+</span></span><span class="line"><span class="cl"><span class="c1">//Use dest.ColumnMapping to change column name mapping</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">source</span><span class="p">.</span><span class="n">LinkTo</span><span class="p">(</span><span class="n">dest</span><span class="p">);</span> <span class="c1">//Create the data flow</span>
+</span></span><span class="line"><span class="cl"><span class="n">Network</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">source</span><span class="p">);</span> <span class="c1">//Start the flow synchronously</span>
+</span></span></code></pre></div>
 
-var sourceCon = new MySqlConnectionManager(mySqlConnString);
-var destCon = new PostgresConnectionManager(postgresConnString);
-
-var source = new DbSource(sourceCon, "SourceTableName");
-var dest = new DbDestination(destCon, "DestTableName");                
-//Use dest.ColumnMapping to change column name mapping
-
-source.LinkTo(dest); //Create the data flow
-Network.Execute(source); //Start the flow synchronously</pre>
             </div>
 
             <div class="tab-pane fade" id="importcsv" role="tabpanel" aria-labelledby="importcsv-tab">
-              <pre class="prism-code language-dotnet">
-string connString = 
-  @"Source=.;Trusted_Connection=true;Initial Catalog=ETLBox;"
-var destCon = new SqlConnectionManager(connString);
+              
+              <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">connString</span> <span class="p">=</span> 
+</span></span><span class="line"><span class="cl">  <span class="s">@&#34;Source=.;Trusted_Connection=true;Initial Catalog=ETLBox;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">destCon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SqlConnectionManager</span><span class="p">(</span><span class="n">connString</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">source</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CsvSource</span><span class="p">(</span><span class="n">sourceCon</span><span class="p">,</span> <span class="s">&#34;SourceData.csv&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">dest</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DbDestination</span><span class="p">(</span><span class="n">destCon</span><span class="p">,</span> <span class="s">&#34;DestinationTable&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//Default mapping: Csv header and column name match (case-sensitive)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//Override mapping like this:</span>
+</span></span><span class="line"><span class="cl"><span class="n">dest</span><span class="p">.</span><span class="n">ColumnMapping</span> <span class="p">=</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span>    
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ColumnMap</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">DbColumnName</span> <span class="p">=</span> <span class="s">&#34;Id&#34;</span><span class="p">,</span> <span class="n">PropertyName</span> <span class="p">=</span> <span class="s">&#34;OrderNumber&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">source</span><span class="p">.</span><span class="n">LinkTo</span><span class="p">(</span><span class="n">dest</span><span class="p">);</span> <span class="c1">//Create the data flow</span>
+</span></span><span class="line"><span class="cl"><span class="n">Network</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">source</span><span class="p">);</span> <span class="c1">//Start the flow synchronously</span>
+</span></span></code></pre></div>
 
-var source = new CsvSource(sourceCon, "SourceData.csv");
-var dest = new DbDestination(destCon, "DestinationTable");
-
-//Default mapping: Csv header and column name match (case-sensitive)
-//Override mapping like this:
-dest.ColumnMapping = new[] {    
-    new ColumnMap() { 
-      DbColumnName = "Id", PropertyName = "OrderNumber"
-    }
-};
-
-source.LinkTo(dest); //Create the data flow
-Network.Execute(source); //Start the flow synchronously</pre>
             </div>
           </div>
         </div>
@@ -194,7 +198,8 @@ Network.Execute(source); //Start the flow synchronously</pre>
     <div class="text-center">
       <h1><i class="bi-camera-video"></i></h1>
       <h2>Watch our short explainer video</h2>
-      <p><a href="https://www.youtube.com/watch/uErssvgjubg" target="_blank" rel="noopener">This video is also available on youtube, if you want to like or share it.<i class="bi-box-arrow-up-right"></i></a></p>
+      <p><a href="https://www.youtube.com/watch/uErssvgjubg" target="_blank" rel="noopener">This video is also available
+          on youtube, if you want to like or share it.<i class="bi-box-arrow-up-right"></i></a></p>
     </div>
 
     <div class="text-center">
@@ -296,43 +301,43 @@ Network.Execute(source); //Start the flow synchronously</pre>
       <div class="carousel-inner  flex align-items-center">
         <div class="carousel-item active">
           <a href="https://www.commbank.com.au/" target="_blank" rel="noopener">
-            <img src="images/references/cba_tb.png"  alt="Commonwealth Bank of Australia">
+            <img src="images/references/cba_tb.png" alt="Commonwealth Bank of Australia">
           </a>
         </div>
         <div class="carousel-item">
           <a href="https://brunata.dk" target="_blank" rel="noopener">
-          <img src="images/references/brunata_logo.png"  alt="Brunata">
-        </a>
+            <img src="images/references/brunata_logo.png" alt="Brunata">
+          </a>
         </div>
         <div class="carousel-item">
           <a href="https://www.deloitte.com/" target="_blank" rel="noopener">
-          <img src="images/references/deloitte.svg"  alt="Deloitte">
+            <img src="images/references/deloitte.svg" alt="Deloitte">
           </a>
         </div>
         <div class="carousel-item">
           <a href="https://soundroyalties.com/" target="_blank" rel="noopener">
-          <img src="images/references/sound-royalties.svg"  alt="Sound Royalties">
+            <img src="images/references/sound-royalties.svg" alt="Sound Royalties">
           </a>
         </div>
         <div class="carousel-item">
           <a href="https://www.meusburger.com/" target="_blank" rel="noopener">
-          <img src="images/references/meusburger.svg" alt="Meusburger">
+            <img src="images/references/meusburger.svg" alt="Meusburger">
           </a>
         </div>
         <div class="carousel-item">
           <a href="https://novogenia.com/" target="_blank" rel="noopener">
-          <img src="images/references/novogenia.png"  alt="Novogenia">
+            <img src="images/references/novogenia.png" alt="Novogenia">
           </a>
         </div>
         <div class="carousel-item">
           <a href="https://www.iwgplc.com/" target="_blank" rel="noopener">
-          <img src="images/references/iwg.svg"  alt="IWG PLC">
+            <img src="images/references/iwg.svg" alt="IWG PLC">
           </a>
         </div>
       </div>
 
       <!-- Carousel Buttons -->
-      <button  class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
