@@ -2,6 +2,9 @@
   publish = "public"
   functions = "functions"
 
+[functions]
+  directory = "assets/js/lambda"
+
 [build.environment]
   NODE_VERSION = "16.16.0"
   NPM_VERSION = "8.11.0"
