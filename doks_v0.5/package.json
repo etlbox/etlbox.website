@@ -67,5 +67,8 @@
   },
   "dependencies": {
     "atomic-algolia": "^0.3.19"
+  },
+  "overrides": {
+    "css-select": "^4.2.1"
   }
 }
