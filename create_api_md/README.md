@@ -5,6 +5,11 @@ The ETLBox solution / all projects need to be build first with dotnet build.
 DocFx can't build the projects - some Warning appears (`Failure] Msbuild failed when processing the file 'C:\Users\andreaslennartz\Github\et
 lbox\etlbox.source\ETLBox.Xml\ETLBox.Xml.csproj' with message: Project does not contain 'Compile' target.`), but the documentation is generated anyways.
 
+## Known issues
+
+After releasing, the Release folder will contain obfuscated .dll files. If docfx is run while these dll still exists, not all ///<inheritdoc /> tags are properly resolved. Before running docfx, make sure that the Release folder are empty:
+
+`dotnet clean ../../etlbox.tests --configuration Release`
 
 ## Upgrading/Fresh installation
 

@@ -6,139 +6,208 @@
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.AnalysisServices"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.AnalysisServices",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Couchbase"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Couchbase",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Csv"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Csv",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Db2"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Db2",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.MySql"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.MySql",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.SqlServer"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.SqlServer",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Excel"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Excel",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Json"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Json",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.MariaDb"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MariaDb",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.MongoDb"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MongoDb",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.MySql"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.MySql",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Odbc"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Odbc",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.OleDb"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.OleDb",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Oracle"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Oracle",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Parquet"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Parquet",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Postgres"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Postgres",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Redis"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Redis",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.SapAse"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SapAse",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.SQLite"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SQLite",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         },
         {
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.Xml"
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Xml",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
         }
       ],
       "dest": "api"
@@ -158,6 +227,7 @@
       "statictoc",
       "templates"
     ],
+    "maxParallelism" : 1,
     "globalMetadata": {
       "_disableFooter": true,
       "_disableContribution": true,

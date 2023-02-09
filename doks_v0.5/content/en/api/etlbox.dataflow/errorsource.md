@@ -25,7 +25,7 @@ can use this source to redirect errors into the error data flow.</p>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowExecutableSource-1.html">DataFlowExecutableSource</a>&lt;<a class="xref" href="ETLBox.DataFlow.ETLBoxError.html">ETLBoxError</a>&gt;</div>
     <div class="level5"><span class="xref">ErrorSource</span></div>
   </div>
   <div class="implements">
