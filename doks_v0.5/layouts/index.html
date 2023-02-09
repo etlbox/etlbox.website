@@ -145,8 +145,9 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tablecopy" role="tabpanel" aria-labelledby="tablecopy-tab">
-      
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">mySqlConnString</span> <span class="p">=</span>
+
+              <div class="highlight">
+                <pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">mySqlConnString</span> <span class="p">=</span>
 </span></span><span class="line"><span class="cl">  <span class="s">@&#34;Server=localhost;Database=ETLBox;Uid=user;Pwd=password;&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">postgresConnString</span> <span class="p">=</span> 
 </span></span><span class="line"><span class="cl">  <span class="s">@&#34;Server=.;Initial Catalog=ETLBox;Trusted_Connection=true;&#34;</span><span class="p">;</span>
@@ -160,13 +161,15 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">source</span><span class="p">.</span><span class="n">LinkTo</span><span class="p">(</span><span class="n">dest</span><span class="p">);</span> <span class="c1">//Create the data flow</span>
 </span></span><span class="line"><span class="cl"><span class="n">Network</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">source</span><span class="p">);</span> <span class="c1">//Start the flow synchronously</span>
-</span></span></code></pre></div>
+</span></span></code></pre>
+              </div>
 
             </div>
 
             <div class="tab-pane fade" id="importcsv" role="tabpanel" aria-labelledby="importcsv-tab">
-              
-              <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">connString</span> <span class="p">=</span> 
+
+              <div class="highlight">
+                <pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">connString</span> <span class="p">=</span> 
 </span></span><span class="line"><span class="cl">  <span class="s">@&#34;Source=.;Trusted_Connection=true;Initial Catalog=ETLBox;&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">destCon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SqlConnectionManager</span><span class="p">(</span><span class="n">connString</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -183,7 +186,8 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">source</span><span class="p">.</span><span class="n">LinkTo</span><span class="p">(</span><span class="n">dest</span><span class="p">);</span> <span class="c1">//Create the data flow</span>
 </span></span><span class="line"><span class="cl"><span class="n">Network</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">source</span><span class="p">);</span> <span class="c1">//Start the flow synchronously</span>
-</span></span></code></pre></div>
+</span></span></code></pre>
+              </div>
 
             </div>
           </div>
@@ -220,6 +224,61 @@
 </section>
 
 
+<section class="section section-sm">
+  <div class="text-center">
+    <h2>Ask  <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a> about ETLBox</h2>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-3 col-lg-1 align-self-start">
+        <img src="images/AinBox.jpg" height="42" width="42" alt="Andreas" />
+      </div>
+      <div class="col-13 col-lg-8 align-self-center">Hi ChatGPT, could you give me an introduction into ETLBox?</div>
+      <div class="col-lg-4"></div>
+    </div>
+    </div>
+    </section>
+    <section class="section section-sm alteredColor">
+      <div class="container">
+    <div class="row mt-3 ">
+      <div class="col-lg-4"></div>
+      <div class="col-3 col-lg-1 align-self-start">
+        <img src="images/OpenAI.jpg" height="42" width="42" alt="Andreas" />
+      </div>
+      <div class="col-13 col-lg-8 align-self-center">
+        <p>Yes, of course!</p>
+
+        <p>ETLBox is a commercial, .NET-based library for Extract-Transform-Load (ETL) processes. ETL is a critical
+          aspect
+          of data management, and is used to extract data from a variety of sources, clean and transform it into a
+          desired
+          format, and then load it into a target system, such as a data warehouse or a database. ETLBox provides a set
+          of
+          simple, yet powerful components that can be used to automate these tasks.</p>
+
+        <p>The key benefits of using ETLBox include:</p>
+
+        <ol>
+          <li>Simplicity: ETLBox provides an easy-to-use API that makes it simple to implement ETL processes.</li>
+
+          <li>Flexibility: ETLBox supports a wide range of data sources and targets, and provides the ability to
+            transform
+            data in many ways, such as by performing lookups, splitting columns, and aggregating data.</li>
+
+          <li>Performance: ETLBox is designed for high performance and can handle large amounts of data efficiently.
+          </li>
+
+          <li>.NET support: ETLBox is written in C# and is fully integrated with the .NET framework, making it a natural
+            choice for developers who are already familiar with .NET.</li>
+        </ol>
+        In conclusion, ETLBox is a great choice for anyone who needs to implement ETL processes and wants a powerful,
+        yet simple, solution that is commercially supported.
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+  </div>
+</section>
 
 <section class="section section-sm">
   <div class="container">
