@@ -1,7 +1,7 @@
 {{ $parts := slice .Site.Params.docsRepo }}
 
 {{ if (eq .Site.Params.repoHost "GitHub") }}
-  {{ $parts = $parts | append "blob" .Site.Params.docsRepoBranch }}
+  {{/* $parts = $parts | append "blob" .Site.Params.docsRepoBranch */}}
 {{ else if (eq .Site.Params.repoHost "Gitea") }}
   {{ $parts = $parts | append "_edit" .Site.Params.docsRepoBranch }}
 {{ else if (eq .Site.Params.repoHost "GitLab") }}

@@ -81,8 +81,8 @@ alertText = "New version out now!"
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/etlbox/etlbox.website/hugo/"
-docsRepoBranch = "master"
+docsRepo = "https://github.com/etlbox/etlbox.website/blob/main/doks_v0.5"
+docsRepoBranch = ""
 docsRepoSubPath = ""
 editPage = true
 lastMod = false
