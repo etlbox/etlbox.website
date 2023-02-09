@@ -18,7 +18,7 @@
   
 
 .api-content {
-    font-size: $font-size-base;
+    font-size: $font-size-base*0.9;
 }
 
 .api-content .inheritance .level0::before,
@@ -26,7 +26,18 @@
 .api-content .inheritance .level2::before,
 .api-content .inheritance .level3::before,
 .api-content .inheritance .level4::before,
-.api-content .inheritance .level5::before {
+.api-content .inheritance .level5::before,
+.api-content .inheritance .level5::before,
+.api-content .inheritance .level6::before,
+.api-content .inheritance .level7::before,
+.api-content .inheritance .level8::before,
+.api-content .inheritance .level9::before,
+.api-content .inheritance .level10::before,
+.api-content .inheritance .level11::before,
+.api-content .inheritance .level12::before,
+.api-content .inheritance .level13::before,
+.api-content .inheritance .level14::before,
+.api-content .inheritance .level15::before {
     content: "↳";
     margin-right: 5px;
 }
@@ -55,9 +66,46 @@
     margin-left: 5em;
 }
 
-.api-content .level0.summary {
-    margin: 2em 0 2em 0;
+.api-content .inheritance .level6 {
+    margin-left: 6em;
 }
+
+.api-content .inheritance .level7 {
+    margin-left: 7em;
+}
+
+.api-content .inheritance .level8 {
+    margin-left: 8em;
+}
+
+.api-content .inheritance .level9 {
+    margin-left: 9em;
+}
+
+.api-content .inheritance .level10 {
+    margin-left: 10em;
+}
+
+.api-content .inheritance .level11 {
+    margin-left: 11em;
+}
+
+.api-content .inheritance .level12 {
+    margin-left: 12em;
+}
+
+.api-content .inheritance .level13 {
+    margin-left: 13em;
+}
+
+.api-content .inheritance .level14 {
+    margin-left: 14em;
+}
+
+.api-content .inheritance .level15 {
+    margin-left: 15em;
+}
+
 
 .api-content .level1.summary {
     margin: 1em 0 1em 0;
