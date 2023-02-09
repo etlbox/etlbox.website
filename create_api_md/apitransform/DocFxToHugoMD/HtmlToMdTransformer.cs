@@ -113,9 +113,27 @@ namespace DocFxToHugoMD
 
         private string AdjustLinks(string line)
         {
-            MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
-            string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
-            return Regex.Replace(line, regex, evaluator);
+            if (!line.Contains(" href=")) return line;
+            //Check if link has inner class
+            //e.g. href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html"
+            if (line.Contains("class=\"level4\"") &&  line.Count(c => c == '.') == 6) {
+                MatchEvaluator evaluator = new MatchEvaluator(LinkReplacementWithInnerClass);
+                string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)(?<sep2>\.)(?<ic>[\w\d-]*)\.html";
+                return Regex.Replace(line, regex, evaluator);
+            }
+            else {
+                MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
+                string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
+                return Regex.Replace(line, regex, evaluator);
+            }
+        }
+
+        string LinkReplacementWithInnerClass(Match match) {
+            var ns = match.Groups[1].Value;
+            //var sep = match.Groups[2].Value;
+            var cl = match.Groups[3].Value;
+            var ic = match.Groups[5].Value;
+            return @$"href=""/api/{ns.ToLower()}/{cl.ToLower()}#{ic.ToLower()}";
         }
 
         string LinkReplacement(Match match)
