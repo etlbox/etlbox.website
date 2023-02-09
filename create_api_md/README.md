@@ -1,5 +1,11 @@
 # Running docfx
 
+The API generation has been successfully tested with docfx version 2.61.0.
+The ETLBox solution / all projects need to be build first with dotnet build. 
+DocFx can't build the projects - some Warning appears (`Failure] Msbuild failed when processing the file 'C:\Users\andreaslennartz\Github\et
+lbox\etlbox.source\ETLBox.Xml\ETLBox.Xml.csproj' with message: Project does not contain 'Compile' target.`), but the documentation is generated anyways.
+
+
 ## Upgrading/Fresh installation
 
  The folder docfx_project can be completely removed.
