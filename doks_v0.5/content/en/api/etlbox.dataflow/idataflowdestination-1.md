@@ -85,7 +85,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Dataflow.ITargetBlock</span>&lt;TInput&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;</span>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>

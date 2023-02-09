@@ -22,7 +22,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
@@ -77,13 +77,13 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkDelete_ETLBox_ControlFlow_ITableData_">DbTask.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbTask.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbTask.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__">DbTask.BulkSelect(ITableData, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__">DbTask.BulkSelect(ITableData, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__">DbTask.LogErrorsAndClose(String, Action&lt;IConnectionManager&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__">DbTask.LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_ConnectionManager">ControlFlowTask.ConnectionManager</a>
@@ -110,25 +110,25 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -147,10 +147,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor">SqlTask()</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -163,11 +160,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">SqlTask(String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -188,7 +182,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -203,7 +197,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -212,11 +206,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Action{System.Object}[])">SqlTask(String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Action{System.Object}[])">SqlTask(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -237,12 +228,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -251,11 +242,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">SqlTask(String, IEnumerable&lt;QueryParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -276,12 +264,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameter</span></td>
         <td></td>
       </tr>
@@ -296,7 +284,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -305,11 +293,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">SqlTask(String, IEnumerable&lt;QueryParameter&gt;, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -330,17 +315,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameter</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -349,11 +334,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">SqlTask(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">SqlTask(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -374,12 +356,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameter</span></td>
         <td></td>
       </tr>
@@ -388,11 +370,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.String)">SqlTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String,System.String)">SqlTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -413,12 +392,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -427,11 +406,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String)">SqlTask(String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.#ctor(System.String)">SqlTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -452,7 +428,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_Sql">Sql</a></p>
 </td>
@@ -463,9 +439,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -486,7 +461,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -497,10 +472,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkDelete*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkDelete(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.ITableData)">BulkDelete(IConnectionManager, ITableData)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -535,11 +507,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkDelete*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_System_String_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkDelete(System.String,ETLBox.ControlFlow.ITableData)">BulkDelete(String, ITableData)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkDelete_System_String_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkDelete(System.String,ETLBox.ControlFlow.ITableData)">BulkDelete(string, ITableData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -560,7 +529,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -575,10 +544,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkInsert*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkInsert(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.ITableData)">BulkInsert(IConnectionManager, ITableData)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -613,11 +579,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkInsert*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_System_String_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkInsert(System.String,ETLBox.ControlFlow.ITableData)">BulkInsert(String, ITableData)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_System_String_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkInsert(System.String,ETLBox.ControlFlow.ITableData)">BulkInsert(string, ITableData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -638,7 +601,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -652,11 +615,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkInsert_System_String_ETLBox_ControlFlow_ITableData__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(IConnectionManager, ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(IConnectionManager, ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -687,12 +647,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td></td>
       </tr>
@@ -701,11 +661,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_System_String_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate(System.String,ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(String, ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_System_String_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate(System.String,ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(string, ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -726,7 +683,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -736,12 +693,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td></td>
       </tr>
@@ -750,11 +707,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_BulkUpdate_System_String_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -780,12 +734,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -801,7 +755,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -809,11 +763,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, String, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, string, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -839,17 +790,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -865,7 +816,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -873,11 +824,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteNonQuery(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteNonQuery(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -903,12 +851,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -924,7 +872,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -932,11 +880,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String)">ExecuteNonQuery(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String)">ExecuteNonQuery(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -962,7 +907,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -978,7 +923,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -986,11 +931,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1011,12 +953,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1032,7 +974,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1040,11 +982,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(String, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(string, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1065,17 +1004,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1091,7 +1030,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1099,11 +1038,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.String)">ExecuteNonQuery(String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String,System.String)">ExecuteNonQuery(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1124,12 +1060,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -1145,7 +1081,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1153,11 +1089,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1178,7 +1111,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -1194,7 +1127,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1202,11 +1135,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1232,7 +1162,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -1247,7 +1177,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1256,11 +1186,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1286,12 +1213,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1300,11 +1227,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1330,12 +1254,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1350,7 +1274,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1359,11 +1283,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1389,17 +1310,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1408,11 +1329,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1438,17 +1356,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1457,11 +1375,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1482,7 +1397,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -1497,7 +1412,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1506,11 +1421,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1531,12 +1443,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1545,11 +1457,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1570,12 +1479,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1590,7 +1499,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1599,11 +1508,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1624,17 +1530,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1643,11 +1549,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.String,System.Action{System.Object}[])">ExecuteReader(String, String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(System.String,System.String,System.Action{System.Object}[])">ExecuteReader(string, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1668,17 +1571,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1687,11 +1590,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1717,12 +1617,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1731,11 +1631,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1761,12 +1658,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1781,7 +1678,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1790,11 +1687,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1820,17 +1714,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1839,11 +1733,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Action{System.Object}[])">ExecuteReaderSingleLine(String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Action{System.Object}[])">ExecuteReaderSingleLine(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1864,12 +1755,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1878,11 +1769,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderSingleLine(String, IEnumerable&lt;QueryParameter&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderSingleLine(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1903,12 +1791,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -1923,7 +1811,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1932,11 +1820,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderSingleLine(String, IEnumerable&lt;QueryParameter&gt;, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderSingleLine(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1957,17 +1842,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -1976,11 +1861,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2006,12 +1888,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2027,7 +1909,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2035,11 +1917,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, String, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, string, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2065,17 +1944,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2091,7 +1970,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2099,11 +1978,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalar(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalar(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2129,12 +2005,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2150,7 +2026,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2158,11 +2034,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2188,7 +2061,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2204,7 +2077,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2212,11 +2085,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2237,12 +2107,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2258,7 +2128,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2266,11 +2136,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(String, String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2291,17 +2158,17 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2317,7 +2184,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2325,11 +2192,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.String)">ExecuteScalar(String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String,System.String)">ExecuteScalar(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2350,12 +2214,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2371,7 +2235,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2379,11 +2243,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String)">ExecuteScalar(String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar(System.String)">ExecuteScalar(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2404,7 +2265,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2420,7 +2281,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2428,11 +2289,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2458,12 +2316,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2502,11 +2360,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2532,7 +2387,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2571,11 +2426,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2596,12 +2448,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2640,11 +2492,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String,System.String)">ExecuteScalar&lt;T&gt;(String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String,System.String)">ExecuteScalar&lt;T&gt;(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2665,12 +2514,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2709,11 +2558,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2734,7 +2580,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2773,11 +2619,8 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalarAsBool(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalarAsBool(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2804,12 +2647,12 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2825,7 +2668,7 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2833,11 +2676,8 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsBool(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsBool(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2864,7 +2704,7 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2880,7 +2720,7 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2888,11 +2728,8 @@ public static bool ExecuteScalarAsBool(IConnectionManager connectionManager, str
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsBool(String, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsBool(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2914,12 +2751,12 @@ public static bool ExecuteScalarAsBool(string sql, IEnumerable<QueryParameter> p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
@@ -2935,7 +2772,7 @@ public static bool ExecuteScalarAsBool(string sql, IEnumerable<QueryParameter> p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2943,11 +2780,8 @@ public static bool ExecuteScalarAsBool(string sql, IEnumerable<QueryParameter> p
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String,System.String)">ExecuteScalarAsBool(String, String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String,System.String)">ExecuteScalarAsBool(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2969,12 +2803,12 @@ public static bool ExecuteScalarAsBool(string name, string sql)
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -2990,7 +2824,7 @@ public static bool ExecuteScalarAsBool(string name, string sql)
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2998,11 +2832,8 @@ public static bool ExecuteScalarAsBool(string name, string sql)
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String)">ExecuteScalarAsBool(String)</h4>
-  <div class="markdown level1 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
-ExecuteScalar for statements that return only one row and one column or
-ExecuteReader for SQL that returns multiple rows or columns</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsBool(System.String)">ExecuteScalarAsBool(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -3024,7 +2855,7 @@ public static bool ExecuteScalarAsBool(string sql)
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
@@ -3040,7 +2871,7 @@ public static bool ExecuteScalarAsBool(string sql)
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

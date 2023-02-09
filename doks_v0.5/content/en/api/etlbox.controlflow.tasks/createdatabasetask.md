@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateDatabaseTask</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -93,8 +93,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor">CreateDatabaseTask()</h4>
-  <div class="markdown level1 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -107,9 +106,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_examples">Examples</h5>
   <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor(System.String,System.String)">CreateDatabaseTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor(System.String,System.String)">CreateDatabaseTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -130,12 +128,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">collation</span></td>
         <td></td>
       </tr>
@@ -144,9 +142,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_System_String_System_String__examples">Examples</h5>
   <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor(System.String)">CreateDatabaseTask(String)</h4>
-  <div class="markdown level1 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.#ctor(System.String)">CreateDatabaseTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -167,7 +164,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td></td>
       </tr>
@@ -200,7 +197,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -228,15 +225,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_ON_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.ON*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_ON" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.ON">ON</h4>
-  <div class="markdown level1 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -314,14 +310,15 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -342,7 +339,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -366,7 +363,7 @@ Throws an exception if the database already exists.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.String)">Create(IConnectionManager, String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.String)">Create(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
 Will throw an exception if the database already exists.</p>
 </div>
@@ -397,13 +394,13 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -411,7 +408,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(ETLBox.Connection.IConnectionManager,System.String)">Create(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(ETLBox.Connection.IConnectionManager,System.String)">Create(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
 Will throw an exception if the database already exists.</p>
 </div>
@@ -442,7 +439,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
@@ -450,7 +447,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(System.String,System.String)">Create(String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(System.String,System.String)">Create(string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
 Will throw an exception if the database already exists.
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
@@ -475,13 +472,13 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -489,7 +486,7 @@ Make sure that your default connection string points to the server itself and to
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(System.String)">Create(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Create_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create(System.String)">Create(string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
 Will throw an exception if the database already exists.
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
@@ -514,7 +511,7 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
@@ -535,7 +532,7 @@ Make sure that your default connection string points to the server itself and to
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -565,13 +562,13 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -579,7 +576,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -609,7 +606,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
@@ -617,7 +614,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
 </div>
@@ -641,13 +638,13 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -655,7 +652,7 @@ Make sure that your default connection string points to the server itself and to
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String)">CreateIfNotExists(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String)">CreateIfNotExists(string)</h4>
   <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
 </div>
@@ -679,7 +676,7 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>

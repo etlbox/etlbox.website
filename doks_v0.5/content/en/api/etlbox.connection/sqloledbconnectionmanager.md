@@ -20,14 +20,14 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">System.Data.OleDb.OleDbConnection</span>, <span class="xref">System.Data.OleDb.OleDbTransaction</span>, <span class="xref">System.Data.OleDb.OleDbParameter</span>&gt;</div>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">OleDbConnection</span>, <span class="xref">OleDbTransaction</span>, <span class="xref">OleDbParameter</span>&gt;</div>
     <div class="level2"><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager">OleDbConnectionManager</a></div>
     <div class="level3"><span class="xref">SqlOleDbConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">System.Data.OleDb.OleDbConnection</span>, <span class="xref">System.Data.OleDb.OleDbTransaction</span>&gt;</div>
+    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">OleDbConnection</span>, <span class="xref">OleDbTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -40,19 +40,19 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkInsert_ETLBox_ControlFlow_ITableData_">OleDbConnectionManager.BulkInsert(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_PrepareBulkInsert_System_String_">OleDbConnectionManager.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_PrepareBulkInsert_System_String_">OleDbConnectionManager.PrepareBulkInsert(string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_CleanUpBulkInsert_System_String_">OleDbConnectionManager.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_CleanUpBulkInsert_System_String_">OleDbConnectionManager.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_">OleDbConnectionManager.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">OleDbConnectionManager.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">OleDbConnectionManager.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">OleDbConnectionManager.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">OleDbConnectionManager.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_DbConnection">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.DbConnection</a>
@@ -112,22 +112,22 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Compatibility</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OleDbParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQuery(string, IEnumerable&lt;OleDbParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReader(String, IEnumerable&lt;OleDbParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReader(string, IEnumerable&lt;OleDbParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -142,22 +142,22 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_RollbackTransaction">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.RollbackTransaction()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.PrepareBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkInsert_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkInsert(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkDelete_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.CloneIfAllowed()</a>
@@ -181,7 +181,7 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloseIfAllowed">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.CloseIfAllowed()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Dispose(Boolean)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Dispose(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Dispose()</a>
@@ -190,25 +190,25 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Connection</h6>
@@ -225,8 +225,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager__ctor" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor">SqlOleDbConnectionManager()</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -238,8 +237,7 @@ toc: false
 {{< rawhtml >}}
   <a id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_ETLBox_Connection_OleDbConnectionString_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor(ETLBox.Connection.OleDbConnectionString)">SqlOleDbConnectionManager(OleDbConnectionString)</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -267,9 +265,8 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor*"></a>
-  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor(System.String)">SqlOleDbConnectionManager(String)</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
-</div>
+  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.#ctor(System.String)">SqlOleDbConnectionManager(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -290,7 +287,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
@@ -300,7 +297,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
+  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -330,7 +327,8 @@ toc: false
   <div><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_ConnectionManagerType">OleDbConnectionManager.ConnectionManagerType</a></div>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
+sql query.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -351,7 +349,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,7 +358,8 @@ toc: false
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_QB_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QB*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_QB" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
+  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
+E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -381,7 +380,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -390,7 +389,8 @@ toc: false
   <div><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_QB">OleDbConnectionManager.QB</a></div>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_QE_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_QE" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
+  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
+E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -411,7 +411,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -422,7 +422,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_Clone_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_Clone" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
+  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -444,7 +444,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td></td>
+        <td><p>A instance copy of the current connection manager</p>
+</td>
       </tr>
     </tbody>
   </table>

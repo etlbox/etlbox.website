@@ -19,31 +19,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">ExceptionExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -59,7 +59,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Helper_ExceptionExtensions_DataTryAdd_" data-uid="ETLBox.Helper.ExceptionExtensions.DataTryAdd*"></a>
-  <h4 id="ETLBox_Helper_ExceptionExtensions_DataTryAdd_System_Exception_System_String_System_Object_" data-uid="ETLBox.Helper.ExceptionExtensions.DataTryAdd(System.Exception,System.String,System.Object)">DataTryAdd(Exception, String, Object)</h4>
+  <h4 id="ETLBox_Helper_ExceptionExtensions_DataTryAdd_System_Exception_System_String_System_Object_" data-uid="ETLBox.Helper.ExceptionExtensions.DataTryAdd(System.Exception,System.String,System.Object)">DataTryAdd(Exception, string, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -86,12 +86,12 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>

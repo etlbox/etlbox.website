@@ -42,79 +42,79 @@ toc: false
       <span class="xref">System.Data.IDataReader.RecordsAffected</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetBoolean(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetBoolean(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetByte(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetByte(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetBytes(System.Int32, System.Int64, System.Byte[], System.Int32, System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetBytes(int, long, byte[], int, int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetChar(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetChar(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetChars(System.Int32, System.Int64, System.Char[], System.Int32, System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetChars(int, long, char[], int, int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetData(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetData(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDataTypeName(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetDataTypeName(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDateTime(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetDateTime(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDecimal(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetDecimal(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDouble(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetDouble(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetFieldType(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetFieldType(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetFloat(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetFloat(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetGuid(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetGuid(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt16(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetInt16(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt32(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetInt32(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt64(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetInt64(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetName(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetName(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetOrdinal(System.String)</span>
+      <span class="xref">System.Data.IDataRecord.GetOrdinal(string)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetString(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetString(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetValue(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.GetValue(int)</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetValues(System.Object[])</span>
+      <span class="xref">System.Data.IDataRecord.GetValues(object[])</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.IsDBNull(System.Int32)</span>
+      <span class="xref">System.Data.IDataRecord.IsDBNull(int)</span>
     </div>
     <div>
       <span class="xref">System.Data.IDataRecord.FieldCount</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.Item[System.Int32]</span>
+      <span class="xref">System.Data.IDataRecord.this[int]</span>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.Item[System.String]</span>
+      <span class="xref">System.Data.IDataRecord.this[string]</span>
     </div>
     <div>
       <span class="xref">System.IDisposable.Dispose()</span>
@@ -155,7 +155,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -211,7 +211,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="xref">object</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -239,7 +239,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -295,7 +295,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -323,7 +323,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -351,7 +351,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -379,7 +379,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Object</span>[]&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<span class="xref">object</span>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -409,7 +409,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.SortedList</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Object</span>[]&gt;</td>
+        <td><span class="xref">System.Collections.Generic.SortedList&lt;TKey, TValue&gt;</span>&lt;<span class="xref">int</span>, <span class="xref">object</span>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -437,7 +437,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -445,7 +445,7 @@ The key of the list is a unique sequence number, and the order matches also to e
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_ITableData_AddSequenceColumn_" data-uid="ETLBox.ControlFlow.ITableData.AddSequenceColumn*"></a>
-  <h4 id="ETLBox_ControlFlow_ITableData_AddSequenceColumn_System_String_" data-uid="ETLBox.ControlFlow.ITableData.AddSequenceColumn(System.String)">AddSequenceColumn(String)</h4>
+  <h4 id="ETLBox_ControlFlow_ITableData_AddSequenceColumn_System_String_" data-uid="ETLBox.ControlFlow.ITableData.AddSequenceColumn(System.String)">AddSequenceColumn(string)</h4>
   <div class="markdown level1 summary"><p>Allows to name a column that is specifically used as a sequence column. The column will then be treated differently.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -468,14 +468,14 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">columnName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_ITableData_GetDataTypeName_" data-uid="ETLBox.ControlFlow.ITableData.GetDataTypeName*"></a>
-  <h4 id="ETLBox_ControlFlow_ITableData_GetDataTypeName_System_String_" data-uid="ETLBox.ControlFlow.ITableData.GetDataTypeName(System.String)">GetDataTypeName(String)</h4>
+  <h4 id="ETLBox_ControlFlow_ITableData_GetDataTypeName_System_String_" data-uid="ETLBox.ControlFlow.ITableData.GetDataTypeName(System.String)">GetDataTypeName(string)</h4>
   <div class="markdown level1 summary"><p>Resolves the data type name for a column</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -498,7 +498,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">columnName</span></td>
         <td><p>Column name</p>
 </td>
@@ -515,7 +515,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>Data type name</p>
 </td>
       </tr>

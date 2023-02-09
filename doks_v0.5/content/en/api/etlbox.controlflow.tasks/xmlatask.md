@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
@@ -75,13 +75,13 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkDelete_ETLBox_ControlFlow_ITableData_">DbTask.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbTask.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbTask.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__">DbTask.BulkSelect(ITableData, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__">DbTask.BulkSelect(ITableData, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__">DbTask.LogErrorsAndClose(String, Action&lt;IConnectionManager&gt;)</a>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__">DbTask.LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_ConnectionManager">ControlFlowTask.ConnectionManager</a>
@@ -108,25 +108,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -145,8 +145,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor">XmlaTask()</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -159,9 +158,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">XmlaTask(String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">XmlaTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -182,7 +180,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -197,7 +195,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -206,9 +204,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.Action{System.Object}[])">XmlaTask(String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.Action{System.Object}[])">XmlaTask(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -229,12 +226,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -243,9 +240,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.String)">XmlaTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String,System.String)">XmlaTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -266,12 +262,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -280,9 +276,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String)">XmlaTask(String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.#ctor(System.String)">XmlaTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -303,7 +298,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -315,8 +310,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -336,7 +330,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -348,9 +342,8 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String)">ExecuteNonQuery(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String)">ExecuteNonQuery(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -376,7 +369,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -392,7 +385,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,9 +393,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -423,7 +415,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -439,7 +431,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -447,9 +439,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -475,7 +466,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -490,7 +481,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -499,9 +490,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -527,12 +517,12 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -541,9 +531,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, Action, Action, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -564,7 +553,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -579,7 +568,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -588,9 +577,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(String, Action&lt;Object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -611,12 +599,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
@@ -625,9 +613,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteReader_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -653,7 +640,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -669,7 +656,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -677,9 +664,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String)">ExecuteScalar(String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String)">ExecuteScalar(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -700,7 +686,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -716,7 +702,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -724,16 +710,14 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static T? ExecuteScalar<T>(IConnectionManager connectionManager, string xmla)
-    where T : struct
+    public static T? ExecuteScalar<T>(IConnectionManager connectionManager, string xmla) where T : struct
 ```
 
 {{< rawhtml >}}
@@ -753,7 +737,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -769,7 +753,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td>T?</td>
         <td></td>
       </tr>
     </tbody>
@@ -792,16 +776,14 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static T? ExecuteScalar<T>(string xmla)
-    where T : struct
+    public static T? ExecuteScalar<T>(string xmla) where T : struct
 ```
 
 {{< rawhtml >}}
@@ -816,7 +798,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -832,7 +814,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td>T?</td>
         <td></td>
       </tr>
     </tbody>
@@ -855,9 +837,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsBool(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsBool(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -883,7 +864,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -899,7 +880,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -907,9 +888,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String)">ExecuteScalarAsBool(String)</h4>
-  <div class="markdown level1 summary"><p>This task can exeucte any XMLA.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_System_String_" data-uid="ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String)">ExecuteScalarAsBool(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -930,7 +910,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
@@ -946,7 +926,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -41,21 +41,15 @@ E.g. you can read Json data from a file or via http from a web service.</p>
     <tbody>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_AzureBlob">AzureBlob</td>
-        <td><p>The type of resource you are using for a streaming source or destination.
-E.g. you can read Json data from a file or via http from a web service.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_File">File</td>
-        <td><p>The type of resource you are using for a streaming source or destination.
-E.g. you can read Json data from a file or via http from a web service.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ResourceType_Http">Http</td>
-        <td><p>The type of resource you are using for a streaming source or destination.
-E.g. you can read Json data from a file or via http from a web service.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </thead></thead></table>

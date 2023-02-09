@@ -53,7 +53,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -81,7 +81,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -109,7 +109,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -175,7 +175,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_" data-uid="ETLBox.Connection.IDbConnectionString.CloneWithNewDbName*"></a>
-  <h4 id="ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_System_String_" data-uid="ETLBox.Connection.IDbConnectionString.CloneWithNewDbName(System.String)">CloneWithNewDbName(String)</h4>
+  <h4 id="ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_System_String_" data-uid="ETLBox.Connection.IDbConnectionString.CloneWithNewDbName(System.String)">CloneWithNewDbName(string)</h4>
   <div class="markdown level1 summary"><p>Clone the current connection string with a new database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -198,7 +198,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">value</span></td>
         <td><p>The new database name</p>
 </td>
@@ -244,7 +244,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>The new connection string</p>
 </td>
       </tr>

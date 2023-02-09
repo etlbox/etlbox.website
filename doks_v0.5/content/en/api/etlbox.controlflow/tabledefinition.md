@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">TableDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -61,8 +61,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_TableDefinition__ctor_" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_TableDefinition__ctor" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor">TableDefinition()</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -73,9 +72,8 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_TableDefinition__ctor_" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">TableDefinition(String, List&lt;TableColumn&gt;)</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_TableDefinition__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">TableDefinition(string, List&lt;TableColumn&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -96,21 +94,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition__ctor_" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition__ctor_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor(System.String)">TableDefinition(String)</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_TableDefinition__ctor_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.#ctor(System.String)">TableDefinition(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -131,7 +128,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -162,15 +159,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_ForeignKeyConstraints_" data-uid="ETLBox.ControlFlow.TableDefinition.ForeignKeyConstraints*"></a>
   <h4 id="ETLBox_ControlFlow_TableDefinition_ForeignKeyConstraints" data-uid="ETLBox.ControlFlow.TableDefinition.ForeignKeyConstraints">ForeignKeyConstraints</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -190,7 +186,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.controlflow/foreignkeyconstraint">ForeignKeyConstraint</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/foreignkeyconstraint">ForeignKeyConstraint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +214,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -246,15 +242,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_UniqueKeyConstraints_" data-uid="ETLBox.ControlFlow.TableDefinition.UniqueKeyConstraints*"></a>
   <h4 id="ETLBox_ControlFlow_TableDefinition_UniqueKeyConstraints" data-uid="ETLBox.ControlFlow.TableDefinition.UniqueKeyConstraints">UniqueKeyConstraints</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -274,7 +269,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.controlflow/uniquekeyconstraint">UniqueKeyConstraint</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/uniquekeyconstraint">UniqueKeyConstraint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -326,9 +321,8 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName(ETLBox.Connection.IConnectionManager,System.String)">FromProcedureName(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName(ETLBox.Connection.IConnectionManager,System.String)">FromProcedureName(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -354,7 +348,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td></td>
       </tr>
@@ -376,7 +370,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_FromTableName_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_FromTableName_ETLBox_Connection_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName(ETLBox.Connection.IConnectionManager,System.String,System.Boolean)">FromTableName(IConnectionManager, String, Boolean)</h4>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_FromTableName_ETLBox_Connection_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName(ETLBox.Connection.IConnectionManager,System.String,System.Boolean)">FromTableName(IConnectionManager, string, bool)</h4>
   <div class="markdown level1 summary"><p>Gather a table definition from an existing table in the database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -405,13 +399,13 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>A name of an existing table in the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td><span class="parametername">readConstraints</span></td>
         <td><p>If set to true, information about the Unique and Foreign Key constraints are also gathered.</p>
 </td>
@@ -435,8 +429,7 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_RemoveDuplicateColumns_" data-uid="ETLBox.ControlFlow.TableDefinition.RemoveDuplicateColumns*"></a>
   <h4 id="ETLBox_ControlFlow_TableDefinition_RemoveDuplicateColumns_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.TableDefinition.RemoveDuplicateColumns(ETLBox.ControlFlow.TableDefinition)">RemoveDuplicateColumns(TableDefinition)</h4>
-  <div class="markdown level1 summary"><p>A definition for a table in a database</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

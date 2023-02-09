@@ -19,7 +19,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/constraint">Constraint</a></div>
     <div class="level2"><span class="xref">ForeignKeyConstraint</span></div>
   </div>
@@ -36,25 +36,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/constraint#ETLBox_ControlFlow_Constraint_ConstraintName">Constraint.ConstraintName</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -82,7 +82,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">ForeignKeyConstraint(IList&lt;String&gt;, IList&lt;String&gt;, String)</h4>
+  <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">ForeignKeyConstraint(IList&lt;string&gt;, IList&lt;string&gt;, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -104,24 +104,24 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">columnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">referenceColumnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">referenceTableName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.String,System.String,System.String)">ForeignKeyConstraint(String, String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_ForeignKeyConstraint__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ForeignKeyConstraint.#ctor(System.String,System.String,System.String)">ForeignKeyConstraint(string, string, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -143,17 +143,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">columnName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">referenceColumnName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">referenceTableName</span></td>
         <td></td>
       </tr>
@@ -183,7 +183,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +210,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -237,7 +237,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

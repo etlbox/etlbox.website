@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask</a>&lt;<a class="xref" href="/api/etlbox.controlflow.tasks/ifdatabaseexiststask">IfDatabaseExistsTask</a>&gt;</div>
@@ -75,25 +75,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -112,8 +112,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor">DropDatabaseTask()</h4>
-  <div class="markdown level1 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -126,9 +125,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_examples">Examples</h5>
   <pre><code>DropDatabaseTask.Delete(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor(System.String)">DropDatabaseTask(String)</h4>
-  <div class="markdown level1 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.#ctor(System.String)">DropDatabaseTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -149,7 +147,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td></td>
       </tr>
@@ -160,7 +158,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Drops a database. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -190,7 +188,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>Name of the database (MySql: schema) to drop</p>
 </td>
@@ -198,7 +196,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop(System.String)">Drop(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_Drop_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.Drop(System.String)">Drop(string)</h4>
   <div class="markdown level1 summary"><p>Drops a database. In MySql, this will drop a schema.
 Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
 </div>
@@ -222,7 +220,7 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>Name of the database (MySql: schema) to drop</p>
 </td>
@@ -230,7 +228,7 @@ Make sure that your default connection string points to the server itself and to
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists(ETLBox.Connection.IConnectionManager,System.String)">DropIfExists(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists(ETLBox.Connection.IConnectionManager,System.String)">DropIfExists(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Drops a database if the database exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -260,7 +258,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>Name of the database (MySql: schema) to drop</p>
 </td>
@@ -268,7 +266,7 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists(System.String)">DropIfExists(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropDatabaseTask_DropIfExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropDatabaseTask.DropIfExists(System.String)">DropIfExists(string)</h4>
   <div class="markdown level1 summary"><p>Drops a database if the database exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -291,7 +289,7 @@ that does exist (e.g. a system database)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>Name of the database (MySql: schema) to drop</p>
 </td>

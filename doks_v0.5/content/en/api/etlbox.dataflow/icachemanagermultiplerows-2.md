@@ -100,7 +100,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -127,7 +127,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Collections.Generic.IList</span>&lt;TCache&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;TCache&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

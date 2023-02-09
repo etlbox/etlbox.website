@@ -7,6 +7,6 @@
 dotnet build ../../etlbox.source
 docfx docfx_project/docfx.json --build
 ./apitransform/DocFxToHugoMD/bin/Debug/net5.0/DocFxToHugoMD.exe
-remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\newdoks\content\en\api' -Recurse
+remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v0.5\content\en\api' -Recurse
 move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\newdoks\content\en\' 
 pause

@@ -21,7 +21,7 @@ In MySql, this will return a list of all schemas.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">GetListTask</span></div>
@@ -60,25 +60,25 @@ In MySql, this will return a list of all schemas.</p>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -97,9 +97,7 @@ In MySql, this will return a list of all schemas.</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.#ctor">GetListTask()</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
-In MySql, this will return a list of all schemas.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -136,16 +134,14 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_Sql_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.Sql*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_Sql" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.Sql">Sql</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
-In MySql, this will return a list of all schemas.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -165,7 +161,7 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -174,9 +170,7 @@ In MySql, this will return a list of all schemas.</p>
   <pre><code>GetDatabaseListTask.List();</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
-In MySql, this will return a list of all schemas.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -196,7 +190,7 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -209,9 +203,7 @@ In MySql, this will return a list of all schemas.</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll_" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.RetrieveAll*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll" data-uid="ETLBox.ControlFlow.Tasks.GetListTask.RetrieveAll">RetrieveAll()</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
-In MySql, this will return a list of all schemas.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

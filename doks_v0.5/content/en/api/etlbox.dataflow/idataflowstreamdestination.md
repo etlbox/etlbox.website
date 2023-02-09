@@ -86,7 +86,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.IO.StreamWriter</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.IO.StreamWriter</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +258,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

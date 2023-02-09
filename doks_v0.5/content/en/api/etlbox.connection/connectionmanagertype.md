@@ -40,53 +40,43 @@ toc: false
     <tbody>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Access">Access</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Adomd">Adomd</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Ase">Ase</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Db2">Db2</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_MySql">MySql</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Oracle">Oracle</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Postgres">Postgres</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_SQLite">SQLite</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_SqlServer">SqlServer</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_Connection_ConnectionManagerType_Unknown">Unknown</td>
-        <td><p>All databases types that ETLBox supports with Connection Managers</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </thead></thead></table>

@@ -24,31 +24,31 @@ It is recommend to pass only one node from the network.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">Network</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -70,12 +70,7 @@ t.Wait();</code></pre>
 </h3>
   <a id="ETLBox_DataFlow_Network__ctor_" data-uid="ETLBox.DataFlow.Network.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Network__ctor" data-uid="ETLBox.DataFlow.Network.#ctor">Network()</h4>
-  <div class="markdown level1 summary"><p>The network class allows you execute, monitor and cancel data flows.
-You need to provide at least one start node to run the network. All other linked components
-will be retrieved automatically. If you provide more nodes, the algorithm will determine if
-a network has already started or not and ignore the other nodes.
-It is recommend to pass only one node from the network.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -91,13 +86,8 @@ Network.Execute(source1, source2); //If source1 and source2 are in the same netw
 Task t = Network.ExecuteAsync(dest1);
 t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network__ctor_" data-uid="ETLBox.DataFlow.Network.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Network__ctor_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.#ctor(ETLBox.DataFlow.DataFlowComponent[])">Network(DataFlowComponent[])</h4>
-  <div class="markdown level1 summary"><p>The network class allows you execute, monitor and cancel data flows.
-You need to provide at least one start node to run the network. All other linked components
-will be retrieved automatically. If you provide more nodes, the algorithm will determine if
-a network has already started or not and ignore the other nodes.
-It is recommend to pass only one node from the network.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Network__ctor_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.#ctor(ETLBox.DataFlow.DataFlowComponent[])">Network(params DataFlowComponent[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -133,12 +123,7 @@ t.Wait();</code></pre>
 </h3>
   <a id="ETLBox_DataFlow_Network_Destinations_" data-uid="ETLBox.DataFlow.Network.Destinations*"></a>
   <h4 id="ETLBox_DataFlow_Network_Destinations" data-uid="ETLBox.DataFlow.Network.Destinations">Destinations</h4>
-  <div class="markdown level1 summary"><p>The network class allows you execute, monitor and cancel data flows.
-You need to provide at least one start node to run the network. All other linked components
-will be retrieved automatically. If you provide more nodes, the algorithm will determine if
-a network has already started or not and ignore the other nodes.
-It is recommend to pass only one node from the network.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -158,7 +143,7 @@ It is recommend to pass only one node from the network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idataflowdestination">IDataFlowDestination</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idataflowdestination">IDataFlowDestination</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -170,12 +155,7 @@ Task t = Network.ExecuteAsync(dest1);
 t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_Sources_" data-uid="ETLBox.DataFlow.Network.Sources*"></a>
   <h4 id="ETLBox_DataFlow_Network_Sources" data-uid="ETLBox.DataFlow.Network.Sources">Sources</h4>
-  <div class="markdown level1 summary"><p>The network class allows you execute, monitor and cancel data flows.
-You need to provide at least one start node to run the network. All other linked components
-will be retrieved automatically. If you provide more nodes, the algorithm will determine if
-a network has already started or not and ignore the other nodes.
-It is recommend to pass only one node from the network.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -195,7 +175,7 @@ It is recommend to pass only one node from the network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource">IDataFlowExecutableSource</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource">IDataFlowExecutableSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -207,12 +187,7 @@ Task t = Network.ExecuteAsync(dest1);
 t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_StartNodes_" data-uid="ETLBox.DataFlow.Network.StartNodes*"></a>
   <h4 id="ETLBox_DataFlow_Network_StartNodes" data-uid="ETLBox.DataFlow.Network.StartNodes">StartNodes</h4>
-  <div class="markdown level1 summary"><p>The network class allows you execute, monitor and cancel data flows.
-You need to provide at least one start node to run the network. All other linked components
-will be retrieved automatically. If you provide more nodes, the algorithm will determine if
-a network has already started or not and ignore the other nodes.
-It is recommend to pass only one node from the network.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -232,7 +207,7 @@ It is recommend to pass only one node from the network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -259,7 +234,7 @@ This will result in all nodes canceled in the whole network.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Network_Cancel_" data-uid="ETLBox.DataFlow.Network.Cancel*"></a>
-  <h4 id="ETLBox_DataFlow_Network_Cancel_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Cancel(ETLBox.DataFlow.DataFlowComponent[])">Cancel(DataFlowComponent[])</h4>
+  <h4 id="ETLBox_DataFlow_Network_Cancel_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Cancel(ETLBox.DataFlow.DataFlowComponent[])">Cancel(params DataFlowComponent[])</h4>
   <div class="markdown level1 summary"><p>Cancel the BufferCompletion(s) on all nodes in the network, will start cancelation from the sources.
 This will result in all nodes canceled in the whole network.</p>
 </div>
@@ -305,7 +280,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Network_Execute_" data-uid="ETLBox.DataFlow.Network.Execute*"></a>
-  <h4 id="ETLBox_DataFlow_Network_Execute_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(ETLBox.DataFlow.DataFlowComponent[])">Execute(DataFlowComponent[])</h4>
+  <h4 id="ETLBox_DataFlow_Network_Execute_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(ETLBox.DataFlow.DataFlowComponent[])">Execute(params DataFlowComponent[])</h4>
   <div class="markdown level1 summary"><p>Will execute the data flow for the whole network synchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -339,7 +314,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Network_Execute_" data-uid="ETLBox.DataFlow.Network.Execute*"></a>
-  <h4 id="ETLBox_DataFlow_Network_Execute_System_Threading_CancellationToken_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(System.Threading.CancellationToken,ETLBox.DataFlow.DataFlowComponent[])">Execute(CancellationToken, DataFlowComponent[])</h4>
+  <h4 id="ETLBox_DataFlow_Network_Execute_System_Threading_CancellationToken_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(System.Threading.CancellationToken,ETLBox.DataFlow.DataFlowComponent[])">Execute(CancellationToken, params DataFlowComponent[])</h4>
   <div class="markdown level1 summary"><p>Will execute the data flow for the whole network synchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -442,7 +417,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Network_ExecuteAsync_" data-uid="ETLBox.DataFlow.Network.ExecuteAsync*"></a>
-  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(ETLBox.DataFlow.DataFlowComponent[])">ExecuteAsync(DataFlowComponent[])</h4>
+  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(ETLBox.DataFlow.DataFlowComponent[])">ExecuteAsync(params DataFlowComponent[])</h4>
   <div class="markdown level1 summary"><p>Will execute the data flow for the whole network asynchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -491,7 +466,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Network_ExecuteAsync_" data-uid="ETLBox.DataFlow.Network.ExecuteAsync*"></a>
-  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_System_Threading_CancellationToken_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(System.Threading.CancellationToken,ETLBox.DataFlow.DataFlowComponent[])">ExecuteAsync(CancellationToken, DataFlowComponent[])</h4>
+  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_System_Threading_CancellationToken_ETLBox_DataFlow_DataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(System.Threading.CancellationToken,ETLBox.DataFlow.DataFlowComponent[])">ExecuteAsync(CancellationToken, params DataFlowComponent[])</h4>
   <div class="markdown level1 summary"><p>Will execute the data flow for the whole network asynchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

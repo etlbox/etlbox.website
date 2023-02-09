@@ -21,31 +21,31 @@ Normally this will be a insert into with multiple values, but depending on the d
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">BulkSqlGenerator&lt;T&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -54,8 +54,7 @@ Normally this will be a insert into with multiple values, but depending on the d
 {{< /rawhtml >}}
 
 ```C#
-    public sealed class BulkSqlGenerator<T>
-    where T : DbParameter, new()
+    public sealed class BulkSqlGenerator<T> where T : DbParameter, new()
 ```
 
 {{< rawhtml >}}
@@ -79,9 +78,7 @@ Normally this will be a insert into with multiple values, but depending on the d
 </h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1__ctor_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1__ctor_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor(ETLBox.ControlFlow.ITableData)">BulkSqlGenerator(ITableData)</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -134,7 +131,7 @@ The name of the dummy table is specified here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -164,7 +161,7 @@ Default is false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -194,7 +191,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -250,7 +247,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -278,16 +275,14 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_JoinColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.JoinColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_JoinColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.JoinColumnNames">JoinColumnNames</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -307,16 +302,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_Limit_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.Limit*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_Limit" data-uid="ETLBox.Helper.BulkSqlGenerator`1.Limit">Limit</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -336,7 +329,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -368,7 +361,7 @@ is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -397,7 +390,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -425,7 +418,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -453,16 +446,14 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_SelectColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SelectColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_SelectColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SelectColumnNames">SelectColumnNames</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -482,16 +473,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_SetColumnNames_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SetColumnNames*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_SetColumnNames" data-uid="ETLBox.Helper.BulkSqlGenerator`1.SetColumnNames">SetColumnNames</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -511,7 +500,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -567,7 +556,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -599,7 +588,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -627,7 +616,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -656,7 +645,7 @@ Default is true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -665,9 +654,7 @@ Default is true.</p>
 </h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkDeleteStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkDeleteStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkDeleteStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkDeleteStatement">CreateBulkDeleteStatement()</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -687,7 +674,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -715,16 +702,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkSelectStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkSelectStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkSelectStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkSelectStatement">CreateBulkSelectStatement()</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -744,16 +729,14 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkUpdateStatement_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkUpdateStatement*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_CreateBulkUpdateStatement" data-uid="ETLBox.Helper.BulkSqlGenerator`1.CreateBulkUpdateStatement">CreateBulkUpdateStatement()</h4>
-  <div class="markdown level1 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
-Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -773,7 +756,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

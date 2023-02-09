@@ -90,7 +90,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;</span>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -176,13 +176,13 @@ and a second predicate for rows you want to discard.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
         <td><p>Only rows that evaluate to true are send to the connected target</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsIntoVoid</span></td>
         <td><p>Rows that are evaluate to true will be discarded</p>
 </td>
@@ -239,7 +239,7 @@ if you want to discarded rows.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
         <td><p>Only rows that evaluate to true are send to the connected target</p>
 </td>
@@ -342,13 +342,13 @@ and a second predicate for rows you want to discard.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
         <td><p>Only rows that evaluate to true are send to the connected target</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsIntoVoid</span></td>
         <td><p>Rows that are evaluate to true will be discarded</p>
 </td>
@@ -421,7 +421,7 @@ if you want to discarded rows.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
         <td><p>Predicate - only rows that evaluate to true are send to the connected target</p>
 </td>

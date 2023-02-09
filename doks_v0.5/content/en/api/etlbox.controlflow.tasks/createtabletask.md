@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateTableTask</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -96,8 +96,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor">CreateTableTask()</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -114,8 +113,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 });</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor(ETLBox.ControlFlow.TableDefinition)">CreateTableTask(TableDefinition)</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -148,9 +146,8 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
 });</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateTableTask(String, List&lt;TableColumn&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateTableTask(string, List&lt;TableColumn&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -171,12 +168,12 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td></td>
       </tr>
@@ -213,7 +210,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -270,7 +267,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,7 +295,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -355,14 +352,15 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -383,7 +381,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -422,8 +420,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter">Alter()</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -476,7 +473,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Alter(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Alter(IConnectionManager, string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -505,13 +502,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -550,7 +547,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Alter(String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Alter(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -573,13 +570,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -637,7 +634,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">AlterIfNeeded(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">AlterIfNeeded(IConnectionManager, string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -666,13 +663,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -711,7 +708,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">AlterIfNeeded(String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">AlterIfNeeded(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -734,13 +731,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -749,8 +746,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CheckTableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CheckTableDefinition*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CheckTableDefinition" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CheckTableDefinition">CheckTableDefinition()</h4>
-  <div class="markdown level1 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -817,7 +813,7 @@ Throws an exception if the table already exists.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Create(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Create(IConnectionManager, string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table  using a CREATE TABLE statement.
 Throws an exception if the table already exists.</p>
 </div>
@@ -847,13 +843,13 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -893,7 +889,7 @@ Throws an exception if the table already exists.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Create(String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_Create_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.Create(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">Create(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement.
 Throws an exception if the table already exists.</p>
 </div>
@@ -917,13 +913,13 @@ Throws an exception if the table already exists.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -981,7 +977,7 @@ Throws an exception if the table already exists.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateIfNotExists(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateIfNotExists(IConnectionManager, string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1010,13 +1006,13 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1055,7 +1051,7 @@ Throws an exception if the table already exists.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateIfNotExists(String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateIfNotExists(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table using a CREATE TABLE statement if the table doesn't exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1078,13 +1074,13 @@ Throws an exception if the table already exists.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1144,7 +1140,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(IConnectionManager, string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
@@ -1174,13 +1170,13 @@ If the table does not contain any rows, it will be dropped and created again.</p
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1220,7 +1216,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(String, List&lt;TableColumn&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
 If the table does not contain any rows, it will be dropped and created again.</p>
 </div>
@@ -1244,13 +1240,13 @@ If the table does not contain any rows, it will be dropped and created again.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>

@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -152,13 +152,13 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, Object, Object)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -188,10 +188,10 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
@@ -218,10 +218,10 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LoggingFinishOnce">DataFlowComponent.LoggingFinishOnce()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(Int32)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(Boolean)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -236,25 +236,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Connectors</h6>
@@ -290,8 +290,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 </h3>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor">XmlDestination()</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -305,9 +304,8 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
   <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlDestination(String, ResourceType)</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlDestination(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -328,7 +326,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The destination xml file name or uri</p>
 </td>
@@ -342,9 +340,8 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String)">XmlDestination(String)</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.#ctor(System.String)">XmlDestination(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -365,7 +362,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The destination xml file name or uri</p>
 </td>
@@ -398,14 +395,14 @@ Change this value for dynamic objects here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_HttpContentType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.HttpContentType*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_HttpContentType" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.HttpContentType">HttpContentType</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+  <div class="markdown level1 summary"><p>The content type used when sending the http request content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -426,7 +423,7 @@ Change this value for dynamic objects here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -486,7 +483,7 @@ which most likely is the desired behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -521,7 +518,8 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -542,7 +540,7 @@ which most likely is the desired behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -553,8 +551,7 @@ which most likely is the desired behavior.</p>
 </h3>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -571,8 +568,7 @@ which most likely is the desired behavior.</p>
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_CloseStream" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.CloseStream">CloseStream()</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -589,8 +585,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_InitStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_InitStream" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.InitStream">InitStream()</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -607,8 +602,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
-  <div class="markdown level1 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

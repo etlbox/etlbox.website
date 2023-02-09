@@ -23,86 +23,86 @@ it should be deleted.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
     <div class="level2"><span class="xref">DeleteColumn</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Attribute.Equals(System.Object)</span>
+      <span class="xref">System.Attribute.Equals(object)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.GetHashCode()</span>
@@ -114,46 +114,46 @@ it should be deleted.</p>
       <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type, bool)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type, bool)</span>
     </div>
     <div>
-      <span class="xref">System.Attribute.Match(System.Object)</span>
+      <span class="xref">System.Attribute.Match(object)</span>
     </div>
     <div>
       <span class="xref">System.Attribute.TypeId</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -181,11 +181,7 @@ public bool IsDeletion {get;set; }
 </h3>
   <a id="ETLBox_DataFlow_DeleteColumn__ctor_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DeleteColumn__ctor" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor">DeleteColumn()</h4>
-  <div class="markdown level1 summary"><p>This attribute defines if the column is used to identify if the record is supposed to be deleted.
-If this attribute is set and the given value matches the column of the assigned property,
-the DbMerge will know that if the records matches (identifed by the IdColumn attribute)
-it should be deleted.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -206,7 +202,7 @@ public string Value {get;set; }
 public bool IsDeletion {get;set; }
 }</p>
   <a id="ETLBox_DataFlow_DeleteColumn__ctor_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_DeleteColumn__ctor_System_Object_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor(System.Object)">DeleteColumn(Object)</h4>
+  <h4 id="ETLBox_DataFlow_DeleteColumn__ctor_System_Object_" data-uid="ETLBox.DataFlow.DeleteColumn.#ctor(System.Object)">DeleteColumn(object)</h4>
   <div class="markdown level1 summary"><p>Marks this property as column that is deleted if is equal the  <a class="xref" href="/api/etlbox.dataflow/deletecolumn#ETLBox_DataFlow_DeleteColumn_DeleteOnMatchValue">DeleteOnMatchValue</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -229,7 +225,7 @@ public bool IsDeletion {get;set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">deleteOnMatchValue</span></td>
         <td><p>To be value for the property that identifes the row as deletion</p>
 </td>
@@ -261,7 +257,7 @@ public bool IsDeletion {get;set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,7 +285,7 @@ public bool IsDeletion {get;set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

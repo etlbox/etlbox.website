@@ -40,23 +40,19 @@ toc: false
     <tbody>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_BulkLogged">BulkLogged</td>
-        <td><p>The sql server recovery models.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Default">Default</td>
-        <td><p>The sql server recovery models.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Full">Full</td>
-        <td><p>The sql server recovery models.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_ControlFlow_Tasks_RecoveryModel_Simple">Simple</td>
-        <td><p>The sql server recovery models.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </thead></thead></table>

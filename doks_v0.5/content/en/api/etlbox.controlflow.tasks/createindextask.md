@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateIndexTask</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -93,8 +93,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor">CreateIndexTask()</h4>
-  <div class="markdown level1 summary"><p>Creates an index if the index doesn't exists, otherwise the index is dropped and recreated.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -107,9 +106,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_examples">Examples</h5>
   <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateIndexTask(String, String, IList&lt;String&gt;, IList&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an index if the index doesn't exists, otherwise the index is dropped and recreated.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateIndexTask(string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -130,22 +128,22 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">includeColumns</span></td>
         <td></td>
       </tr>
@@ -154,9 +152,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String___examples">Examples</h5>
   <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateIndexTask(String, String, IList&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an index if the index doesn't exists, otherwise the index is dropped and recreated.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateIndexTask(string, string, IList&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -177,17 +174,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td></td>
       </tr>
@@ -248,7 +245,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -276,7 +273,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -304,7 +301,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,7 +329,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,7 +357,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +385,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -416,14 +413,15 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Creates an index if the index doesn't exists, otherwise the index is dropped and recreated.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -444,7 +442,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -495,7 +493,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, String, String, IList&lt;String&gt;, IList&lt;String&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -524,25 +522,25 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">includeColumns</span></td>
         <td><p>The name of the columns that are included in the index.</p>
 </td>
@@ -550,7 +548,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, String, String, IList&lt;String&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, string, string, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -579,19 +577,19 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>
@@ -599,7 +597,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(String, String, IList&lt;String&gt;, IList&lt;String&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -622,25 +620,25 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">includeColumns</span></td>
         <td><p>The name of the columns that are included in the index</p>
 </td>
@@ -648,7 +646,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(String, String, IList&lt;String&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(string, string, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -671,19 +669,19 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>

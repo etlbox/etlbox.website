@@ -21,8 +21,8 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.connection/mysqlconnectionstring">MySqlConnectionString</a>, <span class="xref">MySql.Data.MySqlClient.MySqlConnectionStringBuilder</span>&gt;</div>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.connection/mysqlconnectionstring">MySqlConnectionString</a>, <span class="xref">MySqlConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">MySqlConnectionString</span></div>
       <div class="level3"><a class="xref" href="/api/etlbox.connection/mariadbconnectionstring">MariaDbConnectionString</a></div>
   </div>
@@ -54,13 +54,13 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
       <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_Clone">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_ETLBox_Connection_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.CloneWithNewDbName(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_Clone">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.Clone()</a>
@@ -72,25 +72,25 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
       <a class="xref" href="/api/etlbox.connection/dbconnectionstring-2#ETLBox_Connection_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;MySqlConnectionString, MySqlConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Connection</h6>
@@ -107,9 +107,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 </h3>
   <a id="ETLBox_Connection_MySqlConnectionString__ctor_" data-uid="ETLBox.Connection.MySqlConnectionString.#ctor*"></a>
   <h4 id="ETLBox_Connection_MySqlConnectionString__ctor" data-uid="ETLBox.Connection.MySqlConnectionString.#ctor">MySqlConnectionString()</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -120,10 +118,8 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_MySqlConnectionString__ctor_" data-uid="ETLBox.Connection.MySqlConnectionString.#ctor*"></a>
-  <h4 id="ETLBox_Connection_MySqlConnectionString__ctor_System_String_" data-uid="ETLBox.Connection.MySqlConnectionString.#ctor(System.String)">MySqlConnectionString(String)</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
-</div>
+  <h4 id="ETLBox_Connection_MySqlConnectionString__ctor_System_String_" data-uid="ETLBox.Connection.MySqlConnectionString.#ctor(System.String)">MySqlConnectionString(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -144,7 +140,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -154,8 +150,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 </h3>
   <a id="ETLBox_Connection_MySqlConnectionString_DbName_" data-uid="ETLBox.Connection.MySqlConnectionString.DbName*"></a>
   <h4 id="ETLBox_Connection_MySqlConnectionString_DbName" data-uid="ETLBox.Connection.MySqlConnectionString.DbName">DbName</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+  <div class="markdown level1 summary"><p>The database name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -176,7 +171,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -185,8 +180,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.MySqlConnectionString, MySql.Data.MySqlClient.MySqlConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Connection_MySqlConnectionString_DbNameKeyword_" data-uid="ETLBox.Connection.MySqlConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Connection_MySqlConnectionString_DbNameKeyword" data-uid="ETLBox.Connection.MySqlConnectionString.DbNameKeyword">DbNameKeyword</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+  <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -207,7 +201,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -216,8 +210,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div><span class="xref">ETLBox.Connection.DbConnectionString&lt;ETLBox.Connection.MySqlConnectionString, MySql.Data.MySqlClient.MySqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_Connection_MySqlConnectionString_MasterDbName_" data-uid="ETLBox.Connection.MySqlConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_Connection_MySqlConnectionString_MasterDbName" data-uid="ETLBox.Connection.MySqlConnectionString.MasterDbName">MasterDbName</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
+  <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -238,7 +231,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -248,10 +241,8 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_Connection_MySqlConnectionString_op_Implicit_" data-uid="ETLBox.Connection.MySqlConnectionString.op_Implicit*"></a>
-  <h4 id="ETLBox_Connection_MySqlConnectionString_op_Implicit_System_String__ETLBox_Connection_MySqlConnectionString" data-uid="ETLBox.Connection.MySqlConnectionString.op_Implicit(System.String)~ETLBox.Connection.MySqlConnectionString">Implicit(String to MySqlConnectionString)</h4>
-  <div class="markdown level1 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
-Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
-</div>
+  <h4 id="ETLBox_Connection_MySqlConnectionString_op_Implicit_System_String__ETLBox_Connection_MySqlConnectionString" data-uid="ETLBox.Connection.MySqlConnectionString.op_Implicit(System.String)~ETLBox.Connection.MySqlConnectionString">implicit operator MySqlConnectionString(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -272,7 +263,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>

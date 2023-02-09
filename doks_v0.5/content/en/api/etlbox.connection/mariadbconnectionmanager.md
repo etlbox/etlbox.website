@@ -20,14 +20,14 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">MySql.Data.MySqlClient.MySqlConnection</span>, <span class="xref">MySql.Data.MySqlClient.MySqlTransaction</span>, <span class="xref">MySql.Data.MySqlClient.MySqlParameter</span>&gt;</div>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>, <span class="xref">MySqlParameter</span>&gt;</div>
     <div class="level2"><a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager">MySqlConnectionManager</a></div>
     <div class="level3"><span class="xref">MariaDbConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">MySql.Data.MySqlClient.MySqlConnection</span>, <span class="xref">MySql.Data.MySqlClient.MySqlTransaction</span>&gt;</div>
+    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -52,19 +52,19 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkInsert_ETLBox_ControlFlow_ITableData_">MySqlConnectionManager.BulkInsert(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_PrepareBulkInsert_System_String_">MySqlConnectionManager.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_PrepareBulkInsert_System_String_">MySqlConnectionManager.PrepareBulkInsert(string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_CleanUpBulkInsert_System_String_">MySqlConnectionManager.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_CleanUpBulkInsert_System_String_">MySqlConnectionManager.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_">MySqlConnectionManager.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">MySqlConnectionManager.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">MySqlConnectionManager.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">MySqlConnectionManager.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">MySqlConnectionManager.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_DbConnection">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.DbConnection</a>
@@ -124,22 +124,22 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Compatibility</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkNonQuery(String, IEnumerable&lt;MySqlParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkNonQuery(string, IEnumerable&lt;MySqlParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkReader(String, IEnumerable&lt;MySqlParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkReader(string, IEnumerable&lt;MySqlParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -154,22 +154,22 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_RollbackTransaction">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.RollbackTransaction()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkInsert_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkInsert(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkDelete_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CloneIfAllowed()</a>
@@ -193,7 +193,7 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloseIfAllowed">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CloseIfAllowed()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Dispose(Boolean)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Dispose(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Dispose()</a>
@@ -202,25 +202,25 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Connection</h6>
@@ -239,8 +239,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_MariaDbConnectionManager__ctor_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager__ctor" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor">MariaDbConnectionManager()</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -254,8 +253,7 @@ toc: false
   <pre><code>var mariaDbConnection = new MariaDbConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <a id="ETLBox_Connection_MariaDbConnectionManager__ctor_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager__ctor_ETLBox_Connection_MySqlConnectionString_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor(ETLBox.Connection.MySqlConnectionString)">MariaDbConnectionManager(MySqlConnectionString)</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -285,9 +283,8 @@ toc: false
   <h5 id="ETLBox_Connection_MariaDbConnectionManager__ctor_ETLBox_Connection_MySqlConnectionString__examples">Examples</h5>
   <pre><code>var mariaDbConnection = new MariaDbConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <a id="ETLBox_Connection_MariaDbConnectionManager__ctor_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor*"></a>
-  <h4 id="ETLBox_Connection_MariaDbConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor(System.String)">MariaDbConnectionManager(String)</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
-</div>
+  <h4 id="ETLBox_Connection_MariaDbConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.MariaDbConnectionManager.#ctor(System.String)">MariaDbConnectionManager(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -308,7 +305,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
@@ -320,8 +317,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_MariaDbConnectionManager_Compatibility_" data-uid="ETLBox.Connection.MariaDbConnectionManager.Compatibility*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager_Compatibility" data-uid="ETLBox.Connection.MariaDbConnectionManager.Compatibility">Compatibility</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -341,7 +337,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -352,7 +348,7 @@ toc: false
   <pre><code>var mariaDbConnection = new MariaDbConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <a id="ETLBox_Connection_MariaDbConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Connection.MariaDbConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Connection.MariaDbConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -373,7 +369,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -382,7 +378,8 @@ toc: false
   <div><a class="xref" href="/api/etlbox.connection/mysqlconnectionmanager#ETLBox_Connection_MySqlConnectionManager_MaxParameterSizeBulkCopy">MySqlConnectionManager.MaxParameterSizeBulkCopy</a></div>
   <a id="ETLBox_Connection_MariaDbConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.MariaDbConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.MariaDbConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
+sql query.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -403,7 +400,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -414,7 +411,7 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_MariaDbConnectionManager_Clone_" data-uid="ETLBox.Connection.MariaDbConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_MariaDbConnectionManager_Clone" data-uid="ETLBox.Connection.MariaDbConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Connection manager of a ETLBox connection to Maria DB.</p>
+  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -436,7 +433,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td></td>
+        <td><p>A instance copy of the current connection manager</p>
+</td>
       </tr>
     </tbody>
   </table>

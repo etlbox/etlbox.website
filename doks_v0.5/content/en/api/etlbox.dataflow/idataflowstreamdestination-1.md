@@ -116,7 +116,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +145,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">bool</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

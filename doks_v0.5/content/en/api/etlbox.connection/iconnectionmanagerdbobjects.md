@@ -30,7 +30,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Connection_IConnectionManagerDbObjects_CheckIfTableOrViewExists_" data-uid="ETLBox.Connection.IConnectionManagerDbObjects.CheckIfTableOrViewExists*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManagerDbObjects_CheckIfTableOrViewExists_System_String_" data-uid="ETLBox.Connection.IConnectionManagerDbObjects.CheckIfTableOrViewExists(System.String)">CheckIfTableOrViewExists(String)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManagerDbObjects_CheckIfTableOrViewExists_System_String_" data-uid="ETLBox.Connection.IConnectionManagerDbObjects.CheckIfTableOrViewExists(System.String)">CheckIfTableOrViewExists(string)</h4>
   <div class="markdown level1 summary"><p>Describes how the connection manager can check if a table or view exists</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -53,7 +53,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">objectName</span></td>
         <td><p>The formatted table or view name</p>
 </td>
@@ -70,7 +70,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td><p>True if the table or view exists</p>
 </td>
       </tr>

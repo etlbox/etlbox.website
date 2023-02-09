@@ -53,7 +53,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="/api/etlbox.dataflow/changeaction">ChangeAction</a>&gt;</td>
+        <td><a class="xref" href="/api/etlbox.dataflow/changeaction">ChangeAction</a>?</td>
         <td><p>null means not determined yet</p>
 </td>
       </tr>

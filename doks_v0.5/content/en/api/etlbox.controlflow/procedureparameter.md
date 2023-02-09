@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">ProcedureParameter</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -61,8 +61,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_ProcedureParameter__ctor_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_ProcedureParameter__ctor" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor">ProcedureParameter()</h4>
-  <div class="markdown level1 summary"><p>A parameter used in a procedure</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -73,9 +72,8 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_ProcedureParameter__ctor_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_ProcedureParameter__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor(System.String,System.String,System.String)">ProcedureParameter(String, String, String)</h4>
-  <div class="markdown level1 summary"><p>A parameter used in a procedure</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_ProcedureParameter__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor(System.String,System.String,System.String)">ProcedureParameter(string, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -96,26 +94,25 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dataType</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">defaultValue</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_ProcedureParameter__ctor_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_ProcedureParameter__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor(System.String,System.String)">ProcedureParameter(String, String)</h4>
-  <div class="markdown level1 summary"><p>A parameter used in a procedure</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_ProcedureParameter__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.ProcedureParameter.#ctor(System.String,System.String)">ProcedureParameter(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -136,12 +133,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dataType</span></td>
         <td></td>
       </tr>
@@ -172,7 +169,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +197,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -228,7 +225,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -256,7 +253,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -284,7 +281,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -70,7 +70,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.Object</span>, TCache&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, TCache&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -97,7 +97,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TCache, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TCache, <span class="xref">object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -124,7 +124,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, <span class="xref">object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -151,7 +151,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TCache&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TCache&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -255,7 +255,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -299,7 +299,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

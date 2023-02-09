@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">LookupTransformation&lt;TInput, TSource&gt;.PartialDbCacheSettings</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Transformations.LookupTransformation`2</h6>
@@ -53,7 +53,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public class PartialDbCacheSettings
+    public class LookupTransformation<TInput, TSource>.PartialDbCacheSettings
 ```
 
 {{< rawhtml >}}
@@ -83,7 +83,7 @@ of incoming data.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -112,7 +112,7 @@ Define here the number of rows for every batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -140,7 +140,7 @@ Define here the number of rows for every batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput[], <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput[], <span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -170,7 +170,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1&amp;apos;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput[], <a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>[]&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput[], <a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -21,7 +21,7 @@ You can pass a a filter condition for the count.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">RowCountTask</span></div>
@@ -57,25 +57,25 @@ You can pass a a filter condition for the count.</p>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -94,9 +94,7 @@ You can pass a a filter condition for the count.</p>
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor">RowCountTask()</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -109,10 +107,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">RowCountTask(String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">RowCountTask(string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -133,7 +129,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -147,10 +143,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">RowCountTask(String, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">RowCountTask(string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -171,12 +165,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -190,10 +184,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,System.String)">RowCountTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String,System.String)">RowCountTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -214,12 +206,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -228,10 +220,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String)">RowCountTask(String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.#ctor(System.String)">RowCountTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -252,7 +242,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -285,7 +275,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -313,7 +303,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -341,7 +331,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">bool</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -369,7 +359,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -397,7 +387,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">int</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -425,7 +415,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -453,15 +443,15 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -482,7 +472,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -548,10 +538,8 @@ You can pass a a filter condition for the count.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(IConnectionManager, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(IConnectionManager, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -577,7 +565,7 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -598,7 +586,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -606,10 +594,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(IConnectionManager, String, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(IConnectionManager, string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -635,12 +621,12 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -661,7 +647,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -669,10 +655,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,System.String)">Count(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String,System.String)">Count(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -698,12 +682,12 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -719,7 +703,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -727,10 +711,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String)">Count(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(ETLBox.Connection.IConnectionManager,System.String)">Count(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -756,7 +738,7 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -772,7 +754,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -780,10 +762,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -804,7 +784,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -825,7 +805,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -833,10 +813,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(String, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">Count(string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -857,12 +835,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -883,7 +861,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -891,10 +869,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,System.String)">Count(String, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String,System.String)">Count(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -915,12 +891,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -936,7 +912,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -944,10 +920,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String)">Count(String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count(System.String)">Count(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -968,7 +942,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -984,7 +958,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1020,10 +994,8 @@ You can pass a a filter condition for the count.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1049,7 +1021,7 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -1070,7 +1042,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1078,10 +1050,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, String, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1107,12 +1077,12 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -1133,7 +1103,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1141,10 +1111,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String)">HasRows(IConnectionManager, String, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String)">HasRows(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1170,12 +1138,12 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -1191,7 +1159,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1199,10 +1167,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String)">HasRows(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String)">HasRows(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1228,7 +1194,7 @@ You can pass a a filter condition for the count.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -1244,7 +1210,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1252,10 +1218,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1276,7 +1240,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -1297,7 +1261,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1305,10 +1269,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(String, String, RowCountOptions)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1329,12 +1291,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -1355,7 +1317,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1363,10 +1325,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String)">HasRows(String, String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String)">HasRows(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1387,12 +1347,12 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -1408,7 +1368,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1416,10 +1376,8 @@ You can pass a a filter condition for the count.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String)">HasRows(String)</h4>
-  <div class="markdown level1 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
-You can pass a a filter condition for the count.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String)">HasRows(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1440,7 +1398,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -1456,7 +1414,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

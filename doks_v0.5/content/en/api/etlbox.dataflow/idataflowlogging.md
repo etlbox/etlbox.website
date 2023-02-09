@@ -53,7 +53,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">int</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -81,7 +81,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -109,7 +109,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -46,69 +46,27 @@ NotFound: A record from the source was flagged as a deletion, but was not found 
     <tbody>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Delete">Delete</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Duplicate">Duplicate</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Exists">Exists</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Insert">Insert</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_NotFound">NotFound</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td id="ETLBox_DataFlow_ChangeAction_Update">Update</td>
-        <td><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
-Exists: A record with the same id was found, but both records were equal
-Insert: A record with the id didn't exist, so this records was inserted
-Update: A record with the same id was found, and the record was updated
-Delete: A record was identifed as an deletion, and this record was deleted.
-Duplicate: A record with the same id was alread used in a previous insert/update operation
-NotFound: A record from the source was flagged as a deletion, but was not found in the destination</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </thead></thead></table>

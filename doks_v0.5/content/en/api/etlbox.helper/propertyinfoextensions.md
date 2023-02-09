@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">PropertyInfoExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -60,9 +60,8 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Helper_PropertyInfoExtensions_SetValueByType_" data-uid="ETLBox.Helper.PropertyInfoExtensions.SetValueByType*"></a>
-  <h4 id="ETLBox_Helper_PropertyInfoExtensions_SetValueByType_System_Reflection_PropertyInfo_System_Object_System_Object_System_Type_" data-uid="ETLBox.Helper.PropertyInfoExtensions.SetValueByType(System.Reflection.PropertyInfo,System.Object,System.Object,System.Type)">SetValueByType(PropertyInfo, Object, Object, Type)</h4>
-  <div class="markdown level1 summary"><p>Reflection helper class that allows to directly set values in properties.</p>
-</div>
+  <h4 id="ETLBox_Helper_PropertyInfoExtensions_SetValueByType_System_Reflection_PropertyInfo_System_Object_System_Object_System_Type_" data-uid="ETLBox.Helper.PropertyInfoExtensions.SetValueByType(System.Reflection.PropertyInfo,System.Object,System.Object,System.Type)">SetValueByType(PropertyInfo, object, object, Type)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -88,12 +87,12 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>

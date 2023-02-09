@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">LoggableTask</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
@@ -32,25 +32,25 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -67,8 +67,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_LoggableTask__ctor_" data-uid="ETLBox.ControlFlow.LoggableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask__ctor" data-uid="ETLBox.ControlFlow.LoggableTask.#ctor">LoggableTask()</h4>
-  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -82,7 +81,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_LoggableTask_DisableLogging_" data-uid="ETLBox.ControlFlow.LoggableTask.DisableLogging*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_DisableLogging" data-uid="ETLBox.ControlFlow.LoggableTask.DisableLogging">DisableLogging</h4>
-  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
+  <div class="markdown level1 summary"><p>If set to true, the component or task won't produce any log output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -103,14 +102,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskHash_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskHash*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskHash" data-uid="ETLBox.ControlFlow.LoggableTask.TaskHash">TaskHash</h4>
-  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
+  <div class="markdown level1 summary"><p>Creates a unique hash value to identify the task or component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -131,14 +130,15 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskName_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskName" data-uid="ETLBox.ControlFlow.LoggableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -159,14 +159,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_LoggableTask_TaskType_" data-uid="ETLBox.ControlFlow.LoggableTask.TaskType*"></a>
   <h4 id="ETLBox_ControlFlow_LoggableTask_TaskType" data-uid="ETLBox.ControlFlow.LoggableTask.TaskType">TaskType</h4>
-  <div class="markdown level1 summary"><p>This class contains properties that are needed for logging.</p>
+  <div class="markdown level1 summary"><p>A type description of the task or component. This is usually the class name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -187,7 +187,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

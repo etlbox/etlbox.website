@@ -5,18 +5,27 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.6.8
+
+#### Features:
+- Network Execute/ExecuteAsync now accepts CancellationToken instead of CancellationTokenSource (BREAKING CHANGE)
+
+#### Bug fixes:
+- LogLevel for messages for each batch of processed rows during processing reduced to Debug (was Information before) - final amount still logged as Information
+- DisableLogging now also disables logging for Trace/Fatal message (were always logged before)
+
 ## Version 2.6.7
 
-#### Bug fixes
-
-- Lookup: When retrieving multiple values from source, unmatched input data was filtered out - this is fixed
-
-## Features
+#### Features
 
 - Distinct: now offers LinkDuplicatesTo(..) to forward duplicates into separate output 
 - DbMerge: Performs implicit type cast when determining equality of CompareColumns
 - DbMerge: Records marked as deletion but not present in destination now flagged with ChangeAction NotFound
 - DbMerge: Adding ColumnConverters
+
+#### Bug fixes
+
+- Lookup: When retrieving multiple values from source, unmatched input data was filtered out - this is fixed
 
 ## Version 2.6.6
 

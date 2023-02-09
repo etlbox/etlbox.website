@@ -21,7 +21,7 @@ various sql data types into the right database specific database or into a .NET 
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">DataTypeConverter</span></div>
   </div>
   <div class="implements">
@@ -31,25 +31,25 @@ various sql data types into the right database specific database or into a .NET 
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -65,10 +65,8 @@ various sql data types into the right database specific database or into a .NET 
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Helper_DataTypeConverter_ChangeType_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType_System_Object_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType(System.Object,System.Type)">ChangeType(Object, Type)</h4>
-  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
-various sql data types into the right database specific database or into a .NET data type.</p>
-</div>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType_System_Object_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType(System.Object,System.Type)">ChangeType(object, Type)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -89,7 +87,7 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -110,16 +108,14 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_ChangeType_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType__1_System_Object_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType``1(System.Object)">ChangeType&lt;T&gt;(Object)</h4>
-  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
-various sql data types into the right database specific database or into a .NET data type.</p>
-</div>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType__1_System_Object_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType``1(System.Object)">ChangeType&lt;T&gt;(object)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -140,7 +136,7 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -272,14 +268,14 @@ manager. E.g. passing the .NET data type long for SqlServer will return the stri
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>A database specific type string</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.String)">GetDBType(String)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.String)">GetDBType(string)</h4>
   <div class="markdown level1 summary"><p>Returns the ADO.NET System.Data.DbType object for a specific sql type.
 E.g. the method would return the System.Data.DbType.String for the sql type 'CHAR(10)'</p>
 </div>
@@ -303,7 +299,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dbSpecificTypeName</span></td>
         <td><p>The sql specific data type name</p>
 </td>
@@ -320,7 +316,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Data.DbType</span>&gt;</td>
+        <td><span class="xref">System.Data.DbType</span>?</td>
         <td><p>The corresponding ADO .NET database type</p>
 </td>
       </tr>
@@ -328,9 +324,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.Type)">GetDBType(Type)</h4>
-  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
-various sql data types into the right database specific database or into a .NET data type.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -373,7 +367,7 @@ various sql data types into the right database specific database or into a .NET 
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString(System.String)">GetStringLengthFromCharString(String)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString(System.String)">GetStringLengthFromCharString(string)</h4>
   <div class="markdown level1 summary"><p>Returns the string length that a sql char datatype has in it's definition.
 E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
 </div>
@@ -397,7 +391,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">value</span></td>
         <td><p>A sql character data type</p>
 </td>
@@ -414,14 +408,14 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><p>The string length defined in the data type - 0 if nothing could be found</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetTypeObject_" data-uid="ETLBox.Helper.DataTypeConverter.GetTypeObject*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetTypeObject_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetTypeObject(System.String)">GetTypeObject(String)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetTypeObject_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetTypeObject(System.String)">GetTypeObject(string)</h4>
   <div class="markdown level1 summary"><p>Returns the .NET type object for a specific sql type.
 E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p>
 </div>
@@ -445,7 +439,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dbSpecificTypeName</span></td>
         <td><p>The sql specific data type name</p>
 </td>
@@ -470,9 +464,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetUnderlyingType_" data-uid="ETLBox.Helper.DataTypeConverter.GetUnderlyingType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetUnderlyingType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetUnderlyingType(System.Type)">GetUnderlyingType(Type)</h4>
-  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
-various sql data types into the right database specific database or into a .NET data type.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -515,7 +507,7 @@ various sql data types into the right database specific database or into a .NET 
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertAliasName(String, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertAliasName(string, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Converts a data type alias name (e.g. an alias name
 like &quot;varchar(10)&quot; ) to the original database type name (&quot;character varying&quot;).</p>
 </div>
@@ -539,7 +531,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>The database alias type name</p>
 </td>
@@ -562,16 +554,15 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>The type name converted to an original database type name</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(String, ConnectionManagerType)</h4>
-  <div class="markdown level1 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
-various sql data types into the right database specific database or into a .NET data type.</p>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(string, ConnectionManagerType)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -593,14 +584,16 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dataTypeName</span></td>
-        <td></td>
+        <td><p>The specific type name from a table column</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
         <td><span class="parametername">connectionType</span></td>
-        <td></td>
+        <td><p>The database connection type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -614,13 +607,14 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><span class="xref">string</span></td>
+        <td><p>The type used in the CREATE TABLE statement</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String,ETLBox.Connection.ConnectionManagerType)">TryGetDbSpecificType(String, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String,ETLBox.Connection.ConnectionManagerType)">TryGetDbSpecificType(string, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type into a database specific type.
 E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.</p>
 </div>
@@ -644,7 +638,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>A data type name</p>
 </td>
@@ -667,7 +661,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>The converted database specific type name</p>
 </td>
       </tr>

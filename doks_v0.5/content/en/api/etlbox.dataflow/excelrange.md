@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">ExcelRange</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -60,9 +60,8 @@ toc: false
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_ExcelRange__ctor_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ExcelRange(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Defines a range in an excel file where the data is located.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ExcelRange(int, int, int, int)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -83,31 +82,30 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">startColumn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">startRow</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">endColumn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">endRow</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_ExcelRange__ctor_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Defines a range in an excel file where the data is located.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.DataFlow.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(int, int)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -128,12 +126,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">startColumn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">startRow</span></td>
         <td></td>
       </tr>
@@ -165,7 +163,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">int</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -194,7 +192,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">int</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -222,7 +220,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -250,7 +248,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>

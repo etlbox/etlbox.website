@@ -21,7 +21,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -114,13 +114,13 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, Object, Object)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a>
@@ -150,10 +150,10 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
@@ -180,10 +180,10 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LoggingFinishOnce">DataFlowComponent.LoggingFinishOnce()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(Int32)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(Boolean)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -198,25 +198,25 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Connectors</h6>
@@ -249,9 +249,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 </h3>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor">DbDestination()</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -262,10 +260,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbDestination(IConnectionManager, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbDestination(IConnectionManager, string, int)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -292,13 +288,13 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination-1#ETLBox_DataFlow_Connectors_DbDestination_1_TableName">TableName</a></p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">batchSize</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">BatchSize</a></p>
 </td>
@@ -306,10 +302,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbDestination(IConnectionManager, String)</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbDestination(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -336,7 +330,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination-1#ETLBox_DataFlow_Connectors_DbDestination_1_TableName">TableName</a></p>
 </td>
@@ -344,10 +338,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String,System.Int32)">DbDestination(String, Int32)</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String,System.Int32)">DbDestination(string, int)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -368,13 +360,13 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination-1#ETLBox_DataFlow_Connectors_DbDestination_1_TableName">TableName</a></p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">batchSize</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">BatchSize</a></p>
 </td>
@@ -382,10 +374,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String)">DbDestination(String)</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String)">DbDestination(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -406,7 +396,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.connectors/dbdestination-1#ETLBox_DataFlow_Connectors_DbDestination_1_TableName">TableName</a></p>
 </td>
@@ -440,7 +430,7 @@ identity values (if there is a corresponding property with a new id value in the
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -529,7 +519,7 @@ You can use BulkOperation.Update to bulk update matching data in the destination
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow.connectors/columnconverter">ColumnConverter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow.connectors/columnconverter">ColumnConverter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -559,7 +549,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; Pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnmap">ColumnMap</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnmap">ColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -646,7 +636,7 @@ Only needed when BulkOpteration is set to BulkOperation.Update or BulkOperation.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idcolumn">IdColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idcolumn">IdColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -674,15 +664,15 @@ Only needed when BulkOpteration is set to BulkOperation.Update or BulkOperation.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -703,7 +693,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -733,7 +723,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/updatecolumn">UpdateColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/updatecolumn">UpdateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -763,7 +753,7 @@ This information can be read for supported databases after bulk inserting the da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -772,9 +762,7 @@ This information can be read for supported databases after bulk inserting the da
 </h3>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData__0___" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData(`0[])">BulkInsertData(TInput[])</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -805,9 +793,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.BulkInsertData(TInput[])</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -821,9 +807,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite">FinishWrite()</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -837,9 +821,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter">PrepareParameter()</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -853,9 +835,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite">PrepareWrite()</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -868,10 +848,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.PrepareWrite()</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_SkipRecord_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.SkipRecord*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_SkipRecord_System_String_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.SkipRecord(System.String,System.String)">SkipRecord(String, String)</h4>
-  <div class="markdown level1 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
-Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_SkipRecord_System_String_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.SkipRecord(System.String,System.String)">SkipRecord(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -892,12 +870,12 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">propName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">colname</span></td>
         <td></td>
       </tr>
@@ -913,7 +891,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

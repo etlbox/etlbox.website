@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask</a>&lt;<a class="xref" href="/api/etlbox.controlflow.tasks/ifschemaexiststask">IfSchemaExistsTask</a>&gt;</div>
@@ -75,25 +75,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -110,8 +110,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.#ctor">DropSchemaTask()</h4>
-  <div class="markdown level1 summary"><p>Drops a schema. Use DropIfExists to drop a schema only if it exists. For MySql or MariaDb, use the DropDatabase task instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -122,9 +121,8 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.#ctor(System.String)">DropSchemaTask(String)</h4>
-  <div class="markdown level1 summary"><p>Drops a schema. Use DropIfExists to drop a schema only if it exists. For MySql or MariaDb, use the DropDatabase task instead.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.#ctor(System.String)">DropSchemaTask(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -145,7 +143,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td></td>
       </tr>
@@ -154,7 +152,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop(ETLBox.Connection.IConnectionManager,System.String)">Drop(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Drops a schema. For MySql, use the DropDatabase task instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -183,7 +181,7 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>Name of the schema to drop</p>
 </td>
@@ -191,7 +189,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop(System.String)">Drop(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_Drop_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.Drop(System.String)">Drop(string)</h4>
   <div class="markdown level1 summary"><p>Drops a schema. For MySql, use the DropDatabase task instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -214,7 +212,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>Name of the schema to drop</p>
 </td>
@@ -222,7 +220,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists(ETLBox.Connection.IConnectionManager,System.String)">DropIfExists(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists(ETLBox.Connection.IConnectionManager,System.String)">DropIfExists(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Drops a schema if the schema exists. For MySql, use the DropDatabase task instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -251,7 +249,7 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>Name of the schema to drop</p>
 </td>
@@ -259,7 +257,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists(System.String)">DropIfExists(String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_DropSchemaTask_DropIfExists_System_String_" data-uid="ETLBox.ControlFlow.Tasks.DropSchemaTask.DropIfExists(System.String)">DropIfExists(string)</h4>
   <div class="markdown level1 summary"><p>Drops a schema if the schema exists. For MySql, use the DropDatabase task instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -282,7 +280,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>Name of the schema to drop</p>
 </td>

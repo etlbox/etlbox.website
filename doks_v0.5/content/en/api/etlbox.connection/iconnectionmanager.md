@@ -60,7 +60,7 @@ Default is 0 (no timeout)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -88,7 +88,7 @@ Default is 0 (no timeout)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -172,7 +172,7 @@ Default is 0 (no timeout)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +200,7 @@ Default is 0 (no timeout)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -231,7 +231,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -259,7 +259,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -287,7 +287,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -316,7 +316,7 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -345,7 +345,7 @@ All databases use the '@' character, except Oracle which uses ':'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -374,7 +374,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +403,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -431,7 +431,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Data.ConnectionState</span>&gt;</td>
+        <td><span class="xref">ConnectionState</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -460,7 +460,7 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -488,7 +488,7 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -518,7 +518,7 @@ Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -634,7 +634,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_BulkSelect_" data-uid="ETLBox.Connection.IConnectionManager.BulkSelect*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.IConnectionManager.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.IConnectionManager.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"><p>Performs a bulk select</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -663,7 +663,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
         <td><p>Column names included in the select</p>
 </td>
@@ -681,7 +681,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td><p>Pass an action for each column</p>
 </td>
@@ -689,7 +689,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_BulkUpdate_" data-uid="ETLBox.Connection.IConnectionManager.BulkUpdate*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.IConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.IConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -718,13 +718,13 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -732,7 +732,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Connection.IConnectionManager.CleanUpBulkInsert*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.IConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(String)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Connection.IConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
 to change back settings made to improve bulk insert performance</p>
 </div>
@@ -756,7 +756,7 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Destination table name</p>
 </td>
@@ -863,7 +863,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_IConnectionManager_ExecuteNonQuery_" data-uid="ETLBox.Connection.IConnectionManager.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.IConnectionManager.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.IConnectionManager.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Executes a query against the database that doesn't return any data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -886,13 +886,13 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>The sql command</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -909,14 +909,14 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><p>Number of affected rows.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_ExecuteReader_" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.IConnectionManager.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"><p>Executes a query against the database that does return multiple rows in multiple columns</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -939,19 +939,19 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">commandText</span></td>
         <td><p>The sql command</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of query parameters</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">limit</span></td>
         <td><p>Maximum number of rows to read</p>
 </td>
@@ -969,7 +969,7 @@ to the ADO.NET connection pool for further reuse.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;[]</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td><p>Every column in the result set will call an action with the value of the current row.
 The order of the columns corresponds with the order of the passed actions.</p>
@@ -978,7 +978,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <a id="ETLBox_Connection_IConnectionManager_ExecuteScalar_" data-uid="ETLBox.Connection.IConnectionManager.ExecuteScalar*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.IConnectionManager.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.IConnectionManager.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Executes a query against the database that does return only one row in one column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1001,13 +1001,13 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>The sql command</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -1024,7 +1024,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><p>The result</p>
 </td>
       </tr>
@@ -1046,7 +1046,7 @@ If the connection is already open, nothing is done.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_Connection_IConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Connection.IConnectionManager.PrepareBulkInsert*"></a>
-  <h4 id="ETLBox_Connection_IConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.IConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(String)</h4>
+  <h4 id="ETLBox_Connection_IConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Connection.IConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
 performance of a bulk insert operation</p>
 </div>
@@ -1070,7 +1070,7 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Destination table name</p>
 </td>

@@ -19,31 +19,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">LoadProcess</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Logging</h6>
@@ -80,7 +80,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -107,7 +107,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="xref">System.DateTime</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -134,7 +134,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -161,7 +161,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">long</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -188,7 +188,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +215,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -242,7 +242,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -269,7 +269,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -296,7 +296,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">long</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -350,7 +350,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -377,7 +377,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -404,7 +404,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -439,7 +439,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_Abort_" data-uid="ETLBox.Logging.LoadProcess.Abort*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.Connection.IConnectionManager,System.String)">Abort(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.Connection.IConnectionManager,System.String)">Abort(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -466,7 +466,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
@@ -532,7 +532,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_Abort_" data-uid="ETLBox.Logging.LoadProcess.Abort*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_Abort_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(System.String)">Abort(String)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_Abort_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(System.String)">Abort(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -554,7 +554,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
@@ -603,7 +603,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_End_" data-uid="ETLBox.Logging.LoadProcess.End*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.Connection.IConnectionManager,System.String)">End(IConnectionManager, String)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.Connection.IConnectionManager,System.String)">End(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -630,7 +630,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
@@ -696,7 +696,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_End_" data-uid="ETLBox.Logging.LoadProcess.End*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_End_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(System.String)">End(String)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_End_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(System.String)">End(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -718,7 +718,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">message</span></td>
         <td></td>
       </tr>

@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateProcedureTask</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -93,8 +93,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor">CreateProcedureTask()</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -108,8 +107,7 @@ toc: false
   <pre><code>CRUDProcedureTask.CreateOrAlter(&quot;demo.proc1&quot;, &quot;select 1 as test&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_ETLBox_ControlFlow_ProcedureDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor(ETLBox.ControlFlow.ProcedureDefinition)">CreateProcedureTask(ProcedureDefinition)</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -139,9 +137,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_ETLBox_ControlFlow_ProcedureDefinition__examples">Examples</h5>
   <pre><code>CRUDProcedureTask.CreateOrAlter(&quot;demo.proc1&quot;, &quot;select 1 as test&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor(System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateProcedureTask(String, String, IList&lt;ProcedureParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor(System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateProcedureTask(string, string, IList&lt;ProcedureParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -162,17 +159,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td></td>
       </tr>
@@ -181,9 +178,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter___examples">Examples</h5>
   <pre><code>CRUDProcedureTask.CreateOrAlter(&quot;demo.proc1&quot;, &quot;select 1 as test&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor(System.String,System.String)">CreateProcedureTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.#ctor(System.String,System.String)">CreateProcedureTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -204,12 +200,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td></td>
       </tr>
@@ -270,7 +266,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,15 +294,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_ProcedureOptions_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_ProcedureOptions" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions">ProcedureOptions</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -326,7 +321,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -356,7 +351,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -384,14 +379,15 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -412,7 +408,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -459,7 +455,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateOrAlter(IConnectionManager, String, String, IList&lt;ProcedureParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateOrAlter(IConnectionManager, string, string, IList&lt;ProcedureParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -488,19 +484,19 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td><p>The name of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td><p>The sql code of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td><p>A list of the parameters for the procedure</p>
 </td>
@@ -508,7 +504,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateOrAlter(IConnectionManager, String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateOrAlter(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -537,13 +533,13 @@ toc: false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td><p>The name of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td><p>The sql code of the procedure</p>
 </td>
@@ -582,7 +578,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateOrAlter(String, String, IList&lt;ProcedureParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_System_String_System_String_System_Collections_Generic_IList_ETLBox_ControlFlow_ProcedureParameter__" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(System.String,System.String,System.Collections.Generic.IList{ETLBox.ControlFlow.ProcedureParameter})">CreateOrAlter(string, string, IList&lt;ProcedureParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -605,19 +601,19 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td><p>The name of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td><p>The sql code of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td><p>A list of the parameters for the procedure</p>
 </td>
@@ -625,7 +621,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(System.String,System.String)">CreateOrAlter(String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateProcedureTask_CreateOrAlter_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter(System.String,System.String)">CreateOrAlter(string, string)</h4>
   <div class="markdown level1 summary"><p>Creates or updates a procedure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -648,13 +644,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureName</span></td>
         <td><p>The name of the procedure</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">procedureDefinition</span></td>
         <td><p>The sql code of the procedure</p>
 </td>

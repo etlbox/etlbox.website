@@ -87,7 +87,7 @@ pattern).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -116,7 +116,7 @@ If you already have an existing stream, use this function to returns a StreamRea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.IO.StreamReader</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.IO.StreamReader</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -175,7 +175,7 @@ This property can be used if you want to read multiple files or if you want to p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -204,7 +204,7 @@ This property can be used if you want to read multiple files or if you want to p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">bool</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -347,7 +347,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -375,7 +375,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

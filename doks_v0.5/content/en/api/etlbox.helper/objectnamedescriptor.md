@@ -21,31 +21,31 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">ObjectNameDescriptor</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -61,7 +61,7 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Helper_ObjectNameDescriptor__ctor_" data-uid="ETLBox.Helper.ObjectNameDescriptor.#ctor*"></a>
-  <h4 id="ETLBox_Helper_ObjectNameDescriptor__ctor_System_String_System_String_System_String_" data-uid="ETLBox.Helper.ObjectNameDescriptor.#ctor(System.String,System.String,System.String)">ObjectNameDescriptor(String, String, String)</h4>
+  <h4 id="ETLBox_Helper_ObjectNameDescriptor__ctor_System_String_System_String_System_String_" data-uid="ETLBox.Helper.ObjectNameDescriptor.#ctor(System.String,System.String,System.String)">ObjectNameDescriptor(string, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance and already parses the values. Right after initialization you can access the values in the properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -84,19 +84,19 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">objectName</span></td>
         <td><p>The full object name (e.g. Schema.ViewName)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">qb</span></td>
         <td><p>The database specific quotation start (e.g. '[' for Sql Server)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">qe</span></td>
         <td><p>The database specific quotation start (e.g. ']' for Sql Server)</p>
 </td>
@@ -128,7 +128,7 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -157,7 +157,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -186,7 +186,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +215,7 @@ E.g. schema.ViewName would create &quot;schema&quot;.&quot;ViewName&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -244,7 +244,7 @@ E.g. schema.ViewName would create &quot;ViewName&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +273,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create &quot;schema&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -302,7 +302,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema.ViewName</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -331,7 +331,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create ViewName</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,7 +360,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

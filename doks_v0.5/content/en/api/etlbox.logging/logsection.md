@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">LogSection</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Logging</h6>
@@ -90,9 +90,8 @@ toc: false
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Logging_LogSection__ctor_" data-uid="ETLBox.Logging.LogSection.#ctor*"></a>
-  <h4 id="ETLBox_Logging_LogSection__ctor_System_String_" data-uid="ETLBox.Logging.LogSection.#ctor(System.String)">LogSection(String)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <h4 id="ETLBox_Logging_LogSection__ctor_System_String_" data-uid="ETLBox.Logging.LogSection.#ctor(System.String)">LogSection(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -113,7 +112,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -123,7 +122,8 @@ toc: false
 </h3>
   <a id="ETLBox_Logging_LogSection_TaskName_" data-uid="ETLBox.Logging.LogSection.TaskName*"></a>
   <h4 id="ETLBox_Logging_LogSection_TaskName" data-uid="ETLBox.Logging.LogSection.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -144,7 +144,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -155,8 +155,7 @@ toc: false
 </h3>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute_System_Action_" data-uid="ETLBox.Logging.LogSection.Execute(System.Action)">Execute(Action)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -184,9 +183,8 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
-  <h4 id="ETLBox_Logging_LogSection_Execute_System_String_System_Action_" data-uid="ETLBox.Logging.LogSection.Execute(System.String,System.Action)">Execute(String, Action)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <h4 id="ETLBox_Logging_LogSection_Execute_System_String_System_Action_" data-uid="ETLBox.Logging.LogSection.Execute(System.String,System.Action)">Execute(string, Action)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -207,7 +205,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -220,8 +218,7 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__1_System_Action___0____0_" data-uid="ETLBox.Logging.LogSection.Execute``1(System.Action{``0},``0)">Execute&lt;t1&gt;(Action&lt;t1&gt;, t1)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -242,7 +239,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;t1&gt;</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;t1&gt;</td>
         <td><span class="parametername">task</span></td>
         <td></td>
       </tr>
@@ -269,9 +266,8 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
-  <h4 id="ETLBox_Logging_LogSection_Execute__1_System_String_System_Action___0____0_" data-uid="ETLBox.Logging.LogSection.Execute``1(System.String,System.Action{``0},``0)">Execute&lt;t1&gt;(String, Action&lt;t1&gt;, t1)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <h4 id="ETLBox_Logging_LogSection_Execute__1_System_String_System_Action___0____0_" data-uid="ETLBox.Logging.LogSection.Execute``1(System.String,System.Action{``0},``0)">Execute&lt;t1&gt;(string, Action&lt;t1&gt;, t1)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -292,12 +288,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;t1&gt;</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;t1&gt;</td>
         <td><span class="parametername">task</span></td>
         <td></td>
       </tr>
@@ -325,8 +321,7 @@ toc: false
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
   <h4 id="ETLBox_Logging_LogSection_Execute__2_System_Action___0___1____0___1_" data-uid="ETLBox.Logging.LogSection.Execute``2(System.Action{``0,``1},``0,``1)">Execute&lt;t1, t2&gt;(Action&lt;t1, t2&gt;, t1, t2)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -347,7 +342,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;t1, t2&gt;</td>
+        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;t1, t2&gt;</td>
         <td><span class="parametername">task</span></td>
         <td></td>
       </tr>
@@ -383,9 +378,8 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogSection_Execute_" data-uid="ETLBox.Logging.LogSection.Execute*"></a>
-  <h4 id="ETLBox_Logging_LogSection_Execute__2_System_String_System_Action___0___1____0___1_" data-uid="ETLBox.Logging.LogSection.Execute``2(System.String,System.Action{``0,``1},``0,``1)">Execute&lt;t1, t2&gt;(String, Action&lt;t1, t2&gt;, t1, t2)</h4>
-  <div class="markdown level1 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
-</div>
+  <h4 id="ETLBox_Logging_LogSection_Execute__2_System_String_System_Action___0___1____0___1_" data-uid="ETLBox.Logging.LogSection.Execute``2(System.String,System.Action{``0,``1},``0,``1)">Execute&lt;t1, t2&gt;(string, Action&lt;t1, t2&gt;, t1, t2)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -406,12 +400,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;t1, t2&gt;</td>
+        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;t1, t2&gt;</td>
         <td><span class="parametername">task</span></td>
         <td></td>
       </tr>

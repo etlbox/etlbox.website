@@ -25,7 +25,7 @@ memory to store a whole batch.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -100,13 +100,13 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, Object, Object)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -139,10 +139,10 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
@@ -169,10 +169,10 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LoggingFinishOnce">DataFlowComponent.LoggingFinishOnce()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(Int32)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(Boolean)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -187,25 +187,25 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Transformations</h6>
@@ -243,13 +243,7 @@ memory to store a whole batch.</p>
 </h3>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor">BatchTransformation()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -260,14 +254,8 @@ memory to store a whole batch.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_System_Int32_System_Func__0____1____" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor(System.Int32,System.Func{`0[],`1[]})">BatchTransformation(Int32, Func&lt;TInput[], TOutput[]&gt;)</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_System_Int32_System_Func__0____1____" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor(System.Int32,System.Func{`0[],`1[]})">BatchTransformation(int, Func&lt;TInput[], TOutput[]&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -288,13 +276,13 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">batchSize</span></td>
         <td><p>The size of each batch</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput[], TOutput[]&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput[], TOutput[]&gt;</td>
         <td><span class="parametername">batchTransformationFunc</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow.transformations/batchtransformation-2#ETLBox_DataFlow_Transformations_BatchTransformation_2_BatchTransformationFunc">BatchTransformationFunc</a></p>
 </td>
@@ -302,14 +290,8 @@ memory to store a whole batch.</p>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor(System.Int32)">BatchTransformation(Int32)</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2__ctor_System_Int32_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.#ctor(System.Int32)">BatchTransformation(int)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -330,7 +312,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">batchSize</span></td>
         <td><p>The size of each batch</p>
 </td>
@@ -340,13 +322,7 @@ memory to store a whole batch.</p>
   <h3 id="fields">Fields
 </h3>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_WasInitActionInvoked" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.WasInitActionInvoked">WasInitActionInvoked</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -366,7 +342,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -397,7 +373,7 @@ Default is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -427,7 +403,7 @@ the input array.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TInput[], TOutput[]&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput[], TOutput[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -462,12 +438,7 @@ the input array.</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.SourceBlock">SourceBlock</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
+  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -488,7 +459,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;</span>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -519,19 +490,14 @@ are filtered out. Set this option to true to avoid this behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.TargetBlock">TargetBlock</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
+  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -552,7 +518,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Dataflow.ITargetBlock</span>&lt;TInput&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;</span>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -561,12 +527,8 @@ memory to store a whole batch.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -587,7 +549,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -598,13 +560,7 @@ memory to store a whole batch.</p>
 </h3>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CheckAndAdjustBatchSize_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CheckAndAdjustBatchSize*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CheckAndAdjustBatchSize" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CheckAndAdjustBatchSize">CheckAndAdjustBatchSize()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -616,13 +572,7 @@ memory to store a whole batch.</p>
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CheckParameter_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CheckParameter" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -636,13 +586,7 @@ memory to store a whole batch.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -673,13 +617,7 @@ memory to store a whole batch.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -693,13 +631,7 @@ memory to store a whole batch.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InitComponent_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InitComponent" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -713,13 +645,7 @@ memory to store a whole batch.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InvokeBatchTransformationFunc_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InvokeBatchTransformationFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InvokeBatchTransformationFunc__0___" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InvokeBatchTransformationFunc(`0[])">InvokeBatchTransformationFunc(TInput[])</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -763,13 +689,7 @@ memory to store a whole batch.</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InvokeInitActionOnce_" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InvokeInitActionOnce*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_BatchTransformation_2_InvokeInitActionOnce" data-uid="ETLBox.DataFlow.Transformations.BatchTransformation`2.InvokeInitActionOnce">InvokeInitActionOnce()</h4>
-  <div class="markdown level1 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
-The batch transformation function allows you to process and modify each batch of data.
-You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
-than the max buffer size. The default batch size are 1000 rows per batch.
-The batch transformation is a partial blocking transformation - it will always need at least enough
-memory to store a whole batch.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

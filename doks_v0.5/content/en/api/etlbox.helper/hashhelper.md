@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">HashHelper</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -100,14 +100,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>A unique readable hash string with 40 character</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_HashHelper_CreateChar40Hash_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash*"></a>
-  <h4 id="ETLBox_Helper_HashHelper_CreateChar40Hash_System_String_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash(System.String)">CreateChar40Hash(String)</h4>
+  <h4 id="ETLBox_Helper_HashHelper_CreateChar40Hash_System_String_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash(System.String)">CreateChar40Hash(string)</h4>
   <div class="markdown level1 summary"><p>Creates a 40 character unique hash string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -130,7 +130,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">text</span></td>
         <td><p>Text that needs to be hashed</p>
 </td>
@@ -147,14 +147,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><p>A unique readable hash string with 40 characters</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Helper_HashHelper_HashSum_" data-uid="ETLBox.Helper.HashHelper.HashSum*"></a>
-  <h4 id="ETLBox_Helper_HashHelper_HashSum_System_Collections_Generic_IEnumerable_System_Object__" data-uid="ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable{System.Object})">HashSum(IEnumerable&lt;Object&gt;)</h4>
+  <h4 id="ETLBox_Helper_HashHelper_HashSum_System_Collections_Generic_IEnumerable_System_Object__" data-uid="ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable{System.Object})">HashSum(IEnumerable&lt;object&gt;)</h4>
   <div class="markdown level1 summary"><p>Addition of the hash values for a list of object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -177,7 +177,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
         <td><span class="parametername">objectList</span></td>
         <td><p>A list of objects</p>
 </td>
@@ -194,7 +194,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><p>A unique hash value</p>
 </td>
       </tr>

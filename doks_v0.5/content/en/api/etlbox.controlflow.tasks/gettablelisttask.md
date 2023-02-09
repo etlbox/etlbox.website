@@ -21,7 +21,7 @@ Make sure to connect with the correct permissions!</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow.tasks/getlisttask">GetListTask</a></div>
@@ -67,25 +67,25 @@ Make sure to connect with the correct permissions!</p>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -110,9 +110,7 @@ foreach (var on in alltables) {
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_GetTableListTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetTableListTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.#ctor">GetTableListTask()</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all tables in the currently connected database.<br>
-Make sure to connect with the correct permissions!</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -134,9 +132,7 @@ foreach (var on in alltables) {
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_GetTableListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetTableListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetTableListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all tables in the currently connected database.<br>
-Make sure to connect with the correct permissions!</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -156,7 +152,7 @@ Make sure to connect with the correct permissions!</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -188,7 +184,7 @@ Make sure to connect with the correct permissions!</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
         <td><p>A list of all user database names</p>
 </td>
       </tr>
@@ -235,7 +231,7 @@ Make sure to connect with the correct permissions!</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
         <td><p>A list of all user database names</p>
 </td>
       </tr>

@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateViewTask</span></div>
@@ -56,25 +56,25 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow.Tasks</h6>
@@ -93,8 +93,7 @@ toc: false
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor">CreateViewTask()</h4>
-  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -107,9 +106,8 @@ toc: false
   <h5 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_examples">Examples</h5>
   <pre><code>CreateViewTask.CreateOrAlter(&quot;viewname&quot;,&quot;SELECT value FROM table&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor(System.String,System.String)">CreateViewTask(String, String)</h4>
-  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
-</div>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.#ctor(System.String,System.String)">CreateViewTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -130,12 +128,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">viewName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">definition</span></td>
         <td></td>
       </tr>
@@ -168,7 +166,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -196,14 +194,15 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>Creates or alters a view.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -224,7 +223,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -256,7 +255,7 @@ and before the AS statement.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -284,7 +283,7 @@ and before the AS statement.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +319,7 @@ and before the AS statement.</p>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateOrAlter(IConnectionManager, String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.String)">CreateOrAlter(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates or alter a view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -349,13 +348,13 @@ and before the AS statement.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">viewName</span></td>
         <td><p>The name of the view</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">definition</span></td>
         <td><p>The view definition</p>
 </td>
@@ -363,7 +362,7 @@ and before the AS statement.</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter(System.String,System.String)">CreateOrAlter(String, String)</h4>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateViewTask_CreateOrAlter_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.CreateViewTask.CreateOrAlter(System.String,System.String)">CreateOrAlter(string, string)</h4>
   <div class="markdown level1 summary"><p>Creates or alter a view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -386,13 +385,13 @@ and before the AS statement.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">viewName</span></td>
         <td><p>The name of the view</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">definition</span></td>
         <td><p>The view definition</p>
 </td>

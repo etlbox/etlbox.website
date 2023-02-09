@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">RedisDestination&lt;TInput&gt;.RedisSetParameter</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Connectors.RedisDestination`1</h6>
@@ -53,7 +53,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public class RedisSetParameter
+    public class RedisDestination<TInput>.RedisSetParameter
 ```
 
 {{< rawhtml >}}
@@ -61,8 +61,7 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_RedisSetParameter_CommandFlags_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.RedisSetParameter.CommandFlags*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_RedisSetParameter_CommandFlags" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.RedisSetParameter.CommandFlags">CommandFlags</h4>
-  <div class="markdown level1 summary"><p>Additional redis parameter that are used when setting the key/value pairs in redis.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -89,8 +88,7 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_Connectors_RedisDestination_1_RedisSetParameter_When_" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.RedisSetParameter.When*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_RedisDestination_1_RedisSetParameter_When" data-uid="ETLBox.DataFlow.Connectors.RedisDestination`1.RedisSetParameter.When">When</h4>
-  <div class="markdown level1 summary"><p>Additional redis parameter that are used when setting the key/value pairs in redis.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

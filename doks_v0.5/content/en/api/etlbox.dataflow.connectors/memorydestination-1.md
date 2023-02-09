@@ -23,7 +23,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -96,13 +96,13 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, Object, Object)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(Nullable&lt;CancellationToken&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
@@ -135,10 +135,10 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, String)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowErrorAndFaultNetwork_System_Exception_System_String_">DataFlowComponent.ThrowErrorAndFaultNetwork(Exception, string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
@@ -165,10 +165,10 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LoggingFinishOnce">DataFlowComponent.LoggingFinishOnce()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(Int32)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(Boolean)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -183,25 +183,25 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
       <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow.Connectors</h6>
@@ -237,11 +237,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 </h3>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.#ctor">MemoryDestination()</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -279,17 +275,15 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TInput&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -310,7 +304,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -321,11 +315,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 </h3>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_AddData_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.AddData*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_AddData__0_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.AddData(`0)">AddData(TInput)</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -357,11 +347,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 //data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CheckParameter">CheckParameter()</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -378,11 +364,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 //data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -416,11 +398,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 //data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -437,11 +415,7 @@ see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemoryde
 //data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_Connectors_MemoryDestination_1_InitComponent_" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_MemoryDestination_1_InitComponent" data-uid="ETLBox.DataFlow.Connectors.MemoryDestination`1.InitComponent">InitComponent()</h4>
-  <div class="markdown level1 summary"><p>A destination in memory - it will store all data in a collection
-that you assign to the Data property. By default, a List is used to store th data.
-If you need to access the data concurrently while rows are still written into the target,
-see the <a class="xref" href="/api/etlbox.dataflow.connectors/concurrentmemorydestination">ConcurrentMemoryDestination</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

@@ -21,31 +21,31 @@ Here you can set default connections string, disable the logging for all process
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">Logging</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Logging</h6>
@@ -61,9 +61,7 @@ Here you can set default connections string, disable the logging for all process
   <h3 id="fields">Fields
 </h3>
   <h4 id="ETLBox_Logging_Logging_DEFAULTLOADPROCESSTABLENAME" data-uid="ETLBox.Logging.Logging.DEFAULTLOADPROCESSTABLENAME">DEFAULTLOADPROCESSTABLENAME</h4>
-  <div class="markdown level1 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
-Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -83,7 +81,7 @@ Here you can set default connections string, disable the logging for all process
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -110,7 +108,7 @@ Here you can set default connections string, disable the logging for all process
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -171,7 +169,7 @@ Logging can be enabled/disabled for all components individually using the Disabl
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,16 +198,14 @@ public static string LoadProcessTable { get; set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Logging_Logging_LogInstance_" data-uid="ETLBox.Logging.Logging.LogInstance*"></a>
   <h4 id="ETLBox_Logging_Logging_LogInstance" data-uid="ETLBox.Logging.Logging.LogInstance">LogInstance</h4>
-  <div class="markdown level1 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
-Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -258,7 +254,7 @@ public static string LogTable { get; set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -287,7 +283,7 @@ public static string STAGE { get; set; }
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

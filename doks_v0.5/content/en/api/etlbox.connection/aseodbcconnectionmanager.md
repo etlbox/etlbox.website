@@ -26,14 +26,14 @@ Reduce the batch size if you encounter issues here.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">System.Data.Odbc.OdbcConnection</span>, <span class="xref">System.Data.Odbc.OdbcTransaction</span>, <span class="xref">System.Data.Odbc.OdbcParameter</span>&gt;</div>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">OdbcConnection</span>, <span class="xref">OdbcTransaction</span>, <span class="xref">OdbcParameter</span>&gt;</div>
     <div class="level2"><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager">OdbcConnectionManager</a></div>
     <div class="level3"><span class="xref">AseOdbcConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">System.Data.Odbc.OdbcConnection</span>, <span class="xref">System.Data.Odbc.OdbcTransaction</span>&gt;</div>
+    <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">OdbcConnection</span>, <span class="xref">OdbcTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -49,16 +49,16 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_BulkDelete_ETLBox_ControlFlow_ITableData_">OdbcConnectionManager.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">OdbcConnectionManager.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">OdbcConnectionManager.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">OdbcConnectionManager.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">OdbcConnectionManager.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_PrepareBulkInsert_System_String_">OdbcConnectionManager.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_PrepareBulkInsert_System_String_">OdbcConnectionManager.PrepareBulkInsert(string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_CleanUpBulkInsert_System_String_">OdbcConnectionManager.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_CleanUpBulkInsert_System_String_">OdbcConnectionManager.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_DbConnection">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DbConnection</a>
@@ -118,22 +118,22 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Compatibility</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, String, String, String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteNonQuery(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteScalar(String, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;, Int32, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkNonQuery(String, IEnumerable&lt;OdbcParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkNonQuery(string, IEnumerable&lt;OdbcParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkReader(String, IEnumerable&lt;OdbcParameter&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkReader(string, IEnumerable&lt;OdbcParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -148,22 +148,22 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_RollbackTransaction">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.RollbackTransaction()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.PrepareBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_PrepareBulkInsert_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.PrepareBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkInsert_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkInsert(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.CleanUpBulkInsert(String)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CleanUpBulkInsert_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.CleanUpBulkInsert(string)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkDelete_ETLBox_ControlFlow_ITableData_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkDelete(ITableData)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkSelect(ITableData, ICollection&lt;String&gt;, Action, Action, Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.CloneIfAllowed()</a>
@@ -187,7 +187,7 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CloseIfAllowed">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.CloseIfAllowed()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Dispose(Boolean)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose_System_Boolean_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Dispose(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Dispose">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.Dispose()</a>
@@ -196,25 +196,25 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Connection</h6>
@@ -231,14 +231,7 @@ Reduce the batch size if you encounter issues here.</p>
 </h3>
   <a id="ETLBox_Connection_AseOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager__ctor" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor">AseOdbcConnectionManager()</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -250,14 +243,7 @@ Reduce the batch size if you encounter issues here.</p>
 {{< rawhtml >}}
   <a id="ETLBox_Connection_AseOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager__ctor_ETLBox_Connection_OdbcConnectionString_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor(ETLBox.Connection.OdbcConnectionString)">AseOdbcConnectionManager(OdbcConnectionString)</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -285,15 +271,8 @@ Reduce the batch size if you encounter issues here.</p>
     </tbody>
   </table>
   <a id="ETLBox_Connection_AseOdbcConnectionManager__ctor_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor*"></a>
-  <h4 id="ETLBox_Connection_AseOdbcConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor(System.String)">AseOdbcConnectionManager(String)</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
-</div>
+  <h4 id="ETLBox_Connection_AseOdbcConnectionManager__ctor_System_String_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.#ctor(System.String)">AseOdbcConnectionManager(string)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -314,7 +293,7 @@ Reduce the batch size if you encounter issues here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
@@ -324,13 +303,7 @@ Reduce the batch size if you encounter issues here.</p>
 </h3>
   <a id="ETLBox_Connection_AseOdbcConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.ConnectionManagerType*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.AseOdbcConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
+  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -360,13 +333,8 @@ Reduce the batch size if you encounter issues here.</p>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_ConnectionManagerType">OdbcConnectionManager.ConnectionManagerType</a></div>
   <a id="ETLBox_Connection_AseOdbcConnectionManager_QB_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.QB*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager_QB" data-uid="ETLBox.Connection.AseOdbcConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
+  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
+E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -387,7 +355,7 @@ Reduce the batch size if you encounter issues here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -396,13 +364,8 @@ Reduce the batch size if you encounter issues here.</p>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_QB">OdbcConnectionManager.QB</a></div>
   <a id="ETLBox_Connection_AseOdbcConnectionManager_QE_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.QE*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager_QE" data-uid="ETLBox.Connection.AseOdbcConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
+  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
+E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -423,7 +386,7 @@ Reduce the batch size if you encounter issues here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -432,13 +395,9 @@ Reduce the batch size if you encounter issues here.</p>
   <div><a class="xref" href="/api/etlbox.connection/odbcconnectionmanager#ETLBox_Connection_OdbcConnectionManager_QE">OdbcConnectionManager.QE</a></div>
   <a id="ETLBox_Connection_AseOdbcConnectionManager_SupportSchemas_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager_SupportSchemas" data-uid="ETLBox.Connection.AseOdbcConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
+  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
+In MySql, this is false because the schema here is a database in ETLBox.
+Use <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -459,7 +418,7 @@ Reduce the batch size if you encounter issues here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -470,13 +429,7 @@ Reduce the batch size if you encounter issues here.</p>
 </h3>
   <a id="ETLBox_Connection_AseOdbcConnectionManager_Clone_" data-uid="ETLBox.Connection.AseOdbcConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Connection_AseOdbcConnectionManager_Clone" data-uid="ETLBox.Connection.AseOdbcConnectionManager.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Sql Server Connection manager for an ODBC connection based on ADO.NET to Sql Server.
-ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
-<pre><code>insert into (...) values (..),(..),(..) statements.</code></pre>
-<p>This means that inserting big amounts of data in a database via Odbc can be much slower
-than using the native connector.
-Also be careful with the batch size - some databases have limitations regarding the length of sql statements.
-Reduce the batch size if you encounter issues here.</p>
+  <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -498,7 +451,8 @@ Reduce the batch size if you encounter issues here.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
-        <td></td>
+        <td><p>A instance copy of the current connection manager</p>
+</td>
       </tr>
     </tbody>
   </table>

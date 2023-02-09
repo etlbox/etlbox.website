@@ -19,31 +19,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">GenericTypeInfo</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">object.Equals(object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">object.Equals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">object.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">object.MemberwiseClone()</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">object.ToString()</span>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -111,7 +111,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/aggregatecolumn">AggregateColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/aggregatecolumn">AggregateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -138,7 +138,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnmap">ColumnMap</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnmap">ColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -165,7 +165,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/comparecolumn">CompareColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/comparecolumn">CompareColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -192,7 +192,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/deletecolumn">DeleteColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/deletecolumn">DeleteColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -219,7 +219,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/distinctcolumn">DistinctColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/distinctcolumn">DistinctColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -246,7 +246,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/groupcolumn">GroupColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/groupcolumn">GroupColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +273,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idcolumn">IdColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/idcolumn">IdColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +301,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -329,7 +329,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -357,7 +357,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -384,7 +384,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/keycolumn">KeyColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/keycolumn">KeyColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -411,7 +411,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/matchcolumn">MatchColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/matchcolumn">MatchColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -439,7 +439,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -467,7 +467,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -495,7 +495,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -522,7 +522,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/renamecolumn">RenameColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/renamecolumn">RenameColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -549,7 +549,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/retrievecolumn">RetrieveColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/retrievecolumn">RetrieveColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -576,7 +576,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/selectcolumn">SelectColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/selectcolumn">SelectColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -603,7 +603,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>, <span class="xref">System.Type</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>, <span class="xref">System.Type</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -630,7 +630,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/updatecolumn">UpdateColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/updatecolumn">UpdateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -657,7 +657,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -748,7 +748,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -758,7 +758,7 @@ toc: false
 <a href="http://stackoverflow.com/a/5182747/172132">http://stackoverflow.com/a/5182747/172132</a></p>
 </div>
   <a id="ETLBox_DataFlow_GenericTypeInfo_RetrieveAdditionalTypeInfo_" data-uid="ETLBox.DataFlow.GenericTypeInfo.RetrieveAdditionalTypeInfo*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_RetrieveAdditionalTypeInfo_System_Reflection_PropertyInfo_System_Int32_" data-uid="ETLBox.DataFlow.GenericTypeInfo.RetrieveAdditionalTypeInfo(System.Reflection.PropertyInfo,System.Int32)">RetrieveAdditionalTypeInfo(PropertyInfo, Int32)</h4>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_RetrieveAdditionalTypeInfo_System_Reflection_PropertyInfo_System_Int32_" data-uid="ETLBox.DataFlow.GenericTypeInfo.RetrieveAdditionalTypeInfo(System.Reflection.PropertyInfo,System.Int32)">RetrieveAdditionalTypeInfo(PropertyInfo, int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -785,14 +785,14 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">int</span></td>
         <td><span class="parametername">currentIndex</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.Reflection.PropertyInfo,System.Object,System.Object)">SetValueOrThrow(PropertyInfo, Object, Object)</h4>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.Reflection.PropertyInfo,System.Object,System.Object)">SetValueOrThrow(PropertyInfo, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -819,19 +819,19 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.String,System.Object,System.Object)">SetValueOrThrow(String, Object, Object)</h4>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_SetValueOrThrow_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.SetValueOrThrow(System.String,System.Object,System.Object)">SetValueOrThrow(string, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -853,24 +853,24 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">propName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TrySetValue(PropertyInfo, Object, Object)</h4>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TrySetValue(PropertyInfo, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -897,19 +897,19 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue*"></a>
-  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.String,System.Object,System.Object)">TrySetValue(String, Object, Object)</h4>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_TrySetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.DataFlow.GenericTypeInfo.TrySetValue(System.String,System.Object,System.Object)">TrySetValue(string, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -931,17 +931,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">string</span></td>
         <td><span class="parametername">propName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">object</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
