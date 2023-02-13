@@ -147,7 +147,7 @@ Define here the number of rows for every batch.</p>
   </table>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_PartialDbCacheSettings_SqlParameter_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.PartialDbCacheSettings.SqlParameter*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_PartialDbCacheSettings_SqlParameter" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.PartialDbCacheSettings.SqlParameter">SqlParameter</h4>
-  <div class="markdown level1 summary"><p>List of query parameters that are used to replace values in <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2.PartialDbCacheSettings.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_PartialDbCacheSettings_LoadCacheSql">LoadCacheSql</a>
+  <div class="markdown level1 summary"><p>List of query parameters that are used to replace values in <a class="xref" href="/api/etlbox.dataflow.transformations/lookuptransformation-2#partialdbcachesettings">LoadCacheSql</a>
 For every parameter provided, your sql statement should contain a placeholder.
 E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1&amp;apos;</p>
 </div>

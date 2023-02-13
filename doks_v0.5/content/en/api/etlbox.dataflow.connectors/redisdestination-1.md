@@ -489,7 +489,7 @@ to define your own serialization function.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1">RedisDestination</a>&lt;TInput&gt;.<a class="xref" href="ETLBox.DataFlow.Connectors.RedisDestination-1.RedisSetParameter.html">RedisSetParameter</a></td>
+        <td><a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1">RedisDestination</a>&lt;TInput&gt;.<a class="xref" href="/api/etlbox.dataflow.connectors/redisdestination-1#redissetparameter">RedisSetParameter</a></td>
         <td></td>
       </tr>
     </tbody>

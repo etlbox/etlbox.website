@@ -391,7 +391,7 @@ Always have the smaller amount of data flown into this target.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-3">CrossJoin</a>&lt;TInput1, TInput2, TOutput&gt;.<a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html">InMemoryDestination</a>&lt;TInput1&gt;</td>
+        <td><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-3">CrossJoin</a>&lt;TInput1, TInput2, TOutput&gt;.<a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-3#inmemorydestination-1">InMemoryDestination</a>&lt;TInput1&gt;</td>
         <td></td>
       </tr>
     </tbody>
