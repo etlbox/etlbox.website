@@ -104,7 +104,10 @@ namespace DocFxToHugoMD
                 "etlbox.dataflow.transformations/crossjoin-3#inmemorydestination-1"
             },
             {"ETLBox.DataFlow.Transformations.LookupTransformation-2.PartialDbCacheSettings.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_PartialDbCacheSettings_LoadCacheSql",
+            "etlbox.dataflow.transformations/lookuptransformation-2#partialdbcachesettings"},
+             {"ETLBox.DataFlow.Transformations.LookupTransformation-2.PartialDbCacheSettings.html",
             "etlbox.dataflow.transformations/lookuptransformation-2#partialdbcachesettings"}
+
 
         };
         private string AdjustLinks(string line) {
@@ -119,7 +122,7 @@ namespace DocFxToHugoMD
             //else {
             foreach (var kvp in ManualLinkMapping) {
                 if (line.Contains(kvp.Key))
-                    line = line.Replace(kvp.Key, "/api/"+kvp.Value);
+                    line = line.Replace(kvp.Key, "/api/" + kvp.Value);
             }
             MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
             string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
