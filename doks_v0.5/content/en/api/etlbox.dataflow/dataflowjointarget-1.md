@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><span class="xref">DataFlowJoinTarget&lt;TInput&gt;</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/jointarget-1">JoinTarget&lt;TInput&gt;</a></div>
-      <div class="level4"><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow.transformations/crossjoin-3#inmemorydestination-1">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
