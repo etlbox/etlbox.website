@@ -1,5 +1,5 @@
 ---
-title: "ETL examples"
+title: "ETL"
 description: "Code examples for ETL"
 lead: ""
 draft: false

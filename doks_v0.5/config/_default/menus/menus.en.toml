@@ -59,6 +59,12 @@
   weight = 110
 
 [[recipes]]
+  name = "Components"
+  url = "/recipes/components/"
+  identifier = "components"
+  weight = 115
+
+[[recipes]]
   name = "Data Integration"
   url = "/recipes/data-integration/"
   identifier = "data-integration"
