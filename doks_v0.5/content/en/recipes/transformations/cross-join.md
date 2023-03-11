@@ -6,7 +6,7 @@ draft: false
 images: []
 menu:
   recipes:
-    parent: "components"
+    parent: "transformations"
 weight: 2084
 toc: true
 ---

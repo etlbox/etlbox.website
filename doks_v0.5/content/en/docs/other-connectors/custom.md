@@ -143,6 +143,59 @@ public static void Main()
 }
 ```
 
+## Custom batch source
+
+If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource. 
+
+### Example 
+
+```C#
+public class MyRow
+{
+    public int Id { get; set; }
+    public string Value { get; set; }
+    public int BatchCount { get; set; }
+}
+
+var dest = new MemoryDestination<MyRow>();
+
+int batchCount = 1;
+var batchSource = new CustomBatchSource<MyRow>();
+
+batchSource.ReadBatchFunc =
+    pc => {
+        var sourceData = new List<MyRow>();
+        for (int i = 1; i <= 3; i++)
+            sourceData.Add(new MyRow() {
+                Id = i,
+                Value = "Test" + i,
+                BatchCount = batchCount
+            });
+        batchCount++;
+        return sourceData.ToArray();
+    };
+
+batchSource.ReadingCompleted = pc => pc >= 7;
+
+batchSource.LinkTo(dest);
+Network.Execute(batchSource);
+
+foreach (var row in dest.Data)
+    Console.WriteLine("Batchnumber:" + row.BatchCount + " - Id:"+ row.Id+" - Value:" + row.Value + "");
+
+/* Output
+Batchnumber:1 - Id:1 - Value:Test1
+Batchnumber:1 - Id:2 - Value:Test2
+Batchnumber:1 - Id:3 - Value:Test3
+Batchnumber:2 - Id:1 - Value:Test1
+Batchnumber:2 - Id:2 - Value:Test2
+Batchnumber:2 - Id:3 - Value:Test3
+Batchnumber:3 - Id:1 - Value:Test1
+Batchnumber:3 - Id:2 - Value:Test2
+Batchnumber:3 - Id:3 - Value:Test3
+*/
+```
+
 ## Custom Destination
 
 The use of a custom destination is even simpler - a custom destination  just calls an action for every received record. In this action you will the receive each incoming row as well as an progress count of already received data. It is in your responsibility to do the further processing of the record. E.g. you could execute some code which writes the line into the database, or you could add it to an internal list and the convert this list into a json. Though both things could be accomplished with either the DbDestination or the JsonDestination, here is an example for the latter one.
@@ -213,4 +266,42 @@ var dest = new CustomDestination<string[]>();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
 ```
 
+## Custom Batch Destination
 
+The CustomDestination will forward your incoming data row by row to your custom method. If you need to process batches of your incoming data, you can use the CustomBatchDestination instead.
+
+### Example 
+
+```C#
+public class MyRow
+{
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
+
+var source = new MemorySource<MyRow>();
+for (int i = 0; i < 10; i++)
+    source.DataAsList.Add(new MyRow() { Id = i, Value = "Test" + i });
+
+int batchNumber = 1;
+var dataByBatchNumber = new Dictionary<int, List<MyRow>>();
+var batchDest = new CustomBatchDestination<MyRow>(100,
+    (batch, pg) => {
+        dataByBatchNumber.Add(batchNumber, batch.ToList());
+        batchNumber++;
+    });
+batchDest.BatchSize = 3;
+
+source.LinkTo(batchDest);
+Network.Execute(source);
+
+foreach (var row in dataByBatchNumber)
+    Console.WriteLine("Batchnumber:" + row.Key + " has " + row.Value.Count + " records.");
+
+/* Output
+Batchnumber:1 has 3 records.
+Batchnumber:2 has 3 records.
+Batchnumber:3 has 3 records.
+Batchnumber:4 has 1 records.
+*/
+```
