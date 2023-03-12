@@ -11,9 +11,10 @@ weight: 520
 toc: true
 ---
 
-#### Core package
-
 The `MemorySource` and `MemoryDestination` are part of the ETLBox core package - you don't need to reference any additional package to use these connectors. 
+
+If you want to start with example code right away, you will find it in the recipes section for the [MemorySource](/recipes/sources/memory-source), [MemoryDestination](/recipes/destinations/memory-destination) and [ConcurrentMemoryDestination](/recipes/destinations/concurrent-memory-destination). The components are also used frequently in other examples.  
+
 
 ## MemorySource
 
@@ -98,4 +99,37 @@ You can use the MemoryDestination also with arrays.
 
 ```C#
 var dest = new MemoryDestination<string[]>();
+```
+
+## Concurrent memory destination
+
+The `ConcurrentMemoryDestination` is almost the same as the `MemoryDestination`, but instead of a `ICollection<T>` for incoming data it uses a {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1" text="<code>BlockingCollection&lt;T&gt;</code>" >}} to store incoming data. 
+
+### Example
+
+```C#
+var source = new MemorySource<MyRow>();
+for (int i = 0; i < 1000000; i++)
+    source.DataAsList.Add(new MyRow() { Id = i, Value = "Test" + i });
+var dest = new ConcurrentMemoryDestination<MyRow>();
+
+source.LinkTo(dest);
+var runTask = Network.ExecuteAsync(source);
+
+Console.WriteLine("Adding completed?" + dest.Data.IsAddingCompleted);
+dest.Data.TryTake(out MyRow firstTry);
+Console.WriteLine("Data found?" + (firstTry != null));
+
+runTask.Wait();
+
+dest.Data.TryTake(out MyRow secondTry);
+Console.WriteLine("Adding completed?" + dest.Data.IsAddingCompleted);
+Console.WriteLine("Data found?" + (secondTry != null));
+
+/* Ouput:
+Adding completed?False
+Data found?False
+Adding completed?True
+Data found?True
+*/
 ```

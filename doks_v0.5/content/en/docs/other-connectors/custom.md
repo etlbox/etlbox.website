@@ -11,9 +11,9 @@ weight: 510
 toc: true
 ---
 
-#### Core package
-
 The `CustomSource` and `CustomDestination` are part of the ETLBox core package - you don't need to reference any additional packages to use these connectors. 
+
+If you want to start with example code right away, you will find it in the recipes section for the [CustomSource](/recipes/sources/custom-source), [CustomBatchSource](/recipes/sources/custom-batchsource), [CustomDestination](/recipes/destinations/custom-destination) and [CustomBatchDestination](/recipes/destinations/custom-batchdestination). The components could also be used in other examples.  
 
 ## CustomSource
 
@@ -24,6 +24,7 @@ A custom source can generate any type of  output you need.  It will need two fun
 The CustomSource has an output buffer - this means that every data row can be cached before it is send to the next component in the flow. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows. 
 
 #### Example
+
 Let's look at a simple example. Assuming we have a list of strings, and we want to return these string wrapped into an object data for our source. So for each string in our input array we create an object that we send into our flow. When all elements are processed, we set up an expression that returns true.
 
 ```C#

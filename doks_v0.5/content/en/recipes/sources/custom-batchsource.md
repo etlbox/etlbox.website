@@ -11,7 +11,7 @@ weight: 2101
 toc: true
 ---
 
-If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource. 
+If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource. For row by row creation use the [CustomSource](../custom-source) instead.
 
 ## Example with strongly typed objects 
 

@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2101
+weight: 2102
 toc: true
 ---
 

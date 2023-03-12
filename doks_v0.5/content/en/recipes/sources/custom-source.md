@@ -11,7 +11,7 @@ weight: 2101
 toc: true
 ---
 
-The custom source can be used to create your input data based on any C# method. 
+The custom source can be used to create your input data based on any C# method.  If you need to create your data in batches instead row by row, you can use the [CustomBatchSource](../custom-batchsource).
 
 ## Creating strongly typed objects
 

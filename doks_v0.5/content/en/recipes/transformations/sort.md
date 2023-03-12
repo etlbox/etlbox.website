@@ -15,6 +15,8 @@ toc: true
 
 The sort is a simply transformation that sort your input data by a given comparison func. Please note that the sort is a blocking transformation - it will wait for all input data to arrive, before it starts sorting your data. 
 
+Instead of using the Sort in your data flow, you could also create a SortedSet as storage collection for you incoming data in a MemoryDestination. [This will also allow you to sort you data, as shown in this example coding](/recipes/destinations/memory-destination/#using-own-collection).
+
 ```C#
 public class MyRow
 {
@@ -59,4 +61,7 @@ foreach (var row in dest.Data)
     Console.WriteLine("Number " + row.Number + " - Value " + row.Value);
 
 ```
+
+
+
 
