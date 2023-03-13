@@ -276,7 +276,7 @@ you can pass a `TableDefinition` instead.
 
 This could look like this:
 
-```
+```C#
 var TableDefinition = new TableDefinition("tableName"
     , new List<TableColumn>() {
     new TableColumn("Id", "BIGINT", allowNulls:false, 
@@ -290,3 +290,60 @@ var DbSource<type> = new DbSource<type>() {
 ```
 
 ETLBox will use this meta data instead to get the right column names. 
+
+## Bulk operations
+
+The `DbSource` by default will read data from a table or database query result without filtering or modifying the query, and the `DbDestination` by default will simply insert the arriving data into the table. But the `DbSource` also offers a `BulkSelect` operation mode, and the `DbDestination` offers a `BulkUpdate` and `BulkDelete`. They were introduced mainly for supporting the `DbMerge`, but can also be used standalone.
+
+### BulkSelect
+
+The BulkSelect requires an `IdColumn` (set either as attribute or passed into the `IdColumns` property of the `DbSource`) to identify the rows by which the source data is filtered. The `SelectColumn`  (can also be passed to the `SelectColumns` property) defines the properties in which data should be read - all other properties will be ignored. 
+
+The BulkSelect will only work with a TableNam, and not with custom sql code. Most of the times it will be easier if you pass your own custom sql with a WHERE clause, but sometimes this way of querying your database table may be handy. 
+
+```C#
+public class MyBulkSelectRow
+{
+    [IdColumn]
+    [SelectColumn]
+    public int Id { get; set; }
+    [SelectColumn]
+    public string Value1 { get; set; }
+
+    public string Value2 { get; set; }
+}
+
+var connMan = new SqlConnectionManager(ConnectionString);
+TableDefinition td = new TableDefinition("ExampleBulkSelect"
+    , new List<TableColumn>() {
+    new TableColumn("Id", "INT", allowNulls: false),
+    new TableColumn("Value1", "VARCHAR(100)", allowNulls: true),
+    new TableColumn("Value2", "VARCHAR(10)", allowNulls: false)
+});
+CreateTableTask.Create(connMan, td);
+SqlTask.ExecuteNonQuery(connMan, $@"INSERT INTO ExampleBulkSelect VALUES(1,'Test1', '1.1')");
+SqlTask.ExecuteNonQuery(connMan, $@"INSERT INTO ExampleBulkSelect VALUES(2,'Test2', '1.2')");
+SqlTask.ExecuteNonQuery(connMan, $@"INSERT INTO ExampleBulkSelect VALUES(3,'Test3', '1.3')");
+
+var source = new DbSource<MyBulkSelectRow>(connMan, "ExampleBulkSelect");
+source.SelectMode = SelectOperation.BulkSelect;
+source.BulkSelectBatchSize = 2;
+source.FilterRows = new[] {
+    new MyBulkSelectRow { Id = 2},
+    new MyBulkSelectRow { Id = 3}
+};
+
+var dest = new MemoryDestination<MyBulkSelectRow>();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+foreach (var row in dest.Data)
+    Console.WriteLine($"Received - Id {row.Id} (Value1: {row.Value1} Value2: {row.Value2} )");
+
+/* Output
+Received - Id 2 (Value1: Test2 Value2:  )
+Received - Id 3 (Value1: Test3 Value2:  )
+*/
+```
+
