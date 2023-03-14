@@ -13,7 +13,7 @@ toc: true
 
 ## Setup 
 
-### Using different database
+### Using a different database
 
 The following examples are using SqlServer as destination database. In order to use SQLServer, we use the `SqlConnectionManager` in combination with a connection string for SQLServer. If you prefer to use a different database, simple replace the connection manager (and the connection string) with your database of choice. E.g. if you want to use Postgres, you can simply use the `PostgresConnectionManager` instead. 
 

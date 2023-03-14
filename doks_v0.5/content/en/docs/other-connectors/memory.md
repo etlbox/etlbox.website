@@ -13,8 +13,7 @@ toc: true
 
 The `MemorySource` and `MemoryDestination` are part of the ETLBox core package - you don't need to reference any additional package to use these connectors. 
 
-If you want to start with example code right away, you will find it in the recipes section for the [MemorySource](/recipes/sources/memory-source), [MemoryDestination](/recipes/destinations/memory-destination) and [ConcurrentMemoryDestination](/recipes/destinations/concurrent-memory-destination). The components are also used frequently in other examples.  
-
+If you want to start with example code right away, you will find it in the recipes section for the [MemorySource](/recipes/sources/memory-source) and [MemoryDestination](/recipes/destinations/memory-destination). Both components are also used frequently in other examples.  
 
 ## MemorySource
 
@@ -101,7 +100,7 @@ You can use the MemoryDestination also with arrays.
 var dest = new MemoryDestination<string[]>();
 ```
 
-## Concurrent memory destination
+### Concurrent memory destination
 
 The `ConcurrentMemoryDestination` is almost the same as the `MemoryDestination`, but instead of a `ICollection<T>` for incoming data it uses a {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1" text="<code>BlockingCollection&lt;T&gt;</code>" >}} to store incoming data. 
 
