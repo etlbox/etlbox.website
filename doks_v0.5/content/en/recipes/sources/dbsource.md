@@ -13,6 +13,8 @@ toc: true
 
 The database source can be used to read data from a table, view, function or stored procedure from supported databases and post it into your data flow. 
 
+The following examples are using SqlServer as destination database. In order to use SQLServer, we use the `SqlConnectionManager` in combination with a connection string for SQLServer. If you prefer to use a different database, simple replace the connection manager (and the connection string) with your database of choice. E.g. if you want to use Postgres, you can simply use the `PostgresConnectionManager` instead. 
+
 ## From table with typed object
 
 This basic examples shows how to read all data from a table or view with a typed object. 

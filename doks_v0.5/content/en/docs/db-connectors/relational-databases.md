@@ -11,6 +11,8 @@ weight: 320
 toc: true
 ---
 
+If you want to start with example code right away, you will find it in the recipes section for the [DbSource](/recipes/sources/dbsource) and [DbDestination](/recipes/destinations/dbdestination). The components are also used frequently in other examples.  
+
 ## DbSource
 
 The DbSource give you access to any database table or with your database. Or you can directly pass an sql statement that is used as source.
