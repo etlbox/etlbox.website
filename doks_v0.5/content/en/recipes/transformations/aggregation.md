@@ -1,7 +1,7 @@
 ---
 title: "Aggregation"
 description: "Examples and code recipes for the aggregation"
-lead: "This article contains example codings that demonstrate the usage of the Aggregation transformation."
+lead: "This article contains example codes that demonstrate the usage of the Aggregation transformation."
 draft: false
 images: []
 menu:
