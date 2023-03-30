@@ -163,20 +163,25 @@
    url = "/product/get-trial"
    weight = 560
 
+  [[footer_2]]
+    name = "Register license"
+    url = "/product/register-license"
+    weight = 570    
+
  [[footer_2]]
    name = "Release notes"
    url = "/product/release-notes"
-   weight = 570
+   weight = 580
 
  [[footer_3]]
    name = "Support"
    url = "/support/options"
-   weight = 580
+   weight = 590
 
  [[footer_3]]
    name = "Privacy policy"
    url = "/support/privacy-policy/"
-   weight = 590
+   weight = 600
 
  #[[footer_3]]
    #name = "About us"
