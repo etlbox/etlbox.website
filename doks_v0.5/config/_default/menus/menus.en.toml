@@ -108,10 +108,17 @@
   parent = "product"
 
 [[main]]
+  name = "Register license"
+  identifier = "register-license"
+  url = "/product/register-license"
+  weight = 340
+  parent = "product"  
+
+[[main]]
   name = "Try yourself"
   identifier = "trial"
   url = "/product/get-trial"
-  weight = 340
+  weight = 350
   parent = "product"
 
 #[[social]]

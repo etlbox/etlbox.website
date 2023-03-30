@@ -19,9 +19,19 @@ The content of the file will look like this:
 
 To register your license key with ETLBox, you have 3 options:
 
-#### Option 1
+#### Option 1:
 
-Set up a user-wide, machine-wide or process-wide environment variable. The name of the Environment variable must be `etlbox`. Copy the content of your license file into an environment variable called `etlbox`. (Restart your system if necessary) 
+Open the file with a text editor of your choice, and copy the content. Add the following line to your code:
+
+```C#
+LicenseCheck.LicenseKey = "content_of_license_file";
+```
+
+This line needs to be called before you execute a data flow. This will work in any environment, and is the preferred option to register your license key. 
+
+#### Option 2
+
+Set up a user-wide, machine-wide or process-wide environment variable with the name `etlbox`. Copy the content of your license file into this environment variable. (Logout/Login or restart your system if necessary) 
 
 ##### Azure functions/web app or other azure services:
 
@@ -29,30 +39,22 @@ Go into the Configuration -&gt; App Settings of your function or web app. {{< li
 
 Add a new application setting. Enter `etlbox` as name and copy the content of your etlbox.lic file as value.
 
-#### Option 2
+#### Option 3
 
 Just copy the file in the same folder where the ETLBox.dll resides. This is normally the root folder of your project.
 If you add it to the sources of your project, make sure that the option `Copy to output directory` is set to `Copy always` or `Copy if newer`.
 
 ##### Azure functions / Azure web app:
 
-Using Azure functions or Azure web apps, Option 1 is the recommended option to register the license key. 
-
 There are different deployment methods available for your Azure Function or Web App. Some deployments methods will give you access to the file system on your Azure File Storage. In this case you can copy the etlbox.lic file into the same folder where your executable resides.
 
 If you are using the Zip deploy method, you won't have access to the files on your file storage. If you still want to use the file based approach, you can add the etlbox.lic file as a resource to your project. The file is now embedded as a resource and the license check is able to extract the license from the resource file automatically. 
 
-#### Option 3:
-
-Before you execute a data flow, add the following line to your code:
-
-```C#
-LicenseCheck.LicenseKey = "content_of_license_file";
-```
-
-This will work in any environment.
-
 ## FAQ
+
+#### Which option do you recommend
+
+We recommend that you start using option 1 to register your key. Option 2 and 3 are still available for compatibility reasons, but may become obsolete in future versions. 
 
 #### How long is my license valid?
 
