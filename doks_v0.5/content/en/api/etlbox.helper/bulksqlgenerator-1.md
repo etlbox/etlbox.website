@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10261
+weight: 10262
 toc: false
 ---
 
@@ -595,7 +595,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
   </table>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_UseNamedParameters_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.UseNamedParameters*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_UseNamedParameters" data-uid="ETLBox.Helper.BulkSqlGenerator`1.UseNamedParameters">UseNamedParameters</h4>
-  <div class="markdown level1 summary"><p>Indicates that the parameter variables in the sql have a name</p>
+  <div class="markdown level1 summary"><p>Indicates that the parameter variables in the sql have a name, otherwise a questionmark (?) is used</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -646,6 +646,33 @@ Default is true.</p>
     <tbody>
       <tr>
         <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_BulkSqlGenerator_1_ValueToSqlConversionFunc_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.ValueToSqlConversionFunc*"></a>
+  <h4 id="ETLBox_Helper_BulkSqlGenerator_1_ValueToSqlConversionFunc" data-uid="ETLBox.Helper.BulkSqlGenerator`1.ValueToSqlConversionFunc">ValueToSqlConversionFunc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<ConversionContext, string> ValueToSqlConversionFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a>, <span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

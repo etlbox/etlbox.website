@@ -56,6 +56,9 @@ When all rows have been processed by the aggregation, the aggregated values are 
       <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_StoreKeyAction">Aggregation&lt;ExpandoObject, ExpandoObject&gt;.StoreKeyAction</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationCondition">Aggregation&lt;ExpandoObject, ExpandoObject&gt;.AggregationCondition</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_SourceBlock">Aggregation&lt;ExpandoObject, ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>

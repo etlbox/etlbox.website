@@ -229,8 +229,8 @@ toc: false
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_DataFlow_ETLBoxError_GetExcpetion_" data-uid="ETLBox.DataFlow.ETLBoxError.GetExcpetion*"></a>
-  <h4 id="ETLBox_DataFlow_ETLBoxError_GetExcpetion" data-uid="ETLBox.DataFlow.ETLBoxError.GetExcpetion">GetExcpetion()</h4>
+  <a id="ETLBox_DataFlow_ETLBoxError_GetException_" data-uid="ETLBox.DataFlow.ETLBoxError.GetException*"></a>
+  <h4 id="ETLBox_DataFlow_ETLBoxError_GetException" data-uid="ETLBox.DataFlow.ETLBoxError.GetException">GetException()</h4>
   <div class="markdown level1 summary"><p>The exception thrown at the source</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -238,7 +238,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public Exception GetExcpetion()
+    public Exception GetException()
 ```
 
 {{< rawhtml >}}

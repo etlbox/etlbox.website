@@ -173,7 +173,8 @@ toc: false
   </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Compatibility_" data-uid="ETLBox.Connection.DbConnectionManager`3.Compatibility*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Compatibility" data-uid="ETLBox.Connection.DbConnectionManager`3.Compatibility">Compatibility</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Information about compatibility of the current connector</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -258,8 +259,7 @@ toc: false
   <h4 id="ETLBox_Connection_DbConnectionManager_3_DbConnection" data-uid="ETLBox.Connection.DbConnectionManager`3.DbConnection">DbConnection</h4>
   <div class="markdown level1 summary"><p>The underlying ADO.NET connection.
 Only read from this object and it's properties - by default, connections are always
-acquired from the connection pool. There is no guarantee that
-the same connection will be used in ETLBox components.</p>
+acquired from the connection pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -281,6 +281,34 @@ the same connection will be used in ETLBox components.</p>
     <tbody>
       <tr>
         <td><span class="xref">TConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_HasTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.HasTransaction*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_HasTransaction" data-uid="ETLBox.Connection.DbConnectionManager`3.HasTransaction">HasTransaction</h4>
+  <div class="markdown level1 summary"><p>Indicates if the current connection has a transaction assigned</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool HasTransaction { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -409,7 +437,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
 {{< /rawhtml >}}
 
 ```C#
-    public virtual int MaxParameterSizeBulkCopy { get; }
+    public virtual int MaxParameterSizeBulkCopy { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -438,7 +466,7 @@ sql query.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public virtual int MaxParameterSizeSql { get; }
+    public virtual int MaxParameterSizeSql { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -688,6 +716,60 @@ and <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Conne
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_UseValueToSqlConversionFunc_" data-uid="ETLBox.Connection.DbConnectionManager`3.UseValueToSqlConversionFunc*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_UseValueToSqlConversionFunc" data-uid="ETLBox.Connection.DbConnectionManager`3.UseValueToSqlConversionFunc">UseValueToSqlConversionFunc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool UseValueToSqlConversionFunc { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_ValueToSqlConversionFunc_" data-uid="ETLBox.Connection.DbConnectionManager`3.ValueToSqlConversionFunc*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ValueToSqlConversionFunc" data-uid="ETLBox.Connection.DbConnectionManager`3.ValueToSqlConversionFunc">ValueToSqlConversionFunc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<ConversionContext, string> ValueToSqlConversionFunc { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a>, <span class="xref">string</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Connection_DbConnectionManager_3_BeginTransaction_" data-uid="ETLBox.Connection.DbConnectionManager`3.BeginTransaction*"></a>
@@ -847,6 +929,55 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_BulkNonQueryAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkNonQueryAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{`2})">BulkNonQueryAsync(string, IEnumerable&lt;TParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected Task<int> BulkNonQueryAsync(string commandText, IEnumerable<TParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_BulkReader_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReader*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReader(System.String,System.Collections.Generic.IEnumerable{`2},System.Action,System.Action,System.Action{System.Object}[])">BulkReader(string, IEnumerable&lt;TParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -892,6 +1023,70 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_BulkReaderAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReaderAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.BulkReaderAsync(System.String,System.Collections.Generic.IEnumerable{`2},System.Action,System.Action,System.Action{System.Object}[])">BulkReaderAsync(string, IEnumerable&lt;TParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected Task BulkReaderAsync(string commandText, IEnumerable<TParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] rowActions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">rowActions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1119,9 +1314,38 @@ to the ADO.NET connection pool for further reuse.</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_Connection_DbConnectionManager_3_ConfigureByConnectionType_" data-uid="ETLBox.Connection.DbConnectionManager`3.ConfigureByConnectionType*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ConfigureByConnectionType_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Connection.DbConnectionManager`3.ConfigureByConnectionType(ETLBox.Connection.ConnectionManagerType)">ConfigureByConnectionType(ConnectionManagerType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void ConfigureByConnectionType(ConnectionManagerType connectionType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><span class="parametername">connectionType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_CopyBaseAttributes_" data-uid="ETLBox.Connection.DbConnectionManager`3.CopyBaseAttributes*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_CopyBaseAttributes_ETLBox_Connection_DbConnectionManager__0__1__2__" data-uid="ETLBox.Connection.DbConnectionManager`3.CopyBaseAttributes(ETLBox.Connection.DbConnectionManager{`0,`1,`2})">CopyBaseAttributes(DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Copeis the connection manager base attribnutes from the current
+  <div class="markdown level1 summary"><p>Copies the connection manager base attribnutes from the current
 connection manager to the target connection manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1261,9 +1485,62 @@ to the ADO.NET connection pool for further reuse.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteNonQueryAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that doesn't return any data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<int> ExecuteNonQueryAsync(string commandText, IEnumerable<QueryParameter> parameterList = null)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><p>Number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteReader_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReader*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Executes a query against the database that does return multiple rows in multiple columns</p>
+  <div class="markdown level1 summary"><p>Executes a query against the database that does return multiple rows in multiple columns.
+Define a read action for each columns of your result set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1323,9 +1600,78 @@ The order of the columns corresponds with the order of the passed actions.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteReaderAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task ExecuteReaderAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalar*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"><p>Executes a query against the database that does return only one row in one column.</p>
+  <div class="markdown level1 summary"><p>Executes a query against the database that returns a single row in a single column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1375,11 +1721,62 @@ The order of the columns corresponds with the order of the passed actions.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalarAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`3.ExecuteScalarAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that returns a single row in a single column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<object> ExecuteScalarAsync(string commandText, IEnumerable<QueryParameter> parameterList = null)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td><p>The result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_Open_" data-uid="ETLBox.Connection.DbConnectionManager`3.Open*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_Open" data-uid="ETLBox.Connection.DbConnectionManager`3.Open">Open()</h4>
   <div class="markdown level1 summary"><p>Opens the connection to the database. Normally you don't have to do this on your own,
-as all tasks and components will call this method implictly if the connection is closed.
-If the connection is already open, nothing is done.</p>
+as all tasks and components will try to open a connection if no open connection is found.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1390,8 +1787,79 @@ If the connection is already open, nothing is done.</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_Connection_DbConnectionManager_3_OpenAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.OpenAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_OpenAsync" data-uid="ETLBox.Connection.DbConnectionManager`3.OpenAsync">OpenAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task OpenAsync()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Connection_DbConnectionManager_3_OpenCoreAsync_" data-uid="ETLBox.Connection.DbConnectionManager`3.OpenCoreAsync*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_OpenCoreAsync_System_Boolean_" data-uid="ETLBox.Connection.DbConnectionManager`3.OpenCoreAsync(System.Boolean)">OpenCoreAsync(bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task OpenCoreAsync(bool sync = false)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">sync</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_" data-uid="ETLBox.Connection.DbConnectionManager`3.OverrideConnectionSpecifics*"></a>
-  <h4 id="ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_" data-uid="ETLBox.Connection.DbConnectionManager`3.OverrideConnectionSpecifics(ETLBox.Connection.ConnectionManagerType,System.String,System.String,System.String)">OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</h4>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_System_Int32_System_Int32_" data-uid="ETLBox.Connection.DbConnectionManager`3.OverrideConnectionSpecifics(ETLBox.Connection.ConnectionManagerType,System.String,System.String,System.String,System.Int32,System.Int32)">OverrideConnectionSpecifics(ConnectionManagerType, string, string, string, int, int)</h4>
   <div class="markdown level1 summary"><p>Changes the connection manager type for the generic connector, so that
 you can try to use it with not supported setups.
 If you are looking for supported Odbc connection managers, try to use the specific
@@ -1403,7 +1871,7 @@ PostgresOdbcConnectionManager for Postgres)</p>
 {{< /rawhtml >}}
 
 ```C#
-    public void OverrideConnectionSpecifics(ConnectionManagerType connectionManagerType, string QB, string QE, string PP = &quot;@&quot;)
+    public void OverrideConnectionSpecifics(ConnectionManagerType connectionManagerType, string QB, string QE, string PP = &quot;@&quot;, int maxParameterSizeBulkCopy = 2147483647, int maxParameterSizeSql = 2147483647)
 ```
 
 {{< rawhtml >}}
@@ -1439,6 +1907,18 @@ PostgresOdbcConnectionManager for Postgres)</p>
         <td><span class="xref">string</span></td>
         <td><span class="parametername">PP</span></td>
         <td><p>Parameter placeholder (&quot;@&quot; for most databases)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">maxParameterSizeBulkCopy</span></td>
+        <td><p>Number of parameters allowed when running a bulk insert (columns*row per batch = number of parameters)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">maxParameterSizeSql</span></td>
+        <td><p>Number of parameters allowed for sql or non insert bulk operations (columns*row per batch = number of parameters)</p>
 </td>
       </tr>
     </tbody>
@@ -1488,6 +1968,35 @@ performance of a bulk insert operation</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_Connection_DbConnectionManager_3_SetValueToSqlConversionFunc_" data-uid="ETLBox.Connection.DbConnectionManager`3.SetValueToSqlConversionFunc*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_3_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__" data-uid="ETLBox.Connection.DbConnectionManager`3.SetValueToSqlConversionFunc(System.Func{ETLBox.Helper.ConversionContext,System.String})">SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual void SetValueToSqlConversionFunc(Func<ConversionContext, string> valueToSqlConversionFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a>, <span class="xref">string</span>&gt;</td>
+        <td><span class="parametername">valueToSqlConversionFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_" data-uid="ETLBox.Connection.DbConnectionManager`3.UseExistingDbConnection*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_" data-uid="ETLBox.Connection.DbConnectionManager`3.UseExistingDbConnection(System.Data.IDbConnection)">UseExistingDbConnection(IDbConnection)</h4>
   <div class="markdown level1 summary"></div>

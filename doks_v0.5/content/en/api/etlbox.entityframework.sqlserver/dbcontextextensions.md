@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.entityframework.sqlserver"
-weight: 10259
+weight: 10260
 toc: false
 ---
 

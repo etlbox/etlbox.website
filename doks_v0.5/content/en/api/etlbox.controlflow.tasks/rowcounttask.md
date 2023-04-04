@@ -289,7 +289,7 @@ You can pass a a filter condition for the count.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public bool DirtyRead { get; set; }
+    public bool DirtyRead { get; }
 ```
 
 {{< rawhtml >}}
@@ -308,16 +308,18 @@ You can pass a a filter condition for the count.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasAnyRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasAnyRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasAnyRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasAnyRows">HasAnyRows</h4>
-  <div class="markdown level1 summary"><p>Indicates if the table contains rows - only has a value after the execution</p>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Options_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Options*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Options" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Options">Options</h4>
+  <div class="markdown level1 summary"><p>For Sql Server, you can set the QuickQueryMode to true. This will query the sys.partition table which can be much faster.
+If set to DirtyRead, the count will also read uncommitted rows.
+If set ReadOnlyFirstRow, the count will use a limit when running</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool? HasAnyRows { get; }
+    public RowCountOptions Options { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -331,7 +333,7 @@ You can pass a a filter condition for the count.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span>?</td>
+        <td><a class="xref" href="/api/etlbox.controlflow.tasks/rowcountoptions">RowCountOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -345,7 +347,7 @@ You can pass a a filter condition for the count.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public bool QuickQueryMode { get; set; }
+    public bool QuickQueryMode { get; }
 ```
 
 {{< rawhtml >}}
@@ -518,7 +520,7 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public RowCountTask Count()
+    public int Count()
 ```
 
 {{< rawhtml >}}
@@ -532,7 +534,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow.tasks/rowcounttask">RowCountTask</a></td>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -965,16 +967,16 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_System_String__examples">Examples</h5>
   <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
-  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows">HasRows()</h4>
-  <div class="markdown level1 summary"><p>Checks if the table has at least one (matching) row.</p>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync">CountAsync()</h4>
+  <div class="markdown level1 summary"><p>Performs the row count</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public RowCountTask HasRows()
+    public Task<int> CountAsync()
 ```
 
 {{< rawhtml >}}
@@ -988,7 +990,259 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow.tasks/rowcounttask">RowCountTask</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">CountAsync(IConnectionManager, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> CountAsync(IConnectionManager connectionManager, string tableName, RowCountOptions options)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow.tasks/rowcountoptions">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
+  <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">CountAsync(IConnectionManager, string, string, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> CountAsync(IConnectionManager connectionManager, string tableName, string condition, RowCountOptions options)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow.tasks/rowcountoptions">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions__examples">Examples</h5>
+  <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync(ETLBox.Connection.IConnectionManager,System.String,System.String)">CountAsync(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> CountAsync(IConnectionManager connectionManager, string tableName, string condition)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_System_String__examples">Examples</h5>
+  <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.CountAsync(ETLBox.Connection.IConnectionManager,System.String)">CountAsync(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> CountAsync(IConnectionManager connectionManager, string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_RowCountTask_CountAsync_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
+  <pre><code>int count = RowCountTask.Count(&quot;tableName&quot;).Value;</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows">HasRows()</h4>
+  <div class="markdown level1 summary"><p>Checks if the table has at least one (matching) row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool HasRows()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>

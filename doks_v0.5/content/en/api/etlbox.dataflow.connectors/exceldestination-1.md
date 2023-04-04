@@ -425,7 +425,7 @@ If left empty, the order of the output columns is equal to the order of the prop
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</span></div>
   <a id="ETLBox_DataFlow_Connectors_ExcelDestination_1_SheetName_" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.SheetName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelDestination_1_SheetName" data-uid="ETLBox.DataFlow.Connectors.ExcelDestination`1.SheetName">SheetName</h4>
-  <div class="markdown level1 summary"><p>The sheet name that contains the data</p>
+  <div class="markdown level1 summary"><p>The sheet name that will hold the data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

@@ -521,6 +521,52 @@ The key of the list is a unique sequence number, and the order matches also to e
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_ITableData_GetTableColumn_" data-uid="ETLBox.ControlFlow.ITableData.GetTableColumn*"></a>
+  <h4 id="ETLBox_ControlFlow_ITableData_GetTableColumn_System_String_" data-uid="ETLBox.ControlFlow.ITableData.GetTableColumn(System.String)">GetTableColumn(string)</h4>
+  <div class="markdown level1 summary"><p>Resolves the column in the table definition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    TableColumn GetTableColumn(string columnName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">columnName</span></td>
+        <td><p>Column name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_ITableData_RewindReadIndex_" data-uid="ETLBox.ControlFlow.ITableData.RewindReadIndex*"></a>
   <h4 id="ETLBox_ControlFlow_ITableData_RewindReadIndex" data-uid="ETLBox.ControlFlow.ITableData.RewindReadIndex">RewindReadIndex()</h4>
   <div class="markdown level1 summary"><p>The IDataReader is iterated via the Read() method - once the last record was read,

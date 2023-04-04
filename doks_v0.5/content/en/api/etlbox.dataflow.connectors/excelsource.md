@@ -58,6 +58,12 @@ in all sheets will be processed.</p>
       <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName">ExcelSource&lt;ExpandoObject&gt;.SheetName</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_IsCaseSensitiveSheetName">ExcelSource&lt;ExpandoObject&gt;.IsCaseSensitiveSheetName</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_SheetNumber">ExcelSource&lt;ExpandoObject&gt;.SheetNumber</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_IgnoreBlankRows">ExcelSource&lt;ExpandoObject&gt;.IgnoreBlankRows</a>
     </div>
     <div>

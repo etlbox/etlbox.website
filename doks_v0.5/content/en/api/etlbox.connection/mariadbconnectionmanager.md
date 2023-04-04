@@ -88,6 +88,9 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Transaction">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Transaction</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_HasTransaction">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.HasTransaction</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsInBulkInsert">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.IsInBulkInsert</a>
     </div>
     <div>
@@ -124,22 +127,49 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Compatibility</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ValueToSqlConversionFunc">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ValueToSqlConversionFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseValueToSqlConversionFunc">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.UseValueToSqlConversionFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_System_Int32_System_Int32_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ConfigureByConnectionType_ETLBox_Connection_ConnectionManagerType_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ConfigureByConnectionType(ConnectionManagerType)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkNonQuery(string, IEnumerable&lt;MySqlParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkNonQueryAsync(string, IEnumerable&lt;MySqlParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkReader(string, IEnumerable&lt;MySqlParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;MySqlParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -182,6 +212,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Open">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Open()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OpenAsync">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OpenAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OpenCoreAsync_System_Boolean_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.OpenCoreAsync(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CreateDbConnection">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CreateDbConnection()</a>
@@ -355,7 +391,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public override int MaxParameterSizeBulkCopy { get; }
+    public override int MaxParameterSizeBulkCopy { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -386,7 +422,7 @@ sql query.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override int MaxParameterSizeSql { get; }
+    public override int MaxParameterSizeSql { get; protected set; }
 ```
 
 {{< rawhtml >}}

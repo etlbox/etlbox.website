@@ -59,16 +59,28 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteNonQuery">DbTask.ExecuteNonQuery()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteNonQueryAsync">DbTask.ExecuteNonQueryAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteScalar">DbTask.ExecuteScalar()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteScalarAsync">DbTask.ExecuteScalarAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteScalar__1">DbTask.ExecuteScalar&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteScalarAsync__1">DbTask.ExecuteScalarAsync&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteScalarAsBool">DbTask.ExecuteScalarAsBool()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteReader">DbTask.ExecuteReader()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_ExecuteReaderAsync">DbTask.ExecuteReaderAsync()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_BulkInsert_ETLBox_ControlFlow_ITableData_">DbTask.BulkInsert(ITableData)</a>
@@ -84,6 +96,12 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__">DbTask.LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__">DbTask.LogErrorsAndCloseAsync(string, Func&lt;IConnectionManager, Task&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Action_ETLBox_Connection_IConnectionManager__System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_">DbTask.LogErrorsAndCloseCoreAsync(string, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_ConnectionManager">ControlFlowTask.ConnectionManager</a>
@@ -770,7 +788,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static int ExecuteNonQuery(IConnectionManager connectionManager, string name, string sql, IEnumerable<QueryParameter> parameterList)
+    [Obsolete]
+public static int ExecuteNonQuery(IConnectionManager connectionManager, string name, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
@@ -831,7 +850,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static int ExecuteNonQuery(IConnectionManager connectionManager, string name, string sql)
+    [Obsolete]
+public static int ExecuteNonQuery(IConnectionManager connectionManager, string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -989,7 +1009,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static int ExecuteNonQuery(string name, string sql, IEnumerable<QueryParameter> parameterList)
+    [Obsolete]
+public static int ExecuteNonQuery(string name, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
@@ -1045,7 +1066,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static int ExecuteNonQuery(string name, string sql)
+    [Obsolete]
+public static int ExecuteNonQuery(string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -1133,6 +1155,113 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_System_String__examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQueryAsync(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> ExecuteNonQueryAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQueryAsync(ETLBox.Connection.IConnectionManager,System.String)">ExecuteNonQueryAsync(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> ExecuteNonQueryAsync(IConnectionManager connectionManager, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQueryAsync_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReader(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
@@ -1336,7 +1465,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReader(IConnectionManager connectionManager, string name, string sql, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReader(IConnectionManager connectionManager, string name, string sql, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1556,7 +1686,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReader(string name, string sql, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReader(string name, string sql, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1589,6 +1720,260 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReader_System_String_System_String_System_Action_System_Object_____examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync(ETLBox.Connection.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ExecuteReaderAsync(IConnectionManager connectionManager, string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ExecuteReaderAsync(IConnectionManager connectionManager, string sql, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ExecuteReaderAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderAsync(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ExecuteReaderAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteReaderSingleLine_ETLBox_Connection_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteReaderSingleLine(ETLBox.Connection.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReaderSingleLine(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1597,7 +1982,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1638,7 +2024,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1694,7 +2081,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1740,7 +2128,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(string sql, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(string sql, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1776,7 +2165,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1827,7 +2217,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static void ExecuteReaderSingleLine(string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions)
+    [Obsolete]
+public static void ExecuteReaderSingleLine(string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1924,7 +2315,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ExecuteScalar(IConnectionManager connectionManager, string name, string sql, IEnumerable<QueryParameter> parameterList)
+    [Obsolete]
+public static object ExecuteScalar(IConnectionManager connectionManager, string name, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
@@ -1985,7 +2377,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ExecuteScalar(IConnectionManager connectionManager, string name, string sql)
+    [Obsolete]
+public static object ExecuteScalar(IConnectionManager connectionManager, string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -2143,7 +2536,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ExecuteScalar(string name, string sql, IEnumerable<QueryParameter> parameterList)
+    [Obsolete]
+public static object ExecuteScalar(string name, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
@@ -2199,7 +2593,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ExecuteScalar(string name, string sql)
+    [Obsolete]
+public static object ExecuteScalar(string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -2289,6 +2684,77 @@ with a default name that can be overwritten.</p>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalar__1_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalar``1(ETLBox.Connection.IConnectionManager,System.String,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -2296,7 +2762,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string name, string sql)
+    [Obsolete]
+public static T ExecuteScalar<T>(IConnectionManager connectionManager, string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -2499,7 +2966,8 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public static T ExecuteScalar<T>(string name, string sql)
+    [Obsolete]
+public static T ExecuteScalar<T>(string name, string sql)
 ```
 
 {{< rawhtml >}}
@@ -2877,6 +3345,250 @@ public static bool ExecuteScalarAsBool(string sql)
     </tbody>
   </table>
   <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsBool_System_String__examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<object> ExecuteScalarAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsync(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<object> ExecuteScalarAsync(IConnectionManager connectionManager, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync__1_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync``1(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<T> ExecuteScalarAsync<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync__1_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
+  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync__1_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.SqlTask.ExecuteScalarAsync``1(ETLBox.Connection.IConnectionManager,System.String)">ExecuteScalarAsync&lt;T&gt;(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<T> ExecuteScalarAsync<T>(IConnectionManager connectionManager, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_SqlTask_ExecuteScalarAsync__1_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
   <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>

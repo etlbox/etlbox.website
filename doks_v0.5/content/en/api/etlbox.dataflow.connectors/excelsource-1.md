@@ -573,6 +573,36 @@ Be careful if you don't define a range and set this to true.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_IsCaseSensitiveSheetName_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.IsCaseSensitiveSheetName*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_IsCaseSensitiveSheetName" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.IsCaseSensitiveSheetName">IsCaseSensitiveSheetName</h4>
+  <div class="markdown level1 summary"><p>Only needed if <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName">SheetName</a> is provided.
+By default, matching sheet names are case-insensitive. Set this property to true if you want to have the matching
+case-sensitive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IsCaseSensitiveSheetName { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_Range_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.Range*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_Range" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.Range">Range</h4>
   <div class="markdown level1 summary"><p>The range in the excel where the data is located.</p>
@@ -625,6 +655,34 @@ Be careful if you don't define a range and set this to true.</p>
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_SheetNumber_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.SheetNumber*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_SheetNumber" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.SheetNumber">SheetNumber</h4>
+  <div class="markdown level1 summary"><p>The sheet number from which data should be read - will only be taken into account if <a class="xref" href="/api/etlbox.dataflow.connectors/excelsource-1#ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName">SheetName</a> is empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int? SheetNumber { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span>?</td>
         <td></td>
       </tr>
     </tbody>

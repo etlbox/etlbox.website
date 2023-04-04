@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10274
+weight: 10276
 toc: false
 ---
 
@@ -120,15 +120,15 @@ will return Test, Col2 and Col3 als column names.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Helper_SqlParser_ParseColumnNamesInternal_" data-uid="ETLBox.Helper.SqlParser.ParseColumnNamesInternal*"></a>
-  <h4 id="ETLBox_Helper_SqlParser_ParseColumnNamesInternal_System_String_" data-uid="ETLBox.Helper.SqlParser.ParseColumnNamesInternal(System.String)">ParseColumnNamesInternal(string)</h4>
+  <a id="ETLBox_Helper_SqlParser_ReplaceMatchWith_" data-uid="ETLBox.Helper.SqlParser.ReplaceMatchWith*"></a>
+  <h4 id="ETLBox_Helper_SqlParser_ReplaceMatchWith_System_Text_RegularExpressions_Match_" data-uid="ETLBox.Helper.SqlParser.ReplaceMatchWith(System.Text.RegularExpressions.Match)">ReplaceMatchWith(Match)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static List<string> ParseColumnNamesInternal(string sql)
+    public static string ReplaceMatchWith(Match match)
 ```
 
 {{< rawhtml >}}
@@ -143,8 +143,8 @@ will return Test, Col2 and Col3 als column names.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
+        <td><span class="xref">System.Text.RegularExpressions.Match</span></td>
+        <td><span class="parametername">match</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -159,7 +159,7 @@ will return Test, Col2 and Col3 als column names.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

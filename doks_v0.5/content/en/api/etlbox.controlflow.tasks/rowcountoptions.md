@@ -52,6 +52,10 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
         <td id="ETLBox_ControlFlow_Tasks_RowCountOptions_QuickQueryMode">QuickQueryMode</td>
         <td></td>
       </tr>
+      <tr>
+        <td id="ETLBox_ControlFlow_Tasks_RowCountOptions_ReadOnlyFirstRow">ReadOnlyFirstRow</td>
+        <td></td>
+      </tr>
     </tbody>
   </thead></thead></table>
 

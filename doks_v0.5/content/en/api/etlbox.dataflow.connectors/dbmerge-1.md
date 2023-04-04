@@ -1010,7 +1010,8 @@ and the <a class="xref" href="/api/etlbox.dataflow.connectors/dbmerge-1#ETLBox_D
 {{< /rawhtml >}}
 
 ```C#
-    public void Wait()
+    [Obsolete]
+public void Wait()
 ```
 
 {{< rawhtml >}}

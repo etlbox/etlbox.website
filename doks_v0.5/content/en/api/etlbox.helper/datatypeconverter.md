@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10262
+weight: 10264
 toc: false
 ---
 
@@ -168,6 +168,50 @@ various sql data types into the right database specific database or into a .NET 
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_DefaultValueToSqlConversionFunc_" data-uid="ETLBox.Helper.DataTypeConverter.DefaultValueToSqlConversionFunc*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_DefaultValueToSqlConversionFunc_ETLBox_Helper_ConversionContext_" data-uid="ETLBox.Helper.DataTypeConverter.DefaultValueToSqlConversionFunc(ETLBox.Helper.ConversionContext)">DefaultValueToSqlConversionFunc(ConversionContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static string DefaultValueToSqlConversionFunc(ConversionContext conversionContext)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a></td>
+        <td><span class="parametername">conversionContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>

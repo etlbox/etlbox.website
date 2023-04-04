@@ -71,10 +71,19 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">IConnectionManager.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">IConnectionManager.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_BeginTransaction_System_Data_IsolationLevel_">IConnectionManager.BeginTransaction(IsolationLevel)</a>
@@ -98,6 +107,9 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_Open">IConnectionManager.Open()</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_OpenAsync">IConnectionManager.OpenAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_Close">IConnectionManager.Close()</a>
     </div>
     <div>
@@ -105,6 +117,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_IsInBulkInsert">IConnectionManager.IsInBulkInsert</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_HasTransaction">IConnectionManager.HasTransaction</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_PrepareBulkInsert_System_String_">IConnectionManager.PrepareBulkInsert(string)</a>
@@ -123,6 +138,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">IConnectionManager.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_UseValueToSqlConversionFunc">IConnectionManager.UseValueToSqlConversionFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/iconnectionmanager#ETLBox_Connection_IConnectionManager_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__">IConnectionManager.SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</a>
     </div>
     <div>
       <span class="xref">System.IDisposable.Dispose()</span>
@@ -161,7 +182,9 @@ toc: false
 </h3>
   <a id="ETLBox_Connection_IConnectionManager_2_DbConnection_" data-uid="ETLBox.Connection.IConnectionManager`2.DbConnection*"></a>
   <h4 id="ETLBox_Connection_IConnectionManager_2_DbConnection" data-uid="ETLBox.Connection.IConnectionManager`2.DbConnection">DbConnection</h4>
-  <div class="markdown level1 summary"><p>The underlying ADO.NET connection</p>
+  <div class="markdown level1 summary"><p>The underlying ADO.NET connection.
+Only read from this object and it's properties - by default, connections are always
+acquired from the connection pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

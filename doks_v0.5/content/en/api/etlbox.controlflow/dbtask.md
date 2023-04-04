@@ -631,6 +631,33 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteNonQueryAsync" data-uid="ETLBox.ControlFlow.DbTask.ExecuteNonQueryAsync">ExecuteNonQueryAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<int> ExecuteNonQueryAsync()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_DbTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteReader" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReader">ExecuteReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -643,6 +670,33 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteReaderAsync" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReaderAsync">ExecuteReaderAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task ExecuteReaderAsync()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_DbTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalar" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalar">ExecuteScalar()</h4>
   <div class="markdown level1 summary"></div>
@@ -740,6 +794,75 @@ public bool ExecuteScalarAsBool()
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync">ExecuteScalarAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<object> ExecuteScalarAsync()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync__1" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync``1">ExecuteScalarAsync&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<T> ExecuteScalarAsync<T>()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose(System.String,System.Action{ETLBox.Connection.IConnectionManager})">LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -748,7 +871,7 @@ public bool ExecuteScalarAsBool()
 {{< /rawhtml >}}
 
 ```C#
-    public void LogErrorsAndClose(string sqlOperationType, Action<IConnectionManager> a)
+    public void LogErrorsAndClose(string sqlOperationType, Action<IConnectionManager> syncAction = null)
 ```
 
 {{< rawhtml >}}
@@ -769,7 +892,115 @@ public bool ExecuteScalarAsBool()
       </tr>
       <tr>
         <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>&gt;</td>
-        <td><span class="parametername">a</span></td>
+        <td><span class="parametername">syncAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync(System.String,System.Func{ETLBox.Connection.IConnectionManager,System.Threading.Tasks.Task})">LogErrorsAndCloseAsync(string, Func&lt;IConnectionManager, Task&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task LogErrorsAndCloseAsync(string sqlOperationType, Func<IConnectionManager, Task> asyncAction = null)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sqlOperationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">asyncAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Action_ETLBox_Connection_IConnectionManager__System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync(System.String,System.Action{ETLBox.Connection.IConnectionManager},System.Func{ETLBox.Connection.IConnectionManager,System.Threading.Tasks.Task},System.Boolean)">LogErrorsAndCloseCoreAsync(string, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task LogErrorsAndCloseCoreAsync(string sqlOperationType, Action<IConnectionManager> syncAction = null, Func<IConnectionManager, Task> asyncAction = null, bool sync = false)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sqlOperationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>&gt;</td>
+        <td><span class="parametername">syncAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">asyncAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">sync</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>

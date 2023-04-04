@@ -442,6 +442,39 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow.transformations
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregationCondition_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregationCondition*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregationCondition" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregationCondition">AggregationCondition</h4>
+  <div class="markdown level1 summary"><p>When the aggregation condition is set, the pre-defined aggregation methods are only executed if this
+condition evaluates to true. Only applicable if you set <a class="xref" href="/api/etlbox.dataflow/aggregatecolumn">AggregateColumn</a> attributes on your object or
+if you defined your columns via the<br>
+<a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns">AggregateColumns</a> property.
+This func will be invoked before every aggregation (e.g. every count is <a class="xref" href="/api/etlbox.dataflow.transformations/aggregationmethod#ETLBox_DataFlow_Transformations_AggregationMethod_Count">Count</a> is set
+for a property, and contains the currently processed row along with the current property name and aggregation method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, AggregationMethodInfo, bool> AggregationCondition { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow.transformations/aggregationmethodinfo">AggregationMethodInfo</a>, <span class="xref">bool</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns">GroupColumns</h4>
   <div class="markdown level1 summary"><p>This list will be used to set the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc">GroupingFunc</a> and the <a class="xref" href="/api/etlbox.dataflow.transformations/aggregation-2#ETLBox_DataFlow_Transformations_Aggregation_2_StoreKeyAction">StoreKeyAction</a>.

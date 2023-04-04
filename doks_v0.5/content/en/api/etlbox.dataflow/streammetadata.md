@@ -195,6 +195,33 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_StreamMetaData_RequestCount_" data-uid="ETLBox.DataFlow.StreamMetaData.RequestCount*"></a>
+  <h4 id="ETLBox_DataFlow_StreamMetaData_RequestCount" data-uid="ETLBox.DataFlow.StreamMetaData.RequestCount">RequestCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int RequestCount { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_StreamMetaData_RequestUri_" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_RequestUri" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri">RequestUri</h4>
   <div class="markdown level1 summary"><p>The uri used to retrieve the current request</p>

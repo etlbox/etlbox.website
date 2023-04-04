@@ -322,6 +322,42 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_Tasks_TruncateTableTask_TruncateAsync_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.TruncateAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_TruncateAsync_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.TruncateTableTask.TruncateAsync(ETLBox.Connection.IConnectionManager,System.String)">TruncateAsync(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void TruncateAsync(IConnectionManager connection, string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_ControlFlow_Tasks_TruncateTableTask_TruncateAsync_ETLBox_Connection_IConnectionManager_System_String__examples">Examples</h5>
+  <pre><code>TruncateTableTask.Truncate(&quot;demo.table1&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>

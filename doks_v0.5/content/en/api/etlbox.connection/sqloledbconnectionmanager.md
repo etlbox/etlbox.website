@@ -34,6 +34,15 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_ConnectionManagerType">OleDbConnectionManager.ConnectionManagerType</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_QB">OleDbConnectionManager.QB</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_QE">OleDbConnectionManager.QE</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_IsOdbcOrOleDbConnection">OleDbConnectionManager.IsOdbcOrOleDbConnection</a>
     </div>
     <div>
@@ -76,6 +85,9 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Transaction">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Transaction</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_HasTransaction">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.HasTransaction</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_IsInBulkInsert">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.IsInBulkInsert</a>
     </div>
     <div>
@@ -112,22 +124,49 @@ toc: false
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Compatibility">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Compatibility</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string)</a>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ValueToSqlConversionFunc">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ValueToSqlConversionFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_UseValueToSqlConversionFunc">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.UseValueToSqlConversionFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OverrideConnectionSpecifics_ETLBox_Connection_ConnectionManagerType_System_String_System_String_System_String_System_Int32_System_Int32_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OverrideConnectionSpecifics(ConnectionManagerType, string, string, string, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ConfigureByConnectionType_ETLBox_Connection_ConnectionManagerType_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ConfigureByConnectionType(ConnectionManagerType)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQuery(string, IEnumerable&lt;OleDbParameter&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkNonQueryAsync(string, IEnumerable&lt;OleDbParameter&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReader(string, IEnumerable&lt;OleDbParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;OleDbParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -170,6 +209,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_Open">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.Open()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OpenAsync">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OpenAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_OpenCoreAsync_System_Boolean_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.OpenCoreAsync(bool)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.connection/dbconnectionmanager-3#ETLBox_Connection_DbConnectionManager_3_CreateDbConnection">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.CreateDbConnection()</a>
@@ -293,131 +338,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-</h3>
-  <a id="ETLBox_Connection_SqlOleDbConnectionManager_ConnectionManagerType_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.ConnectionManagerType*"></a>
-  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_ConnectionManagerType" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.ConnectionManagerType">ConnectionManagerType</h4>
-  <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override ConnectionManagerType ConnectionManagerType { get; protected set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_ConnectionManagerType">OleDbConnectionManager.ConnectionManagerType</a></div>
-  <a id="ETLBox_Connection_SqlOleDbConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.MaxParameterSizeSql*"></a>
-  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
-  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
-sql query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override int MaxParameterSizeSql { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;System.Data.OleDb.OleDbConnection, System.Data.OleDb.OleDbTransaction, System.Data.OleDb.OleDbParameter&gt;.MaxParameterSizeSql</span></div>
-  <a id="ETLBox_Connection_SqlOleDbConnectionManager_QB_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QB*"></a>
-  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_QB" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QB">QB</h4>
-  <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
-E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override string QB { get; protected set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_QB">OleDbConnectionManager.QB</a></div>
-  <a id="ETLBox_Connection_SqlOleDbConnectionManager_QE_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QE*"></a>
-  <h4 id="ETLBox_Connection_SqlOleDbConnectionManager_QE" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.QE">QE</h4>
-  <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
-E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override string QE { get; protected set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.connection/oledbconnectionmanager#ETLBox_Connection_OleDbConnectionManager_QE">OleDbConnectionManager.QE</a></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Connection_SqlOleDbConnectionManager_Clone_" data-uid="ETLBox.Connection.SqlOleDbConnectionManager.Clone*"></a>
