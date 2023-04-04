@@ -32,7 +32,7 @@ var dest = new CustomDestination<MyRow>();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
 
 source.LinkTo(dest);
-Network.Execute();
+Network.Execute(source);
 
 string json = JsonConvert.SerializeObject(rows, Formatting.Indented);
 
@@ -66,7 +66,7 @@ var dest = new CustomDestination();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
 
 source.LinkTo(dest);
-Network.Execute(); 
+Network.Execute(source);
 ```
 
 ## Processing data in arrays
@@ -80,5 +80,5 @@ var dest = new CustomDestination<string[]>();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
 
 source.LinkTo(dest);
-Network.Execute();
+Network.Execute(source);
 ```

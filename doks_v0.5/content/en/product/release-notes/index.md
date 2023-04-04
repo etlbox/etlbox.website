@@ -5,6 +5,30 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.7.0
+
+#### Features:
+
+- Aggregation: Adding AggregationCondition to only execute predefined aggregation methods when condition is met
+- Added async methods for SqlTask (e.g. ExecuteNonQueryAsync), RowCountTask and TruncateTableTask
+- DbMerge: ValueGeneratedColumns are now also populated for Exists in DbMerge output
+- RowCountTask: Changed return type of Count() and HasRows() to expected return types int and bool
+- Improving thrown exceptions- now the original exception is always thrown (was AggregateException before)
+- CsvSource: Enabling auto detection of delimiter in default configuration
+- Adding RequestCount to StreamMetaData
+- Added ValueToSqlConversionFunc for Odbc/OleDb connection managers
+- ExcelSource: Exposes property SheetNumber to specify a sheet index instead of a sheet name
+- ExcelSource: Sheet name comparison by default is now case-insensitive (can be switched back to case-sensitive)
+- ExcelDestination: Default Sheetname set to "Sheet1"
+
+#### Bug fixes:
+
+- Aggregation: Group columns with the FirstValue aggregation method now properly retrieves the first value for a group
+- Fixed slowed ODBC connector execution performance for tables with more than 20 columns
+- ExcelSource: Only first sheet will be read from source if no sheet name is specified
+- Fixed AccessViolation errors for bulk inserts via Odbc with MySql connector
+- DbSource: Fixed issue with no white spaces when parsing column names in sql
+
 ## Version 2.6.8
 
 #### Features:

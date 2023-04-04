@@ -172,6 +172,8 @@ source.LinkTo(dest);
 Network.Execute(source);
 ```
 
+{{< alert text="Make sure to use <b>xlsx</b> as file extension - using other extensions will prevent excel from opening the file. Also it is recommended to provide a sheetname via the <code>SheetName</code> property." >}}
+
 Will result in an excel file that contains the following data:
 
 Col1|Col2
@@ -179,6 +181,7 @@ Col1|Col2
 1|Test1
 2|Test2
 3|Test3
+
 
 ### Configuration 
 
