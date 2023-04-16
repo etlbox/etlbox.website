@@ -367,3 +367,39 @@ dest.MergeProperties.CompareColumns.Add(new CompareColumn() { ComparePropertyNam
 dest.MergeProperties.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteCol", DeleteOnMatchValue = true });
 ```
 
+## Performance considerations
+
+The concept of DbMerge is to convert a source table into batches of insert/update and delete statements on the destination table. The MergeMode can be set to Delta or Full, with Delta performing a lookup before every operation and Full reading the entire destination table into memory. Inserts are generally faster than updates or deletes, and selecting data from the source table can also be slow depending on the destination table size,  indexes and constraints. The Truncate approach involves loading the destination table into memory first and then inserting new data, resulting in one big select and many inserts. The execution speed of the merge operation may vary depending on setup. If you're using the Full MergeMode, it's important to ensure that you have enough available RAM to load the id and compare columns into memory prior to execution.
+
+Connection pooling is used by default in ETLBox, which relies on the ADO.NET connection pool to get and return database connections for each operation. The pool decides when to close a connection and when to open a new one. ETLBox makes extensive use of connection pooling to improve performance and throughput. The LeaveOpen property on the connection manager can be set to true to keep a connection open, but this can reduce performance when many parallel operations are happening. But if you want to explicitly reuse the existing connection for all your operations, you can set LeaveOpen to true. A connection is automatically left open and never put back to the pool if a transaction was started. (A transaction can be started with `BeginTransaction` on the corresponding ConnectionManager). 
+
+### Insertion speed 
+
+To test performance, it is recommended to start by inserting data into an empty staging table and measuring the insertion speed. The maximum time it takes to insert data into an empty table is the benchmark for the operation. LeaveOpen on the connection manager can be set to true or false, but it is not guaranteed that this will make a significant difference in performance. Destination tables used for inserts should not have indexes or foreign key constraints except for a primary key. If you need other indexes or constraints , you can remove them before your insert operation, and the recreate them after the insert has finished. 
+
+Different batch sizes  can lead to faster inserts (e.g. 10000 is much faster for SQL Server). ODBC and OleDb are generally much slower than the native connection managers. 
+
+So for testing performance, you can start with a data flow like this:
+
+```C#
+var oracleConnMan = new OracleConnectionManager("..);
+var connMan = new SqlConnectionManager("...");
+connMan.LeaveOpen = true; //default is false
+
+CreateTable.Create() //Create an empty dest table 
+var source = new DbSource(oracleConnMan, "sourceTable");
+//or use: source.Sql = "SELECT * FORM sourceTable LIMIT 100000"
+var dest = new DbDestination(connMan, "destTable"); 
+dest.BatchSize = 10000; //Higher (or lower) batch sizes can be faster, default is 1000 (Odbc/OleDb: 100)
+
+source.LinkTo(dest);
+Network.Execute(source);
+```
+
+To improve insertion speeds, you can attempt to parallelize the insertions into multiple threads or tasks. Essentially, you can run the code above in several tasks, ensuring that each task has its object creation and connection manager components to avoid shared resources. However, the resulting insert speed will depend on the remaining I/O "capacity" of your database. If you have one task only, I would expect the database to use up all available I/O, but that may not always be the case. On the other hand, you should also consider how to logically split up your source data (for instance, by selecting different id ranges in your select statement). Ensure that your source database is fast enough to read the data and that it doesn't become the bottleneck for your data flow.
+
+### Merge speed
+
+Once all data has been inserted into the staging table, you can use the `DbMerge` to sync data with your final table. If you are working with a database that offers a MERGE statement (e.g. SqlServer), you can also try out the performance of using the MERGE statement instead. Any merge method (either the `DbMerge` or a MERGE statement) should be slower than inserting data into an empty table (with only a primary key). So if your source table has *a lot* of changes between each sync (e.g. if millions of rows are changed during a day), then it could be faster to delete the destination table and then simply copy the source table again. If you have only a few changes, or need to explicitly determine the changes, the DbMerge should be the faster approach. 
+
+If you database offers some kind of CDC (Change Data Capture), which will reflect the changes on your source table, you can use this delta output as input for your merge dataflow instead of the original source. This should also increase performance. 
