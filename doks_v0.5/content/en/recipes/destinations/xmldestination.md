@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-The Xml destination convers data from your data flow into corresponding xml code. Internally, it uses the build-in .NET Xml Serializer.  
+The Xml destination converts data from your data flow into corresponding xml code. Internally, it uses the build-in .NET Xml Serializer.  
 
 ## Shared code
 
@@ -31,7 +31,7 @@ private void PrintFile(string sourceFile) {
 
 ### With POCO
 
-Let's start with a simple example - we write data into a xml file using a two POCOs (Plain old component objects).
+Let's start with a simple example - we write data into a xml file using two POCOs (Plain old component objects).
 
 ```C#
 public class Element
@@ -177,7 +177,7 @@ Content of file 'POCOWithConfig.xml'
 */
 ```
 
-### Dynamic csv file creation
+### Dynamic xml file creation
 
 The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a xml file, without the need to define any strongly typed object first. 
 
@@ -531,7 +531,7 @@ public class SubElementWA
     public decimal Number { get; set; }
 }
 
-string destFile = @"res/Examples/OwnStream.csv";
+string destFile = @"res/Examples/OwnStream.xml";
 var source = new MemorySource<ElementWA>();
 source.Data = new List<ElementWA>();
 for (int i = 1; i <= 3; i++)
