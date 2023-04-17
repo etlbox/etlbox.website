@@ -164,7 +164,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ### Reading into dynamic
 
-We can read the xml file in the previous example, this time without using a POCO but a dynamic ExpandoObject.
+We can read again the xml file in the previous example, this time without using a POCO but a dynamic ExpandoObject.
 
 ```C#
 string sourceFile = "res/Examples/ElementsAndAttributes.xml";
@@ -566,9 +566,38 @@ foreach (var row in dest.Data)
     Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Inner.Value}, Value2: {row.Inner.Number}");
 
 /* Output:
+Content of file 'Elements.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <CreationDate>2022-05-01</CreationDate>
+  <Element>
+    <Id>1</Id>
+    <Inner>
+      <Value>Test1</Value>
+      <Number>1.1</Number>
+    </Inner>
+  </Element>
+  <Element>
+    <Id>2</Id>
+    <Inner>
+      <Value></Value>
+      <Number>1.2</Number>
+    </Inner>
+  </Element>
+  <Element>
+    <Id>3</Id>
+    <Inner>
+      <Value>Test3</Value>
+      <Number>1.3</Number>
+    </Inner>
+  </Element>
+  <Confidential>false</Confidential>
+</Root>
+---
 Request finished with status code:OK
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
-Received Id: 3, Value1: Test3, Value2: 1.3       
+Received Id: 3, Value1: Test3, Value2: 1.3    
 */
 ```
