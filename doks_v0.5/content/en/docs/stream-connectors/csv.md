@@ -19,6 +19,8 @@ The csv connector package is based on the {{< link-ext text="CsvHelper library c
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
+If you want to start with example code right away, you will find it in the recipes section for the [CsvSource](/recipes/sources/csvsource) and [CsvDestination](/recipes/destinations/csvdestination). The components could also be used in other examples.  
+
 ## CsvSource
 
 A CsvSource simple reads data from a csv file or from a web service endpoint. 

@@ -17,6 +17,8 @@ If you need to work with xml code, make sure to add the latest {{< link-ext text
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
+If you want to start with example code right away, you will find it in the recipes section for the [XmlSource](/recipes/sources/xmlsource) and [XmlDestination](/recipes/destinations/xmldestination). The components could also be used in other examples.  
+
 ## XmlSource
 
 The xml source let you read data from a xml source.

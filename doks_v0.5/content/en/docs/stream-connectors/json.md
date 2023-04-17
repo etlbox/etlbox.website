@@ -19,6 +19,8 @@ The json connector package is based on {{< link-ext text="Json.NET by Newtonsoft
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
+If you want to start with example code right away, you will find it in the recipes section for the [JsonSource](/recipes/sources/jsonsource) and [JsonDestination](/recipes/destinations/jsondestination). The components could also be used in other examples.  
+
 ## JsonSource
 
 Json Source let you read a json. 
