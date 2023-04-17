@@ -15,7 +15,7 @@ The Xml source let you load data in xml format from various sources - either fro
 
 ## Shared code
 
-The following method is used in the subsequent examples, and prints the content of a csv file on the console output.
+The following method is used in the subsequent examples, and prints the content of a xml file on the console output.
 
 ```C#
 private void PrintFile(string sourceFile) {
@@ -439,7 +439,9 @@ Received Id: 5, Value1: Test5
 */
 ```
 
-## Reading from Azure blob storage
+## Different resource types
+
+### Reading from Azure blob storage
 
 All streaming connectors support reading data from Azure blob storage instead of a file. Here is an example for the XmlSource.
 
@@ -512,5 +514,61 @@ Content of file 'Elements.xml'
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
 Received Id: 3, Value1: Test3, Value2: 1.3
+*/
+```
+
+### Reading from web service
+
+All streaming connectors support reading data from any http endpoint. Here is an example for reading data from a mocked WebServer using a POST request.
+
+```c#
+public class Element
+{
+    public SubElement Inner { get; set; }
+    public int Id { get; set; }
+}
+
+public class SubElement
+{
+    public string Value { get; set; }
+    public decimal Number { get; set; }
+}
+
+string sourceFile = "res/Examples/Elements.xml";
+var server = WireMockServer.Start();
+server
+    .Given(
+        Request.Create()
+        .WithPath("/test")
+        .UsingPost())
+    .RespondWith(
+        Response.Create()
+            .WithStatusCode(200)
+            .WithHeader("Content-Type", "text/xml")
+            .WithBody(File.ReadAllText(sourceFile))
+    );
+
+var source = new XmlSource<Element>() {
+    ResourceType = ResourceType.Http,
+    Uri = @$"http://localhost:{server.Port}/test"
+};
+source.HttpRequestMessage.Method = HttpMethod.Post;
+source.HttpRequestMessage.Headers.AcceptEncoding.Add(
+    new System.Net.Http.Headers.StringWithQualityHeaderValue("*"));
+source.HttpRequestMessage.Properties.Add("Content-Type", "application/xml");
+var dest = new MemoryDestination<Element>();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+Console.WriteLine("Request finished with status code:" + source.HttpResponseMessage.StatusCode.ToString());
+foreach (var row in dest.Data)
+    Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Inner.Value}, Value2: {row.Inner.Number}");
+
+/* Output:
+Request finished with status code:OK
+Received Id: 1, Value1: Test1, Value2: 1.1
+Received Id: 2, Value1: , Value2: 1.2
+Received Id: 3, Value1: Test3, Value2: 1.3       
 */
 ```
