@@ -178,6 +178,84 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
+### JSON Path in json properties
+
+The ETLBox.Json package provide a `JsonPathConverter` which allows to use JSON Path expression in the `JsonProperty` attributes. 
+
+```C#
+[JsonConverter(typeof(JsonPathConverter))]
+public class RecordFlatten
+{
+    [JsonProperty("$.Id")]
+    public int Id { get; set; }
+    [JsonProperty("Inner.Value")]
+    public string Value1 { get; set; }
+    [JsonProperty("Inner.Number")]
+    public decimal Value2 { get; set; }
+}
+
+[Fact]
+public void UsingJsonPathConverter() {
+    string sourceFile = "res/Examples/Records.json";
+    PrintFile(sourceFile);
+
+    var source = new JsonSource<RecordFlatten>() {
+        ResourceType = ResourceType.File,
+        Uri = sourceFile
+    };
+
+    var dest = new MemoryDestination<RecordFlatten>();
+
+    source.LinkTo(dest);
+    Network.Execute(source);
+
+    foreach (var row in dest.Data)
+        Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Value1}, Value2: {row.Value2}");
+
+    /* Output:
+    Content of file 'Records.json'
+    ---
+    {
+        "CreationDate": "2022-01-01",
+        "Content": [
+        {
+            "Id": 1,
+            "Inner": {
+            "Value": "Test1",
+            "Number": 1.1
+            }
+        },
+        {
+            "Id": 2,
+            "Inner": {
+            "Number": 1.2
+            }
+        },
+        {
+            "Id": 3,
+            "Inner": {
+            "Value": "Test3",
+            "Number": 1.3
+            }
+        }
+        ],
+        "Confidential": false
+    }
+    ---
+    Received Id: 1, Value1: Test1, Value2: 1.1
+    Received Id: 2, Value1: , Value2: 1.2
+    Received Id: 3, Value1: Test3, Value2: 1.3
+    */
+
+    //Delete below this line
+    Assert.Collection(dest.Data,
+        row => Assert.True(row.Id == 1 && row.Value1 == "Test1" && row.Value2 == 1.1M),
+        row => Assert.True(row.Id == 2 && row.Value1 == null && row.Value2== 1.2M),
+        row => Assert.True(row.Id == 3 && row.Value1 == "Test3" && row.Value2 == 1.3M)
+    );
+}
+```
+
 ### Reading into dynamic
 
 We can read again the json file in the previous example, this time without using a POCO but a dynamic ExpandoObject. 
@@ -202,6 +280,83 @@ Network.Execute(source);
 
 foreach (dynamic row in dest.Data)
     Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Inner.Value}, Value2: {row.Inner.Number}");
+
+/* Output:
+Content of file 'Records.json'
+---
+{
+    "CreationDate": "2022-01-01",
+    "Content": [
+    {
+        "Id": 1,
+        "Inner": {
+        "Value": "Test1",
+        "Number": 1.1
+        }
+    },
+    {
+        "Id": 2,
+        "Inner": {
+        "Number": 1.2
+        }
+    },
+    {
+        "Id": 3,
+        "Inner": {
+        "Value": "Test3",
+        "Number": 1.3
+        }
+    }
+    ],
+    "Confidential": false
+}
+---
+Received Id: 1, Value1: Test1, Value2: 1.1
+Received Id: 2, Value1: , Value2: 1.2
+Received Id: 3, Value1: Test3, Value2: 1.3
+*/
+```
+
+#### JSON Path with dynamic
+
+The JSON Path syntax can also be used in combination with dynamic ExpandoObject. You need to add the `ExpandoJsonPathConverter` to the JsonSerializer converters.  
+
+```C#
+string sourceFile = "res/Examples/Records.json";
+PrintFile(sourceFile);
+
+var source = new JsonSource() {
+    ResourceType = ResourceType.File,
+    Uri = sourceFile
+};
+var dest = new MemoryDestination();
+List<JsonProperty2JsonPath> pathLookups = new List<JsonProperty2JsonPath>()
+{
+    new JsonProperty2JsonPath()
+    {
+        SearchPropertyName = "Inner",
+        JsonPath = "$.Value",
+        OutputPropertyName = "Value1",
+        
+        },
+    new JsonProperty2JsonPath() {
+        SearchPropertyName = "Inner",
+        JsonPath = "$.Number",
+        OutputPropertyName = "Value2"
+        }
+};
+source.JsonSerializer.Converters.Add(new ExpandoJsonPathConverter(pathLookups));
+source.RowModificationAction = (row, smd) => {
+    var r = (row as dynamic) as IDictionary<string, object>;
+    if (!r.ContainsKey("Value1"))
+        r.Add("Value1", "");
+};
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Value1}, Value2: {row.Value2}");
 
 /* Output:
 Content of file 'Records.json'
@@ -430,7 +585,7 @@ Received Id: 5, Value1: Test5
 
 ### Reading from Azure blob storage
 
-All streaming connectors support reading data from Azure blob storage instead of a file. Here is an example for the XmlSource.
+All streaming connectors support reading data from Azure blob storage instead of a file. Here is an example for the JsonSource.
 
 ```C#
 public class Record
@@ -543,7 +698,7 @@ var source = new JsonSource<Record>() {
 source.HttpRequestMessage.Method = HttpMethod.Post;
 source.HttpRequestMessage.Headers.AcceptEncoding.Add(
     new System.Net.Http.Headers.StringWithQualityHeaderValue("*"));
-source.HttpRequestMessage.Properties.Add("Content-Type", "application/xml");
+source.HttpRequestMessage.Properties.Add("Content-Type", "text/json");
 var dest = new MemoryDestination<Record>();
 
 source.LinkTo(dest);
