@@ -156,7 +156,7 @@ Row: 5 - Start Position: 63 -- RawRecord: 4,Err,
 
 ## Configure underlying CsvReader
 
-This example show how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to map different header names to our object properties. Also, we can use this configuration to set up various other parameters, e.g. reading with a different delimiter. 
+This example shows how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to map different header names to our object properties. Also, we can use this configuration to set up various other parameters, e.g. reading with a different delimiter. 
 
 {{< alert text="To use a different encoding, you need to use the <code>Encoding</code> property on the <code>CsvSource</code> directly. Do not use the Encoding property on the CsvHelper Configuration object." >}}
 

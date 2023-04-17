@@ -136,7 +136,45 @@ XmlSource source = new XmlSource("demo2.xml", ResourceType.File)
 
 ### Handling attributes with dynamic objects
 
-When reading attributes using the dynamic approach, the property names of attributes will have an @ sign in front of their names. This makes it difficult to access these properties,e.g. in a RowTransformation when converting the row in a dynamic object. So when we reuse the xml file from above again:
+{{< alert text="Starting with version 2.7.1, attributes will have the prefix <code>at_</code> (instead of <code>@</code>)." >}}
+
+#### Version 2.7.1 and later
+
+Attributes can be accessed via their name and the prefix `at_` (and text data outside of elements via the prefix `tx_`) If you like to have a different prefix, you can adjust the `AttributePrefixForDynamic` and `TextPrefixForDynamic` properties. If you want to have the same behaviour as in previous ETLBox versions, you can set `AttributePrefixForDynamic = "@"` and `TextPrefixForDynamic = "#"`. 
+
+Consider the following xml: 
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.w3.org/2005/Atom">
+  <comment>Hello, world!</comment>
+  <entry>
+    <id>TestId_1</id>
+    <category term="TermA" scheme="http://scheme1.test" />
+  </entry>
+  <entry>
+    <id>TestId_2</id>
+    <category term="TermB" scheme="http://scheme2.test" />
+  </entry>
+```
+
+We can now access the data in our dynamic object:
+
+```C#
+XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
+RowTransformation rowTrans = new RowTransformation();
+source.LinkTo(rowTrans);
+rowTrans.TransformationFunc = row => {
+    dynamic r = row as ExpandoObject;
+    var id = r.id;
+    var categoryTerm = r.category.at_term;
+    ...
+}
+```
+
+#### Prior version 2.7.1
+
+When reading attributes using the dynamic approach and using an ETLBox version prior 2.7.1, the property names of attributes will have an @ sign in front of their names. This makes it difficult to access these properties,e.g. in a RowTransformation when converting the row in a dynamic object. So when we reuse the xml file from above again:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -160,7 +198,7 @@ RowTransformation rowTrans = new RowTransformation();
 source.LinkTo(rowTrans);
 rowTrans.TransformationFunc = row => {
     dynamic r = row as ExpandoObject;
-    r.category.@term //@ is not allowed as a property name!
+    var categoryTerm = r.category.@term //@ is not allowed as a property name!
     ...//won't compile
 }
 ```
@@ -217,6 +255,61 @@ source.HasNextUri = meta => {
     Console.WriteLine(meta.UnparsedData); 
     return true;
 };
+```
+
+### Changing element names
+
+If some cases, the source file contains elements with different names which contain our data. If you are using the dynamic approach, you can use the `ElementNameRetrievalFunc` to adjust the element name before reading the next element. The provided `StreamMetaData` object will contain the name of the next element inside the `AdditionalData` property. 
+
+Here is an example of using this feature: 
+
+```C#
+string sourceFile = "res/Examples/DifferentElementNames.xml";
+PrintFile(sourceFile);
+
+var source = new XmlSource() {
+    ResourceType = ResourceType.File,
+    Uri = sourceFile
+};
+source.ElementNameRetrievalFunc = (smd) => {
+    if ((string)smd.AdditonalData == "A") return "A";
+    else return "B";
+};
+source.AttributePrefixForDynamic = "";
+var dest = new MemoryDestination();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+foreach (dynamic row in dest.Data) {
+    Console.WriteLine($"Received Id: {row.Id}, Value: {row.Value}");
+}
+/* Output:
+Content of file 'DifferentElementNames.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <CreationDate>2022-05-01</CreationDate>
+    <A Id="1">
+    <Value>Test1</Value>
+    </A>
+    <B Value="Test2">
+    <Id>2</Id>
+    </B>
+    <Skipped Id="0">X</Skipped>
+    <B Value="Test3">
+    <Id>3</Id>
+    </B>
+    <A Id="4">
+    <Value>Test4</Value>
+    </A>
+</Root>
+---
+Received Id: 1, Value: Test1
+Received Id: 2, Value: Test2
+Received Id: 3, Value: Test3
+Received Id: 4, Value: Test4
+*/
 ```
 
 ## XmlDestination
