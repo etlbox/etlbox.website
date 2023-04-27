@@ -254,6 +254,36 @@ The DeltaTable now will look like this:
 
 ## Additional configurations 
 
+### Overwriting Identity columns
+
+If your destination table contains an Identity column (or auto increment in MySql or Serial column in Postgres), the DbMerge by default will ignore this column when inserting data. Even though it can be defined as an IdColumn an used to determine if a record needs to be inserted, updated or deleted, it will still not write data into this column. An inserts will then have the auto generated value created by the datbase. 
+Some databases (e.g. SqlServer) allow you to explicitly overwrite identity columns. In this case, you can set the propert `AllowIdentityInsert` to `true`. Now all inserts in your database will disable the auto generation and use the data in your object. 
+
+```C#
+public class MyMergeRow : MergeableRow
+{
+    [IdColumn]
+    public int Key { get; set; }
+
+    [CompareColumn]
+    [UpdateColumn]
+    public string Value { get; set; }
+}
+
+var tableCols = new List<TableColumn>()
+{
+    new TableColumn("Key", "INT", allowNulls:false, isPrimaryKey: true, isIdentity:true),
+    new TableColumn("Value", "VARCHAR(100)", allowNulls:false),
+};
+CreateTableTask.CreateIfNotExists(Connection, "IdentityTable", tableCols);
+
+//...
+
+DBMerge<MyMergeRow> merge = new DBMerge<MyMergeRow>(connection, "IdentityTable");
+merge.AllowIdentityInsert = true;
+```
+
+
 ### Truncate instead delete
 
 Because the DBMerge does delete records that need to be deleted or updated using a bulk delete sql statement, 

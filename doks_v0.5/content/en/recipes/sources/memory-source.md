@@ -111,3 +111,39 @@ Received data with Id 2 and Value Test2
 Received data with Id 3 and Value Test3
 */
 ```
+
+## Using method to generate data
+
+With the `yield return` statement, you can write a custom method that produces your data. You can use this method also as input source data for a dataflow.
+
+```C#
+public class MyRow
+{
+    public int Id { get; set; }
+    public string Value{ get; set; }
+}
+
+IEnumerable<MyRow> ProduceData(int upto) {
+    for (int i = 1; i <= upto; i++) {
+        yield return new MyRow() { Id = i, Value = "Test"+i };
+    }
+}
+
+MemorySource<MyRow> source = new MemorySource<MyRow>();
+source.Data = ProduceData(3);
+
+CustomDestination<MyRow> dest = new CustomDestination<MyRow>();
+dest.WriteAction =
+    (row, _) => {
+        Console.WriteLine("Received data with Id " + row.Id + " and Value " + row.Value);
+    };
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+/* Output
+Received data with Id 1 and Value Test1
+Received data with Id 2 and Value Test2
+Received data with Id 3 and Value Test3
+*/
+```

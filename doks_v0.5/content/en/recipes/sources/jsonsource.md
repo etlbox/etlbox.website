@@ -317,7 +317,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
-#### JSON Path with dynamic
+### JSON Path with dynamic
 
 The JSON Path syntax can also be used in combination with dynamic ExpandoObject. You need to add the `ExpandoJsonPathConverter` to the JsonSerializer converters.  
 

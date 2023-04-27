@@ -27,25 +27,65 @@ public class MyAggRow
     public int AggValue { get; set; }
 }
 
-public void AllDataWithAttribute() {
-    var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
+var source = new MemorySource<MyDetailValue>();
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
 
-    var agg = new Aggregation<MyDetailValue, MyAggRow>();
+var agg = new Aggregation<MyDetailValue, MyAggRow>();
 
-    var dest = new MemoryDestination<MyAggRow>();
+var dest = new MemoryDestination<MyAggRow>();
 
-    source.LinkTo<MyAggRow>(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo<MyAggRow>(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
+foreach (var row in dest.Data)
+    Console.WriteLine($"Sum:{row.AggValue}");
 
-    //Output
-    //Sum:10
+//Output
+//Sum:10
+```
+
+### Aggregation condition
+
+You can use the `AggregationCondition` property to filter our particular rows that you don't want to be part of your aggegration.
+ 
+```C#
+public class MyDetailValue
+{
+    public int DetailValue { get; set; }
 }
+
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+
+var source = new MemorySource<MyDetailValue>();
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 10 });
+
+var agg = new Aggregation<MyDetailValue, MyAggRow>();
+agg.AggregationCondition = (row, aggregationMethod) => {
+    if (row.DetailValue == 3 && aggregationMethod.AggregationMethod == AggregationMethod.Sum)
+        return false;
+    else
+        return true;
+};
+    
+var dest = new MemoryDestination<MyAggRow>();
+
+source.LinkTo<MyAggRow>(agg).LinkTo(dest);
+Network.Execute(source);
+
+foreach (var row in dest.Data)
+    Console.WriteLine($"Sum:{row.AggValue}");
+
+//Output
+//Sum:17
 ```
 
 ## Attributes on dynamic input
@@ -53,33 +93,31 @@ public void AllDataWithAttribute() {
 This example shows how to use the `Aggregate` with the dynamic `ExpandoObject` by setting the `AggregateColumns` property.  
  
 ```C#
-public void AllDataWithAttributesOnExpando() {
-    var source = new MemorySource();
-    dynamic val1 = new ExpandoObject(); val1.DetailValue = 5; source.DataAsList.Add(val1);
-    dynamic val2 = new ExpandoObject(); val2.DetailValue = 3; source.DataAsList.Add(val2);
-    dynamic val3 = new ExpandoObject(); val3.DetailValue = 2; source.DataAsList.Add(val3);
+var source = new MemorySource();
+dynamic val1 = new ExpandoObject(); val1.DetailValue = 5; source.DataAsList.Add(val1);
+dynamic val2 = new ExpandoObject(); val2.DetailValue = 3; source.DataAsList.Add(val2);
+dynamic val3 = new ExpandoObject(); val3.DetailValue = 2; source.DataAsList.Add(val3);
 
-    var agg = new Aggregation();
-    agg.AggregateColumns = new List<AggregateColumn>()
-    {
-        new AggregateColumn() {
-            InputValuePropName = "DetailValue",
-            AggregatedValuePropName = "AggValue",
-            AggregationMethod = AggregationMethod.Sum
-            }
-    };
+var agg = new Aggregation();
+agg.AggregateColumns = new List<AggregateColumn>()
+{
+    new AggregateColumn() {
+        InputValuePropName = "DetailValue",
+        AggregatedValuePropName = "AggValue",
+        AggregationMethod = AggregationMethod.Sum
+        }
+};
 
-    var dest = new MemoryDestination();
+var dest = new MemoryDestination();
 
-    source.LinkTo(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (dynamic row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Sum:{row.AggValue}");
 
-    //Output
-    //Sum:10
-}
+//Output
+//Sum:10
 ```
 
 ## Custom aggregation function
@@ -97,28 +135,26 @@ public class MyAggRow2
     public int AggValue { get; set; }
 }
 
-public void AllDataWithAggFunction() {
-    var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
+var source = new MemorySource<MyDetailValue>();
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
+source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
 
-    var agg = new Aggregation<MyDetailValue, MyAggRow2>();
-    agg.AggregationAction =
-        (detailValue, aggValue) =>
-            aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
+var agg = new Aggregation<MyDetailValue, MyAggRow2>();
+agg.AggregationAction =
+    (detailValue, aggValue) =>
+        aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
 
-    var dest = new MemoryDestination<MyAggRow2>();
+var dest = new MemoryDestination<MyAggRow2>();
 
-    source.LinkTo<MyAggRow2>(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo<MyAggRow2>(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
+foreach (var row in dest.Data)
+    Console.WriteLine($"Sum:{row.AggValue}");
 
-    //Output
-    //Sum:10
-}
+//Output
+//Sum:10
 ```
 
 ## GroupColumn attribute
@@ -140,28 +176,25 @@ public class MyAggRow3
     public string Group { get; set; }
 }
 
-public void GroupedDataWithAttribute() {
-    var source = new MemorySource<DetailWithGroup>();
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
+var source = new MemorySource<DetailWithGroup>();
+source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
 
-    var agg = new Aggregation<DetailWithGroup, MyAggRow3>();
+var agg = new Aggregation<DetailWithGroup, MyAggRow3>();
 
-    var dest = new MemoryDestination<MyAggRow3>();
+var dest = new MemoryDestination<MyAggRow3>();
 
-    source.LinkTo<MyAggRow3>(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo<MyAggRow3>(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+foreach (var row in dest.Data)
+    Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
-}
-
+//Output
+//Sum for A:10
+//Sum for B:10
 ```
 
 ## GroupColumn attribute on dynamic input
@@ -169,52 +202,51 @@ public void GroupedDataWithAttribute() {
 This example show how to use set up grouping with the dynamic `ExpandoObject`. 
 
 ```C#
-public void GroupedDataWithAttributeOnExpando() {
-    var source = new MemorySource();
-    dynamic val1 = new ExpandoObject();
-    val1.Group = "A"; val1.DetailValue = 3;
-    source.DataAsList.Add(val1);
-    dynamic val2 = new ExpandoObject();
-    val2.Group = "A"; val2.DetailValue = 7;
-    source.DataAsList.Add(val2);
-    dynamic val3 = new ExpandoObject();
-    val3.Group = "B"; val3.DetailValue = 4;
-    source.DataAsList.Add(val3);
-    dynamic val4 = new ExpandoObject();
-    val4.Group = "B"; val4.DetailValue = 6;
-    source.DataAsList.Add(val4);
+var source = new MemorySource();
+dynamic val1 = new ExpandoObject();
+val1.Group = "A"; val1.DetailValue = 3;
+source.DataAsList.Add(val1);
+dynamic val2 = new ExpandoObject();
+val2.Group = "A"; val2.DetailValue = 7;
+source.DataAsList.Add(val2);
+dynamic val3 = new ExpandoObject();
+val3.Group = "B"; val3.DetailValue = 4;
+source.DataAsList.Add(val3);
+dynamic val4 = new ExpandoObject();
+val4.Group = "B"; val4.DetailValue = 6;
+source.DataAsList.Add(val4);
 
-    var agg = new Aggregation();
-    agg.AggregateColumns = new List<AggregateColumn>()
+var agg = new Aggregation();
+agg.AggregateColumns = new List<AggregateColumn>()
+{
+    new AggregateColumn()
     {
-        new AggregateColumn()
-        {
-            InputValuePropName = "DetailValue",
-            AggregatedValuePropName = "AggValue",
-            AggregationMethod = AggregationMethod.Sum
-        }
-    };
-    agg.GroupColumns = new List<GroupColumn>()
+        InputValuePropName = "DetailValue",
+        AggregatedValuePropName = "AggValue",
+        AggregationMethod = AggregationMethod.Sum
+    }
+};
+agg.GroupColumns = new List<GroupColumn>()
+{
+    new GroupColumn()
     {
-        new GroupColumn()
-        {
-            GroupPropNameInInput = "Group",
-            GroupPropNameInOutput = "Group"
-        }
-    };
+        GroupPropNameInInput = "Group",
+        GroupPropNameInOutput = "Group"
+    }
+};
 
-    var dest = new MemoryDestination();
+var dest = new MemoryDestination();
 
-    source.LinkTo(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (dynamic row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
-}
+//Output
+//Sum for A:10
+//Sum for B:10
+
 ```
 
 ## Custom grouping function
@@ -228,46 +260,43 @@ public class MyAggRow4
     public string Group { get; set; }
 }
 
-public void GroupedDataWithFunction() {
-    var source = new MemorySource<DetailWithGroup>();
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
+var source = new MemorySource<DetailWithGroup>();
+source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
+source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
 
-    var agg = new Aggregation<DetailWithGroup, MyAggRow4>();
-    agg.AggregationAction =
-        (detailValue, aggValue) =>
-            aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
+var agg = new Aggregation<DetailWithGroup, MyAggRow4>();
+agg.AggregationAction =
+    (detailValue, aggValue) =>
+        aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
 
-    agg.GroupingFunc =
-        detailValue => detailValue.Group;
+agg.GroupingFunc =
+    detailValue => detailValue.Group;
 
-    agg.StoreKeyAction =
-        (groupingObject, aggValue) => aggValue.Group = (string)groupingObject;
+agg.StoreKeyAction =
+    (groupingObject, aggValue) => aggValue.Group = (string)groupingObject;
 
-    var dest = new MemoryDestination<MyAggRow4>();
+var dest = new MemoryDestination<MyAggRow4>();
 
-    source.LinkTo<MyAggRow4>(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo<MyAggRow4>(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+foreach (var row in dest.Data)
+    Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
-}
+//Output
+//Sum for A:10
+//Sum for B:10
+
 ```
 
 ## Keep values in aggregation with group
 
-The following two examples were created to show how to keep a value that is not part of an aggregate or group column.
+The following example was  created to show how to keep a value that is not part of an aggregate or group column.
 In this example, we want to calculate the sum of the `Score` property - grouped by `ID_A`. But we also want to keep the `ID_B` for informational purposes.
-
-### Using first value aggregation method
-
-This example shows how to keep the first encountered value of `ID_B`.
+This example shows how to keep the first encountered value of `ID_B`. If you like to keep the last value instead, you can use the `AggregationMethod.LastValue` instead. 
+(There are also `FirstNotNullValue` and `LastNotNullValue` as alternatives)
 
 ```C#
 public class Source
@@ -287,35 +316,33 @@ public class Result
     public int Score { get; set; }
 }
 
-public void KeepValueByUsingAggregationFirstOrLast() {
-    var source = new MemorySource<Source>();
-    source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 1, Score = 10 });
-    source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 2, Score = 20 });
-    source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 3, Score = 30 });
-    source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 4, Score = 20 });
-    source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 5, Score = 10 });
-    source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 6, Score = 15 });
-    source.DataAsList.Add(new Source() { ID_A = 3, ID_B = 7, Score = 10 });
+var source = new MemorySource<Source>();
+source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 1, Score = 10 });
+source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 2, Score = 20 });
+source.DataAsList.Add(new Source() { ID_A = 1, ID_B = 3, Score = 30 });
+source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 4, Score = 20 });
+source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 5, Score = 10 });
+source.DataAsList.Add(new Source() { ID_A = 2, ID_B = 6, Score = 15 });
+source.DataAsList.Add(new Source() { ID_A = 3, ID_B = 7, Score = 10 });
 
-    var agg = new Aggregation<Source, Result>();
-    var dest = new MemoryDestination<Result>();
+var agg = new Aggregation<Source, Result>();
+var dest = new MemoryDestination<Result>();
 
-    source.LinkTo<Result>(agg).LinkTo(dest);
-    Network.Execute(source);
+source.LinkTo<Result>(agg).LinkTo(dest);
+Network.Execute(source);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine("ID_A:"+ row.ID_A + " - ID_B:" + row.ID_B + " - Score:" + row.Score);
+foreach (var row in dest.Data)
+    Console.WriteLine("ID_A:"+ row.ID_A + " - ID_B:" + row.ID_B + " - Score:" + row.Score);
 
-    /* Output */
-    //ID_A:1 ID_B:1 Score:60
-    //ID_A:2 ID_B:4 Score:45
-    //ID_A:3 ID_B:7 Score:10
-}
+/* Output */
+//ID_A:1 ID_B:1 Score:60
+//ID_A:2 ID_B:4 Score:45
+//ID_A:3 ID_B:7 Score:10
 ```
 
 ### Defining own group key object 
 
-This example shows how to create your own group key. This key object is then used in the internal dictionary of the Aggregation. Every time the aggregation encounters a new row, it will check if an object with the same key already exists in the internal dictionary - if yes, then the previous aggregated value is retrieved for this group. By overriding the `Equals` and `GetHashCode` methods we define our own matching condition. In this example, a new row matches with a previous row in the dictionary if the `ID_A` of both objects are equal. 
+This example shows how to create your own group key. It will produce the same result as the previous example, but the main focus is here to demonstrate how grouping can be influence by defining your own key object. This key object is used in the internal dictionary of the Aggregation. Every time the aggregation encounters a new row, it will check if an object with the same key already exists in the internal dictionary - if yes, then the previous aggregated value is retrieved for this group. By overriding the `Equals` and `GetHashCode` methods we define our own matching condition. In this example, a new row matches with a previous row in the dictionary if the `ID_A` of both objects are equal. 
 
 ```C#
 public class Source
@@ -363,6 +390,8 @@ public void KeepFirstValueByDefiningOwnGroupingKey() {
         //example for Max:
         //aggValue.Score = detailValue.Score > aggValue.Score ? detailValue.Score : aggValue.Score;
         aggValue.Score += detailValue.Score;
+        if (aggValue.ID_B == 0)
+                aggValue.ID_B = detailValue.ID_B;
     };
 
     agg.GroupingFunc = detailValue => new GroupBy() { ID_A = detailValue.ID_A, ID_B = detailValue.ID_B };
