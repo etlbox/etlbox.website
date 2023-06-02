@@ -325,39 +325,54 @@ Test8,0.8,8
 
 ## Utilizing your own stream
 
-All streaming connector support that you provide your own stream. The following example shows how to use your own file stream. 
+All streaming connector support that you provide your own stream. The following example shows how to use your own file stream to append data to an existing csv file.
 
 ```C#
-public class MyRow
+public class MyRowWithConfig
 {
+    [CsvHelper.Configuration.Attributes.Index(1)]
     public string Value1 { get; set; }
+    [CsvHelper.Configuration.Attributes.Index(2)]
     public decimal Value2 { get; set; }
+    [CsvHelper.Configuration.Attributes.Index(0)]
     public int Id { get; set; }
 }
 
 string destFile = @"res/Examples/OwnStream.csv";
+if (File.Exists(destFile)) File.Delete(destFile);
+string existingCsvContent = "Id,Value1,Value2" + Environment.NewLine
+    + "1,TestA,X" + Environment.NewLine
+    + "2,TestB,X" + Environment.NewLine;
+File.WriteAllText(destFile, existingCsvContent);
 
-var source = new MemorySource<MyRow>();
-source.Data = new List<MyRow>() {
-    new MyRow() { Id = 1, Value1="Test1"},
-    new MyRow() { Id = 2, Value1="Test2"},
-    new MyRow() { Id = 3, Value1="Test3"},
+var source = new MemorySource<MyRowWithConfig>();
+source.Data = new List<MyRowWithConfig>() {
+    new MyRowWithConfig() { Id = 3, Value1="Test3", Value2 = 5.5m },
+    new MyRowWithConfig() { Id = 4, Value1="Test4"},
 };
 
-FileStream fs = File.Create(destFile);
-CsvDestination<MyRow> dest = new CsvDestination<MyRow>();
+FileStream fileStream = new FileStream(destFile, FileMode.Append, FileAccess.Write);
+CsvDestination<MyRowWithConfig> dest = new CsvDestination<MyRowWithConfig>();
 dest.CreateStreamWriter = _ => {
-    return new StreamWriter(fs, Encoding.UTF8);
+    return new StreamWriter(fileStream, Encoding.UTF8);
 };
+dest.Configuration.HasHeaderRecord = false;
+
 source.LinkTo(dest);
 Network.Execute(source);
 
 PrintOutputFile(destFile);
 
 /*Output:
-Value1,Value2,Id
-Test1,0,1
-Test2,0,2
-Test3,0,3
+Content of file 'OwnStream.csv'
+---
+Id,Value1,Value2
+1,TestA,X
+2,TestB,X
+3,Test3,5.5
+4,Test4,0
+
+---
 */
+
 ```

@@ -337,7 +337,9 @@ public static void Main()
 }
 ```
 
-## Multiple attributes
+## Additional configuration 
+
+### Multiple attributes
 
 The AggregateColumn and GroupColumn can be applied to as many properties as needed. You can use different aggregation function for each AggregateColumn. If there are multiple grouping columns, the combination of all columns is used to create the grouping key (which means that if all columns match they are in the same group).
 
@@ -364,9 +366,21 @@ public class MyAggRow
 
 Instead of using attributes, you can also pass multiple aggregation or group columns to the `AggregateColumns` and `GroupColumns` properties.
 
-## Arrays and ExpandoObject
+### Aggregation condition 
 
-The Aggregation offers full support for ExpandoObject, which is also used when you use the default implementation. It will work either when you pass a list of AggregateColumns or GroupColumns, or if you define your AggregationActoin / GroupingFunc yourself.
+You can define an aggregation condition, which is evaluated for each incoming record before it is aggregated. If the condition return false, the record is ignored. 
+
+```C#
+var agg = new Aggregation<MyDetailValue, MyAggRow>();
+agg.AggregationCondition = (row, aggregationMethod) => {
+    if (row.DetailValue == 3 && aggregationMethod.AggregationMethod == AggregationMethod.Sum)
+        return false;
+    else
+        return true;
+};
+```
+
+### Support for arrays
 
 The Aggregation won't work with arrays. You could use the `ColumnRename` transformation to convert your array into an ExpandoObject, or the RowTransformation to convert an array into an object. 
 
