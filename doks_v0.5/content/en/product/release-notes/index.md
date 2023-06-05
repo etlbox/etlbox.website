@@ -5,6 +5,16 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 2.7.1
+
+#### Features:
+
+- Adapter for Azure Service Bus
+- Network.Execute now accepts IDataFlowComponent or derived interfaces as arguments
+- XmlSource: When using dynamic approach, attribute name prefix can now be configured (default is 'at_')
+- Fixed issue when using special path expressions with JsonPathConverter
+- DbMerge: Overwriting identity/auto increment columns now possible when AllowIdentityInsert is set to true
+
 ## Version 2.7.0
 
 #### Features:
