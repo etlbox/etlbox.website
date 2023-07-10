@@ -309,7 +309,7 @@ message         |String   |
 task_type       |String   |
 task_action     |String   |
 task_hash       |String   |
-source          |String   |(deprecated)
+source          |String   |(can be used for custom values)
 load_process_id |Int64    |Id of etlbox_loadprocess table
 
 This will work on all supported databases - the real data type will be reflected by the corresponding database specific type. E.g. Int64 is 
@@ -373,11 +373,11 @@ $@"INSERT
 
         string LogDate {
             get {
-                if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.SqlServer || ConnectionManager.ConnectionManagerType == ConnectionManagerType.MySql)
+                if (ConnectionManager.ConnectionType == ConnectionType.SqlServer || ConnectionManager.ConnectionType == ConnectionType.MySql)
                     return $"CAST( {PP}LogDate AS DATETIME )";
-                else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Postgres)
+                else if (ConnectionManager.ConnectionType == ConnectionType.Postgres)
                     return $"CAST( {PP}LogDate AS TIMESTAMP )";
-                else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Oracle)
+                else if (ConnectionManager.ConnectionType == ConnectionType.Oracle)
                     return $"TO_TIMESTAMP( {PP}LogDate, 'YYYY-MM-DD HH24:MI:SS.FF' )";
                 else
                     return $"{PP}LogDate";
@@ -386,18 +386,18 @@ $@"INSERT
 
         string VARCHAR {
             get {
-                if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Oracle)
+                if (ConnectionManager.ConnectionType == ConnectionType.Oracle)
                     return "VARCHAR2";
-                else if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.MySql)
+                else if (this.ConnectionManager.ConnectionType == ConnectionType.MySql)
                     return "CHAR";
                 else return "VARCHAR";
             }
         }
         string INT {
             get {
-                if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.MySql)
+                if (this.ConnectionManager.ConnectionType == ConnectionType.MySql)
                     return "UNSIGNED";
-                else if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.Db2)
+                else if (this.ConnectionManager.ConnectionType == ConnectionType.Db2)
                     return "VARCHAR(20)";
                 else
                     return "INT";
@@ -406,7 +406,7 @@ $@"INSERT
 
         string WHENLOADPROCESS {
             get {
-                if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.Db2)
+                if (this.ConnectionManager.ConnectionType == ConnectionType.Db2)
                     return $@"{PP}LoadProcessId IS NULL OR CAST({PP}LoadProcessId AS VARCHAR(20))= '' OR CAST({PP}LoadProcessId AS VARCHAR(20)) = '0'";
                 else
                     return $@"{PP}LoadProcessId IS NULL OR {PP}LoadProcessId = '' OR {PP}LoadProcessId = '0'";
@@ -415,9 +415,9 @@ $@"INSERT
 
         string FROMDUAL {
             get {
-                if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.Oracle)
+                if (this.ConnectionManager.ConnectionType == ConnectionType.Oracle)
                     return "FROM DUAL";
-                else if (this.ConnectionManager.ConnectionManagerType == ConnectionManagerType.Db2)
+                else if (this.ConnectionManager.ConnectionType == ConnectionType.Db2)
                     return "FROM SYSIBM.SYSDUMMY1";
                 else
                     return "";
@@ -446,17 +446,17 @@ $@"INSERT
             AddParameter(dbTarget, "LoadProcessId", @"${mdlc:item=loadProcessId}");
 
             dbTarget.CommandText = new NLog.Layouts.SimpleLayout(CommandText);
-            if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.SqlServer)
+            if (ConnectionManager.ConnectionType == ConnectionType.SqlServer)
                 dbTarget.DBProvider = "Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient";
-            else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Postgres)
+            else if (ConnectionManager.ConnectionType == ConnectionType.Postgres)
                 dbTarget.DBProvider = "Npgsql.NpgsqlConnection, Npgsql";
-            else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.MySql)
+            else if (ConnectionManager.ConnectionType == ConnectionType.MySql)
                 dbTarget.DBProvider = "MySql.Data.MySqlClient.MySqlConnection, MySql.Data";
-            else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.SQLite)
+            else if (ConnectionManager.ConnectionType == ConnectionType.SQLite)
                 dbTarget.DBProvider = "System.Data.SQLite.SQLiteConnection, System.Data.SQLite";
-            else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Oracle)
+            else if (ConnectionManager.ConnectionType == ConnectionType.Oracle)
                 dbTarget.DBProvider = "Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess";
-            else if (ConnectionManager.ConnectionManagerType == ConnectionManagerType.Db2)
+            else if (ConnectionManager.ConnectionType == ConnectionType.Db2)
                 dbTarget.DBProvider = "IBM.Data.DB2.Core.DB2Connection, IBM.Data.DB2.Core";
             else
                 throw new NotSupportedException("ETLBox: The used connection manager can not be used as database target for NLog!");

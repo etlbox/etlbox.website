@@ -67,7 +67,7 @@ Here is an example implementation:
 ```C
 public class MyDataTypeConverter : IDataTypeConverter
 {
-   public string TryConvertDbDataType(string dbSpecificTypeName, ConnectionManagerType connectionType)
+   public string TryConvertDbDataType(string dbSpecificTypeName, ConnectionType connectionType)
   {
      if (dbSpecificTypeName == "ABC")
        return "DATETIME";
