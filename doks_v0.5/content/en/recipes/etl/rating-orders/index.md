@@ -264,9 +264,7 @@ RatingValue in the column Rating.
 ## Starting the data flow
 
 No we are all set to start the data flow. We can execute dataflow synchronously or asynchrounously. 
-Thus, our csv source can to be started with either the `Execute()` or `ExecuteAsync()` method,
-and then we can use the `Wait()` or `Completion()` method to wait until all destinations 
-got all data and the completion message from the source.
+Thus, our csv source can to be started with either the `Execute()` or `ExecuteAsync()` methods.
 
 In our example it looks like this: 
 

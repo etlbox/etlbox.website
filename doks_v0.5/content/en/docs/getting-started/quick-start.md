@@ -214,7 +214,7 @@ Finally, the third step is to start the data flow. To simplify your programmer's
 Network.Execute(source);
 ```
 
-`Network.Execute(source)` is a shortcut for `Network.ExecuteAsync(source).Wait().` 
+`Network.Execute(source)` is a shortcut for `Network.ExecuteAsync(source).GetAwaiter().GetResult()` 
 
 {{< alert text="Regardless if you start the execution of the network with a synchronous or asynchronous call, the data flow itself will always execute asynchronously in the background using multiple tasks. This guarantees that while data is read from the source, it can be processed from the transformation and asynchronously written into the destinations." >}} 
 

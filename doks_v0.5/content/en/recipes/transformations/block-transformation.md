@@ -60,8 +60,7 @@ public void CalculateAverage() {
     var dest = new MemoryDestination<AveragePerDay>();
 
     source.LinkTo<AveragePerDay>(block).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Day:{row.Day} Totals:{row.TotalOrders} Average:{row.AveragePrice}");

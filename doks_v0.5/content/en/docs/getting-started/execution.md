@@ -75,22 +75,28 @@ Or you could run the execution on for both (not recommended)
 source1.Execute();
 source2.Execute();
 ```
-Running the execution on both is not recommended, as the second execution would simple do nothing. 
+
+
+{{< alert text="Running the execution on both is not recommended, as the second execution would simple do nothing. We recommend to start your network always using <code>Network.Execute(...)</code> or <code>Network.ExecuteAsync(...)</code>." >}}
+
+
 
 {{< alert text="For versions prior to 2.3.0, using the <code>Execute()</code> on all sources (and calling <code>Wait()</code> on all destinations) was the only option to run your  network. This is still supported, but we recommend to use the <code>Network.Execute()</code> method instead." >}}
 
 ### Using Post()
 
-If you want to get more control over the order your sources are sending data into the flow, you can the `Post()` call instead - it will *not* start your whole network, but only triggers one source to send data into the flow. `Post()` will block execution until the source component posted all data into connected components. If you choose this way of execution, you need to trigger all your sources manually and wait for the completion of all destination. 
+If you want to get more control over the order your sources are sending data into the flow, you can the `Post()` call instead - it will *not* start your whole network, but only triggers one source to send data into the flow. `Post()` will block execution until the source component posted all data into connected components. If you choose this way of execution, you need to trigger all your sources manually and wait for the completion of all destination, using the Completion task of each component. 
 
 ```C#
 source2.Post();
 source1.Post();
-dest1.Wait();
-dest2.Wait();
+dest1.Completion.GetAwaiter().GetResult();
+dest2.Completion.GetAwaiter().GetResult();
 ```
 
 This will force `source2` to send all data from its source table into the data flow. Execution will block until `source2` is done, and then it's the turn of `source1` to post all data rows. When `source1` has finished, we can wait at the destinations for the data flow to finish processing the data. 
+
+{{< alert text="This approach is not recommended, as you would also need to observe all other Completion tasks in your dataflow, e.g. for cancellation events. We recommend to start your network always using <code>Network.Execute(...)</code> or <code>Network.ExecuteAsync(...)</code>." >}}
 
 ## Asynchronous execution
 
@@ -115,8 +121,9 @@ row.LinkTo(dest2, row => row.Value >= 10);
 //Execute the whole data flow
 Task networkCompletion = Network.ExecuteAsync(source1, source2);
 
-//Now you can wait for the whole network
+//Now you can wait for the whole network, e.g. 
 networkCompletion.Wait();
+//or networkCompletion.GetAwaiter().GetResult();
 
 ```
 
@@ -126,7 +133,7 @@ Using the `Network.ExecuteAsync()` method will return a task that can be awaited
 await Network.ExecuteAsync(source1, source2);
 ```
 
-Like for the synchrounous execution, it is only necessary to pass one component of the network to the `ExecuteAsync` method. 
+Like for the synchronous execution, it is only necessary to pass one component of the network to the `ExecuteAsync` method. 
 
 ### Running networks in parallel
 

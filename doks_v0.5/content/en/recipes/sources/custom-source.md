@@ -39,7 +39,6 @@ var dest = new MemoryDestination<MyRow>();
 
 source.LinkTo(dest);
 
-source.Execute();
 Network.Execute(source);
 
 foreach (var row in dest.Data)

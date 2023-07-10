@@ -48,7 +48,7 @@ static Network CreateNetwork(string targetFileName) {
 
 Now we have basically two options to execute a network: `Execute` or `ExecuteAsync`. 
 
-The `Execute` method is a shortcut for calling wait on the returned Task from the ExecuteAsync method: `ExecuteAsync().Wait()` would be the equivalent of `Execute()`. 
+The `Execute` method is a shortcut for calling wait on the returned Task from the ExecuteAsync method: `ExecuteAsync().GetAwaiter().GetResult()` would be the equivalent of `Execute()`. 
 
 So we will only show examples here that use the `ExecuteAsync()` method. The `ExecuteAsync` method return a task object - this task will complete when all components in the network have finished. 
 

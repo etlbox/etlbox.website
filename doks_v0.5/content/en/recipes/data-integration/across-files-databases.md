@@ -49,10 +49,14 @@ Network.Execute(sourceCSV);
 ```
 
 In our demo we start the data flow with `Execute()` - this will read all data from the source 
-and post it into the dataflow.  While reading data, incoming batches will already be written into the destination. 
-With the `Wait()` method we wait for all data to be written into the target. The program 
-won't continue until the flow has finished (though most of the data processing will be done in a separate task).
-If you know how to deal with the Tasks Parallel library, you can use `ExecuteAsync()` and `Completion()` instead.
+and post it into the dataflow.  While reading data, incoming batches will already be written into the destination. The program won't continue until the flow has finished (though most of the data processing will be done in a separate task).
+
+If you know how to deal with the Tasks Parallel library, you can use `ExecuteAsync()` and instead.
+Then you could start your network with
+
+```C#
+await Network.ExecuteAsync(sourceCSV); 
+```
 
 This example only works if you have a csv file named `NameList.csv` copied into your output directory. It should
 look like this:
