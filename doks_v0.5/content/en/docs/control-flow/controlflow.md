@@ -242,8 +242,8 @@ which allows you to do almost everything on the database, without the "overhead"
 SqlTask always expects a descriptive name when you use it - this name is used for logging purposes. 
 
 ```C#
-SqlTask.ExecuteNonQuery(connectionManager, "Insert data",
-   $@"insert into demo.table1 (value) select * from (values ('Text'), ('More text')) as data(v)");
+SqlTask.ExecuteNonQuery(connectionManager, 
+    $@"insert into demo.table1 (value) select * from (values ('Text'), ('More text')) as data(v)");
 ```
 
 ExecuteNonQuery will just execute the sql code without reading any results from the database. 
@@ -258,7 +258,7 @@ var parameter = new List<QueryParameter>
     new QueryParameter("value1", "INT", 1),
     new QueryParameter("value2", "NVARCHAR(100)", "Test1")
 };
-SqlTask.ExecuteNonQuery(connectionManager, "Test insert with parameter",
+SqlTask.ExecuteNonQuery(connectionManager, 
     $"INSERT INTO ParameterTest VALUES (@value1, @value2)", parameter);
 ```
 
@@ -270,11 +270,11 @@ If you result set contains only one row with one column, you can use the `Execut
 
 ```C#
 //without type conversion
-object result = SqlTask.ExecuteScalar(connectionManager, "Execute scalar",
+object result = SqlTask.ExecuteScalar(connectionManager, 
     $@"SELECT 'Hallo Welt' AS ScalarResult");
 
 //with type conversion
-double? result = SqlTask.ExecuteScalar<double>(connectionManager,"Execute scalar with data type",
+double? result = SqlTask.ExecuteScalar<double>(connectionManager,
     $@"SELECT CAST(1.343 AS NUMERIC(4,3)) AS ScalarResult"));
 ```
 

@@ -261,7 +261,7 @@ var conn = new SqlConnectionManager
   ("Server=.;Trusted_Connection=true;Initial Catalog=ETLBox");
 
 //Execute some Sql
-SqlTask.ExecuteNonQuery(conn, "Do some sql",$@"EXEC myProc");
+SqlTask.ExecuteNonQuery(conn, $@"EXEC myProc");
 
 //Count rows
 int count = RowCountTask.Count(conn, "demo.table1").Value;

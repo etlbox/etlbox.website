@@ -220,7 +220,7 @@ another log entry with action type 'END'
 
 ```C#
 LogSection.Execute("some custom code", () => { 
-    SqlTask.ExecuteNonQuery("some sql", "Select 1 as test");
+    SqlTask.ExecuteNonQuery("Select 1 as test");
 });
 ```
 
