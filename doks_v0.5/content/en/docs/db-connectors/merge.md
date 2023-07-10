@@ -80,7 +80,7 @@ with the attribute `CompareColumn`. Otherwise all non-id columns are used for co
 3. Optional: You can flag the properties that you want to have updated in the target with the `UpdateColumn` attribute. If this is omitted,
 all non-Id columns are updated. 
 
-If you use an ExpandoObject, you can't use attributes. Instead you can set the `MergeProperties.IdColumns`, `MergeProperties.CompareColumns` and optionally the `MergeProperties.UpdateColumns` directly. 
+If you use an ExpandoObject, you can't use attributes. Instead you can set the `IdColumns`, `CompareColumns` and optionally the `UpdateColumns` directly. 
 
 Let's start with a simple object, that has a property that should contain the key column (the id) and one property
 for holding a value:
@@ -366,7 +366,7 @@ Overwriting the Equals method and using the IdColumn attribute is optional. If n
 is passed, then you would need to use the `UseTruncateMethod`.
 
 If you use the ExpandoObject, the properties ChangeDate and ChangeAction are appended automatically.
-You will need to pass at least one IdColumn to the `MergeProperties.IdColumns` when using the dynamic approach.
+You will need to pass at least one IdColumn to the `IdColumns` when using the dynamic approach.
 
 ### Duplicate detection
 
@@ -386,15 +386,15 @@ merge.FilterDuplicates = true;
 The above examples for the `DbMerge` make use of strongly typed objects (POCOs). The DbMerge also supports the usage of the dynamic `ExpandoObject`. 
 When using the `ExandoObject`, the properties `ChangeAction` and `ChangeDate` are added automatically to the object.
 
-You can set the MergeProperties using the `MergeProperties` object, which contains properties for `IdColumns`, `ComareColumns` and `UpdateColumns`. 
+You can set the corresponding column types using the `IdColumns`, `ComareColumns` and `UpdateColumns` properties.
 
 ```C#
 DbMerge dest = new DbMerge(SqlConnection, "DBMergeDynamicDeltaDestination") {
     MergeMode = MergeMode.Delta
 };
-dest.MergeProperties.IdColumns.Add(new IdColumn() { IdPropertyName = "Id" });
-dest.MergeProperties.CompareColumns.Add(new CompareColumn() { ComparePropertyName = "CompareCol" });
-dest.MergeProperties.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteCol", DeleteOnMatchValue = true });
+dest.IdColumns.Add(new IdColumn() { IdPropertyName = "Id" });
+dest.CompareColumns.Add(new CompareColumn() { ComparePropertyName = "CompareCol" });
+dest.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteCol", DeleteOnMatchValue = true });
 ```
 
 ## Performance considerations
