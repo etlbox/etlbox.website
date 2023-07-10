@@ -63,18 +63,6 @@ Alernatively, you can downgrade the package for the Functiosn Sdk: `<PackageRefe
 Add a class "DemoFunction.cs" to your project:
 
 ```C#
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using System.Net.Http;
-using ETLBox.DataFlow.Connectors;
-using ETLBox.DataFlow;
-using System.Net;
-
 namespace AzureFunctionApp
 {
     public static class DemoFunction

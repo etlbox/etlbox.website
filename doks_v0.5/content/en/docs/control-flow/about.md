@@ -70,10 +70,10 @@ int count = RowCountTask.Count(connectionManager, "demotable");
 ```
 
 Optionally, you can set up a default connection that is used every time you don't provide a connection manager. 
-Simple set the property `DefaultDbConnection` on the static `ControlFlow` class.
+Simple set the property `DefaultDbConnection` on the static `Settings` class.
 
 ```C#
-ControlFlow.DefaultDbConnection = new SqlConnectionManager(new SqlonnectionString("Data Source=.; Database=Sample; Integrated Security=SSPI""));
+Settings.DefaultDbConnection = new SqlConnectionManager(new SqlonnectionString("Data Source=.; Database=Sample; Integrated Security=SSPI""));
 ```
 
 Now a RowCount is as simple as this:
@@ -139,11 +139,11 @@ MySqlConnectionManager connectionManager = new MySqlConnectionManager("Server=10
 
 Every component or task related to a database operation needs to have a connection managers set in order
 to connect to the right database. Sometimes it can be cumbersome to pass the same connection manager over and over
-again. To avoid this, there is a static `ControlFlow` class that contains the property `DefaultDbConnection`.
+again. To avoid this, there is a static `Settings` class that contains the property `DefaultDbConnection`.
 If you define a connection manager here, this will always be used as a fallback value if no other connection manager property was defined.
 
 ```
-ControlFlow.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
+Settings.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
 //Now you can just create a DbSource like this
 var source = new DbSource("SourceTable");
 ```

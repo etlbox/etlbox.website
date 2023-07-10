@@ -15,7 +15,7 @@ toc: true
 
 There are several connectors available in ETLBox that allow you to connect to a database, a flat file, a web service, a C# collection or any other data source or destination that you like. The connector normally has a Source and a Destination component. The source is used to retrieve data, and the destination used to write or store your data. They are always used at the beginning or the end of data flow (though of course every flow can have multiple sources and destinations.) In between you have transformations that modify your data.
 
-Transformations are the transform part of an ETL pipeline. They allow you to clean, standardize, de-duplicate or manipulate your data. There are two main diferentiation within transformations: Non-blocking and blocking transformation. 
+Transformations are the transform part of an ETL pipeline. They allow you to clean, standardize, de-duplicate or manipulate your data. There are two main differentiations of transformations: Non-blocking and blocking transformation. 
 
 #### Non-blocking transformations
 
@@ -38,15 +38,12 @@ Sometime components have more than buffer. E.g. the Multicast has one input buff
 
 ## Static configuration classes
 
-The static class `DataFlow` allows to set default parameters valid for all components in the data flow. The values set in this class will serve as the default value. Each value can be overwritten in a dataflow component seperately.
+The static class `Settings` allows to set default parameters valid for all components and tasks. The values set in this class will serve as the default value. Each value can be overwritten in a dataflow component or control flow task separately.
 
 - `MaxBufferSize`:  The default maximum size for all buffers in the dataflow.
 - `LoggingThresholdRows`: To avoid getting log message for every message, by default only log message are produced when 1000 rows are processed. Set this property to decrease or increase this value for a data flow components. 
-
-The static class `ControlFlow` allows to set default parameters valid for all control flow tasks and *all data flow components*.
-
 - `DefaultDbConnection`:  Store your default database connection manager here. This connection will then be used by all tasks or all data flow components that need a connection manager. 
-
+- `LogInstance`: An `ILogger` instance which can be used for all log output produced by ETLBox
 
 ## Shared properties
 

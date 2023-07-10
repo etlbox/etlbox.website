@@ -105,7 +105,7 @@ a Sql Server (and expects a sql server connection string). There are also other 
 (e.g. `SQLiteConnectionManager` for SQLite, `PostgresConnectionManager` for Postgres or `MySqlConnectionManager`
 for MySql).
 
-{{< alert text="If you don't want to pass the connection manager object over and over again to your DataFlow or ControlFlow objects, you can store a default connection in the static property <code>ControlFlow.DefaultDbConnection</code>" >}}
+{{< alert text="If you don't want to pass the connection manager object over and over again to your DataFlow or ControlFlow objects, you can store a default connection in the static property <code>Settings.DefaultDbConnection</code>" >}}
 
 No we need a database destination.
 

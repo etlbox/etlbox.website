@@ -43,7 +43,7 @@ we want a `customer` table that hold a customer key for our customer names.
 We could do this manually, or we can use the following ControlFlow Tasks to create these tables:
 
 ```C#
-ControlFlow.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Initial Catalog=demo;Integrated Security=false;User=sa;password=YourStrong@Passw0rd");
+Settings.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Initial Catalog=demo;Integrated Security=false;User=sa;password=YourStrong@Passw0rd");
 
 TableDefinition OrderDataTableDef = new TableDefinition("orders",
     new List<TableColumn>() {
