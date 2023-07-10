@@ -307,7 +307,7 @@ using var loggerFactory = LoggerFactory.Create(builder => {
         .SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace)
         .AddNLog("nlog.config");
 });
-ETLBox.Logging.Logging.LogInstance = loggerFactory.CreateLogger("Default");
+ETLBox.Settings.LogInstance = loggerFactory.CreateLogger("Default");
 ```
 
 With this configuration, you should now see log output printed on your console!

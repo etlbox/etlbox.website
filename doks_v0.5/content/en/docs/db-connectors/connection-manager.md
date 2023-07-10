@@ -84,7 +84,7 @@ again. To avoid this, there is a static `ControlFlow` class that contains the pr
 If you define a connection manager here, this will always be used as a fallback value if no other connection manager property was defined.
 
 ```
-ControlFlow.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
+Settings.DefaultDbConnection = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
 //Now you can just create a DbSource like this
 var source = new DbSource("SourceTable");
 ```

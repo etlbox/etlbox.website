@@ -73,7 +73,7 @@ First of all we can connect the ETLBox ILogger to the Azure log.
 public static async Task Run(
     [TimerTrigger("0 */1 * * * *")]TimerInfo myTimer, ILogger log) 
 {
-    Logging.LogInstance = log;        
+    Settings.LogInstance = log;        
 }
 ```
 

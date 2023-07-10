@@ -74,7 +74,7 @@ Your project configuration file .csproj should contain something like this:
 
 ### Create log instance
 
-Now we need to create a logger instance, and then assign it to the static property `Logging.LogInstance`. 
+Now we need to create a logger instance, and then assign it to the static property `Settings.LogInstance`. 
 
 There are two different ways to create a log instance that implements ILogger: Either we can use the `LoggerFactory`, or we use an approach that uses Dependency injection. 
 
@@ -88,17 +88,17 @@ using var loggerFactory = LoggerFactory.Create(builder => {
         .SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace)
         .AddNLog("nlog.config");
 });
-ETLBox.Logging.Logging.LogInstance = loggerFactory.CreateLogger("Default");
+ETLBox.Settings.LogInstance = loggerFactory.CreateLogger("Default");
 ```
 
-Depending on your project type, you may already have an instance of an ILogger object injected in your code. Then you simply need to assign this instance to `Logging.LogInstance`, and you are ready to go. 
+Depending on your project type, you may already have an instance of an ILogger object injected in your code. Then you simply need to assign this instance to `Settings.LogInstance`, and you are ready to go. 
 
 
 ### Debugging logging issues
 
 NLog normally behaves very "fault-tolerant". By default, if something is not setup properly or does not work
 when NLog tries to log, it just "stops" working without throwing an exception or stopping the execution.
-This behavior is very desirable in a production environment, but hard to debug. 
+This behaviour is very desirable in a production environment, but hard to debug. 
 
 If you need to debug Nlog, you can change the nlog root-element of the nlog.config  into:
 
@@ -322,11 +322,6 @@ This happens to the configuration that Nlog keeps after reading the nlog.config 
 Currently, ETLBox does not provide this helper class. You need to add it manually to your code:
 
 ```C#
-using ETLBox.Connection;
-using ETLBox.Helper;
-using NLog.Targets;
-using System;
-
 namespace ETLBoxTests.Logging
 {
     /// <summary>

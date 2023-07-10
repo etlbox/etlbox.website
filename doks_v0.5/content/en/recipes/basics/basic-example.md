@@ -102,7 +102,7 @@ Then Add the following lines as nlog.config to your project root. Make sure it i
 </nlog>
 ```
 
-Now we need to create a logger instance, and then assign it to the static property `Logging.LogInstance`. Here is the code to create a NLog instance using the `LoggerFactory`:
+Now we need to create a logger instance, and then assign it to the static property `Settings.LogInstance`. Here is the code to create a NLog instance using the `LoggerFactory`:
 
 ```C#
 using var loggerFactory = LoggerFactory.Create(builder => {
@@ -112,7 +112,7 @@ using var loggerFactory = LoggerFactory.Create(builder => {
         .SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace)
         .AddNLog("nlog.config");
 });
-ETLBox.Logging.Logging.LogInstance = loggerFactory.CreateLogger("Default");
+ETLBox.Settings.LogInstance = loggerFactory.CreateLogger("Default");
 ```
 
 ### Running the project

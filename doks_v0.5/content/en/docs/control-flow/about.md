@@ -19,7 +19,7 @@ Control Flow task can be split in general tasks and logging tasks. General tasks
 or to run some particular predefined statements that will execute on any database. Logging tasks are useful helper when you need
 to create some tables for logging or to retrieve the whole log as Json. 
 
-Control Flow Tasks reside in the `ETLBox.ControlFlow.Tasks` namespace - tasks for logging in the `ETLBox.Logging` namespace.
+Control Flow Tasks reside in the `ETLBox.ControlFlow` namespace - tasks for logging in the `ETLBox.Logging` namespace.
 
 ## General idea behind Control Flow Task
 

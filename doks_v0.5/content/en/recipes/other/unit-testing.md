@@ -13,16 +13,6 @@ toc: true
 ## Simple unit tests with xunit
 
 ```C#
-using ETLBox.DataFlow;
-using ETLBox.DataFlow.Connectors;
-using ETLBox.DataFlow.Transformations;
-using ETLBox.DataFlowTests.Demo;
-using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using Xunit;
-
 namespace ETLBoxTests.DataFlowTests
 {
     [Collection("DataFlow")]
