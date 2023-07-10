@@ -118,7 +118,7 @@ Now let's create a strongly typed object, also known as POCO (Plain old componen
 ```C#
 public class OrderRow
   {
-      [ColumnMap("Id")]
+      [DbColumnMap("Id")]
       public long OrderNumber { get; set; }
       public int CustomerId { get; set; }
       public string Description { get; set; }
@@ -127,7 +127,7 @@ public class OrderRow
   }
 ```
 
-You may have noticed that the Destination table doesn't have a column `OrderNumber`, but instead the `Id` column. By default, ETLBox will try to match the column names with your property names. The ColumnMap attribute will enable the right mapping between the property `OrderNumber` in our input data and the column `Id` in our destination table. 
+You may have noticed that the Destination table doesn't have a column `OrderNumber`, but instead the `Id` column. By default, ETLBox will try to match the column names with your property names. The DbColumnMap attribute will enable the right mapping between the property `OrderNumber` in our input data and the column `Id` in our destination table. 
 
 Lastly, we will need a customer csv file that contains a mapping between a customer id and a customer name.
 Our file `customer.csv` contains the following data:

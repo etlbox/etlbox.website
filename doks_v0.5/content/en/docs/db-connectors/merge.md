@@ -300,20 +300,20 @@ DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTabl
 merge.UseTruncateMethod = true;
 ```
 
-### ColumnMap attribute
+### DbColumnMap attribute
 
-If the columns have different names than our property, we need to add the `ColumnMap` attribute to have them
+If the columns have different names than our property, we need to add the `DbColumnMap` attribute to have them
 mapped correctly. If the columns would be named Col1 for the Key and Col2 for the Value, our object would look like this:
 
 ```C#
 public class MyMergeRow : MergeableRow
 {
     [IdColumn]
-    [ColumnMap("Col1")]
+    [DbColumnMap("Col1")]
     public int Key { get; set; }
 
     [CompareColumn]
-    [ColumnMap("Col1")]
+    [DbColumnMap("Col1")]
     public string Value { get; set; }
 }
 ```

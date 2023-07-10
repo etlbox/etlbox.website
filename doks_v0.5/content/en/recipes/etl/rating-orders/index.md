@@ -106,7 +106,7 @@ public class Rating
     [AggregateColumn(nameof(Order.Amount), AggregationMethod.Sum)]
     public decimal TotalAmount { get; set; }
 
-    [ColumnMap("Rating")]
+    [DbColumnMap("Rating")]
     public string RatingValue => TotalAmount > 50 ? "A" : "F";
 }
 ```
@@ -114,9 +114,9 @@ public class Rating
 Please note that there are attributes above the properties. The attributes MatchColumn/RetrieveColumn are used for the LookupTransformation and 
 GroupColumn/AggregationColumn for the Aggregation. They will be explained later. 
 
-The `ColumnMap` attribute above the property `RatingValue` will map the table column `Rating` in the `customer_rating` table with
+The `DbColumnMap` attribute above the property `RatingValue` will map the table column `Rating` in the `customer_rating` table with
 corresponding property "RatingValue". Normally, ETLBox maps columns in source or destinations with properties by matching names. So to
-make things work by default, the property could have been called "Rating" - but by adding the `ColumnMap` attribute, we can define a different
+make things work by default, the property could have been called "Rating" - but by adding the `DbColumnMap` attribute, we can define a different
 name for the property and let it match with the column "Rating" in the table. 
 
 
@@ -235,7 +235,7 @@ public class Rating
     [AggregateColumn(nameof(Order.Amount), AggregationMethod.Sum)]
     public decimal TotalAmount { get; set; }
 
-    [ColumnMap("Rating")]
+    [DbColumnMap("Rating")]
     public string RatingValue => TotalAmount > 50 ? "A" : "F";
 }
 ```
@@ -258,7 +258,7 @@ DbDestination<Rating> destRating = new DbDestination<Rating>("customer_rating");
 aggregation.LinkTo(destRating);
 ```
 
-The table customer_rating has a column Rating. The attribute `[ColumnMap("Rating")]` tells the DbDestination to store the data from the property
+The table customer_rating has a column Rating. The attribute `[DbColumnMap("Rating")]` tells the DbDestination to store the data from the property
 RatingValue in the column Rating. 
 
 ## Starting the data flow

@@ -20,7 +20,7 @@ Most sources provide a column name for every data column. E.g., in a Csv file yo
 The idea is that you define an object in C# where the name of the columns in the source match with the property names in your object. At best also the data type of the your source data would match with the data type in your object. 
 
 When a source reads data, it will try to map the column names from the source to the property names in your data object. E.g. a column named `Value1` 
-would be stored in the property with the same name. Optionally, you can add some mapping logic to your. For a database source, you could use the `ColumnMap` attribute, which defines which column is mapped to which property. If there is no matching property at, the column will be ignored.
+would be stored in the property with the same name. Optionally, you can add some mapping logic to your. For a database source, you could use the `DbColumnMap` attribute, which defines which column is mapped to which property. If there is no matching property at, the column will be ignored.
 
 ### Example mapping
 
@@ -33,7 +33,7 @@ SqlTask.ExecuteNonQuery(@"CREATE TABLE demotable (
 
 public class MySimpleRow {
     public int Value1 { get; set; }
-    [ColumnMap("Value2")]
+    [DbColumnMap("Value2")]
     public string Col2 { get; set; }
 }
 
@@ -41,7 +41,7 @@ DbSource<MySimpleRow> source = new DbSource<MySimpleRow>("demotable");
 ```
 The DbSource is used as a generic class - it is created using the type `MySimpleRow`. In this example, `MySimpleRow` is our *POCO*.
 
-The table `demotable` has 2 columns: `Value1` with an `INT` data type and `Value2` with a `VARCHAR` data type. The *POCO* `MySimpleRow` has two properties: `Value1` and `Value2`. `Value2` comes with a `ColumnMap("Value2")` attribute. When the data flow is executed and data is loaded from the source, the property `Value1` is automatically mapped to the table column `Value1` because of their matching names. The table column `Value2` is mapped to the property `Col2` because of the definition of the ColumnMap attribute. 
+The table `demotable` has 2 columns: `Value1` with an `INT` data type and `Value2` with a `VARCHAR` data type. The *POCO* `MySimpleRow` has two properties: `Value1` and `Value2`. `Value2` comes with a `DbColumnMap("Value2")` attribute. When the data flow is executed and data is loaded from the source, the property `Value1` is automatically mapped to the table column `Value1` because of their matching names. The table column `Value2` is mapped to the property `Col2` because of the definition of the DbColumnMap attribute. 
 
 {{< alert text="The ColumMap attribute is only valid for the <code>DbSource</code>, <code>DbDestination</code> and <code>DbMerge</code>. Other sources can use different mapping methods." >}}
 

@@ -62,18 +62,18 @@ Received - Id 3 (Value1: Test3 Value2: 1.3)
   */
 ```
 
-### Using ColumnMap attributes
+### Using DbColumnMap attributes
 
-The following example demonstrates how the `ColumnMap` attribute can be used to map database column with different name to properties. 
+The following example demonstrates how the `DbColumnMap` attribute can be used to map database column with different name to properties. 
 
 ```C#
 public class MyRowWithCM
 {
-    [ColumnMap("valuecol1")]
+    [DbColumnMap("valuecol1")]
     public string Value1 { get; set; }
-    [ColumnMap(IgnoreColumn = true)]
+    [DbColumnMap(IgnoreColumn = true)]
     public double? Value2 { get; set; }
-    [ColumnMap("idcol")]
+    [DbColumnMap("idcol")]
     public int Id { get; set; }
 }
 
@@ -136,8 +136,8 @@ var source = new DbSource(connMan, "ExampleReadDynamic");
 var dest = new MemoryDestination();
 
 source.ColumnMapping = new[] {
-    new ColumnMap(){ PropertyName = "Id", DbColumnName = "idcol"},
-    new ColumnMap(){ PropertyName = "valuecol1", IgnoreColumn = true},
+    new DbColumnMap(){ PropertyName = "Id", DbColumnName = "idcol"},
+    new DbColumnMap(){ PropertyName = "valuecol1", IgnoreColumn = true},
 };
 
 source.LinkTo(dest);

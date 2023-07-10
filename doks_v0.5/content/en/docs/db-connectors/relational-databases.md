@@ -190,7 +190,7 @@ dest.AllowIdentityInsert = true;
 ## Column Mapping 
 
 Of course the property names in the object and the column names can differ - ETLBox will only load columns from a source where it can find a matching property with the same name. 
-If the data type is different, ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property. 
+If the data type is different, ETLBox will try to automatically convert the data. If the names are different, you can use the attribute DbColumnMap to define the matching columns name for a property. 
 
 Let's reconsider our example at the beginning.  We create a table like this:
 
@@ -201,11 +201,11 @@ CREATE TABLE SourceTable (
 )
 ```
 
-Now we could define our POCO using the `ColumnMap` attribute. In this example, we replace the property Id with the property Key. In order to still be able to read data from the Id column, we add the ColumnMap attribute above it. Please note that the data type was changed to string as well - ETLBox will automatically try to convert the integer values into a string if data types are not matching. 
+Now we could define our POCO using the `DbColumnMap` attribute. In this example, we replace the property Id with the property Key. In order to still be able to read data from the Id column, we add the DbColumnMap attribute above it. Please note that the data type was changed to string as well - ETLBox will automatically try to convert the integer values into a string if data types are not matching. 
 
 ```C#
 public class MyRow {
-    [ColumnMap("Id")]
+    [DbColumnMap("Id")]
     public string Number { get; set;}
     public string Value { get; set;}
 }
@@ -227,8 +227,8 @@ If you use the default implementation of DbSource/DbDestination, then the Expano
 var source = new DbSource(connectionManager, "TableName");
 source.ColumnMapping = new[]
 {
-    new ColumnMap() { DbColumnName = "Id", PropertyName = "Number"},
-    new ColumnMap() { DbColumnName = "Col2", PropertyName = "Text"}
+    new DbColumnMap() { DbColumnName = "Id", PropertyName = "Number"},
+    new DbColumnMap() { DbColumnName = "Col2", PropertyName = "Text"}
 };
 ```
 

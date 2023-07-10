@@ -81,18 +81,18 @@ Id:5, Value1:Test3, Value2:1.3
 */
 ```
 
-### Insert with ColumnMap
+### Insert with DbColumnMap
 
-If the column names in your destination differ from your property names, you can use the `ColumnMap` attribute to match them. Alternatively, if you don't want to use attribute, you can pass a collection of `ColumnMap` objects to the `ColumnMapping` property of the `DbDestination`. 
+If the column names in your destination differ from your property names, you can use the `DbColumnMap` attribute to match them. Alternatively, if you don't want to use attribute, you can pass a collection of `DbColumnMap` objects to the `ColumnMapping` property of the `DbDestination`. 
 
 ```C#
  public class MyRowWithCM
 {
-    [ColumnMap("valuecol1")]
+    [DbColumnMap("valuecol1")]
     public string Value1 { get; set; }
-    [ColumnMap(IgnoreColumn = true)]
+    [DbColumnMap(IgnoreColumn = true)]
     public double? Value2 { get; set; }
-    [ColumnMap("idcol")]
+    [DbColumnMap("idcol")]
     public int Id { get; set; }
 }
 
@@ -376,8 +376,8 @@ var connMan = new SqlConnectionManager(ConnectionString);
 CreateTableDifferentColNames(connMan, "ExampleInsertColumnConverters");
 var dest = new DbDestination(connMan, "ExampleInsertColumnConverters");
 dest.ColumnMapping = new[] {
-    new ColumnMap() { DbColumnName = "idcol", PropertyName ="Id"},
-    new ColumnMap() { DbColumnName = "valuecol1", PropertyName ="Value1"}
+    new DbColumnMap() { DbColumnName = "idcol", PropertyName ="Id"},
+    new DbColumnMap() { DbColumnName = "valuecol1", PropertyName ="Value1"}
 };
 dest.ColumnConverters = new[] {
     new ColumnConverter() {

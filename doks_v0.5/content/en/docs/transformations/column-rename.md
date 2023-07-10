@@ -14,7 +14,7 @@ toc: true
 
 ## Overview
 
-`ColumnRename` allows you to rename the column or properties names of your ingoing data.  You can provide a column mapping with the old and the new name for each column. The mapping can also be automatically retrieved from existing ColumnMap attributes. This transformation works with `object`, `ExpandoObject` and `array` as input data type. It will always output an `ExpandoObject` with the new mapped property names.    
+`ColumnRename` allows you to rename the column or properties names of your ingoing data.  You can provide a column mapping with the old and the new name for each column. The mapping can also be automatically retrieved from existing DbColumnMap attributes. This transformation works with `object`, `ExpandoObject` and `array` as input data type. It will always output an `ExpandoObject` with the new mapped property names.    
 
 If you have an array as input type, instead of providing the old name you need to enter the array index and the new name. 
 
