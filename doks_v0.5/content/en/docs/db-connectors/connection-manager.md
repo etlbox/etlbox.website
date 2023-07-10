@@ -152,11 +152,11 @@ var cols = new List<TableColumn>() {
 _sourcedef = new TableDefinition("TestTable", cols);
 DbSource<MySimpleRow> source = new DbSource<MySimpleRow>(conn)
  {
-     SourceTableDefinition = _sourcedef
+     TableDefinition = _sourcedef
 };
 ```
 
-Same for DbDestination - the property name is `DestinationTableDefinition` there. 
+Same for DbDestination - the property name is also `TableDefinition` there. 
 
 
 ## Connection management

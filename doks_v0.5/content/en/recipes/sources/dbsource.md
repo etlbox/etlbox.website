@@ -235,7 +235,7 @@ var source = new DbSource<MyRow>(connMan);
 
 //When providing your own TableDefinition, the provided column names (in the exact same order)
 //and their derived .NET datatype will always be used, regardless of the columns in the actual table
-source.SourceTableDefinition = new TableDefinition("ExampleReadTableDef",
+source.TableDefinition = new TableDefinition("ExampleReadTableDef",
     new List<TableColumn>() {
         new TableColumn() { Name = "Id", DataType ="BIGINT"},
         new TableColumn() { Name = "Value1", DataType ="VARCHAR(200)"},

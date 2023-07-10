@@ -287,7 +287,7 @@ var TableDefinition = new TableDefinition("tableName"
 });
 
 var DbSource<type> = new DbSource<type>() {  
-  SourceTableDefinition = TableDefinition
+  TableDefinition = TableDefinition
 }
 ```
 
