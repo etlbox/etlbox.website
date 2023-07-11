@@ -543,7 +543,7 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2">LookupTransformation</a>&lt;TInput, TSource&gt;.<a class="xref" href="/api/   etlbox.dataflow.lookuptransformation-2/partialdbcachesettings">PartialDbCacheSettings</a></td>
+        <td><a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2">LookupTransformation</a>&lt;TInput, TSource&gt;.<a class="xref" href="/api/etlbox.dataflow.lookuptransformation-2/partialdbcachesettings">PartialDbCacheSettings</a></td>
         <td></td>
       </tr>
     </tbody>

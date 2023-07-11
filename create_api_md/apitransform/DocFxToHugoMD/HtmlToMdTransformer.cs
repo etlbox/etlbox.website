@@ -131,7 +131,7 @@ namespace DocFxToHugoMD
             //else {
             foreach (var kvp in ManualLinkMapping) {
                 if (line.Contains(kvp.Key))
-                    line = line.Replace(kvp.Key, "/api/" + kvp.Value);
+                    line = line.Replace(kvp.Key, "/api/" + kvp.Value.Trim());
             }
             MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
             //Previous regex, that worked with NS with one or two dots (but not with zero dots)

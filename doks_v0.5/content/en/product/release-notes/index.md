@@ -9,6 +9,7 @@ draft: false
 
 #### Features:
 
+- Updating package references to current version, Improving support for .NET 7 and .NET 6
 - Using MySqlConnector (instead of MySql.Data connector) when connecting to MariaDb
 - Adding MariaDbOdbcConnector which allows Odbc connections to MariaDb
 - New connector: Snowflake
@@ -37,7 +38,6 @@ draft: false
 - \[BREAKING\] Renamed Attribute \[ColumnMap\] to \[DbColumnMap\]
 - \[BREAKING\] Renamed DbSource. SourceTableDefinition -> TableDefinition and DbDestination.DestinationTableDefinition to TableDefinition
 - \[BREAKING\] DbMerge.MergeProperties: The properties (IdColumns, UpdateColumns, CompareColumns, DeleteColumns) are now direct properties of DbMerge
-- Updating package references to current version, Improving support for .NET 7 and .NET 6
 - \[BREAKING\] Renamed enum ConnectionManagerType to ConnectionType, Property IConnectionManager.ConnectionManagerType to ConnectionType
 
 ### Bug
