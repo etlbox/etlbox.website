@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10283
+weight: 10220
 toc: false
 ---
 
@@ -176,8 +176,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    [JsonIgnore]
-public LogHierarchyEntry Parent { get; set; }
+    public LogHierarchyEntry Parent { get; set; }
 ```
 
 {{< rawhtml >}}

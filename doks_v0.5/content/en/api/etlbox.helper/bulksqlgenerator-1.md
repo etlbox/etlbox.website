@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10262
+weight: 10167
 toc: false
 ---
 
@@ -77,7 +77,7 @@ Normally this will be a insert into with multiple values, but depending on the d
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Helper_BulkSqlGenerator_1__ctor_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor*"></a>
-  <h4 id="ETLBox_Helper_BulkSqlGenerator_1__ctor_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor(ETLBox.ControlFlow.ITableData)">BulkSqlGenerator(ITableData)</h4>
+  <h4 id="ETLBox_Helper_BulkSqlGenerator_1__ctor_ETLBox_ITableData_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.#ctor(ETLBox.ITableData)">BulkSqlGenerator(ITableData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -99,7 +99,7 @@ Normally this will be a insert into with multiple values, but depending on the d
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
@@ -139,7 +139,8 @@ The name of the dummy table is specified here.</p>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AddDbTypesFromDefinition*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AddDbTypesFromDefinition">AddDbTypesFromDefinition</h4>
   <div class="markdown level1 summary"><p>If set to true, the parameter list will contain not only the object value, but also
-the DbType and Size of the parameter. This should only be necessary for SqlServer.
+the DbType and Size of the parameter. Some ADO.NET connectors can derive the database
+type by the value type, others prefer to have some eplicitly set.
 Default is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -169,8 +170,7 @@ Default is false.</p>
   <a id="ETLBox_Helper_BulkSqlGenerator_1_AddParameterCastInSql_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AddParameterCastInSql*"></a>
   <h4 id="ETLBox_Helper_BulkSqlGenerator_1_AddParameterCastInSql" data-uid="ETLBox.Helper.BulkSqlGenerator`1.AddParameterCastInSql">AddParameterCastInSql</h4>
   <div class="markdown level1 summary"><p>If set to true, the parameter name is encapsulated with a CAST expression.
-The datatype is the same data types used in the table definition.
-Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition">AddDbTypesFromDefinition</a> is set to true.</p>
+The datatype is the same data types used in the table definition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -205,7 +205,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
 {{< /rawhtml >}}
 
 ```C#
-    public ConnectionManagerType ConnectionType { get; set; }
+    public ConnectionType ConnectionType { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -219,7 +219,7 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -234,34 +234,6 @@ Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox
 
 ```C#
     public bool HasNextRecord { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Helper_BulkSqlGenerator_1_IsMariaDb_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.IsMariaDb*"></a>
-  <h4 id="ETLBox_Helper_BulkSqlGenerator_1_IsMariaDb" data-uid="ETLBox.Helper.BulkSqlGenerator`1.IsMariaDb">IsMariaDb</h4>
-  <div class="markdown level1 summary"><p>Indicates if the VALUES table descriptor needs the keyword ROW (MySql only)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool IsMariaDb { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -391,6 +363,34 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_BulkSqlGenerator_1_PP_" data-uid="ETLBox.Helper.BulkSqlGenerator`1.PP*"></a>
+  <h4 id="ETLBox_Helper_BulkSqlGenerator_1_PP" data-uid="ETLBox.Helper.BulkSqlGenerator`1.PP">PP</h4>
+  <div class="markdown level1 summary"><p>The escape character use for the parameter name (default is @ for most databases)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string PP { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -528,7 +528,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -566,8 +566,7 @@ Only has values if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#E
   <div class="markdown level1 summary"><p>If set to true, the values for the parameters are tried to convert into the corresponding .NET
 data type that is suitable for the corresponding database column. If a database column is of type INTEGER,
 but the input data is a string like &quot;7&quot;, then the parameter value is converted into an System.Int32.
-The most ADO.NET connectors do this automatically, but this can be useful for Postgres.
-Only works if <a class="xref" href="/api/etlbox.helper/bulksqlgenerator-1#ETLBox_Helper_BulkSqlGenerator_1_AddDbTypesFromDefinition">AddDbTypesFromDefinition</a> is set to true.</p>
+The most ADO.NET connectors do this automatically, but this can be useful for Postgres.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

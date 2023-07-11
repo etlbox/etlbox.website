@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10049
+weight: 10042
 toc: false
 ---
 
@@ -15,7 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.QueryParameter">
   <h1 id="ETLBox_ControlFlow_QueryParameter" data-uid="ETLBox.ControlFlow.QueryParameter" class="text-break">Class QueryParameter
 </h1>
-  <div class="markdown level0 summary"><p>A parameter used in a query</p>
+  <div class="markdown level0 summary"><p>A parameter used in a sql query</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -142,7 +142,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public QueryParameter(string name, string type, object value)
+    public QueryParameter(string name, string sqlType, object value)
 ```
 
 {{< rawhtml >}}
@@ -163,7 +163,7 @@ toc: false
       </tr>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="parametername">sqlType</span></td>
         <td></td>
       </tr>
       <tr>
@@ -175,15 +175,16 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_ControlFlow_QueryParameter_DBSize_" data-uid="ETLBox.ControlFlow.QueryParameter.DBSize*"></a>
-  <h4 id="ETLBox_ControlFlow_QueryParameter_DBSize" data-uid="ETLBox.ControlFlow.QueryParameter.DBSize">DBSize</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_ControlFlow_QueryParameter_DbSize_" data-uid="ETLBox.ControlFlow.QueryParameter.DbSize*"></a>
+  <h4 id="ETLBox_ControlFlow_QueryParameter_DbSize" data-uid="ETLBox.ControlFlow.QueryParameter.DbSize">DbSize</h4>
+  <div class="markdown level1 summary"><p>The database column size parsed from the sql column type (e.g. &quot;VARCHAR(100)&quot; return 100)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public int DBSize { get; }
+    public int DbSize { get; }
 ```
 
 {{< rawhtml >}}
@@ -202,16 +203,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_QueryParameter_DBType_" data-uid="ETLBox.ControlFlow.QueryParameter.DBType*"></a>
-  <h4 id="ETLBox_ControlFlow_QueryParameter_DBType" data-uid="ETLBox.ControlFlow.QueryParameter.DBType">DBType</h4>
-  <div class="markdown level1 summary"><p>The database type parsed from the parameter type</p>
+  <a id="ETLBox_ControlFlow_QueryParameter_DbType_" data-uid="ETLBox.ControlFlow.QueryParameter.DbType*"></a>
+  <h4 id="ETLBox_ControlFlow_QueryParameter_DbType" data-uid="ETLBox.ControlFlow.QueryParameter.DbType">DbType</h4>
+  <div class="markdown level1 summary"><p>The database column type parsed from the sql column type (e.g. &quot;VARCHAR(100)&quot; return DbType.String</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DbType? DBType { get; }
+    public DbType? DbType { get; }
 ```
 
 {{< rawhtml >}}
@@ -232,7 +233,7 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_QueryParameter_Name_" data-uid="ETLBox.ControlFlow.QueryParameter.Name*"></a>
   <h4 id="ETLBox_ControlFlow_QueryParameter_Name" data-uid="ETLBox.ControlFlow.QueryParameter.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the parameter</p>
+  <div class="markdown level1 summary"><p>Name of the parameter in the query (e.g. &quot;Par1&quot;)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -258,16 +259,16 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_QueryParameter_Type_" data-uid="ETLBox.ControlFlow.QueryParameter.Type*"></a>
-  <h4 id="ETLBox_ControlFlow_QueryParameter_Type" data-uid="ETLBox.ControlFlow.QueryParameter.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The sql parameter type (e.g. &quot;INT&quot;)</p>
+  <a id="ETLBox_ControlFlow_QueryParameter_SqlType_" data-uid="ETLBox.ControlFlow.QueryParameter.SqlType*"></a>
+  <h4 id="ETLBox_ControlFlow_QueryParameter_SqlType" data-uid="ETLBox.ControlFlow.QueryParameter.SqlType">SqlType</h4>
+  <div class="markdown level1 summary"><p>The database specific sql column type string (e.g. &quot;INT&quot; or &quot;VARCHAR(100)&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string Type { get; set; }
+    public string SqlType { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -288,7 +289,7 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_QueryParameter_Value_" data-uid="ETLBox.ControlFlow.QueryParameter.Value*"></a>
   <h4 id="ETLBox_ControlFlow_QueryParameter_Value" data-uid="ETLBox.ControlFlow.QueryParameter.Value">Value</h4>
-  <div class="markdown level1 summary"><p>The value of the parameter</p>
+  <div class="markdown level1 summary"><p>The value of the parameter - null will be converted into a DBNull.Value</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

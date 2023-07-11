@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10038
+weight: 10019
 toc: false
 ---
 
@@ -20,15 +20,15 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
+    <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">DbTask</span></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/sqltask">SqlTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/xmlatask">XmlaTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.analysisservices/xmlatask">XmlaTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/sqltask">SqlTask</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -45,19 +45,19 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_QE">ControlFlowTask.QE</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>
@@ -474,7 +474,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_DbTask_BulkDelete_" data-uid="ETLBox.ControlFlow.DbTask.BulkDelete*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_BulkDelete_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkDelete(ETLBox.ControlFlow.ITableData)">BulkDelete(ITableData)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_BulkDelete_ETLBox_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkDelete(ETLBox.ITableData)">BulkDelete(ITableData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -496,14 +496,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_BulkInsert_" data-uid="ETLBox.ControlFlow.DbTask.BulkInsert*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_BulkInsert_ETLBox_ControlFlow_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkInsert(ETLBox.ControlFlow.ITableData)">BulkInsert(ITableData)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.ControlFlow.DbTask.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -525,14 +525,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_BulkSelect_" data-uid="ETLBox.ControlFlow.DbTask.BulkSelect*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkSelect(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String})">BulkSelect(ITableData, ICollection&lt;string&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String})">BulkSelect(ITableData, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -554,7 +554,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
@@ -566,7 +566,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.DbTask.BulkUpdate*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.DbTask.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -588,7 +588,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></td>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
@@ -766,34 +766,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsBool_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsBool*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsBool" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsBool">ExecuteScalarAsBool()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    [Obsolete]
-public bool ExecuteScalarAsBool()
-```
-
-{{< rawhtml >}}
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync">ExecuteScalarAsync()</h4>
   <div class="markdown level1 summary"></div>
@@ -864,7 +836,7 @@ public bool ExecuteScalarAsBool()
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_Connection_IConnectionManager__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose(System.String,System.Action{ETLBox.Connection.IConnectionManager})">LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndClose_System_String_System_Action_ETLBox_IConnectionManager__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndClose(System.String,System.Action{ETLBox.IConnectionManager})">LogErrorsAndClose(string, Action&lt;IConnectionManager&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -891,14 +863,14 @@ public bool ExecuteScalarAsBool()
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>&gt;</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>&gt;</td>
         <td><span class="parametername">syncAction</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync(System.String,System.Func{ETLBox.Connection.IConnectionManager,System.Threading.Tasks.Task})">LogErrorsAndCloseAsync(string, Func&lt;IConnectionManager, Task&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync(System.String,System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task})">LogErrorsAndCloseAsync(string, Func&lt;IConnectionManager, Task&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -925,7 +897,7 @@ public bool ExecuteScalarAsBool()
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td><span class="parametername">asyncAction</span></td>
         <td></td>
       </tr>
@@ -947,7 +919,7 @@ public bool ExecuteScalarAsBool()
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Action_ETLBox_Connection_IConnectionManager__System_Func_ETLBox_Connection_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync(System.String,System.Action{ETLBox.Connection.IConnectionManager},System.Func{ETLBox.Connection.IConnectionManager,System.Threading.Tasks.Task},System.Boolean)">LogErrorsAndCloseCoreAsync(string, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Action_ETLBox_IConnectionManager__System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync(System.String,System.Action{ETLBox.IConnectionManager},System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task},System.Boolean)">LogErrorsAndCloseCoreAsync(string, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -974,12 +946,12 @@ public bool ExecuteScalarAsBool()
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>&gt;</td>
+        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>&gt;</td>
         <td><span class="parametername">syncAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td><span class="parametername">asyncAction</span></td>
         <td></td>
       </tr>
@@ -1007,7 +979,7 @@ public bool ExecuteScalarAsBool()
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

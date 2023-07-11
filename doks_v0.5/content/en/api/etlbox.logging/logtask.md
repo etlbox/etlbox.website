@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10285
+weight: 10222
 toc: false
 ---
 
@@ -21,13 +21,13 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
+    <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">LogTask</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -44,16 +44,16 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_QE">ControlFlowTask.QE</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>
@@ -330,7 +330,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
+  <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Logging_LogTask_ConvertToHierachy_" data-uid="ETLBox.Logging.LogTask.ConvertToHierachy*"></a>
@@ -390,7 +390,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Logging_LogTask_CreateLogTable_" data-uid="ETLBox.Logging.LogTask.CreateLogTable*"></a>
-  <h4 id="ETLBox_Logging_LogTask_CreateLogTable_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LogTask.CreateLogTable(ETLBox.Connection.IConnectionManager,System.String)">CreateLogTable(IConnectionManager, string)</h4>
+  <h4 id="ETLBox_Logging_LogTask_CreateLogTable_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LogTask.CreateLogTable(ETLBox.IConnectionManager,System.String)">CreateLogTable(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -412,7 +412,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td></td>
       </tr>
@@ -780,7 +780,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
-  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_Connection_IConnectionManager_System_Int64_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.Connection.IConnectionManager,System.Int64)">ReadLogTable(IConnectionManager, long)</h4>
+  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_IConnectionManager_System_Int64_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.IConnectionManager,System.Int64)">ReadLogTable(IConnectionManager, long)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -802,7 +802,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td></td>
       </tr>
@@ -829,7 +829,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LogTask_ReadLogTable_" data-uid="ETLBox.Logging.LogTask.ReadLogTable*"></a>
-  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.Connection.IConnectionManager)">ReadLogTable(IConnectionManager)</h4>
+  <h4 id="ETLBox_Logging_LogTask_ReadLogTable_ETLBox_IConnectionManager_" data-uid="ETLBox.Logging.LogTask.ReadLogTable(ETLBox.IConnectionManager)">ReadLogTable(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -851,7 +851,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td></td>
       </tr>
@@ -1112,7 +1112,7 @@ toc: false
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

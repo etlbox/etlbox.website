@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10084
+weight: 10063
 toc: false
 ---
 
@@ -72,7 +72,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_System_String_System_String_Azure_Storage_Blobs_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor(System.String,System.String,Azure.Storage.Blobs.BlobClientOptions)">AzureBlobStorageConfiguration(string, string, BlobClientOptions)</h4>
+  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_System_String_System_String_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor(System.String,System.String,BlobClientOptions)">AzureBlobStorageConfiguration(string, string, BlobClientOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -104,7 +104,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Azure.Storage.Blobs.BlobClientOptions</span></td>
+        <td><span class="xref">BlobClientOptions</span></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -135,7 +135,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.AzureSasCredential</span></td>
+        <td><span class="xref">AzureSasCredential</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -163,7 +163,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Storage.Blobs.BlobClientOptions</span></td>
+        <td><span class="xref">BlobClientOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -191,7 +191,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Storage.Blobs.Models.BlobOpenReadOptions</span></td>
+        <td><span class="xref">BlobOpenReadOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -219,7 +219,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Storage.Blobs.Specialized.BlockBlobClient</span></td>
+        <td><span class="xref">BlockBlobClient</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -247,7 +247,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Storage.Blobs.Models.BlockBlobOpenWriteOptions</span></td>
+        <td><span class="xref">BlockBlobOpenWriteOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -333,7 +333,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Storage.StorageSharedKeyCredential</span></td>
+        <td><span class="xref">StorageSharedKeyCredential</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -361,7 +361,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Azure.Core.TokenCredential</span></td>
+        <td><span class="xref">TokenCredential</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10267
+weight: 10171
 toc: false
 ---
 
@@ -60,7 +60,7 @@ toc: false
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Helper_HashHelper_CreateChar40Hash_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash*"></a>
-  <h4 id="ETLBox_Helper_HashHelper_CreateChar40Hash_ETLBox_ControlFlow_ILoggableTask_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash(ETLBox.ControlFlow.ILoggableTask)">CreateChar40Hash(ILoggableTask)</h4>
+  <h4 id="ETLBox_Helper_HashHelper_CreateChar40Hash_ETLBox_ILoggableTask_" data-uid="ETLBox.Helper.HashHelper.CreateChar40Hash(ETLBox.ILoggableTask)">CreateChar40Hash(ILoggableTask)</h4>
   <div class="markdown level1 summary"><p>Creates a unique hash string from a loggable task</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -83,7 +83,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></td>
+        <td><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></td>
         <td><span class="parametername">task</span></td>
         <td><p>The ETLBox loggable task</p>
 </td>

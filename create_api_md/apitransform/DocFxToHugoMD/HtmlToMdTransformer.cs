@@ -98,17 +98,26 @@ namespace DocFxToHugoMD
         }
 
         Dictionary<string, string> ManualLinkMapping = new Dictionary<string, string>() {
-            { "ETLBox.DataFlow.Connectors.RedisDestination-1.RedisSetParameter.html",
-                "etlbox.dataflow.connectors/redisdestination-1#redissetparameter" },
-            {"ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html",
-                "etlbox.dataflow.transformations/crossjoin-3#inmemorydestination-1"
+            { 
+                "ETLBox.DataFlow.RedisDestination-1.RedisSetParameter.html",
+                "etlbox.dataflow.redisdestination-1/redissetparameter" 
             },
-            {"ETLBox.DataFlow.Transformations.LookupTransformation-2.PartialDbCacheSettings.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_PartialDbCacheSettings_LoadCacheSql",
-            "etlbox.dataflow.transformations/lookuptransformation-2#partialdbcachesettings"},
-             {"ETLBox.DataFlow.Transformations.LookupTransformation-2.PartialDbCacheSettings.html",
-            "etlbox.dataflow.transformations/lookuptransformation-2#partialdbcachesettings"}
-
-
+            {
+                "ETLBox.DataFlow.CrossJoin-3.InMemoryDestination-1.html",
+                "etlbox.dataflow.crossjoin-3/inmemorydestination-1"
+            },
+            {
+                "ETLBox.DataFlow.LookupTransformation-2.PartialDbCacheSettings.html#ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_LoadCacheSql",
+                "etlbox.dataflow.lookuptransformation-2/partialdbcachesettings"
+            },
+            {
+                "ETLBox.DataFlow.LookupTransformation-2.PartialDbCacheSettings.html",
+            "   etlbox.dataflow.lookuptransformation-2/partialdbcachesettings"
+            },
+            {
+                "ETLBox.Redis.RedisDestination-1.RedisSetParameter.html",
+                "etlbox.redis.redisdestination-1/redissetparameter"
+            },
         };
         private string AdjustLinks(string line) {
             if (!line.Contains(" href=")) return line;
@@ -125,7 +134,10 @@ namespace DocFxToHugoMD
                     line = line.Replace(kvp.Key, "/api/" + kvp.Value);
             }
             MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
-            string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
+            //Previous regex, that worked with NS with one or two dots (but not with zero dots)
+            //@"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
+            //New regex, now works with Namespaces with no or one dot
+            string regex = @"href=\""(?<ns>\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
             return Regex.Replace(line, regex, evaluator);
             //}
         }

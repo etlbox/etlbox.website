@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10051
+weight: 10048
 toc: false
 ---
 
@@ -25,7 +25,7 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a></div>
+    <div><a class="xref" href="/api/etlbox/itabledata">ITableData</a></div>
     <div><span class="xref">System.Data.IDataReader</span></div>
     <div><span class="xref">System.Data.IDataRecord</span></div>
     <div><span class="xref">System.IDisposable</span></div>
@@ -1944,7 +1944,7 @@ this method to &quot;rewind&quot; and start with the first record again.</p>
 {{< rawhtml >}}
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/itabledata">ITableData</a>
+      <a class="xref" href="/api/etlbox/itabledata">ITableData</a>
   </div>
   <div>
       <span class="xref">System.Data.IDataReader</span>

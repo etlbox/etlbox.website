@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10039
+weight: 10025
 toc: false
 ---
 
@@ -20,19 +20,19 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
+    <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">DropTask&lt;T&gt;</span></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropdatabasetask">DropDatabaseTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropindextask">DropIndexTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropproceduretask">DropProcedureTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropschematask">DropSchemaTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/droptabletask">DropTableTask</a></div>
-      <div class="level4"><a class="xref" href="/api/etlbox.controlflow.tasks/dropviewtask">DropViewTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropdatabasetask">DropDatabaseTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropindextask">DropIndexTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropproceduretask">DropProcedureTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropschematask">DropSchemaTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/droptabletask">DropTableTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropviewtask">DropViewTask</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -49,16 +49,16 @@ toc: false
       <a class="xref" href="/api/etlbox.controlflow/controlflowtask#ETLBox_ControlFlow_ControlFlowTask_QE">ControlFlowTask.QE</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>
@@ -158,7 +158,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.helper/objectnamedescriptor">ObjectNameDescriptor</a></td>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +218,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
+  <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_DropTask_1_Drop_" data-uid="ETLBox.ControlFlow.DropTask`1.Drop*"></a>
@@ -247,7 +247,7 @@ toc: false
 {{< rawhtml >}}
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

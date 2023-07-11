@@ -68,7 +68,7 @@ using (var db = new BloggingContext()) {
 The merge operation will automatically insert new data row, update existing or delete missing rows. 
 (Changing the MergeMode can also ignore deletions) 
 
-```db.BulkMerge(allBlogs, options => options.MergeMode = ETLBox.DataFlow.MergeMode.Delta);```
+```db.BulkMerge(allBlogs, options => options.MergeMode = ETLBox.MergeMode.Delta);```
 
 #### Options
 

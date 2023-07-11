@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10279
+weight: 10216
 toc: false
 ---
 
@@ -439,7 +439,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_Abort_" data-uid="ETLBox.Logging.LoadProcess.Abort*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.Connection.IConnectionManager,System.String)">Abort(IConnectionManager, string)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.IConnectionManager,System.String)">Abort(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -461,7 +461,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>
@@ -488,7 +488,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_Abort_" data-uid="ETLBox.Logging.LoadProcess.Abort*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.Connection.IConnectionManager)">Abort(IConnectionManager)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_Abort_ETLBox_IConnectionManager_" data-uid="ETLBox.Logging.LoadProcess.Abort(ETLBox.IConnectionManager)">Abort(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -510,7 +510,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>
@@ -603,7 +603,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_End_" data-uid="ETLBox.Logging.LoadProcess.End*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.Connection.IConnectionManager,System.String)">End(IConnectionManager, string)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.IConnectionManager,System.String)">End(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -625,7 +625,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>
@@ -652,7 +652,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_Logging_LoadProcess_End_" data-uid="ETLBox.Logging.LoadProcess.End*"></a>
-  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.Connection.IConnectionManager)">End(IConnectionManager)</h4>
+  <h4 id="ETLBox_Logging_LoadProcess_End_ETLBox_IConnectionManager_" data-uid="ETLBox.Logging.LoadProcess.End(ETLBox.IConnectionManager)">End(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -674,7 +674,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>

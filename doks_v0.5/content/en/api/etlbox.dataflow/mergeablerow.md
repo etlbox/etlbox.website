@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10193
+weight: 10124
 toc: false
 ---
 
@@ -16,7 +16,7 @@ toc: false
   <h1 id="ETLBox_DataFlow_MergeableRow" data-uid="ETLBox.DataFlow.MergeableRow" class="text-break">Class MergeableRow
 </h1>
   <div class="markdown level0 summary"><p>Inherit from this class if you want to use your data object with a DBMerge,
-but don't want to implement <a class="xref" href="/api/etlbox.dataflow/imergeablerow">IMergeableRow</a> yourself.
+but don't want to implement <a class="xref" href="/api/etlbox/imergeablerow">IMergeableRow</a> yourself.
 You still needs that you have flagged the id properties with the IdColumn attribute
 and the properties use to identify equal object flagged with the UpdateColumn attribute.</p>
 </div>
@@ -86,7 +86,7 @@ and the properties use to identify equal object flagged with the UpdateColumn at
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/changeaction">ChangeAction</a>?</td>
+        <td><a class="xref" href="/api/etlbox/changeaction">ChangeAction</a>?</td>
         <td></td>
       </tr>
     </tbody>

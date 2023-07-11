@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10263
+weight: 10168
 toc: false
 ---
 
@@ -59,14 +59,14 @@ toc: false
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Helper_ConversionContext__ctor_" data-uid="ETLBox.Helper.ConversionContext.#ctor*"></a>
-  <h4 id="ETLBox_Helper_ConversionContext__ctor_System_Object_System_Type_System_Boolean_ETLBox_ControlFlow_TableColumn_ETLBox_ControlFlow_TableDefinition_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.ConversionContext.#ctor(System.Object,System.Type,System.Boolean,ETLBox.ControlFlow.TableColumn,ETLBox.ControlFlow.TableDefinition,ETLBox.Connection.ConnectionManagerType)">ConversionContext(object, Type, bool, TableColumn, TableDefinition, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_ConversionContext__ctor_System_Object_System_Type_System_Boolean_ETLBox_ControlFlow_TableColumn_ETLBox_ControlFlow_TableDefinition_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.ConversionContext.#ctor(System.Object,System.Type,System.Boolean,ETLBox.ControlFlow.TableColumn,ETLBox.ControlFlow.TableDefinition,ETLBox.ConnectionType)">ConversionContext(object, Type, bool, TableColumn, TableDefinition, ConnectionType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public ConversionContext(object value, Type valueType, bool isNullValue, TableColumn column, TableDefinition definition, ConnectionManagerType connectionType)
+    public ConversionContext(object value, Type valueType, bool isNullValue, TableColumn column, TableDefinition definition, ConnectionType connectionType)
 ```
 
 {{< rawhtml >}}
@@ -106,7 +106,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td><span class="parametername">connectionType</span></td>
         <td></td>
       </tr>
@@ -149,7 +149,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public ConnectionManagerType ConnectionType { get; }
+    public ConnectionType ConnectionType { get; }
 ```
 
 {{< rawhtml >}}
@@ -163,7 +163,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td></td>
       </tr>
     </tbody>

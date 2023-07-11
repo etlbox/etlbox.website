@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10282
+weight: 10219
 toc: false
 ---
 
@@ -125,8 +125,7 @@ then this Property will hold the current load process information.</p>
 {{< /rawhtml >}}
 
 ```C#
-    [Obsolete]
-public static LoadProcess CurrentLoadProcess { get; }
+    public static LoadProcess CurrentLoadProcess { get; }
 ```
 
 {{< rawhtml >}}
@@ -183,8 +182,7 @@ Logging can be enabled/disabled for all components individually using the Disabl
 {{< /rawhtml >}}
 
 ```C#
-    [Obsolete]
-public static string LoadProcessTable { get; set; }
+    public static string LoadProcessTable { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -203,33 +201,6 @@ public static string LoadProcessTable { get; set; }
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_Logging_LogInstance_" data-uid="ETLBox.Logging.Logging.LogInstance*"></a>
-  <h4 id="ETLBox_Logging_Logging_LogInstance" data-uid="ETLBox.Logging.Logging.LogInstance">LogInstance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static ILogger LogInstance { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Logging_Logging_LogTable_" data-uid="ETLBox.Logging.Logging.LogTable*"></a>
   <h4 id="ETLBox_Logging_Logging_LogTable" data-uid="ETLBox.Logging.Logging.LogTable">LogTable</h4>
   <div class="markdown level1 summary"><p>TableName of the current log process logging table</p>
@@ -239,8 +210,7 @@ public static string LoadProcessTable { get; set; }
 {{< /rawhtml >}}
 
 ```C#
-    [Obsolete]
-public static string LogTable { get; set; }
+    public static string LogTable { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -268,8 +238,7 @@ public static string LogTable { get; set; }
 {{< /rawhtml >}}
 
 ```C#
-    [Obsolete]
-public static string STAGE { get; set; }
+    public static string STAGE { get; set; }
 ```
 
 {{< rawhtml >}}

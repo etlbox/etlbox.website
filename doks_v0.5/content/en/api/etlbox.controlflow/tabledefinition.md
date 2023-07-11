@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10052
+weight: 10049
 toc: false
 ---
 
@@ -290,7 +290,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_TableDefinition_CreateTable_" data-uid="ETLBox.ControlFlow.TableDefinition.CreateTable*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_CreateTable_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.ControlFlow.TableDefinition.CreateTable(ETLBox.Connection.IConnectionManager)">CreateTable(IConnectionManager)</h4>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_CreateTable_ETLBox_IConnectionManager_" data-uid="ETLBox.ControlFlow.TableDefinition.CreateTable(ETLBox.IConnectionManager)">CreateTable(IConnectionManager)</h4>
   <div class="markdown level1 summary"><p>Uses the CreateTableTask to create a table based on the current definition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -313,7 +313,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td><p>The connection manager of the database you want to connect</p>
 </td>
@@ -321,7 +321,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName(ETLBox.Connection.IConnectionManager,System.String)">FromProcedureName(IConnectionManager, string)</h4>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_FromProcedureName_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.FromProcedureName(ETLBox.IConnectionManager,System.String)">FromProcedureName(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -343,7 +343,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td></td>
       </tr>
@@ -370,7 +370,7 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableDefinition_FromTableName_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_FromTableName_ETLBox_Connection_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName(ETLBox.Connection.IConnectionManager,System.String,System.Boolean)">FromTableName(IConnectionManager, string, bool)</h4>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_FromTableName_ETLBox_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName(ETLBox.IConnectionManager,System.String,System.Boolean)">FromTableName(IConnectionManager, string, bool)</h4>
   <div class="markdown level1 summary"><p>Gather a table definition from an existing table in the database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -393,7 +393,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/iconnectionmanager">IConnectionManager</a></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connection</span></td>
         <td><p>The connection manager of the database you want to connect</p>
 </td>

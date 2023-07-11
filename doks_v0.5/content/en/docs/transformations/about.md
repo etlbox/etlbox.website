@@ -25,7 +25,7 @@ Sometimes transformations may have more than one input buffer.
 
 By default, all buffers of a component don't have a limitation how much rows they allowed to buffer. Though rows are constantly are removed when processing continues, sometimes there can be a bottleneck where a buffer become bigger and bigger because the processing in the flow doesn't continue fast enough. By default, no more than 100000 rows are allowed to be in one buffer. If you want, you can change this limitation by setting the property `MaxBufferSize`. If set to a value greater than 0, e.g. 500, it will only allow up to 500 rows in the buffer(s) of the component.
 
-{{< alert text="You can limit the buffer size not only for transformations, but for all components (including sources and destination). If you want to change the default value, you can set a value in the statich <code>DataFlow</code> class like this: <code>DataFlow.MaxBufferSize=10000</code>" >}}
+{{< alert text="You can limit the buffer size not only for transformations, but for all components (including sources and destination). If you want to change the default value, you can set a value in the statich <code>DataFlow</code> class like this: <code>Settings.MaxBufferSize=10000</code>" >}}
 
 ### Non-Blocking and blocking transformations
 

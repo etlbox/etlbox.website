@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10192
+weight: 10119
 toc: false
 ---
 
@@ -24,8 +24,8 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.dataflow/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</div>
-    <div><a class="xref" href="/api/etlbox.dataflow/ilimitedcache">ILimitedCache</a></div>
+    <div><a class="xref" href="/api/etlbox/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</div>
+    <div><a class="xref" href="/api/etlbox/ilimitedcache">ILimitedCache</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -448,10 +448,10 @@ toc: false
 {{< rawhtml >}}
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/icachemanager-2">ICacheManager&lt;TInput, TCache&gt;</a>
+      <a class="xref" href="/api/etlbox/icachemanager-2">ICacheManager&lt;TInput, TCache&gt;</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/ilimitedcache">ILimitedCache</a>
+      <a class="xref" href="/api/etlbox/ilimitedcache">ILimitedCache</a>
   </div>
 
 {{< /rawhtml >}}

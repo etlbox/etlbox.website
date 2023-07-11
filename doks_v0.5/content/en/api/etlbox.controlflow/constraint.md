@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10035
+weight: 10011
 toc: false
 ---
 
@@ -27,7 +27,7 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iconstraint">IConstraint</a></div>
+    <div><a class="xref" href="/api/etlbox/iconstraint">IConstraint</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -193,7 +193,7 @@ toc: false
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iconstraint">IConstraint</a>
+      <a class="xref" href="/api/etlbox/iconstraint">IConstraint</a>
   </div>
 
 {{< /rawhtml >}}

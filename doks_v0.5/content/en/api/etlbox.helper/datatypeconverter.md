@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10264
+weight: 10169
 toc: false
 ---
 
@@ -26,7 +26,7 @@ various sql data types into the right database specific database or into a .NET 
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.helper/idatatypeconverter">IDataTypeConverter</a></div>
+    <div><a class="xref" href="/api/etlbox/idatatypeconverter">IDataTypeConverter</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -265,7 +265,7 @@ E.g. DbType.Binary will return byte[]</p>
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_System_Type_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(System.Type,ETLBox.Connection.ConnectionManagerType)">GetDatabaseType(Type, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_System_Type_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(System.Type,ETLBox.ConnectionType)">GetDatabaseType(Type, ConnectionType)</h4>
   <div class="markdown level1 summary"><p>Returns a database specific type for the provided .NET datat type, depending on the connection
 manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT</p>
 </div>
@@ -274,7 +274,7 @@ manager. E.g. passing the .NET data type long for SqlServer will return the stri
 {{< /rawhtml >}}
 
 ```C#
-    public static string GetDatabaseType(Type clrType, ConnectionManagerType connectionType)
+    public static string GetDatabaseType(Type clrType, ConnectionType connectionType)
 ```
 
 {{< rawhtml >}}
@@ -295,7 +295,7 @@ manager. E.g. passing the .NET data type long for SqlServer will return the stri
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td><span class="parametername">connectionType</span></td>
         <td><p>Database connection type, e.g. SqlServer</p>
 </td>
@@ -551,7 +551,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertAliasName(string, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.ConnectionType)">TryConvertAliasName(string, ConnectionType)</h4>
   <div class="markdown level1 summary"><p>Converts a data type alias name (e.g. an alias name
 like &quot;varchar(10)&quot; ) to the original database type name (&quot;character varying&quot;).</p>
 </div>
@@ -560,7 +560,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 {{< /rawhtml >}}
 
 ```C#
-    public static string TryConvertAliasName(string dataTypeName, ConnectionManagerType connectionType)
+    public static string TryConvertAliasName(string dataTypeName, ConnectionType connectionType)
 ```
 
 {{< rawhtml >}}
@@ -581,7 +581,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td><span class="parametername">connectionType</span></td>
         <td><p>Which database (e.g. Postgres, MySql, ...)</p>
 </td>
@@ -605,7 +605,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(string, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.ConnectionType)">TryConvertDbDataType(string, ConnectionType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -613,7 +613,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 {{< /rawhtml >}}
 
 ```C#
-    public string TryConvertDbDataType(string dataTypeName, ConnectionManagerType connectionType)
+    public string TryConvertDbDataType(string dataTypeName, ConnectionType connectionType)
 ```
 
 {{< rawhtml >}}
@@ -634,7 +634,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td><span class="parametername">connectionType</span></td>
         <td><p>The database connection type</p>
 </td>
@@ -658,7 +658,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </tbody>
   </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String,ETLBox.Connection.ConnectionManagerType)">TryGetDbSpecificType(string, ConnectionManagerType)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String,ETLBox.ConnectionType)">TryGetDbSpecificType(string, ConnectionType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type into a database specific type.
 E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.</p>
 </div>
@@ -667,7 +667,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
 {{< /rawhtml >}}
 
 ```C#
-    public static string TryGetDbSpecificType(string dataTypeName, ConnectionManagerType connectionType)
+    public static string TryGetDbSpecificType(string dataTypeName, ConnectionType connectionType)
 ```
 
 {{< rawhtml >}}
@@ -688,7 +688,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox.connection/connectionmanagertype">ConnectionManagerType</a></td>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
         <td><span class="parametername">connectionType</span></td>
         <td><p>The database connection type</p>
 </td>
@@ -713,7 +713,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.helper/idatatypeconverter">IDataTypeConverter</a>
+      <a class="xref" href="/api/etlbox/idatatypeconverter">IDataTypeConverter</a>
   </div>
 
 {{< /rawhtml >}}

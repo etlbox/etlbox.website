@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10050
+weight: 10047
 toc: false
 ---
 
@@ -447,7 +447,7 @@ Not all databases may support this.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public int? IdentityIncrement { get; set; }
+    public long? IdentityIncrement { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -461,7 +461,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><span class="xref">long</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -475,7 +475,7 @@ Not all databases may support this.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public int? IdentitySeed { get; set; }
+    public long? IdentitySeed { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -489,7 +489,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><span class="xref">long</span>?</td>
         <td></td>
       </tr>
     </tbody>

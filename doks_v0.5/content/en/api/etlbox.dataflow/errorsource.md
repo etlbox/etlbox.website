@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10162
+weight: 10112
 toc: false
 ---
 
@@ -22,21 +22,21 @@ can use this source to redirect errors into the error data flow.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
+    <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
+    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</div>
+    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</div>
     <div class="level5"><span class="xref">ErrorSource</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowsource">IDataFlowSource</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowcomponent">IDataFlowComponent</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -80,25 +80,25 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_ExecuteAsync_System_Threading_CancellationToken_">DataFlowExecutableSource&lt;ETLBoxError&gt;.ExecuteAsync(CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ETLBoxError&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;, Predicate&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowSource&lt;ETLBoxError&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;ETLBoxError&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
@@ -116,6 +116,9 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_WasComponentInitialized">DataFlowComponent.WasComponentInitialized</a>
     </div>
     <div>
@@ -125,10 +128,13 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_WasLinked">DataFlowComponent.WasLinked</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_IsReadyForProcessing">DataFlowComponent.IsReadyForProcessing</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
@@ -170,7 +176,7 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelBufferAndThrowOperationCanceledException">DataFlowComponent.CancelBufferAndThrowOperationCanceledException()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, string, string)</a>
@@ -209,19 +215,19 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>
@@ -251,7 +257,7 @@ can use this source to redirect errors into the error data flow.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public sealed class ErrorSource : DataFlowExecutableSource<ETLBoxError>, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource<ETLBoxError>, IDataFlowSource<ETLBoxError>, IDataFlowSource, IDataFlowComponent, IDataFlowExecutableSource
+    public sealed class ErrorSource : DataFlowExecutableSource<ETLBoxError>, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource<ETLBoxError>, IDataFlowSource<ETLBoxError>, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent
 ```
 
 {{< rawhtml >}}
@@ -299,7 +305,7 @@ can use this source to redirect errors into the error data flow.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.CompleteManually</span></div>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.ETLBoxError&gt;.CompleteManually</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_Redirection_" data-uid="ETLBox.DataFlow.ErrorSource.Redirection*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_Redirection" data-uid="ETLBox.DataFlow.ErrorSource.Redirection">Redirection</h4>
   <div class="markdown level1 summary"><p>If set to another error source, all message send to this source will redirected.</p>
@@ -420,7 +426,7 @@ can use this source to redirect errors into the error data flow.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.InitComponent()</span></div>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.ETLBoxError&gt;.InitComponent()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -434,7 +440,7 @@ can use this source to redirect errors into the error data flow.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.OnExecutionDoAsyncWork()</span></div>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.ETLBoxError&gt;.OnExecutionDoAsyncWork()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.ErrorSource.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -448,7 +454,7 @@ can use this source to redirect errors into the error data flow.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.OnExecutionDoSynchronousWork()</span></div>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.ETLBoxError&gt;.OnExecutionDoSynchronousWork()</span></div>
   <a id="ETLBox_DataFlow_ErrorSource_Send_" data-uid="ETLBox.DataFlow.ErrorSource.Send*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_Send_System_Exception_System_String_System_String_System_String_" data-uid="ETLBox.DataFlow.ErrorSource.Send(System.Exception,System.String,System.String,System.String)">Send(Exception, string, string, string)</h4>
   <div class="markdown level1 summary"><p>Sends the error message into the error data flow</p>
@@ -500,25 +506,25 @@ can use this source to redirect errors into the error data flow.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a>
+      <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource-1">IDataFlowExecutableSource&lt;TOutput&gt;</a>
+      <a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource&lt;TOutput&gt;</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource&lt;TOutput&gt;</a>
+      <a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource&lt;TOutput&gt;</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowsource">IDataFlowSource</a>
+      <a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowcomponent">IDataFlowComponent</a>
+      <a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowexecutablesource">IDataFlowExecutableSource</a>
+      <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
   </div>
 
 {{< /rawhtml >}}

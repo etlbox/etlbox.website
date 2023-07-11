@@ -57,20 +57,26 @@ Below is an overview of all classes in each namespace.";
 
         private static bool IsInFilterList(string apiHtmlFileName) {
             string fileName = Path.GetFileName(apiHtmlFileName);
-            string[] filterList = new[]
+            string[] filterListCompleteName = new[]
             {
-                "index.html", "toc.html"
-                //"ETLBox.Connection.html", "ETLBox.ControlFlow.html","ETLBox.DataFlow.html",
-                //"ETLBox.Exceptions.html","ETLBox.Helper.html", "ETLBox.Logging.html"
+                "index.html", "toc.html"                
             };
-            if (filterList.Contains(fileName))
+            if (filterListCompleteName.Contains(fileName))
                 return true;
+            string[] filterListStartsWith = new[]
+            {
+                "ETLBox.EntityFramework"
+            };
+            foreach (var startWith in filterListStartsWith)
+                if (fileName.StartsWith(startWith)) return true;
+
             return false;
         }
 
         private static bool IsNamespaceRootFile(string apiHtmlFileName) {
             string fileName = Path.GetFileName(apiHtmlFileName);
-            if (fileName.Count(ch => ch == '.') == 2 && fileName.StartsWith("ETLBox") && fileName.EndsWith(".html"))
+            //if (fileName.Count(ch => ch == '.') == 2 && fileName.StartsWith("ETLBox") && fileName.EndsWith(".html"))
+            if (fileName == "ETLBox.html")
                 return true;
             string fileContent = File.ReadAllText(apiHtmlFileName);
             if (fileContent.Contains("class=\"text-break\">Namespace"))

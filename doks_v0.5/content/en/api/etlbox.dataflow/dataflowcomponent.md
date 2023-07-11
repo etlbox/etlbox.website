@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10152
+weight: 10096
 toc: false
 ---
 
@@ -21,7 +21,7 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox.controlflow/loggabletask">LoggableTask</a></div>
+    <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><span class="xref">DataFlowComponent</span></div>
       <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination&lt;TInput&gt;</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowjointarget-1">DataFlowJoinTarget&lt;TInput&gt;</a></div>
@@ -29,26 +29,26 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowcomponent">IDataFlowComponent</a></div>
-    <div><a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.controlflow/loggabletask#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>
@@ -216,6 +216,33 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken_" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken">BufferCancellationToken</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CancellationToken BufferCancellationToken { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_Completion_" data-uid="ETLBox.DataFlow.DataFlowComponent.Completion*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_Completion" data-uid="ETLBox.DataFlow.DataFlowComponent.Completion">Completion</h4>
   <div class="markdown level1 summary"><p>The completion task of the component. A component is completed when all predecessors (if any) are
@@ -298,6 +325,33 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     <tbody>
       <tr>
         <td><span class="xref">System.Exception</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_IsReadyForProcessing_" data-uid="ETLBox.DataFlow.DataFlowComponent.IsReadyForProcessing*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_IsReadyForProcessing" data-uid="ETLBox.DataFlow.DataFlowComponent.IsReadyForProcessing">IsReadyForProcessing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IsReadyForProcessing { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -697,7 +751,7 @@ of each buffer</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkErrorTo*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkErrorTo(ETLBox.IDataFlowDestination{ETLBox.ETLBoxError})">InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -719,7 +773,7 @@ of each buffer</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</td>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
         <td><span class="parametername">target</span></td>
         <td></td>
       </tr>
@@ -735,13 +789,13 @@ of each buffer</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox.dataflow/etlboxerror">ETLBoxError</a>&gt;</td>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_InternalLinkTo_" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkTo*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkTo``1(ETLBox.DataFlow.IDataFlowDestination,System.Object,System.Object)">InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</h4>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_" data-uid="ETLBox.DataFlow.DataFlowComponent.InternalLinkTo``1(ETLBox.IDataFlowDestination,System.Object,System.Object)">InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -763,7 +817,7 @@ of each buffer</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/idataflowdestination">IDataFlowDestination</a></td>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></td>
         <td><span class="parametername">target</span></td>
         <td></td>
       </tr>
@@ -789,7 +843,7 @@ of each buffer</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/idataflowsource-1">IDataFlowSource</a>&lt;T&gt;</td>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1045,13 +1099,13 @@ inside data flow components.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox.controlflow/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowcomponent">IDataFlowComponent</a>
+      <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox.dataflow/idataflowlogging">IDataFlowLogging</a>
+      <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
 
 {{< /rawhtml >}}
