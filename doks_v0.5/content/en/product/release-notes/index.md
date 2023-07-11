@@ -5,6 +5,46 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.0.0
+
+#### Features:
+
+- Using MySqlConnector (instead of MySql.Data connector) when connecting to MariaDb
+- Adding MariaDbOdbcConnector which allows Odbc connections to MariaDb
+- New connector: Snowflake
+- LogProcessTask: Start/End/Abort will modify passed process, and not create new instance
+- Adding SnowflakeOdbcConnector which allow Odbc connections to Snowflake
+- New connector: Neo4j
+- New connector: Azure Cosmos Db
+- Renamed package ETLBox.AzureServiceBus to ETLBox.Azure.ServiceBus
+- New connector: Azure Tables
+- New connector: SAP HANA
+- Azure ServiceBusSource now allows to fetch multiple messages with MaxMessageSize
+- Adding HanaOdbcConnector which allows Odbc connections to SAP HANA
+- Network class now throws exception when trying to run network twice (no network execution/no error message before)
+- Improved support for Db2 and different architectures (LUW, zOS, Cloud)
+- SqlTask: Removed obsolete static helper methods that contained a "name" properties
+- SqlTask: Removed obsolete static helper methods ExecuteReaderSingleLine
+- DbDestination / DbMerge: Removing obsolete Wait() method
+- \[BREAKING\] QueryParameter: Renamed DBType -> DbType, DBSize -> DbSize, Type -> SqlType
+- \[BREAKING\] Static class DataFlow renamed to Settings, properties of static class ControlFlow (DefaultDbConnection) moved into Settings, new namespace: ETLBox (was ETLBox.DataFlow before)
+- \[BREAKING\] Prpoerty LogInstance (ETLBox.Logging.Logging) moved into ETLBox.DataFlow.Settings
+-\[BREAKING\] New namespace ETLBox, which contains some shared classes that were used in other namespaces before
+- \[BREAKING\] Namespace ETLBox.DataFlow now combines ETLBox.DataFlow, ETLBox.DataFlow.Connectors and ETLBox.DataFlow.Transformations
+- \[BREAKING\] Namespace ETLBox.ControlFlow now combines ETLBox.ControlFlow and ETLBox.ControlFlow.Tasks
+- \[BREAKING\] Moved ObjectNameDescriptor from ETLBox.Helper to ETLBox.ControlFlow
+- \[BREAKING\] Created separate namespace for all classes which are added via separate package (e.g. JsonSource is now in the namespace ETLBox.Json)
+- \[BREAKING\] Renamed Attribute \[ColumnMap\] to \[DbColumnMap\]
+- \[BREAKING\] Renamed DbSource. SourceTableDefinition -> TableDefinition and DbDestination.DestinationTableDefinition to TableDefinition
+- \[BREAKING\] DbMerge.MergeProperties: The properties (IdColumns, UpdateColumns, CompareColumns, DeleteColumns) are now direct properties of DbMerge
+- Updating package references to current version, Improving support for .NET 7 and .NET 6
+- \[BREAKING\] Renamed enum ConnectionManagerType to ConnectionType, Property IConnectionManager.ConnectionManagerType to ConnectionType
+
+### Bug
+
+- Fixed issues with spaces in table names for GetTableListTask
+- Improving support for dynamic objects in Azure ServiceBusSource
+
 ## Version 2.7.1
 
 #### Features:
