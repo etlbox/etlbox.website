@@ -21,30 +21,26 @@ NoSql databases are also supported. As they are based on different concepts than
 
 These relational database are currently **fully** supported with ETLBox:
 
-Database  | Native support | Odbc support | OleDb support
-----------|:--------------:|:------------:|:-------------:
-Sql Server| ✓ | ✓ | ✓
-Postgres  | ✓ | ✓ | X
-SQLite    | ✓ | ✓ | X
-Oracle    | ✓ | ✓ | X
-MySql     | ✓ | ✓ | X
-Maria     | ✓ | ✓ | X
-Db2       | ✓ | X | X
-Sap ASE (Sybase) | ✓ | ✓ | X
-Microsoft Access| X | ✓ | X
-Other databases | X | * | *
+Database  | Native support | Odbc support | Remarks
+----------|:--------------:|:------------:|:-------:
+SQL Server| ✓ | ✓ | + OleDb support
+Postgres  | ✓ | ✓ |
+SQLite    | ✓ | ✓ |
+Oracle    | ✓ | ✓ |
+MySql     | ✓ | ✓ |
+MariaDB   | ✓ | ✓ |
+Db2       | ✓ | X | Luw + z/OS + Cloud
+SAP ASE (Sybase) | ✓ | ✓ |
+SAP HANA  | ✓ | ✓ |
+Snowflake | ✓ | ✓ |
+Microsoft Access| X | ✓ | 
+Other databases | X | * | Generic ODBC support
+Custom connector | ** | ** | Own implementation
 
-*: There is a limited support for other databases as well - you can use the generic Odbc or OleDb connection manager to access these databases. Please note that using these connections comes with some major limitations. 
+*: *There is a limited support for other databases as well - you can use the generic Odbc or OleDb connection manager to access these databases. Please note that using these connections comes with some major limitations.* 
 
-### Supported NoSql databases
+**: *Using a `CustomSource`/`CustomDestination` or `CustomBatchSource`/`CustomBatchDestination`, you can create your own connectors using your own implementation logic.*
 
-There are source and destinations components available for the following NoSql databases.
-
-Database | Type   | Source  | Destination | Other components
----------|------  |:-----------------:|:--------------------:|:-------:
-MongoDb  |Document|✓|✓|X
-Couchbase|Document|✓|✓|✓
-Redis    |Key-Value|✓|✓|X
 
 ## Connection manager
 

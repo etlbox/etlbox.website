@@ -6,8 +6,8 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "db-connectors"
-weight: 360
+    parent: "nosql-connectors"
+weight: 300
 toc: true
 ---
 
