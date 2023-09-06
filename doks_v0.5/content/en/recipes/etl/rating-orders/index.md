@@ -280,7 +280,7 @@ as well as a customer rating based on the total amount of purchases.
 
 ## Demo on Github
 
-{{< link-ext text="The whole demo code is available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/RatingOrdersExample" >}}. 
+{{< link-ext text="The whole demo code is available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/RatingOrders" >}}. 
 
 
 

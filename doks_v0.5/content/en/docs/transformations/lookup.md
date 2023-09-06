@@ -45,7 +45,7 @@ CsvSource<Customer> lookupSource = new CsvSource<Customer>("CustomerData.csv");
 var lookup = new LookupTransformation<Order, Customer>();
 lookup.Source = lookupSource;
 DbDestination<Order> dest = new DbDestination<Order>("OrderWithCustomerTable");
-source.LinkTo(lookup).LinkTo(dest);
+orderSource.LinkTo(lookup).LinkTo(dest);
 ```
 
 

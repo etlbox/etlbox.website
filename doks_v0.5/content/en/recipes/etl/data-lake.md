@@ -13,7 +13,7 @@ toc: true
 
 ## Preqrequisites
 
-This example requires are SqlServer database and either the Azure Storage Simulator or an Azure Storage account. We recommend Visual Studio to open this example. 
+This example requires a SqlServer database and either the Azure Storage Simulator or an Azure Storage account. We recommend Visual Studio to open this example. 
 
 ## Demo setup
 

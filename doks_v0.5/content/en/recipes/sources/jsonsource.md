@@ -246,13 +246,6 @@ public void UsingJsonPathConverter() {
     Received Id: 2, Value1: , Value2: 1.2
     Received Id: 3, Value1: Test3, Value2: 1.3
     */
-
-    //Delete below this line
-    Assert.Collection(dest.Data,
-        row => Assert.True(row.Id == 1 && row.Value1 == "Test1" && row.Value2 == 1.1M),
-        row => Assert.True(row.Id == 2 && row.Value1 == null && row.Value2== 1.2M),
-        row => Assert.True(row.Id == 3 && row.Value1 == "Test3" && row.Value2 == 1.3M)
-    );
 }
 ```
 
@@ -477,13 +470,6 @@ Error record: Unexpected character encountered while parsing value: X. Path 'Con
 Unexpected character encountered while parsing value: X. Path 'Content[3].Id', line 25, position 13.
 */
 
-//Delete below this line
-Assert.Equal(2, errorDest.Data.Count);
-Assert.Collection(dest.Data,
-    row => Assert.True(row.Id == 2 && row.Inner.Value == "OK" && row.Inner.Number == 1.2M),
-    row => Assert.True(row.Id == 3 && row.Inner.Value == "OK" && row.Inner.Number == 1.3M)
-);
-}
 ```
 
 ## Reading multiple Uris
