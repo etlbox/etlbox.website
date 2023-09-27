@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10269
+weight: 10270
 toc: false
 ---
 

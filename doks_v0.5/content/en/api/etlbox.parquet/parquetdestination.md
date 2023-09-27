@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10251
+weight: 10252
 toc: false
 ---
 
@@ -56,6 +56,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.parquet/parquetdestination-1#ETLBox_Parquet_ParquetDestination_1_ParquetOptions">ParquetDestination&lt;ExpandoObject&gt;.ParquetOptions</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.parquet/parquetdestination-1#ETLBox_Parquet_ParquetDestination_1_AddCustomMetaData">ParquetDestination&lt;ExpandoObject&gt;.AddCustomMetaData</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.parquet/parquetdestination-1#ETLBox_Parquet_ParquetDestination_1_UseBufferBlock">ParquetDestination&lt;ExpandoObject&gt;.UseBufferBlock</a>

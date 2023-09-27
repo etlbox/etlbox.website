@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10250
+weight: 10251
 toc: false
 ---
 
@@ -362,6 +362,36 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_Parquet_ParquetDestination_1_AddCustomMetaData_" data-uid="ETLBox.Parquet.ParquetDestination`1.AddCustomMetaData*"></a>
+  <h4 id="ETLBox_Parquet_ParquetDestination_1_AddCustomMetaData" data-uid="ETLBox.Parquet.ParquetDestination`1.AddCustomMetaData">AddCustomMetaData</h4>
+  <div class="markdown level1 summary"><p>Each parquet writer allows to have a set of custom meta data -
+use this function to set the custom meta data for every uri
+(only called multiple times when using <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HasNextUri">HasNextUri</a> / <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_GetNextUri">GetNextUri</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<StreamMetaData, Dictionary<string, string>> AddCustomMetaData { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">string</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Parquet_ParquetDestination_1_BatchSize_" data-uid="ETLBox.Parquet.ParquetDestination`1.BatchSize*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_BatchSize" data-uid="ETLBox.Parquet.ParquetDestination`1.BatchSize">BatchSize</h4>
   <div class="markdown level1 summary"><p>The batch size defines how many records needs to be in the Input buffer before data is written into the destination.

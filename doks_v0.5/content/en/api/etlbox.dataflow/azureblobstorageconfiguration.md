@@ -142,7 +142,7 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobClientOptions*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobClientOptions" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobClientOptions">BlobClientOptions</h4>
-  <div class="markdown level1 summary"><p>Optional: Additional options when connecting with the <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlockBlobClient">BlockBlobClient</a></p>
+  <div class="markdown level1 summary"><p>Optional: Additional options when connecting with the <see cref="!:BlockBlobClient"></see></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -196,16 +196,18 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlockBlobClient_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlockBlobClient*"></a>
-  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlockBlobClient" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlockBlobClient">BlockBlobClient</h4>
-  <div class="markdown level1 summary"><p>Provide an existing BlockBlobClient to connect with Azure Blob Storage</p>
+  <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobServiceEndpoint*"></a>
+  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobServiceEndpoint">BlobServiceEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint to which blob is created. Only used if the <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ConnectionString">ConnectionString</a> is not provided,
+but other means of credentials are provided. The uri for the connection will then be constructed
+from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint">BlobServiceEndpoint</a>}/{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a>}/{<span class="xref">System.Uri</span>}&quot;/&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public BlockBlobClient BlockBlobClient { get; set; }
+    public string BlobServiceEndpoint { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -219,7 +221,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlockBlobClient</span></td>
+        <td><span class="xref">string</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -283,7 +285,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
   </table>
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.ContainerName*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.ContainerName">ContainerName</h4>
-  <div class="markdown level1 summary"><p>Provide a container name in which the blob is created. The <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Uri">Uri</a> needs to be the blob name,
+  <div class="markdown level1 summary"><p>The container name in which the blob is created. The <a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_Uri">Uri</a> needs to be the blob name,
 and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ConnectionString">ConnectionString</a> needs to have a value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -306,6 +308,34 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_CreateBlockBlobClient_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.CreateBlockBlobClient*"></a>
+  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_CreateBlockBlobClient" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.CreateBlockBlobClient">CreateBlockBlobClient</h4>
+  <div class="markdown level1 summary"><p>Provide an existing BlockBlobClient to connect with Azure Blob Storage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<string, BlockBlobClient> CreateBlockBlobClient { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">BlockBlobClient</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

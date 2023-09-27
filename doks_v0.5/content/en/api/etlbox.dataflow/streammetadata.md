@@ -58,7 +58,8 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_StreamMetaData_AdditonalData_" data-uid="ETLBox.DataFlow.StreamMetaData.AdditonalData*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_AdditonalData" data-uid="ETLBox.DataFlow.StreamMetaData.AdditonalData">AdditonalData</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A generic object that can hold additional request data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -92,7 +93,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public HttpRequestMessage HttpRequestMessage { get; set; }
+    public HttpRequestMessage HttpRequestMessage { get; }
 ```
 
 {{< rawhtml >}}
@@ -120,7 +121,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public HttpResponseMessage HttpResponseMessage { get; set; }
+    public HttpResponseMessage HttpResponseMessage { get; }
 ```
 
 {{< rawhtml >}}
@@ -197,13 +198,14 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_StreamMetaData_RequestCount_" data-uid="ETLBox.DataFlow.StreamMetaData.RequestCount*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_RequestCount" data-uid="ETLBox.DataFlow.StreamMetaData.RequestCount">RequestCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of requests so far</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public int RequestCount { get; set; }
+    public int RequestCount { get; }
 ```
 
 {{< rawhtml >}}
@@ -224,7 +226,7 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_StreamMetaData_RequestUri_" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_RequestUri" data-uid="ETLBox.DataFlow.StreamMetaData.RequestUri">RequestUri</h4>
-  <div class="markdown level1 summary"><p>The uri used to retrieve the current request</p>
+  <div class="markdown level1 summary"><p>The uri used for the current request</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
