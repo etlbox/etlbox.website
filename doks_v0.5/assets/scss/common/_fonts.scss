@@ -32,9 +32,9 @@
   font-family: SegoeUI;
   src:
     local("Segoe UI Semibold"),
-    url("/fonts/segoe-ue/semibold/latest.woff2") format("woff2"),
-    url("/fonts/segoe-ue/semibold/latest.woff") format("woff"),
-    url("/fonts/segoe-ue/semibold/latest.ttf") format("truetype");
+    url("fonts/segoe-ue/semibold/latest.woff2") format("woff2"),
+    url("fonts/segoe-ue/semibold/latest.woff") format("woff"),
+    url("fonts/segoe-ue/semibold/latest.ttf") format("truetype");
   font-weight: 600;
 }
 
@@ -42,8 +42,8 @@
   font-family: SegoeUI;
   src:
     local("Segoe UI Bold"),
-    url("/fonts/segoe-ue/bold/latest.woff2") format("woff2"),
-    url("/fonts/segoe-ue/bold/latest.woff") format("woff"),
-    url("/fonts/segoe-ue/bold/latest.ttf") format("truetype");
+    url("fonts/segoe-ue/bold/latest.woff2") format("woff2"),
+    url("fonts/segoe-ue/bold/latest.woff") format("woff"),
+    url("fonts/segoe-ue/bold/latest.ttf") format("truetype");
   font-weight: 700;
 }
