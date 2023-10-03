@@ -24,6 +24,33 @@
           "files": [
             "**.csproj"
           ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Azure.CosmosDb",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Azure.ServiceBus",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Azure.Tables",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
           "src": "..\\..\\..\\etlbox.source\\ETLBox.Couchbase",
           "properties": {
             "TargetFramework": "netstandard2.0"
@@ -46,34 +73,7 @@
           "properties": {
             "TargetFramework": "netstandard2.0"
           }
-        },
-        {
-          "files": [
-            "**.csproj"
-          ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework",
-          "properties": {
-            "TargetFramework": "netstandard2.0"
-          }
-        },
-        {
-          "files": [
-            "**.csproj"
-          ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.MySql",
-          "properties": {
-            "TargetFramework": "netstandard2.0"
-          }
-        },
-        {
-          "files": [
-            "**.csproj"
-          ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework.SqlServer",
-          "properties": {
-            "TargetFramework": "netstandard2.0"
-          }
-        },
+        },        
         {
           "files": [
             "**.csproj"
@@ -177,7 +177,25 @@
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.SapAse",
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Sap.Ase",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Sap.Hana",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Snowflake",
           "properties": {
             "TargetFramework": "netstandard2.0"
           }
