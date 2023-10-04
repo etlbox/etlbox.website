@@ -5,20 +5,24 @@ using System.Text;
 
 namespace DocFxToHugoMD
 {
-    class Program
+    public class Program
     {
         static string DocFxApiFolder = @"C:\Users\andreaslennartz\Github\etlbox\etlbox.website\create_api_md\docfx_project\_site\api";
         static string MainOutputFolder = @"./Output";
         static string OutputFolder = "./Output/api";
 
+        public static string MainFolder = "";
         static void Main(string[] args) {
+            if (args.Length > 0) {
+                MainFolder = args[0];
+            }
             if (!Directory.Exists(MainOutputFolder)) {
                 Directory.CreateDirectory(MainOutputFolder);
             } else {
                 Directory.Delete(MainOutputFolder, true);
                 Directory.CreateDirectory(MainOutputFolder);
             }
-           
+
             int weight = 10000;
             foreach (string apiHtmlFileName in Directory.GetFiles(DocFxApiFolder)) {
                 if (IsInFilterList(apiHtmlFileName)) continue;
@@ -27,8 +31,8 @@ namespace DocFxToHugoMD
                     continue;
                 }
                 HtmlToMdTransformer transformer = new HtmlToMdTransformer() {
-                        Weight = weight++
-                    };
+                    Weight = weight++
+                };
                 string outputFileName = CreateOutputFileNameAndDirectory(apiHtmlFileName);
                 string[] htmlContent = File.ReadAllLines(apiHtmlFileName);
                 string mdContent = transformer.Transform(htmlContent);
@@ -59,7 +63,7 @@ Below is an overview of all classes in each namespace.";
             string fileName = Path.GetFileName(apiHtmlFileName);
             string[] filterListCompleteName = new[]
             {
-                "index.html", "toc.html"                
+                "index.html", "toc.html"
             };
             if (filterListCompleteName.Contains(fileName))
                 return true;
@@ -85,7 +89,7 @@ Below is an overview of all classes in each namespace.";
         }
 
         private static void CreateNamespaceIndexFile(string apiHtmlFileName) {
-            string namespaceName = Path.GetFileName(apiHtmlFileName).Replace(".html","");
+            string namespaceName = Path.GetFileName(apiHtmlFileName).Replace(".html", "");
             string outputFileName = Path.GetFileName(apiHtmlFileName).ToLower();
             string dirName = outputFileName.Substring(0, outputFileName.LastIndexOf("."));
             dirName = Path.Combine(OutputFolder, dirName);

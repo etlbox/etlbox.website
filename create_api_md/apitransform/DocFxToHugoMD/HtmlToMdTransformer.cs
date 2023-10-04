@@ -154,7 +154,10 @@ namespace DocFxToHugoMD
             var ns = match.Groups[1].Value;
             //var sep = match.Groups[2].Value;
             var cl = match.Groups[3].Value;
-            return @$"href=""/api/{ns.ToLower()}/{cl.ToLower()}";
+            if (Program.MainFolder!="")
+                return @$"href=""/{Program.MainFolder}/api/{ns.ToLower()}/{cl.ToLower()}";
+            else 
+                return @$"href=""/api/{ns.ToLower()}/{cl.ToLower()}";
         }
 
         string RemoveNamespaceLink(string line) {

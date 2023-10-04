@@ -33,7 +33,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer",
+          "src": "..\\..\\..\\etlbox.source\\EFBox.SqlServer",
           "properties": {
             "TargetFramework": "netstandard2.0"
           }
@@ -51,7 +51,7 @@
         ]
       }
     ],
-    "dest": "_site_efbox",
+    "dest": "_site",
     "template": [
       "statictoc",
       "templates"

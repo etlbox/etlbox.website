@@ -27,14 +27,14 @@ foreach ($d in $dir){
 #The _site and some obj folder created by docfx may contain some cached date, so we remove it as well
 #remove-item ./obj -Recurse 
 remove-item docfx_project/obj -Recurse
-remove-item docfx_project/_site_efbox -Recurse
+remove-item docfx_project/_site -Recurse
 
 #Then run the API migration (tested, should work like this)
 dotnet build ..\..\etlbox.tests --configuration Debug
 dotnet build apitransform\DocFxToHugoMD --configuration Debug
 
 docfx docfx_project/docfx_efbox.json --build
-./apitransform/DocFxToHugoMD/bin/Debug/net5.0/DocFxToHugoMD.exe
+./apitransform/DocFxToHugoMD/bin/Debug/net5.0/DocFxToHugoMD.exe docs
 remove-item 'C:\Users\andreaslennartz\Github\etlbox\efbox.website\doks_1.0\content\docs\api' -Recurse
-ove-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\efbox.website\doks_1.5\content\docs\api' 
+move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\efbox.website\doks_1.0\content\docs' 
 pause
