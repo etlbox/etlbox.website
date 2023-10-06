@@ -22,19 +22,10 @@ namespace DocFxToHugoMD
         }
 
         public string Transform(string[] content) {
-            bool isMainNamespace = false;
             for (int linenr = 1; linenr <= content.Length; linenr++) {
                 string line = content[linenr - 1];
                 string linetocheck = content[linenr - 1].Trim();
 
-                if (linetocheck.Contains("Namespace") &&
-                    (linetocheck.Contains(">ETLBox<") ||
-                    linetocheck.Contains(">ETLBox.DataFlow<") ||
-                    linetocheck.Contains(">ETLBox.ControlFlow<")
-                    ))
-                    //This needs to be identified using Regex:
-                    /*<h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.html">ETLBox</a>.<a class="xref" href="ETLBox.AnalysisServices.html">AnalysisServices</a></h6>*/
-                    isMainNamespace = false;
                 if (linetocheck.StartsWith(@"<article")) {
                     IsInArticle = true;
                     ParseNamespace(linetocheck);
@@ -79,7 +70,7 @@ namespace DocFxToHugoMD
                 }
             }
 
-            return CreateHeader(isMainNamespace) +
+            return CreateHeader() +
                 Output.ToString()
                 + CreateFooter();
         }
@@ -174,10 +165,7 @@ namespace DocFxToHugoMD
             // <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.Connection.html">ETLBox.Connection</a></h6>
             return $@"<h6><strong>Namespace</strong>: {Namespace}</h6>";
         }
-        private string CreateHeader(bool isMainNamespace) {
-            int weight = Weight;
-            if (isMainNamespace)
-                weight = Weight - 1000;
+        private string CreateHeader() {
             return $@"---
 title: ""{CreateTitle()}""
 description: ""{CreateDescription()}""
@@ -186,7 +174,7 @@ images: []
 menu:
   api:
     parent: ""{Namespace.ToLower()}""
-weight: {weight}
+weight: {Weight}
 toc: false
 ---
 

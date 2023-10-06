@@ -88,6 +88,7 @@ Below is an overview of all classes in each namespace.";
             return false;
         }
 
+        static int namespaceIndexFileCount = 1;
         private static void CreateNamespaceIndexFile(string apiHtmlFileName) {
             string namespaceName = Path.GetFileName(apiHtmlFileName).Replace(".html", "");
             string outputFileName = Path.GetFileName(apiHtmlFileName).ToLower();
@@ -96,10 +97,18 @@ Below is an overview of all classes in each namespace.";
             if (!Directory.Exists(dirName))
                 Directory.CreateDirectory(dirName);
             string fileName = Path.Combine(dirName, "_index.md");
+            int weightFactor = 100;
+            if (apiHtmlFileName.EndsWith("ETLBox.html") ||
+                apiHtmlFileName.EndsWith("ETLBox.DataFlow.html") ||
+                apiHtmlFileName.EndsWith("ETLBox.ControlFlow.html") ||
+                apiHtmlFileName.EndsWith("ETLBox.Helper.html")
+                )
+                weightFactor = 1;
             File.WriteAllText(fileName, $@"---
 title : ""{namespaceName}""
 description: ""All classes of the namespace {namespaceName}""
 draft: false
+weight: {namespaceIndexFileCount++ * weightFactor}
 ---
 ");
         }
