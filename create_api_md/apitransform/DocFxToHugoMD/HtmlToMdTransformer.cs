@@ -127,7 +127,11 @@ namespace DocFxToHugoMD
             {
                 "ETLBox.Redis.RedisDestination-1.RedisSetParameter.html",
                 "etlbox.redis.redisdestination-1/redissetparameter"
-            }           
+            },
+            {
+                "ETLBox.Sap.Hana.HanaConnectionString.html",
+                "etlbox.sap.hana/hanaconnectionstring"
+            }
         };
         private string AdjustLinks(string line) {
             if (!line.Contains(" href=")) return line;

@@ -21,7 +21,7 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.Sap.Hana.HanaConnectionString.html">HanaConnectionString</a>, <span class="xref">DbConnectionStringBuilder</span>&gt;</div>
+    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.sap.hana/hanaconnectionstring">HanaConnectionString</a>, <span class="xref">DbConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">HanaConnectionString</span></div>
   </div>
   <div class="implements">
