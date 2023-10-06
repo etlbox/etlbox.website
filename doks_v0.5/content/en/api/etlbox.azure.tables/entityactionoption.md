@@ -80,7 +80,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="ETLBox.Azure.Tables.EntityActionType.html">EntityActionType</a></td>
+        <td><a class="xref" href="/api/etlbox.azure.tables/entityactiontype">EntityActionType</a></td>
         <td></td>
       </tr>
     </tbody>

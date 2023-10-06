@@ -30,7 +30,7 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionstring">OleDbConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionstring">OracleConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionstring">PostgresConnectionString</a></div>
-      <div class="level2"><a class="xref" href="ETLBox.Sap.Hana.HanaConnectionString.html">HanaConnectionString</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.sap.hana/hanaconnectionstring">HanaConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionstring">SnowflakeConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionstring">SQLiteConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionstring">SqlConnectionString</a></div>

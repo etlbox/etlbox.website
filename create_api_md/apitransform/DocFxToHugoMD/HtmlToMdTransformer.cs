@@ -22,9 +22,19 @@ namespace DocFxToHugoMD
         }
 
         public string Transform(string[] content) {
+            bool isMainNamespace = false;
             for (int linenr = 1; linenr <= content.Length; linenr++) {
                 string line = content[linenr - 1];
                 string linetocheck = content[linenr - 1].Trim();
+
+                if (linetocheck.Contains("Namespace") &&
+                    (linetocheck.Contains(">ETLBox<") ||
+                    linetocheck.Contains(">ETLBox.DataFlow<") ||
+                    linetocheck.Contains(">ETLBox.ControlFlow<")
+                    ))
+                    //This needs to be identified using Regex:
+                    /*<h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.html">ETLBox</a>.<a class="xref" href="ETLBox.AnalysisServices.html">AnalysisServices</a></h6>*/
+                    isMainNamespace = false;
                 if (linetocheck.StartsWith(@"<article")) {
                     IsInArticle = true;
                     ParseNamespace(linetocheck);
@@ -69,7 +79,7 @@ namespace DocFxToHugoMD
                 }
             }
 
-            return CreateHeader() +
+            return CreateHeader(isMainNamespace) +
                 Output.ToString()
                 + CreateFooter();
         }
@@ -117,29 +127,25 @@ namespace DocFxToHugoMD
             {
                 "ETLBox.Redis.RedisDestination-1.RedisSetParameter.html",
                 "etlbox.redis.redisdestination-1/redissetparameter"
-            },
+            }           
         };
         private string AdjustLinks(string line) {
             if (!line.Contains(" href=")) return line;
-            //Check if link has inner class
-            //e.g. href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html"
-            //if (line.Contains("class=\"level4\"") &&  line.Count(c => c == '.') == 6) {
-            //    MatchEvaluator evaluator = new MatchEvaluator(LinkReplacementWithInnerClass);
-            //    string regex = @"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)(?<sep2>\.)(?<ic>[\w\d-]*)\.html";
-            //    return Regex.Replace(line, regex, evaluator);
-            //}
-            //else {
             foreach (var kvp in ManualLinkMapping) {
                 if (line.Contains(kvp.Key))
                     line = line.Replace(kvp.Key, "/api/" + kvp.Value.Trim());
             }
             MatchEvaluator evaluator = new MatchEvaluator(LinkReplacement);
-            //Previous regex, that worked with NS with one or two dots (but not with zero dots)
-            //@"href=\""(?<ns>\w*\.\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
-            //New regex, now works with Namespaces with no or one dot
-            string regex = @"href=\""(?<ns>\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
-            return Regex.Replace(line, regex, evaluator);
-            //}
+            
+            //Needs to work with 3 and 4 dots as well, e.g.
+            //    "ETLBox.MySql.MySqlonnectionManager.html" -> "etlbox.mysql/mysqlconnectionmanager.html"
+            //    "ETLBox.Sap.Ase.AseConnectionManager.html" -> "etlbox.sap.ase/aseconnectionmanager.html"
+            string regex3Dots = @"href=\""(?<ns>\w*\.?\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
+            string regex4Dots = @"href=\""(?<ns>\w*\.\w+\.\w+)(?<sep>\.)(?<cl>[\w\d-]*)\.html";
+            var newLine = Regex.Replace(line, regex3Dots, evaluator);
+            if (line == newLine) //regex3Dots did not match
+                newLine = Regex.Replace(line, regex4Dots, evaluator);
+            return newLine;
         }
 
         string LinkReplacementWithInnerClass(Match match) {
@@ -164,7 +170,10 @@ namespace DocFxToHugoMD
             // <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.Connection.html">ETLBox.Connection</a></h6>
             return $@"<h6><strong>Namespace</strong>: {Namespace}</h6>";
         }
-        private string CreateHeader() {
+        private string CreateHeader(bool isMainNamespace) {
+            int weight = Weight;
+            if (isMainNamespace)
+                weight = Weight - 1000;
             return $@"---
 title: ""{CreateTitle()}""
 description: ""{CreateDescription()}""
@@ -173,7 +182,7 @@ images: []
 menu:
   api:
     parent: ""{Namespace.ToLower()}""
-weight: {Weight}
+weight: {weight}
 toc: false
 ---
 

@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div class="level5"><span class="xref">TableDestination&lt;TInput&gt;</span></div>
-      <div class="level6"><a class="xref" href="ETLBox.Azure.Tables.TableDestination.html">TableDestination</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.azure.tables/tabledestination">TableDestination</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -332,9 +332,9 @@ toc: false
   <a id="ETLBox_Azure_Tables_TableDestination_1_ConnectionString_" data-uid="ETLBox.Azure.Tables.TableDestination`1.ConnectionString*"></a>
   <h4 id="ETLBox_Azure_Tables_TableDestination_1_ConnectionString" data-uid="ETLBox.Azure.Tables.TableDestination`1.ConnectionString">ConnectionString</h4>
   <div class="markdown level1 summary"><p>Connection string for the Azure Table Storage Account.
-Either provide the <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or an <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a> (optionally with <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>
-or <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a>).
-Alternatively, you can provide an already existing <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableClient</a> instance.</p>
+Either provide the <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or an <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a> (optionally with <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>
+or <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a>).
+Alternatively, you can provide an already existing <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableClient</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -363,9 +363,9 @@ Alternatively, you can provide an already existing <a class="xref" href="ETLBox.
   <a id="ETLBox_Azure_Tables_TableDestination_1_Endpoint_" data-uid="ETLBox.Azure.Tables.TableDestination`1.Endpoint*"></a>
   <h4 id="ETLBox_Azure_Tables_TableDestination_1_Endpoint" data-uid="ETLBox.Azure.Tables.TableDestination`1.Endpoint">Endpoint</h4>
   <div class="markdown level1 summary"><p>Endpoint uri for the Azure Table Storage Account.
-Either provide the <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or an <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a> (optionally with <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>
-or <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a>).
-Alternatively, you can provide an already existing <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableClient</a> instance.</p>
+Either provide the <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or an <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a> (optionally with <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>
+or <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a>).
+Alternatively, you can provide an already existing <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableClient</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -415,14 +415,14 @@ should be added, updated, deleted or upserted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<a class="xref" href="ETLBox.Azure.Tables.EntityActionOption.html">EntityActionOption</a>, TInput&gt;</td>
+        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<a class="xref" href="/api/etlbox.azure.tables/entityactionoption">EntityActionOption</a>, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_Azure_Tables_TableDestination_1_TableClient_" data-uid="ETLBox.Azure.Tables.TableDestination`1.TableClient*"></a>
   <h4 id="ETLBox_Azure_Tables_TableDestination_1_TableClient" data-uid="ETLBox.Azure.Tables.TableDestination`1.TableClient">TableClient</h4>
-  <div class="markdown level1 summary"><p>An existing TableClient which is then used for the connection. (No <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>
+  <div class="markdown level1 summary"><p>An existing TableClient which is then used for the connection. (No <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">ConnectionString</a> or <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>
 needed if this is provided)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -507,7 +507,7 @@ needed if this is provided)</p>
   </table>
   <a id="ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential_" data-uid="ETLBox.Azure.Tables.TableDestination`1.TableSharedKeyCredential*"></a>
   <h4 id="ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential" data-uid="ETLBox.Azure.Tables.TableDestination`1.TableSharedKeyCredential">TableSharedKeyCredential</h4>
-  <div class="markdown level1 summary"><p>When providing an <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>, you can provide either a <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a> or <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>.</p>
+  <div class="markdown level1 summary"><p>When providing an <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>, you can provide either a <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a> or <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -566,7 +566,7 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <a id="ETLBox_Azure_Tables_TableDestination_1_TokenCredential_" data-uid="ETLBox.Azure.Tables.TableDestination`1.TokenCredential*"></a>
   <h4 id="ETLBox_Azure_Tables_TableDestination_1_TokenCredential" data-uid="ETLBox.Azure.Tables.TableDestination`1.TokenCredential">TokenCredential</h4>
-  <div class="markdown level1 summary"><p>When providing an <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>, you can provide either a <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a> or <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>.</p>
+  <div class="markdown level1 summary"><p>When providing an <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">Endpoint</a>, you can provide either a <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableSharedKeyCredential</a> or <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TokenCredential</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html">TableDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tabledestination-1">TableDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">TableDestination</span></div>
   </div>
   <div class="implements">
@@ -41,49 +41,49 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TaskName">TableDestination&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TaskName">TableDestination&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">TableDestination&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_ConnectionString">TableDestination&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_Endpoint">TableDestination&lt;ExpandoObject&gt;.Endpoint</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_Endpoint">TableDestination&lt;ExpandoObject&gt;.Endpoint</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableDestination&lt;ExpandoObject&gt;.TableSharedKeyCredential</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableSharedKeyCredential">TableDestination&lt;ExpandoObject&gt;.TableSharedKeyCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TableDestination&lt;ExpandoObject&gt;.TokenCredential</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TokenCredential">TableDestination&lt;ExpandoObject&gt;.TokenCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableClientOptions">TableDestination&lt;ExpandoObject&gt;.TableClientOptions</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableClientOptions">TableDestination&lt;ExpandoObject&gt;.TableClientOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableDestination&lt;ExpandoObject&gt;.TableClient</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableClient">TableDestination&lt;ExpandoObject&gt;.TableClient</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_TableName">TableDestination&lt;ExpandoObject&gt;.TableName</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_TableName">TableDestination&lt;ExpandoObject&gt;.TableName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_SetEntityActionOptions">TableDestination&lt;ExpandoObject&gt;.SetEntityActionOptions</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_SetEntityActionOptions">TableDestination&lt;ExpandoObject&gt;.SetEntityActionOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_UseTransactionalBatch">TableDestination&lt;ExpandoObject&gt;.UseTransactionalBatch</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_UseTransactionalBatch">TableDestination&lt;ExpandoObject&gt;.UseTransactionalBatch</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_PrepareParameter">TableDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_PrepareParameter">TableDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_CheckParameter">TableDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_CheckParameter">TableDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_PrepareWrite">TableDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_PrepareWrite">TableDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_BulkInsertData__0___">TableDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_BulkInsertData__0___">TableDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html#ETLBox_Azure_Tables_TableDestination_1_FinishWrite">TableDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tabledestination-1#ETLBox_Azure_Tables_TableDestination_1_FinishWrite">TableDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite">DataFlowBatchDestination&lt;ExpandoObject&gt;.BeforeBatchWrite</a>

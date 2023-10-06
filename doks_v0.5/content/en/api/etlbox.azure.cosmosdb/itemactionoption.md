@@ -107,7 +107,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="ETLBox.Azure.CosmosDb.ItemAction.html">ItemAction</a></td>
+        <td><a class="xref" href="/api/etlbox.azure.cosmosdb/itemaction">ItemAction</a></td>
         <td></td>
       </tr>
     </tbody>

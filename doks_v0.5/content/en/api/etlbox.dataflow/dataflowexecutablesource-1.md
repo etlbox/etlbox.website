@@ -25,9 +25,9 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><span class="xref">DataFlowExecutableSource&lt;TOutput&gt;</span></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html">CosmosSource&lt;TOutput&gt;</a></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html">ServiceBusSource&lt;TOutput&gt;</a></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html">TableSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1">CosmosSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1">ServiceBusSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tablesource-1">TableSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasesource-1">CouchbaseSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchsource-1">CustomBatchSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/customsource-1">CustomSource&lt;TOutput&gt;</a></div>

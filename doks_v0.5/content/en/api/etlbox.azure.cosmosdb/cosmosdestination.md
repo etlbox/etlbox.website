@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html">CosmosDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1">CosmosDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">CosmosDestination</span></div>
   </div>
   <div class="implements">
@@ -41,52 +41,52 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_TaskName">CosmosDestination&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_TaskName">CosmosDestination&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_ConnectionString">CosmosDestination&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_ConnectionString">CosmosDestination&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_AzureKeyCredential">CosmosDestination&lt;ExpandoObject&gt;.AzureKeyCredential</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_AzureKeyCredential">CosmosDestination&lt;ExpandoObject&gt;.AzureKeyCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_AzureTokenCredential">CosmosDestination&lt;ExpandoObject&gt;.AzureTokenCredential</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_AzureTokenCredential">CosmosDestination&lt;ExpandoObject&gt;.AzureTokenCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_AccountEndpoint">CosmosDestination&lt;ExpandoObject&gt;.AccountEndpoint</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_AccountEndpoint">CosmosDestination&lt;ExpandoObject&gt;.AccountEndpoint</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_AuthKeyOrResourceToken">CosmosDestination&lt;ExpandoObject&gt;.AuthKeyOrResourceToken</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_AuthKeyOrResourceToken">CosmosDestination&lt;ExpandoObject&gt;.AuthKeyOrResourceToken</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_DatabaseName">CosmosDestination&lt;ExpandoObject&gt;.DatabaseName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_DatabaseName">CosmosDestination&lt;ExpandoObject&gt;.DatabaseName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_ContainerName">CosmosDestination&lt;ExpandoObject&gt;.ContainerName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_ContainerName">CosmosDestination&lt;ExpandoObject&gt;.ContainerName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_CosmosClient">CosmosDestination&lt;ExpandoObject&gt;.CosmosClient</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_CosmosClient">CosmosDestination&lt;ExpandoObject&gt;.CosmosClient</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_UseTransactionalBatch">CosmosDestination&lt;ExpandoObject&gt;.UseTransactionalBatch</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_UseTransactionalBatch">CosmosDestination&lt;ExpandoObject&gt;.UseTransactionalBatch</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_SetItemActionOptions">CosmosDestination&lt;ExpandoObject&gt;.SetItemActionOptions</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_SetItemActionOptions">CosmosDestination&lt;ExpandoObject&gt;.SetItemActionOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_PrepareParameter">CosmosDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_PrepareParameter">CosmosDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_CheckParameter">CosmosDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_CheckParameter">CosmosDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_PrepareWrite">CosmosDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_PrepareWrite">CosmosDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_BulkInsertData__0___">CosmosDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_BulkInsertData__0___">CosmosDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html#ETLBox_Azure_CosmosDb_CosmosDestination_1_FinishWrite">CosmosDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1#ETLBox_Azure_CosmosDb_CosmosDestination_1_FinishWrite">CosmosDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite">DataFlowBatchDestination&lt;ExpandoObject&gt;.BeforeBatchWrite</a>

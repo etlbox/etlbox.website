@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">CosmosSource&lt;TOutput&gt;</span></div>
-      <div class="level6"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource.html">CosmosSource</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource">CosmosSource</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -331,8 +331,8 @@ toc: false
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AccountEndpoint*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AccountEndpoint">AccountEndpoint</h4>
   <div class="markdown level1 summary"><p>Optional: An Azure Cosmos Db account endpoint used when opening the connection
-(works only in combination with <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">AuthKeyOrResourceToken</a>)
-<a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>, <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> and <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> have no effect then.</p>
+(works only in combination with <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">AuthKeyOrResourceToken</a>)
+<a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>, <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> and <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> have no effect then.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -361,8 +361,8 @@ toc: false
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AuthKeyOrResourceToken*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AuthKeyOrResourceToken">AuthKeyOrResourceToken</h4>
   <div class="markdown level1 summary"><p>Optional: An Azure Authorization key or resource token which is used when opening the connection
-(works only in combination with <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">AccountEndpoint</a>)
-/// <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>, <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> and <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> have no effect then.</p>
+(works only in combination with <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">AccountEndpoint</a>)
+/// <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>, <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> and <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> have no effect then.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -391,7 +391,7 @@ toc: false
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AzureKeyCredential*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AzureKeyCredential">AzureKeyCredential</h4>
   <div class="markdown level1 summary"><p>Optional: An Azure Key Credential used when opening the connection
-(works only in combination with <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>)</p>
+(works only in combination with <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -420,7 +420,7 @@ toc: false
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AzureTokenCredential*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.AzureTokenCredential">AzureTokenCredential</h4>
   <div class="markdown level1 summary"><p>Optional: An Azure Token Credential used when opening the connection
-(works only in combination with <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>)</p>
+(works only in combination with <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a>)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -449,9 +449,9 @@ toc: false
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.ConnectionString*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.ConnectionString">ConnectionString</h4>
   <div class="markdown level1 summary"><p>The connection string which points to the Azure Cosmos Db. The connection string may contain all relevant connection information.
-Please also specify the <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_DatabaseName">DatabaseName</a> and <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ContainerName">ContainerName</a>.
-Optional: You can also provide either an <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> or <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> along with the connection string.
-Alternatively, you can use the <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">AccountEndpoint</a> and <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">AuthKeyOrResourceToken</a> to establish a connection.</p>
+Please also specify the <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_DatabaseName">DatabaseName</a> and <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ContainerName">ContainerName</a>.
+Optional: You can also provide either an <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">AzureKeyCredential</a> or <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">AzureTokenCredential</a> along with the connection string.
+Alternatively, you can use the <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">AccountEndpoint</a> and <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">AuthKeyOrResourceToken</a> to establish a connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -507,7 +507,7 @@ Alternatively, you can use the <a class="xref" href="ETLBox.Azure.CosmosDb.Cosmo
   </table>
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_CosmosClient_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.CosmosClient*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_CosmosClient" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.CosmosClient">CosmosClient</h4>
-  <div class="markdown level1 summary"><p>Optional: Instead of providing the <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a> and/or other credentials, you can also create
+  <div class="markdown level1 summary"><p>Optional: Instead of providing the <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">ConnectionString</a> and/or other credentials, you can also create
 the CosmosClient manually in your code and assign it to this property. This client will then be used,
 and no new client won't be created.
 Please make sure bulk insert is allowed in the client.</p>
@@ -566,8 +566,8 @@ Please make sure bulk insert is allowed in the client.</p>
   </table>
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.QueryDefinition*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.QueryDefinition">QueryDefinition</h4>
-  <div class="markdown level1 summary"><p>The query definition to retrieve the data. If no query definition is provided, <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">Sql</a>, the definition will be automatically generated from the
-provided <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">Sql</a> statement.</p>
+  <div class="markdown level1 summary"><p>The query definition to retrieve the data. If no query definition is provided, <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">Sql</a>, the definition will be automatically generated from the
+provided <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">Sql</a> statement.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -623,7 +623,7 @@ provided <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_
   </table>
   <a id="ETLBox_Azure_CosmosDb_CosmosSource_1_Sql_" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.Sql*"></a>
   <h4 id="ETLBox_Azure_CosmosDb_CosmosSource_1_Sql" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1.Sql">Sql</h4>
-  <div class="markdown level1 summary"><p>The Sql used to retrieve the data. Alternatively, you can also provide a <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition">QueryDefinition</a>.</p>
+  <div class="markdown level1 summary"><p>The Sql used to retrieve the data. Alternatively, you can also provide a <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition">QueryDefinition</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

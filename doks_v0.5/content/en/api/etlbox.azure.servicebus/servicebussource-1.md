@@ -17,10 +17,10 @@ toc: false
 </h1>
   <div class="markdown level0 summary"><p>A data flow source for Azure service bus.
 This will receive messages from the source for furhter processing.
-<a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.
-Adjust the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ReceiverOptions</a> to your needs - the default receive mode
+<a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.
+Adjust the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ReceiverOptions</a> to your needs - the default receive mode
 is <see cref="!:ServiceBusReceiveMode.PeekLock"></see>.
-The source will read until either the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">MaxWaitTime</a> has been reached during
+The source will read until either the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">MaxWaitTime</a> has been reached during
 a request or if no new messages can be read from the source.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -32,7 +32,7 @@ a request or if no new messages can be read from the source.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">ServiceBusSource&lt;TOutput&gt;</span></div>
-      <div class="level6"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource.html">ServiceBusSource</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.azure.servicebus/servicebussource">ServiceBusSource</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -296,7 +296,7 @@ a request or if no new messages can be read from the source.</p>
   <a id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client_" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.Client*"></a>
   <h4 id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.Client">Client</h4>
   <div class="markdown level1 summary"><p>The client that owns the connection and can be used to create senders and receivers.<br>
-Automatically created if you provide a <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ConnectionString">ConnectionString</a>, unless you provide your own instance here.</p>
+Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ConnectionString">ConnectionString</a>, unless you provide your own instance here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -355,7 +355,7 @@ Automatically created if you provide a <a class="xref" href="ETLBox.Azure.Servic
   <div class="markdown level1 summary"><p>If you provide a namespace connection  string, this component will create new
 ServiceBusClient object to communicate with the Azure Service Bus.
 If you need to reuse an existing Client object, you can provide your own
-via the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">Client</a> property.</p>
+via the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">Client</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -503,7 +503,7 @@ will send the already received message into the data flow.</p>
   <a id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_Receiver_" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.Receiver*"></a>
   <h4 id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_Receiver" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.Receiver">Receiver</h4>
   <div class="markdown level1 summary"><p>The receiver used to read messages to the queue.
-Automatically created from the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">Client</a>.</p>
+Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">Client</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

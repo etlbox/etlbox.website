@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html">ServiceBusDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1">ServiceBusDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">ServiceBusDestination</span></div>
   </div>
   <div class="implements">
@@ -41,43 +41,43 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_TaskName">ServiceBusDestination&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_TaskName">ServiceBusDestination&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ClientOptions">ServiceBusDestination&lt;ExpandoObject&gt;.ClientOptions</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ClientOptions">ServiceBusDestination&lt;ExpandoObject&gt;.ClientOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_SenderOptions">ServiceBusDestination&lt;ExpandoObject&gt;.SenderOptions</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_SenderOptions">ServiceBusDestination&lt;ExpandoObject&gt;.SenderOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ConnectionString">ServiceBusDestination&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ConnectionString">ServiceBusDestination&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">ServiceBusDestination&lt;ExpandoObject&gt;.Client</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">ServiceBusDestination&lt;ExpandoObject&gt;.Client</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender">ServiceBusDestination&lt;ExpandoObject&gt;.Sender</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender">ServiceBusDestination&lt;ExpandoObject&gt;.Sender</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_QueueOrTopicName">ServiceBusDestination&lt;ExpandoObject&gt;.QueueOrTopicName</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_QueueOrTopicName">ServiceBusDestination&lt;ExpandoObject&gt;.QueueOrTopicName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_MessageCreation">ServiceBusDestination&lt;ExpandoObject&gt;.MessageCreation</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_MessageCreation">ServiceBusDestination&lt;ExpandoObject&gt;.MessageCreation</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_PrepareParameter">ServiceBusDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_PrepareParameter">ServiceBusDestination&lt;ExpandoObject&gt;.PrepareParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_CheckParameter">ServiceBusDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_CheckParameter">ServiceBusDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_PrepareWrite">ServiceBusDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_PrepareWrite">ServiceBusDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_BulkInsertData__0___">ServiceBusDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_BulkInsertData__0___">ServiceBusDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_FinishWrite">ServiceBusDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_FinishWrite">ServiceBusDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite">DataFlowBatchDestination&lt;ExpandoObject&gt;.BeforeBatchWrite</a>

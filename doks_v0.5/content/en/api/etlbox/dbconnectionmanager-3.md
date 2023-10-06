@@ -30,8 +30,8 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionmanager">OleDbConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionmanager">OracleConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionmanager">PostgresConnectionManager</a></div>
-      <div class="level2"><a class="xref" href="ETLBox.Sap.Ase.AseConnectionManager.html">AseConnectionManager</a></div>
-      <div class="level2"><a class="xref" href="ETLBox.Sap.Hana.HanaConnectionManager.html">HanaConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.sap.ase/aseconnectionmanager">AseConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.sap.hana/hanaconnectionmanager">HanaConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionmanager">SnowflakeConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionmanager">SQLiteConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionmanager">SqlConnectionManager</a></div>

@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html">TableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tablesource-1">TableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">TableSource</span></div>
   </div>
   <div class="implements">
@@ -41,58 +41,58 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TaskName">TableSource&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TaskName">TableSource&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_ConnectionString">TableSource&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_ConnectionString">TableSource&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_Endpoint">TableSource&lt;ExpandoObject&gt;.Endpoint</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_Endpoint">TableSource&lt;ExpandoObject&gt;.Endpoint</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TableSharedKeyCredential">TableSource&lt;ExpandoObject&gt;.TableSharedKeyCredential</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TableSharedKeyCredential">TableSource&lt;ExpandoObject&gt;.TableSharedKeyCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TokenCredential">TableSource&lt;ExpandoObject&gt;.TokenCredential</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TokenCredential">TableSource&lt;ExpandoObject&gt;.TokenCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TableClientOptions">TableSource&lt;ExpandoObject&gt;.TableClientOptions</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TableClientOptions">TableSource&lt;ExpandoObject&gt;.TableClientOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TableClient">TableSource&lt;ExpandoObject&gt;.TableClient</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TableClient">TableSource&lt;ExpandoObject&gt;.TableClient</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_TableName">TableSource&lt;ExpandoObject&gt;.TableName</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_TableName">TableSource&lt;ExpandoObject&gt;.TableName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_Filter">TableSource&lt;ExpandoObject&gt;.Filter</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_Filter">TableSource&lt;ExpandoObject&gt;.Filter</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_MaxPerPage">TableSource&lt;ExpandoObject&gt;.MaxPerPage</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_MaxPerPage">TableSource&lt;ExpandoObject&gt;.MaxPerPage</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_Select">TableSource&lt;ExpandoObject&gt;.Select</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_Select">TableSource&lt;ExpandoObject&gt;.Select</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_PrepareParameter">TableSource&lt;ExpandoObject&gt;.PrepareParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_PrepareParameter">TableSource&lt;ExpandoObject&gt;.PrepareParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_CheckParameter">TableSource&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_CheckParameter">TableSource&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_InitParameter">TableSource&lt;ExpandoObject&gt;.InitParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_InitParameter">TableSource&lt;ExpandoObject&gt;.InitParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_OnExecutionDoSynchronousWork">TableSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_OnExecutionDoSynchronousWork">TableSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_OnExecutionDoAsyncWork">TableSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_OnExecutionDoAsyncWork">TableSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_CleanUpOnSuccess">TableSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_CleanUpOnSuccess">TableSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html#ETLBox_Azure_Tables_TableSource_1_CleanUpOnFaulted_System_Exception_">TableSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.azure.tables/tablesource-1#ETLBox_Azure_Tables_TableSource_1_CleanUpOnFaulted_System_Exception_">TableSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit">DataFlowExecutableSource&lt;ExpandoObject&gt;.Limit</a>

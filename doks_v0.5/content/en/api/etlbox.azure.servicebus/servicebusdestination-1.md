@@ -26,7 +26,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div class="level5"><span class="xref">ServiceBusDestination&lt;TInput&gt;</span></div>
-      <div class="level6"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination.html">ServiceBusDestination</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination">ServiceBusDestination</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -269,7 +269,7 @@ toc: false
   <a id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client_" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1.Client*"></a>
   <h4 id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1.Client">Client</h4>
   <div class="markdown level1 summary"><p>The client that owns the connection and can be used to create senders and receivers.<br>
-Automatically created if you provide a <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ConnectionString">ConnectionString</a>, unless you provide your own instance here.</p>
+Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_ConnectionString">ConnectionString</a>, unless you provide your own instance here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -328,7 +328,7 @@ Automatically created if you provide a <a class="xref" href="ETLBox.Azure.Servic
   <div class="markdown level1 summary"><p>If you provide a namespace connection  string, this component will create new
 ServiceBusClient and ServiceBusSender objects to communicate with the Azure Service Bus.
 If you need to reuse existing Client/Sender objects, you can provide your own
-via the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">Client</a> and <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender">Sender</a> properties.</p>
+via the <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">Client</a> and <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender">Sender</a> properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -414,7 +414,7 @@ Define your own serialization function here.</p>
   <a id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender_" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1.Sender*"></a>
   <h4 id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Sender" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1.Sender">Sender</h4>
   <div class="markdown level1 summary"><p>The sender used to publish messages to the queue.
-Automatically created from the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">Client</a>.</p>
+Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1#ETLBox_Azure_ServiceBus_ServiceBusDestination_1_Client">Client</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

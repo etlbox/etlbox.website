@@ -256,7 +256,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="ETLBox.Sap.Hana.HanaConnectionString.html">HanaConnectionString</a></td>
+        <td><a class="xref" href="/api/etlbox.sap.hana/hanaconnectionstring">HanaConnectionString</a></td>
         <td></td>
       </tr>
     </tbody>

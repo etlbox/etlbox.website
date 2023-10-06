@@ -24,9 +24,9 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><span class="xref">DataFlowBatchDestination&lt;TInput&gt;</span></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html">CosmosDestination&lt;TInput&gt;</a></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html">ServiceBusDestination&lt;TInput&gt;</a></div>
-      <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html">TableDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmosdestination-1">CosmosDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.servicebus/servicebusdestination-1">ServiceBusDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tabledestination-1">TableDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasedestination-1">CouchbaseDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination-1">CustomBatchDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbdestination-1">DbDestination&lt;TInput&gt;</a></div>

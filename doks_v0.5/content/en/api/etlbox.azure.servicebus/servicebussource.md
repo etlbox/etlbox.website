@@ -17,10 +17,10 @@ toc: false
 </h1>
   <div class="markdown level0 summary"><p>A data flow source for Azure service bus.
 This will receive messages from the source for furhter processing.
-<a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.
-Adjust the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ReceiverOptions</a> to your needs - the default receive mode
+<a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.
+Adjust the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ReceiverOptions</a> to your needs - the default receive mode
 is <see cref="!:ServiceBusReceiveMode.PeekLock"></see>.
-The source will read until either the <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">MaxWaitTime</a> has been reached during
+The source will read until either the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">MaxWaitTime</a> has been reached during
 a request or if no new messages can be read from the source.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -31,7 +31,7 @@ a request or if no new messages can be read from the source.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html">ServiceBusSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1">ServiceBusSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">ServiceBusSource</span></div>
   </div>
   <div class="implements">
@@ -47,55 +47,55 @@ a request or if no new messages can be read from the source.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_TaskName">ServiceBusSource&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_TaskName">ServiceBusSource&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ClientOptions">ServiceBusSource&lt;ExpandoObject&gt;.ClientOptions</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ClientOptions">ServiceBusSource&lt;ExpandoObject&gt;.ClientOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ConnectionString">ServiceBusSource&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ConnectionString">ServiceBusSource&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">ServiceBusSource&lt;ExpandoObject&gt;.Client</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Client">ServiceBusSource&lt;ExpandoObject&gt;.Client</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Receiver">ServiceBusSource&lt;ExpandoObject&gt;.Receiver</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_Receiver">ServiceBusSource&lt;ExpandoObject&gt;.Receiver</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ServiceBusSource&lt;ExpandoObject&gt;.ReceiverOptions</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ServiceBusSource&lt;ExpandoObject&gt;.ReceiverOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_QueueOrTopicName">ServiceBusSource&lt;ExpandoObject&gt;.QueueOrTopicName</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_QueueOrTopicName">ServiceBusSource&lt;ExpandoObject&gt;.QueueOrTopicName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_SubscriptionName">ServiceBusSource&lt;ExpandoObject&gt;.SubscriptionName</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_SubscriptionName">ServiceBusSource&lt;ExpandoObject&gt;.SubscriptionName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">ServiceBusSource&lt;ExpandoObject&gt;.MaxMessages</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">ServiceBusSource&lt;ExpandoObject&gt;.MaxMessages</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ContinueReceiving">ServiceBusSource&lt;ExpandoObject&gt;.ContinueReceiving</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ContinueReceiving">ServiceBusSource&lt;ExpandoObject&gt;.ContinueReceiving</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">ServiceBusSource&lt;ExpandoObject&gt;.MaxWaitTime</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">ServiceBusSource&lt;ExpandoObject&gt;.MaxWaitTime</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CheckParameter">ServiceBusSource&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CheckParameter">ServiceBusSource&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_InitParameter">ServiceBusSource&lt;ExpandoObject&gt;.InitParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_InitParameter">ServiceBusSource&lt;ExpandoObject&gt;.InitParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoSynchronousWork">ServiceBusSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoSynchronousWork">ServiceBusSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoAsyncWork">ServiceBusSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoAsyncWork">ServiceBusSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CleanUpOnSuccess">ServiceBusSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CleanUpOnSuccess">ServiceBusSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CleanUpOnFaulted_System_Exception_">ServiceBusSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_CleanUpOnFaulted_System_Exception_">ServiceBusSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit">DataFlowExecutableSource&lt;ExpandoObject&gt;.Limit</a>

@@ -25,7 +25,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html">CosmosSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1">CosmosSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div class="level6"><span class="xref">CosmosSource</span></div>
   </div>
   <div class="implements">
@@ -41,61 +41,61 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_TaskName">CosmosSource&lt;ExpandoObject&gt;.TaskName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_TaskName">CosmosSource&lt;ExpandoObject&gt;.TaskName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">CosmosSource&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ConnectionString">CosmosSource&lt;ExpandoObject&gt;.ConnectionString</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">CosmosSource&lt;ExpandoObject&gt;.AzureKeyCredential</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureKeyCredential">CosmosSource&lt;ExpandoObject&gt;.AzureKeyCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">CosmosSource&lt;ExpandoObject&gt;.AzureTokenCredential</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AzureTokenCredential">CosmosSource&lt;ExpandoObject&gt;.AzureTokenCredential</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">CosmosSource&lt;ExpandoObject&gt;.AccountEndpoint</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AccountEndpoint">CosmosSource&lt;ExpandoObject&gt;.AccountEndpoint</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">CosmosSource&lt;ExpandoObject&gt;.AuthKeyOrResourceToken</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_AuthKeyOrResourceToken">CosmosSource&lt;ExpandoObject&gt;.AuthKeyOrResourceToken</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_DatabaseName">CosmosSource&lt;ExpandoObject&gt;.DatabaseName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_DatabaseName">CosmosSource&lt;ExpandoObject&gt;.DatabaseName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_ContainerName">CosmosSource&lt;ExpandoObject&gt;.ContainerName</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_ContainerName">CosmosSource&lt;ExpandoObject&gt;.ContainerName</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_CosmosClient">CosmosSource&lt;ExpandoObject&gt;.CosmosClient</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_CosmosClient">CosmosSource&lt;ExpandoObject&gt;.CosmosClient</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">CosmosSource&lt;ExpandoObject&gt;.Sql</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_Sql">CosmosSource&lt;ExpandoObject&gt;.Sql</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition">CosmosSource&lt;ExpandoObject&gt;.QueryDefinition</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryDefinition">CosmosSource&lt;ExpandoObject&gt;.QueryDefinition</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryRequestOptions">CosmosSource&lt;ExpandoObject&gt;.QueryRequestOptions</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_QueryRequestOptions">CosmosSource&lt;ExpandoObject&gt;.QueryRequestOptions</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_PrepareParameter">CosmosSource&lt;ExpandoObject&gt;.PrepareParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_PrepareParameter">CosmosSource&lt;ExpandoObject&gt;.PrepareParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_CheckParameter">CosmosSource&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_CheckParameter">CosmosSource&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_InitParameter">CosmosSource&lt;ExpandoObject&gt;.InitParameter()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_InitParameter">CosmosSource&lt;ExpandoObject&gt;.InitParameter()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_OnExecutionDoSynchronousWork">CosmosSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_OnExecutionDoSynchronousWork">CosmosSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_OnExecutionDoAsyncWork">CosmosSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_OnExecutionDoAsyncWork">CosmosSource&lt;ExpandoObject&gt;.OnExecutionDoAsyncWork()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_CleanUpOnSuccess">CosmosSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_CleanUpOnSuccess">CosmosSource&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html#ETLBox_Azure_CosmosDb_CosmosSource_1_CleanUpOnFaulted_System_Exception_">CosmosSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1#ETLBox_Azure_CosmosDb_CosmosSource_1_CleanUpOnFaulted_System_Exception_">CosmosSource&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit">DataFlowExecutableSource&lt;ExpandoObject&gt;.Limit</a>
