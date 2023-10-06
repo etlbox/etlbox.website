@@ -5,9 +5,38 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.0.2
+
+#### Features
+
+- Added EntityFramework Bulk Operations for Postgres
+- CreateTableTask now supports creation of temporary table
+- Updating package references
+- Improved options for EntitiyFramework bulk operations
+- Renaming ETLBox.EntityFramework to EFBox (packages and namespace)
+
+## Version 3.0.1
+
+#### Features
+
+- Adding BlobServiceEndpoint to AzureBlobStorageConfiguration
+- Improved exception message if e.g. a MatchColumn references the same columns
+- Lookup: improved exception message if PartialCacheSize is bigger than buffer size
+- Replacing property BlockBlobClient BlockBlobClient with Func<string, BlockBlobClient>CreateBlockBlobClient in AzureBlobStorageConfiguration
+- ParquetDestination now supports nullable data types
+- ParquetDestination offers function to add custom meta data
+- ParquetSource/ParquetDestination now support Guid as data type
+
+#### Bug fixes
+
+- StreamingDestination: HasNextRecord is not invoked for first record, count of ProcessedRows corrected
+- Fixed exception when using GetNextUri/HasNextUri for ParquetDestination
+- Fixing bug in Sql statement parsing
+- Fixing performance issue when writing parquet files into blob storage
+
 ## Version 3.0.0
 
-#### Features:
+#### Features
 
 - Updating package references to current version, Improving support for .NET 7 and .NET 6
 - Using MySqlConnector (instead of MySql.Data connector) when connecting to MariaDb
@@ -40,14 +69,14 @@ draft: false
 - \[BREAKING\] DbMerge.MergeProperties: The properties (IdColumns, UpdateColumns, CompareColumns, DeleteColumns) are now direct properties of DbMerge
 - \[BREAKING\] Renamed enum ConnectionManagerType to ConnectionType, Property IConnectionManager.ConnectionManagerType to ConnectionType
 
-### Bug
+### Bug fixes
 
 - Fixed issues with spaces in table names for GetTableListTask
 - Improving support for dynamic objects in Azure ServiceBusSource
 
 ## Version 2.7.1
 
-#### Features:
+#### Features
 
 - Adapter for Azure Service Bus
 - Network.Execute now accepts IDataFlowComponent or derived interfaces as arguments
@@ -57,7 +86,7 @@ draft: false
 
 ## Version 2.7.0
 
-#### Features:
+#### Features
 
 - Aggregation: Adding AggregationCondition to only execute predefined aggregation methods when condition is met
 - Added async methods for SqlTask (e.g. ExecuteNonQueryAsync), RowCountTask and TruncateTableTask
@@ -71,7 +100,7 @@ draft: false
 - ExcelSource: Sheet name comparison by default is now case-insensitive (can be switched back to case-sensitive)
 - ExcelDestination: Default Sheetname set to "Sheet1"
 
-#### Bug fixes:
+#### Bug fixes
 
 - Aggregation: Group columns with the FirstValue aggregation method now properly retrieves the first value for a group
 - Fixed slowed ODBC connector execution performance for tables with more than 20 columns
@@ -81,10 +110,12 @@ draft: false
 
 ## Version 2.6.8
 
-#### Features:
+#### Features
+
 - Network Execute/ExecuteAsync now accepts CancellationToken instead of CancellationTokenSource (BREAKING CHANGE)
 
-#### Bug fixes:
+#### Bug fixes
+
 - LogLevel for messages for each batch of processed rows during processing reduced to Debug (was Information before) - final amount still logged as Information
 - DisableLogging now also disables logging for Trace/Fatal message (were always logged before)
 
