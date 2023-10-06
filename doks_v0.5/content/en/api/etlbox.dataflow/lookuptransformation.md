@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10118
+weight: 10136
 toc: false
 ---
 
@@ -33,7 +33,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowtransformation-2">IDataFlowTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
@@ -41,6 +40,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -261,7 +261,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -306,7 +306,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public class LookupTransformation : LookupTransformation<ExpandoObject, ExpandoObject>, ILoggableTask, IDataFlowLogging, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent
+    public class LookupTransformation : LookupTransformation<ExpandoObject, ExpandoObject>, IDataFlowLogging, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -389,9 +389,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -411,6 +408,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

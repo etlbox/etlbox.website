@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10108
+weight: 10126
 toc: false
 ---
 
@@ -31,13 +31,13 @@ Multiple database are supported. Use the corresponding connection manager that f
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -207,7 +207,7 @@ Multiple database are supported. Use the corresponding connection manager that f
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -249,7 +249,7 @@ Multiple database are supported. Use the corresponding connection manager that f
 {{< /rawhtml >}}
 
 ```C#
-    public class DbSource<TOutput> : DataFlowExecutableSource<TOutput>, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent
+    public class DbSource<TOutput> : DataFlowExecutableSource<TOutput>, IDataFlowLogging, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -916,9 +916,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -935,6 +932,9 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

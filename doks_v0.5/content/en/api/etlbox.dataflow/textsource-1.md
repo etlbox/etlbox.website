@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10144
+weight: 10162
 toc: false
 ---
 
@@ -39,10 +39,10 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowstreamsource">IDataFlowStreamSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -284,7 +284,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -326,7 +326,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 {{< /rawhtml >}}
 
 ```C#
-    public class TextSource<TOutput> : DataFlowStreamSource<TOutput>, IDataFlowLogging, IDataFlowStreamSource<TOutput>, IDataFlowExecutableSource<TOutput>, IDataFlowStreamSource, IDataFlowExecutableSource, ILoggableTask, IDataFlowSource<TOutput>, IDataFlowSource, IDataFlowComponent
+    public class TextSource<TOutput> : DataFlowStreamSource<TOutput>, IDataFlowLogging, IDataFlowStreamSource<TOutput>, IDataFlowExecutableSource<TOutput>, IDataFlowStreamSource, IDataFlowExecutableSource, IDataFlowSource<TOutput>, IDataFlowSource, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -564,9 +564,6 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource&lt;TOutput&gt;</a>
   </div>
   <div>
@@ -574,6 +571,9 @@ with a default name that can be overwritten.</p>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.db2"
-weight: 10150
+weight: 10168
 toc: false
 ---
 
@@ -209,6 +209,15 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CreateTempTableOnCurrentConnection_ETLBox_ITableData_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.CreateTempTableOnCurrentConnection(ITableData)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ReadSqlOutputIntoTableData_ETLBox_ITableData_System_String_System_Boolean_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.ReadSqlOutputIntoTableData(ITableData, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Db2</h6>
@@ -658,7 +667,7 @@ If you need support for transactions or constraints, set this flag to true.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action&lt;&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>

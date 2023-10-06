@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10081
+weight: 10099
 toc: false
 ---
 
@@ -33,11 +33,11 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -180,7 +180,7 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -222,7 +222,7 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
 {{< /rawhtml >}}
 
 ```C#
-    public class ConcurrentMemoryDestination<TInput> : MemoryDestination<TInput>, ILoggableTask, IDataFlowLogging, IDataFlowDestination<TInput>, IDataFlowDestination, IDataFlowComponent
+    public class ConcurrentMemoryDestination<TInput> : MemoryDestination<TInput>, IDataFlowLogging, IDataFlowDestination<TInput>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -394,9 +394,6 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
   <div><span class="xref">ETLBox.DataFlow.MemoryDestination&lt;TInput&gt;.CleanUpOnSuccess()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -407,6 +404,9 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

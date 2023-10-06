@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10098
+weight: 10116
 toc: false
 ---
 
@@ -25,6 +25,9 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><span class="xref">DataFlowExecutableSource&lt;TOutput&gt;</span></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosSource-1.html">CosmosSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusSource-1.html">ServiceBusSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableSource-1.html">TableSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasesource-1">CouchbaseSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchsource-1">CustomBatchSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/customsource-1">CustomSource&lt;TOutput&gt;</a></div>
@@ -37,13 +40,13 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -183,7 +186,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -228,7 +231,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public abstract class DataFlowExecutableSource<TOutput> : DataFlowSource<TOutput>, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent
+    public abstract class DataFlowExecutableSource<TOutput> : DataFlowSource<TOutput>, IDataFlowLogging, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -679,9 +682,6 @@ Waits until all destinations run to completion.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -698,6 +698,9 @@ Waits until all destinations run to completion.</p>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

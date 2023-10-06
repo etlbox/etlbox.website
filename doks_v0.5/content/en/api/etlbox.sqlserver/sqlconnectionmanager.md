@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10270
+weight: 10293
 toc: false
 ---
 
@@ -208,6 +208,15 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CreateTempTableOnCurrentConnection_ETLBox_ITableData_">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.CreateTempTableOnCurrentConnection(ITableData)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ReadSqlOutputIntoTableData_ETLBox_ITableData_System_String_System_Boolean_">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.ReadSqlOutputIntoTableData(ITableData, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
       <span class="xref">object.Equals(object)</span>

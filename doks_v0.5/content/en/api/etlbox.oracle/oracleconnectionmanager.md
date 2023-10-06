@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.oracle"
-weight: 10248
+weight: 10266
 toc: false
 ---
 
@@ -209,6 +209,15 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_UseExistingDbConnection_System_Data_IDbConnection_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.UseExistingDbConnection(IDbConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CreateTempTableOnCurrentConnection_ETLBox_ITableData_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.CreateTempTableOnCurrentConnection(ITableData)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ReadSqlOutputIntoTableData_ETLBox_ITableData_System_String_System_Boolean_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ReadSqlOutputIntoTableData(ITableData, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Oracle</h6>
@@ -661,7 +670,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action&lt;&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">object</span>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>

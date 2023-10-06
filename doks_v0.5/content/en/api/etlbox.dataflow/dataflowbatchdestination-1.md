@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10095
+weight: 10113
 toc: false
 ---
 
@@ -24,6 +24,9 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><span class="xref">DataFlowBatchDestination&lt;TInput&gt;</span></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.CosmosDb.CosmosDestination-1.html">CosmosDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.ServiceBus.ServiceBusDestination-1.html">ServiceBusDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="ETLBox.Azure.Tables.TableDestination-1.html">TableDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasedestination-1">CouchbaseDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination-1">CustomBatchDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbdestination-1">DbDestination&lt;TInput&gt;</a></div>
@@ -32,13 +35,13 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowbatchdestination-1">IDataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowbatchdestination">IDataFlowBatchDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -175,7 +178,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -220,7 +223,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public abstract class DataFlowBatchDestination<TInput> : DataFlowDestination<TInput>, ILoggableTask, IDataFlowLogging, IDataFlowBatchDestination<TInput>, IDataFlowDestination<TInput>, IDataFlowBatchDestination, IDataFlowDestination, IDataFlowComponent
+    public abstract class DataFlowBatchDestination<TInput> : DataFlowDestination<TInput>, IDataFlowLogging, IDataFlowBatchDestination<TInput>, IDataFlowDestination<TInput>, IDataFlowBatchDestination, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -490,9 +493,6 @@ It receives an array that represents the batch - you can modify the data itself 
   <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.WriteBatch(TInput[])</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -509,6 +509,9 @@ It receives an array that represents the batch - you can modify the data itself 
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10186
+weight: 10204
 toc: false
 ---
 
@@ -17,13 +17,28 @@ toc: false
 </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskName">ILoggableTask.TaskName</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskType">ILoggableTask.TaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskHash">ILoggableTask.TaskHash</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_DisableLogging">ILoggableTask.DisableLogging</a>
+    </div>
+  </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_IDataFlowComponent_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public interface IDataFlowComponent
+    public interface IDataFlowComponent : ILoggableTask
 ```
 
 {{< rawhtml >}}

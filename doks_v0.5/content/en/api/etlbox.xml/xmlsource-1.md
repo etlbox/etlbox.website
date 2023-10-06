@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10279
+weight: 10302
 toc: false
 ---
 
@@ -32,7 +32,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowstreamsource-1">IDataFlowStreamSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
@@ -41,6 +40,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -279,7 +279,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_">DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(int)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_">DataFlowComponent.LogProgress_AfterThrowOrRedirectError(bool)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError">DataFlowComponent.LogProgress_AfterThrowOrRedirectError()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
@@ -321,7 +321,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 {{< /rawhtml >}}
 
 ```C#
-    public class XmlSource<TOutput> : DataFlowStreamSource<TOutput>, ILoggableTask, IDataFlowLogging, IDataFlowStreamSource<TOutput>, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowStreamSource, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent
+    public class XmlSource<TOutput> : DataFlowStreamSource<TOutput>, IDataFlowLogging, IDataFlowStreamSource<TOutput>, IDataFlowExecutableSource<TOutput>, IDataFlowSource<TOutput>, IDataFlowStreamSource, IDataFlowExecutableSource, IDataFlowSource, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -728,9 +728,6 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
   <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
   <div>
@@ -753,6 +750,9 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
 
 {{< /rawhtml >}}

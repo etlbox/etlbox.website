@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10153
+weight: 10171
 toc: false
 ---
 
@@ -30,6 +30,9 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionmanager">OleDbConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionmanager">OracleConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionmanager">PostgresConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="ETLBox.Sap.Ase.AseConnectionManager.html">AseConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="ETLBox.Sap.Hana.HanaConnectionManager.html">HanaConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionmanager">SnowflakeConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionmanager">SQLiteConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionmanager">SqlConnectionManager</a></div>
   </div>
@@ -1445,6 +1448,50 @@ Override this method if you want to pass additional properties to the specific A
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_DbConnectionManager_3_CreateTempTableOnCurrentConnection_" data-uid="ETLBox.DbConnectionManager`3.CreateTempTableOnCurrentConnection*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_CreateTempTableOnCurrentConnection_ETLBox_ITableData_" data-uid="ETLBox.DbConnectionManager`3.CreateTempTableOnCurrentConnection(ETLBox.ITableData)">CreateTempTableOnCurrentConnection(ITableData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected string CreateTempTableOnCurrentConnection(ITableData data)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DbConnectionManager_3_Dispose_" data-uid="ETLBox.DbConnectionManager`3.Dispose*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_Dispose" data-uid="ETLBox.DbConnectionManager`3.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"><p>Closes the connection - this will not automatically disconnect
@@ -1485,6 +1532,35 @@ to the ADO.NET connection pool for further reuse.</p>
       <tr>
         <td><span class="xref">bool</span></td>
         <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_" data-uid="ETLBox.DbConnectionManager`3.DropTableOnCurrentConnection*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_" data-uid="ETLBox.DbConnectionManager`3.DropTableOnCurrentConnection(System.String)">DropTableOnCurrentConnection(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void DropTableOnCurrentConnection(string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2008,6 +2084,45 @@ performance of a bulk insert operation</p>
         <td><span class="parametername">tableName</span></td>
         <td><p>Destination table name</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DbConnectionManager_3_ReadSqlOutputIntoTableData_" data-uid="ETLBox.DbConnectionManager`3.ReadSqlOutputIntoTableData*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_ReadSqlOutputIntoTableData_ETLBox_ITableData_System_String_System_Boolean_" data-uid="ETLBox.DbConnectionManager`3.ReadSqlOutputIntoTableData(ETLBox.ITableData,System.String,System.Boolean)">ReadSqlOutputIntoTableData(ITableData, string, bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void ReadSqlOutputIntoTableData(ITableData data, string sql, bool hasSequenceColumn = true)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><span class="parametername">hasSequenceColumn</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

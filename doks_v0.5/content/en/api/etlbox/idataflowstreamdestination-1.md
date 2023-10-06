@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10194
+weight: 10212
 toc: false
 ---
 
@@ -77,6 +77,18 @@ toc: false
     <div>
       <a class="xref" href="/api/etlbox/idataflowcomponent#ETLBox_IDataFlowComponent_IsReadyForProcessing">IDataFlowComponent.IsReadyForProcessing</a>
     </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskName">ILoggableTask.TaskName</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskType">ILoggableTask.TaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_TaskHash">ILoggableTask.TaskHash</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_DisableLogging">ILoggableTask.DisableLogging</a>
+    </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
@@ -84,7 +96,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public interface IDataFlowStreamDestination<TInput> : IDataFlowDestination<TInput>, IDataFlowStreamDestination, IDataFlowDestination, IDataFlowComponent
+    public interface IDataFlowStreamDestination<TInput> : IDataFlowDestination<TInput>, IDataFlowStreamDestination, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}

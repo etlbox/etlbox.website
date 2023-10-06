@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10154
+weight: 10172
 toc: false
 ---
 
@@ -22,6 +22,7 @@ toc: false
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">DbConnectionString&lt;T, TBuilder&gt;</span></div>
+      <div class="level2"><a class="xref" href="/api/etlbox/aseconnectionstring">AseConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.db2/db2connectionstring">Db2ConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.mariadb/mariadbconnectionstring">MariaDbConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.mysql/mysqlconnectionstring">MySqlConnectionString</a></div>
@@ -29,6 +30,8 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionstring">OleDbConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionstring">OracleConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionstring">PostgresConnectionString</a></div>
+      <div class="level2"><a class="xref" href="ETLBox.Sap.Hana.HanaConnectionString.html">HanaConnectionString</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionstring">SnowflakeConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionstring">SQLiteConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionstring">SqlConnectionString</a></div>
   </div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10008
+weight: 10026
 toc: false
 ---
 
@@ -192,7 +192,7 @@ public sealed class CompareColumn : Attribute
 </h3>
   <a id="ETLBox_CompareColumn_ComparePropertyName_" data-uid="ETLBox.CompareColumn.ComparePropertyName*"></a>
   <h4 id="ETLBox_CompareColumn_ComparePropertyName" data-uid="ETLBox.CompareColumn.ComparePropertyName">ComparePropertyName</h4>
-  <div class="markdown level1 summary"><p>Name of the property name used for the comparison if two rows match</p>
+  <div class="markdown level1 summary"><p>Name of the property used for the comparison if two rows match</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

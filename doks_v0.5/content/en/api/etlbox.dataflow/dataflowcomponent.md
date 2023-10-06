@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10096
+weight: 10114
 toc: false
 ---
 
@@ -29,8 +29,8 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
+    <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
   </div>
   <div class="inheritedMembers">
@@ -78,7 +78,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public abstract class DataFlowComponent : LoggableTask, ILoggableTask, IDataFlowComponent, IDataFlowLogging
+    public abstract class DataFlowComponent : LoggableTask, IDataFlowComponent, ILoggableTask, IDataFlowLogging
 ```
 
 {{< rawhtml >}}
@@ -900,34 +900,17 @@ of each buffer</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_System_Boolean_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError(System.Boolean)">LogProgress_AfterThrowOrRedirectError(bool)</h4>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError">LogProgress_AfterThrowOrRedirectError()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    protected void LogProgress_AfterThrowOrRedirectError(bool noLicenseCheck = false)
+    protected void LogProgress_AfterThrowOrRedirectError()
 ```
 
 {{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">noLicenseCheck</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(System.Int32)">LogProgressBatch_AfterThrowOrRedirectError(int)</h4>
   <div class="markdown level1 summary"></div>
@@ -1099,10 +1082,10 @@ inside data flow components.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
+      <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
   </div>
   <div>
-      <a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>
+      <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10017
+weight: 10035
 toc: false
 ---
 
@@ -254,6 +254,34 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 ```C#
     public bool IgnoreCollation { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateTableTask_IsTemporaryTable_" data-uid="ETLBox.ControlFlow.CreateTableTask.IsTemporaryTable*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateTableTask_IsTemporaryTable" data-uid="ETLBox.ControlFlow.CreateTableTask.IsTemporaryTable">IsTemporaryTable</h4>
+  <div class="markdown level1 summary"><p>If set to true, the table will be create as temp table on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IsTemporaryTable { get; set; }
 ```
 
 {{< rawhtml >}}
