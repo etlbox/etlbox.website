@@ -1,6 +1,6 @@
 ---
-title: "Data validation"
-description: "ETLBox: C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
+title: "Data Validation Part 1"
+description: "ETLBox (Part 1): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
 lead: "This article was also published as a blog article 'ETLBox: C#'s Answer to Seamless ETL Processing and Thorough Data Validation'"
 draft: false
 images: []
@@ -41,9 +41,11 @@ ETLBox empowers you to construct an efficient ETL pipeline with its comprehensiv
 
 ### How to Get ETLBox
 
-ETLBox, developed in C#, targets .NET Standard 2.0 and higher, ensuring compatibility with various .NET versions, including .NET Framework 4.X and above, .NET Core 2.X and above, and .NET 5.0 and 6.0. All ETLBox packages are hosted on NuGet. Installing the core package is essential for working with ETLBox as it contains default connectors and transformations. Integrate it into your project using the NuGet package manager with the command: `dotnet add package ETLBox`. Choose the appropriate connector package based on your needs, for connecting to SQLServer databases or loading data from a Json file or REST endpoint, for example.
+ETLBox, developed in C#, targets .NET Standard 2.0 and higher, ensuring compatibility with various .NET versions, including .NET Framework 4.X and above, .NET Core 2.X and above, and .NET 5.0 and 6.0. All ETLBox packages are hosted on NuGet. Installing the core package is essential for working with ETLBox as it contains default connectors and transformations. Integrate it into your project using the NuGet package manager with the command: `dotnet add package ETLBox`. Choose the appropriate connector package based on your needs, for connecting to SQLServer databases or loading data from a Json file or REST endpoint, for example. {{< link-ext text="Visit the project home page for more information." url="https://www.etlbox.net" >}}
 
-## Data Flow - Example Part One
+
+
+## Data Flow by Example
 
 In this example, let's assume we receive supplier data in a file daily. As a first step, we want to copy these data to a database table.
 
@@ -309,9 +311,9 @@ The Errors.Json file contains the following content:
 
 Our data flow has successfully read the CSV files, normalized, and cleansed them. Duplicates within the file and the database were identified. The error file contains the filtered data.
 
-### Whole code
+### Complete code overview
 
-Here is an overview of the whole code the example. {{< link-ext text="It is also available on GitHub." url="https://github.com/etlbox/etlbox.demo/tree/main/DataValidation" >}}
+Here is an overview of the whole code the example. {{< link-ext text="It is also available on GitHub." url="https://github.com/etlbox/etlbox.demo/tree/main/DataValidationPart1" >}}
 
 ```C#
 //Adjust connection string to your local database
@@ -421,7 +423,7 @@ public class VendorMasterDbEntry
 ```
 
 
-### Conclusion
+## Conclusion
 
 The ETLBox library provides a comprehensive set of tools for building efficient and scalable ETL solutions within the .NET ecosystem. It allows developers to define complex data flow pipelines with ease, providing robust error handling, data transformation, and validation features out-of-the-box. It offers:
 
@@ -432,7 +434,7 @@ The ETLBox library provides a comprehensive set of tools for building efficient 
 
 In our example, we built a small ETL pipeline to process a CSV file, perform data validation and normalization, and load the cleaned data into a database, handling errors and duplicates gracefully. The process involved defining a data model, setting up various data flow components, linking them together, and executing the network.
 
-### Next article: Part 2
+### Next article: Adding SCD Type 2
 
-In the next step, we will turn to improvements of this data flow. In addition to enhanced error logging, we will address the issue of how to reconcile data when repeatedly loading different or the same supplier data. We aim to build a Slowly Changing Dimension Type 2 (SCD Type 2) that stores the corresponding changes in the CSV data.
+[In the **next step**, we will turn to improvements of this data flow](../data-validation-part2). In addition to enhanced error logging, we will address the issue of how to reconcile data when repeatedly loading different or the same supplier data. We aim to build a Slowly Changing Dimension Type 2 (SCD Type 2) that stores the corresponding changes in the CSV data.
 
