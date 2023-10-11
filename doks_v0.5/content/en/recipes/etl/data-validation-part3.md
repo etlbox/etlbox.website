@@ -1,7 +1,7 @@
 ---
 title: "Data validation Part 3"
 description: "ETLBox (Part 3): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'ETLBox: C#'s Answer to Seamless ETL Processing and Thorough Data Validation'"
+lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part III)'"
 draft: false
 images: []
 menu:
@@ -184,7 +184,7 @@ ETLBox components are flexibly designed with both generic and non-generic class 
 
 For instance, rather than using `RowTransformation<VendorMaster>`, we can employ `RowTransformation<ExpandoObject>`, which is equivalent to the simple `RowTransformation`.
 
-Let's look at the dynamic component creation and decode the details..
+Let's look at the dynamic component creation and decode the details.
 
 ```C#
 //Create the data flow components

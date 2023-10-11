@@ -1,7 +1,7 @@
 ---
 title: "Data validation Part 2"
 description: "ETLBox (Part 2): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'ETLBox: C#'s Answer to Seamless ETL Processing and Thorough Data Validation'"
+lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part II)'"
 draft: false
 images: []
 menu:
@@ -16,7 +16,7 @@ This is Part 2 in a series of posts. [If you'd like to read **Part 1**, click he
 
 In Part 1, we explored ETLBox, a .NET library designed for efficient data management. Without the need for a graphical interface, ETLBox simplifies data processes by providing an intuitive API, supporting various transformations and data sources, and ensuring optimal performance. It's specifically tailored for the .NET framework and emphasizes stable ETL processes. We also discussed how to use ETLBox packages from NuGet and demonstrated how to process a CSV file of supplier data, emphasizing steps like validation and error management.
 
-In this part, we'll enhance this data flow. We'll not only boost error logging but also tackle the challenge of managing repeated or varied supplier data loads. Our goal is to create a Slowly Changing Dimension Type 2 (SCD Type 2) to capture changes in the CSV data."
+In this part, we'll enhance this data flow. We'll not only boost error logging but also tackle the challenge of managing repeated or varied supplier data loads. Our goal is to create a Slowly Changing Dimension Type 2 (SCD Type 2) to capture changes in the CSV data.
 
 ### Enhanced Error Logging
 

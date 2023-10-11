@@ -1,7 +1,7 @@
 ---
 title: "Data Validation Part 1"
 description: "ETLBox (Part 1): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'ETLBox: C#'s Answer to Seamless ETL Processing and Thorough Data Validation'"
+lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part I)'"
 draft: false
 images: []
 menu:
