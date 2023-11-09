@@ -16,7 +16,7 @@ purchase date.
    
 #### Is there a trial version?
 
-Sure. If you download the official nuget package of ETLBox, you can already set it up and use it for testing purposes. The database and flat file connectors are limited to 10.000 rows. For further testing, you can request a trial valid for 45 days. If you need a renewal of the trial period, no problem, just contact us. 
+Sure. If you download the official nuget package of ETLBox, you can already set it up and use it for testing purposes. The connectors are limited to 5.000 rows. For further testing, you can request a trial valid for 45 days. The trial key will remove all limitations, and you can fully evaluate the library.  If you need a renewal of the trial period, no problem, just contact us. 
 
 #### What about VAT?
 
@@ -33,6 +33,7 @@ If you are interested in other licensing options, please contact us describing y
 #### How many licenses do I need to buy?
 
 Licensing is based on the amount of developers who are working with code that uses ETLBox. No additional licensing is needed. (You can deploy ETLBox on as many servers and virtual machines as you like, independent of the sizing of the usage of the systems).
+For the REDISTRIBUTABLE license, pricing may also depend on the amount of (expected) customers. 
 
 #### Are there perpetual licenses?
 
@@ -42,6 +43,10 @@ We want to make sure that you always have access to the latest version and featu
 
 Not a problem. Just let us know, and we'll create a custom invoice so that you only pay the difference.
 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
+
+#### What means "Chargable option: Source code access"?
+
+You can optionally purchase access to the ETLBox source code. Currently, our source code is hosted on github.com.
 
 #### What means company wide use?
 
@@ -53,13 +58,10 @@ If your SaaS is deployed on servers which are under your control, you can choose
 
 #### What is the REDISTRIBUTABLE license for?
 
-If you want to use ETLBox in software products or applications that you sell and/or ship to your customers, the REDISTRIBUTABLE  license is the right choice. Either if you are going to provide an app which you customers can download or deploy your product on servers which are under the control of your customers, you will need the REDISTRIBUTABLE license. With this license, you will get access to ETLBox packages (and source code) where all internal ETLBox license checks are removed. (In contrast to the other license type, where a license key is needed)
-These packages allow you to build your own product based on ETLBox, and sell it to your customers as your own software. No backlinking/mentioning/additional licensing is needed. 
+If you want to use ETLBox in software products or applications that you sell and/or ship to your customers, the REDISTRIBUTABLE  license is the right choice. Either if you are going to provide an app which you customers can download or deploy your product on servers which are under the control of your customers, you will need the REDISTRIBUTABLE license. With this license, you will get access to ETLBox packages (and source code) where all internal ETLBox license checks are removed. These packages allow you to build your own product based on ETLBox, and sell it to your customers as your own software. No backlinking/mentioning/additional licensing is needed. 
 
 #### How is the REDISTRIBUTABLE license different from other licenses?
 
 The REDISTRIBUTABLE license comes with a Royality-Free EULA which explicitly allows to redistribute ETLBox as part of your own products. The use of ETLBox can be hidden for your customers, and no back-linking or mentioning of ETLBox is needed.
-
-For the standard licenses, customer receive a license key to remove any limitations from the currently available nuget package of ETLBox. This license key needs to be renewed every year.
 
 For the redistributable license, you will get access to a nuget package that doesn't have any license checks at all. This nuget package can be used in your code without limitations and without license key. You will also get full access to the source code. This source code will be without any license checks in place, and you are free to integrate this your existing code base (e.g. into your CI/CD pipelines)

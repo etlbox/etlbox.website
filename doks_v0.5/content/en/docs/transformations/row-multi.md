@@ -38,7 +38,7 @@ source.LinkTo(multiplication);
 multiplication.LinkTo(dest);
 ```
 
-## Example
+## Examples
 
 Let's start with an example where input and output type are the same - we can use the simplified `RowMultiplication<TInput>` for this. In this example, we use one input record that contains a string ("ABC") and split it into three output records for each character. 
 
@@ -124,4 +124,95 @@ public static void Main()
         Char:C
     */
 }
+```
+
+### Normalizing document data
+
+The `RowMultiplication` can become very handy if you need to normalize document data. Consider the following json document, which contains 2 invoices. The first invoice contains 3 items, the second invoice 2 items. 
+
+```json
+{
+  "Invoices": [
+    {
+      "Id": 1,
+      "CustomerName": "Peter",
+      "Total": 45,
+      "Items": [
+        {
+          "Name": "Clock",
+          "Price": 20
+        },
+        {
+          "Name": "Socks",
+          "Price": 10
+        },
+        {
+          "Name": "Shirt",
+          "Price": 15
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "CustomerName": "Mary",
+      "Total": 100,
+      "Items": [
+        {
+          "Name": "Clock",
+          "Price": 29
+        },
+        {
+          "Name": "Dress",
+          "Price": 71
+        }
+      ]
+    }
+  ]
+}
+```
+
+If we want to extract the items and the header data for each invoice into separate entities, we can use the `RowMulitplication` to achieve this.
+
+```C#
+var source = new JsonSource("res/examples/invoices.json");
+var invoiceHeaders = new MemoryDestination();
+var invoiceLines = new MemoryDestination();
+
+var duplicate = new Multicast();
+var extractHeader = new RowTransformation();
+extractHeader.TransformationFunc = (row) => {
+    var dict = row as IDictionary<string, object>;
+    dict.Remove("Items");
+    return row;
+};
+var extractLines = new RowMultiplication();
+extractLines.MultiplicationFunc = (row) => {
+    var extractedLines = new List<ExpandoObject>();
+    var itemsArray = (row as dynamic).Items as List<object>;
+    foreach (dynamic line in itemsArray) {
+        line.InvoiceId = (row as dynamic).Id;
+        extractedLines.Add(line);
+    }
+    return extractedLines;
+};
+
+
+source.LinkTo(duplicate);
+
+duplicate.LinkTo(extractHeader);
+extractHeader.LinkTo(invoiceHeaders);
+
+duplicate.LinkTo(extractLines);
+extractLines.LinkTo(invoiceLines);
+
+Network.Execute(source);
+
+Console.WriteLine("Total invoices: " + invoiceHeaders.Data.Count);
+Console.WriteLine("Total lines for all invoices: " + invoiceLines.Data.Count);
+
+//Ouput
+/*
+Total invoices: 2
+Total lines for all invoices: 5
+*/
 ```
