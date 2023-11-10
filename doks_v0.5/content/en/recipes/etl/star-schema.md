@@ -21,7 +21,7 @@ In the world of data, transformation is key. But not just any transformation—i
 
 A data warehouse serves as a pivotal element in the modern data ecosystem, acting as a centralized data repository where information from various sources is consolidated. This consolidation enables improved decision-making by providing access to historical data critical for thorough analysis and forecasting. One of the key features of a data warehouse is the enhancement of data quality and consistency, achieved through meticulous data cleansing and transformation processes. Data warehouses are particularly optimized for high-performance querying, handling complex queries efficiently and thus allowing for significant volumes of data to be processed. Moreover, they ensure the operational systems' performance is unaffected by offloading analytical queries.
 
-The star schema plays a vital role within the data warehouse architecture. Its design is simple, centering around a fact table which is directly linked to a set of dimension tables. This simplicity translates to enhanced query performance due to fewer joins and predictable query patterns, which also simplifies the ETL process and facilitates easier data management.
+The star schema plays a vital role within the data warehouse architecture. Its design is simple, centering around a fact table which is directly linked to a set of di mension tables. This simplicity translates to enhanced query performance due to fewer joins and predictable query patterns, which also simplifies the ETL process and facilitates easier data management.
 
 ### Understanding Surrogate IDs
 
@@ -39,47 +39,71 @@ TableDefinition CustomerDimTableDef = new TableDefinition("DimCustomer",
 });
 ```
 
-In the above table definition, `DimId` is the surrogate ID column. Its value is automatically incremented for each new record, starting with 1 and increasing by 1 for each new insert, thereby ensuring that each customer dimension record has a unique identifier. This automated generation of surrogate IDs is vital for the integrity and efficiency of the data transformation and loading processes within our data warehouse.
+In the above table definition, `DimId` is the surrogate ID column. Its value is automatically incremented for each new record, starting with 1 and increasing by 1 for each new insert, thereby ensuring that each customer dimension record has a unique identifier. 
 
+### Dimensions and Facts 
 
-### SCD Type 1
+#### SCD Type 1
 
 Slowly Changing Dimension (SCD) Type 1 strategy addresses the need to manage and reflect changes in dimension attributes by overwriting the existing records. This approach is best suited for situations where maintaining historical changes is not necessary, such as error corrections or updates that do not require tracking the attribute history. SCD Type 1 is relatively straightforward to implement and maintains the dimension table's size by avoiding redundancy.
 
-### SCD Type 2
+#### SCD Type 2
 
 In contrast to Type 1, SCD Type 2 is designed to preserve historical changes. Whenever a change occurs in a dimension attribute, a new record is added to the dimension table, with the original record remaining intact. This approach allows the history of dimension changes to be tracked over time, with each record typically including 'Valid From' and 'Valid To' dates to define the period of validity. SCD Type 2 is essential for businesses that require an audit trail or historical reporting.
 
-### Fact Tables
+#### Fact Tables
 
 The fact table is the cornerstone of the star schema within a data warehouse. It links all dimension tables together and stores quantitative metrics that are the focus of analysis. Fact tables can contain various types of facts, such as additive (can be summed up), semi-additive (can be aggregated in some dimensions), and non-additive (cannot be aggregated). The granularity of the fact table is a crucial consideration; it defines the level of detail stored and determines the depth of analysis possible.
 
-### Special: Date Dimension
+#### Special: Date Dimension
 
 A unique aspect of data warehousing is the use of a date dimension, which is crucial for any time-based analysis. This dimension allows for a consistent time-based reference across all fact tables, supporting the analysis across various time hierarchies like days, weeks, and months. The date dimension often includes attributes beyond the standard calendar dates, such as fiscal periods, holidays, and special event flags, which greatly enhance the data warehouse's analytical capabilities.
 
-### Wrap-up 
-
-By mastering these data warehousing concepts and understanding the structure and function of elements like the star schema, surrogate IDs, SCDs, and fact tables, organizations can extract substantial value from their data, paving the way for informed decision-making and effective strategic planning. As this knowledge forms the foundation, the next step is to bring these concepts to life within the data warehousing environment. That's where ETLBox comes into play—a powerful .NET library designed to simplify the extract, transform, and load processes. In subsequent sections, we will delve into how ETLBox can be harnessed to streamline these operations, ensuring your data warehousing efforts are as efficient and effective as possible. 
-
 ## Implementing a DWH with ETLBox
 
-Implementing a Data Warehouse (DWH) with ETLBox entails a series of structured steps. ETLBox is a robust ETL (Extract, Transform, Load) library tailored for the .NET ecosystem, providing a vital toolkit for managing the data flow into a DWH. The following is describing each phase of the process:
+By mastering these data warehousing concepts and understanding the structure and function of elements like the star schema, surrogate IDs, SCDs, and fact tables, organizations can extract substantial value from their data, paving the way for informed decision-making and effective strategic planning. As this knowledge forms the foundation, the next step is to bring these concepts to life within the data warehousing environment. That's where ETLBox comes into play—a powerful .NET library designed to simplify the extract, transform, and load processes. In subsequent sections, we will delve into how ETLBox can be used to streamline these operations, ensuring your data warehousing efforts are as efficient and effective as possible. 
+
+### Preparing the Database
+
 
 ### Preparing the Database
 
 The first step is to set up your OLTP (Online Transaction Processing) databases and the DWH database. ETLBox can assist with this by enabling you to programmatically create databases, tables, and other database objects. It simplifies the process of data preparation by executing SQL tasks that can create tables and insert demo data for initial testing.
 
-In our example, we need to (re)create our database where necessary. We use SQL Server in our example. We recommend that you create a local docker container that runs SQL Server - {{<link-ext text="Microsoft provide a good guide with instructions for this." url="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash" >}}.
+In our example, we will be using SQL Server. To ensure a smooth and isolated development environment, we recommend setting up a local Docker container running SQL Server. This approach offers several benefits, including easy setup, consistency across environments, and the ability to replicate or destroy environments without affecting your local system. For detailed instructions on setting up SQL Server in a Docker container, refer to {{<link-ext text="Microsoft's comprehensive guide" url="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash" >}}.
 
-Here is the helper method to (re)create a database: 
-```C#
+To kickstart the database setup, we create a helper method that efficiently recreates the databases whenever needed. This method is especially useful in development and testing environments where frequent resetting of the database state is common. Here’s how it’s implemented:
+
+```csharp
 public static void RecreateDatabase(string dbName, SqlConnectionString connectionString)
 {
     var masterConnection = new SqlConnectionManager(connectionString.CloneWithMasterDbName());
     DropDatabaseTask.DropIfExists(masterConnection, dbName);
     CreateDatabaseTask.Create(masterConnection, dbName);
 }
+```
+
+#### Prepare Connection Managers 
+
+Before we proceed to execution, we need to create the ETLBox connection managers that wrap the underlying ADO.NET connection. 
+
+```C#
+static string OLTP_ConnectionString = @"Data Source=localhost;Initial Catalog=OLTP_DB;Integrated Security=false;User=sa;password=YourStrong@Passw0rd;TrustServerCertificate=true";
+static string OLAP_ConnectionString = @"Data Source=localhost;Initial Catalog=OLAP_DB;Integrated Security=false;User=sa;password=YourStrong@Passw0rd;TrustServerCertificate=true";
+static SqlConnectionManager OLTP_Connection => new SqlConnectionManager(OLTP_ConnectionString);
+static SqlConnectionManager OLAP_Connection => new SqlConnectionManager(OLAP_ConnectionString);
+```
+
+**Security Note on Connection Strings:**
+
+When implementing these examples in a production environment, it's crucial to secure your database credentials. Avoid hardcoding passwords in your codebase. Instead, use environment variables, Azure Key Vault, or other secure methods to manage your credentials.
+
+Following this, we proceed to create the databases that will act as our OLTP system and our OLAP data warehouse:
+
+```csharp
+Console.WriteLine("(Re)Creating demo databases 'OLTP_DB' & 'OLAP_DB'");
+PrepareDb.RecreateDatabase("OLTP_DB", OLTP_ConnectionString);
+PrepareDb.RecreateDatabase("OLAP_DB", OLTP_ConnectionString);
 ```
 
 #### OLTP Demo Tables
@@ -171,6 +195,12 @@ The tables are schematically outlined with sample data as follows:
 | 10323 | 2023-01-03 | P-00013 | C-1002 | 1299.0000 |
 
 
+We can now run the OLTP database preparation script:
+
+```C#
+Console.WriteLine("Create OLTP tables");
+PrepareDb.CreateOLTPTables(OLTP_ConnectionString);
+```
 
 #### OLAP Demo Tables
 
@@ -215,7 +245,6 @@ public static void CreateStarSchema(SqlConnectionString connectionString) {
 }
 ```
 
-
 This is the schematic outline of the tables:
 
 DimId|CustomerNumber|Name
@@ -227,32 +256,9 @@ DimId|ProductNumber|Name|Description|RecommendedPrice|ValidFrom|Valid
 FactId|SourceOrderId|DateDim|ProductDim|CustomerDim|ActualPriceFact
 ------|-------------|-------|----------|-----------|--------------
 
-
-
-#### Prepare Connection Managers 
-
-Before we proceed to execution, it's essential to establish the connection managers. 
+Let's also create the tables for our OLAP database:
 
 ```C#
-static string OLTP_ConnectionString = @"Data Source=localhost;Initial Catalog=OLTP_DB;Integrated Security=false;User=sa;password=YourStrong@Passw0rd;TrustServerCertificate=true";
-static string OLAP_ConnectionString = @"Data Source=localhost;Initial Catalog=OLAP_DB;Integrated Security=false;User=sa;password=YourStrong@Passw0rd;TrustServerCertificate=true";
-static SqlConnectionManager OLTP_Connection => new SqlConnectionManager(OLTP_ConnectionString);
-static SqlConnectionManager OLAP_Connection => new SqlConnectionManager(OLAP_ConnectionString);
-```
-
-**Security Note on Connection Strings:**
-
-When implementing these examples in a production environment, it's crucial to secure your database credentials. Avoid hardcoding passwords in your codebase. Instead, use environment variables, Azure Key Vault, or other secure methods to manage your credentials.
-
-With the connection managers set, we can now prepare our databases:
-
-```C#
-Console.WriteLine("(Re)Creating demo databases 'OLTP_DB' & 'OLAP_DB'");
-PrepareDb.RecreateDatabase("OLTP_DB", OLTP_ConnectionString);
-PrepareDb.RecreateDatabase("OLAP_DB", OLTP_ConnectionString);
-
-Console.WriteLine("Create OLTP tables");
-PrepareDb.CreateOLTPTables(OLTP_ConnectionString);
 Console.WriteLine("Create OLAP tables");
 PrepareDb.CreateStarSchema(OLAP_ConnectionString);
 ```
@@ -261,7 +267,7 @@ PrepareDb.CreateStarSchema(OLAP_ConnectionString);
 
 When dealing with SCD (Slowly Changing Dimension) Type 1 in data warehousing scenarios, ETLBox streamlines the extract, transform, and load (ETL) process. The SCD Type 1 method involves updating existing records with new data as it comes in, without maintaining historical changes. This means that any updates in the dimension data will overwrite the previous entries, thus always reflecting the most current state of data.
 
-ETLBox facilitates these operations with its dataflow tasks. Generating surrogate keys is simplified using SQL Server's Identity column feature, which is a common practice to uniquely identify records in a DWH environment.
+ETLBox helps with these operations with its dataflow tasks. Generating surrogate keys is simplified using SQL Server's Identity column feature, which is a common practice to uniquely identify records in a DWH environment.
 
 In the context of ETLBox, to decide whether a source row should be inserted as new or used to update an existing record, the `DbMerge` task is utilized. By setting the `MergeMode` to `InsertsAndUpdates`, ETLBox handles the decision-making process of the merge operation, which is particularly useful since deletions are generally not performed in a DWH in order to maintain historical data consistency.
 
@@ -321,7 +327,7 @@ For SCD Type 2, ETLBox must manage the complexity of maintaining historical chan
 - Inserting new records into the dimension table for new data.
 - Ending the validity of the current records and inserting new records for changed data.
 
-ETLBox facilitates these tasks by providing control flows and data flows that manage the data transformations and loads.
+ETLBox help with these tasks by providing control flow tasks and data flow components that manage the data transformations and loads.
 
 Here is the source code to load a SCD Type 2 with ETLBox: 
 
@@ -515,7 +521,7 @@ To load the date dimension into the DWH, you would run:
 
 ### Loading Fact Data
 
-Loading data into a fact table is a pivotal component in the establishment of a Data Warehouse (DWH). This operation typically involves the extraction of data from source systems, its transformation to fit the DWH schema, and finally, its insertion into the fact table.
+Loading data into a fact table is crucial when establishing a Data Warehouse (DWH). This operation typically involves the extraction of data from source systems, its transformation to fit the DWH schema, and finally, its insertion into the fact table.
 
 #### Incremental Loads vs. Full Loads
 
@@ -528,7 +534,7 @@ Deciding between incremental loads and full loads depends on the specific needs 
 
 #### Code example
 
-The provided code snippet defines an ETL process for loading fact data into a DWH:
+The provided code snippet defines an ETL process for loading the orders fact data into our DWH:
 
 ```C#
 public class Order
@@ -653,7 +659,9 @@ The full code for this example is available on GitHub. You can access it through
 
 ### Conclusion
 
-ETLBox offers a streamlined, flexible approach for building a Data Warehouse (DWH) that can greatly augment your organization's data analysis and reporting capabilities. Throughout our guide, we have demonstrated the use of POCOs (Plain Old CLR Objects) to methodically load data. However, ETLBox isn't limited to statically typed objects; it also supports dynamic data types through the use of the `ExpandoObject`. This dynamic object, especially when paired with the `dynamic` keyword in C#, empowers developers to create adaptable data flows without the need for predefined data structures.
+ETLBox offers a streamlined, flexible approach for building a Data Warehouse (DWH) that can greatly augment your organization's data analysis and reporting capabilities. Throughout our guide, we have demonstrated the use of POCOs (Plain Old CLR Objects) to methodically load data. 
+
+However, ETLBox isn't limited to statically typed objects; it also supports dynamic data types through the use of the `ExpandoObject`. This dynamic object, especially when paired with the `dynamic` keyword in C#, empowers developers to create adaptable data flows without the need for predefined data structures.
 
 Leveraging dynamic objects alongside a configuration-driven approach not only increases the reusability of your ETL code across various dimensions and fact tables but also introduces an impressive degree of flexibility to the data loading process.
 
