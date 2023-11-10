@@ -15,7 +15,9 @@ toc: true
 
 In the world of data, transformation is key. But not just any transformation—it's about transforming raw data into actionable insights. That's where ETL (Extract, Transform, Load) processes shine, and ETLBox is a .NET star in this domain. ETLBox offers a set of tools and components to build scalable and efficient ETL processes with minimal hassle. Whether you're a seasoned data engineer or a developer venturing into data warehousing, ETLBox could be your toolkit of choice.
 
-## Understanding Data Warehousing Concepts
+## Data Warehousing Concepts
+
+Before we start to dive into a practical example, let's learn more about the basic building blocks of a data warehouse (DWH).
 
 ### Advantages of Using a DWH & Star Schema
 
@@ -62,9 +64,6 @@ A unique aspect of data warehousing is the use of a date dimension, which is cru
 ## Implementing a DWH with ETLBox
 
 By mastering these data warehousing concepts and understanding the structure and function of elements like the star schema, surrogate IDs, SCDs, and fact tables, organizations can extract substantial value from their data, paving the way for informed decision-making and effective strategic planning. As this knowledge forms the foundation, the next step is to bring these concepts to life within the data warehousing environment. That's where ETLBox comes into play—a powerful .NET library designed to simplify the extract, transform, and load processes. In subsequent sections, we will delve into how ETLBox can be used to streamline these operations, ensuring your data warehousing efforts are as efficient and effective as possible. 
-
-### Preparing the Database
-
 
 ### Preparing the Database
 
@@ -183,16 +182,16 @@ The tables are schematically outlined with sample data as follows:
 
 | OrderId | OrderDate | ProductNumber | CustomerNumber | ActualPrice |
 | :--- | :--- | :--- | :--- | :--- |
-| 10003 | 2023-01-01 | P-00010 | C-1000 | 379.0000 |
-| 10007 | 2023-01-02 | P-00011 | C-1000 | 699.0000 |
-| 10012 | 2023-01-03 | P-00012 | C-1000 | 849.0000 |
-| 10016 | 2023-01-01 | P-00012 | C-1001 | 949.0000 |
-| 10020 | 2023-01-02 | P-00011 | C-1001 | 849.0000 |
-| 10033 | 2023-01-03 | P-00013 | C-1001 | 1699.0000 |
-| 10053 | 2023-01-01 | P-00010 | C-1002 | 299.0000 |
-| 10193 | 2023-01-01 | P-00011 | C-1002 | 699.0000 |
-| 10253 | 2023-01-03 | P-00012 | C-1002 | 799.0000 |
-| 10323 | 2023-01-03 | P-00013 | C-1002 | 1299.0000 |
+| 10003 | 2023-01-01 | P-00010 | C-1000 | 379.00 |
+| 10007 | 2023-01-02 | P-00011 | C-1000 | 699.00 |
+| 10012 | 2023-01-03 | P-00012 | C-1000 | 849.00 |
+| 10016 | 2023-01-01 | P-00012 | C-1001 | 949.00 |
+| 10020 | 2023-01-02 | P-00011 | C-1001 | 849.00 |
+| 10033 | 2023-01-03 | P-00013 | C-1001 | 1699.00 |
+| 10053 | 2023-01-01 | P-00010 | C-1002 | 299.00 |
+| 10193 | 2023-01-01 | P-00011 | C-1002 | 699.00 |
+| 10253 | 2023-01-03 | P-00012 | C-1002 | 799.00 |
+| 10323 | 2023-01-03 | P-00013 | C-1002 | 1299.00 |
 
 
 We can now run the OLTP database preparation script:
@@ -249,12 +248,15 @@ This is the schematic outline of the tables:
 
 DimId|CustomerNumber|Name
 -----|--------------|--
+1    |C-XXXX        | Name
 
-DimId|ProductNumber|Name|Description|RecommendedPrice|ValidFrom|Valid
+DimId|ProductNumber|Name|Description|RecommendedPrice|ValidFrom|ValidTo
 -----|-------------|----|-----------|----------------|---------|---
+1    | P-XXXXX     |Name | Description | 99.00 | 1900-01-01 | 9999-12-31
 
 FactId|SourceOrderId|DateDim|ProductDim|CustomerDim|ActualPriceFact
 ------|-------------|-------|----------|-----------|--------------
+1     | 10001       | 20230101 | 1 | 1 | 79.00 | 
 
 Let's also create the tables for our OLAP database:
 
@@ -428,15 +430,15 @@ Furthermore, we enhance the integrity of our historical data by employing an SQL
 To test this part of the ETL process, you can execute the following sequence to load initial data, apply changes, and then reload to see the updates in the SCD Type 2 dimension:
 
 ```C#
- Console.WriteLine("Load products as Slowy Changing Dimension Type 2");
- LoadProducts_SCD2(new DateTime(2023, 1, 1));
- Console.WriteLine("Changing product data & reloading");
- ChangeProduct();
- LoadProducts_SCD2(new DateTime(2023, 1, 4));
- Console.WriteLine("Changing product data again & reloading");
- ChangeProduct2();
- LoadProducts_SCD2(new DateTime(2023, 1, 5));
- Console.WriteLine("Product dimension successfully loaded!");
+Console.WriteLine("Load products as Slowy Changing Dimension Type 2");
+LoadProducts_SCD2(new DateTime(2023, 1, 1));
+Console.WriteLine("Changing product data & reloading");
+ChangeProduct();
+LoadProducts_SCD2(new DateTime(2023, 1, 4));
+Console.WriteLine("Changing product data again & reloading");
+ChangeProduct2();
+LoadProducts_SCD2(new DateTime(2023, 1, 5));
+Console.WriteLine("Product dimension successfully loaded!");
 ```
 
 This script simulates the loading of data, applying changes, and reloading, showcasing how ETLBox can be leveraged to manage the complex requirements of SCD Type 2 in a data warehousing environment.
@@ -515,13 +517,13 @@ The ETL process involves the following steps:
 To load the date dimension into the DWH, you would run:
 
 ```C#
- Console.WriteLine("Creating a generic date dimension");
- CreateDateDimension();
+Console.WriteLine("Creating a generic date dimension");
+CreateDateDimension();
 ```
 
 ### Loading Fact Data
 
-Loading data into a fact table is crucial when establishing a Data Warehouse (DWH). This operation typically involves the extraction of data from source systems, its transformation to fit the DWH schema, and finally, its insertion into the fact table.
+Loading data into a fact table is crucial when establishing a Data Warehouse. This operation typically involves the extraction of data from source systems, its transformation to fit the DWH schema, and finally, its insertion into the fact table.
 
 #### Incremental Loads vs. Full Loads
 
@@ -652,14 +654,17 @@ This command sequence does the following:
 
 ## Wrap-up
 
+In this guide, we've taken a thorough look at how ETLBox, a versatile .NET tool, can be used for building and running Data Warehouses. We've gone over a range of key tasks, including managing different types of Slowly Changing Dimensions (SCD), working with date dimensions, and handling fact tables. Along the way, we also gave you a glimpse into how ETLBox handles errors, showcasing its reliability in managing ETL processes.
+
 ### Code on GitHub
 
-The full code for this example is available on GitHub. You can access it through the following link: 
+For a deeper dive and hands-on experience, the complete code for this example is available on GitHub. You can access and explore it to better understand the functionalities and possibilities of ETLBox:
+
 {{< link-ext text="ETLBox Example Code on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/StarSchema" >}}
 
 ### Conclusion
 
-ETLBox offers a streamlined, flexible approach for building a Data Warehouse (DWH) that can greatly augment your organization's data analysis and reporting capabilities. Throughout our guide, we have demonstrated the use of POCOs (Plain Old CLR Objects) to methodically load data. 
+ETLBox presents a code-centric, flexible approach for building a DWH, fully utilizing the .NET framework. This makes it an ideal solution for teams familiar with .NET, allowing them to leverage their existing skills to create a powerful and efficient DWH.
 
 However, ETLBox isn't limited to statically typed objects; it also supports dynamic data types through the use of the `ExpandoObject`. This dynamic object, especially when paired with the `dynamic` keyword in C#, empowers developers to create adaptable data flows without the need for predefined data structures.
 
