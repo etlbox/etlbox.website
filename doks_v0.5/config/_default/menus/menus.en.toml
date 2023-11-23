@@ -60,20 +60,6 @@
   identifier = "more"
   weight = 315
 
-[[more]]
-  name = "EFBox"
-  identifier = "efbox"
-  url = "https://www.efbox.net"
-  weight = 360
-  parent = "more"
-
-[[more]]
-  name = "ETLBoxperts"
-  identifier = "etlboxperts"
-  url = "https://www.etlboxperts.net"
-  weight = 370
-  parent = "more"  
-  
 
 [[social]]
   name = "Nuget"
