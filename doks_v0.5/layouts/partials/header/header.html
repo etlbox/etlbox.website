@@ -76,6 +76,22 @@
               </li>
             {{ end }}
           {{ end -}}
+          {{ range .Site.Menus.more -}}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ps-0 py-1" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ .Name }}
+                <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-main shadow rounded border-0" aria-labelledby="navbarDropdownMenuLink">                
+                  <li>
+                    <a class="dropdown-item" href="https://www.etlboxperts.net" target="_blank" rel="noopener"><i class="bi-box-arrow-up-right"></i>&nbsp;ETLBoxperts&nbsp;<img src="/more/logo-50-trimmed.png" height="20" alt="ETLBoxperts Logo" /></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="https://www.efbox.net" target="_blank" rel="noopener"><i class="bi-box-arrow-up-right"></i>&nbsp;EFBox&nbsp;<img src="/more/logo_efbox_32x32.png" height="20" alt="EFBox Logo" /></a>
+                  </li>
+              </ul>
+            </li>
+          {{ end -}}
         </ul>
 
         {{- $showFlexSearch := .Site.Params.options.flexSearch }}

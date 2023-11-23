@@ -22,12 +22,6 @@
   identifier = "product"
 
 [[main]]
-  name = "Pricing"
-  url = "/pricing/"
-  identifier = "pricing"
-  weight = 310
-
-[[main]]
   name = "Support"
   identifier = "support"
   url = "/support/options/"
@@ -54,6 +48,32 @@
   url = "/product/get-trial"
   weight = 350
   parent = "product"
+
+[[main]]
+  name = "Pricing"
+  url = "/pricing/"
+  identifier = "pricing"
+  weight = 310
+
+[[more]]
+  name = "More"  
+  identifier = "more"
+  weight = 315
+
+[[more]]
+  name = "EFBox"
+  identifier = "efbox"
+  url = "https://www.efbox.net"
+  weight = 360
+  parent = "more"
+
+[[more]]
+  name = "ETLBoxperts"
+  identifier = "etlboxperts"
+  url = "https://www.etlboxperts.net"
+  weight = 370
+  parent = "more"  
+  
 
 [[social]]
   name = "Nuget"
