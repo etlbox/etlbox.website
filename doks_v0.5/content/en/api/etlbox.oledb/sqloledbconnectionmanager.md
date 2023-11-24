@@ -21,13 +21,13 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="ETLBox.DbConnectionManager-3.html">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbconnection">OleDbConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbtransaction">OleDbTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbparameter">OleDbParameter</a>&gt;</div>
+    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbconnection">OleDbConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbtransaction">OleDbTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbparameter">OleDbParameter</a>&gt;</div>
     <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionmanager">OleDbConnectionManager</a></div>
     <div class="level3"><span class="xref">SqlOleDbConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.IConnectionManager-2.html">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbconnection">OleDbConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbtransaction">OleDbTransaction</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbconnection">OleDbConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbtransaction">OleDbTransaction</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>

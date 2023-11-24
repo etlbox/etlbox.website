@@ -22,7 +22,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="ETLBox.DbConnectionString-2.html">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.Odbc.OdbcConnectionString.html">OdbcConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcconnectionstringbuilder">OdbcConnectionStringBuilder</a>&gt;</div>
+    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.odbc/odbcconnectionstring">OdbcConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcconnectionstringbuilder">OdbcConnectionStringBuilder</a>&gt;</div>
     <div class="level2"><span class="xref">OdbcConnectionString</span></div>
   </div>
   <div class="implements">

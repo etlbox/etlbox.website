@@ -362,7 +362,7 @@ add a column mapping: DbColumnName: &quot;Id&quot; -&gt; PropertyName: &quot;Key
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DbColumnMap.html">DbColumnMap</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/dbcolumnmap">DbColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

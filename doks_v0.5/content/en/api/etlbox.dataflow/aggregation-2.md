@@ -399,7 +399,7 @@ This also works with ExpandoObjects.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.AggregateColumn.html">AggregateColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/aggregatecolumn">AggregateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -462,7 +462,7 @@ for a property, and contains the currently processed row along with the current 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="ETLBox.DataFlow.AggregationMethodInfo.html">AggregationMethodInfo</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow/aggregationmethodinfo">AggregationMethodInfo</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -491,7 +491,7 @@ This also works with ExpandoObjects.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.GroupColumn.html">GroupColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/groupcolumn">GroupColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

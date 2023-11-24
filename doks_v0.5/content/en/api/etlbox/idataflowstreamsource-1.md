@@ -200,7 +200,7 @@ and always occurs after each record was read and before a new record is read.</p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;TOutput, <a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;TOutput, <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

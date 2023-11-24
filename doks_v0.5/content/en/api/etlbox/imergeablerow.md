@@ -89,7 +89,7 @@ toc: false
     </tbody>
   </table>
   <h5 id="ETLBox_IMergeableRow_ChangeDate_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>When <a class="xref" href="ETLBox.IMergeableRow.html#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a></p>
+  <div class="markdown level1 remarks"><p>When <a class="xref" href="/api/etlbox/imergeablerow#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a></p>
 </div>
 
 {{< /rawhtml >}}

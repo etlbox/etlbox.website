@@ -435,7 +435,7 @@ DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, "dbo.table");<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnConverter.html">ColumnConverter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox.dataflow/columnconverter">ColumnConverter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -465,7 +465,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Key&quot; -&gt; Pr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DbColumnMap.html">DbColumnMap</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/dbcolumnmap">DbColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -554,7 +554,7 @@ the record will be read from the source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IdColumn.html">IdColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/idcolumn">IdColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -586,7 +586,7 @@ property and column names.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.SelectColumn.html">SelectColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/selectcolumn">SelectColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -674,7 +674,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1'</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

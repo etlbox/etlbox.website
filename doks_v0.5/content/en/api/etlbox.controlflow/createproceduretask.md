@@ -196,7 +196,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ETLBox.ControlFlow.ProcedureParameter.html">ProcedureParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td></td>
       </tr>
@@ -338,7 +338,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.ControlFlow.ProcedureParameter.html">ProcedureParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -557,7 +557,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ETLBox.ControlFlow.ProcedureParameter.html">ProcedureParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td><p>A list of the parameters for the procedure</p>
 </td>
@@ -637,7 +637,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ETLBox.ControlFlow.ProcedureParameter.html">ProcedureParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="/api/etlbox.controlflow/procedureparameter">ProcedureParameter</a>&gt;</td>
         <td><span class="parametername">procedureParameter</span></td>
         <td><p>A list of the parameters for the procedure</p>
 </td>

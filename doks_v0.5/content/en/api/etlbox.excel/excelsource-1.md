@@ -455,7 +455,7 @@ Alternatively, you can use the Index of the column, e.g. if Key is the first col
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.Excel.ExcelColumn.html">ExcelColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox.excel/excelcolumn">ExcelColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

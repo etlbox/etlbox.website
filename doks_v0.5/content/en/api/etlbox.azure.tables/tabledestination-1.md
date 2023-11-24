@@ -415,7 +415,7 @@ should be added, updated, deleted or upserted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="ETLBox.Azure.Tables.EntityActionOption.html">EntityActionOption</a>, TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="/api/etlbox.azure.tables/entityactionoption">EntityActionOption</a>, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>

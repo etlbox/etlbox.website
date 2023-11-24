@@ -421,7 +421,7 @@ If left empty, the order of the output columns is equal to the order of the prop
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.Excel.ExcelColumn.html">ExcelColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox.excel/excelcolumn">ExcelColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

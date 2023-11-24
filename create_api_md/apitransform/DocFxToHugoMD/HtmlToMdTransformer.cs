@@ -125,8 +125,7 @@ namespace DocFxToHugoMD
             }
         };
         private string AdjustLinks(string line) {
-            if (!line.Contains(" href=")) return line;
-            if (line.Contains(" href=\"https://learn.microsoft.com/dotnet/api/")) return line;
+            if (!line.Contains(" href=")) return line;            
             foreach (var kvp in ManualLinkMapping) {
                 if (line.Contains(kvp.Key))
                     line = line.Replace(kvp.Key, "/api/" + kvp.Value.Trim());

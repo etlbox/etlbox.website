@@ -21,7 +21,7 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="ETLBox.DbConnectionString-2.html">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.AseConnectionString.html">AseConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbconnectionstringbuilder">DbConnectionStringBuilder</a>&gt;</div>
+    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox/aseconnectionstring">AseConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbconnectionstringbuilder">DbConnectionStringBuilder</a>&gt;</div>
     <div class="level2"><span class="xref">AseConnectionString</span></div>
   </div>
   <div class="implements">

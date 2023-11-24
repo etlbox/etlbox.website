@@ -160,7 +160,7 @@ new TableColumn(name:"key", dataType:"int", allowNulls:false, isPrimaryKey:true,
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td></td>
       </tr>
@@ -192,7 +192,7 @@ new TableColumn(name:"key", dataType:"int", allowNulls:false, isPrimaryKey:true,
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -544,7 +544,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -581,7 +581,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -705,7 +705,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -742,7 +742,7 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -881,7 +881,7 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -919,7 +919,7 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1043,7 +1043,7 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1080,7 +1080,7 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1208,7 +1208,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1246,7 +1246,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>

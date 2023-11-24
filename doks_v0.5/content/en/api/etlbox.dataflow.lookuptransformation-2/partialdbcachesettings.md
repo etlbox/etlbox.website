@@ -170,7 +170,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1'</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput[], <a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput[], <a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>

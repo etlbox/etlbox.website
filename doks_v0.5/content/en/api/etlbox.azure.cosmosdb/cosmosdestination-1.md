@@ -596,7 +596,7 @@ For Delete you will also need to set an id to identify the record to be deleted.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="ETLBox.Azure.CosmosDb.ItemActionOption.html">ItemActionOption</a>, TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="/api/etlbox.azure.cosmosdb/itemactionoption">ItemActionOption</a>, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>

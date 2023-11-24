@@ -21,12 +21,12 @@ toc: false
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="ETLBox.DbConnectionManager-3.html">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter">SqlParameter</a>&gt;</div>
+    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter">SqlParameter</a>&gt;</div>
     <div class="level2"><span class="xref">SqlConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.IConnectionManager-2.html">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>

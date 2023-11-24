@@ -136,7 +136,7 @@ Output will be written into a property which name is defined via OutputPropertyN
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.Json.JsonProperty2JsonPath.html">JsonProperty2JsonPath</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.json/jsonproperty2jsonpath">JsonProperty2JsonPath</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

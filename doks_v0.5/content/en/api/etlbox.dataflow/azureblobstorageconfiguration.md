@@ -200,7 +200,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobServiceEndpoint">BlobServiceEndpoint</h4>
   <div class="markdown level1 summary"><p>The endpoint to which blob is created. Only used if the <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ConnectionString">ConnectionString</a> is not provided,
 but other means of credentials are provided. The uri for the connection will then be constructed
-from &quot;{<a class="xref" href="ETLBox.DataFlow.AzureBlobStorageConfiguration.html#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint">BlobServiceEndpoint</a>}/{<a class="xref" href="ETLBox.DataFlow.AzureBlobStorageConfiguration.html#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a>}/{<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>}&quot;/&gt;</p>
+from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint">BlobServiceEndpoint</a>}/{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a>}/{<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>}&quot;/&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
