@@ -5,6 +5,19 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.1.0
+
+#### Features
+
+- Distinct: Offers now a 'GetUniqueKeyFunc' as an alternative option to identify a record as unique
+- ExcelDestination: Allow appending data to existing file
+- New Transformation: DbTypeCheck will check each row if all values would fit into the corresponding table column
+
+#### Bug fixes
+
+- FilterTransformation: FilterPredicate only invoked once,  adding error linking, fixing internal progress count
+- Excel and CsvSource: ReadFieldHeaders now also set the Property 'FieldHeaders' in the current instance if using the same Uri
+
 ## Version 3.0.2
 
 #### Features
