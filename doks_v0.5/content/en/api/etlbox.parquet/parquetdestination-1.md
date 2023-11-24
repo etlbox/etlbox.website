@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10269
+weight: 10273
 toc: false
 ---
 
@@ -19,7 +19,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -234,25 +234,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Parquet</h6>
@@ -266,7 +266,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -295,42 +295,6 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_Parquet_ParquetDestination_1__ctor_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_Parquet_ParquetDestination_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor(System.String,ETLBox.ResourceType)">ParquetDestination(string, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ParquetDestination(string uri, ResourceType resourceType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The source parquet file name or uri</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
-        <td><span class="parametername">resourceType</span></td>
-        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Parquet_ParquetDestination_1__ctor_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1__ctor_System_String_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor(System.String)">ParquetDestination(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -343,7 +307,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -353,9 +317,45 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The source parquet file name or uri</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Parquet_ParquetDestination_1__ctor_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_Parquet_ParquetDestination_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Parquet.ParquetDestination`1.#ctor(System.String,ETLBox.ResourceType)">ParquetDestination(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ParquetDestination(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source parquet file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
 </td>
       </tr>
     </tbody>
@@ -378,7 +378,7 @@ use this function to set the custom meta data for every uri
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -387,7 +387,7 @@ use this function to set the custom meta data for every uri
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">string</span>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -407,7 +407,7 @@ The default batch size is 1000.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -416,7 +416,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -435,7 +435,7 @@ The default batch size is 1000.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -444,13 +444,13 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpContentType">DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_ParquetColumns_" data-uid="ETLBox.Parquet.ParquetDestination`1.ParquetColumns*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_ParquetColumns" data-uid="ETLBox.Parquet.ParquetDestination`1.ParquetColumns">ParquetColumns</h4>
   <div class="markdown level1 summary"><p>List of mappings between columns names in parquet file and property name in object.</p>
@@ -465,7 +465,7 @@ The default batch size is 1000.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -474,7 +474,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.parquet/parquetcolumn">ParquetColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.Parquet.ParquetColumn.html">ParquetColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -493,7 +493,7 @@ The default batch size is 1000.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -502,7 +502,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ParquetOptions</span></td>
+        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/42339e08d7520ef1301b27689e1d1c02d91b058e/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -521,7 +521,7 @@ The default batch size is 1000.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -530,7 +530,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -550,7 +550,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -559,7 +559,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -579,7 +579,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -588,13 +588,13 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.UseBufferBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_UseBufferBlock">DataFlowDestination&lt;TInput&gt;.UseBufferBlock</a></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Parquet_ParquetDestination_1_CheckParameter_" data-uid="ETLBox.Parquet.ParquetDestination`1.CheckParameter*"></a>
@@ -610,7 +610,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CheckParameter">DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_CloseStream_" data-uid="ETLBox.Parquet.ParquetDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_CloseStream" data-uid="ETLBox.Parquet.ParquetDestination`1.CloseStream">CloseStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -624,7 +624,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CloseStream">DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_FindParquetNameMapping_" data-uid="ETLBox.Parquet.ParquetDestination`1.FindParquetNameMapping*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_FindParquetNameMapping_System_String_" data-uid="ETLBox.Parquet.ParquetDestination`1.FindParquetNameMapping(System.String)">FindParquetNameMapping(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -638,7 +638,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -648,14 +648,14 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">propertyName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -664,7 +664,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -682,7 +682,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -692,14 +692,14 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">columnName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -708,7 +708,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -726,7 +726,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream">DataFlowStreamDestination&lt;TInput&gt;.InitStream()</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_PrepareParameter_" data-uid="ETLBox.Parquet.ParquetDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_PrepareParameter" data-uid="ETLBox.Parquet.ParquetDestination`1.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -740,7 +740,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.PrepareParameter()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_PrepareParameter">DataFlowStreamDestination&lt;TInput&gt;.PrepareParameter()</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_WriteBatch_" data-uid="ETLBox.Parquet.ParquetDestination`1.WriteBatch*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_WriteBatch__0___" data-uid="ETLBox.Parquet.ParquetDestination`1.WriteBatch(`0[])">WriteBatch(TInput[])</h4>
   <div class="markdown level1 summary"></div>
@@ -754,7 +754,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -771,7 +771,7 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.WriteBatch(TInput[])</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_WriteBatch__0___">DataFlowDestination&lt;TInput&gt;.WriteBatch(TInput[])</a></div>
   <a id="ETLBox_Parquet_ParquetDestination_1_WriteIntoStream_" data-uid="ETLBox.Parquet.ParquetDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_Parquet_ParquetDestination_1_WriteIntoStream__0_" data-uid="ETLBox.Parquet.ParquetDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
   <div class="markdown level1 summary"></div>
@@ -785,7 +785,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -802,7 +802,7 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteIntoStream__0_">DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

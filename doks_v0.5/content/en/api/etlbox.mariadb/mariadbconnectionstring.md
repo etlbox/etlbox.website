@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.mariadb"
-weight: 10243
+weight: 10245
 toc: false
 ---
 
@@ -21,7 +21,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.mariadb/mariadbconnectionstring">MariaDbConnectionString</a>, <span class="xref">MySqlConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">MariaDbConnectionString</span></div>
   </div>
@@ -50,15 +50,6 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_MasterDbName">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.MasterDbName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
@@ -71,25 +62,25 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.MariaDb</h6>
@@ -129,7 +120,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -139,7 +130,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -161,7 +152,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -170,13 +161,13 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.DbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnector.MySqlConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionString_DbNameKeyword_" data-uid="ETLBox.MariaDb.MariaDbConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionString_DbNameKeyword" data-uid="ETLBox.MariaDb.MariaDbConnectionString.DbNameKeyword">DbNameKeyword</h4>
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
@@ -191,7 +182,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -200,13 +191,13 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnector.MySqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionString_MasterDbName_" data-uid="ETLBox.MariaDb.MariaDbConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionString_MasterDbName" data-uid="ETLBox.MariaDb.MariaDbConnectionString.MasterDbName">MasterDbName</h4>
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
@@ -221,7 +212,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -230,13 +221,13 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnectionStringBuilder&gt;.MasterDbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.MariaDb.MariaDbConnectionString, MySqlConnector.MySqlConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_MariaDb_MariaDbConnectionString_op_Implicit_" data-uid="ETLBox.MariaDb.MariaDbConnectionString.op_Implicit*"></a>
@@ -252,7 +243,7 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -262,14 +253,14 @@ Internally the MySqlConnectionStringBuilder is used to access the values of the 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

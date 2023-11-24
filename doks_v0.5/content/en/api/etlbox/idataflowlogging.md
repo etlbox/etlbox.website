@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10209
+weight: 10211
 toc: false
 ---
 
@@ -44,7 +44,7 @@ are processed. Set this property to decrease or increase this value.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -53,7 +53,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -72,7 +72,7 @@ are processed. Set this property to decrease or increase this value.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -81,7 +81,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -100,7 +100,7 @@ are processed. Set this property to decrease or increase this value.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -109,7 +109,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>

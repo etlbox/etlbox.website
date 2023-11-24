@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10128
+weight: 10130
 toc: false
 ---
 
@@ -15,11 +15,15 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Distinct`1">
   <h1 id="ETLBox_DataFlow_Distinct_1" data-uid="ETLBox.DataFlow.Distinct`1" class="text-break">Class Distinct&lt;TInput&gt;
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The 'Distinct' class in ETLBox is designed to efficiently filter out duplicate records in a data flow.
+It operates by generating unique hash values for each record based on specified properties, allowing for precise identification and exclusion of duplicates.
+This class supports various functionalities like setting DistinctColumns for targeted filtering, linking to other transformations or destinations to handle duplicates,
+and the ability to define custom functions for unique key generation. It is ideal for scenarios where data uniqueness and quality are of paramount importance.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -179,25 +183,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -211,7 +215,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -243,8 +247,8 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_Distinct_1_DistinctColumns_" data-uid="ETLBox.DataFlow.Distinct`1.DistinctColumns*"></a>
   <h4 id="ETLBox_DataFlow_Distinct_1_DistinctColumns" data-uid="ETLBox.DataFlow.Distinct`1.DistinctColumns">DistinctColumns</h4>
-  <div class="markdown level1 summary"><p>Defines the property names that should be used to determine
-the uniqueness of an object.</p>
+  <div class="markdown level1 summary"><p>Specifies a collection of property names to identify the uniqueness of an object.
+This collection dictates which properties are considered for uniqueness evaluation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -256,7 +260,7 @@ the uniqueness of an object.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -265,7 +269,7 @@ the uniqueness of an object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/distinctcolumn">DistinctColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DistinctColumn.html">DistinctColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -283,7 +287,7 @@ the uniqueness of an object.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -292,7 +296,38 @@ the uniqueness of an object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Distinct_1_GetUniqueKeyFunc_" data-uid="ETLBox.DataFlow.Distinct`1.GetUniqueKeyFunc*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_GetUniqueKeyFunc" data-uid="ETLBox.DataFlow.Distinct`1.GetUniqueKeyFunc">GetUniqueKeyFunc</h4>
+  <div class="markdown level1 summary"><p>Allows the specification of a custom function to generate a unique identifier for each row.
+This function can be used as an alternative to defining distinct properties.
+Note: When this property is set, it overrides any <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_DistinctColumns">DistinctColumns</a> settings.
+The use of this function is optional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, object> GetUniqueKeyFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -311,7 +346,7 @@ the uniqueness of an object.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -320,13 +355,13 @@ the uniqueness of an object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_Distinct_1_TargetBlock_" data-uid="ETLBox.DataFlow.Distinct`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Distinct_1_TargetBlock" data-uid="ETLBox.DataFlow.Distinct`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -341,7 +376,7 @@ the uniqueness of an object.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -350,13 +385,13 @@ the uniqueness of an object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_Distinct_1_TaskName_" data-uid="ETLBox.DataFlow.Distinct`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Distinct_1_TaskName" data-uid="ETLBox.DataFlow.Distinct`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -372,7 +407,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -381,7 +416,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -417,7 +452,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -427,7 +462,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -478,120 +513,9 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a></div>
   <a id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo*"></a>
-  <h4 id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Only rows that evaluate to true are send to the connected target</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsIntoVoid</span></td>
-        <td><p>Rows that are evaluate to true will be discarded</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo*"></a>
-  <h4 id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Only rows that evaluate to true are send to the connected target</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo*"></a>
   <h4 id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo(ETLBox.IDataFlowDestination{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination, which will only receive the detected duplicates.</p>
+  <div class="markdown level1 summary"><p>Establishes a link from the current block to another transformation or destination.
+This linked component will exclusively receive the duplicates detected by the current block.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -603,7 +527,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -615,13 +539,13 @@ with a default name that can be overwritten.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
         <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
+        <td><p>The transformation or destination to which this block is linked.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -631,7 +555,121 @@ with a default name that can be overwritten.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
-        <td><p>The linked component.</p>
+        <td><p>The component to which the duplicates are linked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Establishes a link from the current block to another transformation or destination.
+This linked component will exclusively receive the duplicates detected by the current block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The transformation or destination to which this block is linked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>A predicate to determine which rows to send to the connected target. Rows that satisfy this predicate (evaluate to true) are forwarded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The component to which the duplicates are linked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.Distinct`1.LinkDuplicatesTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkDuplicatesTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Establishes a link from the current block to another transformation or destination.
+This linked component will exclusively receive the duplicates detected by the current block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual IDataFlowSource<TInput> LinkDuplicatesTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The transformation or destination to which this block is linked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>A predicate to determine which rows to send to the connected target. Rows that satisfy this predicate (evaluate to true) are forwarded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>A predicate to filter out rows. Rows that satisfy this predicate (evaluate to true) are discarded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The component to which the duplicates are linked.</p>
 </td>
       </tr>
     </tbody>

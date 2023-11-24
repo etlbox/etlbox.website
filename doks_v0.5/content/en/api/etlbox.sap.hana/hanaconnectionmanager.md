@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.hana"
-weight: 10284
+weight: 10288
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">HanaConnection</span>, <span class="xref">HanaTransaction</span>, <span class="xref">HanaParameter</span>&gt;</div>
     <div class="level2"><span class="xref">HanaConnectionManager</span></div>
   </div>
@@ -28,7 +28,7 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">HanaConnection</span>, <span class="xref">HanaTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -126,10 +126,10 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkNonQuery(string, IEnumerable&lt;HanaParameter&gt;)</a>
@@ -138,10 +138,10 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkNonQueryAsync(string, IEnumerable&lt;HanaParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkReader(string, IEnumerable&lt;HanaParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkReader(string, IEnumerable&lt;HanaParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;HanaParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;HanaParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -171,7 +171,7 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.CloneIfAllowed()</a>
@@ -218,6 +218,27 @@ toc: false
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Sap.Hana</h6>
   <h6><strong>Assembly</strong>: ETLBox.Sap.Hana.dll</h6>
@@ -256,7 +277,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -285,7 +306,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -295,7 +316,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
@@ -317,7 +338,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -332,7 +353,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
@@ -347,7 +368,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -356,16 +377,18 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
+sql query.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -376,7 +399,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -385,13 +408,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_PP_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.PP*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_PP" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.PP">PP</h4>
   <div class="markdown level1 summary"><p>The character that is used in front of parameter names in query to identify the parameter.
@@ -407,7 +430,7 @@ Most databases use the '@' character, some use ':'.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -416,13 +439,13 @@ Most databases use the '@' character, some use ':'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.PP</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.PP</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_QB_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.QB*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_QB" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -438,7 +461,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -447,13 +470,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.QB</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_QE_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.QE*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_QE" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -469,7 +492,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -478,13 +501,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.QE</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_SupportDatabases_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportDatabases*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SupportDatabases" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportDatabases">SupportDatabases</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
@@ -500,7 +523,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -509,13 +532,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.SupportDatabases</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_SupportIndexes_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportIndexes*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SupportIndexes" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportIndexes">SupportIndexes</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support indexes.</p>
@@ -530,7 +553,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -539,13 +562,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.SupportIndexes</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportIndexes</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_SupportProcedures_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SupportProcedures" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportProcedures">SupportProcedures</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
@@ -560,7 +583,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -569,13 +592,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.SupportProcedures</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportProcedures</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_SupportSchemas_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SupportSchemas" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -592,7 +615,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -601,13 +624,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportSchemas</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_UseSqlBulkOperations_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.UseSqlBulkOperations*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_UseSqlBulkOperations" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.UseSqlBulkOperations">UseSqlBulkOperations</h4>
   <div class="markdown level1 summary"><p>By default bulk inserts are done using sql.
@@ -624,7 +647,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -633,7 +656,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -654,7 +677,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -672,7 +695,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_BulkInsert_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -687,7 +710,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -705,10 +728,11 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_BulkSelect_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkSelect*"></a>
-  <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_BulkSelect_ETLBox_ITableData_ICollection_System_String__Action_Action_Action_System_Object____" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkSelect(ETLBox.ITableData,ICollection{System.String},Action,Action,Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -719,7 +743,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -731,33 +755,40 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_BulkUpdate_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkUpdate*"></a>
-  <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_BulkUpdate_ETLBox_ITableData_ICollection_System_String__ICollection_System_String__" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkUpdate(ETLBox.ITableData,ICollection{System.String},ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -768,7 +799,7 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -780,20 +811,25 @@ If you want to insert data using HanaBulkCopy, set this option to false.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td></td>
+        <td><p>The column names used in the set part of the update statement</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td></td>
+        <td><p>The column names to join for the update</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -809,7 +845,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -819,14 +855,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_Clone_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_Clone" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -841,7 +877,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -857,7 +893,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -873,7 +909,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -883,14 +919,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.PrepareBulkInsert(string)</a></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_SqlBulkInsert_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SqlBulkInsert*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SqlBulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SqlBulkInsert(ETLBox.ITableData)">SqlBulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"></div>
@@ -904,7 +940,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -928,7 +964,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

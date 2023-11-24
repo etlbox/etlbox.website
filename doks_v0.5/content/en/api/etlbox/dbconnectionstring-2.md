@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10172
+weight: 10174
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">DbConnectionString&lt;T, TBuilder&gt;</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox/aseconnectionstring">AseConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.db2/db2connectionstring">Db2ConnectionString</a></div>
@@ -30,9 +30,9 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionstring">OleDbConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionstring">OracleConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionstring">PostgresConnectionString</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionstring">SQLiteConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sap.hana/hanaconnectionstring">HanaConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionstring">SnowflakeConnectionString</a></div>
-      <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionstring">SQLiteConnectionString</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionstring">SqlConnectionString</a></div>
   </div>
   <div class="implements">
@@ -42,22 +42,22 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -71,7 +71,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -118,7 +118,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -128,7 +128,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -150,7 +150,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -178,7 +178,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -187,7 +187,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -206,7 +206,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -215,7 +215,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -234,7 +234,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -243,7 +243,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +262,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -271,7 +271,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -292,7 +292,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -321,7 +321,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -350,7 +350,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -360,7 +360,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>The new database name</p>
 </td>
@@ -368,7 +368,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -397,7 +397,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -426,7 +426,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -435,121 +435,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The new connection string</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">object.ToString()</span></div>
-  <h3 id="eii">Explicit Interface Implementations
-</h3>
-  <a id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone_" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#Clone*"></a>
-  <h4 id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#Clone">IDbConnectionString.Clone()</h4>
-  <div class="markdown level1 summary"><p>Creates a copy of the current connection</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDbConnectionString IDbConnectionString.Clone()
-```
-
-{{< rawhtml >}}
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>A copy of the connection string</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName_" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#CloneWithMasterDbName*"></a>
-  <h4 id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#CloneWithMasterDbName">IDbConnectionString.CloneWithMasterDbName()</h4>
-  <div class="markdown level1 summary"><p>Clone the current connection string with the master database</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDbConnectionString IDbConnectionString.CloneWithMasterDbName()
-```
-
-{{< rawhtml >}}
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>The new connection string</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#CloneWithNewDbName*"></a>
-  <h4 id="ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_" data-uid="ETLBox.DbConnectionString`2.ETLBox#IDbConnectionString#CloneWithNewDbName(System.String)">IDbConnectionString.CloneWithNewDbName(string)</h4>
-  <div class="markdown level1 summary"><p>Clone the current connection string with a new database name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDbConnectionString IDbConnectionString.CloneWithNewDbName(string value)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The new database name</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idbconnectionstring">IDbConnectionString</a></td>
-        <td><p>The new connection string</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idbconnectionstring">IDbConnectionString</a>

@@ -30,7 +30,7 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -75,11 +75,11 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td id="ETLBox_ConnectionType_Snowflake">Snowflake</td>
+        <td id="ETLBox_ConnectionType_SQLite">SQLite</td>
         <td></td>
       </tr>
       <tr>
-        <td id="ETLBox_ConnectionType_SQLite">SQLite</td>
+        <td id="ETLBox_ConnectionType_Snowflake">Snowflake</td>
         <td></td>
       </tr>
       <tr>

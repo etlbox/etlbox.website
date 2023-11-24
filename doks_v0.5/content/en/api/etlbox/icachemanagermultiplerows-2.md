@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10197
+weight: 10199
 toc: false
 ---
 
@@ -58,7 +58,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -91,7 +91,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -100,7 +100,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -118,7 +118,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -127,7 +127,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;TCache&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TCache&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

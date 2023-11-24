@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10302
+weight: 10306
 toc: false
 ---
 
@@ -21,7 +21,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -294,25 +294,25 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Xml</h6>
@@ -326,7 +326,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -341,7 +341,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </tbody>
   </table>
   <h5 id="ETLBox_Xml_XmlSource_1_examples"><strong>Examples</strong></h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <pre><code class="lang-csharp">XmlSource&lt;POCO&gt; source = new XmlSource&lt;POCO&gt;("https://test.com");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Xml_XmlSource_1__ctor_" data-uid="ETLBox.Xml.XmlSource`1.#ctor*"></a>
@@ -356,44 +356,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Xml_XmlSource_1__ctor_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
-  <a id="ETLBox_Xml_XmlSource_1__ctor_" data-uid="ETLBox.Xml.XmlSource`1.#ctor*"></a>
-  <h4 id="ETLBox_Xml_XmlSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Xml.XmlSource`1.#ctor(System.String,ETLBox.ResourceType)">XmlSource(string, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlSource(string uri, ResourceType resourceType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The source xml file name or uri</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
-        <td><span class="parametername">resourceType</span></td>
-        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Xml_XmlSource_1__ctor_" data-uid="ETLBox.Xml.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1__ctor_System_String_" data-uid="ETLBox.Xml.XmlSource`1.#ctor(System.String)">XmlSource(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -407,7 +369,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -417,9 +379,45 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The source xml file name or uri</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Xml_XmlSource_1__ctor_" data-uid="ETLBox.Xml.XmlSource`1.#ctor*"></a>
+  <h4 id="ETLBox_Xml_XmlSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Xml.XmlSource`1.#ctor(System.String,ETLBox.ResourceType)">XmlSource(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlSource(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source xml file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
 </td>
       </tr>
     </tbody>
@@ -439,7 +437,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -448,16 +446,17 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Xml_XmlSource_1_AttributePrefixForDynamic_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_Xml_XmlSource_1_CollectUnparsedData_" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_CollectUnparsedData" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData">CollectUnparsedData</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if data not parsed should be stored in the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_UnparsedData">UnparsedData</a> property (also accessable
+via the current <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> object when using the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_GetNextUri">GetNextUri</a>/<a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_HasNextUri">HasNextUri</a>
+pattern).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -468,7 +467,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -477,15 +476,13 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CollectUnparsedData</span></div>
-  <h5 id="ETLBox_Xml_XmlSource_1_CollectUnparsedData_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CollectUnparsedData">DataFlowStreamSource&lt;TOutput&gt;.CollectUnparsedData</a></div>
   <a id="ETLBox_Xml_XmlSource_1_ElementName_" data-uid="ETLBox.Xml.XmlSource`1.ElementName*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_ElementName" data-uid="ETLBox.Xml.XmlSource`1.ElementName">ElementName</h4>
   <div class="markdown level1 summary"><p>The element name of the document that contains an item of the data to be parsed</p>
@@ -500,7 +497,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -509,7 +506,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -527,7 +524,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -536,13 +533,11 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Xml_XmlSource_1_ElementNameRetrievalFunc_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_Xml_XmlSource_1_TaskName_" data-uid="ETLBox.Xml.XmlSource`1.TaskName*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_TaskName" data-uid="ETLBox.Xml.XmlSource`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -558,7 +553,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -567,7 +562,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -587,7 +582,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -596,17 +591,15 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Xml_XmlSource_1_TextPrefixForDynamic_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
   <a id="ETLBox_Xml_XmlSource_1_XmlReaderSettings_" data-uid="ETLBox.Xml.XmlSource`1.XmlReaderSettings*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_XmlReaderSettings" data-uid="ETLBox.Xml.XmlSource`1.XmlReaderSettings">XmlReaderSettings</h4>
   <div class="markdown level1 summary"><p>The XmlReaderSettings used when creating the XmlReader.
-Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more details.</p>
+Please see <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreadersettings">XmlReaderSettings</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -618,7 +611,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -627,7 +620,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Xml.XmlReaderSettings</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreadersettings">XmlReaderSettings</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -646,7 +639,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -655,7 +648,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Xml.Serialization.XmlSerializer</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer">XmlSerializer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -675,9 +668,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</span></div>
-  <h5 id="ETLBox_Xml_XmlSource_1_CheckParameter_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CheckParameter">DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_Xml_XmlSource_1_CloseReader_" data-uid="ETLBox.Xml.XmlSource`1.CloseReader*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_CloseReader" data-uid="ETLBox.Xml.XmlSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -691,9 +682,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
-  <h5 id="ETLBox_Xml_XmlSource_1_CloseReader_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader">DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</a></div>
   <a id="ETLBox_Xml_XmlSource_1_InitReader_" data-uid="ETLBox.Xml.XmlSource`1.InitReader*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_InitReader" data-uid="ETLBox.Xml.XmlSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -707,9 +696,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
-  <h5 id="ETLBox_Xml_XmlSource_1_InitReader_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_InitReader">DataFlowStreamSource&lt;TOutput&gt;.InitReader()</a></div>
   <a id="ETLBox_Xml_XmlSource_1_ReadAllRecords_" data-uid="ETLBox.Xml.XmlSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_ReadAllRecords" data-uid="ETLBox.Xml.XmlSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -723,9 +710,7 @@ Please see <span class="xref">System.Xml.XmlReaderSettings</span> for more detai
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
-  <h5 id="ETLBox_Xml_XmlSource_1_ReadAllRecords_examples">Examples</h5>
-  <pre><code>XmlSource&lt;POCO> source = new XmlSource&lt;POCO>(&quot;https://test.com&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords">DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

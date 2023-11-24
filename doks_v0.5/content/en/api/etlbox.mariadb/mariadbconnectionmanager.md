@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.mariadb"
-weight: 10242
+weight: 10244
 toc: false
 ---
 
@@ -21,7 +21,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>, <span class="xref">MySqlParameter</span>&gt;</div>
     <div class="level2"><span class="xref">MariaDbConnectionManager</span></div>
   </div>
@@ -29,7 +29,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -220,25 +220,25 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.MariaDb</h6>
@@ -252,7 +252,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 
 {{< rawhtml >}}
   <h5 id="ETLBox_MariaDb_MariaDbConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>var mariaDbConnection = new MariaDbConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
+  <pre><code class="lang-csharp">var mariaDbConnection = new MariaDbConnectionManager("Data Source=.;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.#ctor*"></a>
@@ -267,8 +267,6 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>var mariaDbConnection = new MariaDbConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_ETLBox_MariaDb_MariaDbConnectionString_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.#ctor(ETLBox.MariaDb.MariaDbConnectionString)">MariaDbConnectionManager(MariaDbConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -282,7 +280,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -298,8 +296,6 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_ETLBox_MariaDb_MariaDbConnectionString__examples">Examples</h5>
-  <pre><code>var mariaDbConnection = new MariaDbConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_System_String_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.#ctor(System.String)">MariaDbConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -313,7 +309,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -323,14 +319,12 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_MariaDb_MariaDbConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>var mariaDbConnection = new MariaDbConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_ConnectionType_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.ConnectionType*"></a>
@@ -347,7 +341,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -362,7 +356,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
@@ -377,7 +371,7 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -386,13 +380,13 @@ Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers f
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -408,7 +402,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -417,13 +411,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_QB_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.QB*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_QB" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -439,7 +433,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -448,13 +442,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.QB</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_QE_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.QE*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_QE" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -470,7 +464,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -479,13 +473,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.QE</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_SupportSchemas_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_SupportSchemas" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -502,7 +496,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -511,13 +505,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_BulkDelete_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkDelete*"></a>
@@ -534,7 +528,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -552,7 +546,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_BulkInsert_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -567,7 +561,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -585,10 +579,11 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_BulkSelect_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -599,7 +594,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -611,32 +606,36 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_BulkUpdate_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -651,7 +650,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -667,13 +666,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -681,7 +680,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -697,7 +696,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -707,14 +706,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_Clone_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.Clone*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_Clone" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -729,7 +728,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -745,7 +744,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnector.MySqlConnection, MySqlConnector.MySqlTransaction, MySqlConnector.MySqlParameter&gt;.Clone()</span></div>
   <a id="ETLBox_MariaDb_MariaDbConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_MariaDb_MariaDbConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.MariaDb.MariaDbConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -761,7 +760,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -771,14 +770,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -787,7 +786,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

@@ -22,21 +22,21 @@ When all rows have been processed by the aggregation, the aggregated values are 
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/aggregation-2">Aggregation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level3"><a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowTransformation-2.html">DataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="ETLBox.DataFlow.Aggregation-2.html">Aggregation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level6"><span class="xref">Aggregation</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowtransformation-2">IDataFlowTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
     <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
@@ -245,25 +245,25 @@ When all rows have been processed by the aggregation, the aggregated values are 
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -276,6 +276,22 @@ When all rows have been processed by the aggregation, the aggregated values are 
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Aggregation_examples"><strong>Examples</strong></h5>
+  <pre>
+  <code class="lang-csharp">public class MyDetailValue
+                       {
+                           public int DetailValue { get; set; }
+                       }
+                       public class MyAggRow
+                       {
+                           [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+                           public int AggValue { get; set; }
+                       }
+                       var source = new DbSource&lt;MyDetailValue&gt;("DetailValues");
+                       var agg = new Aggregation&lt;MyDetailValue, MyAggRow&gt;();
+                       var dest = new MemoryDestination&lt;MyAggRow&gt;();
+                       source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);</code>
+</pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Aggregation__ctor_" data-uid="ETLBox.DataFlow.Aggregation.#ctor*"></a>
@@ -291,19 +307,19 @@ When all rows have been processed by the aggregation, the aggregated values are 
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_Aggregation__ctor_" data-uid="ETLBox.DataFlow.Aggregation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Aggregation__ctor_System_Action_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_System_Object__System_Action_System_Object_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Aggregation.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,System.Object},System.Action{System.Object,System.Dynamic.ExpandoObject})">Aggregation(Action&lt;ExpandoObject, ExpandoObject&gt;, Func&lt;ExpandoObject, object&gt;, Action&lt;object, ExpandoObject&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Aggregation__ctor_System_Action_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Aggregation.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})">Aggregation(Action&lt;ExpandoObject, ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Aggregation(Action<ExpandoObject, ExpandoObject> aggregationAction, Func<ExpandoObject, object> groupingFunc, Action<object, ExpandoObject> storeKeyAction)
+    public Aggregation(Action<ExpandoObject, ExpandoObject> aggregationAction)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -313,18 +329,8 @@ When all rows have been processed by the aggregation, the aggregated values are 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
         <td><span class="parametername">aggregationAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">object</span>&gt;</td>
-        <td><span class="parametername">groupingFunc</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<span class="xref">object</span>, <span class="xref">ExpandoObject</span>&gt;</td>
-        <td><span class="parametername">storeKeyAction</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,7 +348,7 @@ When all rows have been processed by the aggregation, the aggregated values are 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -352,31 +358,31 @@ When all rows have been processed by the aggregation, the aggregated values are 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
         <td><span class="parametername">aggregationAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">object</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td><span class="parametername">groupingFunc</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_Aggregation__ctor_" data-uid="ETLBox.DataFlow.Aggregation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Aggregation__ctor_System_Action_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Aggregation.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})">Aggregation(Action&lt;ExpandoObject, ExpandoObject&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Aggregation__ctor_System_Action_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_System_Object__System_Action_System_Object_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Aggregation.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,System.Object},System.Action{System.Object,System.Dynamic.ExpandoObject})">Aggregation(Action&lt;ExpandoObject, ExpandoObject&gt;, Func&lt;ExpandoObject, object&gt;, Action&lt;object, ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Aggregation(Action<ExpandoObject, ExpandoObject> aggregationAction)
+    public Aggregation(Action<ExpandoObject, ExpandoObject> aggregationAction, Func<ExpandoObject, object> groupingFunc, Action<object, ExpandoObject> storeKeyAction)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -386,8 +392,18 @@ When all rows have been processed by the aggregation, the aggregated values are 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
         <td><span class="parametername">aggregationAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">groupingFunc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
+        <td><span class="parametername">storeKeyAction</span></td>
         <td></td>
       </tr>
     </tbody>

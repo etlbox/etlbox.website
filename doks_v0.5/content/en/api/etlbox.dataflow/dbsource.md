@@ -21,19 +21,19 @@ Multiple database are supported. Use the corresponding connection manager that f
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbsource-1">DbSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level3"><a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowExecutableSource-1.html">DataFlowExecutableSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="ETLBox.DataFlow.DbSource-1.html">DbSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level6"><span class="xref">DbSource</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
@@ -282,25 +282,25 @@ Multiple database are supported. Use the corresponding connection manager that f
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -313,6 +313,11 @@ Multiple database are supported. Use the corresponding connection manager that f
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_DbSource_examples"><strong>Examples</strong></h5>
+  <pre>
+  <code class="lang-csharp">SqlConnectionManager connMan = new SqlConnectionManager("Data Source=localhost");
+                                                                                   DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, "dbo.table");</code>
+</pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_DbSource__ctor_" data-uid="ETLBox.DataFlow.DbSource.#ctor*"></a>
@@ -328,40 +333,6 @@ Multiple database are supported. Use the corresponding connection manager that f
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DbSource__ctor_" data-uid="ETLBox.DataFlow.DbSource.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_DbSource__ctor_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.DbSource.#ctor(ETLBox.IConnectionManager,System.String)">DbSource(IConnectionManager, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DbSource(IConnectionManager connectionManager, string tableName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_DbSource__ctor_" data-uid="ETLBox.DataFlow.DbSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DbSource__ctor_ETLBox_IConnectionManager_" data-uid="ETLBox.DataFlow.DbSource.#ctor(ETLBox.IConnectionManager)">DbSource(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -374,7 +345,7 @@ Multiple database are supported. Use the corresponding connection manager that f
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -386,6 +357,40 @@ Multiple database are supported. Use the corresponding connection manager that f
       <tr>
         <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbSource__ctor_" data-uid="ETLBox.DataFlow.DbSource.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource__ctor_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.DbSource.#ctor(ETLBox.IConnectionManager,System.String)">DbSource(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbSource(IConnectionManager connectionManager, string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +408,7 @@ Multiple database are supported. Use the corresponding connection manager that f
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -413,7 +418,7 @@ Multiple database are supported. Use the corresponding connection manager that f
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>

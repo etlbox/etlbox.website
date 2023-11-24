@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10298
+weight: 10302
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -242,25 +242,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Xml</h6>
@@ -274,7 +274,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -290,7 +290,7 @@ toc: false
     </tbody>
   </table>
   <h5 id="ETLBox_Xml_XmlDestination_1_examples"><strong>Examples</strong></h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
+  <pre><code class="lang-csharp">XmlDestination&lt;MyRow&gt; dest = new XmlDestination&lt;MyRow&gt;("/path/to/file.json");
 dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="constructors">Constructors
 </h3>
@@ -306,45 +306,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Xml_XmlDestination_1__ctor_examples">Examples</h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
-dest.Wait(); //Wait for all data to arrive</code></pre>
-  <a id="ETLBox_Xml_XmlDestination_1__ctor_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_Xml_XmlDestination_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor(System.String,ETLBox.ResourceType)">XmlDestination(string, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlDestination(string uri, ResourceType resourceType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The destination xml file name or uri</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
-        <td><span class="parametername">resourceType</span></td>
-        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Xml_XmlDestination_1__ctor_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1__ctor_System_String_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor(System.String)">XmlDestination(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -358,7 +319,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -368,9 +329,45 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The destination xml file name or uri</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Xml_XmlDestination_1__ctor_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_Xml_XmlDestination_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Xml.XmlDestination`1.#ctor(System.String,ETLBox.ResourceType)">XmlDestination(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlDestination(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The destination xml file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
 </td>
       </tr>
     </tbody>
@@ -392,7 +389,7 @@ Change this value for dynamic objects here.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -401,7 +398,7 @@ Change this value for dynamic objects here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -420,7 +417,7 @@ Change this value for dynamic objects here.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -429,13 +426,13 @@ Change this value for dynamic objects here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpContentType">DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</a></div>
   <a id="ETLBox_Xml_XmlDestination_1_NS_" data-uid="ETLBox.Xml.XmlDestination`1.NS*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_NS" data-uid="ETLBox.Xml.XmlDestination`1.NS">NS</h4>
   <div class="markdown level1 summary"><p>Namespaces used for the serialization (not applicable for dynamic objects).
@@ -452,7 +449,7 @@ which most likely is the desired behavior.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -461,7 +458,7 @@ which most likely is the desired behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Xml.Serialization.XmlSerializerNamespaces</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.xmlserializernamespaces">XmlSerializerNamespaces</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -480,7 +477,7 @@ which most likely is the desired behavior.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,7 +486,7 @@ which most likely is the desired behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -508,7 +505,7 @@ which most likely is the desired behavior.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -517,7 +514,7 @@ which most likely is the desired behavior.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Xml.XmlWriterSettings</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwritersettings">XmlWriterSettings</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -537,7 +534,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -546,7 +543,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -568,10 +565,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</span></div>
-  <h5 id="ETLBox_Xml_XmlDestination_1_CheckParameter_examples">Examples</h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
-dest.Wait(); //Wait for all data to arrive</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CheckParameter">DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_Xml_XmlDestination_1_CloseStream_" data-uid="ETLBox.Xml.XmlDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_CloseStream" data-uid="ETLBox.Xml.XmlDestination`1.CloseStream">CloseStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -585,10 +579,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
-  <h5 id="ETLBox_Xml_XmlDestination_1_CloseStream_examples">Examples</h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
-dest.Wait(); //Wait for all data to arrive</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CloseStream">DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</a></div>
   <a id="ETLBox_Xml_XmlDestination_1_InitStream_" data-uid="ETLBox.Xml.XmlDestination`1.InitStream*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_InitStream" data-uid="ETLBox.Xml.XmlDestination`1.InitStream">InitStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -602,10 +593,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
-  <h5 id="ETLBox_Xml_XmlDestination_1_InitStream_examples">Examples</h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
-dest.Wait(); //Wait for all data to arrive</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream">DataFlowStreamDestination&lt;TInput&gt;.InitStream()</a></div>
   <a id="ETLBox_Xml_XmlDestination_1_WriteIntoStream_" data-uid="ETLBox.Xml.XmlDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_WriteIntoStream__0_" data-uid="ETLBox.Xml.XmlDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
   <div class="markdown level1 summary"></div>
@@ -619,7 +607,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -636,10 +624,7 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</span></div>
-  <h5 id="ETLBox_Xml_XmlDestination_1_WriteIntoStream__0__examples">Examples</h5>
-  <pre><code>XmlDestination&lt;MyRow> dest = new XmlDestination&lt;MyRow>(&quot;/path/to/file.json&quot;);
-dest.Wait(); //Wait for all data to arrive</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteIntoStream__0_">DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

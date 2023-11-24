@@ -22,7 +22,7 @@ CreateIfNotExists will only create a schema if it doesn't exists.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateSchemaTask</span></div>
@@ -58,25 +58,22 @@ CreateIfNotExists will only create a schema if it doesn't exists.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -90,8 +87,8 @@ CreateIfNotExists will only create a schema if it doesn't exists.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_CreateSchemaTask_examples"><strong>Examples</strong></h5>
-  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
-CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
+  <pre><code class="lang-csharp">CreateSchemaTask.Create("demo");
+CreateSchemaTask.CreateIfNotExists("demo2");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor*"></a>
@@ -106,46 +103,6 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_examples">Examples</h5>
-  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
-CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor(System.String,System.String)">CreateSchemaTask(string, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CreateSchemaTask(string schemaName, string authorizationUser)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">authorizationUser</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_System_String_System_String__examples">Examples</h5>
-  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
-CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor(System.String)">CreateSchemaTask(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -159,7 +116,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -169,15 +126,46 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_System_String__examples">Examples</h5>
-  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
-CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_CreateSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateSchemaTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.#ctor(System.String,System.String)">CreateSchemaTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CreateSchemaTask(string schemaName, string authorizationUser)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">authorizationUser</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_CreateSchemaTask_AuthorizationUser_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.AuthorizationUser*"></a>
@@ -193,7 +181,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -202,14 +190,11 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateSchemaTask_AuthorizationUser_examples">Examples</h5>
-  <pre><code>CreateSchemaTask.Create(&quot;demo&quot;);
-CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_CreateSchemaTask_ON_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.ON*"></a>
   <h4 id="ETLBox_ControlFlow_CreateSchemaTask_ON" data-uid="ETLBox.ControlFlow.CreateSchemaTask.ON">ON</h4>
   <div class="markdown level1 summary"><p>The formatted schema name</p>
@@ -224,7 +209,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -252,7 +237,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -261,7 +246,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -280,7 +265,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -289,7 +274,7 @@ CreateSchemaTask.CreateIfNotExists(&quot;demo2&quot;);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -309,7 +294,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -318,7 +303,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,49 +327,6 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_Create_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create(ETLBox.IConnectionManager,System.String,System.String)">Create(IConnectionManager, string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Create(IConnectionManager connectionManager, string schemaName, string authorizationUser)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td><p>The name of the schema</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">authorizationUser</span></td>
-        <td><p>Database user which is authorized for the schema</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_CreateSchemaTask_Create_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create(ETLBox.IConnectionManager,System.String)">Create(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
@@ -398,7 +340,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -414,7 +356,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
 </td>
@@ -422,7 +364,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create(System.String,System.String)">Create(string, string)</h4>
+  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_Create_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create(ETLBox.IConnectionManager,System.String,System.String)">Create(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -430,12 +372,12 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 {{< /rawhtml >}}
 
 ```C#
-    public static void Create(string schemaName, string authorizationUser)
+    public static void Create(IConnectionManager connectionManager, string schemaName, string authorizationUser)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -445,13 +387,19 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">authorizationUser</span></td>
         <td><p>Database user which is authorized for the schema</p>
 </td>
@@ -472,7 +420,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -482,9 +430,46 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateSchemaTask_Create_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.Create(System.String,System.String)">Create(string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema. Throws an exception if the schema already exists. For MySql, use the CreateDatabaseTask instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void Create(string schemaName, string authorizationUser)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td><p>The name of the schema</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">authorizationUser</span></td>
+        <td><p>Database user which is authorized for the schema</p>
 </td>
       </tr>
     </tbody>
@@ -504,49 +489,6 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CreateIfNotExists(IConnectionManager connectionManager, string schemaName, string authorizationUser)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td><p>The name of the schema</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">authorizationUser</span></td>
-        <td><p>Database user which is authorized for the schema</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists*"></a>
   <h4 id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
 </div>
@@ -560,7 +502,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -576,7 +518,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
 </td>
@@ -584,20 +526,20 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead.</p>
+  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static void CreateIfNotExists(string schemaName, string authorizationUser)
+    public static void CreateIfNotExists(IConnectionManager connectionManager, string schemaName, string authorizationUser)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -607,13 +549,19 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">authorizationUser</span></td>
         <td><p>Database user which is authorized for the schema</p>
 </td>
@@ -634,7 +582,7 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -644,9 +592,46 @@ Works only if the database does support schema (for MySql, use the CreateDatabas
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateSchemaTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateSchemaTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a schema if the schema doesn't exists. For MySql, use the CreateDatabaseTask instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CreateIfNotExists(string schemaName, string authorizationUser)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td><p>The name of the schema</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">authorizationUser</span></td>
+        <td><p>Database user which is authorized for the schema</p>
 </td>
       </tr>
     </tbody>

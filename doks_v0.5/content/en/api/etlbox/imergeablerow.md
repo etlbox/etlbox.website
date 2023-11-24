@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10222
+weight: 10224
 toc: false
 ---
 
@@ -44,7 +44,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -73,7 +73,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -82,14 +82,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>null means not determined yet</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="ETLBox_IMergeableRow_ChangeDate_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>When <a class="xref" href="/api/etlbox/imergeablerow#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <span class="xref">System.DateTime.Now</span></p>
+  <div class="markdown level1 remarks"><p>When <a class="xref" href="ETLBox.IMergeableRow.html#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a></p>
 </div>
 
 {{< /rawhtml >}}

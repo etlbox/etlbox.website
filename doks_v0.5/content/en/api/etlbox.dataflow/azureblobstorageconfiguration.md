@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">AzureBlobStorageConfiguration</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -72,7 +72,7 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_System_String_System_String_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor(System.String,System.String,BlobClientOptions)">AzureBlobStorageConfiguration(string, string, BlobClientOptions)</h4>
+  <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration__ctor_System_String_System_String_Azure_Storage_Blobs_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.#ctor(System.String,System.String,Azure.Storage.Blobs.BlobClientOptions)">AzureBlobStorageConfiguration(string, string, BlobClientOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -84,7 +84,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -94,17 +94,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">containerName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">BlobClientOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.blobclientoptions">BlobClientOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -126,7 +126,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -135,14 +135,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AzureSasCredential</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.azuresascredential">AzureSasCredential</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobClientOptions_" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobClientOptions*"></a>
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobClientOptions" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobClientOptions">BlobClientOptions</h4>
-  <div class="markdown level1 summary"><p>Optional: Additional options when connecting with the <see cref="!:BlockBlobClient"></see></p>
+  <div class="markdown level1 summary"><p>Optional: Additional options when connecting with the <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.specialized.blockblobclient">BlockBlobClient</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -154,7 +154,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -163,7 +163,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlobClientOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.blobclientoptions">BlobClientOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -182,7 +182,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -191,7 +191,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlobOpenReadOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.models.blobopenreadoptions">BlobOpenReadOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +200,7 @@ toc: false
   <h4 id="ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration.BlobServiceEndpoint">BlobServiceEndpoint</h4>
   <div class="markdown level1 summary"><p>The endpoint to which blob is created. Only used if the <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ConnectionString">ConnectionString</a> is not provided,
 but other means of credentials are provided. The uri for the connection will then be constructed
-from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint">BlobServiceEndpoint</a>}/{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a>}/{<span class="xref">System.Uri</span>}&quot;/&gt;</p>
+from &quot;{<a class="xref" href="ETLBox.DataFlow.AzureBlobStorageConfiguration.html#ETLBox_DataFlow_AzureBlobStorageConfiguration_BlobServiceEndpoint">BlobServiceEndpoint</a>}/{<a class="xref" href="ETLBox.DataFlow.AzureBlobStorageConfiguration.html#ETLBox_DataFlow_AzureBlobStorageConfiguration_ContainerName">ContainerName</a>}/{<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>}&quot;/&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -212,7 +212,7 @@ from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfigura
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -221,7 +221,7 @@ from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfigura
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -240,7 +240,7 @@ from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfigura
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -249,7 +249,7 @@ from &quot;{<a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfigura
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlockBlobOpenWriteOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.models.blockblobopenwriteoptions">BlockBlobOpenWriteOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -269,7 +269,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -278,7 +278,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,7 +298,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -307,7 +307,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -326,7 +326,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -335,7 +335,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">BlockBlobClient</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.blobs.specialized.blockblobclient">BlockBlobClient</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -354,7 +354,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -363,7 +363,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">StorageSharedKeyCredential</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.storage.storagesharedkeycredential">StorageSharedKeyCredential</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -382,7 +382,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -391,7 +391,7 @@ and <a class="xref" href="/api/etlbox.dataflow/azureblobstorageconfiguration#ETL
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TokenCredential</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.core.tokencredential">TokenCredential</a></td>
         <td></td>
       </tr>
     </tbody>

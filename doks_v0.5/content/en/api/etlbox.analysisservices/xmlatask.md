@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
@@ -123,25 +123,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.AnalysisServices</h6>
@@ -155,7 +155,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_AnalysisServices_XmlaTask_examples"><strong>Examples</strong></h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
+  <pre><code class="lang-csharp">XmlaTask.ExecuteNonQuery("Log description here","Xmla goes here...")</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
@@ -170,126 +170,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_AnalysisServices_XmlaTask__ctor_examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
-  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">XmlaTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlaTask(string xmla, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">xmla</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
-  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.Action{System.Object}[])">XmlaTask(string, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlaTask(string xmla, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">xmla</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
-  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
-  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.String)">XmlaTask(string, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public XmlaTask(string name, string xmla)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">xmla</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String)">XmlaTask(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -303,7 +183,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -313,19 +193,131 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
+  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
+  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">XmlaTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlaTask(string xmla, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">xmla</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
+  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.Action{System.Object}[])">XmlaTask(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlaTask(string xmla, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">xmla</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>
+  <h4 id="ETLBox_AnalysisServices_XmlaTask__ctor_System_String_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor(System.String,System.String)">XmlaTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public XmlaTask(string name, string xmla)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">xmla</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_AnalysisServices_XmlaTask_TaskName_" data-uid="ETLBox.AnalysisServices.XmlaTask.TaskName*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_TaskName" data-uid="ETLBox.AnalysisServices.XmlaTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -336,7 +328,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -345,15 +337,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_TaskName_examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteNonQuery_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteNonQuery*"></a>
@@ -369,7 +359,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -384,14 +374,14 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -400,13 +390,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteNonQuery_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteNonQuery*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -420,7 +408,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -430,14 +418,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -446,13 +434,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteNonQuery_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -466,7 +452,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -481,29 +467,27 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -517,7 +501,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -532,19 +516,17 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -558,7 +540,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -568,29 +550,27 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -604,7 +584,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -614,19 +594,17 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteReader_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar(ETLBox.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -640,7 +618,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -655,14 +633,14 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -671,13 +649,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar(System.String)">ExecuteScalar(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -691,7 +667,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -701,14 +677,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -717,13 +693,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar``1(ETLBox.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -737,7 +711,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -752,14 +726,14 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -774,7 +748,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -788,8 +762,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <a id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.AnalysisServices.XmlaTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -803,7 +775,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -813,14 +785,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmla</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -835,7 +807,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -849,8 +821,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_AnalysisServices_XmlaTask_ExecuteScalar__1_System_String__examples">Examples</h5>
-  <pre><code>XmlaTask.ExecuteNonQuery(&quot;Log description here&quot;,&quot;Xmla goes here...&quot;)</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>

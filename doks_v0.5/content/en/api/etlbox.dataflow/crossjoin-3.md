@@ -23,7 +23,7 @@ The InMemory target should always be the target of the smaller amount of data to
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -184,25 +184,25 @@ The InMemory target should always be the target of the smaller amount of data to
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -216,7 +216,7 @@ The InMemory target should always be the target of the smaller amount of data to
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -242,8 +242,8 @@ The InMemory target should always be the target of the smaller amount of data to
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_CrossJoin_3_examples"><strong>Examples</strong></h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
+  <pre><code class="lang-csharp">CrossJoin&lt;InputType1, InputType2, OutputType&gt; crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType&gt;();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) =&gt; {
     return new OutputType() {
         Result = leftRow.Value1 + rightRow.Value2
     };
@@ -265,16 +265,6 @@ join.LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_CrossJoin_3__ctor_examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_CrossJoin_3__ctor_" data-uid="ETLBox.DataFlow.CrossJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.CrossJoin`3.#ctor(System.Func{`0,`1,`2})">CrossJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -288,7 +278,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -298,7 +288,7 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, TOutput&gt;</td>
         <td><span class="parametername">crossJoinFunc</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_CrossJoinFunc">CrossJoinFunc</a></p>
 </td>
@@ -320,7 +310,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -329,21 +319,11 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BufferBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.bufferblock-1">BufferBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_CrossJoin_3_Buffer_examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_CrossJoin_3_CrossJoinFunc_" data-uid="ETLBox.DataFlow.CrossJoin`3.CrossJoinFunc*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_CrossJoinFunc" data-uid="ETLBox.DataFlow.CrossJoin`3.CrossJoinFunc">CrossJoinFunc</h4>
   <div class="markdown level1 summary"><p>The cross join function that describes how records from the both target can be joined.</p>
@@ -358,7 +338,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -367,7 +347,7 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -387,7 +367,7 @@ Always have the smaller amount of data flown into this target.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -403,7 +383,7 @@ Always have the smaller amount of data flown into this target.</p>
   </table>
   <a id="ETLBox_DataFlow_CrossJoin_3_PassingTarget_" data-uid="ETLBox.DataFlow.CrossJoin`3.PassingTarget*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_PassingTarget" data-uid="ETLBox.DataFlow.CrossJoin`3.PassingTarget">PassingTarget</h4>
-  <div class="markdown level1 summary"><p>Every row that the PassingTarget receives is joined with all data from the <span class="xref">ETLBox.DataFlow.CrossJoin`3.InMemoryData</span>.</p>
+  <div class="markdown level1 summary"><p>Every row that the PassingTarget receives is joined with all data from the <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_InMemoryData">InMemoryData</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -415,7 +395,7 @@ Always have the smaller amount of data flown into this target.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -443,7 +423,7 @@ Always have the smaller amount of data flown into this target.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -452,13 +432,13 @@ Always have the smaller amount of data flown into this target.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TOutput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_CrossJoin_3_TaskName_" data-uid="ETLBox.DataFlow.CrossJoin`3.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_TaskName" data-uid="ETLBox.DataFlow.CrossJoin`3.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -474,7 +454,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -483,7 +463,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -506,16 +486,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_CrossJoin_3_CheckParameter_examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.CrossJoin`3.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.CrossJoin`3.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -529,7 +499,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -539,7 +509,7 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -547,16 +517,6 @@ join.LinkTo(dest);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.CrossJoin`3.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.CrossJoin`3.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -571,16 +531,6 @@ join.LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_CrossJoin_3_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_CrossJoin_3_InitComponent_" data-uid="ETLBox.DataFlow.CrossJoin`3.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_InitComponent" data-uid="ETLBox.DataFlow.CrossJoin`3.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -595,16 +545,6 @@ join.LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_CrossJoin_3_InitComponent_examples">Examples</h5>
-  <pre><code>CrossJoin&lt;InputType1, InputType2, OutputType> crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.InMemoryTarget);
-source2.LinkTo(join.PassingTarget);
-join.LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

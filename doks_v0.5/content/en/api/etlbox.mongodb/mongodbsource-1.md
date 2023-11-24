@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.mongodb"
-weight: 10248
+weight: 10250
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -227,25 +227,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.MongoDb</h6>
@@ -259,7 +259,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -303,7 +303,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -312,7 +312,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -333,7 +333,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -342,7 +342,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -363,7 +363,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -372,7 +372,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -391,7 +391,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -400,7 +400,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -419,7 +419,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -447,7 +447,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -456,7 +456,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">FilterDefinition&lt;&gt;</span>&lt;<span class="xref">BsonDocument</span>&gt;</td>
+        <td><span class="xref">FilterDefinition</span>&lt;<span class="xref">BsonDocument</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -475,7 +475,7 @@ use <a class="xref" href="/api/etlbox.mongodb/mongodbsource-1#ETLBox_MongoDb_Mon
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -504,7 +504,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -513,7 +513,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -549,7 +549,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -559,7 +559,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -594,7 +594,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</a></div>
   <a id="ETLBox_MongoDb_MongoDbSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.MongoDb.MongoDbSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_MongoDb_MongoDbSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.MongoDb.MongoDbSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -608,7 +608,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

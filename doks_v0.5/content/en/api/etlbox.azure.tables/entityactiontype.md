@@ -29,7 +29,7 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -39,12 +39,12 @@ toc: false
     <tbody>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_Add">Add</td>
-        <td><p>Add the entity to the table. This is equivalent to <see cref="!:TableClient.AddEntity&lt;T>"></see>.</p>
+        <td><p>Add the entity to the table. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.addentity">AddEntity&lt;T&gt;(T, CancellationToken)</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_Delete">Delete</td>
-        <td><p>Delete the entity. This is equivalent to <see cref="!:TableClient.DeleteEntity"></see></p>
+        <td><p>Delete the entity. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.deleteentity">DeleteEntity(string, string, ETag, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>
@@ -53,22 +53,22 @@ toc: false
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_UpdateMerge">UpdateMerge</td>
-        <td><p>Update the entity in <see cref="!:TableUpdateMode.Merge"></see> mode. This is equivalent to <see cref="!:TableClient.UpdateEntity&lt;T>"></see></p>
+        <td><p>Update the entity in <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableupdatemode#azure-data-tables-tableupdatemode-merge">Merge</a> mode. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.updateentity">UpdateEntity&lt;T&gt;(T, ETag, TableUpdateMode, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_UpdateReplace">UpdateReplace</td>
-        <td><p>Update the entity in <see cref="!:TableUpdateMode.Replace"></see> mode. This is equivalent to <see cref="!:TableClient.UpdateEntity&lt;T>"></see></p>
+        <td><p>Update the entity in <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableupdatemode#azure-data-tables-tableupdatemode-replace">Replace</a> mode. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.updateentity">UpdateEntity&lt;T&gt;(T, ETag, TableUpdateMode, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_UpsertMerge">UpsertMerge</td>
-        <td><p>Upsert the entity in <see cref="!:TableUpdateMode.Merge"></see> mode. This is equivalent to <see cref="!:TableClient.UpsertEntity&lt;T>"></see></p>
+        <td><p>Upsert the entity in <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableupdatemode#azure-data-tables-tableupdatemode-merge">Merge</a> mode. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.upsertentity">UpsertEntity&lt;T&gt;(T, TableUpdateMode, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_UpsertReplace">UpsertReplace</td>
-        <td><p>Upsert the entity in <see cref="!:TableUpdateMode.Replace"></see> mode. This is equivalent to <see cref="!:TableClient.UpsertEntity&lt;T>"></see></p>
+        <td><p>Upsert the entity in <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableupdatemode#azure-data-tables-tableupdatemode-replace">Replace</a> mode. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.upsertentity">UpsertEntity&lt;T&gt;(T, TableUpdateMode, CancellationToken)</a></p>
 </td>
       </tr>
     </tbody>

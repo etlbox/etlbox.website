@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.ase"
-weight: 10283
+weight: 10287
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">AseConnection</span>, <span class="xref">AseTransaction</span>, <span class="xref">AseParameter</span>&gt;</div>
     <div class="level2"><span class="xref">AseConnectionManager</span></div>
   </div>
@@ -28,7 +28,7 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">AseConnection</span>, <span class="xref">AseTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -219,25 +219,25 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Sap.Ase</h6>
@@ -277,7 +277,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -306,7 +306,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -316,7 +316,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
@@ -338,7 +338,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -353,7 +353,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Sap.Ase.AseConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
@@ -368,7 +368,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -377,13 +377,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Sap.Ase.AseConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -399,7 +399,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -408,13 +408,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_QB_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.QB*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_QB" data-uid="ETLBox.Sap.Ase.AseConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -430,7 +430,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -439,13 +439,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.QB</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_QE_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.QE*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_QE" data-uid="ETLBox.Sap.Ase.AseConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -461,7 +461,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -470,13 +470,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.QE</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_SupportSchemas_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_SupportSchemas" data-uid="ETLBox.Sap.Ase.AseConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -493,7 +493,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -502,13 +502,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_BulkDelete_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkDelete*"></a>
@@ -525,7 +525,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -543,7 +543,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_BulkInsert_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -558,7 +558,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -576,10 +576,11 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_BulkSelect_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -590,7 +591,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -602,32 +603,36 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_BulkUpdate_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Sap.Ase.AseConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -642,7 +647,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -658,13 +663,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -672,7 +677,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -688,7 +693,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -698,14 +703,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_Clone_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_Clone" data-uid="ETLBox.Sap.Ase.AseConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -720,7 +725,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -736,7 +741,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;AdoNetCore.AseClient.AseConnection, AdoNetCore.AseClient.AseTransaction, AdoNetCore.AseClient.AseParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Sap_Ase_AseConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Sap_Ase_AseConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Sap.Ase.AseConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -752,7 +757,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -762,14 +767,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -778,7 +783,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

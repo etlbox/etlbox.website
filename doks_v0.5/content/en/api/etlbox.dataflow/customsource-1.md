@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -227,25 +227,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -259,7 +259,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -275,12 +275,12 @@ toc: false
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_CustomSource_1_examples"><strong>Examples</strong></h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
+  <pre><code class="lang-csharp"> List&lt;string&gt; Data = new List&lt;string&gt;()
  {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
+     "Test1", "Test2", "Test3"
  };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
+ var source = new CustomSource&lt;MyRow&gt;();
+ source.ReadFunc = progressCount =&gt;
  {
      return new MyRow()
      {
@@ -289,7 +289,7 @@ toc: false
      };    
     return result;
  };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
+source.ReadCompletedFunc =  progressCount =&gt; progressCount &gt;= Data.Count;</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_CustomSource_1__ctor_" data-uid="ETLBox.DataFlow.CustomSource`1.#ctor*"></a>
@@ -304,22 +304,6 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_CustomSource_1__ctor_examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
   <a id="ETLBox_DataFlow_CustomSource_1__ctor_" data-uid="ETLBox.DataFlow.CustomSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_CustomSource_1__ctor_System_Func_System_Int32__0__System_Predicate_System_Int32__" data-uid="ETLBox.DataFlow.CustomSource`1.#ctor(System.Func{System.Int32,`0},System.Predicate{System.Int32})">CustomSource(Func&lt;int, TOutput&gt;, Predicate&lt;int&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -333,7 +317,7 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -343,13 +327,13 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">int</span>, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TOutput&gt;</td>
         <td><span class="parametername">readFunc</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/customsource-1#ETLBox_DataFlow_CustomSource_1_ReadFunc">ReadFunc</a></p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td><span class="parametername">readingCompleted</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/customsource-1#ETLBox_DataFlow_CustomSource_1_ReadingCompleted">ReadingCompleted</a></p>
 </td>
@@ -373,7 +357,7 @@ current progress count is the input of the function.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -382,7 +366,7 @@ current progress count is the input of the function.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">int</span>, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -402,7 +386,7 @@ current progress count is the input of the predicate.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -411,7 +395,7 @@ current progress count is the input of the predicate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,7 +415,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -440,7 +424,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -463,22 +447,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_CustomSource_1_CheckParameter_examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
   <a id="ETLBox_DataFlow_CustomSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.CustomSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_CustomSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.CustomSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -492,7 +460,7 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -502,7 +470,7 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -510,22 +478,6 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_CustomSource_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
   <a id="ETLBox_DataFlow_CustomSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.CustomSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_CustomSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.CustomSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -540,22 +492,6 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_CustomSource_1_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
   <a id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.CustomSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.CustomSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -569,23 +505,7 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
-  <h5 id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoAsyncWork_examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</a></div>
   <a id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.CustomSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.CustomSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -599,23 +519,7 @@ source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
-  <h5 id="ETLBox_DataFlow_CustomSource_1_OnExecutionDoSynchronousWork_examples">Examples</h5>
-  <pre><code> List&lt;string> Data = new List&lt;string>()
- {
-     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
- };
- var source = new CustomSource&lt;MyRow>();
- source.ReadFunc = progressCount =>
- {
-     return new MyRow()
-     {
-         Id = progressCount + 1,
-         Value = Data[progressCount]
-     };    
-    return result;
- };
-source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

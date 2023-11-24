@@ -21,7 +21,7 @@ In MySql, this will return a list of all schemas.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">GetListTask</span></div>
@@ -60,25 +60,25 @@ In MySql, this will return a list of all schemas.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -92,7 +92,7 @@ In MySql, this will return a list of all schemas.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_GetListTask_examples"><strong>Examples</strong></h5>
-  <pre><code>GetDatabaseListTask.List();</code></pre>
+  <pre><code class="lang-csharp">GetDatabaseListTask.List();</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_GetListTask__ctor_" data-uid="ETLBox.ControlFlow.GetListTask.#ctor*"></a>
@@ -107,8 +107,6 @@ In MySql, this will return a list of all schemas.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_GetListTask__ctor_examples">Examples</h5>
-  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_GetListTask_ObjectNames_" data-uid="ETLBox.ControlFlow.GetListTask.ObjectNames*"></a>
@@ -125,7 +123,7 @@ In MySql, this will return a list of all schemas.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -134,7 +132,7 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.ObjectNameDescriptor.html">ObjectNameDescriptor</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -152,7 +150,7 @@ In MySql, this will return a list of all schemas.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -161,16 +159,16 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_GetListTask_Sql_examples">Examples</h5>
-  <pre><code>GetDatabaseListTask.List();</code></pre>
   <a id="ETLBox_ControlFlow_GetListTask_TaskName_" data-uid="ETLBox.ControlFlow.GetListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_GetListTask_TaskName" data-uid="ETLBox.ControlFlow.GetListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -181,7 +179,7 @@ In MySql, this will return a list of all schemas.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -190,15 +188,13 @@ In MySql, this will return a list of all schemas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <h5 id="ETLBox_ControlFlow_GetListTask_TaskName_examples">Examples</h5>
-  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_GetListTask_RetrieveAll_" data-uid="ETLBox.ControlFlow.GetListTask.RetrieveAll*"></a>
@@ -214,7 +210,7 @@ In MySql, this will return a list of all schemas.</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -228,8 +224,6 @@ In MySql, this will return a list of all schemas.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_GetListTask_RetrieveAll_examples">Examples</h5>
-  <pre><code>GetDatabaseListTask.List();</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>

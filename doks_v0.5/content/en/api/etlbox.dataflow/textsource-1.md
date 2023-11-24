@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10162
+weight: 10164
 toc: false
 ---
 
@@ -23,7 +23,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -299,25 +299,25 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -331,7 +331,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -361,42 +361,6 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_TextSource_1__ctor_" data-uid="ETLBox.DataFlow.TextSource`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_TextSource_1__ctor_System_String_System_Func_System_String_System_Int32__0__" data-uid="ETLBox.DataFlow.TextSource`1.#ctor(System.String,System.Func{System.String,System.Int32,`0})">TextSource(string, Func&lt;string, int, TOutput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TextSource(string uri, Func<string, int, TOutput> parseLineFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The source of the file. This can be a filename or a web url.<span class="xref">System.Uri</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>, TOutput&gt;</td>
-        <td><span class="parametername">parseLineFunc</span></td>
-        <td><p><a class="xref" href="/api/etlbox.dataflow/textsource-1#ETLBox_DataFlow_TextSource_1_ParseLineFunc">ParseLineFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_TextSource_1__ctor_" data-uid="ETLBox.DataFlow.TextSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_TextSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.TextSource`1.#ctor(System.String)">TextSource(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -409,7 +373,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -419,9 +383,45 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
-        <td><p>The source of the file. This can be a filename or a web url.<span class="xref">System.Uri</span></p>
+        <td><p>The source of the file. This can be a filename or a web url.<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_TextSource_1__ctor_" data-uid="ETLBox.DataFlow.TextSource`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_TextSource_1__ctor_System_String_System_Func_System_String_System_Int32__0__" data-uid="ETLBox.DataFlow.TextSource`1.#ctor(System.String,System.Func{System.String,System.Int32,`0})">TextSource(string, Func&lt;string, int, TOutput&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TextSource(string uri, Func<string, int, TOutput> parseLineFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source of the file. This can be a filename or a web url.<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TOutput&gt;</td>
+        <td><span class="parametername">parseLineFunc</span></td>
+        <td><p><a class="xref" href="/api/etlbox.dataflow/textsource-1#ETLBox_DataFlow_TextSource_1_ParseLineFunc">ParseLineFunc</a></p>
 </td>
       </tr>
     </tbody>
@@ -444,7 +444,7 @@ The return value is the new row that is send into the connected components.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -453,7 +453,7 @@ The return value is the new row that is send into the connected components.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -473,7 +473,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -482,7 +482,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -504,7 +504,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CheckParameter">DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_TextSource_1_CloseReader_" data-uid="ETLBox.DataFlow.TextSource`1.CloseReader*"></a>
   <h4 id="ETLBox_DataFlow_TextSource_1_CloseReader" data-uid="ETLBox.DataFlow.TextSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -518,7 +518,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader">DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</a></div>
   <a id="ETLBox_DataFlow_TextSource_1_InitReader_" data-uid="ETLBox.DataFlow.TextSource`1.InitReader*"></a>
   <h4 id="ETLBox_DataFlow_TextSource_1_InitReader" data-uid="ETLBox.DataFlow.TextSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -532,7 +532,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_InitReader">DataFlowStreamSource&lt;TOutput&gt;.InitReader()</a></div>
   <a id="ETLBox_DataFlow_TextSource_1_ReadAllRecords_" data-uid="ETLBox.DataFlow.TextSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_DataFlow_TextSource_1_ReadAllRecords" data-uid="ETLBox.DataFlow.TextSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -546,7 +546,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords">DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

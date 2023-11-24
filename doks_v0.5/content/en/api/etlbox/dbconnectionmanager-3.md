@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10171
+weight: 10173
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox.analysisservices/adomdconnectionmanager">AdomdConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.db2/db2connectionmanager">Db2ConnectionManager</a></div>
@@ -30,40 +30,40 @@ toc: false
       <div class="level2"><a class="xref" href="/api/etlbox.oledb/oledbconnectionmanager">OleDbConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.oracle/oracleconnectionmanager">OracleConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.postgres/postgresconnectionmanager">PostgresConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionmanager">SQLiteConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sap.ase/aseconnectionmanager">AseConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sap.hana/hanaconnectionmanager">HanaConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionmanager">SnowflakeConnectionManager</a></div>
-      <div class="level2"><a class="xref" href="/api/etlbox.sqlite/sqliteconnectionmanager">SQLiteConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.sqlserver/sqlconnectionmanager">SqlConnectionManager</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;TConnection, TTransaction&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -77,7 +77,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -129,7 +129,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -159,7 +159,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -168,7 +168,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,7 +177,9 @@ toc: false
 </h3>
   <a id="ETLBox_DbConnectionManager_3_CommandTimeout_" data-uid="ETLBox.DbConnectionManager`3.CommandTimeout*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_CommandTimeout" data-uid="ETLBox.DbConnectionManager`3.CommandTimeout">CommandTimeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The timeout used when executing sql commands with this connection manager.
+Default is 0 (no timeout)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -188,7 +190,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -197,7 +199,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +218,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -225,7 +227,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -244,7 +246,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -272,7 +274,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -302,7 +304,7 @@ acquired from the connection pool.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -330,7 +332,7 @@ acquired from the connection pool.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -339,7 +341,7 @@ acquired from the connection pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -358,7 +360,7 @@ acquired from the connection pool.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -367,7 +369,7 @@ acquired from the connection pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -386,7 +388,7 @@ acquired from the connection pool.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -395,7 +397,7 @@ acquired from the connection pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -417,7 +419,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -426,7 +428,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -445,7 +447,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -454,7 +456,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -473,7 +475,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -482,7 +484,7 @@ A connnection will be left open when a bulk insert operation is executed or a tr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -502,7 +504,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -511,7 +513,7 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -531,7 +533,7 @@ Most databases use the '@' character, some use ':'.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -540,7 +542,7 @@ Most databases use the '@' character, some use ':'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -560,7 +562,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -569,7 +571,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -589,7 +591,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -598,7 +600,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -617,7 +619,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -626,7 +628,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ConnectionState</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.connectionstate">ConnectionState</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -646,7 +648,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -655,7 +657,7 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -674,7 +676,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -683,7 +685,7 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -702,7 +704,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -711,7 +713,7 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -732,7 +734,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -741,7 +743,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -761,7 +763,7 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -777,7 +779,9 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
   </table>
   <a id="ETLBox_DbConnectionManager_3_UseValueToSqlConversionFunc_" data-uid="ETLBox.DbConnectionManager`3.UseValueToSqlConversionFunc*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_UseValueToSqlConversionFunc" data-uid="ETLBox.DbConnectionManager`3.UseValueToSqlConversionFunc">UseValueToSqlConversionFunc</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if a value to sql conversion function was set
+via <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__">SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -788,7 +792,7 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -797,7 +801,7 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -815,7 +819,7 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -824,7 +828,7 @@ and <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a>, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.Helper.ConversionContext.html">ConversionContext</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -860,7 +864,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -870,7 +874,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.IsolationLevel</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a></td>
         <td><span class="parametername">isolationLevel</span></td>
         <td><p>The isolation level for the transaction</p>
 </td>
@@ -891,7 +895,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -922,7 +926,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -952,7 +956,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -962,19 +966,19 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -983,7 +987,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1001,7 +1005,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1011,19 +1015,19 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1032,7 +1036,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1050,7 +1054,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1060,27 +1064,27 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
@@ -1099,7 +1103,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1109,34 +1113,34 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TParameter&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1145,14 +1149,15 @@ This will leave the underlying ADO.NET connection open until the transaction is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DbConnectionManager_3_BulkSelect_" data-uid="ETLBox.DbConnectionManager`3.BulkSelect*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1163,7 +1168,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1175,27 +1180,32 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
-        <td></td>
+        <td><p>Pass an action for each column</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1213,7 +1223,7 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1229,13 +1239,13 @@ This will leave the underlying ADO.NET connection open until the transaction is 
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -1257,7 +1267,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1267,7 +1277,7 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Destination table name</p>
 </td>
@@ -1288,7 +1298,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1317,7 +1327,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1386,7 +1396,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1417,7 +1427,7 @@ connection manager to the target connection manager.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1461,7 +1471,7 @@ Override this method if you want to pass additional properties to the specific A
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1478,7 +1488,7 @@ Override this method if you want to pass additional properties to the specific A
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1487,7 +1497,7 @@ Override this method if you want to pass additional properties to the specific A
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1520,7 +1530,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1530,7 +1540,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">disposing</span></td>
         <td></td>
       </tr>
@@ -1549,7 +1559,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1559,7 +1569,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
@@ -1579,7 +1589,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1589,12 +1599,12 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -1602,7 +1612,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1611,7 +1621,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><p>Number of affected rows.</p>
 </td>
       </tr>
@@ -1631,7 +1641,7 @@ to the ADO.NET connection pool for further reuse.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1641,12 +1651,12 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -1654,7 +1664,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1663,7 +1673,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td><p>Number of affected rows.</p>
 </td>
       </tr>
@@ -1684,7 +1694,7 @@ Define a read action for each columns of your result set.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1694,37 +1704,37 @@ Define a read action for each columns of your result set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td><p>The sql command</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of query parameters</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">limit</span></td>
         <td><p>Maximum number of rows to read</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td><p>This action is executed before reading the next row</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td><p>This action is executed after reading a row</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td><p>Every column in the result set will call an action with the value of the current row.
 The order of the columns corresponds with the order of the passed actions.</p>
@@ -1734,7 +1744,9 @@ The order of the columns corresponds with the order of the passed actions.</p>
   </table>
   <a id="ETLBox_DbConnectionManager_3_ExecuteReaderAsync_" data-uid="ETLBox.DbConnectionManager`3.ExecuteReaderAsync*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that does return multiple rows in multiple columns.
+Define a read action for each columns of your result set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1745,7 +1757,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1755,39 +1767,46 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
-        <td></td>
+        <td><p>The sql command</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
-        <td></td>
+        <td><p>The optional list of query parameters</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">limit</span></td>
-        <td></td>
+        <td><p>Maximum number of rows to read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>This action is executed before reading the next row</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>This action is executed after reading a row</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
-        <td></td>
+        <td><p>Every column in the result set will call an action with the value of the current row.
+The order of the columns corresponds with the order of the passed actions.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1796,8 +1815,9 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A data reader to iterate through the result set</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1815,7 +1835,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1825,12 +1845,12 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -1838,7 +1858,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1847,7 +1867,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><p>The result</p>
 </td>
       </tr>
@@ -1867,7 +1887,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1877,12 +1897,12 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">commandText</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
 </td>
@@ -1890,7 +1910,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1899,7 +1919,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td><p>The result</p>
 </td>
       </tr>
@@ -1921,7 +1941,9 @@ as all tasks and components will try to open a connection if no open connection 
 {{< rawhtml >}}
   <a id="ETLBox_DbConnectionManager_3_OpenAsync_" data-uid="ETLBox.DbConnectionManager`3.OpenAsync*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_OpenAsync" data-uid="ETLBox.DbConnectionManager`3.OpenAsync">OpenAsync()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens the connection to the database asynchrously. Normally you don't have to do this on your own,
+as all tasks and components will try to open a connection if no open connection is found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1932,7 +1954,7 @@ as all tasks and components will try to open a connection if no open connection 
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1941,7 +1963,7 @@ as all tasks and components will try to open a connection if no open connection 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1959,7 +1981,7 @@ as all tasks and components will try to open a connection if no open connection 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1969,14 +1991,14 @@ as all tasks and components will try to open a connection if no open connection 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">sync</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1985,7 +2007,7 @@ as all tasks and components will try to open a connection if no open connection 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2008,7 +2030,7 @@ PostgresOdbcConnectionManager for Postgres)</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2024,31 +2046,31 @@ PostgresOdbcConnectionManager for Postgres)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">QB</span></td>
         <td><p>Quotation begin (e.g. &quot;`&quot; for MySql or &quot;[&quot; for SqlServer)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">QE</span></td>
         <td><p>Quotation end (e.g. &quot;`&quot; for MySql or &quot;]&quot; for SqlServer)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">PP</span></td>
         <td><p>Parameter placeholder (&quot;@&quot; for most databases)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">maxParameterSizeBulkCopy</span></td>
         <td><p>Number of parameters allowed when running a bulk insert (columns*row per batch = number of parameters)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">maxParameterSizeSql</span></td>
         <td><p>Number of parameters allowed for sql or non insert bulk operations (columns*row per batch = number of parameters)</p>
 </td>
@@ -2070,7 +2092,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2080,7 +2102,7 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Destination table name</p>
 </td>
@@ -2100,7 +2122,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2115,12 +2137,12 @@ performance of a bulk insert operation</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">hasSequenceColumn</span></td>
         <td></td>
       </tr>
@@ -2141,7 +2163,10 @@ performance of a bulk insert operation</p>
 {{< rawhtml >}}
   <a id="ETLBox_DbConnectionManager_3_SetValueToSqlConversionFunc_" data-uid="ETLBox.DbConnectionManager`3.SetValueToSqlConversionFunc*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__" data-uid="ETLBox.DbConnectionManager`3.SetValueToSqlConversionFunc(System.Func{ETLBox.Helper.ConversionContext,System.String})">SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If sql is used to insert/update/delete data into the destination tables, the values are injected into the sql
+via parameters. If a value to sql conversion func is set, the parameters are bypassed and the
+sql can be influenced directly with this function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2152,7 +2177,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2162,7 +2187,7 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.helper/conversioncontext">ConversionContext</a>, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.Helper.ConversionContext.html">ConversionContext</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">valueToSqlConversionFunc</span></td>
         <td></td>
       </tr>
@@ -2181,7 +2206,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2191,7 +2216,7 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a></td>
         <td><span class="parametername">adoDbConnection</span></td>
         <td></td>
       </tr>
@@ -2205,7 +2230,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

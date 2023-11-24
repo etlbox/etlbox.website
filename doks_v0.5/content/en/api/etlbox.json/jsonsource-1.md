@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10230
+weight: 10232
 toc: false
 ---
 
@@ -21,7 +21,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -297,25 +297,25 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Json</h6>
@@ -329,7 +329,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -345,7 +345,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </tbody>
   </table>
   <h5 id="ETLBox_Json_JsonSource_1_examples"><strong>Examples</strong></h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
+  <pre><code class="lang-csharp">JsonSource&lt;POCO&gt; source = new JsonSource&lt;POCO&gt;("https://jsonplaceholder.typicode.com/todos");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Json_JsonSource_1__ctor_" data-uid="ETLBox.Json.JsonSource`1.#ctor*"></a>
@@ -360,44 +360,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Json_JsonSource_1__ctor_examples">Examples</h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
-  <a id="ETLBox_Json_JsonSource_1__ctor_" data-uid="ETLBox.Json.JsonSource`1.#ctor*"></a>
-  <h4 id="ETLBox_Json_JsonSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Json.JsonSource`1.#ctor(System.String,ETLBox.ResourceType)">JsonSource(string, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public JsonSource(string uri, ResourceType resourceType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The source json file name or uri</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
-        <td><span class="parametername">resourceType</span></td>
-        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Json_JsonSource_1__ctor_" data-uid="ETLBox.Json.JsonSource`1.#ctor*"></a>
   <h4 id="ETLBox_Json_JsonSource_1__ctor_System_String_" data-uid="ETLBox.Json.JsonSource`1.#ctor(System.String)">JsonSource(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -411,7 +373,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -421,9 +383,45 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The source json file name or uri</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Json_JsonSource_1__ctor_" data-uid="ETLBox.Json.JsonSource`1.#ctor*"></a>
+  <h4 id="ETLBox_Json_JsonSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Json.JsonSource`1.#ctor(System.String,ETLBox.ResourceType)">JsonSource(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public JsonSource(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source json file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
 </td>
       </tr>
     </tbody>
@@ -444,7 +442,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -473,7 +471,7 @@ If you want a different behaviour set this to the property name of the array whi
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -482,7 +480,7 @@ If you want a different behaviour set this to the property name of the array whi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -502,7 +500,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -511,7 +509,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -533,9 +531,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</span></div>
-  <h5 id="ETLBox_Json_JsonSource_1_CheckParameter_examples">Examples</h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CheckParameter">DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_Json_JsonSource_1_CloseReader_" data-uid="ETLBox.Json.JsonSource`1.CloseReader*"></a>
   <h4 id="ETLBox_Json_JsonSource_1_CloseReader" data-uid="ETLBox.Json.JsonSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -549,9 +545,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
-  <h5 id="ETLBox_Json_JsonSource_1_CloseReader_examples">Examples</h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader">DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</a></div>
   <a id="ETLBox_Json_JsonSource_1_InitReader_" data-uid="ETLBox.Json.JsonSource`1.InitReader*"></a>
   <h4 id="ETLBox_Json_JsonSource_1_InitReader" data-uid="ETLBox.Json.JsonSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -565,9 +559,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
-  <h5 id="ETLBox_Json_JsonSource_1_InitReader_examples">Examples</h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_InitReader">DataFlowStreamSource&lt;TOutput&gt;.InitReader()</a></div>
   <a id="ETLBox_Json_JsonSource_1_ReadAllRecords_" data-uid="ETLBox.Json.JsonSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_Json_JsonSource_1_ReadAllRecords" data-uid="ETLBox.Json.JsonSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -581,9 +573,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
-  <h5 id="ETLBox_Json_JsonSource_1_ReadAllRecords_examples">Examples</h5>
-  <pre><code>JsonSource&lt;POCO> source = new JsonSource&lt;POCO>(&quot;https://jsonplaceholder.typicode.com/todos&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords">DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

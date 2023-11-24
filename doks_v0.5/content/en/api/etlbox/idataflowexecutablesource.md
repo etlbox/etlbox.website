@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10208
+weight: 10210
 toc: false
 ---
 
@@ -83,7 +83,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -92,7 +92,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -127,7 +127,7 @@ Waits until all destinations run to completion.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -137,7 +137,7 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token which can be used to cancel the task of component (and all subsequent components in the flow)</p>
 </td>
@@ -158,7 +158,7 @@ Waits until all destinations run to completion.</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -167,7 +167,7 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Returns an awaitable task that completes or faults when the flow ran to completion.</p>
 </td>
       </tr>
@@ -187,7 +187,7 @@ Waits until all destinations run to completion.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -197,7 +197,7 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token which can be used to cancel the task of component (and all subsequent components in the flow)</p>
 </td>
@@ -205,7 +205,7 @@ Waits until all destinations run to completion.</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -214,7 +214,7 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Returns an awaitable task that completes or faults when the flow ran to completion.</p>
 </td>
       </tr>
@@ -247,7 +247,7 @@ Waits until all destinations run to completion.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -257,7 +257,7 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token which can be used to cancel the task of component (and all subsequent components in the flow)</p>
 </td>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlite"
-weight: 10291
+weight: 10295
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">SQLiteConnection</span>, <span class="xref">SQLiteTransaction</span>, <span class="xref">SQLiteParameter</span>&gt;</div>
     <div class="level2"><span class="xref">SQLiteConnectionManager</span></div>
   </div>
@@ -28,7 +28,7 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">SQLiteConnection</span>, <span class="xref">SQLiteTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -219,25 +219,25 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.SQLite</h6>
@@ -251,9 +251,9 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_SQLite_SQLiteConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
+  <pre><code class="lang-csharp">ControlFlow.DefaultDbConnection =
   new.SQLiteConnectionManager(new SQLiteConnectionString(
-    &quot;Data Source=.\db\SQLite.db;Version=3;&quot;));</code></pre>
+    "Data Source=.\db\SQLite.db;Version=3;"));</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_SQLite_SQLiteConnectionManager__ctor_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.#ctor*"></a>
@@ -268,10 +268,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_SQLite_SQLiteConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new.SQLiteConnectionManager(new SQLiteConnectionString(
-    &quot;Data Source=.\db\SQLite.db;Version=3;&quot;));</code></pre>
   <a id="ETLBox_SQLite_SQLiteConnectionManager__ctor_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager__ctor_ETLBox_SQLite_SQLiteConnectionString_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.#ctor(ETLBox.SQLite.SQLiteConnectionString)">SQLiteConnectionManager(SQLiteConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -285,7 +281,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -301,10 +297,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_SQLite_SQLiteConnectionManager__ctor_ETLBox_SQLite_SQLiteConnectionString__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new.SQLiteConnectionManager(new SQLiteConnectionString(
-    &quot;Data Source=.\db\SQLite.db;Version=3;&quot;));</code></pre>
   <a id="ETLBox_SQLite_SQLiteConnectionManager__ctor_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager__ctor_System_String_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.#ctor(System.String)">SQLiteConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -318,7 +310,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -328,16 +320,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_SQLite_SQLiteConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new.SQLiteConnectionManager(new SQLiteConnectionString(
-    &quot;Data Source=.\db\SQLite.db;Version=3;&quot;));</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_BulkInserts_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkInserts*"></a>
@@ -360,7 +348,7 @@ Using bulk inserts is not compatible with older version
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -369,7 +357,7 @@ Using bulk inserts is not compatible with older version
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +376,7 @@ Using bulk inserts is not compatible with older version
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -403,7 +391,7 @@ Using bulk inserts is not compatible with older version
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.SQLite.SQLiteConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -419,7 +407,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -428,13 +416,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_ModifyDBSettings_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.ModifyDBSettings*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_ModifyDBSettings" data-uid="ETLBox.SQLite.SQLiteConnectionManager.ModifyDBSettings">ModifyDBSettings</h4>
   <div class="markdown level1 summary"><p>Will set the PRAGMA synchronous = OFF and PRAGMA journal_mode = MEMORY
@@ -450,7 +438,7 @@ settings before the bulk insert. The changes will be reverted after the bulk ins
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -459,7 +447,7 @@ settings before the bulk insert. The changes will be reverted after the bulk ins
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -479,7 +467,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -488,13 +476,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.QB</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_QE_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.QE*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_QE" data-uid="ETLBox.SQLite.SQLiteConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -510,7 +498,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -519,13 +507,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.QE</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_SupportDatabases_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportDatabases*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_SupportDatabases" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportDatabases">SupportDatabases</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
@@ -541,7 +529,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -550,13 +538,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.SupportDatabases</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_SupportProcedures_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_SupportProcedures" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportProcedures">SupportProcedures</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
@@ -571,7 +559,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -580,13 +568,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.SupportProcedures</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.SupportProcedures</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_SupportSchemas_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_SupportSchemas" data-uid="ETLBox.SQLite.SQLiteConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -603,7 +591,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -612,13 +600,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_BulkDelete_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkDelete*"></a>
@@ -635,7 +623,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -653,7 +641,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_BulkInsert_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -668,7 +656,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -686,10 +674,11 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_BulkSelect_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -700,7 +689,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -712,32 +701,36 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_BulkUpdate_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.SQLite.SQLiteConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -752,7 +745,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -768,13 +761,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -782,7 +775,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -798,7 +791,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -808,14 +801,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_Clone_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.Clone*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_Clone" data-uid="ETLBox.SQLite.SQLiteConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -830,7 +823,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -846,7 +839,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.SQLite.SQLiteConnection, System.Data.SQLite.SQLiteTransaction, System.Data.SQLite.SQLiteParameter&gt;.Clone()</span></div>
   <a id="ETLBox_SQLite_SQLiteConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_SQLite_SQLiteConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.SQLite.SQLiteConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -862,7 +855,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -872,14 +865,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -888,7 +881,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

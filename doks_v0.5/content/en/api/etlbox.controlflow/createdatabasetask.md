@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateDatabaseTask</span></div>
@@ -56,25 +56,22 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -88,7 +85,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_CreateDatabaseTask_examples"><strong>Examples</strong></h5>
-  <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
+  <pre><code class="lang-csharp">CreateDatabaseTask.Create("DemoDB");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor*"></a>
@@ -103,44 +100,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_examples">Examples</h5>
-  <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor(System.String,System.String)">CreateDatabaseTask(string, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CreateDatabaseTask(string databaseName, string collation)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">databaseName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">collation</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_System_String_System_String__examples">Examples</h5>
-  <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor(System.String)">CreateDatabaseTask(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -154,7 +113,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -164,14 +123,46 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_System_String__examples">Examples</h5>
-  <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.#ctor(System.String,System.String)">CreateDatabaseTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CreateDatabaseTask(string databaseName, string collation)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">databaseName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">collation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_Collation_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Collation*"></a>
@@ -188,7 +179,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -197,7 +188,34 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateDatabaseTask_ON_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.ON*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_ON" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.ON">ON</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor ON { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +234,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -225,40 +243,11 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_CreateDatabaseTask_ON_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.ON*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_ON" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.ON">ON</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ObjectNameDescriptor ON { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_CreateDatabaseTask_ON_examples">Examples</h5>
-  <pre><code>CreateDatabaseTask.Create(&quot;DemoDB&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_RecoveryModel_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.RecoveryModel*"></a>
   <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_RecoveryModel" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.RecoveryModel">RecoveryModel</h4>
   <div class="markdown level1 summary"><p>Sql Server only: The recovery model of the database</p>
@@ -273,7 +262,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -301,7 +290,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -310,7 +299,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -330,7 +319,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -339,7 +328,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -363,51 +352,6 @@ Throws an exception if the database already exists.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_Create_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create(ETLBox.IConnectionManager,System.String,System.String)">Create(IConnectionManager, string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
-Will throw an exception if the database already exists.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Create(IConnectionManager connectionManager, string databaseName, string collation)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the server you want to connect. Make sure this points to a database
-that does exist (e.g. a system database)</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">databaseName</span></td>
-        <td><p>The name of the database</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">collation</span></td>
-        <td><p>The default collation of the database.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_Create_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create(ETLBox.IConnectionManager,System.String)">Create(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
 Will throw an exception if the database already exists.</p>
@@ -422,7 +366,7 @@ Will throw an exception if the database already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -439,7 +383,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
@@ -447,22 +391,21 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create(System.String,System.String)">Create(string, string)</h4>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_Create_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create(ETLBox.IConnectionManager,System.String,System.String)">Create(IConnectionManager, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
-Will throw an exception if the database already exists.
-Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
+Will throw an exception if the database already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static void Create(string databaseName, string collation)
+    public static void Create(IConnectionManager connectionManager, string databaseName, string collation)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -472,13 +415,20 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the server you want to connect. Make sure this points to a database
+that does exist (e.g. a system database)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -501,7 +451,7 @@ Make sure that your default connection string points to the server itself and to
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -511,9 +461,48 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateDatabaseTask_Create_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_Create_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.Create(System.String,System.String)">Create(string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a database. In MySql or MariaDb, this will create a schema.
+Will throw an exception if the database already exists.
+Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void Create(string databaseName, string collation)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">databaseName</span></td>
+        <td><p>The name of the database</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">collation</span></td>
+        <td><p>The default collation of the database.</p>
 </td>
       </tr>
     </tbody>
@@ -532,50 +521,6 @@ Make sure that your default connection string points to the server itself and to
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CreateIfNotExists(IConnectionManager connectionManager, string databaseName, string collation)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the server you want to connect. Make sure this points to a database
-that does exist (e.g. a system database)</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">databaseName</span></td>
-        <td><p>The name of the database</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">collation</span></td>
-        <td><p>The default collation of the database.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists*"></a>
   <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String)">CreateIfNotExists(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
 </div>
@@ -589,7 +534,7 @@ that does exist (e.g. a system database)</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -606,7 +551,7 @@ that does exist (e.g. a system database)</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
@@ -614,21 +559,20 @@ that does exist (e.g. a system database)</p>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(string, string)</h4>
-  <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.
-Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_ETLBox_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists(ETLBox.IConnectionManager,System.String,System.String)">CreateIfNotExists(IConnectionManager, string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static void CreateIfNotExists(string databaseName, string collation)
+    public static void CreateIfNotExists(IConnectionManager connectionManager, string databaseName, string collation)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -638,13 +582,20 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the server you want to connect. Make sure this points to a database
+that does exist (e.g. a system database)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">collation</span></td>
         <td><p>The default collation of the database.</p>
 </td>
@@ -666,7 +617,7 @@ Make sure that your default connection string points to the server itself and to
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -676,9 +627,47 @@ Make sure that your default connection string points to the server itself and to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">databaseName</span></td>
         <td><p>The name of the database</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateDatabaseTask_CreateIfNotExists_System_String_System_String_" data-uid="ETLBox.ControlFlow.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)">CreateIfNotExists(string, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.
+Make sure that your default connection string points to the server itself and to an existing database (e.g. a system database).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CreateIfNotExists(string databaseName, string collation)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">databaseName</span></td>
+        <td><p>The name of the database</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">collation</span></td>
+        <td><p>The default collation of the database.</p>
 </td>
       </tr>
     </tbody>

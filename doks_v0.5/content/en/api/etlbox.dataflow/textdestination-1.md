@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10160
+weight: 10162
 toc: false
 ---
 
@@ -21,7 +21,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -246,25 +246,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -278,7 +278,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -309,42 +309,6 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_TextDestination_1__ctor_" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_TextDestination_1__ctor_System_String_System_Func__0_System_String__" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor(System.String,System.Func{`0,System.String})">TextDestination(string, Func&lt;TInput, string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TextDestination(string filename, Func<TInput, string> writeLineFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">filename</span></td>
-        <td><p>Will set the <span class="xref">System.Uri</span> to the given file name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, <span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">writeLineFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/textdestination-1#ETLBox_DataFlow_TextDestination_1_WriteLineFunc">WriteLineFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_TextDestination_1__ctor_" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_TextDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor(System.String)">TextDestination(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -357,7 +321,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -367,9 +331,45 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">filename</span></td>
-        <td><p>Will set the <span class="xref">System.Uri</span> to the given file name.</p>
+        <td><p>Will set the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a> to the given file name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_TextDestination_1__ctor_" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_TextDestination_1__ctor_System_String_System_Func__0_System_String__" data-uid="ETLBox.DataFlow.TextDestination`1.#ctor(System.String,System.Func{`0,System.String})">TextDestination(string, Func&lt;TInput, string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TextDestination(string filename, Func<TInput, string> writeLineFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>Will set the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a> to the given file name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">writeLineFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/textdestination-1#ETLBox_DataFlow_TextDestination_1_WriteLineFunc">WriteLineFunc</a></p>
 </td>
       </tr>
     </tbody>
@@ -391,7 +391,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -400,7 +400,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -422,7 +422,7 @@ function is written at the beginning of the output file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -431,7 +431,7 @@ function is written at the beginning of the output file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;TResult&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -451,7 +451,7 @@ The input for the Func is an object of the ingoing data type and return a string
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -460,7 +460,7 @@ The input for the Func is an object of the ingoing data type and return a string
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -480,7 +480,7 @@ The input for the Func is an object of the ingoing data type and return a string
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CheckParameter">DataFlowStreamDestination&lt;TInput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_DataFlow_TextDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.TextDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_TextDestination_1_CloseStream" data-uid="ETLBox.DataFlow.TextDestination`1.CloseStream">CloseStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -494,7 +494,7 @@ The input for the Func is an object of the ingoing data type and return a string
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_CloseStream">DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</a></div>
   <a id="ETLBox_DataFlow_TextDestination_1_InitStream_" data-uid="ETLBox.DataFlow.TextDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_TextDestination_1_InitStream" data-uid="ETLBox.DataFlow.TextDestination`1.InitStream">InitStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -508,7 +508,7 @@ The input for the Func is an object of the ingoing data type and return a string
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream">DataFlowStreamDestination&lt;TInput&gt;.InitStream()</a></div>
   <a id="ETLBox_DataFlow_TextDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.TextDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_TextDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.TextDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
   <div class="markdown level1 summary"></div>
@@ -522,7 +522,7 @@ The input for the Func is an object of the ingoing data type and return a string
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -539,7 +539,7 @@ The input for the Func is an object of the ingoing data type and return a string
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_WriteIntoStream__0_">DataFlowStreamDestination&lt;TInput&gt;.WriteIntoStream(TInput)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

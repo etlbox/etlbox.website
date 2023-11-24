@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateIndexTask</span></div>
@@ -56,25 +56,22 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -88,7 +85,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_CreateIndexTask_examples"><strong>Examples</strong></h5>
-  <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
+  <pre><code class="lang-csharp">CreateIndexTask.Create("indexname","tablename", indexColumns)</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor*"></a>
@@ -103,54 +100,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateIndexTask__ctor_examples">Examples</h5>
-  <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
-  <a id="ETLBox_ControlFlow_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateIndexTask(string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CreateIndexTask(string indexName, string tableName, IList<string> indexColumns, IList<string> includeColumns)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">indexName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">indexColumns</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">includeColumns</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String___examples">Examples</h5>
-  <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
   <a id="ETLBox_ControlFlow_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateIndexTask(string, string, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -164,7 +113,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -174,24 +123,66 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">indexName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String___examples">Examples</h5>
-  <pre><code>CreateIndexTask.Create(&quot;indexname&quot;,&quot;tablename&quot;, indexColumns)</code></pre>
+  <a id="ETLBox_ControlFlow_CreateIndexTask__ctor_" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateIndexTask__ctor_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateIndexTask(string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CreateIndexTask(string indexName, string tableName, IList<string> indexColumns, IList<string> includeColumns)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">indexName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">indexColumns</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">includeColumns</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_CreateIndexTask_IN_" data-uid="ETLBox.ControlFlow.CreateIndexTask.IN*"></a>
@@ -208,7 +199,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -236,7 +227,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -245,7 +236,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -264,7 +255,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -273,7 +264,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -292,7 +283,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -301,7 +292,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +311,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -329,7 +320,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -348,7 +339,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -357,7 +348,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -376,7 +367,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -385,7 +376,35 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateIndexTask_TN_" data-uid="ETLBox.ControlFlow.CreateIndexTask.TN*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateIndexTask_TN" data-uid="ETLBox.ControlFlow.CreateIndexTask.TN">TN</h4>
+  <div class="markdown level1 summary"><p>The formatted name of the table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor TN { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -404,7 +423,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -413,7 +432,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -433,7 +452,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -442,41 +461,13 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <a id="ETLBox_ControlFlow_CreateIndexTask_TN_" data-uid="ETLBox.ControlFlow.CreateIndexTask.TN*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateIndexTask_TN" data-uid="ETLBox.ControlFlow.CreateIndexTask.TN">TN</h4>
-  <div class="markdown level1 summary"><p>The formatted name of the table.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ObjectNameDescriptor TN { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecrate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecrate*"></a>
@@ -493,61 +484,6 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_ETLBox_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate(ETLBox.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CreateOrRecreate(IConnectionManager connectionManager, string indexName, string tableName, IList<string> indexColumns, IList<string> includeColumns)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">indexName</span></td>
-        <td><p>The name of the index</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td><p>The name of the table the index is based on</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">indexColumns</span></td>
-        <td><p>The name of the columns for the index</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">includeColumns</span></td>
-        <td><p>The name of the columns that are included in the index.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
   <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_ETLBox_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate(ETLBox.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, string, string, IList&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
 </div>
@@ -561,7 +497,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -577,19 +513,117 @@ with a default name that can be overwritten.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">indexColumns</span></td>
+        <td><p>The name of the columns for the index</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_ETLBox_IConnectionManager_System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate(ETLBox.IConnectionManager,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">CreateOrRecreate(IConnectionManager, string, string, IList&lt;string&gt;, IList&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CreateOrRecreate(IConnectionManager connectionManager, string indexName, string tableName, IList<string> indexColumns, IList<string> includeColumns)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">indexName</span></td>
+        <td><p>The name of the index</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The name of the table the index is based on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">indexColumns</span></td>
+        <td><p>The name of the columns for the index</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">includeColumns</span></td>
+        <td><p>The name of the columns that are included in the index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(string, string, IList&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CreateOrRecreate(string indexName, string tableName, IList<string> indexColumns)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">indexName</span></td>
+        <td><p>The name of the index</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The name of the table the index is based on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>
@@ -610,7 +644,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -620,70 +654,27 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">indexName</span></td>
         <td><p>The name of the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table the index is based on</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">indexColumns</span></td>
         <td><p>The name of the columns for the index</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">includeColumns</span></td>
         <td><p>The name of the columns that are included in the index</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_System_String_System_String_System_Collections_Generic_IList_System_String__" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate(System.String,System.String,System.Collections.Generic.IList{System.String})">CreateOrRecreate(string, string, IList&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an index. If the index exists, it is dropped and recreated.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CreateOrRecreate(string indexName, string tableName, IList<string> indexColumns)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">indexName</span></td>
-        <td><p>The name of the index</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td><p>The name of the table the index is based on</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
-        <td><span class="parametername">indexColumns</span></td>
-        <td><p>The name of the columns for the index</p>
 </td>
       </tr>
     </tbody>

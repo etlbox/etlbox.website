@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10214
+weight: 10216
 toc: false
 ---
 
@@ -158,7 +158,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -191,7 +191,7 @@ and always occurs after each record was read and before a new record is read.</p
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -200,7 +200,7 @@ and always occurs after each record was read and before a new record is read.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;TOutput, <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;TOutput, <a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

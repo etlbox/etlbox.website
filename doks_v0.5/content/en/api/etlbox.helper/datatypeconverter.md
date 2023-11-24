@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10187
+weight: 10189
 toc: false
 ---
 
@@ -21,7 +21,7 @@ various sql data types into the right database specific database or into a .NET 
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">DataTypeConverter</span></div>
   </div>
   <div class="implements">
@@ -31,25 +31,25 @@ various sql data types into the right database specific database or into a .NET 
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -77,7 +77,7 @@ various sql data types into the right database specific database or into a .NET 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -87,19 +87,19 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">destinationType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -108,7 +108,7 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -126,7 +126,7 @@ various sql data types into the right database specific database or into a .NET 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -136,14 +136,14 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -158,7 +158,7 @@ various sql data types into the right database specific database or into a .NET 
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -185,7 +185,7 @@ various sql data types into the right database specific database or into a .NET 
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -202,7 +202,7 @@ various sql data types into the right database specific database or into a .NET 
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -211,7 +211,7 @@ various sql data types into the right database specific database or into a .NET 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -231,7 +231,7 @@ E.g. DbType.Binary will return byte[]</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -241,7 +241,7 @@ E.g. DbType.Binary will return byte[]</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.DbType</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
         <td><span class="parametername">dbType</span></td>
         <td><p>The DbType</p>
 </td>
@@ -249,7 +249,7 @@ E.g. DbType.Binary will return byte[]</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -258,62 +258,8 @@ E.g. DbType.Binary will return byte[]</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><p>A .NET type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_System_Type_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(System.Type,ETLBox.ConnectionType)">GetDatabaseType(Type, ConnectionType)</h4>
-  <div class="markdown level1 summary"><p>Returns a database specific type for the provided .NET datat type, depending on the connection
-manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static string GetDatabaseType(Type clrType, ConnectionType connectionType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">clrType</span></td>
-        <td><p>The .NET data type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
-        <td><span class="parametername">connectionType</span></td>
-        <td><p>Database connection type, e.g. SqlServer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><p>A database specific type string</p>
 </td>
       </tr>
     </tbody>
@@ -333,7 +279,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -343,7 +289,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dbSpecificTypeName</span></td>
         <td><p>The sql specific data type name</p>
 </td>
@@ -351,7 +297,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -360,7 +306,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.DbType</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype">DbType</a>?</td>
         <td><p>The corresponding ADO .NET database type</p>
 </td>
       </tr>
@@ -379,7 +325,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -389,14 +335,14 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">clrType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -405,7 +351,105 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.DbType</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_System_Type_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(System.Type,ETLBox.ConnectionType)">GetDatabaseType(Type, ConnectionType)</h4>
+  <div class="markdown level1 summary"><p>Returns a database specific type for the provided .NET datat type, depending on the connection
+manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static string GetDatabaseType(Type clrType, ConnectionType connectionType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">clrType</span></td>
+        <td><p>The .NET data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
+        <td><span class="parametername">connectionType</span></td>
+        <td><p>Database connection type, e.g. SqlServer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A database specific type string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromBinaryString_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromBinaryString*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromBinaryString_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromBinaryString(System.String)">GetStringLengthFromBinaryString(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static int GetStringLengthFromBinaryString(string value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -425,7 +469,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -435,7 +479,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>A sql character data type</p>
 </td>
@@ -443,7 +487,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -452,7 +496,7 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><p>The string length defined in the data type - 0 if nothing could be found</p>
 </td>
       </tr>
@@ -473,7 +517,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -483,7 +527,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dbSpecificTypeName</span></td>
         <td><p>The sql specific data type name</p>
 </td>
@@ -491,7 +535,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -500,7 +544,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><p>The corresponding .NET data type</p>
 </td>
       </tr>
@@ -519,7 +563,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -529,14 +573,14 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -545,7 +589,7 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -565,7 +609,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -575,7 +619,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>The database alias type name</p>
 </td>
@@ -589,7 +633,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -598,7 +642,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The type name converted to an original database type name</p>
 </td>
       </tr>
@@ -618,7 +662,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -628,7 +672,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>The specific type name from a table column</p>
 </td>
@@ -642,7 +686,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -651,7 +695,7 @@ like &quot;varchar(10)&quot; ) to the original database type name (&quot;charact
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The type used in the CREATE TABLE statement</p>
 </td>
       </tr>
@@ -672,7 +716,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -682,7 +726,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>A data type name</p>
 </td>
@@ -696,7 +740,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -705,7 +749,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The converted database specific type name</p>
 </td>
       </tr>

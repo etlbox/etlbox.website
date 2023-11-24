@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10148
 toc: false
 ---
 
@@ -22,7 +22,7 @@ There is no limit how many target the Multicast can be linked to.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -188,25 +188,25 @@ There is no limit how many target the Multicast can be linked to.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -220,7 +220,7 @@ There is no limit how many target the Multicast can be linked to.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -236,7 +236,7 @@ There is no limit how many target the Multicast can be linked to.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_Multicast_1_examples"><strong>Examples</strong></h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
+  <pre><code class="lang-csharp">Multicast&lt;MyDataRow&gt; multicast = new Multicast&lt;MyDataRow&gt;();
 multicast.LinkTo(dest1);
 multicast.LinkTo(dest2);
 multicast.LinkTo(dest3);</code></pre>
@@ -254,11 +254,6 @@ multicast.LinkTo(dest3);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_Multicast_1__ctor_examples">Examples</h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_DataFlow_Multicast_1_SourceBlock_" data-uid="ETLBox.DataFlow.Multicast`1.SourceBlock*"></a>
@@ -275,7 +270,7 @@ multicast.LinkTo(dest3);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -284,13 +279,13 @@ multicast.LinkTo(dest3);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_Multicast_1_TargetBlock_" data-uid="ETLBox.DataFlow.Multicast`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_TargetBlock" data-uid="ETLBox.DataFlow.Multicast`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -305,7 +300,7 @@ multicast.LinkTo(dest3);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -314,13 +309,13 @@ multicast.LinkTo(dest3);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_Multicast_1_TaskName_" data-uid="ETLBox.DataFlow.Multicast`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_TaskName" data-uid="ETLBox.DataFlow.Multicast`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -336,7 +331,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -345,7 +340,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -368,11 +363,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_Multicast_1_CheckParameter_examples">Examples</h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);</code></pre>
   <a id="ETLBox_DataFlow_Multicast_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Multicast`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Multicast`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -386,7 +376,7 @@ multicast.LinkTo(dest3);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -396,7 +386,7 @@ multicast.LinkTo(dest3);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -404,11 +394,6 @@ multicast.LinkTo(dest3);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_Multicast_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);</code></pre>
   <a id="ETLBox_DataFlow_Multicast_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Multicast`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Multicast`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -423,11 +408,6 @@ multicast.LinkTo(dest3);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_Multicast_1_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);</code></pre>
   <a id="ETLBox_DataFlow_Multicast_1_InitComponent_" data-uid="ETLBox.DataFlow.Multicast`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_InitComponent" data-uid="ETLBox.DataFlow.Multicast`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -442,11 +422,6 @@ multicast.LinkTo(dest3);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_Multicast_1_InitComponent_examples">Examples</h5>
-  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

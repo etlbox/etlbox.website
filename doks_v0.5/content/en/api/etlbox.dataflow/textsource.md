@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10163
+weight: 10165
 toc: false
 ---
 
@@ -23,23 +23,23 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1">DataFlowStreamSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level6"><a class="xref" href="/api/etlbox.dataflow/textsource-1">TextSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level3"><a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowExecutableSource-1.html">DataFlowExecutableSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="ETLBox.DataFlow.DataFlowStreamSource-1.html">DataFlowStreamSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level6"><a class="xref" href="ETLBox.DataFlow.TextSource-1.html">TextSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level7"><span class="xref">TextSource</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowstreamsource-1">IDataFlowStreamSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowStreamSource-1.html">IDataFlowStreamSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowstreamsource">IDataFlowStreamSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
     <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
@@ -317,25 +317,25 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -363,40 +363,6 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_TextSource__ctor_" data-uid="ETLBox.DataFlow.TextSource.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_TextSource__ctor_System_String_System_Func_System_String_System_Int32_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.TextSource.#ctor(System.String,System.Func{System.String,System.Int32,System.Dynamic.ExpandoObject})">TextSource(string, Func&lt;string, int, ExpandoObject&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TextSource(string uri, Func<string, int, ExpandoObject> parseLineFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>, <span class="xref">ExpandoObject</span>&gt;</td>
-        <td><span class="parametername">parseLineFunc</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_TextSource__ctor_" data-uid="ETLBox.DataFlow.TextSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_TextSource__ctor_System_String_" data-uid="ETLBox.DataFlow.TextSource.#ctor(System.String)">TextSource(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -409,7 +375,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -419,8 +385,42 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_TextSource__ctor_" data-uid="ETLBox.DataFlow.TextSource.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_TextSource__ctor_System_String_System_Func_System_String_System_Int32_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.TextSource.#ctor(System.String,System.Func{System.String,System.Int32,System.Dynamic.ExpandoObject})">TextSource(string, Func&lt;string, int, ExpandoObject&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TextSource(string uri, Func<string, int, ExpandoObject> parseLineFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
+        <td><span class="parametername">parseLineFunc</span></td>
         <td></td>
       </tr>
     </tbody>

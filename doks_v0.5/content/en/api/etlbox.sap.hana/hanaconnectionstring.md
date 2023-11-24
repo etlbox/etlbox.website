@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.hana"
-weight: 10285
+weight: 10289
 toc: false
 ---
 
@@ -20,8 +20,8 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.sap.hana/hanaconnectionstring">HanaConnectionString</a>, <span class="xref">DbConnectionStringBuilder</span>&gt;</div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="ETLBox.DbConnectionString-2.html">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.Sap.Hana.HanaConnectionString.html">HanaConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbconnectionstringbuilder">DbConnectionStringBuilder</a>&gt;</div>
     <div class="level2"><span class="xref">HanaConnectionString</span></div>
   </div>
   <div class="implements">
@@ -49,15 +49,6 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_MasterDbName">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.MasterDbName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
@@ -68,6 +59,27 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;HanaConnectionString, DbConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Sap.Hana</h6>
@@ -107,7 +119,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -117,7 +129,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -139,7 +151,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -148,13 +160,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, DbConnectionStringBuilder&gt;.DbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, System.Data.Common.DbConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionString_DbNameKeyword_" data-uid="ETLBox.Sap.Hana.HanaConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionString_DbNameKeyword" data-uid="ETLBox.Sap.Hana.HanaConnectionString.DbNameKeyword">DbNameKeyword</h4>
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
@@ -169,7 +181,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -178,13 +190,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, DbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, System.Data.Common.DbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionString_MasterDbName_" data-uid="ETLBox.Sap.Hana.HanaConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionString_MasterDbName" data-uid="ETLBox.Sap.Hana.HanaConnectionString.MasterDbName">MasterDbName</h4>
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
@@ -199,7 +211,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -208,13 +220,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, DbConnectionStringBuilder&gt;.MasterDbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Sap.Hana.HanaConnectionString, System.Data.Common.DbConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_Sap_Hana_HanaConnectionString_op_Implicit_" data-uid="ETLBox.Sap.Hana.HanaConnectionString.op_Implicit*"></a>
@@ -230,7 +242,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -240,14 +252,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

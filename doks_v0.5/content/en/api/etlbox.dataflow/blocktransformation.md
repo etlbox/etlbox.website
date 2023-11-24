@@ -24,23 +24,23 @@ But as this block any processing until all data is buffered, it will also need t
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-2">BatchTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level6"><a class="xref" href="/api/etlbox.dataflow/blocktransformation-2">BlockTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div class="level7"><a class="xref" href="/api/etlbox.dataflow/blocktransformation-1">BlockTransformation</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div class="level3"><a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowTransformation-2.html">DataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="ETLBox.DataFlow.BatchTransformation-2.html">BatchTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level6"><a class="xref" href="ETLBox.DataFlow.BlockTransformation-2.html">BlockTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level7"><a class="xref" href="ETLBox.DataFlow.BlockTransformation-1.html">BlockTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level8"><span class="xref">BlockTransformation</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowtransformation-2">IDataFlowTransformation</a>&lt;<span class="xref">ExpandoObject</span>, <span class="xref">ExpandoObject</span>&gt;</div>
-    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<span class="xref">ExpandoObject</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
     <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
@@ -258,25 +258,25 @@ But as this block any processing until all data is buffered, it will also need t
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -289,6 +289,15 @@ But as this block any processing until all data is buffered, it will also need t
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_BlockTransformation_examples"><strong>Examples</strong></h5>
+  <pre>
+  <code class="lang-csharp">BlockTransformation&lt;InputType&gt; block = new BlockTransformation&lt;InputType&gt;(
+                                                                                                                                                 inputData =&gt; {
+                                                                                                                                                     inputData.RemoveRange(1, 2);
+                                                                                                                                                     inputData.Add(new InputType() { Value = 1 });
+                                                                                                                                                     return inputData;
+                                                                                                                                             });</code>
+</pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_BlockTransformation__ctor_" data-uid="ETLBox.DataFlow.BlockTransformation.#ctor*"></a>
@@ -316,7 +325,7 @@ But as this block any processing until all data is buffered, it will also need t
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -326,7 +335,7 @@ But as this block any processing until all data is buffered, it will also need t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">ExpandoObject</span>[], <span class="xref">ExpandoObject</span>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[]&gt;</td>
         <td><span class="parametername">blockTransformationFunc</span></td>
         <td></td>
       </tr>

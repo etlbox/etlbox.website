@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10149
+weight: 10151
 toc: false
 ---
 
@@ -21,7 +21,7 @@ property if you want to duplicate only particular rows.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -187,25 +187,25 @@ property if you want to duplicate only particular rows.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -219,7 +219,7 @@ property if you want to duplicate only particular rows.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -235,9 +235,9 @@ property if you want to duplicate only particular rows.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_RowDuplication_1_examples"><strong>Examples</strong></h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
+  <pre><code class="lang-csharp">var source = new DbSource&lt;InputType&gt;("SourceTable");
+RowDuplication&lt;InputType&gt; duplication = new RowDuplication&lt;InputType&gt;(3);
+var dest = new CsvDestination&lt;InputType&gt;("output.csv");
 source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
@@ -253,11 +253,6 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_RowDuplication_1__ctor_examples">Examples</h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
-source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1__ctor_System_Int32_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor(System.Int32)">RowDuplication(int)</h4>
   <div class="markdown level1 summary"></div>
@@ -271,7 +266,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -281,43 +276,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">numberOfDuplicates</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_NumberOfDuplicates">NumberOfDuplicates</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_RowDuplication_1__ctor_System_Predicate__0__System_Int32_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor(System.Predicate{`0},System.Int32)">RowDuplication(Predicate&lt;TInput&gt;, int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public RowDuplication(Predicate<TInput> canDuplicate, int numberOfDuplicates)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">canDuplicate</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_CanDuplicate">CanDuplicate</a> predicate</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">numberOfDuplicates</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_NumberOfDuplicates">NumberOfDuplicates</a></p>
 </td>
@@ -337,7 +296,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -347,9 +306,45 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
         <td><span class="parametername">canDuplicate</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_CanDuplicate">CanDuplicate</a> predicate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_RowDuplication_1__ctor_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_RowDuplication_1__ctor_System_Predicate__0__System_Int32_" data-uid="ETLBox.DataFlow.RowDuplication`1.#ctor(System.Predicate{`0},System.Int32)">RowDuplication(Predicate&lt;TInput&gt;, int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public RowDuplication(Predicate<TInput> canDuplicate, int numberOfDuplicates)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">canDuplicate</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_CanDuplicate">CanDuplicate</a> predicate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">numberOfDuplicates</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/rowduplication-1#ETLBox_DataFlow_RowDuplication_1_NumberOfDuplicates">NumberOfDuplicates</a></p>
 </td>
       </tr>
     </tbody>
@@ -370,7 +365,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -379,7 +374,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -399,7 +394,7 @@ Default is 1 (meaning the incoming row plus one copy).</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -408,7 +403,7 @@ Default is 1 (meaning the incoming row plus one copy).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -427,7 +422,7 @@ Default is 1 (meaning the incoming row plus one copy).</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -436,13 +431,13 @@ Default is 1 (meaning the incoming row plus one copy).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_RowDuplication_1_TargetBlock_" data-uid="ETLBox.DataFlow.RowDuplication`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1_TargetBlock" data-uid="ETLBox.DataFlow.RowDuplication`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -457,7 +452,7 @@ Default is 1 (meaning the incoming row plus one copy).</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -466,13 +461,13 @@ Default is 1 (meaning the incoming row plus one copy).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_RowDuplication_1_TaskName_" data-uid="ETLBox.DataFlow.RowDuplication`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1_TaskName" data-uid="ETLBox.DataFlow.RowDuplication`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -488,7 +483,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -497,7 +492,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -520,11 +515,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_RowDuplication_1_CheckParameter_examples">Examples</h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
-source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.RowDuplication`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.RowDuplication`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -538,7 +528,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -548,7 +538,7 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -556,11 +546,6 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
-source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.RowDuplication`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.RowDuplication`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -575,11 +560,6 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_RowDuplication_1_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
-source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_RowDuplication_1_InitComponent_" data-uid="ETLBox.DataFlow.RowDuplication`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_RowDuplication_1_InitComponent" data-uid="ETLBox.DataFlow.RowDuplication`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -594,11 +574,6 @@ source.LinkTo(duplication).LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_RowDuplication_1_InitComponent_examples">Examples</h5>
-  <pre><code>var source = new DbSource&lt;InputType>(&quot;SourceTable&quot;);
-RowDuplication&lt;InputType> duplication = new RowDuplication&lt;InputType>(3);
-var dest = new CsvDestination&lt;InputType>(&quot;output.csv&quot;);
-source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

@@ -34,6 +34,7 @@ namespace DocFxToHugoMD
                     Weight = weight++
                 };
                 string outputFileName = CreateOutputFileNameAndDirectory(apiHtmlFileName);
+                if (outputFileName == "toc") continue;
                 string[] htmlContent = File.ReadAllLines(apiHtmlFileName);
                 string mdContent = transformer.Transform(htmlContent);
                 File.WriteAllText(outputFileName, mdContent);
@@ -117,6 +118,7 @@ weight: {namespaceIndexFileCount++ * weightFactor}
         private static string CreateOutputFileNameAndDirectory(string apiHtmlFileName) {
             string outputFileName = Path.GetFileName(apiHtmlFileName).ToLower();
             outputFileName = outputFileName.Substring(0, outputFileName.LastIndexOf("."));
+            if (outputFileName == "toc") return "toc";
             string dirName = outputFileName.Substring(0, outputFileName.LastIndexOf("."));
             //if (dirName.Contains("connectors.") || dirName.Contains("transformations.") || dirName.Contains("helper."))
             //    dirName = dirName.Substring(0, dirName.LastIndexOf("."));

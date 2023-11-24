@@ -25,7 +25,7 @@ memory to store a whole batch.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -279,25 +279,25 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -311,7 +311,7 @@ memory to store a whole batch.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -321,12 +321,12 @@ memory to store a whole batch.</p>
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td><p>Type of ingoing data</p>
+        <td><p>Type of ingoing data.</p>
 </td>
       </tr>
       <tr>
         <td><span class="parametername">TOutput</span></td>
-        <td><p>Type of outgoing data</p>
+        <td><p>Type of outgoing data.</p>
 </td>
       </tr>
     </tbody>
@@ -346,40 +346,6 @@ memory to store a whole batch.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_System_Int32_System_Func__0___System_Collections_Generic_IEnumerable__0___1____" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor(System.Int32,System.Func{`0[],System.Collections.Generic.IEnumerable{`0},`1[]})">CachedBatchTransformation(int, Func&lt;TInput[], IEnumerable&lt;TInput&gt;, TOutput[]&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CachedBatchTransformation(int batchSize, Func<TInput[], IEnumerable<TInput>, TOutput[]> batchTransformationFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">batchSize</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput[], <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TInput&gt;, TOutput[]&gt;</td>
-        <td><span class="parametername">batchTransformationFunc</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_System_Int32_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor(System.Int32)">CachedBatchTransformation(int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -392,7 +358,7 @@ memory to store a whole batch.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -402,8 +368,42 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">batchSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_CachedBatchTransformation_2__ctor_System_Int32_System_Func__0___System_Collections_Generic_IEnumerable__0___1____" data-uid="ETLBox.DataFlow.CachedBatchTransformation`2.#ctor(System.Int32,System.Func{`0[],System.Collections.Generic.IEnumerable{`0},`1[]})">CachedBatchTransformation(int, Func&lt;TInput[], IEnumerable&lt;TInput&gt;, TOutput[]&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CachedBatchTransformation(int batchSize, Func<TInput[], IEnumerable<TInput>, TOutput[]> batchTransformationFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">batchSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TInput&gt;, TOutput[]&gt;</td>
+        <td><span class="parametername">batchTransformationFunc</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">TableColumn</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -72,19 +72,19 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">TableColumn(string, string, bool, bool, bool)</h4>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String)">TableColumn(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey, bool isIdentity)
+    public TableColumn(string name)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -94,111 +94,8 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">allowNulls</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">isPrimaryKey</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">isIdentity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean)">TableColumn(string, string, bool, bool)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">allowNulls</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">isPrimaryKey</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean)">TableColumn(string, string, bool)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableColumn(string name, string dataType, bool allowNulls)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">dataType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">allowNulls</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +113,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -226,31 +123,31 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dataType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String)">TableColumn(string)</h4>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean)">TableColumn(string, string, bool)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public TableColumn(string name)
+    public TableColumn(string name, string dataType, bool allowNulls)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -260,8 +157,111 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">allowNulls</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean)">TableColumn(string, string, bool, bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">allowNulls</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">isPrimaryKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn__ctor_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn__ctor_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_" data-uid="ETLBox.ControlFlow.TableColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">TableColumn(string, string, bool, bool, bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableColumn(string name, string dataType, bool allowNulls, bool isPrimaryKey, bool isIdentity)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">dataType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">allowNulls</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">isPrimaryKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">isIdentity</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -282,7 +282,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -291,7 +291,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -310,7 +310,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -319,7 +319,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -338,7 +338,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -347,7 +347,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -367,7 +367,7 @@ Not all databases may support this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -376,7 +376,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -395,7 +395,7 @@ Not all databases may support this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -404,7 +404,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -424,7 +424,7 @@ Not all databases may support this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -433,7 +433,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -452,7 +452,7 @@ Not all databases may support this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -461,7 +461,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">long</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -480,7 +480,7 @@ Not all databases may support this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,7 +489,7 @@ Not all databases may support this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">long</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -509,7 +509,7 @@ Not every database supports this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -518,7 +518,7 @@ Not every database supports this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -537,7 +537,7 @@ Not every database supports this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -546,35 +546,7 @@ Not every database supports this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableColumn_Name_" data-uid="ETLBox.ControlFlow.TableColumn.Name*"></a>
-  <h4 id="ETLBox_ControlFlow_TableColumn_Name" data-uid="ETLBox.ControlFlow.TableColumn.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the column</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public string Name { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -593,7 +565,7 @@ Not every database supports this.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -602,7 +574,35 @@ Not every database supports this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableColumn_Name_" data-uid="ETLBox.ControlFlow.TableColumn.Name*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn_Name" data-uid="ETLBox.ControlFlow.TableColumn.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the column</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string Name { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

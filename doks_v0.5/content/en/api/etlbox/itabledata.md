@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10223
+weight: 10225
 toc: false
 ---
 
@@ -21,103 +21,103 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Data.IDataReader.Close()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.close">IDataReader.Close()</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.GetSchemaTable()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.getschematable">IDataReader.GetSchemaTable()</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.NextResult()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.nextresult">IDataReader.NextResult()</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.Read()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.read">IDataReader.Read()</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.Depth</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.depth">IDataReader.Depth</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.IsClosed</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.isclosed">IDataReader.IsClosed</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataReader.RecordsAffected</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.recordsaffected">IDataReader.RecordsAffected</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetBoolean(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getboolean">IDataRecord.GetBoolean(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetByte(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getbyte">IDataRecord.GetByte(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetBytes(int, long, byte[], int, int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getbytes">IDataRecord.GetBytes(int, long, byte[], int, int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetChar(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getchar">IDataRecord.GetChar(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetChars(int, long, char[], int, int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getchars">IDataRecord.GetChars(int, long, char[], int, int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetData(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getdata">IDataRecord.GetData(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDataTypeName(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getdatatypename">IDataRecord.GetDataTypeName(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDateTime(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getdatetime">IDataRecord.GetDateTime(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDecimal(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getdecimal">IDataRecord.GetDecimal(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetDouble(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getdouble">IDataRecord.GetDouble(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetFieldType(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getfieldtype">IDataRecord.GetFieldType(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetFloat(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getfloat">IDataRecord.GetFloat(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetGuid(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getguid">IDataRecord.GetGuid(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt16(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getint16">IDataRecord.GetInt16(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt32(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getint32">IDataRecord.GetInt32(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetInt64(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getint64">IDataRecord.GetInt64(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetName(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getname">IDataRecord.GetName(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetOrdinal(string)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getordinal">IDataRecord.GetOrdinal(string)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetString(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getstring">IDataRecord.GetString(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetValue(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getvalue">IDataRecord.GetValue(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.GetValues(object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getvalues">IDataRecord.GetValues(object[])</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.IsDBNull(int)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.isdbnull">IDataRecord.IsDBNull(int)</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.FieldCount</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">IDataRecord.FieldCount</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.this[int]</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">IDataRecord.this[int]</a>
     </div>
     <div>
-      <span class="xref">System.Data.IDataRecord.this[string]</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">IDataRecord.this[string]</a>
     </div>
     <div>
-      <span class="xref">System.IDisposable.Dispose()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -146,7 +146,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -155,7 +155,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -174,7 +174,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -183,7 +183,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.IColumnMappingCollection</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.icolumnmappingcollection">IColumnMappingCollection</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -202,7 +202,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -211,7 +211,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -230,7 +230,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -239,7 +239,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +258,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -286,7 +286,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -295,7 +295,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -314,7 +314,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -323,7 +323,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,7 +342,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -351,7 +351,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -370,7 +370,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -379,7 +379,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<span class="xref">object</span>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -400,7 +400,7 @@ The key of the list is a unique sequence number, and the order matches also to e
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -409,7 +409,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.SortedList&lt;TKey, TValue&gt;</span>&lt;<span class="xref">int</span>, <span class="xref">object</span>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -428,7 +428,7 @@ The key of the list is a unique sequence number, and the order matches also to e
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -437,7 +437,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -458,7 +458,7 @@ The key of the list is a unique sequence number, and the order matches also to e
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -468,7 +468,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">columnName</span></td>
         <td></td>
       </tr>
@@ -488,7 +488,7 @@ The key of the list is a unique sequence number, and the order matches also to e
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -498,7 +498,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">columnName</span></td>
         <td><p>Column name</p>
 </td>
@@ -506,7 +506,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -515,7 +515,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>Data type name</p>
 </td>
       </tr>
@@ -535,7 +535,7 @@ The key of the list is a unique sequence number, and the order matches also to e
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -545,7 +545,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">columnName</span></td>
         <td><p>Column name</p>
 </td>
@@ -553,7 +553,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

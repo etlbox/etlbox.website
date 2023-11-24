@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10294
+weight: 10298
 toc: false
 ---
 
@@ -21,8 +21,8 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.sqlserver/sqlconnectionstring">SqlConnectionString</a>, <span class="xref">SqlConnectionStringBuilder</span>&gt;</div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="ETLBox.DbConnectionString-2.html">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.SqlServer.SqlConnectionString.html">SqlConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder">SqlConnectionStringBuilder</a>&gt;</div>
     <div class="level2"><span class="xref">SqlConnectionString</span></div>
   </div>
   <div class="implements">
@@ -50,15 +50,6 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_MasterDbName">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.MasterDbName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
@@ -71,25 +62,25 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;SqlConnectionString, SqlConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.SqlServer</h6>
@@ -129,7 +120,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -139,7 +130,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -161,7 +152,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -170,13 +161,13 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, SqlConnectionStringBuilder&gt;.DbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, Microsoft.Data.SqlClient.SqlConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionString_DbNameKeyword_" data-uid="ETLBox.SqlServer.SqlConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionString_DbNameKeyword" data-uid="ETLBox.SqlServer.SqlConnectionString.DbNameKeyword">DbNameKeyword</h4>
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
@@ -191,7 +182,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -200,13 +191,13 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, SqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, Microsoft.Data.SqlClient.SqlConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionString_MasterDbName_" data-uid="ETLBox.SqlServer.SqlConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionString_MasterDbName" data-uid="ETLBox.SqlServer.SqlConnectionString.MasterDbName">MasterDbName</h4>
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
@@ -221,7 +212,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -230,13 +221,13 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, SqlConnectionStringBuilder&gt;.MasterDbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, Microsoft.Data.SqlClient.SqlConnectionStringBuilder&gt;.MasterDbName</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionString_Value_" data-uid="ETLBox.SqlServer.SqlConnectionString.Value*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionString_Value" data-uid="ETLBox.SqlServer.SqlConnectionString.Value">Value</h4>
   <div class="markdown level1 summary"><p>The connection string value, e.g. &quot;Server=localhost;Database=etlbox;&quot;</p>
@@ -251,7 +242,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -260,13 +251,13 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, SqlConnectionStringBuilder&gt;.Value</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.SqlServer.SqlConnectionString, Microsoft.Data.SqlClient.SqlConnectionStringBuilder&gt;.Value</span></div>
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_SqlServer_SqlConnectionString_op_Implicit_" data-uid="ETLBox.SqlServer.SqlConnectionString.op_Implicit*"></a>
@@ -282,7 +273,7 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -292,14 +283,14 @@ Internally the SqlConnectionStringBuilder is used to access the values of the gi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

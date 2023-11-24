@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10155
+weight: 10157
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -187,25 +187,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -219,7 +219,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -240,8 +240,8 @@ toc: false
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_RowTransformation_2_examples"><strong>Examples</strong></h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
+  <pre><code class="lang-csharp">RowTransformation&lt;InputType, OutputType&gt; trans = new RowTransformation&lt;InputType, OutputType&gt;(
+row =&gt; {
     return new OutputType() { Value = row.Value + 1 };
 });</code></pre>
   <h3 id="constructors">Constructors
@@ -258,47 +258,6 @@ row => {
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_RowTransformation_2__ctor_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
-  <a id="ETLBox_DataFlow_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_RowTransformation_2__ctor_System_Func__0__1__System_Action_" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor(System.Func{`0,`1},System.Action)">RowTransformation(Func&lt;TInput, TOutput&gt;, Action)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public RowTransformation(Func<TInput, TOutput> transformationFunc, Action initAction)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, TOutput&gt;</td>
-        <td><span class="parametername">transformationFunc</span></td>
-        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow/rowtransformation-2#ETLBox_DataFlow_RowTransformation_2_TransformationFunc">TransformationFunc</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">initAction</span></td>
-        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow/rowtransformation-2#ETLBox_DataFlow_RowTransformation_2_InitAction">InitAction</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2__ctor_System_Func__0__1__" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor(System.Func{`0,`1})">RowTransformation(Func&lt;TInput, TOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -312,7 +271,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -322,9 +281,45 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TOutput&gt;</td>
         <td><span class="parametername">transformationFunc</span></td>
         <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow/rowtransformation-2#ETLBox_DataFlow_RowTransformation_2_TransformationFunc">TransformationFunc</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_RowTransformation_2__ctor_" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_RowTransformation_2__ctor_System_Func__0__1__System_Action_" data-uid="ETLBox.DataFlow.RowTransformation`2.#ctor(System.Func{`0,`1},System.Action)">RowTransformation(Func&lt;TInput, TOutput&gt;, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public RowTransformation(Func<TInput, TOutput> transformationFunc, Action initAction)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TOutput&gt;</td>
+        <td><span class="parametername">transformationFunc</span></td>
+        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow/rowtransformation-2#ETLBox_DataFlow_RowTransformation_2_TransformationFunc">TransformationFunc</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">initAction</span></td>
+        <td><p>Will set the <a class="xref" href="/api/etlbox.dataflow/rowtransformation-2#ETLBox_DataFlow_RowTransformation_2_InitAction">InitAction</a></p>
 </td>
       </tr>
     </tbody>
@@ -343,7 +338,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -352,16 +347,11 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_WasInitActionInvoked_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_DataFlow_RowTransformation_2_InitAction_" data-uid="ETLBox.DataFlow.RowTransformation`2.InitAction*"></a>
@@ -378,7 +368,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -387,7 +377,7 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -406,7 +396,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -415,13 +405,13 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TOutput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_RowTransformation_2_TargetBlock_" data-uid="ETLBox.DataFlow.RowTransformation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_TargetBlock" data-uid="ETLBox.DataFlow.RowTransformation`2.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -436,7 +426,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -445,13 +435,13 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_RowTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.RowTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_TaskName" data-uid="ETLBox.DataFlow.RowTransformation`2.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -467,7 +457,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -476,7 +466,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -497,7 +487,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -506,7 +496,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -527,11 +517,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_CheckParameter_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <a id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.RowTransformation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.RowTransformation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -545,7 +530,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -555,7 +540,7 @@ row => {
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -563,11 +548,6 @@ row => {
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <a id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.RowTransformation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.RowTransformation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -582,11 +562,6 @@ row => {
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <a id="ETLBox_DataFlow_RowTransformation_2_InitComponent_" data-uid="ETLBox.DataFlow.RowTransformation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_InitComponent" data-uid="ETLBox.DataFlow.RowTransformation`2.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -601,11 +576,6 @@ row => {
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_InitComponent_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <a id="ETLBox_DataFlow_RowTransformation_2_InvokeInitActionOnce_" data-uid="ETLBox.DataFlow.RowTransformation`2.InvokeInitActionOnce*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_InvokeInitActionOnce" data-uid="ETLBox.DataFlow.RowTransformation`2.InvokeInitActionOnce">InvokeInitActionOnce()</h4>
   <div class="markdown level1 summary"></div>
@@ -618,11 +588,6 @@ row => {
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_InvokeInitActionOnce_examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <a id="ETLBox_DataFlow_RowTransformation_2_InvokeTransformationFunc_" data-uid="ETLBox.DataFlow.RowTransformation`2.InvokeTransformationFunc*"></a>
   <h4 id="ETLBox_DataFlow_RowTransformation_2_InvokeTransformationFunc__0_" data-uid="ETLBox.DataFlow.RowTransformation`2.InvokeTransformationFunc(`0)">InvokeTransformationFunc(TInput)</h4>
   <div class="markdown level1 summary"></div>
@@ -636,7 +601,7 @@ row => {
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -653,7 +618,7 @@ row => {
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -667,11 +632,6 @@ row => {
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_RowTransformation_2_InvokeTransformationFunc__0__examples">Examples</h5>
-  <pre><code>RowTransformation&lt;InputType, OutputType> trans = new RowTransformation&lt;InputType, OutputType>(
-row => {
-    return new OutputType() { Value = row.Value + 1 };
-});</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

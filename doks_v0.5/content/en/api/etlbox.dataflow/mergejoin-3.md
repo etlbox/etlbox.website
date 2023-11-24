@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10144
+weight: 10146
 toc: false
 ---
 
@@ -26,7 +26,7 @@ can be compared with a left or right join.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -187,25 +187,25 @@ can be compared with a left or right join.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -219,7 +219,7 @@ can be compared with a left or right join.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -245,8 +245,8 @@ can be compared with a left or right join.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_MergeJoin_3_examples"><strong>Examples</strong></h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
+  <pre><code class="lang-csharp">MergeJoin&lt;InputType1, InputType2, OutputType&gt; join = new MergeJoin&lt;InputType1, InputType2, OutputType&gt;();
+join.MergeJoinFunc =  (leftRow, rightRow) =&gt; {
     return new OutputType()
     {
         Result = leftRow.Value 1 + rightRow.Value2
@@ -269,53 +269,6 @@ join.LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_MergeJoin_3__ctor_examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
-  <a id="ETLBox_DataFlow_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_MergeJoin_3__ctor_System_Func__0__1__2__System_Func__0__1_System_Int32__" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor(System.Func{`0,`1,`2},System.Func{`0,`1,System.Int32})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;, Func&lt;TInput1, TInput2, int&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public MergeJoin(Func<TInput1, TInput2, TOutput> mergeJoinFunc, Func<TInput1, TInput2, int> comparisonFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, TOutput&gt;</td>
-        <td><span class="parametername">mergeJoinFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_MergeJoinFunc">MergeJoinFunc</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, <span class="xref">int</span>&gt;</td>
-        <td><span class="parametername">comparisonFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_ComparisonFunc">ComparisonFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor(System.Func{`0,`1,`2})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -329,7 +282,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -339,9 +292,45 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, TOutput&gt;</td>
         <td><span class="parametername">mergeJoinFunc</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_MergeJoinFunc">MergeJoinFunc</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_MergeJoin_3__ctor_System_Func__0__1__2__System_Func__0__1_System_Int32__" data-uid="ETLBox.DataFlow.MergeJoin`3.#ctor(System.Func{`0,`1,`2},System.Func{`0,`1,System.Int32})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;, Func&lt;TInput1, TInput2, int&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public MergeJoin(Func<TInput1, TInput2, TOutput> mergeJoinFunc, Func<TInput1, TInput2, int> comparisonFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><span class="parametername">mergeJoinFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_MergeJoinFunc">MergeJoinFunc</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td><span class="parametername">comparisonFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_ComparisonFunc">ComparisonFunc</a></p>
 </td>
       </tr>
     </tbody>
@@ -361,7 +350,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -370,22 +359,11 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BufferBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.bufferblock-1">BufferBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_MergeJoin_3_Buffer_examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_MergeJoin_3_ComparisonFunc_" data-uid="ETLBox.DataFlow.MergeJoin`3.ComparisonFunc*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3_ComparisonFunc" data-uid="ETLBox.DataFlow.MergeJoin`3.ComparisonFunc">ComparisonFunc</h4>
   <div class="markdown level1 summary"><p>If the ComparisonFunc is defined, records are compared regarding their sort order and only joined if they match.
@@ -403,7 +381,7 @@ Return a value greater than 0 if the record for the right input is in the order 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -412,7 +390,7 @@ Return a value greater than 0 if the record for the right input is in the order 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, <span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -434,7 +412,7 @@ Return a value greater than 0 if the record for the right input is in the order 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -462,7 +440,7 @@ Return a value greater than 0 if the record for the right input is in the order 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -471,7 +449,7 @@ Return a value greater than 0 if the record for the right input is in the order 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput1, TInput2, TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput1, TInput2, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -490,7 +468,7 @@ Return a value greater than 0 if the record for the right input is in the order 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -518,7 +496,7 @@ Return a value greater than 0 if the record for the right input is in the order 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -527,13 +505,13 @@ Return a value greater than 0 if the record for the right input is in the order 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TOutput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_MergeJoin_3_TaskName_" data-uid="ETLBox.DataFlow.MergeJoin`3.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3_TaskName" data-uid="ETLBox.DataFlow.MergeJoin`3.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -549,7 +527,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -558,7 +536,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -581,17 +559,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_MergeJoin_3_CheckParameter_examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.MergeJoin`3.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.MergeJoin`3.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -605,7 +572,7 @@ join.LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -615,7 +582,7 @@ join.LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -623,17 +590,6 @@ join.LinkTo(dest);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.MergeJoin`3.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.MergeJoin`3.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -648,17 +604,6 @@ join.LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_MergeJoin_3_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_MergeJoin_3_InitComponent_" data-uid="ETLBox.DataFlow.MergeJoin`3.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_MergeJoin_3_InitComponent" data-uid="ETLBox.DataFlow.MergeJoin`3.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -673,17 +618,6 @@ join.LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_MergeJoin_3_InitComponent_examples">Examples</h5>
-  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType()
-    {
-        Result = leftRow.Value 1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

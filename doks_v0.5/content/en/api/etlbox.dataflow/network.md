@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10148
+weight: 10150
 toc: false
 ---
 
@@ -24,31 +24,28 @@ It is recommend to pass only one node from the network.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">Network</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -62,7 +59,7 @@ It is recommend to pass only one node from the network.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_Network_examples"><strong>Examples</strong></h5>
-  <pre><code>Network.Execute(source1); 
+  <pre><code class="lang-csharp">Network.Execute(source1); 
 Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
 Task t = Network.ExecuteAsync(dest1);
 t.Wait();</code></pre>
@@ -80,11 +77,6 @@ t.Wait();</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_Network__ctor_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network__ctor_" data-uid="ETLBox.DataFlow.Network.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Network__ctor_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.#ctor(ETLBox.IDataFlowComponent[])">Network(params IDataFlowComponent[])</h4>
   <div class="markdown level1 summary"></div>
@@ -98,7 +90,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -114,11 +106,6 @@ t.Wait();</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network__ctor_ETLBox_IDataFlowComponent____examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_DataFlow_Network_AllNodes_" data-uid="ETLBox.DataFlow.Network.AllNodes*"></a>
@@ -134,7 +121,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -143,16 +130,11 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IDataFlowComponent.html">IDataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network_AllNodes_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_AlwaysRun_" data-uid="ETLBox.DataFlow.Network.AlwaysRun*"></a>
   <h4 id="ETLBox_DataFlow_Network_AlwaysRun" data-uid="ETLBox.DataFlow.Network.AlwaysRun">AlwaysRun</h4>
   <div class="markdown level1 summary"></div>
@@ -166,7 +148,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -175,16 +157,11 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network_AlwaysRun_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_Destinations_" data-uid="ETLBox.DataFlow.Network.Destinations*"></a>
   <h4 id="ETLBox_DataFlow_Network_Destinations" data-uid="ETLBox.DataFlow.Network.Destinations">Destinations</h4>
   <div class="markdown level1 summary"></div>
@@ -198,7 +175,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -207,16 +184,11 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IDataFlowDestination.html">IDataFlowDestination</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network_Destinations_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_Sources_" data-uid="ETLBox.DataFlow.Network.Sources*"></a>
   <h4 id="ETLBox_DataFlow_Network_Sources" data-uid="ETLBox.DataFlow.Network.Sources">Sources</h4>
   <div class="markdown level1 summary"></div>
@@ -230,7 +202,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -239,16 +211,11 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IDataFlowExecutableSource.html">IDataFlowExecutableSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network_Sources_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <a id="ETLBox_DataFlow_Network_StartNodes_" data-uid="ETLBox.DataFlow.Network.StartNodes*"></a>
   <h4 id="ETLBox_DataFlow_Network_StartNodes" data-uid="ETLBox.DataFlow.Network.StartNodes">StartNodes</h4>
   <div class="markdown level1 summary"></div>
@@ -262,7 +229,7 @@ t.Wait();</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -271,16 +238,11 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IDataFlowComponent.html">IDataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_Network_StartNodes_examples">Examples</h5>
-  <pre><code>Network.Execute(source1); 
-Network.Execute(source1, source2); //If source1 and source2 are in the same network, providing source2 is superflous
-Task t = Network.ExecuteAsync(dest1);
-t.Wait();</code></pre>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_DataFlow_Network_Cancel_" data-uid="ETLBox.DataFlow.Network.Cancel*"></a>
@@ -312,7 +274,7 @@ This will result in all nodes canceled in the whole network.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -357,7 +319,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -369,51 +331,8 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
         <td><span class="parametername">startNodes</span></td>
-        <td><p>At least one node in the network that should be executed</p>
-<ul>
-<li>can by any node in the network</li>
-</ul>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Network_Execute_" data-uid="ETLBox.DataFlow.Network.Execute*"></a>
-  <h4 id="ETLBox_DataFlow_Network_Execute_System_Threading_CancellationToken_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(System.Threading.CancellationToken,ETLBox.IDataFlowComponent[])">Execute(CancellationToken, params IDataFlowComponent[])</h4>
-  <div class="markdown level1 summary"><p>Will execute the data flow for the whole network synchronously.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void Execute(CancellationToken cancellationToken, params IDataFlowComponent[] startNodes)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token which cancels
-the whole network when still running</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
-        <td><span class="parametername">startNodes</span></td>
-        <td><p>At least one node in the network that should be executed</p>
-<ul>
-<li>can by any node in the network</li>
-</ul>
+        <td><p>At least one node in the network that should be executed
+- can by any node in the network</p>
 </td>
       </tr>
     </tbody>
@@ -433,7 +352,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -443,9 +362,48 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token to cancel the whole network when still running</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_Execute_" data-uid="ETLBox.DataFlow.Network.Execute*"></a>
+  <h4 id="ETLBox_DataFlow_Network_Execute_System_Threading_CancellationToken_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Execute(System.Threading.CancellationToken,ETLBox.IDataFlowComponent[])">Execute(CancellationToken, params IDataFlowComponent[])</h4>
+  <div class="markdown level1 summary"><p>Will execute the data flow for the whole network synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void Execute(CancellationToken cancellationToken, params IDataFlowComponent[] startNodes)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token which cancels
+the whole network when still running</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
+        <td><span class="parametername">startNodes</span></td>
+        <td><p>At least one node in the network that should be executed
+- can by any node in the network</p>
 </td>
       </tr>
     </tbody>
@@ -465,7 +423,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -474,7 +432,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>A task that is ran to completion when the whole network is completed.</p>
 </td>
       </tr>
@@ -494,7 +452,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -506,16 +464,14 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
         <td><span class="parametername">startNodes</span></td>
-        <td><p>At least one node in the network that should be executed</p>
-<ul>
-<li>can by any node in the network</li>
-</ul>
+        <td><p>At least one node in the network that should be executed
+- can by any node in the network</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -524,63 +480,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Network_ExecuteAsync_" data-uid="ETLBox.DataFlow.Network.ExecuteAsync*"></a>
-  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_System_Threading_CancellationToken_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(System.Threading.CancellationToken,ETLBox.IDataFlowComponent[])">ExecuteAsync(CancellationToken, params IDataFlowComponent[])</h4>
-  <div class="markdown level1 summary"><p>Will execute the data flow for the whole network asynchronously.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static Task ExecuteAsync(CancellationToken cancellationToken, params IDataFlowComponent[] startNodes)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token which cancels
-the whole network when still running</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
-        <td><span class="parametername">startNodes</span></td>
-        <td><p>At least one node in the network that should be executed</p>
-<ul>
-<li>can by any node in the network</li>
-</ul>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -600,7 +500,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -610,7 +510,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token to cancel the whole network when running</p>
 </td>
@@ -618,7 +518,7 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -627,9 +527,63 @@ The network is derived from the given <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>A task that is ran to completion when the whole network is completed.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_ExecuteAsync_" data-uid="ETLBox.DataFlow.Network.ExecuteAsync*"></a>
+  <h4 id="ETLBox_DataFlow_Network_ExecuteAsync_System_Threading_CancellationToken_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.ExecuteAsync(System.Threading.CancellationToken,ETLBox.IDataFlowComponent[])">ExecuteAsync(CancellationToken, params IDataFlowComponent[])</h4>
+  <div class="markdown level1 summary"><p>Will execute the data flow for the whole network asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ExecuteAsync(CancellationToken cancellationToken, params IDataFlowComponent[] startNodes)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token which cancels
+the whole network when still running</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
+        <td><span class="parametername">startNodes</span></td>
+        <td><p>At least one node in the network that should be executed
+- can by any node in the network</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

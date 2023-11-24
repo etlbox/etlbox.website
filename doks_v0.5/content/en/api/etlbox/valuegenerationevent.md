@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10297
+weight: 10301
 toc: false
 ---
 
@@ -29,7 +29,7 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>

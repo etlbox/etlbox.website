@@ -32,7 +32,7 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>

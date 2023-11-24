@@ -21,7 +21,7 @@ Multiple database are supported. Use the corresponding connection manager that f
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -222,25 +222,25 @@ Multiple database are supported. Use the corresponding connection manager that f
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -254,7 +254,7 @@ Multiple database are supported. Use the corresponding connection manager that f
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -270,8 +270,8 @@ Multiple database are supported. Use the corresponding connection manager that f
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_DbSource_1_examples"><strong>Examples</strong></h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
+  <pre><code class="lang-csharp">SqlConnectionManager connMan = new SqlConnectionManager("Data Source=localhost");
+DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, "dbo.table");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor*"></a>
@@ -286,45 +286,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_DbSource_1__ctor_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
-  <a id="ETLBox_DataFlow_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_DbSource_1__ctor_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor(ETLBox.IConnectionManager,System.String)">DbSource(IConnectionManager, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DbSource(IConnectionManager connectionManager, string tableName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ConnectionManager">ConnectionManager</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_TableName">TableName</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1__ctor_ETLBox_IConnectionManager_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor(ETLBox.IConnectionManager)">DbSource(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
@@ -338,7 +299,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -351,6 +312,42 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
         <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ConnectionManager">ConnectionManager</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource_1__ctor_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.DbSource`1.#ctor(ETLBox.IConnectionManager,System.String)">DbSource(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbSource(IConnectionManager connectionManager, string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ConnectionManager">ConnectionManager</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_TableName">TableName</a></p>
 </td>
       </tr>
     </tbody>
@@ -368,7 +365,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -378,7 +375,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_TableName">TableName</a></p>
 </td>
@@ -401,7 +398,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -410,7 +407,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -429,7 +426,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -438,7 +435,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnconverter">ColumnConverter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnConverter.html">ColumnConverter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -459,7 +456,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Key&quot; -&gt; Pr
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -468,7 +465,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Key&quot; -&gt; Pr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/dbcolumnmap">DbColumnMap</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DbColumnMap.html">DbColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -487,7 +484,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Key&quot; -&gt; Pr
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -517,7 +514,7 @@ mode. This setting has no affect when <a class="xref" href="/api/etlbox.dataflow
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -526,7 +523,7 @@ mode. This setting has no affect when <a class="xref" href="/api/etlbox.dataflow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -548,7 +545,7 @@ the record will be read from the source.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -557,7 +554,7 @@ the record will be read from the source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idcolumn">IdColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IdColumn.html">IdColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -580,7 +577,7 @@ property and column names.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -589,7 +586,7 @@ property and column names.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/selectcolumn">SelectColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.SelectColumn.html">SelectColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -610,7 +607,7 @@ Now you can define <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -638,7 +635,7 @@ Now you can define <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -647,7 +644,7 @@ Now you can define <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -656,7 +653,7 @@ Now you can define <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_
   <h4 id="ETLBox_DataFlow_DbSource_1_SqlParameter" data-uid="ETLBox.DataFlow.DbSource`1.SqlParameter">SqlParameter</h4>
   <div class="markdown level1 summary"><p>List of query parameters that are used to replace values in <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_Sql">Sql</a>
 For every parameter provided, your sql statement should contain a placeholder.
-E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1&amp;apos;</p>
+E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1'</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -668,7 +665,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1&amp;apos;</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -677,7 +674,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1&amp;apos;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -703,7 +700,7 @@ as they appear in the sql statement.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -731,7 +728,7 @@ as they appear in the sql statement.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -740,7 +737,7 @@ as they appear in the sql statement.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -760,7 +757,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -769,7 +766,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -792,9 +789,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_CheckParameter_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <a id="ETLBox_DataFlow_DbSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.DbSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.DbSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -808,7 +802,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -818,7 +812,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -826,9 +820,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <a id="ETLBox_DataFlow_DbSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.DbSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.DbSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -843,9 +834,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <a id="ETLBox_DataFlow_DbSource_1_InitParameter_" data-uid="ETLBox.DataFlow.DbSource`1.InitParameter*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_InitParameter" data-uid="ETLBox.DataFlow.DbSource`1.InitParameter">InitParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -860,9 +848,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitParameter">DataFlowComponent.InitParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_InitParameter_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <a id="ETLBox_DataFlow_DbSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.DbSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.DbSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -876,10 +861,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_OnExecutionDoAsyncWork_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</a></div>
   <a id="ETLBox_DataFlow_DbSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.DbSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.DbSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -893,10 +875,7 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_OnExecutionDoSynchronousWork_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</a></div>
   <a id="ETLBox_DataFlow_DbSource_1_PrepareParameter_" data-uid="ETLBox.DataFlow.DbSource`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_PrepareParameter" data-uid="ETLBox.DataFlow.DbSource`1.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -911,9 +890,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_DbSource_1_PrepareParameter_examples">Examples</h5>
-  <pre><code>SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=localhost&quot;);
-DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot;);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

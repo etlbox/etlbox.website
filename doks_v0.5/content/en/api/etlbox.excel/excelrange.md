@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10180
+weight: 10182
 toc: false
 ---
 
@@ -20,31 +20,31 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">ExcelRange</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Excel</h6>
@@ -60,50 +60,6 @@ toc: false
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Excel_ExcelRange__ctor_" data-uid="ETLBox.Excel.ExcelRange.#ctor*"></a>
-  <h4 id="ETLBox_Excel_ExcelRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ETLBox.Excel.ExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ExcelRange(int, int, int, int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ExcelRange(int startColumn, int startRow, int endColumn, int endRow)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">startColumn</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">startRow</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">endColumn</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">endRow</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Excel_ExcelRange__ctor_" data-uid="ETLBox.Excel.ExcelRange.#ctor*"></a>
   <h4 id="ETLBox_Excel_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.Excel.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(int, int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -116,7 +72,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -126,13 +82,57 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">startColumn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">startRow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Excel_ExcelRange__ctor_" data-uid="ETLBox.Excel.ExcelRange.#ctor*"></a>
+  <h4 id="ETLBox_Excel_ExcelRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ETLBox.Excel.ExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ExcelRange(int, int, int, int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ExcelRange(int startColumn, int startRow, int endColumn, int endRow)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">startColumn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">startRow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">endColumn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">endRow</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -154,7 +154,7 @@ This is optional - if left empty, data will be read until the first blank row is
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -163,7 +163,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -183,7 +183,7 @@ This is optional - if left empty, data will be read until the first blank row is
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -192,7 +192,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -211,7 +211,7 @@ This is optional - if left empty, data will be read until the first blank row is
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -220,7 +220,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -239,7 +239,7 @@ This is optional - if left empty, data will be read until the first blank row is
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -248,7 +248,7 @@ This is optional - if left empty, data will be read until the first blank row is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>

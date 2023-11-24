@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10244
+weight: 10246
 toc: false
 ---
 
@@ -21,137 +21,134 @@ used in the Source for a Lookup identified by the given lookupSourcePropertyName
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">System.Attribute</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
     <div class="level2"><span class="xref">MatchColumn</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Attribute.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.equals">Attribute.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-assembly-system-type)">Attribute.GetCustomAttribute(Assembly, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-assembly-system-type-system-boolean)">Attribute.GetCustomAttribute(Assembly, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-memberinfo-system-type)">Attribute.GetCustomAttribute(MemberInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-memberinfo-system-type-system-boolean)">Attribute.GetCustomAttribute(MemberInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-module-system-type)">Attribute.GetCustomAttribute(Module, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-module-system-type-system-boolean)">Attribute.GetCustomAttribute(Module, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-parameterinfo-system-type)">Attribute.GetCustomAttribute(ParameterInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.GetCustomAttribute(ParameterInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly)">Attribute.GetCustomAttributes(Assembly)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-boolean)">Attribute.GetCustomAttributes(Assembly, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-type)">Attribute.GetCustomAttributes(Assembly, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-type-system-boolean)">Attribute.GetCustomAttributes(Assembly, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo)">Attribute.GetCustomAttributes(MemberInfo)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-boolean)">Attribute.GetCustomAttributes(MemberInfo, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-type)">Attribute.GetCustomAttributes(MemberInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-type-system-boolean)">Attribute.GetCustomAttributes(MemberInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module)">Attribute.GetCustomAttributes(Module)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-boolean)">Attribute.GetCustomAttributes(Module, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-type)">Attribute.GetCustomAttributes(Module, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-type-system-boolean)">Attribute.GetCustomAttributes(Module, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo)">Attribute.GetCustomAttributes(ParameterInfo)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-boolean)">Attribute.GetCustomAttributes(ParameterInfo, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-type)">Attribute.GetCustomAttributes(ParameterInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.GetCustomAttributes(ParameterInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.gethashcode">Attribute.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefaultAttribute()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefaultattribute">Attribute.IsDefaultAttribute()</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-assembly-system-type)">Attribute.IsDefined(Assembly, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-assembly-system-type-system-boolean)">Attribute.IsDefined(Assembly, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-memberinfo-system-type)">Attribute.IsDefined(MemberInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-memberinfo-system-type-system-boolean)">Attribute.IsDefined(MemberInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-module-system-type)">Attribute.IsDefined(Module, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-module-system-type-system-boolean)">Attribute.IsDefined(Module, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-parameterinfo-system-type)">Attribute.IsDefined(ParameterInfo, Type)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type, bool)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.IsDefined(ParameterInfo, Type, bool)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.Match(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.match">Attribute.Match(object)</a>
     </div>
     <div>
-      <span class="xref">System.Attribute.TypeId</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -166,11 +163,11 @@ public sealed class MatchColumn : Attribute
 
 {{< rawhtml >}}
   <h5 id="ETLBox_MatchColumn_examples"><strong>Examples</strong></h5>
-  <pre><code>public class MyLookupData
+  <pre><code class="lang-csharp">public class MyLookupData
 {
-    [MatchColumn(&quot;Id&quot;)]
+    [MatchColumn("Id")]
     public string LookupId { get; set; }
-    [RetrieveColumn(&quot;Value&quot;)]
+    [RetrieveColumn("Value")]
     public string LookupValue { get; set; }
 }
 public class MyDataRow
@@ -192,19 +189,6 @@ public class MyDataRow
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_MatchColumn__ctor_examples">Examples</h5>
-  <pre><code>public class MyLookupData
-{
-    [MatchColumn(&quot;Id&quot;)]
-    public string LookupId { get; set; }
-    [RetrieveColumn(&quot;Value&quot;)]
-    public string LookupValue { get; set; }
-}
-public class MyDataRow
-{
-    public string Id { get; set; }
-    public string Value { get; set; }
-}</code></pre>
   <a id="ETLBox_MatchColumn__ctor_" data-uid="ETLBox.MatchColumn.#ctor*"></a>
   <h4 id="ETLBox_MatchColumn__ctor_System_String_" data-uid="ETLBox.MatchColumn.#ctor(System.String)">MatchColumn(string)</h4>
   <div class="markdown level1 summary"><p>This property is used to check if is matches with the lookup data .</p>
@@ -219,7 +203,7 @@ public class MyDataRow
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -229,7 +213,7 @@ public class MyDataRow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">inputPropertyName</span></td>
         <td><p>Name of the property in the lookup object.</p>
 </td>
@@ -252,7 +236,7 @@ public class MyDataRow
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -261,7 +245,7 @@ public class MyDataRow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -280,7 +264,7 @@ public class MyDataRow
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -289,7 +273,7 @@ public class MyDataRow
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

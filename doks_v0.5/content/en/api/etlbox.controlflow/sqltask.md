@@ -22,7 +22,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
@@ -125,25 +125,22 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -157,7 +154,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_SqlTask_examples"><strong>Examples</strong></h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <pre><code class="lang-csharp">SqlTask.ExecuteNonQuery("Description","insert into demo.table1 select * from demo.table2");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
@@ -172,254 +169,6 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Action{System.Object}[])">SqlTask(string, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string sql, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string sql, IEnumerable<QueryParameter> parameter, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameter</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string sql, IEnumerable<QueryParameter> parameter, params Action<object>[] actions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameter</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
-        <td><span class="parametername">actions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">SqlTask(string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string sql, IEnumerable<QueryParameter> parameter)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.String)">SqlTask(string, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public SqlTask(string name, string sql)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String)">SqlTask(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -433,7 +182,7 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -443,10 +192,244 @@ ExecuteReader for SQL that returns multiple rows or columns</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.controlflow/dbtask#ETLBox_ControlFlow_DbTask_Sql">Sql</a></p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Action{System.Object}[])">SqlTask(string, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string sql, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">SqlTask(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string sql, IEnumerable<QueryParameter> parameter)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string sql, IEnumerable<QueryParameter> parameter, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">beforeRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">afterRowReadAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">SqlTask(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string sql, IEnumerable<QueryParameter> parameter, params Action<object>[] actions)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask__ctor_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.#ctor(System.String,System.String)">SqlTask(string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public SqlTask(string name, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -467,7 +450,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -476,7 +459,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -498,7 +481,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -519,8 +502,6 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkDelete_ETLBox_IConnectionManager_ETLBox_ITableData__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_BulkDelete_" data-uid="ETLBox.ControlFlow.SqlTask.BulkDelete*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_BulkDelete_System_String_ETLBox_ITableData_" data-uid="ETLBox.ControlFlow.SqlTask.BulkDelete(System.String,ETLBox.ITableData)">BulkDelete(string, ITableData)</h4>
   <div class="markdown level1 summary"></div>
@@ -534,7 +515,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -544,7 +525,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -555,8 +536,6 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkDelete_System_String_ETLBox_ITableData__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_BulkInsert_" data-uid="ETLBox.ControlFlow.SqlTask.BulkInsert*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_BulkInsert_ETLBox_IConnectionManager_ETLBox_ITableData_" data-uid="ETLBox.ControlFlow.SqlTask.BulkInsert(ETLBox.IConnectionManager,ETLBox.ITableData)">BulkInsert(IConnectionManager, ITableData)</h4>
   <div class="markdown level1 summary"></div>
@@ -570,7 +549,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -591,8 +570,6 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkInsert_ETLBox_IConnectionManager_ETLBox_ITableData__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_BulkInsert_" data-uid="ETLBox.ControlFlow.SqlTask.BulkInsert*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_BulkInsert_System_String_ETLBox_ITableData_" data-uid="ETLBox.ControlFlow.SqlTask.BulkInsert(System.String,ETLBox.ITableData)">BulkInsert(string, ITableData)</h4>
   <div class="markdown level1 summary"></div>
@@ -606,7 +583,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -616,7 +593,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -627,8 +604,6 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkInsert_System_String_ETLBox_ITableData__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.SqlTask.BulkUpdate*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_BulkUpdate_ETLBox_IConnectionManager_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.SqlTask.BulkUpdate(ETLBox.IConnectionManager,ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(IConnectionManager, ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -642,7 +617,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -662,19 +637,17 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkUpdate_ETLBox_IConnectionManager_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_BulkUpdate_" data-uid="ETLBox.ControlFlow.SqlTask.BulkUpdate*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_BulkUpdate_System_String_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.ControlFlow.SqlTask.BulkUpdate(System.String,ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(string, ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -688,7 +661,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -698,7 +671,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -708,75 +681,17 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_BulkUpdate_System_String_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static int ExecuteNonQuery(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(ETLBox.IConnectionManager,System.String)">ExecuteNonQuery(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -790,7 +705,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -805,14 +720,14 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -821,27 +736,25 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static int ExecuteNonQuery(string sql, IEnumerable<QueryParameter> parameterList)
+    public static int ExecuteNonQuery(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -851,19 +764,24 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -872,13 +790,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(System.String)">ExecuteNonQuery(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -892,7 +808,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -902,14 +818,14 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -918,27 +834,25 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static Task<int> ExecuteNonQueryAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+    public static int ExecuteNonQuery(string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -948,24 +862,19 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -974,13 +883,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync(ETLBox.IConnectionManager,System.String)">ExecuteNonQueryAsync(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -994,7 +901,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1009,14 +916,14 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1025,13 +932,65 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteNonQueryAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteNonQueryAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<int> ExecuteNonQueryAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1045,7 +1004,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1060,29 +1019,27 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1096,7 +1053,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1111,19 +1068,17 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1137,7 +1092,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1152,34 +1107,32 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1193,7 +1146,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1208,24 +1161,22 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1239,7 +1190,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1249,29 +1200,27 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(System.String,System.Action{System.Object}[])">ExecuteReader(string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1285,7 +1234,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1295,19 +1244,17 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1321,7 +1268,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1331,34 +1278,32 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReader(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1372,7 +1317,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1382,24 +1327,22 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync(ETLBox.IConnectionManager,System.String,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1413,7 +1356,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1428,29 +1371,29 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1459,13 +1402,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync(ETLBox.IConnectionManager,System.String,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1479,7 +1420,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1494,19 +1435,19 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1515,13 +1456,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1535,7 +1474,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1550,34 +1489,34 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1586,13 +1525,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Action_System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object____" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteReaderAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Action{System.Object}[])">ExecuteReaderAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1606,7 +1543,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1621,24 +1558,24 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">actions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1647,69 +1584,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteReaderAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Action_System_Object_____examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static object ExecuteScalar(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(ETLBox.IConnectionManager,System.String)">ExecuteScalar(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -1723,7 +1602,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1738,14 +1617,14 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1754,27 +1633,25 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ExecuteScalar(string sql, IEnumerable<QueryParameter> parameterList)
+    public static object ExecuteScalar(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1784,19 +1661,24 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1805,13 +1687,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(System.String)">ExecuteScalar(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -1825,7 +1705,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1835,14 +1715,14 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1851,27 +1731,25 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+    public static object ExecuteScalar(string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1881,24 +1759,19 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1907,277 +1780,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(ETLBox.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string sql)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static T ExecuteScalar<T>(string sql, IEnumerable<QueryParameter> parameterList)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static T ExecuteScalar<T>(string sql)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
-  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static Task<object> ExecuteScalarAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync(ETLBox.IConnectionManager,System.String)">ExecuteScalarAsync(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -2191,7 +1798,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2206,14 +1813,14 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2222,27 +1829,25 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">object</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync``1(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static Task<T> ExecuteScalarAsync<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+    public static Task<object> ExecuteScalarAsync(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2257,19 +1862,19 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2278,28 +1883,11 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter___examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync*"></a>
   <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync__1_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync``1(ETLBox.IConnectionManager,System.String)">ExecuteScalarAsync&lt;T&gt;(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -2313,7 +1901,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2328,14 +1916,14 @@ with a default name that can be overwritten.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sql</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -2344,13 +1932,13 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -2364,8 +1952,331 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync__1_ETLBox_IConnectionManager_System_String__examples">Examples</h5>
-  <pre><code>SqlTask.ExecuteNonQuery(&quot;Description&quot;,&quot;insert into demo.table1 select * from demo.table2&quot;);</code></pre>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalarAsync__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalarAsync``1(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task<T> ExecuteScalarAsync<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(ETLBox.IConnectionManager,System.String)">ExecuteScalar&lt;T&gt;(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_ETLBox_IConnectionManager_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(ETLBox.IConnectionManager,System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(IConnectionManager, string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ExecuteScalar<T>(IConnectionManager connectionManager, string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(System.String)">ExecuteScalar&lt;T&gt;(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ExecuteScalar<T>(string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_SqlTask_ExecuteScalar_" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar*"></a>
+  <h4 id="ETLBox_ControlFlow_SqlTask_ExecuteScalar__1_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.ControlFlow.SqlTask.ExecuteScalar``1(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalar&lt;T&gt;(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static T ExecuteScalar<T>(string sql, IEnumerable<QueryParameter> parameterList)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ETLBox.ControlFlow.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameterList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>

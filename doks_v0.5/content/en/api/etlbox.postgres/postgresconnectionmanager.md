@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.postgres"
-weight: 10273
+weight: 10277
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">NpgsqlConnection</span>, <span class="xref">NpgsqlTransaction</span>, <span class="xref">NpgsqlParameter</span>&gt;</div>
     <div class="level2"><span class="xref">PostgresConnectionManager</span></div>
   </div>
@@ -28,7 +28,7 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">NpgsqlConnection</span>, <span class="xref">NpgsqlTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -219,25 +219,25 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Postgres</h6>
@@ -251,7 +251,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Postgres_PostgresConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>var postgresConnection = new PostgresConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
+  <pre><code class="lang-csharp">var postgresConnection = new PostgresConnectionManager("Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Postgres_PostgresConnectionManager__ctor_" data-uid="ETLBox.Postgres.PostgresConnectionManager.#ctor*"></a>
@@ -266,8 +266,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Postgres_PostgresConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>var postgresConnection = new PostgresConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <a id="ETLBox_Postgres_PostgresConnectionManager__ctor_" data-uid="ETLBox.Postgres.PostgresConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager__ctor_ETLBox_Postgres_PostgresConnectionString_" data-uid="ETLBox.Postgres.PostgresConnectionManager.#ctor(ETLBox.Postgres.PostgresConnectionString)">PostgresConnectionManager(PostgresConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -281,7 +279,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -297,8 +295,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Postgres_PostgresConnectionManager__ctor_ETLBox_Postgres_PostgresConnectionString__examples">Examples</h5>
-  <pre><code>var postgresConnection = new PostgresConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <a id="ETLBox_Postgres_PostgresConnectionManager__ctor_" data-uid="ETLBox.Postgres.PostgresConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager__ctor_System_String_" data-uid="ETLBox.Postgres.PostgresConnectionManager.#ctor(System.String)">PostgresConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -312,7 +308,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -322,14 +318,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Postgres_PostgresConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>var postgresConnection = new PostgresConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_Postgres_PostgresConnectionManager_ConnectionType_" data-uid="ETLBox.Postgres.PostgresConnectionManager.ConnectionType*"></a>
@@ -346,7 +340,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -361,7 +355,7 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Postgres.PostgresConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Postgres.PostgresConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -377,7 +371,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -386,13 +380,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_QB_" data-uid="ETLBox.Postgres.PostgresConnectionManager.QB*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_QB" data-uid="ETLBox.Postgres.PostgresConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -408,7 +402,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -417,13 +411,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.QB</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_QE_" data-uid="ETLBox.Postgres.PostgresConnectionManager.QE*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_QE" data-uid="ETLBox.Postgres.PostgresConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -439,7 +433,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -448,13 +442,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.QE</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Postgres_PostgresConnectionManager_BulkDelete_" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkDelete*"></a>
@@ -471,7 +465,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,7 +483,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_BulkInsert_" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -504,7 +498,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -522,10 +516,11 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_BulkSelect_" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -536,7 +531,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -548,32 +543,36 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_BulkUpdate_" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Postgres.PostgresConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -588,7 +587,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -604,13 +603,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -618,7 +617,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Postgres.PostgresConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Postgres.PostgresConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -634,7 +633,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -644,14 +643,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_Clone_" data-uid="ETLBox.Postgres.PostgresConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_Clone" data-uid="ETLBox.Postgres.PostgresConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -666,7 +665,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -682,7 +681,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Npgsql.NpgsqlConnection, Npgsql.NpgsqlTransaction, Npgsql.NpgsqlParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Postgres_PostgresConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Postgres.PostgresConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Postgres_PostgresConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Postgres.PostgresConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -698,7 +697,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -708,14 +707,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -724,7 +723,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

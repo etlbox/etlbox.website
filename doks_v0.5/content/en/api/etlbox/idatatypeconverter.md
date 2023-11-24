@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10217
+weight: 10219
 toc: false
 ---
 
@@ -45,7 +45,7 @@ It will convert the data type that is defined in a TableColumn into a custom dat
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -55,7 +55,7 @@ It will convert the data type that is defined in a TableColumn into a custom dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dataTypeName</span></td>
         <td><p>The specific type name from a table column</p>
 </td>
@@ -69,7 +69,7 @@ It will convert the data type that is defined in a TableColumn into a custom dat
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -78,7 +78,7 @@ It will convert the data type that is defined in a TableColumn into a custom dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The type used in the CREATE TABLE statement</p>
 </td>
       </tr>

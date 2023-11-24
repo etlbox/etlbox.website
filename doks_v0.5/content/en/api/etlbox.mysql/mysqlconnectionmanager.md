@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.mysql"
-weight: 10250
+weight: 10252
 toc: false
 ---
 
@@ -21,7 +21,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>, <span class="xref">MySqlParameter</span>&gt;</div>
     <div class="level2"><span class="xref">MySqlConnectionManager</span></div>
   </div>
@@ -29,7 +29,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">MySqlConnection</span>, <span class="xref">MySqlTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -220,25 +220,25 @@ Uses the official MySql ADO.NET driver for .NET.</p>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.MySql</h6>
@@ -252,7 +252,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_MySql_MySqlConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>var mySqlConnection = new MySqlConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
+  <pre><code class="lang-csharp">var mySqlConnection = new MySqlConnectionManager("Data Source=.;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_MySql_MySqlConnectionManager__ctor_" data-uid="ETLBox.MySql.MySqlConnectionManager.#ctor*"></a>
@@ -267,8 +267,6 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_MySql_MySqlConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>var mySqlConnection = new MySqlConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_MySql_MySqlConnectionManager__ctor_" data-uid="ETLBox.MySql.MySqlConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager__ctor_ETLBox_MySql_MySqlConnectionString_" data-uid="ETLBox.MySql.MySqlConnectionManager.#ctor(ETLBox.MySql.MySqlConnectionString)">MySqlConnectionManager(MySqlConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -282,7 +280,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -298,8 +296,6 @@ Uses the official MySql ADO.NET driver for .NET.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_MySql_MySqlConnectionManager__ctor_ETLBox_MySql_MySqlConnectionString__examples">Examples</h5>
-  <pre><code>var mySqlConnection = new MySqlConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_MySql_MySqlConnectionManager__ctor_" data-uid="ETLBox.MySql.MySqlConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager__ctor_System_String_" data-uid="ETLBox.MySql.MySqlConnectionManager.#ctor(System.String)">MySqlConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -313,7 +309,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -323,14 +319,12 @@ Uses the official MySql ADO.NET driver for .NET.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_MySql_MySqlConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>var mySqlConnection = new MySqlConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_MySql_MySqlConnectionManager_ConnectionType_" data-uid="ETLBox.MySql.MySqlConnectionManager.ConnectionType*"></a>
@@ -347,7 +341,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -362,7 +356,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.MySql.MySqlConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.MySql.MySqlConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
@@ -377,7 +371,7 @@ Uses the official MySql ADO.NET driver for .NET.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -386,13 +380,13 @@ Uses the official MySql ADO.NET driver for .NET.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.MySql.MySqlConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.MySql.MySqlConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -408,7 +402,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -417,13 +411,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_NeedsROWKeyword_" data-uid="ETLBox.MySql.MySqlConnectionManager.NeedsROWKeyword*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_NeedsROWKeyword" data-uid="ETLBox.MySql.MySqlConnectionManager.NeedsROWKeyword">NeedsROWKeyword</h4>
   <div class="markdown level1 summary"></div>
@@ -437,7 +431,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -446,13 +440,11 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_MySql_MySqlConnectionManager_NeedsROWKeyword_examples">Examples</h5>
-  <pre><code>var mySqlConnection = new MySqlConnectionManager(&quot;Data Source=.;&quot;);</code></pre>
   <a id="ETLBox_MySql_MySqlConnectionManager_QB_" data-uid="ETLBox.MySql.MySqlConnectionManager.QB*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_QB" data-uid="ETLBox.MySql.MySqlConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -468,7 +460,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -477,13 +469,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.QB</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_QE_" data-uid="ETLBox.MySql.MySqlConnectionManager.QE*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_QE" data-uid="ETLBox.MySql.MySqlConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -499,7 +491,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -508,13 +500,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.QE</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_SupportSchemas_" data-uid="ETLBox.MySql.MySqlConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_SupportSchemas" data-uid="ETLBox.MySql.MySqlConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -531,7 +523,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -540,13 +532,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_MySql_MySqlConnectionManager_BulkDelete_" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkDelete*"></a>
@@ -563,7 +555,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -581,7 +573,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_BulkInsert_" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -596,7 +588,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -614,10 +606,11 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_BulkSelect_" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -628,7 +621,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -640,32 +633,36 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_BulkUpdate_" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.MySql.MySqlConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -680,7 +677,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -696,13 +693,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -710,7 +707,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.MySql.MySqlConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.MySql.MySqlConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -726,7 +723,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -736,14 +733,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_Clone_" data-uid="ETLBox.MySql.MySqlConnectionManager.Clone*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_Clone" data-uid="ETLBox.MySql.MySqlConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -758,7 +755,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -774,7 +771,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySql.Data.MySqlClient.MySqlConnection, MySql.Data.MySqlClient.MySqlTransaction, MySql.Data.MySqlClient.MySqlParameter&gt;.Clone()</span></div>
   <a id="ETLBox_MySql_MySqlConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.MySql.MySqlConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_MySql_MySqlConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.MySql.MySqlConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -790,7 +787,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -800,14 +797,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;MySqlConnection, MySqlTransaction, MySqlParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -816,7 +813,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CreateTableTask</span></div>
@@ -56,25 +56,22 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -88,9 +85,9 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_CreateTableTask_examples"><strong>Examples</strong></h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
+  <pre><code class="lang-csharp">CreateTableTask.Create("demo.table1", new List&lt;TableColumn&gt;() {
+new TableColumn(name:"key", dataType:"int", allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    new TableColumn(name:"value", dataType:"nvarchar(100)", allowNulls:true)
 });</code></pre>
   <h3 id="constructors">Constructors
 </h3>
@@ -106,11 +103,6 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateTableTask__ctor_examples">Examples</h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
-});</code></pre>
   <a id="ETLBox_ControlFlow_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CreateTableTask__ctor_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.CreateTableTask.#ctor(ETLBox.ControlFlow.TableDefinition)">CreateTableTask(TableDefinition)</h4>
   <div class="markdown level1 summary"></div>
@@ -124,7 +116,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -140,11 +132,6 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateTableTask__ctor_ETLBox_ControlFlow_TableDefinition__examples">Examples</h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
-});</code></pre>
   <a id="ETLBox_ControlFlow_CreateTableTask__ctor_" data-uid="ETLBox.ControlFlow.CreateTableTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.CreateTableTask.#ctor(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateTableTask(string, List&lt;TableColumn&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -158,7 +145,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -168,22 +155,17 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CreateTableTask__ctor_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn___examples">Examples</h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
-});</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_CreateTableTask_Columns_" data-uid="ETLBox.ControlFlow.CreateTableTask.Columns*"></a>
@@ -201,7 +183,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -210,7 +192,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -230,7 +212,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -258,7 +240,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -267,7 +249,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -286,7 +268,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -295,7 +277,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -314,7 +296,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -323,7 +305,35 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CreateTableTask_TN_" data-uid="ETLBox.ControlFlow.CreateTableTask.TN*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateTableTask_TN" data-uid="ETLBox.ControlFlow.CreateTableTask.TN">TN</h4>
+  <div class="markdown level1 summary"><p>The formatted table name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor TN { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +353,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -371,7 +381,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -380,7 +390,7 @@ to other, database specific type names. E.g. you can remap that the type VARCHAR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,7 +410,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -409,41 +419,13 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <a id="ETLBox_ControlFlow_CreateTableTask_TN_" data-uid="ETLBox.ControlFlow.CreateTableTask.TN*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateTableTask_TN" data-uid="ETLBox.ControlFlow.CreateTableTask.TN">TN</h4>
-  <div class="markdown level1 summary"><p>The formatted table name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ObjectNameDescriptor TN { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_ControlFlow_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.CreateTableTask.Alter*"></a>
@@ -458,11 +440,6 @@ with a default name that can be overwritten.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateTableTask_Alter_examples">Examples</h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
-});</code></pre>
   <a id="ETLBox_ControlFlow_CreateTableTask_Alter_" data-uid="ETLBox.ControlFlow.CreateTableTask.Alter*"></a>
   <h4 id="ETLBox_ControlFlow_CreateTableTask_Alter_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.CreateTableTask.Alter(ETLBox.ControlFlow.TableDefinition)">Alter(TableDefinition)</h4>
   <div class="markdown level1 summary"><p>Alters a table using ALTER TABLE statements.</p>
@@ -477,7 +454,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -508,7 +485,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -545,7 +522,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -561,13 +538,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -588,7 +565,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -598,13 +575,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -638,7 +615,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -669,7 +646,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -706,7 +683,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -722,13 +699,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -749,7 +726,7 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -759,13 +736,13 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -784,11 +761,6 @@ new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CreateTableTask_CheckTableDefinition_examples">Examples</h5>
-  <pre><code>CreateTableTask.Create(&quot;demo.table1&quot;, new List&lt;TableColumn>() {
-new TableColumn(name:&quot;key&quot;, dataType:&quot;int&quot;, allowNulls:false, isPrimaryKey:true, isIdentity:true),
-    new TableColumn(name:&quot;value&quot;, dataType:&quot;nvarchar(100)&quot;, allowNulls:true)
-});</code></pre>
   <a id="ETLBox_ControlFlow_CreateTableTask_Create_" data-uid="ETLBox.ControlFlow.CreateTableTask.Create*"></a>
   <h4 id="ETLBox_ControlFlow_CreateTableTask_Create" data-uid="ETLBox.ControlFlow.CreateTableTask.Create">Create()</h4>
   <div class="markdown level1 summary"><p>Executes the table creation. Throws an exception if the table exists.</p>
@@ -817,7 +789,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -849,7 +821,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -887,7 +859,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -903,13 +875,13 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -931,7 +903,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -941,13 +913,13 @@ Throws an exception if the table already exists.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -981,7 +953,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1012,7 +984,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1049,7 +1021,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1065,13 +1037,13 @@ Throws an exception if the table already exists.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1092,7 +1064,7 @@ Throws an exception if the table already exists.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1102,13 +1074,13 @@ Throws an exception if the table already exists.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1144,7 +1116,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1176,7 +1148,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1214,7 +1186,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1230,13 +1202,13 @@ If the table does not contain any rows, it will be dropped and created again.</p
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>
@@ -1258,7 +1230,7 @@ If the table does not contain any rows, it will be dropped and created again.</p
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1268,13 +1240,13 @@ If the table does not contain any rows, it will be dropped and created again.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>The name of the table</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.controlflow/tablecolumn">TableColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
         <td><span class="parametername">columns</span></td>
         <td><p>The columns of the table</p>
 </td>

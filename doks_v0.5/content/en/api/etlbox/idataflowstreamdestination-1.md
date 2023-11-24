@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10212
+weight: 10214
 toc: false
 ---
 
@@ -101,7 +101,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -134,7 +134,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -143,7 +143,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -163,7 +163,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -172,14 +172,14 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">bool</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_IDataFlowStreamDestination_1_WriteUri_" data-uid="ETLBox.IDataFlowStreamDestination`1.WriteUri*"></a>
   <h4 id="ETLBox_IDataFlowStreamDestination_1_WriteUri" data-uid="ETLBox.IDataFlowStreamDestination`1.WriteUri">WriteUri</h4>
-  <div class="markdown level1 summary"><p>The Uri used for the current write operation- this will only be different to the <span class="xref">System.Uri</span>
+  <div class="markdown level1 summary"><p>The Uri used for the current write operation- this will only be different to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>
 if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ETLBox_IDataFlowStreamDestination_1_GetNextUri">GetNextUri</a> and <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ETLBox_IDataFlowStreamDestination_1_HasNextUri">HasNextUri</a> functions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -192,7 +192,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -201,7 +201,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

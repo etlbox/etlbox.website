@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10252
+weight: 10256
 toc: false
 ---
 
@@ -19,11 +19,11 @@ toc: false
 This connection manager also is based on ADO.NET.
 ODBC by default does not support a Bulk Insert - and Access does not support the insert into (...) values (...),(...),(...)
 syntax. So the following syntax is used</p>
-<pre><code>insert into (Col1, Col2,...)
+<pre><code class="lang-csharp">insert into (Col1, Col2,...)
 select * from (
-  select &apos;Val1&apos; as Col1 from dummytable
+  select 'Val1' as Col1 from dummytable
   union all
-  select &apos;Val2&apos; as Col2 from dummytable
+  select 'Val2' as Col2 from dummytable
   ...
 ) a;</code></pre>
 <p>The dummytable is a special helper table containing only one record.</p>
@@ -31,16 +31,16 @@ select * from (
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">OdbcConnection</span>, <span class="xref">OdbcTransaction</span>, <span class="xref">OdbcParameter</span>&gt;</div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="ETLBox.DbConnectionManager-3.html">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcconnection">OdbcConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbctransaction">OdbcTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcparameter">OdbcParameter</a>&gt;</div>
     <div class="level2"><a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager">OdbcConnectionManager</a></div>
     <div class="level3"><span class="xref">AccessOdbcConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">OdbcConnection</span>, <span class="xref">OdbcTransaction</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IConnectionManager-2.html">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcconnection">OdbcConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbctransaction">OdbcTransaction</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanagerdbobjects">IConnectionManagerDbObjects</a></div>
   </div>
   <div class="inheritedMembers">
@@ -253,25 +253,25 @@ select * from (
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Odbc</h6>
@@ -285,9 +285,9 @@ select * from (
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Odbc_AccessOdbcConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
+  <pre><code class="lang-csharp">ControlFlow.DefaultDbConnection =
   new AccessOdbcConnectionManager(new OdbcConnectionString(
-     &quot;Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\DB\Test.mdb&quot;));</code></pre>
+     "Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\DB\Test.mdb"));</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.#ctor*"></a>
@@ -302,10 +302,6 @@ select * from (
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new AccessOdbcConnectionManager(new OdbcConnectionString(
-     &quot;Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\DB\Test.mdb&quot;));</code></pre>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_ETLBox_Odbc_OdbcConnectionString_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.#ctor(ETLBox.Odbc.OdbcConnectionString)">AccessOdbcConnectionManager(OdbcConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -319,7 +315,7 @@ select * from (
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -335,10 +331,6 @@ select * from (
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_ETLBox_Odbc_OdbcConnectionString__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new AccessOdbcConnectionManager(new OdbcConnectionString(
-     &quot;Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\DB\Test.mdb&quot;));</code></pre>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.#ctor(System.String)">AccessOdbcConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -352,7 +344,7 @@ select * from (
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -362,16 +354,12 @@ select * from (
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Odbc_AccessOdbcConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection =
-  new AccessOdbcConnectionManager(new OdbcConnectionString(
-     &quot;Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\DB\Test.mdb&quot;));</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_DummyTableName_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.DummyTableName*"></a>
@@ -389,7 +377,7 @@ Contains only 1 record and is only temporarily created.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -398,7 +386,7 @@ Contains only 1 record and is only temporarily created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -418,7 +406,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -427,13 +415,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.SupportDatabases</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportProcedures_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportProcedures" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportProcedures">SupportProcedures</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
@@ -448,7 +436,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -457,13 +445,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.SupportProcedures</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportProcedures</span></div>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportSchemas_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportSchemas" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -480,7 +468,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,13 +477,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_BulkInsert_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.BulkInsert*"></a>
@@ -512,7 +500,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -545,7 +533,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -555,14 +543,14 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">unquotatedFullName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -571,7 +559,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><p>True if the table or view exists</p>
 </td>
       </tr>
@@ -592,7 +580,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -602,7 +590,7 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
@@ -624,7 +612,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -656,7 +644,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -666,7 +654,7 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
@@ -688,7 +676,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -706,7 +694,7 @@ performance of a bulk insert operation</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -729,7 +717,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanagerdbobjects">IConnectionManagerDbObjects</a>

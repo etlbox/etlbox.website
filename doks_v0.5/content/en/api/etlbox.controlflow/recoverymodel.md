@@ -30,7 +30,7 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>

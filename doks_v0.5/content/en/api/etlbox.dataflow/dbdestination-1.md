@@ -21,7 +21,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -204,25 +204,25 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -236,7 +236,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -266,48 +266,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_DbDestination_1__ctor_ETLBox_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor(ETLBox.IConnectionManager,System.String,System.Int32)">DbDestination(IConnectionManager, string, int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DbDestination(IConnectionManager connectionManager, string tableName, int batchSize)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ConnectionManager">ConnectionManager</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">tableName</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_TableName">TableName</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">batchSize</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">BatchSize</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_DbDestination_1__ctor_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor(ETLBox.IConnectionManager,System.String)">DbDestination(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -320,7 +278,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -336,7 +294,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 </td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_TableName">TableName</a></p>
 </td>
@@ -344,19 +302,19 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_DbDestination_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor(System.String,System.Int32)">DbDestination(string, int)</h4>
+  <h4 id="ETLBox_DataFlow_DbDestination_1__ctor_ETLBox_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor(ETLBox.IConnectionManager,System.String,System.Int32)">DbDestination(IConnectionManager, string, int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DbDestination(string tableName, int batchSize)
+    public DbDestination(IConnectionManager connectionManager, string tableName, int batchSize)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -366,13 +324,19 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ConnectionManager">ConnectionManager</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_TableName">TableName</a></p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">batchSize</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">BatchSize</a></p>
 </td>
@@ -392,7 +356,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -402,9 +366,45 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tableName</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_TableName">TableName</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_DbDestination_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.DbDestination`1.#ctor(System.String,System.Int32)">DbDestination(string, int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DbDestination(string tableName, int batchSize)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_TableName">TableName</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">batchSize</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">BatchSize</a></p>
 </td>
       </tr>
     </tbody>
@@ -427,7 +427,7 @@ identity values (if there is a corresponding property with a new id value in the
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -436,7 +436,7 @@ identity values (if there is a corresponding property with a new id value in the
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -456,7 +456,7 @@ manager.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -488,7 +488,7 @@ You can use BulkOperation.Update to bulk update matching data in the destination
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -516,7 +516,7 @@ You can use BulkOperation.Update to bulk update matching data in the destination
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -525,7 +525,7 @@ You can use BulkOperation.Update to bulk update matching data in the destination
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/columnconverter">ColumnConverter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnConverter.html">ColumnConverter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -546,7 +546,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; Pro
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -555,7 +555,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; Pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/dbcolumnmap">DbColumnMap</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.DbColumnMap.html">DbColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -574,7 +574,7 @@ then you can simply add a column mapping: DbColumnName: &quot;Id&quot; -&gt; Pro
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -603,7 +603,7 @@ Only needed when BulkOpteration is set to BulkOperation.Update or BulkOperation.
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -612,7 +612,7 @@ Only needed when BulkOpteration is set to BulkOperation.Update or BulkOperation.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/idcolumn">IdColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.IdColumn.html">IdColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -633,7 +633,7 @@ only to use the columns in the provided definition.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -661,7 +661,7 @@ only to use the columns in the provided definition.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -670,7 +670,7 @@ only to use the columns in the provided definition.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -690,7 +690,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -699,7 +699,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -720,7 +720,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -729,7 +729,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/updatecolumn">UpdateColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.UpdateColumn.html">UpdateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -750,7 +750,7 @@ This information can be read for supported databases after bulk inserting the da
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -759,7 +759,7 @@ This information can be read for supported databases after bulk inserting the da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/valuegenerationcolumn">ValueGenerationColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.ValueGenerationColumn.html">ValueGenerationColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -779,7 +779,7 @@ This information can be read for supported databases after bulk inserting the da
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -796,7 +796,7 @@ This information can be read for supported databases after bulk inserting the da
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.BulkInsertData(TInput[])</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BulkInsertData__0___">DataFlowBatchDestination&lt;TInput&gt;.BulkInsertData(TInput[])</a></div>
   <a id="ETLBox_DataFlow_DbDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.DbDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_DbDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.DbDestination`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -824,7 +824,7 @@ This information can be read for supported databases after bulk inserting the da
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_FinishWrite">DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</a></div>
   <a id="ETLBox_DataFlow_DbDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.DbDestination`1.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_DbDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.DbDestination`1.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -852,7 +852,7 @@ This information can be read for supported databases after bulk inserting the da
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.PrepareWrite()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_PrepareWrite">DataFlowBatchDestination&lt;TInput&gt;.PrepareWrite()</a></div>
   <a id="ETLBox_DataFlow_DbDestination_1_SkipRecord_" data-uid="ETLBox.DataFlow.DbDestination`1.SkipRecord*"></a>
   <h4 id="ETLBox_DataFlow_DbDestination_1_SkipRecord_System_String_System_String_" data-uid="ETLBox.DataFlow.DbDestination`1.SkipRecord(System.String,System.String)">SkipRecord(string, string)</h4>
   <div class="markdown level1 summary"></div>
@@ -866,7 +866,7 @@ This information can be read for supported databases after bulk inserting the da
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -876,19 +876,19 @@ This information can be read for supported databases after bulk inserting the da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">propName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">colname</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -897,7 +897,7 @@ This information can be read for supported databases after bulk inserting the da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>

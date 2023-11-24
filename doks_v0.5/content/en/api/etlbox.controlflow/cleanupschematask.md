@@ -21,7 +21,7 @@ Currently only SqlServer and Oracle support this task.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">CleanUpSchemaTask</span></div>
@@ -57,25 +57,22 @@ Currently only SqlServer and Oracle support this task.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
-    </div>
-    <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.ControlFlow</h6>
@@ -89,7 +86,7 @@ Currently only SqlServer and Oracle support this task.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ControlFlow_CleanUpSchemaTask_examples"><strong>Examples</strong></h5>
-  <pre><code>CleanUpSchemaTask.CleanUp(&quot;demo&quot;);</code></pre>
+  <pre><code class="lang-csharp">CleanUpSchemaTask.CleanUp("demo");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ControlFlow_CleanUpSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.#ctor*"></a>
@@ -104,8 +101,6 @@ Currently only SqlServer and Oracle support this task.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_ControlFlow_CleanUpSchemaTask__ctor_examples">Examples</h5>
-  <pre><code>CleanUpSchemaTask.CleanUp(&quot;demo&quot;);</code></pre>
   <a id="ETLBox_ControlFlow_CleanUpSchemaTask__ctor_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_CleanUpSchemaTask__ctor_System_String_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.#ctor(System.String)">CleanUpSchemaTask(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -119,7 +114,7 @@ Currently only SqlServer and Oracle support this task.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -129,14 +124,12 @@ Currently only SqlServer and Oracle support this task.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_ControlFlow_CleanUpSchemaTask__ctor_System_String__examples">Examples</h5>
-  <pre><code>CleanUpSchemaTask.CleanUp(&quot;demo&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_ControlFlow_CleanUpSchemaTask_SchemaName_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.SchemaName*"></a>
@@ -153,7 +146,7 @@ Currently only SqlServer and Oracle support this task.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -162,7 +155,7 @@ Currently only SqlServer and Oracle support this task.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -181,7 +174,7 @@ Currently only SqlServer and Oracle support this task.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -190,7 +183,7 @@ Currently only SqlServer and Oracle support this task.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +203,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -219,7 +212,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -242,43 +235,6 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <a id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp*"></a>
-  <h4 id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp(ETLBox.IConnectionManager,System.String)">CleanUp(IConnectionManager, string)</h4>
-  <div class="markdown level1 summary"><p>Runs the sql to clean up a schema.(Oracle and SqlServer only)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static void CleanUp(IConnectionManager connectionManager, string schemaName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
-        <td><span class="parametername">connectionManager</span></td>
-        <td><p>The connection manager of the database you want to connect</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">schemaName</span></td>
-        <td><p>The name of the schema</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp*"></a>
   <h4 id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_ETLBox_IConnectionManager_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp(ETLBox.IConnectionManager)">CleanUp(IConnectionManager)</h4>
   <div class="markdown level1 summary"><p>Runs the sql to clean up the user schema.</p>
 </div>
@@ -292,7 +248,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -305,6 +261,43 @@ with a default name that can be overwritten.</p>
         <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
         <td><span class="parametername">connectionManager</span></td>
         <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp*"></a>
+  <h4 id="ETLBox_ControlFlow_CleanUpSchemaTask_CleanUp_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask.CleanUp(ETLBox.IConnectionManager,System.String)">CleanUp(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"><p>Runs the sql to clean up a schema.(Oracle and SqlServer only)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static void CleanUp(IConnectionManager connectionManager, string schemaName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td><p>The name of the schema</p>
 </td>
       </tr>
     </tbody>
@@ -323,7 +316,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -333,7 +326,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">schemaName</span></td>
         <td><p>The name of the schema</p>
 </td>

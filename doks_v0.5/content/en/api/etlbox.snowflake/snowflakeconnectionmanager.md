@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.snowflake"
-weight: 10289
+weight: 10293
 toc: false
 ---
 
@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">SnowflakeDbConnection</span>, <span class="xref">SnowflakeDbTransaction</span>, <span class="xref">SnowflakeDbParameter</span>&gt;</div>
     <div class="level2"><span class="xref">SnowflakeConnectionManager</span></div>
   </div>
@@ -28,7 +28,7 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">SnowflakeDbConnection</span>, <span class="xref">SnowflakeDbTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -126,10 +126,10 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkNonQuery(string, IEnumerable&lt;SnowflakeDbParameter&gt;)</a>
@@ -138,10 +138,10 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkNonQueryAsync(string, IEnumerable&lt;SnowflakeDbParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkReader(string, IEnumerable&lt;SnowflakeDbParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkReader(string, IEnumerable&lt;SnowflakeDbParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;SnowflakeDbParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;SnowflakeDbParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -171,7 +171,7 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.CloneIfAllowed()</a>
@@ -218,6 +218,27 @@ toc: false
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Snowflake</h6>
   <h6><strong>Assembly</strong>: ETLBox.Snowflake.dll</h6>
@@ -230,7 +251,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Snowflake_SnowflakeConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>var snowflakeConnection = new SnowflakeConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
+  <pre><code class="lang-csharp">var snowflakeConnection = new SnowflakeConnectionManager("Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.#ctor*"></a>
@@ -245,8 +266,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>var snowflakeConnection = new SnowflakeConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_ETLBox_Snowflake_SnowflakeConnectionString_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.#ctor(ETLBox.Snowflake.SnowflakeConnectionString)">SnowflakeConnectionManager(SnowflakeConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -260,7 +279,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -276,8 +295,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_ETLBox_Snowflake_SnowflakeConnectionString__examples">Examples</h5>
-  <pre><code>var snowflakeConnection = new SnowflakeConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_System_String_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.#ctor(System.String)">SnowflakeConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -291,7 +308,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -301,14 +318,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Snowflake_SnowflakeConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>var snowflakeConnection = new SnowflakeConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_ConnectionType_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.ConnectionType*"></a>
@@ -325,7 +340,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -340,10 +355,11 @@ toc: false
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -354,7 +370,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -363,15 +379,13 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.MaxParameterSizeBulkCopy</span></div>
-  <h5 id="ETLBox_Snowflake_SnowflakeConnectionManager_MaxParameterSizeBulkCopy_examples">Examples</h5>
-  <pre><code>var snowflakeConnection = new SnowflakeConnectionManager(&quot;Server=localhost;Database=ETLBox_Logging;User Id=postgres;Password=etlboxpassword;&quot;);</code></pre>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -387,7 +401,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -396,13 +410,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_PP_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.PP*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_PP" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.PP">PP</h4>
   <div class="markdown level1 summary"><p>The character that is used in front of parameter names in query to identify the parameter.
@@ -418,7 +432,7 @@ Most databases use the '@' character, some use ':'.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -427,13 +441,13 @@ Most databases use the '@' character, some use ':'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.PP</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.PP</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_QB_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.QB*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_QB" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -449,7 +463,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -458,13 +472,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.QB</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_QE_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.QE*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_QE" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -480,7 +494,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,13 +503,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.QE</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_SupportIndexes_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.SupportIndexes*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_SupportIndexes" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.SupportIndexes">SupportIndexes</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support indexes.</p>
@@ -510,7 +524,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -519,13 +533,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.SupportIndexes</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.SupportIndexes</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_SupportProcedures_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_SupportProcedures" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.SupportProcedures">SupportProcedures</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
@@ -540,7 +554,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -549,13 +563,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.SupportProcedures</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.SupportProcedures</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkDelete_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkDelete*"></a>
@@ -572,7 +586,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -590,7 +604,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkInsert_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -605,7 +619,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -623,10 +637,11 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkSelect_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkSelect*"></a>
-  <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkSelect_ETLBox_ITableData_ICollection_System_String__Action_Action_Action_System_Object____" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkSelect(ETLBox.ITableData,ICollection{System.String},Action,Action,Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -637,7 +652,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -649,33 +664,40 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkUpdate_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkUpdate*"></a>
-  <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkUpdate_ETLBox_ITableData_ICollection_System_String__ICollection_System_String__" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkUpdate(ETLBox.ITableData,ICollection{System.String},ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -686,7 +708,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -698,20 +720,25 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td></td>
+        <td><p>The column names used in the set part of the update statement</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td></td>
+        <td><p>The column names to join for the update</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -727,7 +754,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -737,14 +764,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_Clone_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_Clone" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -759,7 +786,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -775,7 +802,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Snowflake.Data.Client.SnowflakeDbConnection, Snowflake.Data.Client.SnowflakeDbTransaction, Snowflake.Data.Client.SnowflakeDbParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -791,7 +818,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -801,14 +828,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -817,7 +844,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

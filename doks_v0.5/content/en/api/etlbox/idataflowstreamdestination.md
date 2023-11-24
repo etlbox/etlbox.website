@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10213
+weight: 10215
 toc: false
 ---
 
@@ -87,7 +87,7 @@ Option 3: create BlobkBlobClient with provided ConnectionString and ContainerNam
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -116,7 +116,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -125,7 +125,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.IO.StreamWriter</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamwriter">StreamWriter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -144,7 +144,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -153,7 +153,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Text.Encoding</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -172,7 +172,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -181,7 +181,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpClient</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +200,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -209,7 +209,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +229,7 @@ to add additional header data type or to change the http method (e.g. for POST r
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -238,7 +238,7 @@ to add additional header data type or to change the http method (e.g. for POST r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +258,7 @@ after all data rows were sent to the destination.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -267,7 +267,7 @@ after all data rows were sent to the destination.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -288,7 +288,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -316,7 +316,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -325,7 +325,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.StreamWriter</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamwriter">StreamWriter</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -344,7 +344,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -353,7 +353,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

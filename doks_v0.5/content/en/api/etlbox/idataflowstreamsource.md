@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10215
+weight: 10217
 toc: false
 ---
 
@@ -108,7 +108,7 @@ Option 3: create BlockBlobClient with provided ConnectionString and ContainerNam
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -138,7 +138,7 @@ pattern).</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -147,7 +147,7 @@ pattern).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -168,7 +168,7 @@ You can create a stream reader for each requested URI.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -177,7 +177,7 @@ You can create a stream reader for each requested URI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.IO.StreamReader</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamreader">StreamReader</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -196,7 +196,7 @@ You can create a stream reader for each requested URI.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -205,7 +205,7 @@ You can create a stream reader for each requested URI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Text.Encoding</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -227,7 +227,7 @@ This property can be used if you want to read multiple files or if you want to p
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -236,7 +236,7 @@ This property can be used if you want to read multiple files or if you want to p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -256,7 +256,7 @@ This property can be used if you want to read multiple files or if you want to p
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -265,7 +265,7 @@ This property can be used if you want to read multiple files or if you want to p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <span class="xref">bool</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -285,7 +285,7 @@ add or change the http request data, e.g. you can add your authorization informa
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -294,7 +294,7 @@ add or change the http request data, e.g. you can add your authorization informa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpClient</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -314,7 +314,7 @@ to add additional header data type or to change the http method (e.g. for POST r
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -323,7 +323,7 @@ to add additional header data type or to change the http method (e.g. for POST r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,7 +342,7 @@ to add additional header data type or to change the http method (e.g. for POST r
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -351,7 +351,7 @@ to add additional header data type or to change the http method (e.g. for POST r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -371,7 +371,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_ID
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -380,7 +380,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_ID
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,7 +400,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -428,7 +428,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -437,7 +437,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -456,7 +456,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -465,7 +465,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.StreamReader</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamreader">StreamReader</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -484,7 +484,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -493,7 +493,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -512,7 +512,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -521,7 +521,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

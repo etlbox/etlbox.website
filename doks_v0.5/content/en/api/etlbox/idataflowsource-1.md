@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10210
+weight: 10212
 toc: false
 ---
 
@@ -68,7 +68,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -99,7 +99,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -108,7 +108,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -130,7 +130,7 @@ If you use the error linking, any erroneous records will be caught and redirecte
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -148,7 +148,7 @@ If you use the error linking, any erroneous records will be caught and redirecte
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -158,123 +158,6 @@ If you use the error linking, any erroneous records will be caught and redirecte
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
-  <h4 id="ETLBox_IDataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
-and a second predicate for rows you want to discard.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDataFlowSource<TOutput> LinkTo(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep, Predicate<TOutput> rowsIntoVoid)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Only rows that evaluate to true are send to the connected target</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
-        <td><span class="parametername">rowsIntoVoid</span></td>
-        <td><p>Rows that are evaluate to true will be discarded</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
-  <h4 id="ETLBox_IDataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
-Every component can be linked to one or more component. If you link multiple components,
-provide a <span class="xref">System.Predicate&lt;T&gt;</span> that describe which row is send to which target.
-Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
-if you want to discarded rows.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDataFlowSource<TOutput> LinkTo(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Only rows that evaluate to true are send to the connected target</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</td>
         <td><p>The linked component.</p>
 </td>
       </tr>
@@ -296,7 +179,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -314,7 +197,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -330,86 +213,10 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
-  <h4 id="ETLBox_IDataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
-and a second predicate for rows you want to discard.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep, Predicate<TOutput> rowsIntoVoid)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>Transformation or destination that the block is linked to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Only rows that evaluate to true are send to the connected target</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
-        <td><span class="parametername">rowsIntoVoid</span></td>
-        <td><p>Rows that are evaluate to true will be discarded</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TConvert</span></td>
-        <td><p>Will convert the output type of the linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
-  <h4 id="ETLBox_IDataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
+  <h4 id="ETLBox_IDataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
 Every component can be linked to one or more component. If you link multiple components,
-provide a <span class="xref">System.Predicate&lt;T&gt;</span> that describe which row is send to which target.
+provide a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate&lt;T&gt;</a> that describe which row is send to which target.
 Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
 if you want to discarded rows.</p>
 </div>
@@ -418,12 +225,12 @@ if you want to discarded rows.</p>
 {{< /rawhtml >}}
 
 ```C#
-    IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep)
+    IDataFlowSource<TOutput> LinkTo(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -439,15 +246,15 @@ if you want to discarded rows.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TOutput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
-        <td><p>Predicate - only rows that evaluate to true are send to the connected target</p>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -456,24 +263,68 @@ if you want to discarded rows.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</td>
         <td><p>The linked component.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
+  <h4 id="ETLBox_IDataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
+and a second predicate for rows you want to discard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    IDataFlowSource<TOutput> LinkTo(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep, Predicate<TOutput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TConvert</span></td>
-        <td><p>Will convert the output type of the linked component.</p>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>Rows that are evaluate to true will be discarded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TOutput&gt;</td>
+        <td><p>The linked component.</p>
 </td>
       </tr>
     </tbody>
@@ -494,7 +345,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -512,7 +363,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -528,7 +379,156 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TConvert</span></td>
+        <td><p>Will convert the output type of the linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
+  <h4 id="ETLBox_IDataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
+Every component can be linked to one or more component. If you link multiple components,
+provide a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate&lt;T&gt;</a> that describe which row is send to which target.
+Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
+if you want to discarded rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Predicate - only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TConvert</span></td>
+        <td><p>Will convert the output type of the linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.IDataFlowSource`1.LinkTo*"></a>
+  <h4 id="ETLBox_IDataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.IDataFlowSource`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
+and a second predicate for rows you want to discard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TOutput> target, Predicate<TOutput> rowsToKeep, Predicate<TOutput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TOutput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>Rows that are evaluate to true will be discarded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>

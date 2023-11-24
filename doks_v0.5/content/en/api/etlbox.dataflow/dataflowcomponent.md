@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><span class="xref">DataFlowComponent</span></div>
       <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination&lt;TInput&gt;</a></div>
@@ -51,25 +51,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -84,58 +84,6 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent__loggingThresholdRows" data-uid="ETLBox.DataFlow.DataFlowComponent._loggingThresholdRows">_loggingThresholdRows</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected int? _loggingThresholdRows
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span>?</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent__maxBufferSize" data-uid="ETLBox.DataFlow.DataFlowComponent._maxBufferSize">_maxBufferSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected int? _maxBufferSize
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span>?</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_ReadyForProcessing" data-uid="ETLBox.DataFlow.DataFlowComponent.ReadyForProcessing">ReadyForProcessing</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -148,7 +96,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -157,7 +105,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -174,7 +122,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -183,7 +131,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +148,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -209,7 +157,59 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>, <span class="xref">bool</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html">DataFlowComponent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent__loggingThresholdRows" data-uid="ETLBox.DataFlow.DataFlowComponent._loggingThresholdRows">_loggingThresholdRows</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected int? _loggingThresholdRows
+```
+
+{{< rawhtml >}}
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent__maxBufferSize" data-uid="ETLBox.DataFlow.DataFlowComponent._maxBufferSize">_maxBufferSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected int? _maxBufferSize
+```
+
+{{< rawhtml >}}
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +229,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -238,7 +238,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +258,7 @@ completed and the current component has completed its buffer.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -267,7 +267,7 @@ completed and the current component has completed its buffer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -286,7 +286,7 @@ completed and the current component has completed its buffer.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -315,7 +315,7 @@ in the data flow faulted, the thrown exception will be stored in this property.<
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -324,7 +324,7 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,7 +342,7 @@ in the data flow faulted, the thrown exception will be stored in this property.<
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -351,7 +351,7 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -371,7 +371,7 @@ are processed. Set this property to decrease or increase this value.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -380,7 +380,7 @@ are processed. Set this property to decrease or increase this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -401,7 +401,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -410,7 +410,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -429,7 +429,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -438,7 +438,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -457,7 +457,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -466,7 +466,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -485,7 +485,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -494,7 +494,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html">DataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -513,7 +513,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -522,7 +522,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -541,7 +541,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -550,7 +550,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html">DataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -568,7 +568,7 @@ The default value is -1 (unlimited)</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -577,7 +577,7 @@ The default value is -1 (unlimited)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -635,7 +635,7 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -645,7 +645,7 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -676,7 +676,7 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -686,7 +686,7 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><span class="parametername">WhenAllPredecessorCompletionTasks</span></td>
         <td></td>
       </tr>
@@ -708,7 +708,7 @@ a network is executed.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -718,7 +718,7 @@ a network is executed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token that is linked with the cancellation token
 of each buffer</p>
@@ -763,7 +763,7 @@ of each buffer</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -780,7 +780,7 @@ of each buffer</p>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -807,7 +807,7 @@ of each buffer</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -822,19 +822,19 @@ of each buffer</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">voidPredicate</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -849,7 +849,7 @@ of each buffer</p>
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -872,6 +872,47 @@ of each buffer</p>
 
 ```C#
     protected void LinkBuffersRecursively()
+```
+
+{{< rawhtml >}}
+  <a id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(System.Int32)">LogProgressBatch_AfterThrowOrRedirectError(int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogProgressBatch_AfterThrowOrRedirectError(int rowsProcessed)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">rowsProcessed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError">LogProgress_AfterThrowOrRedirectError()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogProgress_AfterThrowOrRedirectError()
 ```
 
 {{< rawhtml >}}
@@ -899,47 +940,6 @@ of each buffer</p>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgress_AfterThrowOrRedirectError" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgress_AfterThrowOrRedirectError">LogProgress_AfterThrowOrRedirectError()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected void LogProgress_AfterThrowOrRedirectError()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(System.Int32)">LogProgressBatch_AfterThrowOrRedirectError(int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected void LogProgressBatch_AfterThrowOrRedirectError(int rowsProcessed)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">rowsProcessed</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_PrepareParameter_" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_PrepareParameter" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -991,7 +991,7 @@ inside data flow components.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1020,7 +1020,7 @@ inside data flow components.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1030,12 +1030,12 @@ inside data flow components.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">erroneousData</span></td>
         <td></td>
       </tr>
@@ -1054,7 +1054,7 @@ inside data flow components.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1064,17 +1064,17 @@ inside data flow components.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">erroneousData</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">errorContext</span></td>
         <td></td>
       </tr>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10293
+weight: 10297
 toc: false
 ---
 
@@ -20,15 +20,15 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">SqlConnection</span>, <span class="xref">SqlTransaction</span>, <span class="xref">SqlParameter</span>&gt;</div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="ETLBox.DbConnectionManager-3.html">DbConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter">SqlParameter</a>&gt;</div>
     <div class="level2"><span class="xref">SqlConnectionManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">SqlConnection</span>, <span class="xref">SqlTransaction</span>&gt;</div>
+    <div><a class="xref" href="ETLBox.IConnectionManager-2.html">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection">SqlConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqltransaction">SqlTransaction</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -219,25 +219,25 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.SqlServer</h6>
@@ -251,7 +251,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_SqlServer_SqlConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
+  <pre><code class="lang-csharp">ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;"));</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_SqlServer_SqlConnectionManager__ctor_" data-uid="ETLBox.SqlServer.SqlConnectionManager.#ctor*"></a>
@@ -266,8 +266,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_SqlServer_SqlConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <a id="ETLBox_SqlServer_SqlConnectionManager__ctor_" data-uid="ETLBox.SqlServer.SqlConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager__ctor_ETLBox_SqlServer_SqlConnectionString_" data-uid="ETLBox.SqlServer.SqlConnectionManager.#ctor(ETLBox.SqlServer.SqlConnectionString)">SqlConnectionManager(SqlConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -281,7 +279,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -297,8 +295,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_SqlServer_SqlConnectionManager__ctor_ETLBox_SqlServer_SqlConnectionString__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <a id="ETLBox_SqlServer_SqlConnectionManager__ctor_" data-uid="ETLBox.SqlServer.SqlConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager__ctor_System_String_" data-uid="ETLBox.SqlServer.SqlConnectionManager.#ctor(System.String)">SqlConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -312,7 +308,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -322,14 +318,12 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_SqlServer_SqlConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_SqlServer_SqlConnectionManager_AccessToken_" data-uid="ETLBox.SqlServer.SqlConnectionManager.AccessToken*"></a>
@@ -347,7 +341,7 @@ authentication with Sql Server</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -356,7 +350,7 @@ authentication with Sql Server</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -375,7 +369,7 @@ authentication with Sql Server</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -390,7 +384,7 @@ authentication with Sql Server</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_DisableCheckConstraints_" data-uid="ETLBox.SqlServer.SqlConnectionManager.DisableCheckConstraints*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_DisableCheckConstraints" data-uid="ETLBox.SqlServer.SqlConnectionManager.DisableCheckConstraints">DisableCheckConstraints</h4>
   <div class="markdown level1 summary"><p>If set to true, foreign key constraints will ot be checked when doing the bulk insert.
@@ -408,7 +402,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -417,7 +411,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -438,7 +432,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -447,7 +441,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -467,7 +461,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -476,13 +470,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_ModifyDBSettings_" data-uid="ETLBox.SqlServer.SqlConnectionManager.ModifyDBSettings*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_ModifyDBSettings" data-uid="ETLBox.SqlServer.SqlConnectionManager.ModifyDBSettings">ModifyDBSettings</h4>
   <div class="markdown level1 summary"><p>Will set the database settings SET PAGE_VERIFY NONE and SET RECOVERY BULK_LOGGED
@@ -498,7 +492,7 @@ Settings will be reverted after the bulk insert operation.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -507,7 +501,7 @@ Settings will be reverted after the bulk insert operation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -527,7 +521,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -536,13 +530,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.QB</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_QE_" data-uid="ETLBox.SqlServer.SqlConnectionManager.QE*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_QE" data-uid="ETLBox.SqlServer.SqlConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -558,7 +552,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -567,13 +561,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.QE</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_UseRowLocks_" data-uid="ETLBox.SqlServer.SqlConnectionManager.UseRowLocks*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_UseRowLocks" data-uid="ETLBox.SqlServer.SqlConnectionManager.UseRowLocks">UseRowLocks</h4>
   <div class="markdown level1 summary"><p>By default, a  table lock (for all bulk operations) is aquired when data is inserted.
@@ -591,7 +585,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -600,7 +594,7 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -623,7 +617,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -632,7 +626,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -641,7 +635,8 @@ Reading ValueGeneratedColumns is not supported then.</p>
 </h3>
   <a id="ETLBox_SqlServer_SqlConnectionManager_BulkDelete_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkDelete*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_BulkDelete_ETLBox_ITableData_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkDelete(ETLBox.ITableData)">BulkDelete(ITableData)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk delete</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -652,7 +647,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -664,14 +659,13 @@ Reading ValueGeneratedColumns is not supported then.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
-  <h5 id="ETLBox_SqlServer_SqlConnectionManager_BulkDelete_ETLBox_ITableData__examples">Examples</h5>
-  <pre><code>ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.;&quot;));</code></pre>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_BulkInsert_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -686,7 +680,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -704,10 +698,11 @@ Reading ValueGeneratedColumns is not supported then.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_BulkSelect_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkSelect*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -718,7 +713,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -730,32 +725,36 @@ Reading ValueGeneratedColumns is not supported then.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkSelect(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Action, System.Action, params System.Action&lt;object&gt;[])</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_BulkUpdate_" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.SqlServer.SqlConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk update</p>
@@ -770,7 +769,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -786,13 +785,13 @@ Reading ValueGeneratedColumns is not supported then.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
         <td><p>The column names used in the set part of the update statement</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
         <td><p>The column names to join for the update</p>
 </td>
@@ -800,7 +799,7 @@ Reading ValueGeneratedColumns is not supported then.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkUpdate(ETLBox.ITableData, System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.ICollection&lt;string&gt;)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.SqlServer.SqlConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.SqlServer.SqlConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -816,7 +815,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -826,14 +825,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_Clone_" data-uid="ETLBox.SqlServer.SqlConnectionManager.Clone*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_Clone" data-uid="ETLBox.SqlServer.SqlConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -848,7 +847,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -864,7 +863,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.Clone()</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_CreateDbConnection_" data-uid="ETLBox.SqlServer.SqlConnectionManager.CreateDbConnection*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_CreateDbConnection" data-uid="ETLBox.SqlServer.SqlConnectionManager.CreateDbConnection">CreateDbConnection()</h4>
   <div class="markdown level1 summary"><p>By default, a db connection is created with the given connection string value.
@@ -880,7 +879,7 @@ Override this method if you want to pass additional properties to the specific A
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.CreateDbConnection()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.CreateDbConnection()</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.SqlServer.SqlConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.SqlServer.SqlConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -896,7 +895,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -906,14 +905,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;SqlConnection, SqlTransaction, SqlParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -922,7 +921,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

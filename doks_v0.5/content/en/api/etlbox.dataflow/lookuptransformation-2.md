@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10134
+weight: 10136
 toc: false
 ---
 
@@ -23,7 +23,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -180,25 +180,25 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -212,7 +212,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -233,7 +233,7 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_LookupTransformation_2_examples"><strong>Examples</strong></h5>
-  <pre><code>public class Order
+  <pre><code class="lang-csharp">public class Order
 {    
     public int OrderNumber { get; set; }
     public int CustomerId { get; set; }
@@ -246,11 +246,11 @@ public class Customer
     [MatchColumn(nameof(Order.CustomerName))]
     public string Name { get; set; }
 }
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
+DbSource&lt;Order&gt; orderSource = new DbSource&lt;Order&gt;("OrderData");
+CsvSource&lt;Customer&gt; lookupSource = new CsvSource&lt;Customer&gt;("CustomerData.csv");
+var lookup = new LookupTransformation&lt;Order, Customer&gt;();
 lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
+DbDestination&lt;Order&gt; dest = new DbDestination&lt;Order&gt;("OrderWithCustomerTable");
 source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
@@ -266,62 +266,6 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2__ctor_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
-  <a id="ETLBox_DataFlow_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2__ctor_ETLBox_IDataFlowExecutableSource__1__System_Func__0_System_Collections_Generic_IEnumerable__1___0__" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor(ETLBox.IDataFlowExecutableSource{`1},System.Func{`0,System.Collections.Generic.IEnumerable{`1},`0})">LookupTransformation(IDataFlowExecutableSource&lt;TSource&gt;, Func&lt;TInput, IEnumerable&lt;TSource&gt;, TInput&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public LookupTransformation(IDataFlowExecutableSource<TSource> source, Func<TInput, IEnumerable<TSource>, TInput> retrievalFunc)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TSource&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a> of the lookup.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TSource&gt;, TInput&gt;</td>
-        <td><span class="parametername">retrievalFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc">RetrievalFunc</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2__ctor_ETLBox_IDataFlowExecutableSource__1__" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor(ETLBox.IDataFlowExecutableSource{`1})">LookupTransformation(IDataFlowExecutableSource&lt;TSource&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -335,7 +279,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -348,6 +292,42 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
         <td><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TSource&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a> of the lookup.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2__ctor_ETLBox_IDataFlowExecutableSource__1__System_Func__0_System_Collections_Generic_IEnumerable__1___0__" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor(ETLBox.IDataFlowExecutableSource{`1},System.Func{`0,System.Collections.Generic.IEnumerable{`1},`0})">LookupTransformation(IDataFlowExecutableSource&lt;TSource&gt;, Func&lt;TInput, IEnumerable&lt;TSource&gt;, TInput&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public LookupTransformation(IDataFlowExecutableSource<TSource> source, Func<TInput, IEnumerable<TSource>, TInput> retrievalFunc)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowexecutablesource-1">IDataFlowExecutableSource</a>&lt;TSource&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a> of the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput&gt;</td>
+        <td><span class="parametername">retrievalFunc</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc">RetrievalFunc</a></p>
 </td>
       </tr>
     </tbody>
@@ -367,7 +347,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -376,31 +356,11 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_AllowMultipleRows_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_CacheMode_" data-uid="ETLBox.DataFlow.LookupTransformation`2.CacheMode*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_CacheMode" data-uid="ETLBox.DataFlow.LookupTransformation`2.CacheMode">CacheMode</h4>
   <div class="markdown level1 summary"><p>The cache mode used for loading data into the lookup cache.
@@ -417,7 +377,7 @@ records arrives at the lookup.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -448,7 +408,7 @@ This function is only need when <a class="xref" href="/api/etlbox.dataflow/looku
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -457,7 +417,7 @@ This function is only need when <a class="xref" href="/api/etlbox.dataflow/looku
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput, <span class="xref">object</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -477,7 +437,7 @@ This key is used to store the data in the lookup dictionary.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -486,7 +446,7 @@ This key is used to store the data in the lookup dictionary.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TSource, <span class="xref">object</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -505,7 +465,7 @@ This key is used to store the data in the lookup dictionary.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -514,7 +474,7 @@ This key is used to store the data in the lookup dictionary.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/matchcolumn">MatchColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.MatchColumn.html">MatchColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -534,7 +494,7 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -561,7 +521,7 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -570,31 +530,11 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_ProgressCount_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_RetrievalByKeyFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalByKeyFunc*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrievalByKeyFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalByKeyFunc">RetrievalByKeyFunc</h4>
   <div class="markdown level1 summary"><p>The retrieval function that describes how the ingoing data can be enriched with the already pre-read data from</p>
@@ -614,7 +554,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -623,7 +563,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, TSource&gt;, TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, TSource&gt;, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -643,7 +583,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -652,7 +592,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TSource&gt;, TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -671,7 +611,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -680,7 +620,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;<a class="xref" href="/api/etlbox/retrievecolumn">RetrieveColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="ETLBox.RetrieveColumn.html">RetrieveColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -698,7 +638,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -707,31 +647,11 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;TSource&gt;&gt;, TInput[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TSource&gt;&gt;, TInput[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsByKeyFunc_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsFunc*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsFunc">RetrieveMultipleRowsFunc</h4>
   <div class="markdown level1 summary"></div>
@@ -745,7 +665,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -754,31 +674,11 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;TInput, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TSource&gt;, TInput[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_Source_" data-uid="ETLBox.DataFlow.LookupTransformation`2.Source*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_Source" data-uid="ETLBox.DataFlow.LookupTransformation`2.Source">Source</h4>
   <div class="markdown level1 summary"><p>The source component from which the lookup data is retrieved. E.g. a <a class="xref" href="/api/etlbox.dataflow/dbsource">DbSource</a> or a <a class="xref" href="/api/etlbox.dataflow/memorysource">MemorySource</a>.</p>
@@ -793,7 +693,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -821,7 +721,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -830,13 +730,13 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_LookupTransformation_2_SourceRecords_" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecords*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_SourceRecords" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecords">SourceRecords</h4>
   <div class="markdown level1 summary"><p>Holds the data read from the lookup source. This data is used to find data that is missing in the incoming rows.</p>
@@ -851,7 +751,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -860,7 +760,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TSource&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -880,7 +780,7 @@ The dictionary key is generated using the <a class="xref" href="/api/etlbox.data
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -889,7 +789,7 @@ The dictionary key is generated using the <a class="xref" href="/api/etlbox.data
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">object</span>, TSource&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, TSource&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -908,7 +808,7 @@ The dictionary key is generated using the <a class="xref" href="/api/etlbox.data
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -917,13 +817,13 @@ The dictionary key is generated using the <a class="xref" href="/api/etlbox.data
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_LookupTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.LookupTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_TaskName" data-uid="ETLBox.DataFlow.LookupTransformation`2.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -939,7 +839,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -948,7 +848,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -970,7 +870,7 @@ E.g. property that stores the integer value 7 would match with a string &quot;7&
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -979,7 +879,7 @@ E.g. property that stores the integer value 7 would match with a string &quot;7&
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1000,26 +900,6 @@ E.g. property that stores the integer value 7 would match with a string &quot;7&
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_CheckParameter_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.LookupTransformation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.LookupTransformation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1033,7 +913,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1043,7 +923,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -1051,26 +931,6 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.LookupTransformation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.LookupTransformation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1085,26 +945,6 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_InitComponent_" data-uid="ETLBox.DataFlow.LookupTransformation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_InitComponent" data-uid="ETLBox.DataFlow.LookupTransformation`2.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -1119,29 +959,11 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_InitComponent_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <a id="ETLBox_DataFlow_LookupTransformation_2_LinkErrorTo_" data-uid="ETLBox.DataFlow.LookupTransformation`2.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__" data-uid="ETLBox.DataFlow.LookupTransformation`2.LinkErrorTo(ETLBox.IDataFlowDestination{ETLBox.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If an error occurs in the component, by default the component will throw an exception and stop execution.
+If you use the error linking, any erroneous records will be caught and redirected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1152,7 +974,7 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1164,12 +986,13 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>The target for erroneous rows.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -1179,32 +1002,13 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
-        <td></td>
+        <td><p>The linked component.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkErrorTo(ETLBox.IDataFlowDestination&lt;ETLBox.ETLBoxError&gt;)</span></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError___examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
   <a id="ETLBox_DataFlow_LookupTransformation_2_PrepareParameter_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PrepareParameter*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_PrepareParameter" data-uid="ETLBox.DataFlow.LookupTransformation`2.PrepareParameter">PrepareParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -1219,26 +1023,6 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_PrepareParameter_examples">Examples</h5>
-  <pre><code>public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
-CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
-var lookup = new LookupTransformation&lt;Order, Customer>();
-lookup.Source = lookupSource;
-DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

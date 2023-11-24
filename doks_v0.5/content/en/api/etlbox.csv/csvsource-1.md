@@ -21,7 +21,7 @@ Data is read a as string from the source and dynamically converted into the corr
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -297,25 +297,25 @@ Data is read a as string from the source and dynamically converted into the corr
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Csv</h6>
@@ -329,7 +329,7 @@ Data is read a as string from the source and dynamically converted into the corr
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -345,8 +345,8 @@ Data is read a as string from the source and dynamically converted into the corr
     </tbody>
   </table>
   <h5 id="ETLBox_Csv_CsvSource_1_examples"><strong>Examples</strong></h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
+  <pre><code class="lang-csharp">CsvSource&lt;CSVData&gt; source = new CsvSource&lt;CSVData&gt;("Demo.csv");
+source.Configuration.Delimiter = ";";</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Csv_CsvSource_1__ctor_" data-uid="ETLBox.Csv.CsvSource`1.#ctor*"></a>
@@ -361,45 +361,6 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Csv_CsvSource_1__ctor_examples">Examples</h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
-  <a id="ETLBox_Csv_CsvSource_1__ctor_" data-uid="ETLBox.Csv.CsvSource`1.#ctor*"></a>
-  <h4 id="ETLBox_Csv_CsvSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Csv.CsvSource`1.#ctor(System.String,ETLBox.ResourceType)">CsvSource(string, ResourceType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public CsvSource(string uri, ResourceType resourceType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>The source csv file name or uri</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
-        <td><span class="parametername">resourceType</span></td>
-        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Csv_CsvSource_1__ctor_" data-uid="ETLBox.Csv.CsvSource`1.#ctor*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1__ctor_System_String_" data-uid="ETLBox.Csv.CsvSource`1.#ctor(System.String)">CsvSource(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -413,7 +374,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -423,9 +384,45 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>The source csv file name or uri</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Csv_CsvSource_1__ctor_" data-uid="ETLBox.Csv.CsvSource`1.#ctor*"></a>
+  <h4 id="ETLBox_Csv_CsvSource_1__ctor_System_String_ETLBox_ResourceType_" data-uid="ETLBox.Csv.CsvSource`1.#ctor(System.String,ETLBox.ResourceType)">CsvSource(string, ResourceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CsvSource(string uri, ResourceType resourceType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>The source csv file name or uri</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/resourcetype">ResourceType</a></td>
+        <td><span class="parametername">resourceType</span></td>
+        <td><p>Specifies if data is loaded from a file, a web endpoint or other storage types (e.g. Azure Blob Storage)</p>
 </td>
       </tr>
     </tbody>
@@ -447,7 +444,7 @@ E.g. you can change the delimiter or the escape character here.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -476,7 +473,7 @@ You can modify the context before data is read.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -485,7 +482,7 @@ You can modify the context before data is read.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">CsvContext</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">CsvContext</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -504,7 +501,7 @@ You can modify the context before data is read.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -513,35 +510,7 @@ You can modify the context before data is read.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Csv_CsvSource_1_IsHeaderRead_" data-uid="ETLBox.Csv.CsvSource`1.IsHeaderRead*"></a>
-  <h4 id="ETLBox_Csv_CsvSource_1_IsHeaderRead" data-uid="ETLBox.Csv.CsvSource`1.IsHeaderRead">IsHeaderRead</h4>
-  <div class="markdown level1 summary"><p>True if the header was already set</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool IsHeaderRead { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -561,7 +530,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -570,7 +539,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -592,10 +561,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</span></div>
-  <h5 id="ETLBox_Csv_CsvSource_1_CheckParameter_examples">Examples</h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CheckParameter">DataFlowStreamSource&lt;TOutput&gt;.CheckParameter()</a></div>
   <a id="ETLBox_Csv_CsvSource_1_CloseReader_" data-uid="ETLBox.Csv.CsvSource`1.CloseReader*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1_CloseReader" data-uid="ETLBox.Csv.CsvSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -609,10 +575,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
-  <h5 id="ETLBox_Csv_CsvSource_1_CloseReader_examples">Examples</h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader">DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</a></div>
   <a id="ETLBox_Csv_CsvSource_1_InitReader_" data-uid="ETLBox.Csv.CsvSource`1.InitReader*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1_InitReader" data-uid="ETLBox.Csv.CsvSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -626,10 +589,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
-  <h5 id="ETLBox_Csv_CsvSource_1_InitReader_examples">Examples</h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_InitReader">DataFlowStreamSource&lt;TOutput&gt;.InitReader()</a></div>
   <a id="ETLBox_Csv_CsvSource_1_ReadAllRecords_" data-uid="ETLBox.Csv.CsvSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1_ReadAllRecords" data-uid="ETLBox.Csv.CsvSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -643,10 +603,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
-  <h5 id="ETLBox_Csv_CsvSource_1_ReadAllRecords_examples">Examples</h5>
-  <pre><code>CsvSource&lt;CSVData> source = new CsvSource&lt;CSVData>(&quot;Demo.csv&quot;);
-source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords">DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</a></div>
   <a id="ETLBox_Csv_CsvSource_1_ReadFieldHeaders_" data-uid="ETLBox.Csv.CsvSource`1.ReadFieldHeaders*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1_ReadFieldHeaders_System_String_" data-uid="ETLBox.Csv.CsvSource`1.ReadFieldHeaders(System.String)">ReadFieldHeaders(string)</h4>
   <div class="markdown level1 summary"><p>Reads the header names using the current configuration.</p>
@@ -661,7 +618,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -671,7 +628,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">uri</span></td>
         <td><p>Optionally you can override the current configured Uri</p>
 </td>
@@ -679,7 +636,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -688,7 +645,7 @@ source.Configuration.Delimiter = &quot;;&quot;;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
         <td><p>An array with the header names</p>
 </td>
       </tr>

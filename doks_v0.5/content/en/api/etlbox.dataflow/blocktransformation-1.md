@@ -24,7 +24,7 @@ But as this block any processing until all data is buffered, it will also need t
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -267,25 +267,25 @@ But as this block any processing until all data is buffered, it will also need t
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -299,7 +299,7 @@ But as this block any processing until all data is buffered, it will also need t
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -309,10 +309,20 @@ But as this block any processing until all data is buffered, it will also need t
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of ingoing data.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_BlockTransformation_1_examples"><strong>Examples</strong></h5>
+  <pre>
+  <code class="lang-csharp">BlockTransformation&lt;InputType&gt; block = new BlockTransformation&lt;InputType&gt;(
+                                                                                                                                                 inputData =&gt; {
+                                                                                                                                                     inputData.RemoveRange(1, 2);
+                                                                                                                                                     inputData.Add(new InputType() { Value = 1 });
+                                                                                                                                                     return inputData;
+                                                                                                                                             });</code>
+</pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_BlockTransformation_1__ctor_" data-uid="ETLBox.DataFlow.BlockTransformation`1.#ctor*"></a>
@@ -340,7 +350,7 @@ But as this block any processing until all data is buffered, it will also need t
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -350,7 +360,7 @@ But as this block any processing until all data is buffered, it will also need t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TInput[], TInput[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput[], TInput[]&gt;</td>
         <td><span class="parametername">blockTransformationFunc</span></td>
         <td></td>
       </tr>

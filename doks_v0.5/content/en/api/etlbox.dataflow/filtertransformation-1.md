@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10131
+weight: 10133
 toc: false
 ---
 
@@ -21,7 +21,7 @@ By default the filter transformation will filter out null values.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
@@ -44,6 +44,9 @@ By default the filter transformation will filter out null values.</p>
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
@@ -166,25 +169,25 @@ By default the filter transformation will filter out null values.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -198,7 +201,7 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -240,7 +243,7 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -250,7 +253,7 @@ By default the filter transformation will filter out null values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
         <td><span class="parametername">filterPredicate</span></td>
         <td></td>
       </tr>
@@ -272,7 +275,7 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -281,7 +284,7 @@ By default the filter transformation will filter out null values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -300,7 +303,7 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -309,13 +312,13 @@ By default the filter transformation will filter out null values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISourceBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.isourceblock-1">ISourceBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
   <a id="ETLBox_DataFlow_FilterTransformation_1_TargetBlock_" data-uid="ETLBox.DataFlow.FilterTransformation`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_TargetBlock" data-uid="ETLBox.DataFlow.FilterTransformation`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -330,7 +333,7 @@ By default the filter transformation will filter out null values.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -339,13 +342,13 @@ By default the filter transformation will filter out null values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITargetBlock&lt;&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.dataflow.itargetblock-1">ITargetBlock</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <a id="ETLBox_DataFlow_FilterTransformation_1_TaskName_" data-uid="ETLBox.DataFlow.FilterTransformation`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_TaskName" data-uid="ETLBox.DataFlow.FilterTransformation`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -361,7 +364,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -370,7 +373,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -406,7 +409,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -416,7 +419,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -452,172 +455,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkErrorTo*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkErrorTo(ETLBox.IDataFlowDestination{ETLBox.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
-  <div class="markdown level1 summary"><p>If an error occurs in the component, by default the component will throw an exception and stop execution.
-If you use the error linking, any erroneous records will be caught and redirected.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override IDataFlowSource<ETLBoxError> LinkErrorTo(IDataFlowDestination<ETLBoxError> target)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td><p>The target for erroneous rows.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkErrorTo(ETLBox.IDataFlowDestination&lt;ETLBox.ETLBoxError&gt;)</span></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
-and a second predicate for rows you want to discard.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override IDataFlowSource<TInput> LinkTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsIntoVoid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo(ETLBox.IDataFlowDestination&lt;TInput&gt;, System.Predicate&lt;TInput&gt;, System.Predicate&lt;TInput&gt;)</span></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
-Every component can be linked to one or more component. If you link multiple components,
-provide a <span class="xref">System.Predicate&lt;T&gt;</span> that describe which row is send to which target.
-Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
-if you want to discarded rows.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override IDataFlowSource<TInput> LinkTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo(ETLBox.IDataFlowDestination&lt;TInput&gt;, System.Predicate&lt;TInput&gt;)</span></div>
   <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_ETLBox_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo(ETLBox.IDataFlowDestination{`0})">LinkTo(IDataFlowDestination&lt;TInput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination.
@@ -634,7 +471,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -646,12 +483,13 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -667,87 +505,12 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo(ETLBox.IDataFlowDestination&lt;TInput&gt;)</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;)</a></div>
   <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
-  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
-and a second predicate for rows you want to discard.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsToKeep</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
-        <td><span class="parametername">rowsIntoVoid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
-        <td><p>The linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TConvert</span></td>
-        <td><p>Will convert the output type of the linked component.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(ETLBox.IDataFlowDestination&lt;TInput&gt;, System.Predicate&lt;TInput&gt;, System.Predicate&lt;TInput&gt;)</span></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
 Every component can be linked to one or more component. If you link multiple components,
-provide a <span class="xref">System.Predicate&lt;T&gt;</span> that describe which row is send to which target.
+provide a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate&lt;T&gt;</a> that describe which row is send to which target.
 Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
 if you want to discarded rows.</p>
 </div>
@@ -756,12 +519,12 @@ if you want to discarded rows.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
+    public override IDataFlowSource<TInput> LinkTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
 ```
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -773,17 +536,19 @@ if you want to discarded rows.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
         <td><span class="parametername">rowsToKeep</span></td>
-        <td></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -792,30 +557,76 @@ if you want to discarded rows.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
         <td><p>The linked component.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a></div>
+  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
+  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
+and a second predicate for rows you want to discard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override IDataFlowSource<TInput> LinkTo(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TConvert</span></td>
-        <td><p>Will convert the output type of the linked component.</p>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>Rows that are evaluate to true will be discarded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TInput&gt;</td>
+        <td><p>The linked component.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(ETLBox.IDataFlowDestination&lt;TInput&gt;, System.Predicate&lt;TInput&gt;)</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a></div>
   <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo__1_ETLBox_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo``1(ETLBox.IDataFlowDestination{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination.
@@ -832,7 +643,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -844,12 +655,13 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
       <tr>
         <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -865,7 +677,7 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -881,7 +693,160 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(ETLBox.IDataFlowDestination&lt;TInput&gt;)</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;)</a></div>
+  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
+  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
+Every component can be linked to one or more component. If you link multiple components,
+provide a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate&lt;T&gt;</a> that describe which row is send to which target.
+Make sure that all rows will be send to a target - use the <a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a>
+if you want to discarded rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Predicate - only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TConvert</span></td>
+        <td><p>Will convert the output type of the linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a></div>
+  <a id="ETLBox_DataFlow_FilterTransformation_1_LinkTo_" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo*"></a>
+  <h4 id="ETLBox_DataFlow_FilterTransformation_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.LinkTo``1(ETLBox.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</h4>
+  <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
+and a second predicate for rows you want to discard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override IDataFlowSource<TConvert> LinkTo<TConvert>(IDataFlowDestination<TInput> target, Predicate<TInput> rowsToKeep, Predicate<TInput> rowsIntoVoid)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Transformation or destination that the block is linked to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsToKeep</span></td>
+        <td><p>Only rows that evaluate to true are send to the connected target</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td><span class="parametername">rowsIntoVoid</span></td>
+        <td><p>Rows that are evaluate to true will be discarded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;TConvert&gt;</td>
+        <td><p>The linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TConvert</span></td>
+        <td><p>Will convert the output type of the linked component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

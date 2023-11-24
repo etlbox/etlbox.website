@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.oledb"
-weight: 10264
+weight: 10268
 toc: false
 ---
 
@@ -21,8 +21,8 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.oledb/oledbconnectionstring">OleDbConnectionString</a>, <span class="xref">OleDbConnectionStringBuilder</span>&gt;</div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="ETLBox.DbConnectionString-2.html">DbConnectionString</a>&lt;<a class="xref" href="ETLBox.OleDb.OleDbConnectionString.html">OleDbConnectionString</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.oledb.oledbconnectionstringbuilder">OleDbConnectionStringBuilder</a>&gt;</div>
     <div class="level2"><span class="xref">OleDbConnectionString</span></div>
   </div>
   <div class="implements">
@@ -50,15 +50,6 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_MasterDbName">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.MasterDbName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
@@ -71,25 +62,25 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;OleDbConnectionString, OleDbConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.OleDb</h6>
@@ -129,7 +120,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -139,7 +130,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -161,7 +152,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -170,13 +161,13 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, OleDbConnectionStringBuilder&gt;.DbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, System.Data.OleDb.OleDbConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_OleDb_OleDbConnectionString_DbNameKeyword_" data-uid="ETLBox.OleDb.OleDbConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_OleDb_OleDbConnectionString_DbNameKeyword" data-uid="ETLBox.OleDb.OleDbConnectionString.DbNameKeyword">DbNameKeyword</h4>
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
@@ -191,7 +182,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -200,13 +191,13 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, OleDbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, System.Data.OleDb.OleDbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_OleDb_OleDbConnectionString_MasterDbName_" data-uid="ETLBox.OleDb.OleDbConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_OleDb_OleDbConnectionString_MasterDbName" data-uid="ETLBox.OleDb.OleDbConnectionString.MasterDbName">MasterDbName</h4>
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
@@ -221,7 +212,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -230,13 +221,13 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, OleDbConnectionStringBuilder&gt;.MasterDbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.OleDb.OleDbConnectionString, System.Data.OleDb.OleDbConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_OleDb_OleDbConnectionString_op_Implicit_" data-uid="ETLBox.OleDb.OleDbConnectionString.op_Implicit*"></a>
@@ -252,7 +243,7 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -262,14 +253,14 @@ Internally the OdbcConnectionStringBuilder is used to access the values of the g
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

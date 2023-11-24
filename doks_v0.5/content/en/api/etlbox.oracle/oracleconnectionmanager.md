@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.oracle"
-weight: 10266
+weight: 10270
 toc: false
 ---
 
@@ -21,7 +21,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionmanager-3">DbConnectionManager</a>&lt;<span class="xref">OracleConnection</span>, <span class="xref">OracleTransaction</span>, <span class="xref">OracleParameter</span>&gt;</div>
     <div class="level2"><span class="xref">OracleConnectionManager</span></div>
   </div>
@@ -29,7 +29,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<span class="xref">OracleConnection</span>, <span class="xref">OracleTransaction</span>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -127,10 +127,10 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQuery_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkNonQuery(string, IEnumerable&lt;OracleParameter&gt;)</a>
@@ -139,10 +139,10 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkNonQueryAsync(string, IEnumerable&lt;OracleParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkReader(string, IEnumerable&lt;OracleParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkReader(string, IEnumerable&lt;OracleParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;OracleParameter&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkReaderAsync(string, IEnumerable&lt;OracleParameter&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BeginTransaction_System_Data_IsolationLevel_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BeginTransaction(IsolationLevel)</a>
@@ -172,7 +172,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;Object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_CloneIfAllowed">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.CloneIfAllowed()</a>
@@ -219,6 +219,27 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Oracle</h6>
   <h6><strong>Assembly</strong>: ETLBox.Oracle.dll</h6>
@@ -231,7 +252,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Oracle_OracleConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code>var oracleConnection = new OracleConnectionManager(&quot;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SID=ORCLCDB)));User ID=etlbox;Password=password;&quot;);</code></pre>
+  <pre><code class="lang-csharp">var oracleConnection = new OracleConnectionManager("Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SID=ORCLCDB)));User ID=etlbox;Password=password;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Oracle_OracleConnectionManager__ctor_" data-uid="ETLBox.Oracle.OracleConnectionManager.#ctor*"></a>
@@ -246,8 +267,6 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_Oracle_OracleConnectionManager__ctor_examples">Examples</h5>
-  <pre><code>var oracleConnection = new OracleConnectionManager(&quot;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SID=ORCLCDB)));User ID=etlbox;Password=password;&quot;);</code></pre>
   <a id="ETLBox_Oracle_OracleConnectionManager__ctor_" data-uid="ETLBox.Oracle.OracleConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager__ctor_ETLBox_Oracle_OracleConnectionString_" data-uid="ETLBox.Oracle.OracleConnectionManager.#ctor(ETLBox.Oracle.OracleConnectionString)">OracleConnectionManager(OracleConnectionString)</h4>
   <div class="markdown level1 summary"></div>
@@ -261,7 +280,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -277,8 +296,6 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Oracle_OracleConnectionManager__ctor_ETLBox_Oracle_OracleConnectionString__examples">Examples</h5>
-  <pre><code>var oracleConnection = new OracleConnectionManager(&quot;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SID=ORCLCDB)));User ID=etlbox;Password=password;&quot;);</code></pre>
   <a id="ETLBox_Oracle_OracleConnectionManager__ctor_" data-uid="ETLBox.Oracle.OracleConnectionManager.#ctor*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager__ctor_System_String_" data-uid="ETLBox.Oracle.OracleConnectionManager.#ctor(System.String)">OracleConnectionManager(string)</h4>
   <div class="markdown level1 summary"></div>
@@ -292,7 +309,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -302,14 +319,12 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">connectionString</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_Oracle_OracleConnectionManager__ctor_System_String__examples">Examples</h5>
-  <pre><code>var oracleConnection = new OracleConnectionManager(&quot;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SID=ORCLCDB)));User ID=etlbox;Password=password;&quot;);</code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_Oracle_OracleConnectionManager_ConnectionType_" data-uid="ETLBox.Oracle.OracleConnectionManager.ConnectionType*"></a>
@@ -326,7 +341,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -341,7 +356,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.ConnectionType</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_MaxParameterSizeBulkCopy_" data-uid="ETLBox.Oracle.OracleConnectionManager.MaxParameterSizeBulkCopy*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_MaxParameterSizeBulkCopy" data-uid="ETLBox.Oracle.OracleConnectionManager.MaxParameterSizeBulkCopy">MaxParameterSizeBulkCopy</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be used for bulk inserts.</p>
@@ -356,7 +371,7 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -365,13 +380,13 @@ Usess the official Oracle ADO.NET driver for .NET core.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.MaxParameterSizeBulkCopy</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.MaxParameterSizeBulkCopy</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_MaxParameterSizeSql_" data-uid="ETLBox.Oracle.OracleConnectionManager.MaxParameterSizeSql*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_MaxParameterSizeSql" data-uid="ETLBox.Oracle.OracleConnectionManager.MaxParameterSizeSql">MaxParameterSizeSql</h4>
   <div class="markdown level1 summary"><p>Returns the maximum amount of parameters that can be passed into a
@@ -387,7 +402,7 @@ sql query.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -396,13 +411,13 @@ sql query.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.MaxParameterSizeSql</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.MaxParameterSizeSql</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_PP_" data-uid="ETLBox.Oracle.OracleConnectionManager.PP*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_PP" data-uid="ETLBox.Oracle.OracleConnectionManager.PP">PP</h4>
   <div class="markdown level1 summary"><p>The character that is used in front of parameter names in query to identify the parameter.
@@ -418,7 +433,7 @@ Most databases use the '@' character, some use ':'.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -427,13 +442,13 @@ Most databases use the '@' character, some use ':'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.PP</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.PP</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_QB_" data-uid="ETLBox.Oracle.OracleConnectionManager.QB*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_QB" data-uid="ETLBox.Oracle.OracleConnectionManager.QB">QB</h4>
   <div class="markdown level1 summary"><p>The quotation begin character that is used in the database.
@@ -449,7 +464,7 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -458,13 +473,13 @@ E.g. SqlServer uses: '[' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.QB</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.QB</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_QE_" data-uid="ETLBox.Oracle.OracleConnectionManager.QE*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_QE" data-uid="ETLBox.Oracle.OracleConnectionManager.QE">QE</h4>
   <div class="markdown level1 summary"><p>The quotation end character that is used in the database.
@@ -480,7 +495,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -489,13 +504,13 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.QE</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.QE</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_SupportDatabases_" data-uid="ETLBox.Oracle.OracleConnectionManager.SupportDatabases*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_SupportDatabases" data-uid="ETLBox.Oracle.OracleConnectionManager.SupportDatabases">SupportDatabases</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
@@ -511,7 +526,7 @@ A database in ETLBox means a schema in MySql.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -520,13 +535,13 @@ A database in ETLBox means a schema in MySql.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.SupportDatabases</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_SupportSchemas_" data-uid="ETLBox.Oracle.OracleConnectionManager.SupportSchemas*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_SupportSchemas" data-uid="ETLBox.Oracle.OracleConnectionManager.SupportSchemas">SupportSchemas</h4>
   <div class="markdown level1 summary"><p>Indicates if the database supports schemas
@@ -543,7 +558,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -552,13 +567,13 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">bool</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.SupportSchemas</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Oracle_OracleConnectionManager_BulkDelete_" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkDelete*"></a>
@@ -575,7 +590,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -593,7 +608,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.BulkDelete(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_BulkInsert_" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkInsert*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_BulkInsert_ETLBox_ITableData_" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkInsert(ETLBox.ITableData)">BulkInsert(ITableData)</h4>
   <div class="markdown level1 summary"><p>Performs a bulk insert</p>
@@ -608,7 +623,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -626,10 +641,11 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.BulkInsert(ETLBox.ITableData)</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_BulkSelect_" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkSelect*"></a>
-  <h4 id="ETLBox_Oracle_OracleConnectionManager_BulkSelect_ETLBox_ITableData_ICollection_System_String__Action_Action_Action_System_Object____" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkSelect(ETLBox.ITableData,ICollection{System.String},Action,Action,Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Oracle_OracleConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkSelect(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Action,System.Action,System.Action{System.Object}[])">BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk select</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -640,7 +656,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -652,33 +668,40 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data needed for the where condition</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">selectColumnNames</span></td>
-        <td></td>
+        <td><p>Column names included in the select</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked before any data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
+        <td><p>Action invoked after all data is read</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">object</span>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_BulkUpdate_" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkUpdate*"></a>
-  <h4 id="ETLBox_Oracle_OracleConnectionManager_BulkUpdate_ETLBox_ITableData_ICollection_System_String__ICollection_System_String__" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkUpdate(ETLBox.ITableData,ICollection{System.String},ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="ETLBox_Oracle_OracleConnectionManager_BulkUpdate_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Oracle.OracleConnectionManager.BulkUpdate(ETLBox.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -689,7 +712,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -701,20 +724,25 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
       <tr>
         <td><a class="xref" href="/api/etlbox/itabledata">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">setColumnNames</span></td>
-        <td></td>
+        <td><p>The column names used in the set part of the update statement</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">ICollection&lt;&gt;</span>&lt;<span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td><span class="parametername">joinColumnNames</span></td>
-        <td></td>
+        <td><p>The column names to join for the update</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.BulkUpdate(ITableData, ICollection&lt;string&gt;, ICollection&lt;string&gt;)</a></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Oracle.OracleConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Oracle.OracleConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -730,7 +758,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -740,14 +768,14 @@ to change back settings made to improve bulk insert performance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.CleanUpBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.CleanUpBulkInsert(string)</a></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_Clone_" data-uid="ETLBox.Oracle.OracleConnectionManager.Clone*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_Clone" data-uid="ETLBox.Oracle.OracleConnectionManager.Clone">Clone()</h4>
   <div class="markdown level1 summary"><p>Cretes a clone of the current connection manager</p>
@@ -762,7 +790,7 @@ to change back settings made to improve bulk insert performance</p>
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -778,7 +806,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.Clone()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client.OracleTransaction, Oracle.ManagedDataAccess.Client.OracleParameter&gt;.Clone()</span></div>
   <a id="ETLBox_Oracle_OracleConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Oracle.OracleConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Oracle_OracleConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Oracle.OracleConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -794,7 +822,7 @@ performance of a bulk insert operation</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -804,14 +832,14 @@ performance of a bulk insert operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">tablename</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.PrepareBulkInsert(string)</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;OracleConnection, OracleTransaction, OracleParameter&gt;.PrepareBulkInsert(string)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -820,7 +848,7 @@ performance of a bulk insert operation</p>
       <a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a>
   </div>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 {{< /rawhtml >}}

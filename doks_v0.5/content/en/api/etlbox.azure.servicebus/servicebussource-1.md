@@ -19,14 +19,14 @@ toc: false
 This will receive messages from the source for furhter processing.
 <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.
 Adjust the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_ReceiverOptions">ReceiverOptions</a> to your needs - the default receive mode
-is <see cref="!:ServiceBusReceiveMode.PeekLock"></see>.
+is <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusreceivemode#azure-messaging-servicebus-servicebusreceivemode-peeklock">PeekLock</a>.
 The source will read until either the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxWaitTime">MaxWaitTime</a> has been reached during
 a request or if no new messages can be read from the source.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
@@ -230,25 +230,25 @@ a request or if no new messages can be read from the source.</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Azure.ServiceBus</h6>
@@ -262,7 +262,7 @@ a request or if no new messages can be read from the source.</p>
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -308,7 +308,7 @@ Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.s
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -317,7 +317,7 @@ Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.s
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ServiceBusClient</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusclient">ServiceBusClient</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -336,7 +336,7 @@ Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.s
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -345,7 +345,7 @@ Automatically created if you provide a <a class="xref" href="/api/etlbox.azure.s
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ServiceBusClientOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusclientoptions">ServiceBusClientOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -367,7 +367,7 @@ via the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ET
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -376,7 +376,7 @@ via the <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ET
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -396,7 +396,7 @@ based on the last retrieved message.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -405,7 +405,7 @@ based on the last retrieved message.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<span class="xref">ServiceBusReceivedMessage</span>&gt;, <span class="xref">bool</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusreceivedmessage">ServiceBusReceivedMessage</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -427,7 +427,7 @@ Default is 1.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -436,7 +436,7 @@ Default is 1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">int</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -458,7 +458,7 @@ will send the already received message into the data flow.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -467,7 +467,7 @@ will send the already received message into the data flow.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -486,7 +486,7 @@ will send the already received message into the data flow.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -495,7 +495,7 @@ will send the already received message into the data flow.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -515,7 +515,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -524,7 +524,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ServiceBusReceiver</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusreceiver">ServiceBusReceiver</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -543,7 +543,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -552,7 +552,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ServiceBusReceiverOptions</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.messaging.servicebus.servicebusreceiveroptions">ServiceBusReceiverOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -571,7 +571,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -580,7 +580,7 @@ Automatically created from the <a class="xref" href="/api/etlbox.azure.servicebu
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -600,7 +600,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -609,7 +609,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -645,7 +645,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -655,7 +655,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -704,7 +704,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</a></div>
   <a id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_Azure_ServiceBus_ServiceBusSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -718,7 +718,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoSynchronousWork">DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

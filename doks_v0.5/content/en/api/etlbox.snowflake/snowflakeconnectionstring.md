@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.snowflake"
-weight: 10290
+weight: 10294
 toc: false
 ---
 
@@ -21,7 +21,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/dbconnectionstring-2">DbConnectionString</a>&lt;<a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionstring">SnowflakeConnectionString</a>, <span class="xref">SnowflakeDbConnectionStringBuilder</span>&gt;</div>
     <div class="level2"><span class="xref">SnowflakeConnectionString</span></div>
   </div>
@@ -50,15 +50,6 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_MasterDbName">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.MasterDbName</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_Clone">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.IDbConnectionString.Clone()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithNewDbName_System_String_">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithNewDbName(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_ETLBox_IDbConnectionString_CloneWithMasterDbName">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.IDbConnectionString.CloneWithMasterDbName()</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithNewDbName_System_String_">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.CloneWithNewDbName(string)</a>
     </div>
     <div>
@@ -69,6 +60,27 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionstring-2#ETLBox_DbConnectionString_2_CloneWithMasterDbName">DbConnectionString&lt;SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.CloneWithMasterDbName()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Snowflake</h6>
@@ -108,7 +120,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -118,7 +130,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -140,7 +152,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -149,13 +161,13 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.DbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, Snowflake.Data.Client.SnowflakeDbConnectionStringBuilder&gt;.DbName</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionString_DbNameKeyword_" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.DbNameKeyword*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionString_DbNameKeyword" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.DbNameKeyword">DbNameKeyword</h4>
   <div class="markdown level1 summary"><p>The keyword used in the connection string to identify a database</p>
@@ -170,7 +182,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -179,13 +191,13 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, Snowflake.Data.Client.SnowflakeDbConnectionStringBuilder&gt;.DbNameKeyword</span></div>
   <a id="ETLBox_Snowflake_SnowflakeConnectionString_MasterDbName_" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.MasterDbName*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionString_MasterDbName" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.MasterDbName">MasterDbName</h4>
   <div class="markdown level1 summary"><p>The name of the master database (if applicable)</p>
@@ -200,7 +212,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -209,18 +221,19 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.MasterDbName</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, Snowflake.Data.Client.SnowflakeDbConnectionStringBuilder&gt;.MasterDbName</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Snowflake_SnowflakeConnectionString_CloneWithMasterDbName_" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.CloneWithMasterDbName*"></a>
   <h4 id="ETLBox_Snowflake_SnowflakeConnectionString_CloneWithMasterDbName" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.CloneWithMasterDbName">CloneWithMasterDbName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clones the current connection string with the master database name (if applicable)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -231,7 +244,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -241,12 +254,13 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.snowflake/snowflakeconnectionstring">SnowflakeConnectionString</a></td>
-        <td></td>
+        <td><p>The new connection string with master database name</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, SnowflakeDbConnectionStringBuilder&gt;.CloneWithMasterDbName()</span></div>
+  <div><span class="xref">ETLBox.DbConnectionString&lt;ETLBox.Snowflake.SnowflakeConnectionString, Snowflake.Data.Client.SnowflakeDbConnectionStringBuilder&gt;.CloneWithMasterDbName()</span></div>
   <h3 id="operators">Operators
 </h3>
   <a id="ETLBox_Snowflake_SnowflakeConnectionString_op_Implicit_" data-uid="ETLBox.Snowflake.SnowflakeConnectionString.op_Implicit*"></a>
@@ -262,7 +276,7 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -272,14 +286,14 @@ Internally the SnowflakeDbConnectionStringBuilder is used to access the values o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

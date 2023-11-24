@@ -20,7 +20,7 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -192,25 +192,25 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -224,7 +224,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -259,7 +259,7 @@ Option 3: create BlobkBlobClient with provided ConnectionString and ContainerNam
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -288,7 +288,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -297,7 +297,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">string</span>, <span class="xref">System.IO.StreamWriter</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamwriter">StreamWriter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -316,7 +316,7 @@ If you already have an existing stream, use this function to returns a new Strea
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -325,7 +325,7 @@ If you already have an existing stream, use this function to returns a new Strea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Text.Encoding</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -346,7 +346,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -355,7 +355,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">string</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -375,7 +375,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -384,7 +384,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func&lt;T1, T2, TResult&gt;</span>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, TInput, <span class="xref">bool</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="ETLBox.DataFlow.StreamMetaData.html">StreamMetaData</a>, TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +403,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -412,7 +412,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpClient</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -431,7 +431,7 @@ This property can be used if you want to write into multiple files or send data 
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -440,7 +440,7 @@ This property can be used if you want to write into multiple files or send data 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -460,7 +460,7 @@ to add additional header data type or to change the http method (e.g. for POST r
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -469,7 +469,7 @@ to add additional header data type or to change the http method (e.g. for POST r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -489,7 +489,7 @@ after all data rows were sent to the destination.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -498,7 +498,7 @@ after all data rows were sent to the destination.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -516,7 +516,7 @@ after all data rows were sent to the destination.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -546,7 +546,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -574,7 +574,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -583,7 +583,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.StreamWriter</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamwriter">StreamWriter</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -602,7 +602,7 @@ Use ResourceType.Http to write into a web endpoint.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -611,14 +611,14 @@ Use ResourceType.Http to write into a web endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteUri_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_WriteUri" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.WriteUri">WriteUri</h4>
-  <div class="markdown level1 summary"><p>The Uri used for the current write operation- this will only be different to the <span class="xref">System.Uri</span>
+  <div class="markdown level1 summary"><p>The Uri used for the current write operation- this will only be different to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>
 if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ETLBox_IDataFlowStreamDestination_1_GetNextUri">GetNextUri</a> and <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ETLBox_IDataFlowStreamDestination_1_HasNextUri">HasNextUri</a> functions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -631,7 +631,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -640,7 +640,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -674,7 +674,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -684,7 +684,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -731,7 +731,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.InitComponent()</span></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_InitComponent">DataFlowDestination&lt;TInput&gt;.InitComponent()</a></div>
   <a id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream_" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream" data-uid="ETLBox.DataFlow.DataFlowStreamDestination`1.InitStream">InitStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -771,7 +771,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -800,7 +800,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -829,7 +829,7 @@ if you use the <a class="xref" href="/api/etlbox/idataflowstreamdestination-1#ET
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>

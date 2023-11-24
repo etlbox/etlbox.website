@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10138
+weight: 10140
 toc: false
 ---
 
@@ -23,7 +23,7 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
@@ -189,25 +189,25 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -221,7 +221,7 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
 
 {{< rawhtml >}}
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -237,8 +237,8 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_MemoryDestination_1_examples"><strong>Examples</strong></h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
+  <pre><code class="lang-csharp">MemoryDestination&lt;MySimpleRow&gt; dest = new MemoryDestination&lt;MySimpleRow&gt;();
+//data is accessible in dest.Data</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_MemoryDestination_1__ctor_" data-uid="ETLBox.DataFlow.MemoryDestination`1.#ctor*"></a>
@@ -253,9 +253,6 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1__ctor_examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_DataFlow_MemoryDestination_1_Data_" data-uid="ETLBox.DataFlow.MemoryDestination`1.Data*"></a>
@@ -272,7 +269,7 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -281,7 +278,7 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>&lt;TInput&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +298,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -310,7 +307,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,7 +329,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -348,9 +345,6 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1_AddData__0__examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_MemoryDestination_1_CheckParameter_" data-uid="ETLBox.DataFlow.MemoryDestination`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_MemoryDestination_1_CheckParameter" data-uid="ETLBox.DataFlow.MemoryDestination`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>
@@ -365,9 +359,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1_CheckParameter_examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.MemoryDestination`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.MemoryDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -381,7 +372,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -391,7 +382,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -399,9 +390,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnFaulted_System_Exception__examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.MemoryDestination`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.MemoryDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -416,9 +404,6 @@ with a default name that can be overwritten.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1_CleanUpOnSuccess_examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
   <a id="ETLBox_DataFlow_MemoryDestination_1_InitComponent_" data-uid="ETLBox.DataFlow.MemoryDestination`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_MemoryDestination_1_InitComponent" data-uid="ETLBox.DataFlow.MemoryDestination`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -432,10 +417,7 @@ with a default name that can be overwritten.</p>
 
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowDestination&lt;TInput&gt;.InitComponent()</span></div>
-  <h5 id="ETLBox_DataFlow_MemoryDestination_1_InitComponent_examples">Examples</h5>
-  <pre><code>MemoryDestination&lt;MySimpleRow> dest = new MemoryDestination&lt;MySimpleRow>();
-//data is accessible in dest.Data         </code></pre>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_InitComponent">DataFlowDestination&lt;TInput&gt;.InitComponent()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>

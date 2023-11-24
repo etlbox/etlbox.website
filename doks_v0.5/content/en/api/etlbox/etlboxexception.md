@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10176
+weight: 10178
 toc: false
 ---
 
@@ -20,69 +20,69 @@ toc: false
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
     <div class="level2"><span class="xref">ETLBoxException</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Exception.GetBaseException()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">Exception.GetBaseException()</a>
     </div>
     <div>
-      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata">Exception.GetObjectData(SerializationInfo, StreamingContext)</a>
     </div>
     <div>
-      <span class="xref">System.Exception.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.gettype">Exception.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Exception.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.tostring">Exception.ToString()</a>
     </div>
     <div>
-      <span class="xref">System.Exception.Data</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.data">Exception.Data</a>
     </div>
     <div>
-      <span class="xref">System.Exception.HelpLink</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.helplink">Exception.HelpLink</a>
     </div>
     <div>
-      <span class="xref">System.Exception.HResult</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.hresult">Exception.HResult</a>
     </div>
     <div>
-      <span class="xref">System.Exception.InnerException</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">Exception.InnerException</a>
     </div>
     <div>
-      <span class="xref">System.Exception.Message</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.message">Exception.Message</a>
     </div>
     <div>
-      <span class="xref">System.Exception.Source</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.source">Exception.Source</a>
     </div>
     <div>
-      <span class="xref">System.Exception.StackTrace</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.stacktrace">Exception.StackTrace</a>
     </div>
     <div>
-      <span class="xref">System.Exception.TargetSite</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.targetsite">Exception.TargetSite</a>
     </div>
     <div>
-      <span class="xref">System.Exception.SerializeObjectState</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate">Exception.SerializeObjectState</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">object.Equals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">object.ReferenceEquals(object, object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -110,40 +110,6 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_ETLBoxException__ctor_" data-uid="ETLBox.ETLBoxException.#ctor*"></a>
-  <h4 id="ETLBox_ETLBoxException__ctor_System_String_System_Exception_" data-uid="ETLBox.ETLBoxException.#ctor(System.String,System.Exception)">ETLBoxException(string, Exception)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public ETLBoxException(string message, Exception innerException)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">innerException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ETLBoxException__ctor_" data-uid="ETLBox.ETLBoxException.#ctor*"></a>
   <h4 id="ETLBox_ETLBoxException__ctor_System_String_" data-uid="ETLBox.ETLBoxException.#ctor(System.String)">ETLBoxException(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -156,7 +122,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
+  <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
@@ -166,15 +132,49 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ETLBoxException__ctor_" data-uid="ETLBox.ETLBoxException.#ctor*"></a>
+  <h4 id="ETLBox_ETLBoxException__ctor_System_String_System_Exception_" data-uid="ETLBox.ETLBoxException.#ctor(System.String,System.Exception)">ETLBoxException(string, Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ETLBoxException(string message, Exception innerException)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">innerException</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
