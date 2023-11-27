@@ -203,6 +203,16 @@ var dest = new ExcelDestination<MySimpleRow>("ExcelDest.xlsx");
 dest.SheetName = "Test";
 ```
 
+#### Append to existing file
+
+If set to true, the data will be appended to the existing Excel file, on the sheet with the provided `SheetName`. 
+The data will be appended to the after the last row on this sheet. 
+
+```C#
+ var dest = new ExcelDestination<MySimpleRow>("ExcelDest.xlsx");
+ dest.AppendToFile = true; 
+```
+
 ### Using dynamic objects
 
 The ExcelDestination also works with the `ExpandoObject`. The example above can be rewritten to work with the dynamic object approach:
