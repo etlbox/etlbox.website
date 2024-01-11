@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10157
 toc: false
 ---
 
@@ -116,7 +116,7 @@ t.Wait();</code></pre>
 {{< /rawhtml >}}
 
 ```C#
-    public ICollection<IDataFlowComponent> AllNodes { get; }
+    public ReadOnlyCollection<IDataFlowComponent> AllNodes { get; }
 ```
 
 {{< rawhtml >}}
@@ -130,20 +130,20 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Network_AlwaysRun_" data-uid="ETLBox.DataFlow.Network.AlwaysRun*"></a>
-  <h4 id="ETLBox_DataFlow_Network_AlwaysRun" data-uid="ETLBox.DataFlow.Network.AlwaysRun">AlwaysRun</h4>
+  <a id="ETLBox_DataFlow_Network_AllowMultipleExecutions_" data-uid="ETLBox.DataFlow.Network.AllowMultipleExecutions*"></a>
+  <h4 id="ETLBox_DataFlow_Network_AllowMultipleExecutions" data-uid="ETLBox.DataFlow.Network.AllowMultipleExecutions">AllowMultipleExecutions</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool AlwaysRun { get; set; }
+    public bool? AllowMultipleExecutions { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -157,7 +157,7 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -170,7 +170,7 @@ t.Wait();</code></pre>
 {{< /rawhtml >}}
 
 ```C#
-    public ICollection<IDataFlowDestination> Destinations { get; }
+    public ReadOnlyCollection<IDataFlowDestination> Destinations { get; }
 ```
 
 {{< rawhtml >}}
@@ -184,7 +184,7 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -197,7 +197,7 @@ t.Wait();</code></pre>
 {{< /rawhtml >}}
 
 ```C#
-    public ICollection<IDataFlowExecutableSource> Sources { get; }
+    public ReadOnlyCollection<IDataFlowExecutableSource> Sources { get; }
 ```
 
 {{< rawhtml >}}
@@ -211,7 +211,7 @@ t.Wait();</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowexecutablesource">IDataFlowExecutableSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,6 +245,53 @@ t.Wait();</code></pre>
   </table>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_DataFlow_Network_ApplyToAllNodes_" data-uid="ETLBox.DataFlow.Network.ApplyToAllNodes*"></a>
+  <h4 id="ETLBox_DataFlow_Network_ApplyToAllNodes_System_Action_ETLBox_IDataFlowComponent__" data-uid="ETLBox.DataFlow.Network.ApplyToAllNodes(System.Action{ETLBox.IDataFlowComponent})">ApplyToAllNodes(Action&lt;IDataFlowComponent&gt;)</h4>
+  <div class="markdown level1 summary"><p>Will apply the given action on all nodes in the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network ApplyToAllNodes(Action<IDataFlowComponent> onNode)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>&gt;</td>
+        <td><span class="parametername">onNode</span></td>
+        <td><p>An action that is performed on each node.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td><p>The current Network instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Network_Cancel_" data-uid="ETLBox.DataFlow.Network.Cancel*"></a>
   <h4 id="ETLBox_DataFlow_Network_Cancel" data-uid="ETLBox.DataFlow.Network.Cancel">Cancel()</h4>
   <div class="markdown level1 summary"><p>Cancel the BufferCompletion(s) on all nodes in the network, will start cancelation from the sources.
@@ -583,6 +630,98 @@ the whole network when still running</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_Init_" data-uid="ETLBox.DataFlow.Network.Init*"></a>
+  <h4 id="ETLBox_DataFlow_Network_Init_ETLBox_IDataFlowComponent___" data-uid="ETLBox.DataFlow.Network.Init(ETLBox.IDataFlowComponent[])">Init(params IDataFlowComponent[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new network with the given start nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Network Init(params IDataFlowComponent[] startNodes)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a>[]</td>
+        <td><span class="parametername">startNodes</span></td>
+        <td><p>At least one or more nodes from the network.
+Connected nodes will be automatically collected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td><p>A new Network instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_SetLogInstance_" data-uid="ETLBox.DataFlow.Network.SetLogInstance*"></a>
+  <h4 id="ETLBox_DataFlow_Network_SetLogInstance_Microsoft_Extensions_Logging_ILogger_" data-uid="ETLBox.DataFlow.Network.SetLogInstance(Microsoft.Extensions.Logging.ILogger)">SetLogInstance(ILogger)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network SetLogInstance(ILogger logger)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
         <td></td>
       </tr>
     </tbody>

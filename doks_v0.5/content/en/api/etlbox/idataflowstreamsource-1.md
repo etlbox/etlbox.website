@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10216
+weight: 10224
 toc: false
 ---
 
@@ -96,16 +96,13 @@ toc: false
       <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_Execute_System_Threading_CancellationToken_">IDataFlowExecutableSource.Execute(CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_Post">IDataFlowExecutableSource.Post()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_Post_System_Threading_CancellationToken_">IDataFlowExecutableSource.Post(CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_ExecuteAsync">IDataFlowExecutableSource.ExecuteAsync()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_ExecuteAsync_System_Threading_CancellationToken_">IDataFlowExecutableSource.ExecuteAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_StartAsync_System_Nullable_System_Threading_CancellationToken__">IDataFlowExecutableSource.StartAsync(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_Limit">IDataFlowExecutableSource.Limit</a>
@@ -145,6 +142,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_DisableLogging">ILoggableTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_ParentTask">ILoggableTask.ParentTask</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_LogInstance">ILoggableTask.LogInstance</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>

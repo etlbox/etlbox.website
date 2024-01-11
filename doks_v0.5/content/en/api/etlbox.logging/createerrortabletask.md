@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10236
+weight: 10244
 toc: false
 ---
 
@@ -48,13 +48,22 @@ that occur during a data flow execution</p>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskType">LoggableTask.TaskType</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogThreshold">LoggableTask.LogThreshold</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogInstance">LoggableTask.LogInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_ParentTask">LoggableTask.ParentTask</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -76,7 +85,7 @@ that occur during a data flow execution</p>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Logging</h6>
-  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h6><strong>Assembly</strong>: ETLBox.Logging.dll</h6>
   <h5 id="ETLBox_Logging_CreateErrorTableTask_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
@@ -218,37 +227,6 @@ that occur during a data flow execution</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_CreateErrorTableTask_TaskName_" data-uid="ETLBox.Logging.CreateErrorTableTask.TaskName*"></a>
-  <h4 id="ETLBox_Logging_CreateErrorTableTask_TaskName" data-uid="ETLBox.Logging.CreateErrorTableTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override string TaskName { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Logging_CreateErrorTableTask_Create_" data-uid="ETLBox.Logging.CreateErrorTableTask.Create*"></a>

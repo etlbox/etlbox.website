@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10223
+weight: 10231
 toc: false
 ---
 
@@ -38,7 +38,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    bool DisableLogging { get; set; }
+    bool? DisableLogging { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -52,7 +52,63 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ILoggableTask_LogInstance_" data-uid="ETLBox.ILoggableTask.LogInstance*"></a>
+  <h4 id="ETLBox_ILoggableTask_LogInstance" data-uid="ETLBox.ILoggableTask.LogInstance">LogInstance</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> instance that is used for logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    ILogger LogInstance { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ILoggableTask_ParentTask_" data-uid="ETLBox.ILoggableTask.ParentTask*"></a>
+  <h4 id="ETLBox_ILoggableTask_ParentTask" data-uid="ETLBox.ILoggableTask.ParentTask">ParentTask</h4>
+  <div class="markdown level1 summary"><p>Another loggable that which is the creator of this task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    LoggableTask ParentTask { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></td>
         <td></td>
       </tr>
     </tbody>

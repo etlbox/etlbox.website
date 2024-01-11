@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10235
+weight: 10243
 toc: false
 ---
 
@@ -63,20 +63,6 @@ toc: false
 ```
 
 {{< rawhtml >}}
-  <h3 id="constructors">Constructors
-</h3>
-  <a id="ETLBox_LoggableTask__ctor_" data-uid="ETLBox.LoggableTask.#ctor*"></a>
-  <h4 id="ETLBox_LoggableTask__ctor" data-uid="ETLBox.LoggableTask.#ctor">LoggableTask()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public LoggableTask()
-```
-
-{{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_LoggableTask_DisableLogging_" data-uid="ETLBox.LoggableTask.DisableLogging*"></a>
@@ -88,7 +74,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public virtual bool DisableLogging { get; set; }
+    public bool? DisableLogging { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -102,7 +88,93 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogInstance_" data-uid="ETLBox.LoggableTask.LogInstance*"></a>
+  <h4 id="ETLBox_LoggableTask_LogInstance" data-uid="ETLBox.LoggableTask.LogInstance">LogInstance</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> instance that is used for logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ILogger LogInstance { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogThreshold_" data-uid="ETLBox.LoggableTask.LogThreshold*"></a>
+  <h4 id="ETLBox_LoggableTask_LogThreshold" data-uid="ETLBox.LoggableTask.LogThreshold">LogThreshold</h4>
+  <div class="markdown level1 summary"><p>To avoid getting a log message for every row, by default only a log message is generated for each 1000 rows.
+Setting this property to a value greater than 0 will change the default value.
+The overall log threshold can be overwritten in the <a class="xref" href="/api/etlbox/settings">Settings</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int? LogThreshold { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_ParentTask_" data-uid="ETLBox.LoggableTask.ParentTask*"></a>
+  <h4 id="ETLBox_LoggableTask_ParentTask" data-uid="ETLBox.LoggableTask.ParentTask">ParentTask</h4>
+  <div class="markdown level1 summary"><p>Another loggable that which is the creator of this task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public LoggableTask ParentTask { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -116,7 +188,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public virtual string TaskHash { get; set; }
+    public string TaskHash { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -145,7 +217,7 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public virtual string TaskName { get; set; }
+    public string TaskName { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -173,7 +245,7 @@ with a default name that can be overwritten.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public virtual string TaskType { get; set; }
+    public string TaskType { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -194,17 +266,15 @@ with a default name that can be overwritten.</p>
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_LoggableTask_CopyLogTaskProperties_" data-uid="ETLBox.LoggableTask.CopyLogTaskProperties*"></a>
-  <h4 id="ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_" data-uid="ETLBox.LoggableTask.CopyLogTaskProperties(ETLBox.ILoggableTask)">CopyLogTaskProperties(ILoggableTask)</h4>
-  <div class="markdown level1 summary"><p>Copies the relevant task properties from the current loggable task
-to another loggable task.</p>
-</div>
+  <a id="ETLBox_LoggableTask_LogDebug_" data-uid="ETLBox.LoggableTask.LogDebug*"></a>
+  <h4 id="ETLBox_LoggableTask_LogDebug_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogDebug(System.String,System.Object[])">LogDebug(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void CopyLogTaskProperties(ILoggableTask otherTask)
+    protected void LogDebug(string message, params object[] args)
 ```
 
 {{< rawhtml >}}
@@ -219,10 +289,218 @@ to another loggable task.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></td>
-        <td><span class="parametername">otherTask</span></td>
-        <td><p>The target task that retrieve a copy from the log task properties</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogError_" data-uid="ETLBox.LoggableTask.LogError*"></a>
+  <h4 id="ETLBox_LoggableTask_LogError_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogError(System.String,System.Object[])">LogError(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogError(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogFatal_" data-uid="ETLBox.LoggableTask.LogFatal*"></a>
+  <h4 id="ETLBox_LoggableTask_LogFatal_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogFatal(System.String,System.Object[])">LogFatal(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogFatal(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogInfo_" data-uid="ETLBox.LoggableTask.LogInfo*"></a>
+  <h4 id="ETLBox_LoggableTask_LogInfo_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogInfo(System.String,System.Object[])">LogInfo(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogInfo(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogInfoOrDebug_" data-uid="ETLBox.LoggableTask.LogInfoOrDebug*"></a>
+  <h4 id="ETLBox_LoggableTask_LogInfoOrDebug_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogInfoOrDebug(System.String,System.Object[])">LogInfoOrDebug(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogInfoOrDebug(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogTrace_" data-uid="ETLBox.LoggableTask.LogTrace*"></a>
+  <h4 id="ETLBox_LoggableTask_LogTrace_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogTrace(System.String,System.Object[])">LogTrace(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogTrace(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_LoggableTask_LogWarn_" data-uid="ETLBox.LoggableTask.LogWarn*"></a>
+  <h4 id="ETLBox_LoggableTask_LogWarn_System_String_System_Object___" data-uid="ETLBox.LoggableTask.LogWarn(System.String,System.Object[])">LogWarn(string, params object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected void LogWarn(string message, params object[] args)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

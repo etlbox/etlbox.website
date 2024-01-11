@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10241
+weight: 10249
 toc: false
 ---
 
@@ -87,7 +87,7 @@ toc: false
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.Logging</h6>
-  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h6><strong>Assembly</strong>: ETLBox.Logging.dll</h6>
   <h5 id="ETLBox_Logging_LogHierarchyEntry_syntax">Syntax</h5>
 {{< /rawhtml >}}
 

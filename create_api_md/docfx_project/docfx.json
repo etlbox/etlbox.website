@@ -96,6 +96,15 @@
           "files": [
             "**.csproj"
           ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Logging",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
           "src": "..\\..\\..\\etlbox.source\\ETLBox.MariaDb",
           "properties": {
             "TargetFramework": "netstandard2.0"
@@ -115,6 +124,15 @@
             "**.csproj"
           ],
           "src": "..\\..\\..\\etlbox.source\\ETLBox.MySql",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Neo4j",
           "properties": {
             "TargetFramework": "netstandard2.0"
           }

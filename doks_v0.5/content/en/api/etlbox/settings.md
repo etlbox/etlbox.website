@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10292
+weight: 10305
 toc: false
 ---
 
@@ -116,6 +116,65 @@ Here you can set the threshold value when information about processed records sh
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_Settings_AdditionalScope_" data-uid="ETLBox.Settings.AdditionalScope*"></a>
+  <h4 id="ETLBox_Settings_AdditionalScope" data-uid="ETLBox.Settings.AdditionalScope">AdditionalScope</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Dictionary<string, object> AdditionalScope { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Settings_AllowMultipleExecutions_" data-uid="ETLBox.Settings.AllowMultipleExecutions*"></a>
+  <h4 id="ETLBox_Settings_AllowMultipleExecutions" data-uid="ETLBox.Settings.AllowMultipleExecutions">AllowMultipleExecutions</h4>
+  <div class="markdown level1 summary"><p>If set to false, components in a network can only be executed once.
+The recommendation is to set this property to false, as reusing components
+in the same or different networks may lead to unexpected results (and possible side effects
+to existing data).
+But to avoid unexpected behavior, this property is set to true by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static bool AllowMultipleExecutions { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Settings_DefaultDbConnection_" data-uid="ETLBox.Settings.DefaultDbConnection*"></a>
   <h4 id="ETLBox_Settings_DefaultDbConnection" data-uid="ETLBox.Settings.DefaultDbConnection">DefaultDbConnection</h4>
   <div class="markdown level1 summary"><p>You can store your general database connection string here. This connection will then used by all Tasks where no DB connection is excplicitly set.</p>
@@ -144,9 +203,41 @@ Here you can set the threshold value when information about processed records sh
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Settings_DisableAllLogging_" data-uid="ETLBox.Settings.DisableAllLogging*"></a>
+  <h4 id="ETLBox_Settings_DisableAllLogging" data-uid="ETLBox.Settings.DisableAllLogging">DisableAllLogging</h4>
+  <div class="markdown level1 summary"><p>If set to true, no log messages will be produced for all components.
+Logging can be enabled/disabled for all components individually using the DisableLogging property on each component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static bool DisableAllLogging { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Settings_LogInstance_" data-uid="ETLBox.Settings.LogInstance*"></a>
   <h4 id="ETLBox_Settings_LogInstance" data-uid="ETLBox.Settings.LogInstance">LogInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An ILogger instance which is used by all components, unless there is a specific logger
+instance set for a component individually. If the component has no logger instance set,
+and the <a class="xref" href="/api/etlbox/settings#ETLBox_Settings_LogInstance">LogInstance</a> is null, no logging will be performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -173,7 +264,7 @@ Here you can set the threshold value when information about processed records sh
   </table>
   <a id="ETLBox_Settings_LogThreshold_" data-uid="ETLBox.Settings.LogThreshold*"></a>
   <h4 id="ETLBox_Settings_LogThreshold" data-uid="ETLBox.Settings.LogThreshold">LogThreshold</h4>
-  <div class="markdown level1 summary"><p>To avoid getting a log message for every row, by default only a log message each 1000 rows.
+  <div class="markdown level1 summary"><p>To avoid getting a log message for every row, by default only a log message is generated every 1000 rows.
 Setting this property will decrease or increase this default value for all dataflow components.
 The individual log threshold can be overwritten in each component separately.</p>
 </div>

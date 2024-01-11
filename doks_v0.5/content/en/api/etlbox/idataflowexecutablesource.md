@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10210
+weight: 10218
 toc: false
 ---
 
@@ -55,6 +55,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_DisableLogging">ILoggableTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_ParentTask">ILoggableTask.ParentTask</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_LogInstance">ILoggableTask.LogInstance</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -220,29 +226,17 @@ Waits until all destinations run to completion.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_IDataFlowExecutableSource_Post_" data-uid="ETLBox.IDataFlowExecutableSource.Post*"></a>
-  <h4 id="ETLBox_IDataFlowExecutableSource_Post" data-uid="ETLBox.IDataFlowExecutableSource.Post">Post()</h4>
-  <div class="markdown level1 summary"><p>Starts the data flow partly synchronously. This method will return when all data was posted into the flow.</p>
+  <a id="ETLBox_IDataFlowExecutableSource_StartAsync_" data-uid="ETLBox.IDataFlowExecutableSource.StartAsync*"></a>
+  <h4 id="ETLBox_IDataFlowExecutableSource_StartAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.IDataFlowExecutableSource.StartAsync(System.Nullable{System.Threading.CancellationToken})">StartAsync(CancellationToken?)</h4>
+  <div class="markdown level1 summary"><p>Starts the source asynchronously. Will return only the task for the source component, which completes when all data was posted
+into the data flow.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    void Post()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_IDataFlowExecutableSource_Post_" data-uid="ETLBox.IDataFlowExecutableSource.Post*"></a>
-  <h4 id="ETLBox_IDataFlowExecutableSource_Post_System_Threading_CancellationToken_" data-uid="ETLBox.IDataFlowExecutableSource.Post(System.Threading.CancellationToken)">Post(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="/api/etlbox/idataflowexecutablesource#ETLBox_IDataFlowExecutableSource_Post">Post()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    void Post(CancellationToken cancellationToken)
+    Task StartAsync(CancellationToken? cancellationToken)
 ```
 
 {{< rawhtml >}}
@@ -257,9 +251,25 @@ Waits until all destinations run to completion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token which can be used to cancel the task of component (and all subsequent components in the flow)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Returns an awaitable task that completes or faults when the source ran to completion.</p>
 </td>
       </tr>
     </tbody>

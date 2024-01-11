@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10255
+weight: 10268
 toc: false
 ---
 
@@ -15,7 +15,8 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.ObjectCopy">
   <h1 id="ETLBox_ObjectCopy" data-uid="ETLBox.ObjectCopy" class="text-break">Class ObjectCopy
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class exposes cloning functionality for objects.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -59,15 +60,74 @@ toc: false
 {{< rawhtml >}}
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_ObjectCopy_CreateNewAndTryCopyPublicProps_" data-uid="ETLBox.ObjectCopy.CreateNewAndTryCopyPublicProps*"></a>
-  <h4 id="ETLBox_ObjectCopy_CreateNewAndTryCopyPublicProps__2___0_" data-uid="ETLBox.ObjectCopy.CreateNewAndTryCopyPublicProps``2(``0)">CreateNewAndTryCopyPublicProps&lt;TIn, TOut&gt;(TIn)</h4>
+  <a id="ETLBox_ObjectCopy_TryCreateShallowCopyOfPublicProps_" data-uid="ETLBox.ObjectCopy.TryCreateShallowCopyOfPublicProps*"></a>
+  <h4 id="ETLBox_ObjectCopy_TryCreateShallowCopyOfPublicProps__1___0_" data-uid="ETLBox.ObjectCopy.TryCreateShallowCopyOfPublicProps``1(``0)">TryCreateShallowCopyOfPublicProps&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static TOut CreateNewAndTryCopyPublicProps<TIn, TOut>(TIn source) where TOut : new()
+    public static T TryCreateShallowCopyOfPublicProps<T>(T source) where T : class
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ObjectCopy_TryCreateShallowCopyOfPublicProps_" data-uid="ETLBox.ObjectCopy.TryCreateShallowCopyOfPublicProps*"></a>
+  <h4 id="ETLBox_ObjectCopy_TryCreateShallowCopyOfPublicProps__2___0_" data-uid="ETLBox.ObjectCopy.TryCreateShallowCopyOfPublicProps``2(``0)">TryCreateShallowCopyOfPublicProps&lt;TIn, TOut&gt;(TIn)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static TOut TryCreateShallowCopyOfPublicProps<TIn, TOut>(TIn source) where TOut : class
 ```
 
 {{< rawhtml >}}

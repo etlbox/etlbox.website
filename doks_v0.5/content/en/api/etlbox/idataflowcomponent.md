@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10206
+weight: 10214
 toc: false
 ---
 
@@ -30,6 +30,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_DisableLogging">ILoggableTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_ParentTask">ILoggableTask.ParentTask</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iloggabletask#ETLBox_ILoggableTask_LogInstance">ILoggableTask.LogInstance</a>
     </div>
   </div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -132,7 +138,8 @@ in the data flow faulted, the thrown exception will be stored in this property.<
   </table>
   <a id="ETLBox_IDataFlowComponent_IsReadyForProcessing_" data-uid="ETLBox.IDataFlowComponent.IsReadyForProcessing*"></a>
   <h4 id="ETLBox_IDataFlowComponent_IsReadyForProcessing" data-uid="ETLBox.IDataFlowComponent.IsReadyForProcessing">IsReadyForProcessing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if a component was successfully initialized, linked and prepared for execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

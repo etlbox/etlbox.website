@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10178
+weight: 10186
 toc: false
 ---
 
@@ -179,6 +179,9 @@ toc: false
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="/api/etlbox.helper/exceptionextensions#ETLBox_Helper_ExceptionExtensions_DataTryAdd_System_Exception_System_String_System_Object_">ExceptionExtensions.DataTryAdd(Exception, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox.helper/exceptionextensions#ETLBox_Helper_ExceptionExtensions_DataTryGet_System_Exception_System_String_">ExceptionExtensions.DataTryGet(Exception, string)</a>
   </div>
 
 {{< /rawhtml >}}

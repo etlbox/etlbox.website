@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10114
+weight: 10121
 toc: false
 ---
 
@@ -45,10 +45,37 @@ toc: false
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogThreshold">LoggableTask.LogThreshold</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_CopyLogTaskProperties_ETLBox_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogInstance">LoggableTask.LogInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_ParentTask">LoggableTask.ParentTask</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogTrace_System_String_System_Object___">LoggableTask.LogTrace(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogDebug_System_String_System_Object___">LoggableTask.LogDebug(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogInfo_System_String_System_Object___">LoggableTask.LogInfo(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogInfoOrDebug_System_String_System_Object___">LoggableTask.LogInfoOrDebug(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogWarn_System_String_System_Object___">LoggableTask.LogWarn(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogError_System_String_System_Object___">LoggableTask.LogError(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/loggabletask#ETLBox_LoggableTask_LogFatal_System_String_System_Object___">LoggableTask.LogFatal(string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -84,32 +111,6 @@ toc: false
 {{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_ReadyForProcessing" data-uid="ETLBox.DataFlow.DataFlowComponent.ReadyForProcessing">ReadyForProcessing</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected bool ReadyForProcessing
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_WasComponentInitialized" data-uid="ETLBox.DataFlow.DataFlowComponent.WasComponentInitialized">WasComponentInitialized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -136,89 +137,12 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_WasLinked" data-uid="ETLBox.DataFlow.DataFlowComponent.WasLinked">WasLinked</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected Dictionary<DataFlowComponent, bool> WasLinked
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent__loggingThresholdRows" data-uid="ETLBox.DataFlow.DataFlowComponent._loggingThresholdRows">_loggingThresholdRows</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected int? _loggingThresholdRows
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent__maxBufferSize" data-uid="ETLBox.DataFlow.DataFlowComponent._maxBufferSize">_maxBufferSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected int? _maxBufferSize
-```
-
-{{< rawhtml >}}
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
 </h3>
   <a id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken_" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken">BufferCancellationToken</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A cancellation token that is linked with the underlying cancellation tokens of each buffers of a component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -331,7 +255,8 @@ in the data flow faulted, the thrown exception will be stored in this property.<
   </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_IsReadyForProcessing_" data-uid="ETLBox.DataFlow.DataFlowComponent.IsReadyForProcessing*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_IsReadyForProcessing" data-uid="ETLBox.DataFlow.DataFlowComponent.IsReadyForProcessing">IsReadyForProcessing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if a component was successfully initialized, linked and prepared for execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -352,35 +277,6 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_DataFlowComponent_LogThreshold_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogThreshold*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_LogThreshold" data-uid="ETLBox.DataFlow.DataFlowComponent.LogThreshold">LogThreshold</h4>
-  <div class="markdown level1 summary"><p>To avoid getting log message for every message, by default only log message are produced when 1000 rows
-are processed. Set this property to decrease or increase this value.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public virtual int? LogThreshold { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -439,6 +335,33 @@ The default value is -1 (unlimited)</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_OnException_" data-uid="ETLBox.DataFlow.DataFlowComponent.OnException*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_OnException" data-uid="ETLBox.DataFlow.DataFlowComponent.OnException">OnException</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Action<Exception, string> OnException { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -551,33 +474,6 @@ The default value is -1 (unlimited)</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_DataFlowComponent_ThresholdCount_" data-uid="ETLBox.DataFlow.DataFlowComponent.ThresholdCount*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_ThresholdCount" data-uid="ETLBox.DataFlow.DataFlowComponent.ThresholdCount">ThresholdCount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected int ThresholdCount { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -726,6 +622,18 @@ of each buffer</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter_" data-uid="ETLBox.DataFlow.DataFlowComponent.InitCheckedParameter*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter" data-uid="ETLBox.DataFlow.DataFlowComponent.InitCheckedParameter">InitCheckedParameter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected virtual void InitCheckedParameter()
+```
+
+{{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowComponent_InitComponent_" data-uid="ETLBox.DataFlow.DataFlowComponent.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_InitComponent" data-uid="ETLBox.DataFlow.DataFlowComponent.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
@@ -735,18 +643,6 @@ of each buffer</p>
 
 ```C#
     protected abstract void InitComponent()
-```
-
-{{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_InitParameter_" data-uid="ETLBox.DataFlow.DataFlowComponent.InitParameter*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_InitParameter" data-uid="ETLBox.DataFlow.DataFlowComponent.InitParameter">InitParameter()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected virtual void InitParameter()
 ```
 
 {{< rawhtml >}}
@@ -863,18 +759,6 @@ of each buffer</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively_" data-uid="ETLBox.DataFlow.DataFlowComponent.LinkBuffersRecursively*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively" data-uid="ETLBox.DataFlow.DataFlowComponent.LinkBuffersRecursively">LinkBuffersRecursively()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected void LinkBuffersRecursively()
-```
-
-{{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_AfterThrowOrRedirectError_System_Int32_" data-uid="ETLBox.DataFlow.DataFlowComponent.LogProgressBatch_AfterThrowOrRedirectError(System.Int32)">LogProgressBatch_AfterThrowOrRedirectError(int)</h4>
   <div class="markdown level1 summary"></div>
@@ -940,44 +824,44 @@ of each buffer</p>
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_PrepareParameter_" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameter*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_PrepareParameter" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameter">PrepareParameter()</h4>
+  <a id="ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameterForCheck*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.DataFlowComponent.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    protected virtual void PrepareParameter()
+    protected virtual void PrepareParameterForCheck()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_RunErrorSourceInit_" data-uid="ETLBox.DataFlow.DataFlowComponent.RunErrorSourceInit*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_RunErrorSourceInit" data-uid="ETLBox.DataFlow.DataFlowComponent.RunErrorSourceInit">RunErrorSourceInit()</h4>
+  <a id="ETLBox_DataFlow_DataFlowComponent_Reset_" data-uid="ETLBox.DataFlow.DataFlowComponent.Reset*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_Reset" data-uid="ETLBox.DataFlow.DataFlowComponent.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    protected void RunErrorSourceInit()
+    protected virtual void Reset()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_SetCompletionTask_" data-uid="ETLBox.DataFlow.DataFlowComponent.SetCompletionTask*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_SetCompletionTask" data-uid="ETLBox.DataFlow.DataFlowComponent.SetCompletionTask">SetCompletionTask()</h4>
+  <a id="ETLBox_DataFlow_DataFlowComponent_ResetComponent_" data-uid="ETLBox.DataFlow.DataFlowComponent.ResetComponent*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_ResetComponent" data-uid="ETLBox.DataFlow.DataFlowComponent.ResetComponent">ResetComponent()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    protected void SetCompletionTask()
+    public void ResetComponent()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_DataFlowComponent_SetParent_" data-uid="ETLBox.DataFlow.DataFlowComponent.SetParent*"></a>
-  <h4 id="ETLBox_DataFlow_DataFlowComponent_SetParent_ETLBox_DataFlow_DataFlowComponent_" data-uid="ETLBox.DataFlow.DataFlowComponent.SetParent(ETLBox.DataFlow.DataFlowComponent)">SetParent(DataFlowComponent)</h4>
+  <a id="ETLBox_DataFlow_DataFlowComponent_SetParentComponent_" data-uid="ETLBox.DataFlow.DataFlowComponent.SetParentComponent*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_" data-uid="ETLBox.DataFlow.DataFlowComponent.SetParentComponent(ETLBox.DataFlow.DataFlowComponent)">SetParentComponent(DataFlowComponent)</h4>
   <div class="markdown level1 summary"><p>Will set another component as a parent component - only needed for constructing subflow
 inside data flow components.</p>
 </div>
@@ -986,7 +870,7 @@ inside data flow components.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public void SetParent(DataFlowComponent parent)
+    public void SetParentComponent(DataFlowComponent parent)
 ```
 
 {{< rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10056
+weight: 10063
 toc: false
 ---
 
@@ -57,6 +57,40 @@ E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;sc
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
 </h3>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor__ctor_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.#ctor*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor__ctor_System_String_System_String_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.#ctor(System.String,System.String)">ObjectNameDescriptor(string, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor(string qb, string qe)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">qb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">qe</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_ObjectNameDescriptor__ctor_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.#ctor*"></a>
   <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor__ctor_System_String_System_String_System_String_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.#ctor(System.String,System.String,System.String)">ObjectNameDescriptor(string, string, string)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance and already parses the values. Right after initialization you can access the values in the properties.</p>
@@ -277,7 +311,7 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create &quot;schema&quot;</p>
   </table>
   <a id="ETLBox_ControlFlow_ObjectNameDescriptor_UnquotatedFullName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.UnquotatedFullName*"></a>
   <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_UnquotatedFullName" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.UnquotatedFullName">UnquotatedFullName</h4>
-  <div class="markdown level1 summary"><p>The whole name without any  quotation
+  <div class="markdown level1 summary"><p>The whole name without any quotation.
 E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema.ViewName</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -358,6 +392,140 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create schema</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor_ParseFromObjectName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.ParseFromObjectName*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_ParseFromObjectName_System_String_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.ParseFromObjectName(System.String)">ParseFromObjectName(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor ParseFromObjectName(string objectName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">objectName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor_SetObjectName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.SetObjectName*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_SetObjectName_System_String_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.SetObjectName(System.String)">SetObjectName(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor SetObjectName(string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor_SetSchemaName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.SetSchemaName*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_SetSchemaName_System_String_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.SetSchemaName(System.String)">SetSchemaName(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ObjectNameDescriptor SetSchemaName(string schemaName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">schemaName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>

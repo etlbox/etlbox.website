@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10189
+weight: 10197
 toc: false
 ---
 
@@ -264,8 +264,62 @@ E.g. DbType.Binary will return byte[]</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.String)">GetDBType(string)</h4>
+  <a id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_ETLBox_ConnectionType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(ETLBox.ConnectionType,System.Type)">GetDatabaseType(ConnectionType, Type)</h4>
+  <div class="markdown level1 summary"><p>Returns a database specific type for the provided .NET database type, depending on the connection
+manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static string GetDatabaseType(ConnectionType connectionType, Type clrType)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
+        <td><span class="parametername">connectionType</span></td>
+        <td><p>Database connection type, e.g. SqlServer</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">clrType</span></td>
+        <td><p>The .NET data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A database specific type string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_GetDbType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDbType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDbType_System_String_System_Boolean_" data-uid="ETLBox.Helper.DataTypeConverter.GetDbType(System.String,System.Boolean)">GetDbType(string, bool)</h4>
   <div class="markdown level1 summary"><p>Returns the ADO.NET System.Data.DbType object for a specific sql type.
 E.g. the method would return the System.Data.DbType.String for the sql type 'CHAR(10)'</p>
 </div>
@@ -274,7 +328,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
 {{< /rawhtml >}}
 
 ```C#
-    public static DbType? GetDBType(string dbSpecificTypeName)
+    public static DbType? GetDbType(string dbSpecificTypeName, bool isOdbcOrOleDb = false)
 ```
 
 {{< rawhtml >}}
@@ -292,6 +346,12 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">dbSpecificTypeName</span></td>
         <td><p>The sql specific data type name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">isOdbcOrOleDb</span></td>
+        <td><p>Indicates if the target connection is either an Odbc or OleDb connection</p>
 </td>
       </tr>
     </tbody>
@@ -312,15 +372,15 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.Type)">GetDBType(Type)</h4>
+  <a id="ETLBox_Helper_DataTypeConverter_GetDbType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDbType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_GetDbType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.GetDbType(System.Type)">GetDbType(Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static DbType GetDBType(Type clrType)
+    public static DbType GetDbType(Type clrType)
 ```
 
 {{< rawhtml >}}
@@ -353,60 +413,6 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_GetDatabaseType_System_Type_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDatabaseType(System.Type,ETLBox.ConnectionType)">GetDatabaseType(Type, ConnectionType)</h4>
-  <div class="markdown level1 summary"><p>Returns a database specific type for the provided .NET datat type, depending on the connection
-manager. E.g. passing the .NET data type long for SqlServer will return the string BIGINT</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static string GetDatabaseType(Type clrType, ConnectionType connectionType)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">clrType</span></td>
-        <td><p>The .NET data type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="/api/etlbox/connectiontype">ConnectionType</a></td>
-        <td><span class="parametername">connectionType</span></td>
-        <td><p>Database connection type, e.g. SqlServer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>A database specific type string</p>
-</td>
       </tr>
     </tbody>
   </table>
