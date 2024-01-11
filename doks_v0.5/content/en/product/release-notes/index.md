@@ -5,6 +5,26 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.2.0
+
+#### Features
+
+- Multicast now uses a deep clone instead of a shallow clone when broadcasting objects
+- Improved displayed debug information
+- Network class: Exposes ApplyToAllNodes method which let you run a custom action on each node
+- TableDefinition.FromCLRType creates a TableDefinition directly from a class
+- Improved logging output
+- ExcelDestination: if appending to an existing excel, if the specified SheetName does not exists, a new sheet is created
+- Networks are now allowed to be executed multiple times
+- DataFlowComponents now offer OnException delegate property which is invoked when an Exception occurs in a component
+
+#### Bug fixes
+
+- Fixed bug where global Settings.DisableAllLogging can't be overwritten by individual tasks
+- Fixed bug: CancellationTokenSource is now properly injected into the network when starting with Network.Execute\(\)
+- Fixed bug where schema name containing a dot was not properly parsed in SqlServer
+- Fixed issue where shared lookup sources threw an exception
+
 ## Version 3.1.0
 
 #### Features
