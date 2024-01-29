@@ -157,3 +157,8 @@ client.Disconnect();
 ## Conclusion
 
 Through this example, we've seen how ETLBox facilitates the construction of concise and readable ETL pipelines in C#, enabling developers to focus more on business logic and less on boilerplate code. Integrating with the SSH.NET library further extends ETLBox's capabilities, allowing secure and efficient handling of data over SFTP.
+
+### Code on Github
+
+The entire code for this example, along with additional resources and documentation, {{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/FromFilesToDatabases" >}}.
+
