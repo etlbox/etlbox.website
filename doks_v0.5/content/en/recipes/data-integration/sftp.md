@@ -13,11 +13,14 @@ toc: true
 
 ## Preqrequisites 
 
-This example requires the [ETLBox core package](https://www.nuget.org/packages/etlbox), and the [SSH.NET](https://www.nuget.org/packages/SSH.NET) package added to your code. 
+This example requires the [ETLBox core package](https://www.nuget.org/packages/etlbox), and the [SSH.NET](https://www.nuget.org/packages/SSH.NET) package added to your code. The example uses SSH.NET, but other libraries will offer similar functionalities. 
 
 ## Example Code Overview
 
 Let's have a look at the whole example code first. After this, we'll dive into the details of the example. 
+
+The example is very straightforward - it utilized a TextSource to read data from a simple text file (`readme.txt`). But it can be easily applied to all other ETLBox Streaming Connectors (e.g. JsonSource, XmlSource, TextSource, CsvSource, ...) - they all [offer you to pass an existing stream](https://www.etlbox.net/docs/stream-connectors/streaming/#pass-existing-stream) as a parameter.
+
 
 ```C#
 using ETLBox.DataFlow;
