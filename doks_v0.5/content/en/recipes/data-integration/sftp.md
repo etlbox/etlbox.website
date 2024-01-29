@@ -1,7 +1,7 @@
 ---
 title: "SFTP Example"
 description: "ETLBox and SFTP: A Practical Guide"
-lead: "In this article, we'll give you a practical example of combining ETLBox with the SSH.NET library in order to fectch data from an SFTP server. This scenario is particularly useful where files need to be securely transferred over a network before processing."
+lead: "In this article, we'll give you a practical example of combining ETLBox with the SSH.NET library in order to fetch data from an SFTP server. This scenario is particularly useful where files need to be securely transferred over a network before processing."
 draft: false
 images: []
 menu:
