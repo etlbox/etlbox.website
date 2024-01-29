@@ -19,9 +19,6 @@ This example requires the [ETLBox core package](https://www.nuget.org/packages/e
 
 Let's have a look at the whole example code first. After this, we'll dive into the details of the example. 
 
-The example is very straightforward - it utilized a TextSource to read data from a simple text file (`readme.txt`). But it can be easily applied to all other ETLBox Streaming Connectors (e.g. JsonSource, XmlSource, TextSource, CsvSource, ...) - they all [offer you to pass an existing stream](https://www.etlbox.net/docs/stream-connectors/streaming/#pass-existing-stream) as a parameter.
-
-
 ```C#
 using ETLBox.DataFlow;
 using Renci.SshNet;
@@ -65,6 +62,8 @@ public class FileData {
     public int RowNumber { get; set; }
 }
 ```
+
+The example is very straightforward - it utilizes a TextSource to read data from a simple text file (in this case a `readme.txt`). But the same approach can be easily transferred to all other ETLBox streaming connectors (e.g. JsonSource, XmlSource, TextSource, CsvSource, ...) - they all [offer you to pass an existing stream](https://www.etlbox.net/docs/stream-connectors/streaming/#pass-existing-stream) as a parameter.
 
 ## Example Code Output
 
