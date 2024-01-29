@@ -160,5 +160,5 @@ Through this example, we've seen how ETLBox facilitates the construction of conc
 
 ### Code on Github
 
-The entire code for this example, along with additional resources and documentation, {{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/FromFilesToDatabases" >}}.
+The entire code for this example, along with additional resources and documentation, {{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/SFTP" >}}.
 
