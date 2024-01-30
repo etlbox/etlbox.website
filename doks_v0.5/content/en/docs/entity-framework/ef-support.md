@@ -1,7 +1,7 @@
 ---
 title: "Extending DbContext"
-description: "How to extend your DbContext with bulk inserts"
-lead: "ETLBox offers support for Entity Framework. This article give you a brief overview how to use bulk operations with Entity Framework's DbContext."
+description: "Turbocharge Your Data Management with EFBox: The Game-Changer for Entity Framework"
+lead: "In the world of software development, managing and manipulating large volumes of data efficiently can often be a daunting task, especially when working with complex frameworks like Entity Framework. That's where EFBox comes into play, bridging the gap between ETLBox and Entity Framework, and bringing a suite of powerful bulk operations to your fingertips."
 draft: false
 images: []
 menu:
@@ -11,88 +11,33 @@ weight: 1010
 toc: true
 ---
 
-## Package information
+## Quick start 
 
-All currently available EntitiyFramework packages can be found on  {{< link-ext url="https://www.nuget.org/packages?q=entity+framework+etlbox" text="nuget.org" >}}. 
-As of today, there is only support for SqlServer currently implemented. Other databases will follow with the next versions. 
+Go directly to {{< link-ext text="www.efbox.net if you are ready to dive into the power of EntitiyFramework" url="https://www.efbox.net/" >}} with ETLBox!
 
-For SqlServer, you will need to reference the {{< link-ext url="https://www.nuget.org/packages/ETLBox.EntityFramework.SqlServer" text="SqlServer extension package" >}}. 
+## Why Embrace EFBox?
 
-## Bulk operations
+- **Performance Enhancement**: EFBox significantly boosts the performance of your Entity Framework operations. By extending your DbContext with bulk operations, it ensures rapid and smooth data processing, making it a crucial tool for high-load environments.
+  
+- **Efficient Data Handling**: With the ability to perform bulk insert, update, delete, and merge operations, EFBox stands out by allowing you to manage vast amounts of data with ease. Whether you're inserting thousands of records or updating a large dataset, EFBox does it swiftly and efficiently.
 
-### Bulk insert 
+- **Data Synchronization Made Easy**: The bulk merge feature is a standout, offering a seamless way to keep your datasets synchronized. This ensures data consistency across your application, eliminating the complexities usually associated with data sync tasks.
 
-Inserting all your data using high performant bulk operations is as simple as this:
- 
-```C#
-using (var db = new BloggingContext()) {
-    var data = CreateNewDataRows();
-    db.BulkInsert(data);
-}
-```
+- **Cost-Effective Solution**: One of the most appealing aspects of EFBox is its cost-effectiveness. It's free for the most common databases, which means you can leverage these powerful features without any financial burden.
 
-### Bulk update
+- **Broad Database Support**: EFBox caters to a wide range of developers by supporting popular databases like SQLServer, MySql, and Postgres. This inclusivity means that regardless of your database preference, EFBox has got you covered.
 
-Speed of updating big amounts of data can be massively improved using the bulk update operation. 
-Bulk updates are as simple. 
+## Real-World Applications
 
-```C#
-using (var db = new BloggingContext()) {
-    var data = GetUpdatedDataRows();
-    db.BulkUpdate(data);
-}
-```
+Imagine you're tasked with inserting a large batch of records into your database. With traditional Entity Framework methods, this could be time-consuming and resource-intensive. EFBox transforms this process with its **BulkInsert()** method, which is up to 3x faster than the conventional **SaveChanges()**. This efficiency is achieved by intelligently batching data, reducing roundtrips to the database.
 
-### Bulk deletes
+Moreover, EFBox's **BulkUpdate()** and **BulkDelete()** methods streamline data modification and removal, ensuring that your application remains responsive even under heavy data manipulation tasks.
 
-Sometimes, deleting data can become with very slow with EntityFramework. Bulk delete can help:
+## Getting Started with EFBox
 
-```C#
-using (var db = new BloggingContext()) {
-    var data = GetRowsToDelete();
-    db.BulkDelete(data);
-}
-```
+Kickstarting with EFBox is a breeze. Whether you're an SQL Server aficionado, a MySQL enthusiast, or a PostgreSQL fan, EFBox has tailored packages for each database. Installation is straightforward via the NuGet Package Manager, making it easy for you to integrate EFBox into your projects and start reaping the benefits immediately.
 
-### Bulk merge
+### Visit www.efbox.net for more details
 
-If you don't want to decide if you need to insert, update or delete your data, you can also use the BulkMerge:
-
-```C#
-using (var db = new BloggingContext()) {
-    var data = GetSetOfRows();
-    db.BulkMerge(data);
-}
-```
-
-The merge operation will automatically insert new data row, update existing or delete missing rows. 
-(Changing the MergeMode can also ignore deletions) 
-
-```db.BulkMerge(allBlogs, options => options.MergeMode = ETLBox.MergeMode.Delta);```
-
-#### Options
-
-There are different options available when using bulk operations.
-
-For example, you can prevent to reread auto generated values from the database, which can also improve the performance:
-
-```C#
-db.BulkInsert(data, options => options.ReadGeneratedValues = false);
-```
-
-Other options are: 
-
-- BatchSize: Sets the batch size for the bulk operations - default is 10000. Try to increase this value if you have only very few rows. 
-- ReadGeneratedValues: Reads auto generated values (e.g. default or computed columns) from the database after performing the bulk operation
-- BeforeBatchWrite: An action to execute before every batch 
-- AfterBatchWrite: An action to execute after every batch
-- ColumnConverters: Can be used to convert the column name 
-- AllowIdentityInsert: Allows overriding identity values 
-- OnProgress: Callback which is called after a batch was processed
-- RedirectErroneousBatches: Batches which contain flawed or Erroneous rows are redirected 
-- ErrorData: Flawed/Erroneous rows will be forwarded into this List 
-- MergeMode: Setting the merge mode when using BulkMerge. 
-
-
-
+{{< link-ext text="Discover More About EFBox and Its Transformative Capabilities." url="https://www.efbox.net/" >}}
 

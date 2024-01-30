@@ -113,6 +113,13 @@ the static method `FromTableName` on the `TableDefinition` class:
 TableDefinition.FromTableName(connectionManager, "demoTable");
 ```
 
+You can also directly pass a type of an object or class, and ETLBox will try it's best to create the best suitable TableDefinition for this object. 
+The returned TableDefinition will vary for different database types. 
+
+```C#
+TableDefinition td = TableDefinition.FromCLRType(ConnectionType.SqlServer, typeof(MyClass));
+```
+
 ### Views
 
 #### CreateViewTask
