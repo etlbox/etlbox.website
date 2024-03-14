@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.cosmosdb"
-weight: 10018
+weight: 10023
 toc: false
 ---
 

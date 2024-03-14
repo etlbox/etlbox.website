@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10193
+weight: 10199
 toc: false
 ---
 
@@ -664,6 +664,84 @@ toc: false
   </table>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_GenericTypeInfo_ConvertAndSetValueOrThrow_" data-uid="ETLBox.GenericTypeInfo.ConvertAndSetValueOrThrow*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_ConvertAndSetValueOrThrow_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.ConvertAndSetValueOrThrow(System.Reflection.PropertyInfo,System.Object,System.Object)">ConvertAndSetValueOrThrow(PropertyInfo, object, object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void ConvertAndSetValueOrThrow(PropertyInfo propInfo, object obj, object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a></td>
+        <td><span class="parametername">propInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_ConvertAndSetValueOrThrow_" data-uid="ETLBox.GenericTypeInfo.ConvertAndSetValueOrThrow*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_ConvertAndSetValueOrThrow_System_String_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.ConvertAndSetValueOrThrow(System.String,System.Object,System.Object)">ConvertAndSetValueOrThrow(string, object, object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public void ConvertAndSetValueOrThrow(string propName, object obj, object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">propName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_GenericTypeInfo_GatherTypeInfo_" data-uid="ETLBox.GenericTypeInfo.GatherTypeInfo*"></a>
   <h4 id="ETLBox_GenericTypeInfo_GatherTypeInfo_ETLBox_AttributeType_" data-uid="ETLBox.GenericTypeInfo.GatherTypeInfo(ETLBox.AttributeType)">GatherTypeInfo(AttributeType)</h4>
   <div class="markdown level1 summary"></div>
@@ -791,15 +869,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.GenericTypeInfo.SetValueOrThrow*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_SetValueOrThrow_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.SetValueOrThrow(System.Reflection.PropertyInfo,System.Object,System.Object)">SetValueOrThrow(PropertyInfo, object, object)</h4>
+  <a id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TryConvertAndSetValue(PropertyInfo, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void SetValueOrThrow(PropertyInfo propInfo, object obj, object value)
+    public void TryConvertAndSetValue(PropertyInfo propInfo, object obj, object value)
 ```
 
 {{< rawhtml >}}
@@ -830,93 +908,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_GenericTypeInfo_SetValueOrThrow_" data-uid="ETLBox.GenericTypeInfo.SetValueOrThrow*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_SetValueOrThrow_System_String_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.SetValueOrThrow(System.String,System.Object,System.Object)">SetValueOrThrow(string, object, object)</h4>
+  <a id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.String,System.Object,System.Object)">TryConvertAndSetValue(string, object, object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void SetValueOrThrow(string propName, object obj, object value)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">propName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.GenericTypeInfo.TrySetValue*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_TrySetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TrySetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TrySetValue(PropertyInfo, object, object)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public void TrySetValue(PropertyInfo propInfo, object obj, object value)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a></td>
-        <td><span class="parametername">propInfo</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_GenericTypeInfo_TrySetValue_" data-uid="ETLBox.GenericTypeInfo.TrySetValue*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_TrySetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TrySetValue(System.String,System.Object,System.Object)">TrySetValue(string, object, object)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public void TrySetValue(string propName, object obj, object value)
+    public void TryConvertAndSetValue(string propName, object obj, object value)
 ```
 
 {{< rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10316
+weight: 10323
 toc: false
 ---
 
@@ -44,6 +44,12 @@ toc: false
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_RootElementName">XmlDestination&lt;ExpandoObject&gt;.RootElementName</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_RootElementNamespace">XmlDestination&lt;ExpandoObject&gt;.RootElementNamespace</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_RootElementPrefix">XmlDestination&lt;ExpandoObject&gt;.RootElementPrefix</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_DynamicElementName">XmlDestination&lt;ExpandoObject&gt;.DynamicElementName</a>
     </div>
     <div>
@@ -63,6 +69,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_WriteIntoStream__0_">XmlDestination&lt;ExpandoObject&gt;.WriteIntoStream(ExpandoObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_SetDefaultNamespace_System_Xml_Linq_XElement_System_Xml_Linq_XNamespace_">XmlDestination&lt;ExpandoObject&gt;.SetDefaultNamespace(XElement, XNamespace)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_CloseStream">XmlDestination&lt;ExpandoObject&gt;.CloseStream()</a>
@@ -162,6 +171,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource">DataFlowComponent.BufferCancellationSource</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>

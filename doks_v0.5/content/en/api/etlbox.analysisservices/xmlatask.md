@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.analysisservices"
-weight: 10010
+weight: 10015
 toc: false
 ---
 
@@ -15,7 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.AnalysisServices.XmlaTask">
   <h1 id="ETLBox_AnalysisServices_XmlaTask" data-uid="ETLBox.AnalysisServices.XmlaTask" class="text-break">Class XmlaTask
 </h1>
-  <div class="markdown level0 summary"><p>This task can exeucte any XMLA.</p>
+  <div class="markdown level0 summary"><p>This task can execute any XMLA.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -188,7 +188,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_AnalysisServices_XmlaTask_examples"><strong>Examples</strong></h5>
-  <pre><code class="lang-csharp">XmlaTask.ExecuteNonQuery("Log description here","Xmla goes here...")</code></pre>
+  <pre><code class="lang-csharp">XmlaTask.ExecuteNonQuery("Xmla goes here...")</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_AnalysisServices_XmlaTask__ctor_" data-uid="ETLBox.AnalysisServices.XmlaTask.#ctor*"></a>

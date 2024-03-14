@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10319
+weight: 10326
 toc: false
 ---
 
@@ -178,6 +178,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource">DataFlowComponent.BufferCancellationSource</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>
@@ -456,9 +459,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   </table>
   <a id="ETLBox_Xml_XmlSource_1_CollectUnparsedData_" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_CollectUnparsedData" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData">CollectUnparsedData</h4>
-  <div class="markdown level1 summary"><p>Indicates if data not parsed should be stored in the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_UnparsedData">UnparsedData</a> property (also accessable
-via the current <a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a> object when using the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_GetNextUri">GetNextUri</a>/<a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_HasNextUri">HasNextUri</a>
-pattern).</p>
+  <div class="markdown level1 summary"><p>If set to true, the source will collect all xml data that
+is not parsed during the process and store it in the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData">UnparsedData</a>
+property. Default is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -514,15 +517,16 @@ pattern).</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Xml_XmlSource_1_ElementNameRetrievalFunc_" data-uid="ETLBox.Xml.XmlSource`1.ElementNameRetrievalFunc*"></a>
-  <h4 id="ETLBox_Xml_XmlSource_1_ElementNameRetrievalFunc" data-uid="ETLBox.Xml.XmlSource`1.ElementNameRetrievalFunc">ElementNameRetrievalFunc</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_Xml_XmlSource_1_Namespace_" data-uid="ETLBox.Xml.XmlSource`1.Namespace*"></a>
+  <h4 id="ETLBox_Xml_XmlSource_1_Namespace" data-uid="ETLBox.Xml.XmlSource`1.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>Optional: The namespace of the element which name is specified in <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">ElementName</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<StreamMetaData, string> ElementNameRetrievalFunc { get; set; }
+    public string Namespace { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -536,7 +540,35 @@ pattern).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Xml_XmlSource_1_RetrieveElementFunc_" data-uid="ETLBox.Xml.XmlSource`1.RetrieveElementFunc*"></a>
+  <h4 id="ETLBox_Xml_XmlSource_1_RetrieveElementFunc" data-uid="ETLBox.Xml.XmlSource`1.RetrieveElementFunc">RetrieveElementFunc</h4>
+  <div class="markdown level1 summary"><p>Instead of deifning</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<StreamMetaData, bool> RetrieveElementFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/streammetadata">StreamMetaData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

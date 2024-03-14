@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10320
+weight: 10327
 toc: false
 ---
 
@@ -54,10 +54,13 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">XmlSource&lt;ExpandoObject&gt;.ElementName</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_Namespace">XmlSource&lt;ExpandoObject&gt;.Namespace</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_CollectUnparsedData">XmlSource&lt;ExpandoObject&gt;.CollectUnparsedData</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementNameRetrievalFunc">XmlSource&lt;ExpandoObject&gt;.ElementNameRetrievalFunc</a>
+      <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_RetrieveElementFunc">XmlSource&lt;ExpandoObject&gt;.RetrieveElementFunc</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_AttributePrefixForDynamic">XmlSource&lt;ExpandoObject&gt;.AttributePrefixForDynamic</a>
@@ -211,6 +214,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource">DataFlowComponent.BufferCancellationSource</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>

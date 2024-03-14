@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10247
+weight: 10253
 toc: false
 ---
 
@@ -257,33 +257,6 @@ toc: false
 
 ```C#
     public string Source { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogEntry_Stage_" data-uid="ETLBox.Logging.LogEntry.Stage*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Stage" data-uid="ETLBox.Logging.LogEntry.Stage">Stage</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public string Stage { get; set; }
 ```
 
 {{< rawhtml >}}

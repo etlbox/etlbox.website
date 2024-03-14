@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10122
+weight: 10127
 toc: false
 ---
 
@@ -23,6 +23,7 @@ toc: false
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><span class="xref">DataFlowDestination&lt;TInput&gt;</span></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.analysis/dataframedestination-1">DataFrameDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/customdestination-1">CustomDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1">DataFlowStreamDestination&lt;TInput&gt;</a></div>
@@ -50,6 +51,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource">DataFlowComponent.BufferCancellationSource</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>

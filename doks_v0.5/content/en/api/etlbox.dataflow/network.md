@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10157
+weight: 10162
 toc: false
 ---
 
@@ -185,6 +185,33 @@ t.Wait();</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_IgnoreUnlinkedNodes_" data-uid="ETLBox.DataFlow.Network.IgnoreUnlinkedNodes*"></a>
+  <h4 id="ETLBox_DataFlow_Network_IgnoreUnlinkedNodes" data-uid="ETLBox.DataFlow.Network.IgnoreUnlinkedNodes">IgnoreUnlinkedNodes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IgnoreUnlinkedNodes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -678,6 +705,198 @@ Connected nodes will be automatically collected.</p>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
         <td><p>A new Network instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_ParallelExecute_" data-uid="ETLBox.DataFlow.Network.ParallelExecute*"></a>
+  <h4 id="ETLBox_DataFlow_Network_ParallelExecute_ETLBox_DataFlow_Network___" data-uid="ETLBox.DataFlow.Network.ParallelExecute(ETLBox.DataFlow.Network[])">ParallelExecute(params Network[])</h4>
+  <div class="markdown level1 summary"><p>Allows to execute multiple networks in parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Task ParallelExecute(params Network[] networks)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a>[]</td>
+        <td><span class="parametername">networks</span></td>
+        <td><p>Network that should run in parallel</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>An awaitable task that completes when all networks are execute successfully.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_PrintAsJson_" data-uid="ETLBox.DataFlow.Network.PrintAsJson*"></a>
+  <h4 id="ETLBox_DataFlow_Network_PrintAsJson" data-uid="ETLBox.DataFlow.Network.PrintAsJson">PrintAsJson()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string PrintAsJson()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_PrintAsJson_" data-uid="ETLBox.DataFlow.Network.PrintAsJson*"></a>
+  <h4 id="ETLBox_DataFlow_Network_PrintAsJson_System_Func_ETLBox_DataFlow_DataFlowComponent_System_Collections_Generic_Dictionary_System_String_System_Object___" data-uid="ETLBox.DataFlow.Network.PrintAsJson(System.Func{ETLBox.DataFlow.DataFlowComponent,System.Collections.Generic.Dictionary{System.String,System.Object}})">PrintAsJson(Func&lt;DataFlowComponent, Dictionary&lt;string, object&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Prints the network as a json string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string PrintAsJson(Func<DataFlowComponent, Dictionary<string, object>> propertyExtraction)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</td>
+        <td><span class="parametername">propertyExtraction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_PrintAsNodes_" data-uid="ETLBox.DataFlow.Network.PrintAsNodes*"></a>
+  <h4 id="ETLBox_DataFlow_Network_PrintAsNodes" data-uid="ETLBox.DataFlow.Network.PrintAsNodes">PrintAsNodes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public NetworkNode PrintAsNodes()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/networknode">NetworkNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_PrintAsNodes_" data-uid="ETLBox.DataFlow.Network.PrintAsNodes*"></a>
+  <h4 id="ETLBox_DataFlow_Network_PrintAsNodes_System_Func_ETLBox_DataFlow_DataFlowComponent_System_Collections_Generic_Dictionary_System_String_System_Object___" data-uid="ETLBox.DataFlow.Network.PrintAsNodes(System.Func{ETLBox.DataFlow.DataFlowComponent,System.Collections.Generic.Dictionary{System.String,System.Object}})">PrintAsNodes(Func&lt;DataFlowComponent, Dictionary&lt;string, object&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a representation of the network using NetworkNode objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public NetworkNode PrintAsNodes(Func<DataFlowComponent, Dictionary<string, object>> propertyExtraction)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</td>
+        <td><span class="parametername">propertyExtraction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/networknode">NetworkNode</a></td>
+        <td><p>The current network using NetworkNode objects</p>
 </td>
       </tr>
     </tbody>

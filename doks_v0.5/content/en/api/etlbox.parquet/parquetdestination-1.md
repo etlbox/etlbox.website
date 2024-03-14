@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10286
+weight: 10292
 toc: false
 ---
 
@@ -127,6 +127,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource">DataFlowComponent.BufferCancellationSource</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken">DataFlowComponent.BufferCancellationToken</a>
@@ -511,7 +514,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/42339e08d7520ef1301b27689e1d1c02d91b058e/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
+        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/d8febde144ae4f2424947caa90a625c4c9d7ab49/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
         <td></td>
       </tr>
     </tbody>

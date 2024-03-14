@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.lookuptransformation`2"
-weight: 10144
+weight: 10149
 toc: false
 ---
 

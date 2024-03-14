@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10121
+weight: 10126
 toc: false
 ---
 
@@ -139,6 +139,33 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource_" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationSource*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationSource" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationSource">BufferCancellationSource</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected CancellationTokenSource BufferCancellationSource { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken_" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_BufferCancellationToken" data-uid="ETLBox.DataFlow.DataFlowComponent.BufferCancellationToken">BufferCancellationToken</h4>
   <div class="markdown level1 summary"><p>A cancellation token that is linked with the underlying cancellation tokens of each buffers of a component.</p>

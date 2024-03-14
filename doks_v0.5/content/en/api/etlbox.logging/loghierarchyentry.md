@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10249
+weight: 10255
 toc: false
 ---
 
@@ -54,9 +54,6 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.logging/logentry#ETLBox_Logging_LogEntry_TaskHash">LogEntry.TaskHash</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.logging/logentry#ETLBox_Logging_LogEntry_Stage">LogEntry.Stage</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.logging/logentry#ETLBox_Logging_LogEntry_Source">LogEntry.Source</a>

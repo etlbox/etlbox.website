@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.json.jsonproperty2jsonpath"
-weight: 10239
+weight: 10245
 toc: false
 ---
 
