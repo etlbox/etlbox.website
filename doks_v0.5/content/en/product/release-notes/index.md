@@ -5,6 +5,21 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.3.0
+
+#### Features:
+- Added Network.ParallelExecute\(params Network\[\] networks\) to support parallel execution of disparate networks
+- Network: Added methods 'PrintAsJson' and 'PrintAsNodes' to support printing or visualizing a network
+- New connector: ETLBox.Analysis (connector to Microsoft.Analysis.DataFrame)
+- Updated 3rd party libraries
+- Network execution throws an exception when a network is started containing components that are not linked
+- XmlSource/XmlDestination: Improved support for namespaces
+
+#### Bug fixes:
+
+- Improved exception handling if Http Endpoint returns error code
+- Re-adding support for parsing column names from CTEs
+
 ## Version 3.2.0
 
 #### Features
