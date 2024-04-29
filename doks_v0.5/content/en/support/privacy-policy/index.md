@@ -10,7 +10,7 @@ images: []
 ETLBox Office is a company located and registered in Berlin, Germany.
 
 {{< nowrap-code >}}
-ETLBox Office Andreas Lennartz 
+ETLBoxperts GmbH
 Landsberger Str. 218
 12623 Berlin 
 Germany
