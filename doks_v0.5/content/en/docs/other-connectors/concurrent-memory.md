@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "other-connectors"
-weight: 530
+weight: 500
 toc: true
 ---
 
