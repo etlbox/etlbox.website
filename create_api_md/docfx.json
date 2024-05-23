@@ -33,6 +33,15 @@
           "files": [
             "**.csproj"
           ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.Apache.Kafka",
+          "properties": {
+            "TargetFramework": "netstandard2.0"
+          }
+        },
+        {
+          "files": [
+            "**.csproj"
+          ],
           "src": "..\\..\\..\\etlbox.source\\ETLBox.Azure.CosmosDb",
           "properties": {
             "TargetFramework": "netstandard2.0"
