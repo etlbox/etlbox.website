@@ -6,7 +6,7 @@ draft: false
 menu:
   recipes:
     parent: "other"
-weight: 2321
+weight: 2310
 toc: true
 ---
 
