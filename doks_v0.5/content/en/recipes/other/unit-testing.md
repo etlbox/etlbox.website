@@ -1,7 +1,7 @@
 ---
 title: "Unit testing"
 description: "This example shows how unit tests could be constructed for data flow."
-lead: "This recipe demonstrate how unit tests could be written to test data flows. The described approach here is very basic and should only be considered as a starting point - there are a lot of different possibilities to write unit tests for ETLBox - as the library is written in .NET, all test framework and other test packages are fully supported."
+lead: "This recipe demonstrate how unit tests could be written to test data flows. The described approaches should only be considered as a starting point - there are a lot of different possibilities to write unit tests for ETLBox - as the library is written in .NET, all test framework and other test packages are fully supported."
 draft: false
 menu:
   recipes:
@@ -10,14 +10,11 @@ weight: 2311
 toc: true
 ---
 
-## Simple unit tests with xunit
+## Unit test injecting source data
 
 ```C#
-namespace ETLBoxTests.DataFlowTests
-{
-    [Collection("DataFlow")]
-    public class UnitTestsSimpleExample
-    {
+namespace ETLBoxTests.DataFlow {
+    public class UnitTestsInjectDifferentSourceData {
 
         [Fact]
         public void RowTransformerTest() {
@@ -58,16 +55,13 @@ namespace ETLBoxTests.DataFlowTests
     }
 }
 
-namespace ETLBox.DataFlowTests.Demo
-{
-    public class DataTransferObject
-    {
+namespace ETLBox.DataFlowTests.Demo {
+    public class DataTransferObject {
         public int Id { get; set; }
         public string Value { get; set; }
     }
 
-    public class NetworkRunner
-    {
+    public class NetworkRunner {
         public ICollection<DataTransferObject> SourceData { get; private set; }
         public ICollection<DataTransferObject> Result => Destination?.Data;
         public Network Flow { get; set; }
@@ -92,16 +86,14 @@ namespace ETLBox.DataFlowTests.Demo
         }
     }
 
-    public class RowTransformer
-    {
+    public class RowTransformer {
         public DataTransferObject ChangeRow(DataTransferObject dto) {
             dto.Value = "Adjusted Row (" + dto.Value + ")";
             return dto;
         }
     }
 
-    public static class App
-    {
+    public static class App {
         public static int Start(string[] args) {
             NetworkRunner runner = new NetworkRunner();
             var prodData = new List<DataTransferObject>() {
@@ -113,6 +105,199 @@ namespace ETLBox.DataFlowTests.Demo
         }
     }
 }
+
+```
+
+## Unit tests replacing source and destination
+
+```C#
+namespace ETLBoxTests.DataFlow
+{
+    public class UnitTestsReplacingSourceAndDestinationExample {
+
+        [Fact]
+        public void RunTestReplacingSourceAndDestination() {
+            //Arrange
+            NetworkRunner runner = new NetworkRunner();
+            var newSource = new MemorySource<DataTransferObject>();
+            newSource.Data = new List<DataTransferObject>() {
+                new DataTransferObject() { Id = 1, Value = "Test1" },
+                new DataTransferObject() { Id = 2, Value = "Test2" },
+                new DataTransferObject() { Id = 3, Value = "Test3" }
+            };
+            var newDestination = new MemoryDestination<DataTransferObject>();
+
+            runner.SetupDataFlow();
+            runner.Source = newSource;
+            runner.Destination = newDestination;
+
+            //Act
+            runner.ExecuteFlow();
+
+            //Assert
+            Assert.Equal(3, newDestination.Data.Count);
+        }
+    }
+}
+
+namespace ETLBox.DataFlowTests.ReplacingSourceAndDestinationExample
+{
+    public class DataTransferObject
+    {
+        public int Id { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class NetworkRunner
+    {
+        public IDataFlowExecutableSource<DataTransferObject> Source;
+        public IDataFlowDestination<DataTransferObject> Destination;
+        public IDataFlowTransformation<DataTransferObject, DataTransferObject> Transformation;
+
+        public void SetupDataFlow() {
+            var dbSource = new DbSource<DataTransferObject>();
+                dbSource.TableName = "SourceTable";
+            Source = dbSource;
+            
+            var dbDest = new DbDestination<DataTransferObject>();
+            dbDest.TableName = "DestTable";
+            Destination = dbDest;
+
+            var trans = new RowTransformation<DataTransferObject>();
+            trans.TransformationFunc = ChangeRow;
+            Transformation = trans;           
+
+            
+        }
+
+        private DataTransferObject ChangeRow(DataTransferObject dto) {
+            dto.Value = "Adjusted Row (" + dto.Value + ")";
+            return dto;
+        }
+
+        public void ExecuteFlow() {
+            Source.LinkTo(Transformation).LinkTo(Destination);
+            Network.Execute(Source);
+        }
+    }
+
+    public static class App
+    {
+        public static int Start(string[] args) {
+            NetworkRunner runner = new NetworkRunner();
+            runner.SetupDataFlow();
+            runner.ExecuteFlow();
+            return 1;
+        }
+    }
+}
+```
+
+## Unit tests using Moq for Source
+
+```C#
+namespace ETLBoxTests.DataFlow
+{
+    public class UnitTestsUsingMoqForSource {
+
+        [Fact]
+        public void RunTestUsingMoq() {
+            //Arrange
+            NetworkRunner runner = new NetworkRunner();
+            var newSource = new MemorySource<DataTransferObject>();
+            newSource.Data = new List<DataTransferObject>() {
+                new DataTransferObject() { Id = 1, Value = "Test1" },
+                new DataTransferObject() { Id = 2, Value = "Test2" },
+                new DataTransferObject() { Id = 3, Value = "Test3" }
+            };
+            
+
+            //Setting up moq source
+            var moqSource = new Mock<IDataFlowExecutableSource<DataTransferObject>>();
+            newSource.InitBufferObjects();
+            moqSource
+                .Setup(s => s.SourceBlock)
+                .Returns(newSource.SourceBlock);
+            moqSource
+                .Setup(s => s.ExecuteAsync())
+                .Callback(() => newSource.ExecuteAsync());
+            moqSource
+                .Setup(s => s.LinkTo(It.IsAny<IDataFlowDestination<DataTransferObject>>()))
+                .Callback<IDataFlowDestination<DataTransferObject>>(d => newSource.LinkTo(d));
+
+            //Use moq with transformation and destinations is currently not supported!
+            //Use the interfaces instead
+            runner.SetupDataFlow();
+
+            var newDestination = new MemoryDestination<DataTransferObject>();
+
+            //Injecting moq objects
+            runner.Source = moqSource.Object;
+            runner.Destination = newDestination;
+
+            //Act
+            runner.ExecuteFlow();
+
+            //Assert
+            Assert.Equal(3, newDestination.Data.Count);
+        }
+    }
+}
+
+namespace ETLBox.DataFlowTests.MoqDemo
+{
+    public class DataTransferObject
+    {
+        public int Id { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class NetworkRunner
+    {
+        public IDataFlowExecutableSource<DataTransferObject> Source;
+        public IDataFlowDestination<DataTransferObject> Destination;
+        public IDataFlowTransformation<DataTransferObject, DataTransferObject> Transformation;
+
+        public void SetupDataFlow() {
+            var dbSource = new DbSource<DataTransferObject>();
+                dbSource.TableName = "SourceTable";
+            Source = dbSource;
+            
+            var dbDest = new DbDestination<DataTransferObject>();
+            dbDest.TableName = "DestTable";
+            Destination = dbDest;
+
+            var trans = new RowTransformation<DataTransferObject>();
+            trans.TransformationFunc = ChangeRow;
+            Transformation = trans;           
+
+            
+        }
+
+        private DataTransferObject ChangeRow(DataTransferObject dto) {
+            dto.Value = "Adjusted Row (" + dto.Value + ")";
+            return dto;
+        }
+
+        public void ExecuteFlow() {
+            Source.LinkTo(Transformation);
+            Transformation.LinkTo(Destination);
+            //Do not use mocked components here, they won't be recognized by the network!
+            Network.Execute(Transformation);
+        }
+    }
+
+    public static class App
+    {
+        public static int Start(string[] args) {
+            NetworkRunner runner = new NetworkRunner();
+            runner.SetupDataFlow();
+            runner.ExecuteFlow();
+            return 1;
+        }
+    }
+}
+
 ```
 
 ## Recommended supporting libraries

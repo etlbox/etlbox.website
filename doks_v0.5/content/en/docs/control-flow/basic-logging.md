@@ -23,18 +23,20 @@ All logging messages of ETLBox are structured. Depending on your logging framewo
 
 Each message has the following values within its scope:
 
-- The name of the component: `taskName`
+- The (resolved) name of the component: `taskName`
 - The class name of the task or component that produces the log output: `taskType`
 - The unique hash value of the specific task or component: `taskHash`
 
-Some components in ETLBox may utilize other ETLBox components during execution. E.g. the DbMerge will use an internal network, which contains a LookupTransformation, and multiple DbDestinations. These components will produce the log output for the DbMerge. 
+By default, the name of a task is the class name. All data flow component and control flow tasks have a `TaskName` property - once this property is set to a custom name, this will be used instead. 
 
-To identify the parent to which the component belongs, the scope is extended with:
-- The name of the Root/Parent component: `rootTaskName`
-- The task type of the Root/Parent: `rootTaskType`
-- The unique hash value of the Root/Parent: `rootTaskHash`
+Some components in ETLBox may utilize other ETLBox components during execution. E.g. the DbMerge will use an internal network, which contains a LookupTransformation, and multiple DbDestinations. These components will produce also produce log output when execute within the context of the DbMerge. The TaskName send to the logger does reflect this parent-child relationship. E.g. the Lookup inside the DbMerge will have the `taskName`: `Lookup < DbMerge`. 
 
-Some messages contain the following even items: 
+To identify only information about top parent to which the component belongs, the scope is extended with:
+- The name of the root/parent component: `rootTaskName`
+- The task type of the root/parent: `rootTaskType`
+- The unique hash value of the root/parent: `rootTaskHash`
+
+Some messages may also contain the following event items: 
 - Action of the message. Action can be 'START' for first log message or 'END' (component finished), other log messages don't have an action: `action`
 - Some messages log the current progress and have a progress count value: `progressCount`
 
@@ -197,3 +199,25 @@ If you need to debug Nlog, you can change the nlog root-element of the nlog.conf
 ```
 
 With this configuration it will raise an exception and also log it into a file.
+
+## Example logging with Serilog
+
+The following example shows how Serilog can be added to a Console application. This approach will be different e.g. for an ASP.NET application. 
+
+Make sure to add `Serilog.Extensions.Logging` and `Serilog.Extensions.Hosting` to your program, and the sink that you want to log (e.g. Console).
+
+Now you could configure your logger like this: 
+
+```C#
+var serilogLogger = new LoggerConfiguration()
+    .Enrich.FromLogContext()    
+    .MinimumLevel.Debug()
+    .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3} {taskName}] {Message:lj}"+Environment.NewLine)
+    .CreateLogger();
+
+Settings.LogInstance = new SerilogLoggerFactory(serilogLogger).CreateLogger("Default");
+```
+
+The following additional variables are available when configuring your output template:
+
+`{taskType}`, `{taskHash}`, `{taskName}`, `{rootTaskType}`, `{rootTaskHash}`, `{rootTaskName}`, `{action}`, `{progressCount}`
