@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10278
+weight: 10290
 toc: false
 ---
 
@@ -256,6 +256,9 @@ Reduce the batch size if you encounter issues here.</p>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -359,40 +362,6 @@ Reduce the batch size if you encounter issues here.</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-</h3>
-  <a id="ETLBox_Odbc_MariaDbOdbcConnectionManager_SupportSchemas_" data-uid="ETLBox.Odbc.MariaDbOdbcConnectionManager.SupportSchemas*"></a>
-  <h4 id="ETLBox_Odbc_MariaDbOdbcConnectionManager_SupportSchemas" data-uid="ETLBox.Odbc.MariaDbOdbcConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override bool SupportSchemas { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Odbc_MariaDbOdbcConnectionManager_Clone_" data-uid="ETLBox.Odbc.MariaDbOdbcConnectionManager.Clone*"></a>

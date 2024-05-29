@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10104
+weight: 10111
 toc: false
 ---
 
@@ -52,7 +52,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/cachedrowtransformation-3#ETLBox_DataFlow_CachedRowTransformation_3_MaxCacheSize">CachedRowTransformation&lt;TInput, TInput, TInput&gt;.MaxCacheSize</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/cachedrowtransformation-3#ETLBox_DataFlow_CachedRowTransformation_3_FillCacheAfterTranformation">CachedRowTransformation&lt;TInput, TInput, TInput&gt;.FillCacheAfterTranformation</a>
+      <a class="xref" href="/api/etlbox.dataflow/cachedrowtransformation-3#ETLBox_DataFlow_CachedRowTransformation_3_FillCacheAfterTransformation">CachedRowTransformation&lt;TInput, TInput, TInput&gt;.FillCacheAfterTransformation</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/cachedrowtransformation-3#ETLBox_DataFlow_CachedRowTransformation_3_Reset">CachedRowTransformation&lt;TInput, TInput, TInput&gt;.Reset()</a>
@@ -127,9 +127,6 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
@@ -157,6 +154,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParentComponent(DataFlowComponent)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
@@ -179,6 +179,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -338,14 +341,14 @@ toc: false
 
 {{< rawhtml >}}
   <a id="ETLBox_DataFlow_CachedRowTransformation_1__ctor_" data-uid="ETLBox.DataFlow.CachedRowTransformation`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_CachedRowTransformation_1__ctor_System_Func__0_System_Collections_Generic_IEnumerable__0___0__" data-uid="ETLBox.DataFlow.CachedRowTransformation`1.#ctor(System.Func{`0,System.Collections.Generic.IEnumerable{`0},`0})">CachedRowTransformation(Func&lt;TInput, IEnumerable&lt;TInput&gt;, TInput&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_CachedRowTransformation_1__ctor_System_Func__0_ETLBox_DataFlow_CachedData__0___0__" data-uid="ETLBox.DataFlow.CachedRowTransformation`1.#ctor(System.Func{`0,ETLBox.DataFlow.CachedData{`0},`0})">CachedRowTransformation(Func&lt;TInput, CachedData&lt;TInput&gt;, TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public CachedRowTransformation(Func<TInput, IEnumerable<TInput>, TInput> rowTransformationFunc)
+    public CachedRowTransformation(Func<TInput, CachedData<TInput>, TInput> transformationFunc)
 ```
 
 {{< rawhtml >}}
@@ -360,8 +363,8 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TInput&gt;, TInput&gt;</td>
-        <td><span class="parametername">rowTransformationFunc</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TInput&gt;, TInput&gt;</td>
+        <td><span class="parametername">transformationFunc</span></td>
         <td></td>
       </tr>
     </tbody>

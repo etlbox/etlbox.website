@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.lookuptransformation`2"
-weight: 10149
+weight: 10161
 toc: false
 ---
 
@@ -59,17 +59,17 @@ toc: false
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_ClearCache_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.ClearCache*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_ClearCache" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.ClearCache">ClearCache</h4>
-  <div class="markdown level1 summary"><p>Default is true. The lookup cache is cleared after every batch
-of incoming data.</p>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_EvictionPolicy_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.EvictionPolicy*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_EvictionPolicy" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.EvictionPolicy">EvictionPolicy</h4>
+  <div class="markdown level1 summary"><p>The eviction policy used for the partial cache.
+By default, the cache is fully refreshed for every batch.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool ClearCache { get; set; }
+    public CacheEvictionPolicy EvictionPolicy { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -83,7 +83,7 @@ of incoming data.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy">CacheEvictionPolicy</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -145,8 +145,36 @@ Define here the number of rows for every batch.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_SqlParameter_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.SqlParameter*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_SqlParameter" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.SqlParameter">SqlParameter</h4>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_MaxCacheSize_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.MaxCacheSize*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_MaxCacheSize" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.MaxCacheSize">MaxCacheSize</h4>
+  <div class="markdown level1 summary"><p>Defines the max amount of rows stored in the partial cache if the eviction policy is set to a different value than <a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy#ETLBox_DataFlow_CacheEvictionPolicy_FullRefresh">FullRefresh</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int MaxCacheSize { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_SqlParameterSelector_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.SqlParameterSelector*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings_SqlParameterSelector" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings.SqlParameterSelector">SqlParameterSelector</h4>
   <div class="markdown level1 summary"><p>List of query parameters that are used to replace values in <a class="xref" href="/api/etlbox.dataflow.lookuptransformation-2/partialdbcachesettings">LoadCacheSql</a>
 For every parameter provided, your sql statement should contain a placeholder.
 E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1'</p>
@@ -156,7 +184,7 @@ E.g.: 'SELECT col1 FROM table WHERE col2 &gt; @parameter1'</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<TInput[], QueryParameter[]> SqlParameter { get; set; }
+    public Func<TInput[], QueryParameter[]> SqlParameterSelector { get; set; }
 ```
 
 {{< rawhtml >}}

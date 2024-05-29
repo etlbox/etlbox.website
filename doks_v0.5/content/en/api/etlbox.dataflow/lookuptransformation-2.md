@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10148
+weight: 10160
 toc: false
 ---
 
@@ -103,6 +103,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -244,26 +247,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="ETLBox_DataFlow_LookupTransformation_2_examples"><strong>Examples</strong></h5>
-  <pre><code class="lang-csharp">public class Order
-{    
-    public int OrderNumber { get; set; }
-    public int CustomerId { get; set; }
-    public string CustomerName { get; set; }
-}
-public class Customer
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
-DbSource&lt;Order&gt; orderSource = new DbSource&lt;Order&gt;("OrderData");
-CsvSource&lt;Customer&gt; lookupSource = new CsvSource&lt;Customer&gt;("CustomerData.csv");
-var lookup = new LookupTransformation&lt;Order, Customer&gt;();
-lookup.Source = lookupSource;
-DbDestination&lt;Order&gt; dest = new DbDestination&lt;Order&gt;("OrderWithCustomerTable");
-source.LinkTo(lookup).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor*"></a>
@@ -309,14 +292,14 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2__ctor_ETLBox_IDataFlowExecutableSource__1__System_Func__0_System_Collections_Generic_IEnumerable__1___0__" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor(ETLBox.IDataFlowExecutableSource{`1},System.Func{`0,System.Collections.Generic.IEnumerable{`1},`0})">LookupTransformation(IDataFlowExecutableSource&lt;TSource&gt;, Func&lt;TInput, IEnumerable&lt;TSource&gt;, TInput&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2__ctor_ETLBox_IDataFlowExecutableSource__1__System_Func__0_ETLBox_DataFlow_CachedData__1___0__" data-uid="ETLBox.DataFlow.LookupTransformation`2.#ctor(ETLBox.IDataFlowExecutableSource{`1},System.Func{`0,ETLBox.DataFlow.CachedData{`1},`0})">LookupTransformation(IDataFlowExecutableSource&lt;TSource&gt;, Func&lt;TInput, CachedData&lt;TSource&gt;, TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public LookupTransformation(IDataFlowExecutableSource<TSource> source, Func<TInput, IEnumerable<TSource>, TInput> retrievalFunc)
+    public LookupTransformation(IDataFlowExecutableSource<TSource> source, Func<TInput, CachedData<TSource>, TInput> applyRetrievedCacheToInput)
 ```
 
 {{< rawhtml >}}
@@ -337,24 +320,28 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput&gt;</td>
-        <td><span class="parametername">retrievalFunc</span></td>
-        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc">RetrievalFunc</a></p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TSource&gt;, TInput&gt;</td>
+        <td><span class="parametername">applyRetrievedCacheToInput</span></td>
+        <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput">ApplyRetrievedCacheToInput</a> function.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_AllowMultipleRows_" data-uid="ETLBox.DataFlow.LookupTransformation`2.AllowMultipleRows*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_AllowMultipleRows" data-uid="ETLBox.DataFlow.LookupTransformation`2.AllowMultipleRows">AllowMultipleRows</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheForMultipleOutputs_" data-uid="ETLBox.DataFlow.LookupTransformation`2.ApplyRetrievedCacheForMultipleOutputs*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheForMultipleOutputs" data-uid="ETLBox.DataFlow.LookupTransformation`2.ApplyRetrievedCacheForMultipleOutputs">ApplyRetrievedCacheForMultipleOutputs</h4>
+  <div class="markdown level1 summary"><p>This function describes how the ingoing data can be enriched with the already pre-read data from
+the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a>, but can return multiple rows for every input row. This is necessary
+if <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_PermitMultipleEntriesPerKey">PermitMultipleEntriesPerKey</a> is set to true, which allows the cache lookup to load
+multiple rows for every key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool AllowMultipleRows { get; set; }
+    public Func<TInput, CachedData<TSource>, TInput[]> ApplyRetrievedCacheForMultipleOutputs { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -368,7 +355,36 @@ source.LinkTo(lookup).LinkTo(dest);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TSource&gt;, TInput[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput_" data-uid="ETLBox.DataFlow.LookupTransformation`2.ApplyRetrievedCacheToInput*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput" data-uid="ETLBox.DataFlow.LookupTransformation`2.ApplyRetrievedCacheToInput">ApplyRetrievedCacheToInput</h4>
+  <div class="markdown level1 summary"><p>This function describes how the ingoing data can be enriched with the already pre-read data from
+the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, CachedData<TSource>, TInput> ApplyRetrievedCacheToInput { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TSource&gt;, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,19 +419,45 @@ records arrives at the lookup.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_GetInputRecordKeyFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.GetInputRecordKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_GetInputRecordKeyFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.GetInputRecordKeyFunc">GetInputRecordKeyFunc</h4>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_CachedBatchTransformation_" data-uid="ETLBox.DataFlow.LookupTransformation`2.CachedBatchTransformation*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_CachedBatchTransformation" data-uid="ETLBox.DataFlow.LookupTransformation`2.CachedBatchTransformation">CachedBatchTransformation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CachedBatchTransformation<TInput, TInput, TSource> CachedBatchTransformation { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3">CachedBatchTransformation</a>&lt;TInput, TInput, TSource&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_InputKeySelector_" data-uid="ETLBox.DataFlow.LookupTransformation`2.InputKeySelector*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_InputKeySelector" data-uid="ETLBox.DataFlow.LookupTransformation`2.InputKeySelector">InputKeySelector</h4>
   <div class="markdown level1 summary"><p>This function describe how the key is generated for an ingoing row.
-If the result of this function match with <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_GetSourceRecordKeyFunc">GetSourceRecordKeyFunc</a>,
-both records can be identified as a match.
-This function is only need when <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_CacheMode">CacheMode</a> is set to <a class="xref" href="/api/etlbox/cachemode#ETLBox_CacheMode_Partial">Partial</a>.</p>
+If the result of this function match with <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_SourceKeySelector">SourceKeySelector</a>,
+both records can be identified as a match.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<TInput, object> GetInputRecordKeyFunc { get; set; }
+    public Func<TInput, object> InputKeySelector { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -430,35 +472,6 @@ This function is only need when <a class="xref" href="/api/etlbox.dataflow/looku
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_GetSourceRecordKeyFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.GetSourceRecordKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_GetSourceRecordKeyFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.GetSourceRecordKeyFunc">GetSourceRecordKeyFunc</h4>
-  <div class="markdown level1 summary"><p>This function describe how the key is generated for a row from the lookup source.
-This key is used to store the data in the lookup dictionary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TSource, object> GetSourceRecordKeyFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -487,6 +500,36 @@ This key is used to store the data in the lookup dictionary.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/matchcolumn">MatchColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_OnNoMatchFound_" data-uid="ETLBox.DataFlow.LookupTransformation`2.OnNoMatchFound*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_OnNoMatchFound" data-uid="ETLBox.DataFlow.LookupTransformation`2.OnNoMatchFound">OnNoMatchFound</h4>
+  <div class="markdown level1 summary"><p>Specifies the function to be invoked when a lookup operation fails to find a matching key in the source.
+Will only be invoked if <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput">ApplyRetrievedCacheToInput</a> or <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheForMultipleOutputs">ApplyRetrievedCacheForMultipleOutputs</a> is not set!
+This action contains the current input row and the lookup key for which no match was found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Action<TInput, object> OnNoMatchFound { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -520,6 +563,35 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_PermitMultipleEntriesPerKey_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PermitMultipleEntriesPerKey*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_PermitMultipleEntriesPerKey" data-uid="ETLBox.DataFlow.LookupTransformation`2.PermitMultipleEntriesPerKey">PermitMultipleEntriesPerKey</h4>
+  <div class="markdown level1 summary"><p>If set to true, multiple entries can be loaded into the cache for every key.
+Otherwise, only the first occurence will be loaded into the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool PermitMultipleEntriesPerKey { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_LookupTransformation_2_ProgressCount_" data-uid="ETLBox.DataFlow.LookupTransformation`2.ProgressCount*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_ProgressCount" data-uid="ETLBox.DataFlow.LookupTransformation`2.ProgressCount">ProgressCount</h4>
   <div class="markdown level1 summary"></div>
@@ -543,68 +615,6 @@ This will only work if you use a <a class="xref" href="/api/etlbox.dataflow/dbso
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_RetrievalByKeyFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalByKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrievalByKeyFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalByKeyFunc">RetrievalByKeyFunc</h4>
-  <div class="markdown level1 summary"><p>The retrieval function that describes how the ingoing data can be enriched with the already pre-read data from</p>
-<ul>
-<li>this one returns not only a list, but a dictionary that provides faster access to the data. The dictionary
-key is created with the GetSourceKeyFunc.
-the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a>.</li>
-</ul>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TInput, IDictionary<object, TSource>, TInput> RetrievalByKeyFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, TSource&gt;, TInput&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrievalFunc">RetrievalFunc</h4>
-  <div class="markdown level1 summary"><p>The retrieval function that describes how the ingoing data can be enriched with the already pre-read data from
-the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">Source</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TInput, IEnumerable<TSource>, TInput> RetrievalFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -633,60 +643,6 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/retrievecolumn">RetrieveColumn</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsByKeyFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsByKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsByKeyFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsByKeyFunc">RetrieveMultipleRowsByKeyFunc</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TInput, IDictionary<object, IList<TSource>>, TInput[]> RetrieveMultipleRowsByKeyFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TSource&gt;&gt;, TInput[]&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc_" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsFunc*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc" data-uid="ETLBox.DataFlow.LookupTransformation`2.RetrieveMultipleRowsFunc">RetrieveMultipleRowsFunc</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TInput, IEnumerable<TSource>, TInput[]> RetrieveMultipleRowsFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;, TInput[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -749,16 +705,17 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_SourceRecords_" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecords*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_SourceRecords" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecords">SourceRecords</h4>
-  <div class="markdown level1 summary"><p>Holds the data read from the lookup source. This data is used to find data that is missing in the incoming rows.</p>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_SourceKeySelector_" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceKeySelector*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_SourceKeySelector" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceKeySelector">SourceKeySelector</h4>
+  <div class="markdown level1 summary"><p>This function describe how the key is generated for a row from the lookup source.
+This key is used to store the data in the lookup dictionary.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public IEnumerable<TSource> SourceRecords { get; }
+    public Func<TSource, object> SourceKeySelector { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -772,36 +729,7 @@ the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_Dat
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_LookupTransformation_2_SourceRecordsByKey_" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecordsByKey*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation_2_SourceRecordsByKey" data-uid="ETLBox.DataFlow.LookupTransformation`2.SourceRecordsByKey">SourceRecordsByKey</h4>
-  <div class="markdown level1 summary"><p>Holds a dictionary containing data from the lookup spurce.
-The dictionary key is generated using the <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_GetSourceRecordKeyFunc">GetSourceRecordKeyFunc</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public IDictionary<object, TSource> SourceRecordsByKey { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, TSource&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -989,7 +917,7 @@ If you use the error linking, any erroneous records will be caught and redirecte
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
   <a id="ETLBox_DataFlow_LookupTransformation_2_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.LookupTransformation`2.PrepareParameterForCheck*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.LookupTransformation`2.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
   <div class="markdown level1 summary"></div>

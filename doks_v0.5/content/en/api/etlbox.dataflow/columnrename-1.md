@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10109
+weight: 10117
 toc: false
 ---
 
@@ -104,6 +104,9 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -557,7 +560,7 @@ If you use the error linking, any erroneous records will be caught and redirecte
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
   <a id="ETLBox_DataFlow_ColumnRename_1_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.ColumnRename`1.PrepareParameterForCheck*"></a>
   <h4 id="ETLBox_DataFlow_ColumnRename_1_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.ColumnRename`1.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
   <div class="markdown level1 summary"></div>

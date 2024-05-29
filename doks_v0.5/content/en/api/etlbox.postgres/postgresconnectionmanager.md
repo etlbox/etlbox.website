@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.postgres"
-weight: 10296
+weight: 10309
 toc: false
 ---
 
@@ -217,6 +217,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;NpgsqlConnection, NpgsqlTransaction, NpgsqlParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

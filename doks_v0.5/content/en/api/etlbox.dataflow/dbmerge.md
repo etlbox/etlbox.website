@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10137
+weight: 10146
 toc: false
 ---
 
@@ -83,6 +83,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CacheMode">DbMerge&lt;ExpandoObject&gt;.CacheMode</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_MaxCacheSize">DbMerge&lt;ExpandoObject&gt;.MaxCacheSize</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_EvictionPolicy">DbMerge&lt;ExpandoObject&gt;.EvictionPolicy</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_FindDuplicates">DbMerge&lt;ExpandoObject&gt;.FindDuplicates</a>
@@ -182,6 +188,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>

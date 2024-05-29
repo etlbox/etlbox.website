@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.oledb"
-weight: 10288
+weight: 10301
 toc: false
 ---
 
@@ -248,6 +248,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;OleDbConnection, OleDbTransaction, OleDbParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

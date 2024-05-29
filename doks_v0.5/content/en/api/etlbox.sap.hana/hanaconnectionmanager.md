@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.hana"
-weight: 10307
+weight: 10320
 toc: false
 ---
 
@@ -217,6 +217,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;HanaConnection, HanaTransaction, HanaParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -518,7 +521,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportDatabases { get; }
+    public override bool SupportDatabases { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -548,7 +551,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportIndexes { get; }
+    public override bool SupportIndexes { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -578,7 +581,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportProcedures { get; }
+    public override bool SupportProcedures { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -599,38 +602,6 @@ A database in ETLBox means a schema in MySql.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportProcedures</span></div>
-  <a id="ETLBox_Sap_Hana_HanaConnectionManager_SupportSchemas_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportSchemas*"></a>
-  <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_SupportSchemas" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override bool SupportSchemas { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;Sap.Data.Hana.HanaConnection, Sap.Data.Hana.HanaTransaction, Sap.Data.Hana.HanaParameter&gt;.SupportSchemas</span></div>
   <a id="ETLBox_Sap_Hana_HanaConnectionManager_UseSqlBulkOperations_" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.UseSqlBulkOperations*"></a>
   <h4 id="ETLBox_Sap_Hana_HanaConnectionManager_UseSqlBulkOperations" data-uid="ETLBox.Sap.Hana.HanaConnectionManager.UseSqlBulkOperations">UseSqlBulkOperations</h4>
   <div class="markdown level1 summary"><p>By default bulk inserts are done using sql.

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlite"
-weight: 10314
+weight: 10327
 toc: false
 ---
 
@@ -217,6 +217,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;SQLiteConnection, SQLiteTransaction, SQLiteParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -524,7 +527,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportDatabases { get; }
+    public override bool SupportDatabases { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -554,7 +557,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportProcedures { get; }
+    public override bool SupportProcedures { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -586,7 +589,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportSchemas { get; }
+    public override bool SupportSchemas { get; protected set; }
 ```
 
 {{< rawhtml >}}

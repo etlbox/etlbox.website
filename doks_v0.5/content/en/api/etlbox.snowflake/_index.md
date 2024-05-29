@@ -2,5 +2,5 @@
 title : "ETLBox.Snowflake"
 description: "All classes of the namespace ETLBox.Snowflake"
 draft: false
-weight: 3200
+weight: 3300
 ---

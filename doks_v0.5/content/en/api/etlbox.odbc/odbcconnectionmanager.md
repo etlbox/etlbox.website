@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10280
+weight: 10292
 toc: false
 ---
 
@@ -43,6 +43,7 @@ at least define the table and the columns names</li>
       <div class="level3"><a class="xref" href="/api/etlbox.odbc/oracleodbcconnectionmanager">OracleOdbcConnectionManager</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.odbc/postgresodbcconnectionmanager">PostgresOdbcConnectionManager</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.odbc/snowflakeodbcconnectionmanager">SnowflakeOdbcConnectionManager</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.odbc/sparkodbcconnectionmanager">SparkOdbcConnectionManager</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.odbc/sqlodbcconnectionmanager">SqlOdbcConnectionManager</a></div>
   </div>
   <div class="implements">
@@ -238,6 +239,9 @@ at least define the table and the columns names</li>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

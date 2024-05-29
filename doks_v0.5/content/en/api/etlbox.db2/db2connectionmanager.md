@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.db2"
-weight: 10183
+weight: 10195
 toc: false
 ---
 
@@ -218,6 +218,9 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;DB2Connection, DB2Transaction, DB2Parameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -490,7 +493,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportDatabases { get; }
+    public override bool SupportDatabases { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -520,7 +523,7 @@ A database in ETLBox means a schema in MySql.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportProcedures { get; }
+    public override bool SupportProcedures { get; protected set; }
 ```
 
 {{< rawhtml >}}

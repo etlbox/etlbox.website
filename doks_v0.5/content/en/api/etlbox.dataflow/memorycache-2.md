@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10151
+weight: 10163
 toc: false
 ---
 
@@ -24,8 +24,7 @@ toc: false
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</div>
-    <div><a class="xref" href="/api/etlbox/ilimitedcache">ILimitedCache</a></div>
+    <div><a class="xref" href="/api/etlbox.dataflow/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -54,7 +53,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public sealed class MemoryCache<TInput, TCache> : ICacheManager<TInput, TCache>, ILimitedCache where TCache : class
+    public sealed class MemoryCache<TInput, TCache> : ICacheManager<TInput, TCache> where TCache : class
 ```
 
 {{< rawhtml >}}
@@ -77,20 +76,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <h3 id="constructors">Constructors
-</h3>
-  <a id="ETLBox_DataFlow_MemoryCache_2__ctor_" data-uid="ETLBox.DataFlow.MemoryCache`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2__ctor" data-uid="ETLBox.DataFlow.MemoryCache`2.#ctor">MemoryCache()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public MemoryCache()
-```
-
-{{< rawhtml >}}
   <h3 id="fields">Fields
 </h3>
   <h4 id="ETLBox_DataFlow_MemoryCache_2_DEFAULT_MAX_CACHE_SIZE" data-uid="ETLBox.DataFlow.MemoryCache`2.DEFAULT_MAX_CACHE_SIZE">DEFAULT_MAX_CACHE_SIZE</h4>
@@ -121,69 +106,15 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_MemoryCache_2_CopyIntoCacheFunc_" data-uid="ETLBox.DataFlow.MemoryCache`2.CopyIntoCacheFunc*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_CopyIntoCacheFunc" data-uid="ETLBox.DataFlow.MemoryCache`2.CopyIntoCacheFunc">CopyIntoCacheFunc</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_CacheKeySelector_" data-uid="ETLBox.DataFlow.MemoryCache`2.CacheKeySelector*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_CacheKeySelector" data-uid="ETLBox.DataFlow.MemoryCache`2.CacheKeySelector">CacheKeySelector</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<TInput, TCache> CopyIntoCacheFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TCache&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Dict_" data-uid="ETLBox.DataFlow.MemoryCache`2.Dict*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Dict" data-uid="ETLBox.DataFlow.MemoryCache`2.Dict">Dict</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public IDictionary<object, TCache> Dict { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, TCache&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_GetCacheUniqueKeyFunc_" data-uid="ETLBox.DataFlow.MemoryCache`2.GetCacheUniqueKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_GetCacheUniqueKeyFunc" data-uid="ETLBox.DataFlow.MemoryCache`2.GetCacheUniqueKeyFunc">GetCacheUniqueKeyFunc</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<TCache, object> GetCacheUniqueKeyFunc { get; set; }
+    public Func<TCache, object> CacheKeySelector { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -202,15 +133,69 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_GetInputUniqueKeyFunc_" data-uid="ETLBox.DataFlow.MemoryCache`2.GetInputUniqueKeyFunc*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_GetInputUniqueKeyFunc" data-uid="ETLBox.DataFlow.MemoryCache`2.GetInputUniqueKeyFunc">GetInputUniqueKeyFunc</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_CachedData_" data-uid="ETLBox.DataFlow.MemoryCache`2.CachedData*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_CachedData" data-uid="ETLBox.DataFlow.MemoryCache`2.CachedData">CachedData</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<TInput, object> GetInputUniqueKeyFunc { get; set; }
+    public CachedData<TCache> CachedData { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TCache&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_MemoryCache_2_InputIntoCacheConversion_" data-uid="ETLBox.DataFlow.MemoryCache`2.InputIntoCacheConversion*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_InputIntoCacheConversion" data-uid="ETLBox.DataFlow.MemoryCache`2.InputIntoCacheConversion">InputIntoCacheConversion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, TCache> InputIntoCacheConversion { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TCache&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_MemoryCache_2_InputKeySelector_" data-uid="ETLBox.DataFlow.MemoryCache`2.InputKeySelector*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_InputKeySelector" data-uid="ETLBox.DataFlow.MemoryCache`2.InputKeySelector">InputKeySelector</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, object> InputKeySelector { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -256,15 +241,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Records_" data-uid="ETLBox.DataFlow.MemoryCache`2.Records*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Records" data-uid="ETLBox.DataFlow.MemoryCache`2.Records">Records</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_PermitMultipleEntriesPerKey_" data-uid="ETLBox.DataFlow.MemoryCache`2.PermitMultipleEntriesPerKey*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_PermitMultipleEntriesPerKey" data-uid="ETLBox.DataFlow.MemoryCache`2.PermitMultipleEntriesPerKey">PermitMultipleEntriesPerKey</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public IEnumerable<TCache> Records { get; }
+    public bool PermitMultipleEntriesPerKey { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -278,22 +263,22 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TCache&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Add_" data-uid="ETLBox.DataFlow.MemoryCache`2.Add*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Add__0_" data-uid="ETLBox.DataFlow.MemoryCache`2.Add(`0)">Add(TInput)</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_EnsureAdded_" data-uid="ETLBox.DataFlow.MemoryCache`2.EnsureAdded*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_EnsureAdded__0_" data-uid="ETLBox.DataFlow.MemoryCache`2.EnsureAdded(`0)">EnsureAdded(TInput)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Add(TInput row)
+    public void EnsureAdded(TInput row)
 ```
 
 {{< rawhtml >}}
@@ -314,15 +299,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Add_" data-uid="ETLBox.DataFlow.MemoryCache`2.Add*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Add__0___" data-uid="ETLBox.DataFlow.MemoryCache`2.Add(`0[])">Add(TInput[])</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_EnsureAdded_" data-uid="ETLBox.DataFlow.MemoryCache`2.EnsureAdded*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_EnsureAdded__0___" data-uid="ETLBox.DataFlow.MemoryCache`2.EnsureAdded(`0[])">EnsureAdded(TInput[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void Add(TInput[] batch)
+    public void EnsureAdded(TInput[] batch)
 ```
 
 {{< rawhtml >}}
@@ -343,112 +328,33 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Contains_" data-uid="ETLBox.DataFlow.MemoryCache`2.Contains*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Contains__0_" data-uid="ETLBox.DataFlow.MemoryCache`2.Contains(`0)">Contains(TInput)</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_Evict_" data-uid="ETLBox.DataFlow.MemoryCache`2.Evict*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_Evict" data-uid="ETLBox.DataFlow.MemoryCache`2.Evict">Evict()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool Contains(TInput row)
+    public void Evict()
 ```
 
 {{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TInput</span></td>
-        <td><span class="parametername">row</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Contains_" data-uid="ETLBox.DataFlow.MemoryCache`2.Contains*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Contains__0___" data-uid="ETLBox.DataFlow.MemoryCache`2.Contains(`0[])">Contains(TInput[])</h4>
+  <a id="ETLBox_DataFlow_MemoryCache_2_InitialLoad_" data-uid="ETLBox.DataFlow.MemoryCache`2.InitialLoad*"></a>
+  <h4 id="ETLBox_DataFlow_MemoryCache_2_InitialLoad" data-uid="ETLBox.DataFlow.MemoryCache`2.InitialLoad">InitialLoad()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public bool Contains(TInput[] batch)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>TInput[]</td>
-        <td><span class="parametername">batch</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_MemoryCache_2_Init_" data-uid="ETLBox.DataFlow.MemoryCache`2.Init*"></a>
-  <h4 id="ETLBox_DataFlow_MemoryCache_2_Init" data-uid="ETLBox.DataFlow.MemoryCache`2.Init">Init()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public void Init()
+    public void InitialLoad()
 ```
 
 {{< rawhtml >}}
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/icachemanager-2">ICacheManager&lt;TInput, TCache&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="/api/etlbox/ilimitedcache">ILimitedCache</a>
+      <a class="xref" href="/api/etlbox.dataflow/icachemanager-2">ICacheManager&lt;TInput, TCache&gt;</a>
   </div>
 
 {{< /rawhtml >}}

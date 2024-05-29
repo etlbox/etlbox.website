@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10039
+weight: 10045
 toc: false
 ---
 
@@ -80,6 +80,10 @@ toc: false
       </tr>
       <tr>
         <td id="ETLBox_ConnectionType_Snowflake">Snowflake</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_ConnectionType_Spark">Spark</td>
         <td></td>
       </tr>
       <tr>

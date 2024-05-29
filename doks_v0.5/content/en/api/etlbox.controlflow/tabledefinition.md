@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10079
+weight: 10085
 toc: false
 ---
 
@@ -610,6 +610,55 @@ toc: false
         <td><span class="parametername">readConstraints</span></td>
         <td><p>If set to true, information about the Unique and Foreign Key constraints are also gathered.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableDefinition_GetSchema_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchema*"></a>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_GetSchema_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchema(ETLBox.IConnectionManager,System.String)">GetSchema(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static TableDefinition GetSchema(IConnectionManager connection, string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10136
+weight: 10145
 toc: false
 ---
 
@@ -104,6 +104,9 @@ A delta table is generated that stores information if a records was inserted, up
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -657,6 +660,35 @@ only to use the columns in the provided definition.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy_" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy">EvictionPolicy</h4>
+  <div class="markdown level1 summary"><p>The eviction policy used for the partial cache.
+Only applies if the <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CacheMode">CacheMode</a> is set to Partial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public CacheEvictionPolicy EvictionPolicy { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy">CacheEvictionPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_FindDuplicates_" data-uid="ETLBox.DataFlow.DbMerge`1.FindDuplicates*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_FindDuplicates" data-uid="ETLBox.DataFlow.DbMerge`1.FindDuplicates">FindDuplicates</h4>
   <div class="markdown level1 summary"><p>By default, the DbMerge expects the <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_IdColumns">IdColumns</a> to be unique.
@@ -742,6 +774,35 @@ ignored when inserting data</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_MaxCacheSize_" data-uid="ETLBox.DataFlow.DbMerge`1.MaxCacheSize*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_MaxCacheSize" data-uid="ETLBox.DataFlow.DbMerge`1.MaxCacheSize">MaxCacheSize</h4>
+  <div class="markdown level1 summary"><p>Defines the max amount of rows stored in the partial cache if the eviction policy is set to a different value than <a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy#ETLBox_DataFlow_CacheEvictionPolicy_FullRefresh">FullRefresh</a>.
+Only applies if the <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CacheMode">CacheMode</a> is set to Partial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int MaxCacheSize { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1093,7 +1154,7 @@ If you use the error linking, any erroneous records will be caught and redirecte
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
   <a id="ETLBox_DataFlow_DbMerge_1_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.DbMerge`1.PrepareParameterForCheck*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.DbMerge`1.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
   <div class="markdown level1 summary"></div>

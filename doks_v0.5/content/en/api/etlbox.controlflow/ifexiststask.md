@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10063
+weight: 10069
 toc: false
 ---
 
@@ -272,6 +272,33 @@ toc: false
 
 ```C#
     public virtual bool Exists()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_IfExistsTask_HasSchema_" data-uid="ETLBox.ControlFlow.IfExistsTask.HasSchema*"></a>
+  <h4 id="ETLBox_ControlFlow_IfExistsTask_HasSchema" data-uid="ETLBox.ControlFlow.IfExistsTask.HasSchema">HasSchema()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool HasSchema()
 ```
 
 {{< rawhtml >}}

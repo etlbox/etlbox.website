@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.snowflake"
-weight: 10312
+weight: 10325
 toc: false
 ---
 
@@ -217,6 +217,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;SnowflakeDbConnection, SnowflakeDbTransaction, SnowflakeDbParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -519,7 +522,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportIndexes { get; }
+    public override bool SupportIndexes { get; protected set; }
 ```
 
 {{< rawhtml >}}
@@ -549,7 +552,7 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportProcedures { get; }
+    public override bool SupportProcedures { get; protected set; }
 ```
 
 {{< rawhtml >}}

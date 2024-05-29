@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.ase"
-weight: 10306
+weight: 10319
 toc: false
 ---
 
@@ -217,6 +217,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.DropTableOnCurrentConnection(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;AseConnection, AseTransaction, AseParameter&gt;.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -488,7 +491,7 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
 {{< /rawhtml >}}
 
 ```C#
-    public override bool SupportSchemas { get; }
+    public override bool SupportSchemas { get; protected set; }
 ```
 
 {{< rawhtml >}}

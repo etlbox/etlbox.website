@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10068
+weight: 10074
 toc: false
 ---
 
@@ -222,6 +222,35 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor_QuotatedDbName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.QuotatedDbName*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_QuotatedDbName" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.QuotatedDbName">QuotatedDbName</h4>
+  <div class="markdown level1 summary"><p>The database name with quotes.
+E.g. &quot;db.&quot;schema&quot;.&quot;ViewName&quot; would create &quot;db&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string QuotatedDbName { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_ObjectNameDescriptor_QuotatedFullName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.QuotatedFullName*"></a>
   <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_QuotatedFullName" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.QuotatedFullName">QuotatedFullName</h4>
   <div class="markdown level1 summary"><p>The whole name with quotes.
@@ -291,6 +320,35 @@ E.g. &quot;schema&quot;.&quot;ViewName&quot; would create &quot;schema&quot;</p>
 
 ```C#
     public string QuotatedSchemaName { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_ObjectNameDescriptor_UnquotatedDbName_" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.UnquotatedDbName*"></a>
+  <h4 id="ETLBox_ControlFlow_ObjectNameDescriptor_UnquotatedDbName" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor.UnquotatedDbName">UnquotatedDbName</h4>
+  <div class="markdown level1 summary"><p>The database name without any quoting.
+E.g. &quot;db&quot;.&quot;schema&quot;.&quot;table&quot; would create db</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string UnquotatedDbName { get; }
 ```
 
 {{< rawhtml >}}

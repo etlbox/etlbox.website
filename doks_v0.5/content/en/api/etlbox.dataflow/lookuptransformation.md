@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10162
 toc: false
 ---
 
@@ -45,12 +45,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_SourceRecords">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.SourceRecords</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_SourceRecordsByKey">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.SourceRecordsByKey</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_SourceBlock">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>
@@ -60,25 +54,22 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Source">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.Source</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrievalFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrievalFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.ApplyRetrievedCacheToInput</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrieveMultipleRowsFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheForMultipleOutputs">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.ApplyRetrievedCacheForMultipleOutputs</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrievalByKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrievalByKeyFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_OnNoMatchFound">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.OnNoMatchFound</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_RetrieveMultipleRowsByKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.RetrieveMultipleRowsByKeyFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_PermitMultipleEntriesPerKey">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.PermitMultipleEntriesPerKey</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_AllowMultipleRows">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.AllowMultipleRows</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_SourceKeySelector">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.SourceKeySelector</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_GetSourceRecordKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.GetSourceRecordKeyFunc</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_GetInputRecordKeyFunc">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.GetInputRecordKeyFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_InputKeySelector">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.InputKeySelector</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_UseExactNumericTypes">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.UseExactNumericTypes</a>
@@ -97,6 +88,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ProgressCount">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.ProgressCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_CachedBatchTransformation">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.CachedBatchTransformation</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_Reset">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.Reset()</a>
@@ -141,9 +135,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
@@ -171,6 +162,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParentComponent(DataFlowComponent)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
@@ -193,6 +187,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -322,28 +319,6 @@ loaded source data and uses this record to enrich the ingoing data.</p>
 ```
 
 {{< rawhtml >}}
-  <h5 id="ETLBox_DataFlow_LookupTransformation_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">public class Order
-                       {    
-                           public int OrderNumber { get; set; }
-                           public int CustomerId { get; set; }
-                           public string CustomerName { get; set; }
-                       }
-                       public class Customer
-                       {
-                           [RetrieveColumn(nameof(Order.CustomerId))]
-                           public int Id { get; set; }
-                           [MatchColumn(nameof(Order.CustomerName))]
-                           public string Name { get; set; }
-                       }
-                       DbSource&lt;Order&gt; orderSource = new DbSource&lt;Order&gt;("OrderData");
-                       CsvSource&lt;Customer&gt; lookupSource = new CsvSource&lt;Customer&gt;("CustomerData.csv");
-                       var lookup = new LookupTransformation&lt;Order, Customer&gt;();
-                       lookup.Source = lookupSource;
-                       DbDestination&lt;Order&gt; dest = new DbDestination&lt;Order&gt;("OrderWithCustomerTable");
-                       source.LinkTo(lookup).LinkTo(dest);</code>
-</pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation.#ctor*"></a>
@@ -388,14 +363,14 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_LookupTransformation__ctor_" data-uid="ETLBox.DataFlow.LookupTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_LookupTransformation__ctor_ETLBox_IDataFlowExecutableSource_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.LookupTransformation.#ctor(ETLBox.IDataFlowExecutableSource{System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject})">LookupTransformation(IDataFlowExecutableSource&lt;ExpandoObject&gt;, Func&lt;ExpandoObject, IEnumerable&lt;ExpandoObject&gt;, ExpandoObject&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_LookupTransformation__ctor_ETLBox_IDataFlowExecutableSource_System_Dynamic_ExpandoObject__System_Func_System_Dynamic_ExpandoObject_ETLBox_DataFlow_CachedData_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.LookupTransformation.#ctor(ETLBox.IDataFlowExecutableSource{System.Dynamic.ExpandoObject},System.Func{System.Dynamic.ExpandoObject,ETLBox.DataFlow.CachedData{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject})">LookupTransformation(IDataFlowExecutableSource&lt;ExpandoObject&gt;, Func&lt;ExpandoObject, CachedData&lt;ExpandoObject&gt;, ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public LookupTransformation(IDataFlowExecutableSource<ExpandoObject> source, Func<ExpandoObject, IEnumerable<ExpandoObject>, ExpandoObject> retrievalFunc)
+    public LookupTransformation(IDataFlowExecutableSource<ExpandoObject> source, Func<ExpandoObject, CachedData<ExpandoObject>, ExpandoObject> applyRetrievedCacheToInput)
 ```
 
 {{< rawhtml >}}
@@ -415,8 +390,8 @@ loaded source data and uses this record to enrich the ingoing data.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
-        <td><span class="parametername">retrievalFunc</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
+        <td><span class="parametername">applyRetrievedCacheToInput</span></td>
         <td></td>
       </tr>
     </tbody>

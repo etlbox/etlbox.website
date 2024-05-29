@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10103
+weight: 10109
 toc: false
 ---
 
@@ -50,9 +50,6 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3#ETLBox_DataFlow_CachedBatchTransformation_3_MaxCacheSize">CachedBatchTransformation&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.MaxCacheSize</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3#ETLBox_DataFlow_CachedBatchTransformation_3_FillCacheAfterTranformation">CachedBatchTransformation&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.FillCacheAfterTranformation</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3#ETLBox_DataFlow_CachedBatchTransformation_3_Reset">CachedBatchTransformation&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.Reset()</a>
@@ -133,9 +130,6 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
@@ -163,6 +157,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParentComponent(DataFlowComponent)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
@@ -182,6 +179,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -355,14 +355,14 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_CachedBatchTransformation__ctor_" data-uid="ETLBox.DataFlow.CachedBatchTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_CachedBatchTransformation__ctor_System_Int32_System_Func_System_Dynamic_ExpandoObject___System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject____" data-uid="ETLBox.DataFlow.CachedBatchTransformation.#ctor(System.Int32,System.Func{System.Dynamic.ExpandoObject[],System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject[]})">CachedBatchTransformation(int, Func&lt;ExpandoObject[], IEnumerable&lt;ExpandoObject&gt;, ExpandoObject[]&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_CachedBatchTransformation__ctor_System_Int32_System_Func_System_Dynamic_ExpandoObject___ETLBox_DataFlow_CachedData_System_Dynamic_ExpandoObject__System_Dynamic_ExpandoObject____" data-uid="ETLBox.DataFlow.CachedBatchTransformation.#ctor(System.Int32,System.Func{System.Dynamic.ExpandoObject[],ETLBox.DataFlow.CachedData{System.Dynamic.ExpandoObject},System.Dynamic.ExpandoObject[]})">CachedBatchTransformation(int, Func&lt;ExpandoObject[], CachedData&lt;ExpandoObject&gt;, ExpandoObject[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public CachedBatchTransformation(int batchSize, Func<ExpandoObject[], IEnumerable<ExpandoObject>, ExpandoObject[]> batchTransformationFunc)
+    public CachedBatchTransformation(int batchSize, Func<ExpandoObject[], CachedData<ExpandoObject>, ExpandoObject[]> batchTransformationFunc)
 ```
 
 {{< rawhtml >}}
@@ -382,7 +382,7 @@ toc: false
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[], <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>[]&gt;</td>
         <td><span class="parametername">batchTransformationFunc</span></td>
         <td></td>
       </tr>

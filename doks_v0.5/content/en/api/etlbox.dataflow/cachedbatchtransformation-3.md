@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10102
+weight: 10108
 toc: false
 ---
 
@@ -118,9 +118,6 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TOutput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowSource&lt;TOutput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
@@ -148,6 +145,9 @@ memory to store a whole batch.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParentComponent(DataFlowComponent)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
@@ -164,6 +164,9 @@ memory to store a whole batch.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
@@ -364,14 +367,14 @@ memory to store a whole batch.</p>
     </tbody>
   </table>
   <a id="ETLBox_DataFlow_CachedBatchTransformation_3__ctor_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`3.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_CachedBatchTransformation_3__ctor_System_Int32_System_Func__0___System_Collections_Generic_IEnumerable__2___1____" data-uid="ETLBox.DataFlow.CachedBatchTransformation`3.#ctor(System.Int32,System.Func{`0[],System.Collections.Generic.IEnumerable{`2},`1[]})">CachedBatchTransformation(int, Func&lt;TInput[], IEnumerable&lt;TCache&gt;, TOutput[]&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_CachedBatchTransformation_3__ctor_System_Int32_System_Func__0___ETLBox_DataFlow_CachedData__2___1____" data-uid="ETLBox.DataFlow.CachedBatchTransformation`3.#ctor(System.Int32,System.Func{`0[],ETLBox.DataFlow.CachedData{`2},`1[]})">CachedBatchTransformation(int, Func&lt;TInput[], CachedData&lt;TCache&gt;, TOutput[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public CachedBatchTransformation(int batchSize, Func<TInput[], IEnumerable<TCache>, TOutput[]> batchTransformationFunc)
+    public CachedBatchTransformation(int batchSize, Func<TInput[], CachedData<TCache>, TOutput[]> batchTransformationFunc)
 ```
 
 {{< rawhtml >}}
@@ -392,7 +395,7 @@ memory to store a whole batch.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TCache&gt;, TOutput[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput[], <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TCache&gt;, TOutput[]&gt;</td>
         <td><span class="parametername">batchTransformationFunc</span></td>
         <td><p>Sets the <a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3#ETLBox_DataFlow_CachedBatchTransformation_3_BatchTransformationFunc">BatchTransformationFunc</a></p>
 </td>
@@ -409,7 +412,7 @@ memory to store a whole batch.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<TInput[], IEnumerable<TCache>, TOutput[]> BatchTransformationFunc { get; set; }
+    public Func<TInput[], CachedData<TCache>, TOutput[]> BatchTransformationFunc { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -423,7 +426,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TCache&gt;, TOutput[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput[], <a class="xref" href="/api/etlbox.dataflow/cacheddata-1">CachedData</a>&lt;TCache&gt;, TOutput[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -437,7 +440,7 @@ memory to store a whole batch.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public ICacheManager<TInput, TCache> CacheManager { get; }
+    public ICacheManager<TInput, TCache> CacheManager { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -451,36 +454,7 @@ memory to store a whole batch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_CachedBatchTransformation_3_FillCacheAfterTranformation_" data-uid="ETLBox.DataFlow.CachedBatchTransformation`3.FillCacheAfterTranformation*"></a>
-  <h4 id="ETLBox_DataFlow_CachedBatchTransformation_3_FillCacheAfterTranformation" data-uid="ETLBox.DataFlow.CachedBatchTransformation`3.FillCacheAfterTranformation">FillCacheAfterTranformation</h4>
-  <div class="markdown level1 summary"><p>If set to true, the incoming row will be added to the cache after the
-transformation func has been invoked.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool FillCacheAfterTranformation { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="/api/etlbox.dataflow/icachemanager-2">ICacheManager</a>&lt;TInput, TCache&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10029
+weight: 10035
 toc: false
 ---
 

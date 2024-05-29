@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10275
+weight: 10287
 toc: false
 ---
 
@@ -41,7 +41,6 @@ select * from (
     <div><a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbcconnection">OdbcConnection</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.odbc.odbctransaction">OdbcTransaction</a>&gt;</div>
     <div><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="/api/etlbox/iconnectionmanagerdbobjects">IConnectionManagerDbObjects</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -253,6 +252,9 @@ select * from (
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -280,7 +282,7 @@ select * from (
 {{< /rawhtml >}}
 
 ```C#
-    public class AccessOdbcConnectionManager : OdbcConnectionManager, IConnectionManager<OdbcConnection, OdbcTransaction>, IConnectionManager, IDisposable, IConnectionManagerDbObjects
+    public class AccessOdbcConnectionManager : OdbcConnectionManager, IConnectionManager<OdbcConnection, OdbcTransaction>, IConnectionManager, IDisposable
 ```
 
 {{< rawhtml >}}
@@ -391,99 +393,6 @@ Contains only 1 record and is only temporarily created.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportDatabases_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportDatabases*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportDatabases" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportDatabases">SupportDatabases</h4>
-  <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
-A database in ETLBox means a schema in MySql.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override bool SupportDatabases { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportDatabases</span></div>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportProcedures_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportProcedures*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportProcedures" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportProcedures">SupportProcedures</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override bool SupportProcedures { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportProcedures</span></div>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportSchemas_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportSchemas*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_SupportSchemas" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public override bool SupportSchemas { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_BulkInsert_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.BulkInsert*"></a>
@@ -519,52 +428,6 @@ Use <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManag
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_BulkInsert_ETLBox_ITableData_">OdbcConnectionManager.BulkInsert(ITableData)</a></div>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_CheckIfTableOrViewExists_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.CheckIfTableOrViewExists*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_CheckIfTableOrViewExists_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.CheckIfTableOrViewExists(System.String)">CheckIfTableOrViewExists(string)</h4>
-  <div class="markdown level1 summary"><p>Describes how the connection manager can check if a table or view exists</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool CheckIfTableOrViewExists(string unquotatedFullName)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">unquotatedFullName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>True if the table or view exists</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_CleanUpBulkInsert_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.CleanUpBulkInsert*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_CleanUpBulkInsert_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.CleanUpBulkInsert(System.String)">CleanUpBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Called after the whole bulk insert operation
@@ -629,6 +492,52 @@ to change back settings made to improve bulk insert performance</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_Clone">OdbcConnectionManager.Clone()</a></div>
+  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchema_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchema*"></a>
+  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchema_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchema(System.String)">GetSchema(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override TableDefinition GetSchema(string tableName)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a></div>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved
@@ -662,53 +571,6 @@ performance of a bulk insert operation</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_PrepareBulkInsert_System_String_">OdbcConnectionManager.PrepareBulkInsert(string)</a></div>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_ReadTableDefinition_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.ReadTableDefinition*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_ReadTableDefinition_ETLBox_ControlFlow_ObjectNameDescriptor_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.ReadTableDefinition(ETLBox.ControlFlow.ObjectNameDescriptor)">ReadTableDefinition(ObjectNameDescriptor)</h4>
-  <div class="markdown level1 summary"><p>Describe how the table meta data can be read from the database</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableDefinition ReadTableDefinition(ObjectNameDescriptor TN)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/objectnamedescriptor">ObjectNameDescriptor</a></td>
-        <td><span class="parametername">TN</span></td>
-        <td><p>The formatted table name</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
-        <td><p>The definition of the table, containing column names, types, etc.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager-2">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
@@ -718,9 +580,6 @@ performance of a bulk insert operation</p>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
-  </div>
-  <div>
-      <a class="xref" href="/api/etlbox/iconnectionmanagerdbobjects">IConnectionManagerDbObjects</a>
   </div>
 
 {{< /rawhtml >}}

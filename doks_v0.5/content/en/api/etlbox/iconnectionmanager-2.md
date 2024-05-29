@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10214
+weight: 10226
 toc: false
 ---
 
@@ -147,6 +147,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_SetValueToSqlConversionFunc_System_Func_ETLBox_Helper_ConversionContext_System_String__">IConnectionManager.SetValueToSqlConversionFunc(Func&lt;ConversionContext, string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_GetSchema_System_String_">IConnectionManager.GetSchema(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
