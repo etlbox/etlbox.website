@@ -5,9 +5,32 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.4.0
+
+#### Features:
+
+- Improved Odbc support
+- Improved TableDefinition search, using default schema retrieval as backup
+- DbSource: Use ADO.NET Reader method GetSchemaTable() to retrieve table definition if no other definition was provided
+- Lookup: Adding 'OnNoMatchFound' callback which is invoked if no record can be retrieved for a row
+- Lookup: Partial cache now offeres different eviction policies
+- DbTypeCheck: Adding ConversionError object to redirected flawed rows
+- New Connector for Apache Kafka
+- Adding Apache Spark support (only basic support for Odbc)
+- DbMerge: Adding support for different eviction policies when using partial cache mode
+- Adding OnInitialization delegate for all dataflow components
+- ObjectNameDescriptor now supports 3dots namings (e.g. "database"."schema"."table")
+- LinkErrorTo(..) is now part of interface IDataFlowComponent
+- Streaming sources: Adding support for MIME multipart responses
+
+#### Bug fixes:
+
+- Fixed bug where duplicate column headers can't be read using ReadFieldHeaders()
+
 ## Version 3.3.0
 
 #### Features:
+
 - Added Network.ParallelExecute\(params Network\[\] networks\) to support parallel execution of disparate networks
 - Network: Added methods 'PrintAsJson' and 'PrintAsNodes' to support printing or visualizing a network
 - New connector: ETLBox.Analysis (connector to Microsoft.Analysis.DataFrame)
