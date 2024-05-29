@@ -163,7 +163,7 @@ public class Customer
 
     var lookup = new LookupTransformation<Order, Customer>();
     lookup.Source = lookupSource;
-    lookup.RetrievalFunc =
+    lookup.ApplyRetrievedCacheToInput  =
         (row, cache) =>
         {
             row.CustomerId = cache.Where(cust => cust.Name == row.CustomerName)
@@ -327,43 +327,18 @@ As input for the `LoadCacheSql` expression you will receive the current batch. T
 
 ## Using the underlying dictionary 
 
-You may have notice that the RetrievalFunc is giving you a ICollection which contains the data from the lookup source. To find object in this collection can sometimes take a while, depending on the size of your lookup source data. 
+You may have notice that the `ApplyRetrievedCacheToInput` fucntion is giving you a `CachedData` object that holds two collection with data from the lookup source. One is called `List` and contains and IEnumerable, which you could use. But in order to find object in this collection can sometimes take a while, depending on the size of your lookup source data. 
 
-Internally, the lookup will store the data from the cache not in a List but in a Dictionary object. If your lookup source data is quite big the use of a dictionary improves access significantly. But the RetrieveFunc will only expose the values of the dictionary, and doesn't give you access to the keys.
+Additionally, you can use the `Items` or `ItemCollections`. The first one will only contain data if you have set `PermitMultipleEntriesPerKey` to false. If this is set to true, you are allowing the Lookup to have more than one match for a key. Then you will find all data that matches with the key in the `ItemsCollection` dictionary. Both are dictionaries, and accessing data in here will be much faster than using the `List` property (which is only a wrapper for the values of the current applicable dictionary)
 
 When you use the `LookupTransformation` via the Match/Retrieve attributes only, you don't have to mind about performance. Internally, the lookup cache will be access via the dictionary keys, and everything should run fast.  
 
-But in case you need to write your own lookup function, and you run into performance problems when access the ICollection in your Retrieval func, you can use the `RetrievalByKeyFunc` together with the `GetInputRecordKeyFunc` / `GetSourceRecordKeyFunc`
 
-### RetrievalByKeyFunc
+### Defining your own keys
 
-In order to retrieve data faster from the lookup cache you can have direct access to the underlying  dictionary that uses hash values to retrieve data much faster. 
-But to make this work, you need to define a unique key which the dictionary can use for storing the data. 
-Unfortunately, in our example the data type for the cache is different than our input data. The input data is a order object, and our lookup source is a customer object. But both should match if they have equal names - the Name property of the Customer object is equal to the CustomerName of the Order object. 
-
-We can use this information to describe how we retrieve the key for our Customer and Order object:
+The lookup expects that the incoming and the lookup object have a unique key that then is used for matching. You can define your own custom logic how the key is retrieved from both.
 
 ```C#
-lookup.GetInputRecordKeyFunc = inputrow => inputrow.CustomerName;
-lookup.GetSourceRecordKeyFunc = sourcerow => sourcerow.Name;
-```
-
-Now we can use the `RetrievalByKeyFunc` to access the dictionary. Retrieval of data from the dictionary is now simple, as we know how the keys are generated:
-
-```C#
-lookup.RetrievalByKeyFunc = (inputrow, dict) =>
-{
-    if (dict.ContainsKey(inputrow.CustomerName))
-        inputrow.CustomerId = dict[inputrow.CustomerName].Id;
-    return inputrow;
-};
-```
-
-Here is the whole example code:
-
-```C#
-public static void Main()
-{
 var orderSource = new MemorySource<Order>();
 orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
 orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
@@ -372,12 +347,11 @@ var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
 var lookup = new LookupTransformation<Order, Customer>();
 lookup.Source = lookupSource;
-lookup.GetInputRecordKeyFunc = inputrow => inputrow.CustomerName;
-lookup.GetSourceRecordKeyFunc = sourcerow => sourcerow.Name;
-lookup.RetrievalByKeyFunc = (inputrow, dict) =>
-{
-    if (dict.ContainsKey(inputrow.CustomerName))
-        inputrow.CustomerId = dict[inputrow.CustomerName].Id;
+lookup.InputKeySelector = inputrow => inputrow.CustomerName;
+lookup.SourceKeySelector = sourcerow => sourcerow.Name;
+lookup.ApplyRetrievedCacheToInput = (inputrow, cache) => {
+    if (cache.Items.ContainsKey(inputrow.CustomerName))
+        inputrow.CustomerId = cache.Items[inputrow.CustomerName].Id;
     return inputrow;
 };
 
@@ -386,7 +360,6 @@ var dest = new MemoryDestination<Order>();
 orderSource.LinkTo(lookup).LinkTo(dest);
 Network.Execute(orderSource);
 
-
 foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
@@ -394,5 +367,3 @@ foreach (var row in dest.Data)
 //Order:815 Name:John Id:1 
 //Order:4711 Name:Jim Id:2
 ```
-
- 

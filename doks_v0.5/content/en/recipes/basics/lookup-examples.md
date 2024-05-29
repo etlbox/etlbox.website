@@ -27,7 +27,7 @@ Id|Name
 
 ### Simple usage of lookup
 
-The following code snipped will enrich the incoming data rows with a customer Id using the `RetrievalFunc` of the lookup transformation.  
+The following code snipped will enrich the incoming data rows with a customer Id using the `ApplyRetrievedCacheToInput` of the lookup transformation.  
 
 ``` C#  
 public class Order
@@ -43,33 +43,33 @@ public class Customer
     public string Name { get; set; }
 }
 
-var orderSource = new MemorySource<Order>();
-orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
-orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
+ var orderSource = new MemorySource<Order>();
+ orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
+ orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
 
-var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
+ var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
-var lookup = new LookupTransformation<Order, Customer>();
-lookup.Source = lookupSource;
-lookup.RetrievalFunc =
-    (row, cache) => {
-        row.CustomerId = cache.Where(cust => cust.Name == row.CustomerName)
-                                .Select(cust => cust.Id)
-                                .FirstOrDefault();
-        return row;
-    };
+ var lookup = new LookupTransformation<Order, Customer>();
+ lookup.Source = lookupSource;
+ lookup.ApplyRetrievedCacheToInput =
+     (row, cache) => {
+         row.CustomerId = cache.List.Where(cust => cust.Name == row.CustomerName)
+                               .Select(cust => cust.Id)
+                               .FirstOrDefault();
+         return row;
+     };
 
-var dest = new MemoryDestination<Order>();
+ var dest = new MemoryDestination<Order>();
 
-orderSource.LinkTo(lookup).LinkTo(dest);
-Network.Execute(orderSource);
+ orderSource.LinkTo(lookup).LinkTo(dest);
+ Network.Execute(orderSource);
 
-foreach (var row in dest.Data)
-    Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
+ foreach (var row in dest.Data)
+     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
-//Output
-//Order:815 Name:John Id:1 
-//Order:4711 Name:Jim Id:2
+ //Output
+ //Order:815 Name:John Id:1 
+ //Order:4711 Name:Jim Id:2
 ```
 
 ### Using attributes
@@ -166,11 +166,11 @@ var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
 var lookup = new LookupTransformation<Order, Customer>();
 lookup.Source = lookupSource;
-lookup.GetInputRecordKeyFunc = inputrow => inputrow.CustomerName;
-lookup.GetSourceRecordKeyFunc = sourcerow => sourcerow.Name;
-lookup.RetrievalByKeyFunc = (inputrow, dict) => {
-    if (dict.ContainsKey(inputrow.CustomerName))
-        inputrow.CustomerId = dict[inputrow.CustomerName].Id;
+lookup.InputKeySelector = inputrow => inputrow.CustomerName;
+lookup.SourceKeySelector = sourcerow => sourcerow.Name;
+lookup.ApplyRetrievedCacheToInput = (inputrow, cache) => {
+    if (cache.Items.ContainsKey(inputrow.CustomerName))
+        inputrow.CustomerId = cache.Items[inputrow.CustomerName].Id;
     return inputrow;
 };
 
@@ -255,7 +255,7 @@ the following example are additional examples to demonstrate the usage of the lo
 
 ### Case-insensitive comparison
 
-This examples show if you want to compare two strings, but want to work the comparison case-insenstive and therefore ignoring upper/lower cases.
+This examples show if you want to compare two strings, but want to work the comparison case-insensitive and therefore ignoring upper/lower cases.
 
 ```C#
 public class InputRow
@@ -281,15 +281,15 @@ public void UsingGetInputRecordKeyFunc()
 
     var lookupSource = new MemorySource<LookupRow>();
     lookupSource.DataAsList = new List<LookupRow>() {
-    new LookupRow() { LookupId = "idstringa", LookupValue = "A" },
-    new LookupRow() { LookupId = "idstringb", LookupValue = "B" },
-    new LookupRow() { LookupId = "idstringc", LookupValue = "C" }
-};
+        new LookupRow() { LookupId = "idstringa", LookupValue = "A" },
+        new LookupRow() { LookupId = "idstringb", LookupValue = "B" },
+        new LookupRow() { LookupId = "idstringc", LookupValue = "C" }
+    };
 
     var lookup = new LookupTransformation<InputRow, LookupRow>();
     lookup.Source = lookupSource;
-    lookup.GetInputRecordKeyFunc = row => row.Id.ToLower();
-    lookup.GetSourceRecordKeyFunc = row => row.LookupId;
+    lookup.InputKeySelector = row => row.Id.ToLower();
+    lookup.SourceKeySelector = row => row.LookupId;
     var dest = new CsvDestination<InputRow>("output1.csv");
 
     source.LinkTo(lookup).LinkTo(dest);
