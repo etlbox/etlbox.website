@@ -1,7 +1,7 @@
 ---
-title: "Lookup"
+title: "Lookup Transformation"
 description: "Details about the LookupTransformation"
-lead: "If you want to lookup some data from existing tables or other sources, the lookup transformation is the right choice. It allows you to enrich the incoming rows with data from the lookup source. "
+lead: "Improve your data with the LookupTransformation. This guide shows you how to add more information to your data as it moves through the process, making sure your data is complete and useful."
 draft: false
 images: []
 menu:
@@ -9,241 +9,281 @@ menu:
     parent: "transformations"
 weight: 650
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The lookup transformation enriches the incoming data with data from the lookup source. To achieve this, all or some data from the lookup source is read into memory when the first record arrives. For each incoming row, the lookup tries to find a matching record in the in-memory table. If found, it uses this pre-loaded record to add additional data to the ingoing row. 
+The `LookupTransformation` in ETLBox is a powerful component used to enhance your ETL processes by enriching input data with additional information from a secondary data source, referred to as the lookup source. This is essential when you need to combine data from different sources to ensure your dataset is complete and comprehensive.
 
-E.g. you have an order record that contains a customer name. This is your ingoing record into the lookup. Also, the lookup gets a table containing customer names and their ids as lookup source. Then the lookup can retrieve the customer id and update the property value in your order record during.
+The lookup is a partially blocking transformation. When a row arrives at the LookupTransformation, the component will start to load the lookup source data. It will block execution until either all lookup data has been loaded (Full cache mode) or the relevant lookup data has been loaded into memory (partial cache mode).
 
-#### Buffer
+## Basic Lookup
 
-The lookup is a partially blocking transformation. When the row arrives at the `LookupTransformation`, the component will start to load the lookup source data. It will block execution until either all lookup data has been loaded (Full cache mode) or the relevant lookup data has been loaded into memory (partial cache mode). The `LookupTransformation` has one input buffer. 
- 
-### Code snippet
+The core functionality of the `LookupTransformation` is to merge data from the lookup source with your primary data flow. You start by defining your input and lookup data models. For example:
 
-```C#
-public class Order
-{    
-    public int OrderNumber { get; set; }    
-    public int CustomerId { get; set; }    
-    public string CustomerName { get; set; }    
-}
-
-public class Customer
-{   
-    [RetrieveColumn(nameof(Order.CustomerId))]
+```csharp
+public class InputRow {
     public int Id { get; set; }
-    
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
+    public string Value { get; set; }
 }
 
-DbSource<Order> orderSource = new DbSource<Order>("OrderData");
-CsvSource<Customer> lookupSource = new CsvSource<Customer>("CustomerData.csv");
-var lookup = new LookupTransformation<Order, Customer>();
+public class LookupRow {
+    public int LookupId { get; set; }
+    public string LookupValue { get; set; }
+}
+```
+
+You then create the sources for both input and lookup data:
+
+```csharp
+var inputSource = new MemorySource<InputRow>();
+inputSource.DataAsList = new List<InputRow> {
+    new InputRow { Id = 1 },
+    new InputRow { Id = 2 },
+    new InputRow { Id = 3 }
+};
+
+var lookupSource = new MemorySource<LookupRow>();
+lookupSource.DataAsList = new List<LookupRow> {
+    new LookupRow { LookupId = 1, LookupValue = "Value1" },
+    new LookupRow { LookupId = 2, LookupValue = "Value2" }
+};
+```
+
+Configure the `LookupTransformation` to specify how the input data should be enriched:
+
+```csharp
+var lookup = new LookupTransformation<InputRow, LookupRow>();
 lookup.Source = lookupSource;
-DbDestination<Order> dest = new DbDestination<Order>("OrderWithCustomerTable");
-orderSource.LinkTo(lookup).LinkTo(dest);
+lookup.ApplyRetrievedCacheToInput = (input, cache) => {
+    input.Value = cache.List.FirstOrDefault(l => l.LookupId == input.Id)?.LookupValue;
+    return input;
+};
 ```
 
+Finally, execute the transformation by linking the sources and destination:
 
-## Lookup step-by-step
-
-The `LookupTransformation` can be compared to a simple row transformation, with the addition that you can define a lookup source and a lookup function.The lookup source can be any kind of ETLBox source component, e.g. a `DbSource` or `CsvSource`. When the first record arrives at the `LookupTransformation`, it will automatically load all data from the lookup source into memory. This data is then available in the lookup.
-
-When you use the a DbSource as source for the lookup, you can also choose to only load partial chunks of data into memory instead the whole table. This can be useful if you source tables are bigger. 
-
-### Initial setup
-
-Let's look at an example. Assuming you have an order record that contains a customer name. 
-
-```C#
-public class Order
-{    
-    public int OrderNumber { get; set; }
-    public string CustomerName { get; set; }
-    public int? CustomerId { get; set; }
-}
-
-var orderSource = new MemorySource<Order>();
-orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John"});
-orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim"});
+```csharp
+var dest = new MemoryDestination<InputRow>();
+inputSource.LinkTo(lookup);
+lookup.LinkTo(dest);
+Network.Execute(inputSource);
 ```
 
-Now we have a customer table in our database that holds two records.
+After executing the transformation, you can access the enriched data from the destination:
 
-Id|Name
---|---------------
-1 |John
-2 |Jim
-
-Our goal is to have a transformation that reads the Id from the customer table, based on the customer name. So for John we expect to find the Id 1, and for Jim Id 2. 
-
-### Manual lookup in RowTransformation
-
-Before we start digging deeper into the lookup, we could use a RowTransformation to achieve something similar like lookup. 
-The RowTransformation could look like this:
-
-```C#
- var rowTrans = new RowTransformation<Order>(
-    row =>
-    {
-        int? id = SqlTask.ExecuteScalar<int>(SqlConnection,
-            sql: $"SELECT Id FROM CustomerTable WHERE Name='{row.CustomerName}'");
-        row.CustomerId = id;
-        return row;
-    });
-```
-
-Beside the fact the we it would be better to use a parameterized query (which SqlTask also supports), this would work as expected. For every row, the row transformation would call a SELECT on the database and find the corresponding customer id. 
-Though this would work with small amount of data, this can become a bottleneck the more data we trying to send through this transformation. Even with a very fast responding database this will won't give you the desired performance, as the time to connect and retrieve the data will sum up. 
-
-### Loading the data into memory
-
-If we would replace the SELECT statement in the example above with something that directly accesses a list in memory, this would be much faster. This is what the lookup does: it loads any kind of ETLBox source (e.g. a `DbSource`, `CsvSource`, `JsonSource`...) into a in-memory list. This is then accessible in the lookup transformation, which is the similar to the row transformation. 
-
-Let's create a DbSource, so that we can pass our customer table to the Lookup. 
-
-```C#
-public class Customer
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-}
-
-var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
-```
-
-Now we feed this lookupSource into our LookupTransformation. Then within the lookup transformation function, we can access our in-memory table containing the customer data.
-
-```C#
-var lookup = new LookupTransformation<Order, Customer>();
-lookup.Source = lookupSource;
-lookup.RetrievalFunc =
-    (row, cache) =>
-    {
-        row.CustomerId = cache.Where(cust => cust.Name == row.CustomerName)
-                              .Select(cust => cust.Id)
-                              .FirstOrDefault();
-        return row;
-    };
-``` 
-
-As you can see, the lookup function has two input parameters: the current row and a cache object. The cache object is a Collection of the Customer objects. You can query this collection e.g. with Linq to retrieve the data you need from the cache.
-
-The cache collection is populated when the first row arrives at the lookup. 
-
-### Whole example code
-
-Here is the whole example code:
-
-```C#
-public class Order
-{
-    public int OrderNumber { get; set; }
-    public string CustomerName { get; set; }
-    public int? CustomerId { get; set; }
-}
-
-public class Customer
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-}
-
- public static void Main()
-{
-    var orderSource = new MemorySource<Order>();
-    orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
-    orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
-
-    var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
-
-    var lookup = new LookupTransformation<Order, Customer>();
-    lookup.Source = lookupSource;
-    lookup.ApplyRetrievedCacheToInput  =
-        (row, cache) =>
-        {
-            row.CustomerId = cache.Where(cust => cust.Name == row.CustomerName)
-                                    .Select(cust => cust.Id)
-                                    .FirstOrDefault();
-            return row;
-        };
-
-    var dest = new MemoryDestination<Order>();
-
-    orderSource.LinkTo(lookup).LinkTo(dest);
-    Network.Execute(orderSource);
-
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
-
-    //Output
-    //Order:815 Name:John Id:1 
-    //Order:4711 Name:Jim Id:2
+```csharp
+foreach (var row in dest.Data) {
+    Console.WriteLine($"Id: {row.Id}, Value: {row.Value}");
 }
 ```
 
 ### Lookup source types
 
- As a source for the lookup transformation any ETLBox source component will. So instead of using the `DbSource` to read data from the a database table, you can use the `CsvSource` to read the lookup data from a csv file. Or you could use the `JsonSource` to read json data. When you use the streaming connectors (like `JsonSource`, `CsvSource` or `XmlSource`) you are not limited to read data from files - you could also change the ResourceType to e.g. `ResourceType.Http` or `ResourceType.AzureBlob` to read your lookup data either from some web endpoint or from an Azure blob. If you need to have your own logic to retrieve your lookup data, you could use the `CustomSource` to define your own logic how to gather your lookup source data. 
+As a source for the lookup transformation any ETLBox source component will do. So you could use the `DbSource` to read the lookup data from the a database table, or you could use the `CsvSource` or `JsonSource` to gather lookup data from a file. When you use the streaming connectors (like `JsonSource`, `CsvSource`, `XmlSource`, etc.) you are not limited to read data from files - you could also change the ResourceType to `ResourceType.Http` or `ResourceType.AzureBlob` to read from some web endpoint or Azure blob. If you need to have your own logic to retrieve your lookup data, you could use the CustomSource to define your own logic how to gather your lookup source data.
 
-## Using Attributes
 
-Of course defining your own lookup function can be cumbersome sometimes. The lookup also defines a default lookup implementation, which is based on attributes in your objects. This allows you to control the data lookup without the need to write your own data retrieval function. 
+## Caching Modes
 
-The attributes needed to control the lookup are `MatchColumn` and `RetrieveColumn`. The MatchColumn defines the property name in the target object that needs to match. Only if the records matches (and also only for the first one) it will continue to retrieve the value using the `RetrieveColumn`. The RetrieveColumn tells the lookup the property name of the lookup type class from which the data is retrieved. 
+The `LookupTransformation` offers two caching modes to optimize performance. 
 
-### Attributes with objects 
+### Full Cache
 
-So modifying our example above, it would look like this:
+Full caching loads all the lookup data into memory before processing starts, making it ideal for smaller datasets. To enable full caching, set the `CacheMode` property:
+
+```csharp
+lookup.CacheMode = CacheMode.Full;
+```
+
+This will work for all source types. 
+
+### Partial Cache
+
+{{< alert text="The partial cache is only applicable if the Lookup source is a database. For other source types you can only use the Full Cache" >}}
+
+Partial caching loads only the necessary lookup data as needed, which is suitable for larger datasets. This helps manage memory usage efficiently:
+
+```csharp
+lookup.CacheMode = CacheMode.Partial;
+lookup.PartialCacheSettings.LoadBatchSize = 100; // Load data in batches of 100 records
+```
+
+The partial cache will only work in combination with the `DbSource` as source for the Lookup.
+
+###  Cache Eviction Policies
+
+When using partial caching, it's important to manage the cache size. The `LookupTransformation` provides several eviction policies to control how data is removed from the cache when it reaches its maximum size:
+
+- **Least Recently Used (LRU)**: Evicts the least recently accessed items from the cache.
+- **Least Frequently Used (LFU)**: Evicts the least frequently accessed items from the cache.
+- **First In First Out (FIFO)**: Evicts the oldest items in the cache first.
+- **Last In First Out (LIFO)**: Evicts the most recently added items first.
+
+Set the eviction policy using the `EvictionPolicy` property:
+
+```csharp
+lookup.PartialCacheSettings.EvictionPolicy = CacheEvictionPolicy.LeastRecentlyUsed;
+```
+
+### Partial Cache with custom SQL
+
+By default, the lookup transformation doesn't know how to retrieve the data from the database source. You can define your own Sql code that describe how to retrieve the corresponding columns from that database to refill your partial lookup cache:
+
+```csharp
+lookup.CacheMode = CacheMode.Partial;
+lookup.PartialCacheSettings.LoadBatchSize = 100;
+lookup.PartialCacheSettings.LoadCacheSql = inputs =>
+{
+    var ids = string.Join(",", inputs.Select(i => i.Id));
+    return $"SELECT Id, Value FROM LookupTable WHERE Id IN ({ids})";
+};
+```
+
+This is only necessary if you want to have full control how the lookup retrieves data from the database source. If you provide the `MatchColumns` and `RetrieveColumns`, the Sql for retrieving data from the lookup database source is generated automatically. 
+
+## Handling Multiple Matches
+
+If your lookup key can match multiple records, you can enable handling multiple matches:
+
+```csharp
+lookup.PermitMultipleEntriesPerKey = true;
+lookup.ApplyRetrievedCacheForMultipleOutputs = (input, cache) => {
+    var results = cache.List.Where(l => l.LookupId == input.Id).Select(l => {
+        var newRow = input.Clone(); // Assumes InputDataRow implements ICloneable
+        newRow.Value = l.LookupValue;
+        return newRow;
+    }).ToArray();
+    return results;
+};
+```
+
+{{< alert text="The main difference between the <code>ApplyRetrievedCacheForMultipleOutputs</code> and <code>ApplyRetrievedCacheForInput</code> is that the first one can return an array of rows instead of a single row. This allows you to return multiple rows if necessary that can be processed by the next component. If you always want to return a single row, use the <code>ApplyRetrievedCacheForInput</code>" >}}
+
+## Using the CachedData collections
+
+You may have notice that the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` function are giving you a CachedData object that holds multiple collections with data from the lookup source. One is called `List` and is an `IEnumerable`, which you could to see your retrieved data. But accessing data in this collection can sometimes take a while, depending on the size of your lookup source data. Consider this enumerable as a convienient view on your data. 
+
+Alternatively, you can use the Items or ItemCollections. The first one will only contain data if you have set `PermitMultipleEntriesPerKey` to false. If this is set to true, you are allowing the Lookup to have more than one match for a key. Then you will find all data that matches with the key in the `ItemsCollection` dictionary. Both are dictionaries, and accessing data in here will be much faster than using the List property (which is only a wrapper for the values of the current applicable dictionary)
+
+This only applies if your are using the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` and access the `CachedData` object within this function.  When you use the LookupTransformation via the Match/Retrieve attributes only, you don’t have to worry about performance. Internally, the lookup cache will be access via the dictionary keys, and everything should run fast.
+
+## Defining your own keys for matching
+
+The lookup expects that the incoming and the lookup object have a unique key that then is used for matching. You can define your own custom logic how the key is retrieved from both.
 
 ```C#
-public class Order
-{
-    public int OrderNumber { get; set; }
-    public string CustomerName { get; set; }
-    public int? CustomerId { get; set; }
-}
+var orderSource = new MemorySource<Order>();
+orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
+orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
 
- public class CustomerWithAttr
-{
-    [RetrieveColumn(nameof(Order.CustomerId))]
-    public int Id { get; set; }
-    [MatchColumn(nameof(Order.CustomerName))]
-    public string Name { get; set; }
-}
+var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
-public static void Main()
-{
-    var orderSource = new MemorySource<Order>();
-    orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
-    orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
+var lookup = new LookupTransformation<Order, Customer>();
+lookup.Source = lookupSource;
+lookup.InputKeySelector = inputrow => inputrow.CustomerName;
+lookup.SourceKeySelector = sourcerow => sourcerow.Name;
+lookup.ApplyRetrievedCacheToInput = (inputrow, cache) => {
+    if (cache.Items.ContainsKey(inputrow.CustomerName))
+        inputrow.CustomerId = cache.Items[inputrow.CustomerName].Id;
+    return inputrow;
+};
 
-    var lookupSource = new DbSource<CustomerWithAttr>(SqlConnection, "CustomerTable");
+var dest = new MemoryDestination<Order>();
 
-    var lookup = new LookupTransformation<Order, CustomerWithAttr>();
-    lookup.Source = lookupSource;          
+orderSource.LinkTo(lookup).LinkTo(dest);
+Network.Execute(orderSource);
 
-    var dest = new MemoryDestination<Order>();
+foreach (var row in dest.Data)
+    Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
-    orderSource.LinkTo(lookup).LinkTo(dest);
-    Network.Execute(orderSource);
-
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
-
-    //Output
-    //Order:815 Name:John Id:1 
-    //Order:4711 Name:Jim Id:2
-}
+//Output
+//Order:815 Name:John Id:1 
+//Order:4711 Name:Jim Id:2
 ```
+
+## Dynamic Object Support
+
+The `LookupTransformation` can handle dynamic objects, allowing flexible data structures. This is particularly useful for handling data with varying schemas or for on-the-fly manipulation:
+
+```csharp
+var dynamicLookupSource = new MemorySource<dynamic>();
+dynamicLookupSource.DataAsList = new List<dynamic> {
+    new { Key = 1, Value = "DynamicValue1" },
+    new { Key = 2, Value = "DynamicValue2" }
+};
+
+var dynamicLookup = new LookupTransformation<dynamic, dynamic>();
+dynamicLookup.Source = dynamicLookupSource;
+dynamicLookup.ApplyRetrievedCacheToInput = (input, cache) => {
+    input.DynamicValue = cache.List.FirstOrDefault(l => l.Key == input.Key)?.Value;
+    return input;
+};
+
+```
+
+## Error Handling
+
+Handling errors during the lookup process is crucial for maintaining data integrity and ensuring the ETL process completes successfully. The `LookupTransformation` allows you to define custom error handling logic:
+
+```csharp
+lookup.OnException = (ex, row) => {
+    Console.WriteLine($"Error processing row {row.Id}: {ex.Message}");
+};
+```
+
+This error handler will be called whenever an exception occurs, allowing you to log the error, skip the problematic row, or take other appropriate actions.
+
+## Attribute-Based Configuration
+
+Attributes can be used to define which columns should be used for matching and retrieving data, simplifying the setup of the `LookupTransformation`. Define your data models with custom attributes:
+
+```csharp
+public class InputData {
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
+
+public class LookupData {
+    [MatchColumn("Id")]
+    public int LookupId { get; set; }
+    [RetrieveColumn("Value")]
+    public string LookupValue { get; set; }
+}
+
+var lookup = new LookupTransformation<InputData, LookupData>();
+lookup.Source = lookupSource;
+```
+
+### Multiple Match and Retrieve Columns
+
+You can define models with multiple match and retrieve columns, allowing for complex data transformations:
+
+```csharp
+public class InputRow {
+    public int? Id1 { get; set; }
+    public int? Id2 { get; set; }
+    public string Value { get; set; }
+}
+
+public class LookupRow {
+    [MatchColumn("Id1")]
+    public int? LookupId1 { get; set; }
+    [MatchColumn("Id2")]
+    public int? LookupId2 { get; set; }
+    [RetrieveColumn("Value")]
+    public string LookupValue { get; set; }
+}
+
+var lookup = new LookupTransformation<InputRow, LookupRow>();
+lookup.Source = lookupSource;
+```
+
+The `LookupTransformation` can handle nullable values in both input and lookup data models, ensuring that all relevant data is considered during the lookup process.
 
 ### Attributes with dynamic objects
 
-Instead of using classic objects for the flow, the same can be achieved using the (dynamic) ExpanoObject. This object allows you to dynamically add properties to it, and there won't be any compile-time type checks for this object. 
+Instead of using classic objects for the flow, the same can be achieved using the (dynamic) ExpandoObject. This object allows you to dynamically add properties to it, and there won't be any compile-time type checks for this object. 
 
 This is how the code looks like using the ExpandoObject:
 
@@ -290,80 +330,26 @@ This is how the code looks like using the ExpandoObject:
 }
 ```
 
-Please note that you now have to manually set up the Match and Retrieve columns properties for the lookup. 
 
-### Multiple attributes
+## Additional Properties
 
-The MatchColumn and RetrieveColumn can be applied to as many properties as needed. If there are multiple MatchColumns, all properties need to be equal the source data to be identified as a match. If there are multiple retrieve columns, all columns from the source which names match with the properties are retrieved.
+The `MaxBufferSize` property sets the maximum buffer size for the lookup transformation. This number determines how many rows are processed for each lookup operation. Default is 1000. 
 
-## Partial cache
-
-By default, all data is always loaded into memory. This is called "FullCache".
-
-If you use a `DbSource` as lookup source, you might want to avoid to load all data into memory. This can be achieved by setting up a partial db cache. Let's stick to our example above. The easiest way to use the partial cache here to set the `CacheMode` to `CacheMode.PartialFromDb`. As we only have 2 records in the source, we can also set the LoadBatchSize to 1.
-
-```C#
-lookup.CacheMode = CacheMode.PartialFromDb;
-lookup.PartialCacheSettings.LoadBatchSize = 1;
+```csharp
+public int MaxBufferSize { get; set; }
 ```
 
- So only source data from the database would be loaded for every ingoing row. The default batch size for the lookup is 1000. The batch size of 1 would be not a good choice in your production code, it is only used here for the sake of the example. 
+The `UseExactNumericTypes` property determines whether exact numeric types should be used. E.g. the string "7" and the integer 7 have different data types, but will still be identifed as a match from the Lookup. Settings this to true will take the data types into account.
 
-### Sql for partial cache
-
-Just setting the cache mode to `PartialFromDb` only works if you are using the Match/Retrieve columns. If you don't make use of these, the lookup cache won't know by which key columns data should be retrieve from the lookup source. 
-But you can define your own sql code to describe how to load data into the lookup cache:
-
-```C#
-lookup.CacheMode = CacheMode.PartialFromDb;
-lookup.PartialCacheSettings.LoadBatchSize = 1;
-lookup.PartialCacheSettings.LoadCacheSql = batch =>
-    $@"SELECT Id, Name
-        FROM CustomerTable
-        WHERE Name in ({string.Join(",", batch.Select(r => $"'{r.CustomerName}'"))})";
+```csharp
+public bool UseExactNumericTypes { get; set; }
 ```
 
-As input for the `LoadCacheSql` expression you will receive the current batch. This data can be used to read the proper data from the source into the cache. As we have choosen the batch size 1 in our example, we will retrieve only one id and one name from the source. But you should try to use the default batch size of 1000 when you use the partial cache in your code.  
-
-## Using the underlying dictionary 
-
-You may have notice that the `ApplyRetrievedCacheToInput` fucntion is giving you a `CachedData` object that holds two collection with data from the lookup source. One is called `List` and contains and IEnumerable, which you could use. But in order to find object in this collection can sometimes take a while, depending on the size of your lookup source data. 
-
-Additionally, you can use the `Items` or `ItemCollections`. The first one will only contain data if you have set `PermitMultipleEntriesPerKey` to false. If this is set to true, you are allowing the Lookup to have more than one match for a key. Then you will find all data that matches with the key in the `ItemsCollection` dictionary. Both are dictionaries, and accessing data in here will be much faster than using the `List` property (which is only a wrapper for the values of the current applicable dictionary)
-
-When you use the `LookupTransformation` via the Match/Retrieve attributes only, you don't have to mind about performance. Internally, the lookup cache will be access via the dictionary keys, and everything should run fast.  
 
 
-### Defining your own keys
 
-The lookup expects that the incoming and the lookup object have a unique key that then is used for matching. You can define your own custom logic how the key is retrieved from both.
 
-```C#
-var orderSource = new MemorySource<Order>();
-orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
-orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
 
-var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
-var lookup = new LookupTransformation<Order, Customer>();
-lookup.Source = lookupSource;
-lookup.InputKeySelector = inputrow => inputrow.CustomerName;
-lookup.SourceKeySelector = sourcerow => sourcerow.Name;
-lookup.ApplyRetrievedCacheToInput = (inputrow, cache) => {
-    if (cache.Items.ContainsKey(inputrow.CustomerName))
-        inputrow.CustomerId = cache.Items[inputrow.CustomerName].Id;
-    return inputrow;
-};
 
-var dest = new MemoryDestination<Order>();
 
-orderSource.LinkTo(lookup).LinkTo(dest);
-Network.Execute(orderSource);
-
-foreach (var row in dest.Data)
-    Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
-
-//Output
-//Order:815 Name:John Id:1 
-//Order:4711 Name:Jim Id:2
-```
