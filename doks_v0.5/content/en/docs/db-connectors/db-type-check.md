@@ -162,3 +162,93 @@ Network.Execute(source);
 ### Dynamic Object Support
 
 DbTypeCheck, like all ETLBox components, supports both strongly-typed objects (e.g., `DbTypeCheck<MyRow>`) and dynamic `ExpandoObject` (either `DbTypeCheck<ExpandoObject>` or `DbTypeCheck`).
+
+
+## Handling Conversion Errors
+
+The DbTypeCheck component can now capture detailed information about why a type check failed and store this information in the `ConversionError` property of a POCO or a dynamic object. This enhancement helps in diagnosing and debugging data issues by providing clear error messages for each flawed record.
+
+### ConversionError Class
+
+The `ConversionError` class contains the following properties:
+- **PropertyName**: The name of the property that caused the error.
+- **Reason**: A description of why the conversion failed.
+- **Value**: The value that failed the conversion check.
+
+### Example Usage with POCO
+
+Here's how you can use the `ConversionError` property in a POCO class:
+
+```C#
+public class MyDataTypeRow
+{
+    [DbColumnMap("IntCol")]
+    public int? SomeInt { get; set; }
+
+    [DbColumnMap("StringCol")]
+    public string SomeString { get; set; }
+
+    public ConversionError ConversionError { get; set; }
+}
+
+DbTypeCheck<MyDataTypeRow> check = new DbTypeCheck<MyDataTypeRow>(SqlConnection, "destination_table");
+check.IncludeCharLength = true;
+check.IncludeBinaryLength = true;
+
+var source = new MemorySource<MyDataTypeRow>(
+    new List<MyDataTypeRow>
+    {
+        new MyDataTypeRow { SomeInt = null, SomeString = "Test" }, // This will cause an error
+        new MyDataTypeRow { SomeInt = 1, SomeString = "Valid" }
+    });
+
+var flawedRowsDest = new MemoryDestination<MyDataTypeRow>();
+
+source.LinkTo(check);
+check.LinkTo(new DbDestination<MyDataTypeRow>(SqlConnection, "destination_table"));
+check.LinkFlawedTo(flawedRowsDest);
+
+Network.Execute(source);
+
+foreach (var row in flawedRowsDest.Data)
+{
+    Console.WriteLine($"Error in property {row.ConversionError.PropertyName}: {row.ConversionError.Reason}");
+}
+```
+
+### Example Usage with Dynamic Object
+
+Here's how you can use the `ConversionError` property with a dynamic object:
+
+```C#
+dynamic CreateExpandoObject(int? someInt, string someString)
+{
+    dynamic expando = new ExpandoObject();
+    expando.SomeInt = someInt;
+    expando.SomeString = someString;
+    return expando;
+}
+
+var source = new MemorySource<ExpandoObject>(
+    new List<ExpandoObject>
+    {
+        CreateExpandoObject(null, "Test"), // This will cause an error
+        CreateExpandoObject(1, "Valid")
+    });
+
+var check = new DbTypeCheck<ExpandoObject>(SqlConnection, "destination_table");
+
+var flawedRowsDest = new MemoryDestination<ExpandoObject>();
+
+source.LinkTo(check);
+check.LinkTo(new DbDestination<ExpandoObject>(SqlConnection, "destination_table"));
+check.LinkFlawedTo(flawedRowsDest);
+
+Network.Execute(source);
+
+foreach (dynamic row in flawedRowsDest.Data)
+{
+    Console.WriteLine($"Error in property {row.ConversionError.PropertyName}: {row.ConversionError.Reason}");
+}
+```
+
