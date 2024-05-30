@@ -100,7 +100,9 @@ In the main method, a `while` loop periodically checks if the network has comple
 
 The buffer size could be adjusted (`Settings.MaxBufferSize = 5000`) if you want to work with larger amounts of data - please also adjust the number of generated records in the `for` loop. 
 
+### Code on Github
 
+The entire code for this example, along with additional resources and documentation, {{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/AsyncExecution" >}}.
 
 
 
