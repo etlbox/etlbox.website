@@ -466,3 +466,58 @@ Received Col1: 2, Col2: Test2
 Received Col1: 3, Col2: Test3
 */
 ```
+
+## Reading data from MIME multipart response
+
+If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source. 
+
+```C#
+public void ReadingMultipartMessage() {
+    int port = CreateMultipartContentServer();
+
+    MemoryDestination dest = new MemoryDestination();
+    CsvSource source = new CsvSource(@$"http://localhost:{port}/test");
+    source.UseMulitpartContent = content => content.Headers.ContentType.MediaType == "text/csv";
+    source.ResourceType = ResourceType.Http;
+    source.LinkTo(dest);
+    Network.Execute(source);
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($"Received Header1: {row.Header1}, Header2: {row.Header2}");
+    
+}
+
+private static int CreateMultipartContentServer() {
+    var headers = new Dictionary<string, string>();
+    headers.Add("Content-Type", @"multipart/mixed; boundary=""boundary""");
+    var server = WireMockServer.Start();
+    server
+        .Given(Request.Create().WithPath("/test").UsingGet())
+        .RespondWith(
+            Response.Create()
+                .WithStatusCode(200)
+                .WithHeaders(headers)
+                .WithBody(@"
+--boundary
+Content-Type: text/plain
+
+Ignored
+--boundary
+Content-Type: text/csv
+
+Header1,Header2
+1,Test1
+2,Test2
+3,Test3
+
+--boundary
+Content-Type: text/plain
+
+Ignored
+--boundary--
+")
+        );
+    var port = server.Ports.First();
+    return port;
+}
+```

@@ -92,6 +92,40 @@ source.HttpRequestMessage.Headers.UserAgent.Add(new System.Net.Http.Headers.Prod
 source.HttpRequestMessage.Headers.CacheControl = new System.Net.Http.Headers.CacheControlHeaderValue() { NoCache = true };
 ```
 
+#### MIME multipart responses
+
+If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source. 
+
+E.g. if you receive a response like this:
+
+```
+Content-Type: multipart/mixed; boundary=boundary
+--boundary
+Content-Type: text/plain
+
+Ignore this
+--boundary
+Content-Type: text/csv
+
+Header1,Header2
+1,Test1
+2,Test2
+3,Test3
+
+--boundary
+Content-Type: text/plain
+
+    Ignore this also
+--boundary--
+```
+
+You could specify to only use the part with the content type `text/csv`:
+
+```C#
+CsvSource source = new CsvSource(@$"http://localhost:/test");
+source.UseMulitpartContent = content => content.Headers.ContentType.MediaType == "text/csv";
+```
+
 #### ResourceType AzureBlob
 
 If your csv data is stored in an Azure Blob storage, you can retrieve it like this:
