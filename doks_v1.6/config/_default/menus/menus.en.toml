@@ -45,7 +45,7 @@
 [[main]]
   name = "Try yourself"
   identifier = "trial"
-  url = "/product/get-trial"
+  url = "/support/get-trial"
   weight = 44
   parent = "product"
 
@@ -98,7 +98,7 @@
 
  [[footer_2]]
    name = "Try yourself"
-   url = "/product/get-trial"
+   url = "/support/get-trial"
    weight = 560
 
   [[footer_2]]

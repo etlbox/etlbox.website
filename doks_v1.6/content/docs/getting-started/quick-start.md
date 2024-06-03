@@ -314,7 +314,7 @@ With this configuration, you should now see log output printed on your console!
 
 ## Where to continue
 
-Now you are ready to try out ETLBox. All {{< link-ext text="ETLBox packages are available on nuget" url="https://www.nuget.org/packages?q=etlbox" >}}. The free versions allows you to process up to 5.000 for a component - this should be enough to perform tests in your test environment. If you are ready to deploy ETLBox in your production environment, [please purchase the adequate license](/pricing/). If you want to try ETLBox without limitations, you can [request a free trial key](/product/get-trial/).
+Now you are ready to try out ETLBox. All {{< link-ext text="ETLBox packages are available on nuget" url="https://www.nuget.org/packages?q=etlbox" >}}. The free versions allows you to process up to 5.000 for a component - this should be enough to perform tests in your test environment. If you are ready to deploy ETLBox in your production environment, [please purchase the adequate license](/support/pricing/). If you want to try ETLBox without limitations, you can [request a free trial key](/support/get-trial/).
 
 To learn more about ETLBox, just continue reading.
 
