@@ -18,7 +18,10 @@
   {{ end -}}
 
     <!-- Site title -->
-    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">{{ .Site.Title }}</a>
+    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">
+      <img src="/logos/svg/logo_etlbox_32x32.svg" alt="ETLBox" width="32" height="32">
+      {{ .Site.Title }}
+    </a>
 
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
