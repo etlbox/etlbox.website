@@ -51,7 +51,7 @@
 
 [[main]]
   name = "Pricing"
-  url = "/pricing/"
+  url = "/support/pricing"
   identifier = "pricing"
   weight = 50
 
