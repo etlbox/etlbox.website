@@ -1,84 +1,123 @@
-# [[docs]]
-#   name = "Prologue"
-#   weight = 10
-#   identifier = "prologue"
-#   url = "/docs/prologue/"
-
-# [[docs]]
-#   name = "Help"
-#   weight = 60
-#   identifier = "help"
-#   url = "/docs/help/"
-
-# [[docs]]
-#   name = "Lorem"
-#   weight = 70
-#   identifier = "lorem"
-#   url = "/docs/lorem/"
-
-[[guide]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/guide/lorem/"
-
-[[tutorial]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/tutorial/lorem/"
-
 [[main]]
   name = "Docs"
-  url = "/docs/guides/example-guide/"
-# url = "/docs/1.0/prologue/introduction/"
+  url = "/docs/getting-started/quick-start/"
+  identifier = "docs"
   weight = 10
 
 [[main]]
-  name = "Blog"
-  url = "/blog/"
+  name = "Recipes"
+  identifier = "recipes"
+  url = "/recipes/basics/basic-example"
+  weight = 20
+
+[[main]]
+  name = "API"
+  url = "/api/"
+  identifier = "api"
   weight = 30
 
-# [[social]]
-#   name = "Twitter"
-#   pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>'
-#   url = "https://twitter.com/getdoks"
-#   weight = 10
-# 
-# [[social]]
-#   name = "Discord"
-#   pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-discord" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M8.5 17c0 1 -1.356 3 -1.832 3c-1.429 0 -2.698 -1.667 -3.333 -3c-.635 -1.667 -.476 -5.833 1.428 -11.5c1.388 -1.015 2.782 -1.34 4.237 -1.5l.975 1.923a11.913 11.913 0 0 1 4.053 0l.972 -1.923c1.5 .16 3.043 .485 4.5 1.5c2 5.667 2.167 9.833 1.5 11.5c-.667 1.333 -2 3 -3.5 3c-.5 0 -2 -2 -2 -3"></path><path d="M7 16.5c3.5 1 6.5 1 10 0"></path></svg>'
-#   url = "https://getdoks.org/chat"
-#   weight = 20
+[[main]]
+  name = "Product"
+  weight = 40
+  identifier = "product"
+
+[[main]]
+  name = "Support"
+  identifier = "support"
+  url = "/support/options/"
+  weight = 41
+  parent = "product"
+
+[[main]]
+  name = "Release notes"
+  identifier = "release-notes"
+  url = "/product/release-notes/"
+  weight = 42
+  parent = "product"
+
+[[main]]
+  name = "Register license"
+  identifier = "register-license"
+  url = "/product/register-license"
+  weight = 43
+  parent = "product"
+
+[[main]]
+  name = "Try yourself"
+  identifier = "trial"
+  url = "/product/get-trial"
+  weight = 44
+  parent = "product"
+
+[[main]]
+  name = "Pricing"
+  url = "/pricing/"
+  identifier = "pricing"
+  weight = 50
+
+[[more]]
+  name = "More"
+  identifier = "more"
+  weight = 60
+
+[[more]]
+  name = "More"
+  identifier = "more"
+  weight = 315
 
 [[social]]
-  name = "GitHub"
-  pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>'
-  url = "https://github.com/gethyas/doks"
-  post = "v0.1.0"
-  weight = 30
+  name = "Nuget"
+  pre = "<svg width=\"20px\" height=\"20px\" viewBox=\"0 0 512 512\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><defs><polygon id=\"path-1\" points=\"0 46.021103 0 3.7002935 84.6521577 3.7002935 84.6521577 88.3419125 0 88.3419125\"></polygon></defs><g id=\"Symbols\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g id=\"nuget\"><g id=\"Global/Logo\" transform=\"translate(0.000000, 6.000000)\"><path d=\"M374.424959,454.856991 C327.675805,454.856991 289.772801,416.950177 289.772801,370.196324 C289.772801,323.463635 327.675805,285.535656 374.424959,285.535656 C421.174113,285.535656 459.077116,323.463635 459.077116,370.196324 C459.077116,416.950177 421.174113,454.856991 374.424959,454.856991 M205.565067,260.814741 C176.33891,260.814741 152.657469,237.109754 152.657469,207.901824 C152.657469,178.672728 176.33891,154.988907 205.565067,154.988907 C234.791225,154.988907 258.472666,178.672728 258.472666,207.901824 C258.472666,237.109754 234.791225,260.814741 205.565067,260.814741 M378.170817,95.6417786 L236.886365,95.6417786 C164.889705,95.6417786 106.479717,154.057639 106.479717,226.082702 L106.479717,367.360191 C106.479717,439.40642 164.889705,497.77995 236.886365,497.77995 L378.170817,497.77995 C450.209803,497.77995 508.577466,439.40642 508.577466,367.360191 L508.577466,226.082702 C508.577466,154.057639 450.209803,95.6417786 378.170817,95.6417786\" id=\"Fill-12\" fill=\"#004880\" fill-rule=\"evenodd\"></path><mask id=\"mask-2\" fill=\"white\"><use xlink:href=\"#path-1\"></use></mask><g id=\"Clip-15\"></g><path d=\"M84.6521577,46.0115787 C84.6521577,69.3990881 65.6900744,88.3419125 42.3260788,88.3419125 C18.9409203,88.3419125 0,69.3990881 0,46.0115787 C0,22.6452344 18.9409203,3.68124485 42.3260788,3.68124485 C65.6900744,3.68124485 84.6521577,22.6452344 84.6521577,46.0115787\" id=\"Fill-14\" fill=\"#004880\" fill-rule=\"evenodd\" mask=\"url(#mask-2)\"></path></g></g></g></svg>"
+  url = "https://www.nuget.org/profiles/ETLBox"
+  weight = 490
 
-# [[sidebar_docs]]
-#   name = "Guides"
-#   pageRef = "/docs/guides"
-#   weight = 10
-# 
-# [[sidebar_docs]]
-#   name = "Reference"
-#   pageRef = "/docs/reference"
-#   weight = 20
-# 
-# [[sidebar_docs]]
-#   name = "Resources"
-#   pageRef = "/docs/resources"
-#   weight = 30
+ [[footer_1]]
+   name = "Home"
+   url = "/"
+   weight = 500
 
-[[footer]]
-  name = "Privacy Policy"
-  url = "/privacy/"
-  weight = 10
+ [[footer_1]]
+   name = "Docs"
+   url = "/docs/getting-started/quick-start"
+   weight = 510
 
-# [[footer]]
-#   name = "Terms of Service"
-#   url = "/terms/"
-#   weight = 20
+ [[footer_1]]
+   name = "Recipes"
+   url = "/recipes/basics/basic-example/"
+   weight = 520
+
+ [[footer_1]]
+   name = "API"
+   url = "/api/"
+   weight = 530
+
+ [[footer_2]]
+   name = "Pricing"
+   url = "/pricing"
+   weight = 540
+
+ [[footer_2]]
+   name = "Try yourself"
+   url = "/product/get-trial"
+   weight = 560
+
+  [[footer_2]]
+    name = "Register license"
+    url = "/product/register-license"
+    weight = 570
+
+ [[footer_2]]
+   name = "Release notes"
+   url = "/product/release-notes"
+   weight = 580
+
+ [[footer_3]]
+   name = "Support"
+   url = "/support/options"
+   weight = 590
+
+ [[footer_3]]
+   name = "Privacy policy"
+   url = "/support/privacy-policy/"
+   weight = 600
+
