@@ -93,7 +93,7 @@
 
  [[footer_2]]
    name = "Pricing"
-   url = "/pricing"
+   url = "/pricing/overview"
    weight = 540
 
  [[footer_2]]

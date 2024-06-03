@@ -1,4 +1,16 @@
-<div class="alert alert-warning d-flex" role="alert">
-  <div class="flex-shrink-1 alert-icon"><i class="bi-info-circle"></i></div>
-  <div class="w-100">{{ with .Get "text" }}{{ . | safeHTML }}{{ end }}</div>
+{{- /*
+  A wrapper for the new callout shortcode
+*/ -}}
+
+{{- $icon := .Get "icon" -}}
+
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  {{ with $icon -}}
+    {{ partial "inline-svg" (dict "src" $icon "class" "callout-icon me-2 mb-3") }}
+  {{- end }}
+  <div class="callout-content">
+    <div class="callout-body">
+      {{ with .Get "text" }}{{ . | safeHTML }}{{ end }}
+    </div>
+  </div>
 </div>
