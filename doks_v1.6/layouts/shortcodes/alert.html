@@ -1,0 +1,4 @@
+<div class="alert alert-warning d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon"><i class="bi-info-circle"></i></div>
+  <div class="w-100">{{ with .Get "text" }}{{ . | safeHTML }}{{ end }}</div>
+</div>
