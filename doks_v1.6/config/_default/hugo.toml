@@ -1,5 +1,5 @@
-title = "My Docs"
-baseurl = "http://localhost/"
+title = "ETLBox"
+baseurl = "https://www.etlbox.net/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

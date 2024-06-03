@@ -1,13 +1,13 @@
 # Hugo
 title = "ETLBox"
-description = "Congrats on setting up a new Doks project!"
+description = "Simple API to code ETL jobs in .NET & C#. Extremely fast data processing engine. Runs inside your applications, APIs, and jobs. Extract, filter, transform, migrate data on-the-fly."
 images = ["cover.png"]
 
 # mainSections
 mainSections = ["docs"]
 
-[social]
-  twitter = "getdoks"
+#[social]
+  #twitter = "etlbox"
 
 # Doks (@hyas/doks-core)
 [doks]
@@ -20,9 +20,9 @@ mainSections = ["docs"]
   containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
 
   ## Button
-  navBarButton = false # false (default) or true
-  navBarButtonUrl = "/docs/prologue/introduction/"
-  navBarButtonText = "Get started"
+  navBarButton = true # false (default) or true
+  navBarButtonUrl = "/product/get-trial/"
+  navBarButtonText = "Try now!"
 
   # FlexSearch
   flexSearch = true # true (default) or false
@@ -59,7 +59,7 @@ mainSections = ["docs"]
   docsVersion = "1.0"
 
   # UX
-  headerBar = false # true (default) or false
+  headerBar = true # true (default) or false
   backgroundDots = true # true (default) or false
 
   # Homepage
@@ -74,7 +74,7 @@ mainSections = ["docs"]
   editPage = true # false (default) or true
   lastMod = true # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/h-enk/doks"
+  docsRepo = "https://github.com/etlbox/etlbox.website/blob/main/doks_v1.6"
   docsRepoBranch = "main" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
@@ -124,15 +124,15 @@ mainSections = ["docs"]
     sizes = []
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)
-    maskIcon = "mask-icon.svg" # mask-icon.svg (default)
+    maskIcon = "favicon.svg" # mask-icon.svg (default)
     maskIconColor = "white" # white (default)
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Hyas" # Name of Organization or Person
+    name = "ETLBox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
     images = ["cover.png"] # ["cover.png"] (default)
-    article = [] # Article sections
+    article = ["recipes"] # Article sections
     newsArticle = [] # NewsArticle sections
-    blogPosting = ["blog"] # BlogPosting sections
-    product = [] # Product sections
+    blogPosting = [] # BlogPosting sections
+    product = ["docs"] # Product sections
