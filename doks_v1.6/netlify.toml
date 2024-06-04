@@ -2,6 +2,9 @@
   publish = "public"
   functions = "functions"
 
+[functions]
+  directory = "assets/lambda"
+
 [build.environment]
   NODE_VERSION = "20.11.0"
   NPM_VERSION = "10.2.4"
@@ -30,8 +33,6 @@
   publish = "public"
   autoLaunch = false
 
-# Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
-
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
 [[headers]]
   for = "/*"
@@ -47,3 +48,58 @@
     public,
     max-age=31536000'''
     Access-Control-Allow-Origin = "*"
+
+# Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+[[redirects]]
+  from = "/demo/api/orders"
+  to = "/.netlify/functions/orders"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/book"
+  to = "https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/servicedesk"
+  to = "https://etlbox.atlassian.net/servicedesk/customer/portals"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/helpdesk"
+  to = "https://etlbox.atlassian.net/servicedesk/customer/portals"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/std-eula"
+  to = "https://www.etlbox.net/product/licenses/standard-eula/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/rf-eula"
+  to = "https://www.etlbox.net/product/licenses/royality-free-eula/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/register-license"
+  to = "https://www.etlbox.net/product/register-license/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/register"
+  to = "https://www.etlbox.net/product/register-license/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "https://www.etlbox.net/support/privacy-policy/"
+  status = 302
+  force = true
