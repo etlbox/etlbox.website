@@ -140,7 +140,7 @@ draft: false
 - \[BREAKING\] DbMerge.MergeProperties: The properties (IdColumns, UpdateColumns, CompareColumns, DeleteColumns) are now direct properties of DbMerge
 - \[BREAKING\] Renamed enum ConnectionManagerType to ConnectionType, Property IConnectionManager.ConnectionManagerType to ConnectionType
 
-### Bug fixes
+#### Bug fixes
 
 - Fixed issues with spaces in table names for GetTableListTask
 - Improving support for dynamic objects in Azure ServiceBusSource
@@ -194,7 +194,7 @@ draft: false
 
 #### Features
 
-- Distinct: now offers LinkDuplicatesTo(..) to forward duplicates into separate output 
+- Distinct: now offers LinkDuplicatesTo(..) to forward duplicates into separate output
 - DbMerge: Performs implicit type cast when determining equality of CompareColumns
 - DbMerge: Records marked as deletion but not present in destination now flagged with ChangeAction NotFound
 - DbMerge: Adding ColumnConverters
@@ -211,7 +211,7 @@ draft: false
 
 ## Version 2.6.5
 
-#### Features 
+#### Features
 - PostgresSql bulk insert now adds flawed data row information to Data dictionary of Exception message
 
 #### Bug fixes
@@ -255,7 +255,7 @@ draft: false
 - Improving support for BulkOperations (preparation for future EntityFramework support)
 - ETLBoxNotSupportException replaced with System.NotSupportedException
 
-#### Bug fixes 
+#### Bug fixes
 
 - GetDatabaseListTask now properly treats databases with special characters in name
 
@@ -271,7 +271,7 @@ draft: false
 - ETLBoxError: Original exception now retrievable with GetException()
 - New connector: (Sybase) SAP ASE
 
-#### Bug fixes 
+#### Bug fixes
 
 - Nullable int replaced with int type in ExcelColumn attribute \(non basic CLR types lead to issues in attributes\)
 
@@ -330,7 +330,7 @@ draft: false
 
 ## Version 2.5.1
 
-#### Features 
+#### Features
 
 - DbMerge: Added new MergeMode 'InsertsOnly'
 
@@ -342,12 +342,12 @@ draft: false
 - Support that HttpRequestMessage can be changed in StreamMetaData when using GetNextUri/HasNextUri pattern
 - Updated third party dependencies to latest version
 - Upgraded CsvHelper to latest version (some Configurations are now part of Context object). This change may be a breaking change depending on your usage
- of CsvHelper specific configuration settings. Please refer to the {< link-ext url="https://joshclose.github.io/CsvHelper/change-log/" text="CsvHelper release notes" >} to see what changed here. 
+ of CsvHelper specific configuration settings. Please refer to the {< link-ext url="https://joshclose.github.io/CsvHelper/change-log/" text="CsvHelper release notes" >} to see what changed here.
 - Breaking change: DataFlow.LoggingThresholdRows renamed to LogThreshold
 - Breaking change: Combining CreateLogTable and ReadLogTable tasks into LogTask (e.g. use `LogTask.CreateLogTable(..)` instead)
-- Breaking change: Introducing structured logging - core package now supports general ILogger interface instead NLog. You can now assign your ILogger instance to the static property `Logging.LogInstance`. Now NLog, Serilog and other logger supporting the log abstraction interface will be supported.  
+- Breaking change: Introducing structured logging - core package now supports general ILogger interface instead NLog. You can now assign your ILogger instance to the static property `Logging.LogInstance`. Now NLog, Serilog and other logger supporting the log abstraction interface will be supported.
 - LoadProcess: adding SourceId column to ease joins with other tables
-- Combining CustomTask/Package/Sequence into LogSection 
+- Combining CustomTask/Package/Sequence into LogSection
 - Combining Create/Start/Abort/End/Read LoadProcessTasks into one LoadProcessTask (e.g. use `LoadProcessTask.Create()` instead)
 - Added support for FOREIGN KEY  constraints in `CreateTableTask` and `TableDefinition` object
 - Added Parquet source/destination
@@ -416,7 +416,7 @@ draft: false
 
 ## Version 2.4.0
 
-#### Features 
+#### Features
 
 - TextSource: ParseLineAction changed to ParseLineFunc
 - StreamMetaData holds number of processed rows per request
@@ -433,12 +433,12 @@ draft: false
 
 ## Version 2.3.2
 
-#### Features 
+#### Features
 
-*General*: 
+*General*:
 - Auto generated xml documentation added to package - now visible with Intellisense or when browsing package content.
 
-*DataFlow*: 
+*DataFlow*:
 - ExcelSource exposes parsed header names in FieldHeaders property.
 - DbSource has ColumnConverters property
 
@@ -447,11 +447,11 @@ draft: false
 #### Features
 
 *ConnectionManagers*:
-- ODBC/OleDb now have ConnectionManagerType property settable. 
+- ODBC/OleDb now have ConnectionManagerType property settable.
 
 *ControlFlow*:
 - Db2 now has support for schemas
-- CreateTableTask: Now offers functionality to alter tables (Alter() / CreateOrAlter()) 
+- CreateTableTask: Now offers functionality to alter tables (Alter() / CreateOrAlter())
 - CreateSchemaTask supports authorization
 - Added GetTableListTask (return all tables in database)
 
@@ -460,11 +460,11 @@ draft: false
 - All executable sources allow to set limit for records to read
 - Added property KeepIdentity to DbDestination which allows overwriting of Identity columns
 - DataConverters available for DbDestination (allows to add custom column converter)
-- (Breaking Change) DbSource: Replace List<string>ColumnNames prop with ICollection<ColumnMap> ColumnMapping 
+- (Breaking Change) DbSource: Replace List<string>ColumnNames prop with ICollection<ColumnMap> ColumnMapping
 - (Breaking change) Improved naming in ColumnMap Attribute (NewName = PropertyName, CurrentName = DbColumnName)
-- (Breaking change) ColumnRename now uses RenameColumn attribute instead ColumnMapping. 
+- (Breaking change) ColumnRename now uses RenameColumn attribute instead ColumnMapping.
 
-#### Bug fixes 
+#### Bug fixes
 
-- Postgres connection manager now has full support for jsonb columns.  
+- Postgres connection manager now has full support for jsonb columns.
 - DbSource/Sql property: Whitespace in column aliases are now properly parsed as column names.
