@@ -2,14 +2,13 @@
 
 .api .card {
     margin: 1rem;
-    font-size: $font-size-sm;
-    //width: 23rem;
+    font-size: $font-size-base;
   }
 
 .api .card .card-header {
     color:$body-color;
     font-weight: 700;
-    font-size: $font-size-base*1.2;
+    font-size: $font-size-base*1.1;
 }
 
 @include color-mode(dark) {

@@ -7,26 +7,6 @@ $green: hsl(101, 82%, 63%);
 $primary: $blue; //changed
 $info: $blue;
 
-$enable-negative-margins: true;
-
-$body-color: $db-bluishCyan-100;
-
-$link-decoration: none;
-$link-hover-decoration: underline;
-
-$container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1240px,
-    xxl: 1320px
-);
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-
-$grid-columns: 16;
-$grid-gutter-width: 3rem;
-
 $font-family-sans-serif: //changed
   "Segoe UI",
   system-ui,
@@ -50,22 +30,6 @@ $headings-font-weight: 700;
 $headings-color: null;
 
 $lead-font-weight: 400;
-
-$input-btn-focus-width: 0;
-$input-btn-focus-box-shadow: none;
-
-$gray-200: #e9ecef;
-
-$card-border-color: $gray-200;
-
-$spacer: 1rem;
-
-$alert-padding-x: $spacer * 1.5;
-$alert-margin-bottom: 0;
-$alert-border-radius: 0;
-$alert-border-width: 0;
-
-$offcanvas-horizontal-width: 332px;
 
 // Dark color mode variables
 $light-bg-subtle-dark: hsl(224, 14%, 16%);
