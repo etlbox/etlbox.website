@@ -49,6 +49,18 @@
     max-age=31536000'''
     Access-Control-Allow-Origin = "*"
 
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+
+	[plugins.inputs]
+    baseUrl = "https://etlbox.netlify.app/"
+    sitemapPath = "/sitemap.xml"
+    ignorePeriod = 0
+    providers = [
+      "google",
+      "yandex",
+      "bing"
+    ]
 # Header Doks0.5:
 # Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 #  X-Content-Type-Options: nosniff
