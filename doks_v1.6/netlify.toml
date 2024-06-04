@@ -53,7 +53,7 @@
   package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
-    baseUrl = "https://etlbox.netlify.app/"
+    baseUrl = "https://www.etlbox.net"
     sitemapPath = "/sitemap.xml"
     ignorePeriod = 0
     providers = [
