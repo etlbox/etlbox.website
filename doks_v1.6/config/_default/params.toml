@@ -72,11 +72,12 @@ mainSections = ["docs"]
 
   # Repository
   editPage = true # false (default) or true
-  lastMod = true # false (default) or true
+  lastMod = false # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/etlbox/etlbox.website/blob/main/doks_v1.6"
-  docsRepoBranch = "main" # main (default), master, or <branch name>
+  docsRepo = "https://github.com/etlbox/etlbox.website"
+  docsRepoBranch = "main/doks_v1.6" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
+
 
   # SCSS colors
   # backGround = "yellowgreen"
@@ -132,7 +133,7 @@ mainSections = ["docs"]
     name = "ETLBox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
     images = ["cover.png"] # ["cover.png"] (default)
-    article = ["recipes"] # Article sections
+    article = ["docs", "recipes"] # Article sections
     newsArticle = [] # NewsArticle sections
     blogPosting = [] # BlogPosting sections
-    product = ["docs"] # Product sections
+    product = [] # Product sections
