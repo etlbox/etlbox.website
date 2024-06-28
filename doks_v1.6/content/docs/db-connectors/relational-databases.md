@@ -91,6 +91,8 @@ SELECT CAST(1 as int)                                  as Id
 FROM (SELECT 1 as dm1) as Dummy
 INNER JOIN (SELECT 1 as dm2) as Dummy2
         ON Dummy.dm1 = Dummy2.dm2
+WHERE Dummy1.Id > 100
+  AND Dummy2.Id >= 200
 ",
     ConnectionManager = SqlConnection
 };
