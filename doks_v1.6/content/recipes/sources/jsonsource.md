@@ -11,7 +11,7 @@ weight: 2101
 toc: true
 ---
 
-The JsonDource let you load data in json format from various sources - either from a file, a web service or from an Azure blob. Internally, it uses the {{< link-ext text="Newtonsoft Json library" url="https://www.newtonsoft.com/json" >}}.  
+The JsonDource let you load data in json format from various sources - either from a file, a web service or from an Azure blob. Internally, it uses the {{< link-ext text="Newtonsoft Json library" url="https://www.newtonsoft.com/json" >}}.
 
 ## Shared code
 
@@ -44,7 +44,7 @@ public class SubRecord
     public string Value { get; set; }
     public decimal Number { get; set; }
 }
-        
+
 string sourceFile = "res/Examples/Records.json";
 PrintFile(sourceFile);
 
@@ -180,7 +180,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ### JSON Path in json properties
 
-The ETLBox.Json package provide a `JsonPathConverter` which allows to use JSON Path expression in the `JsonProperty` attributes. 
+The ETLBox.Json package provide a `JsonPathConverter` which allows to use JSON Path expression in the `JsonProperty` attributes.
 
 ```C#
 [JsonConverter(typeof(JsonPathConverter))]
@@ -251,7 +251,7 @@ public void UsingJsonPathConverter() {
 
 ### Reading into dynamic
 
-We can read again the json file in the previous example, this time without using a POCO but a dynamic ExpandoObject. 
+We can read again the json file in the previous example, this time without using a POCO but a dynamic ExpandoObject.
 
 ```C#
 string sourceFile = "res/Examples/Records.json";
@@ -312,7 +312,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ### JSON Path with dynamic
 
-The JSON Path syntax can also be used in combination with dynamic ExpandoObject. You need to add the `ExpandoJsonPathConverter` to the JsonSerializer converters.  
+The JSON Path syntax can also be used in combination with dynamic ExpandoObject. You need to add the `ExpandoJsonPathConverter` to the JsonSerializer converters.
 
 ```C#
 string sourceFile = "res/Examples/Records.json";
@@ -330,7 +330,7 @@ List<JsonProperty2JsonPath> pathLookups = new List<JsonProperty2JsonPath>()
         SearchPropertyName = "Inner",
         JsonPath = "$.Value",
         OutputPropertyName = "Value1",
-        
+
         },
     new JsonProperty2JsonPath() {
         SearchPropertyName = "Inner",
@@ -387,7 +387,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
-## Redirecting errors 
+## Redirecting errors
 
 We can use the error linking if we want to ignore flawed data in the source.
 
@@ -464,9 +464,9 @@ Content of file 'RecordsWithErrors.json'
 ---
 Received Id: 2, Value1: OK, Value2: 1.2
 Received Id: 3, Value1: OK, Value2: 1.3
-Error record: Error converting value {null} to type 'System.Decimal'. Path 'Content[0].Inner.Number', line 7, position 22. 
+Error record: Error converting value {null} to type 'System.Decimal'. Path 'Content[0].Inner.Number', line 7, position 22.
 Error converting value {null} to type 'System.Decimal'. Path 'Content[0].Inner.Number', line 7, position 22.
-Error record: Unexpected character encountered while parsing value: X. Path 'Content[3].Id', line 25, position 13. 
+Error record: Unexpected character encountered while parsing value: X. Path 'Content[3].Id', line 25, position 13.
 Unexpected character encountered while parsing value: X. Path 'Content[3].Id', line 25, position 13.
 */
 
@@ -476,7 +476,7 @@ Unexpected character encountered while parsing value: X. Path 'Content[3].Id', l
 
 You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to go through a set a files, web service endpoints or blobs.
 
-The following example shows the usage with files - change the `ResourceType` e.g. to Http if you want to read json formatted data from more than one endpoint.  
+The following example shows the usage with files - change the `ResourceType` e.g. to Http if you want to read json formatted data from more than one endpoint.
 
 ```C#
 public class Record
@@ -728,5 +728,44 @@ Request finished with status code:OK
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
 Received Id: 3, Value1: Test3, Value2: 1.3
+*/
+```
+
+## Reading a simple String Array
+
+This example reads data from a simple json that holds only an array of strings and converts them into a dynamic object for further processing.
+
+```C#
+PrintFile("res/Examples/StringArray.json");
+
+var source = new JsonSource<string>();
+source.Uri = "res/Examples/StringArray.json";
+var trans = new RowTransformation<string, ExpandoObject>();
+trans.TransformationFunc = s => {
+    dynamic r = new ExpandoObject();
+    r.Text = s;
+    return r;
+};
+var dest = new MemoryDestination();
+
+source.LinkTo(trans);
+trans.LinkTo(dest);
+
+Network.Execute(source);
+
+foreach (dynamic row in dest.Data) {
+    Console.WriteLine(row.Text);
+}
+
+/* Output:
+
+Content of file 'StringArray.json'
+---
+[ "Hansen", "Jensen", "Olsen", "Petersen" ]
+---
+Hansen
+Jensen
+Olsen
+Petersen
 */
 ```
