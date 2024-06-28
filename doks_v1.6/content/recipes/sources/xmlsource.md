@@ -92,13 +92,13 @@ Content of file 'Elements.xml'
 ---
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
-Received Id: 3, Value1: Test3, Value2: 1.3           
+Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
 ### Elements and attributes mixed
 
-If attributes and elements are mixed in your source xml, you can use the Xml attributes provided by the {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.xml.serialization" text="System.Xml.Serialization" >}} namespace. 
+If attributes and elements are mixed in your source xml, you can use the Xml attributes provided by the {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.xml.serialization" text="System.Xml.Serialization" >}} namespace.
 
 ```C#
 [XmlRoot("Element")]
@@ -158,7 +158,7 @@ Content of file 'ElementsAndAttributes.xml'
 ---
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
-Received Id: 3, Value1: Test3, Value2: 1.3       
+Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
@@ -211,13 +211,13 @@ Content of file 'ElementsAndAttributes.xml'
 ---
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
-Received Id: 3, Value1: Test3, Value2: 1.3   
+Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
 ### Different element names
 
-If our source contains not the same element name for our data, but has changing names, we can use the `ElementNameRetrievalFunc` to adjust the element before reading the next element. 
+If our source contains not the same element name for our data, but has changing names, we can use the `ElementNameRetrievalFunc` to adjust the element before reading the next element.
 
 ```C#
 string sourceFile = "res/Examples/DifferentElementNames.xml";
@@ -268,7 +268,7 @@ Received Id: 4, Value: Test4
 */
 ```
 
-## Redirecting errors 
+## Redirecting errors
 
 We can use the error linking if we want to ignore flawed data in the source.
 
@@ -346,7 +346,7 @@ Content of file 'ElementsWithErrors.xml'
 ---
 Received Id: 1, Value1: OK, Value2: 1.1
 Received Id: 3, Value1: OK, Value2: 1.3
-Error record: There is an error in XML document (0, 0). 
+Error record: There is an error in XML document (0, 0).
 <Element>
     <Id>2</Id>
     <Inner>
@@ -354,7 +354,7 @@ Error record: There is an error in XML document (0, 0).
         <Number></Number>
     </Inner>
     </Element>
-Error record: There is an error in XML document (0, 0). 
+Error record: There is an error in XML document (0, 0).
 <Element>
     <Id>X</Id>
     <Inner>
@@ -369,7 +369,7 @@ Error record: There is an error in XML document (0, 0).
 
 You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to go through a set a files, web service endpoints or blobs.
 
-The following example shows the usage with files - change the `ResourceType` e.g. to Http if you want to read xml formatted data from more than one endpoint.  
+The following example shows the usage with files - change the `ResourceType` e.g. to Http if you want to read xml formatted data from more than one endpoint.
 
 ```C#
 [XmlRoot("Element")]
@@ -598,6 +598,144 @@ Content of file 'Elements.xml'
 Request finished with status code:OK
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
-Received Id: 3, Value1: Test3, Value2: 1.3    
+Received Id: 3, Value1: Test3, Value2: 1.3
+*/
+```
+
+## Reading with Namespaces
+
+This example shows how different namespaces in an Xml file can be addressed.
+
+```C#
+XmlSource<FTableRow> source = new XmlSource<FTableRow>("res/Examples/namespaces.xml", ResourceType.File);
+var dest = new MemoryDestination<FTableRow>();
+source.LinkTo(dest);
+Network.Execute(source);
+
+PrintFile("res/Examples/namespaces.xml");
+foreach (var row in dest.Data)
+    Console.WriteLine($"Received: {row.Name} - {row.Width}x{row.Length}x{row.Height}");
+
+//Output
+/*
+Content of file 'namespaces.xml'
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+<h:table xmlns:h="http://www.w3.org/TR/html4/">
+<h:tr>
+<h:td class="green">Apples</h:td>
+<h:td class="yellow">Bananas</h:td>
+</h:tr>
+</h:table>
+<f:table xmlns:f="https://www.w3schools.com/furniture" name="Coffee table">
+<f:width>80</f:width>
+<f:length>120</f:length>
+</f:table>
+<h:table xmlns:h="http://www.w3.org/TR/html4/">
+<h:tr>
+<h:td class="yellow">Lemons</h:td>
+<h:td>Oranges</h:td>
+</h:tr>
+</h:table>
+<h:table xmlns:h="http://www.w3.org/TR/html4/">
+<h:tr>
+<h:td class="green">Kiwis</h:td>
+<h:td class="black">Grapes</h:td>
+</h:tr>
+</h:table>
+<f:table xmlns:f="https://www.w3schools.com/furniture" name="Dining table">
+<f:width>100</f:width>
+<f:length>200</f:length>
+</f:table>
+<f:table xmlns:f="https://www.w3schools.com/furniture" name="Sofa">
+<f:width>400</f:width>
+<f:height>50</f:height>
+</f:table>
+</root>
+---
+Received: Coffee table - 80x120x
+Received: Dining table - 100x200x
+Received: Sofa - 400xx50
+*/
+```
+
+### Adding new column during Extraction
+
+This example shows how a new column can be added to the extracted xml data. This example will also read only data on a particular namespace.
+
+```C#
+[XmlRoot(ElementName = "Main", Namespace = "urn:com.emp/empqueue")]
+public class XmlDataAddCol {
+    public int EmpID { get; set; }
+    [XmlElement("Emp_Name")]
+    public string Name { get; set; }
+    [XmlElement("Emp_Address")]
+    public string Address { get; set; }
+
+    //This is the new column that we want to add,
+    //which doesn't exists in the source xml file
+    public string NewColumn { get; set; }
+}
+
+PrintFile("res/Examples/input.xml");
+var source = new XmlSource<XmlDataAddCol>("res/Examples/input.xml", ETLBox.ResourceType.File);
+source.ElementName = "ag:Main";
+var rowTrans = new RowTransformation<XmlDataAddCol>();
+rowTrans.TransformationFunc = row => {
+    row.NewColumn = "Additional data for id " + row.EmpID;
+    return row;
+};
+var dest = new DataFrameDestination<XmlDataAddCol>();
+
+source.LinkTo(rowTrans);
+rowTrans.LinkTo(dest);
+Network.Execute(source);
+
+Console.WriteLine(dest.DataFrame.ToString());
+
+/* Output
+
+Content of file 'input.xml'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<ag:Emp_queue xmlns:ag="urn:com.emp/empqueue" xmlns:xsi="http://www.w3.org/2001/xmlschema-instance">
+    <ag:Main>
+        <ag:EmpID>1002</ag:EmpID>
+        <ag:Emp_Name>Peter</ag:Emp_Name>
+        <ag:Emp_Address>III</ag:Emp_Address>
+    </ag:Main>
+
+    <ag:Employee>
+        <ag:Name>SS2</ag:Name>
+        <ag:JoinDate>2021-10-12</ag:JoinDate>
+        <ag:Position>JJ2</ag:Position>
+    </ag:Employee>
+
+    <ag:Employee>
+        <ag:Name>SS12</ag:Name>
+        <ag:JoinDate>2020-10-12</ag:JoinDate>
+        <ag:Position>JJX</ag:Position>
+    </ag:Employee>
+
+    <ag:Main>
+        <ag:EmpID>1003</ag:EmpID>
+        <ag:Emp_Name>Fritz</ag:Emp_Name>
+        <ag:Emp_Address>IV</ag:Emp_Address>
+    </ag:Main>
+
+    <ag:Employee>
+        <ag:Name>SS13</ag:Name>
+        <ag:JoinDate>2020</ag:JoinDate>
+        <ag:Position>JJX</ag:Position>
+    </ag:Employee>
+
+</ag:Emp_queue>
+
+---
+
+EmpID     Name      Address   NewColumn
+1002      Peter     III       Additional data for id 1002
+1003      Fritz     IV        Additional data for id 1003
 */
 ```
