@@ -6,7 +6,7 @@ draft: false
 menu:
   recipes:
     parent: "other"
-weight: 210
+weight: 2310
 toc: true
 ---
 
@@ -67,7 +67,7 @@ public class MergeRow : MergeableRow
     [CompareColumn]
     [UpdateColumn]
     public string StringValue1 { get; set; }
-    
+
     [CompareColumn]
     [UpdateColumn]
     public string StringValue2 { get; set; }

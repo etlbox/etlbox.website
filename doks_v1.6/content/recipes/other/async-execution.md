@@ -6,7 +6,7 @@ draft: false
 menu:
   recipes:
     parent: "other"
-weight: 210
+weight: 2310
 toc: true
 ---
 
@@ -98,7 +98,7 @@ In this example, data is split into two separate processing lines. One line incl
 
 In the main method, a `while` loop periodically checks if the network has completed processing (`t.Status != TaskStatus.RanToCompletion`) and logs a message. This loop runs asynchronously alongside the data flow, showing that the main thread is free to perform other tasks while waiting for the data flow to complete.
 
-The buffer size could be adjusted (`Settings.MaxBufferSize = 5000`) if you want to work with larger amounts of data - please also adjust the number of generated records in the `for` loop. 
+The buffer size could be adjusted (`Settings.MaxBufferSize = 5000`) if you want to work with larger amounts of data - please also adjust the number of generated records in the `for` loop.
 
 ### Code on Github
 
