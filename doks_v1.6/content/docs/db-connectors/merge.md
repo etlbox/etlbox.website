@@ -11,6 +11,7 @@ weight: 330
 toc: true
 ---
 
+If you want to start with example code right away, you will find it in the recipes section for the [DbMerge](/recipes/destinations/mergedestination).
 
 # Syncing tables with Merge
 
@@ -235,7 +236,6 @@ DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTabl
 merge.CacheMode = CacheMode.Partial;
 merge.EvictionPolicy = CacheEvictionPolicy.LeastRecentlyUsed;
 ```
-
 
 ### Delta table
 
