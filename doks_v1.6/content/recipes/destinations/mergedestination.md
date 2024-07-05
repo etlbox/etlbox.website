@@ -397,3 +397,180 @@ Id               Value1           Value2           ChangeActionText
 2                Update           2                Update
 */
 ```
+
+## Automatic Duplicate Detection
+
+If the property `FindDuplicates` is set to `true`, all rows which id columns where already processed previously are automatically filtered out.
+
+```C#
+public class MyDuplicateRow : MergeableRow {
+    public int Id1 { get; set; }
+    public int? Id2 { get; set; }
+    public string CompareUpdateValue { get; set; }
+    public string ChangeText => ChangeAction?.ToString();
+}
+
+var connMan = new SqlConnectionManager(ConnectionString);
+string tableName = "FindDuplicates";
+var source = new MemorySource<MyDuplicateRow>();
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 1, Id2 = 1, CompareUpdateValue = "Exists" });
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 2, Id2 = 2, CompareUpdateValue = "Test2_Update1" });
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 1, Id2 = 1, CompareUpdateValue = "Exists" });
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 3, Id2 = 3, CompareUpdateValue = "Test3_Insert1" });
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 2, Id2 = 2, CompareUpdateValue = "Test2_Update2" });
+source.DataAsList.Add(new MyDuplicateRow() { Id1 = 3, Id2 = 3, CompareUpdateValue = "Test3_Insert2" });
+
+
+DropTableTask.DropIfExists(connMan, tableName);
+CreateTableTask.CreateIfNotExists(connMan, tableName,
+    new List<TableColumn>()
+    {
+        new TableColumn("Id1","INT",allowNulls:false,isPrimaryKey:true),
+        new TableColumn("Id2","INT",allowNulls:false,isPrimaryKey:true),
+        new TableColumn("CompareUpdateValue","VARCHAR(100)",true)
+    });
+
+SqlTask.ExecuteNonQuery(connMan,
+    $"INSERT INTO {tableName} VALUES(1,1,'Exists')");
+SqlTask.ExecuteNonQuery(connMan,
+    $"INSERT INTO {tableName} VALUES(2,2,'Update')");
+SqlTask.ExecuteNonQuery(connMan,
+    $"INSERT INTO {tableName} VALUES(4,4,'Delete')");
+
+var dest = new DbMerge<MyDuplicateRow>(connMan, tableName);
+dest.MergeMode = MergeMode.Full;
+dest.FindDuplicates = true;
+
+dest.IdColumns = new[] {
+    new IdColumn() { IdPropertyName = "Id1" },
+    new IdColumn() { IdPropertyName = "Id2"
+    }
+};
+
+var delta = new DataFrameDestination<MyDuplicateRow>();
+source.LinkTo(dest).LinkTo(delta);
+
+Network.Execute(source);
+
+PrintTable(connMan, tableName);
+PrintDeltaTable(delta.DataFrame);
+
+/* Output
+Database table:
+Id1                Id2                CompareUpdateValue
+1                  1                  Exists
+2                  2                  Test2_Update1
+3                  3                  Test3_Insert1
+
+Calculated delta:
+Id1                Id2                CompareUpdateValue ChangeText
+1                  1                  Exists             Exists
+1                  1                  Exists             Duplicate
+2                  2                  Test2_Update2      Duplicate
+3                  3                  Test3_Insert2      Duplicate
+3                  3                  Test3_Insert1      Insert
+2                  2                  Test2_Update1      Update
+4                  4                  Delete             Delete
+*/
+```
+
+## Value Generated Columns
+
+The `DbMerge` is also able to retrieve existing data from so called value generated columns, e.g. a computed column or a column with a default value if no value is provided.
+
+```C#
+public class RowWithGenerated : MergeableRow {
+    public string Computed { get; set; }
+    public int? Id { get; set; }
+    public string DefString { get; set; }
+    public int? DefInt { get; set; }
+    public string Value { get; set; }
+}
+
+private static void CreateTableWithDefaultAndComputed(IConnectionManager conn, string tableName) {
+    DropTableTask.DropIfExists(conn, tableName);
+    var columns = new List<TableColumn>()
+    {
+        new TableColumn("Id", "INT", allowNulls: false, isPrimaryKey:true, isIdentity: true),
+        new TableColumn("DefString", "VARCHAR(100)", allowNulls: false) { DefaultValue = "'A'"},
+        new TableColumn("DefInt", "INT", allowNulls: true) {DefaultValue="3"},
+        new TableColumn("Computed", "VARCHAR(100)", allowNulls: false) { ComputedColumn = $"{conn.QB}DefString{conn.QE}"},
+        new TableColumn("Value", "VARCHAR(100)", allowNulls: true)
+    };
+    TableDefinition def = new TableDefinition(tableName, columns);
+    def.CreateTable(conn);
+}
+
+private static void InsertDestinationData(IConnectionManager conn, string tableName) {
+    ObjectNameDescriptor TN = new ObjectNameDescriptor(tableName, conn.QB, conn.QE);
+    SqlTask.ExecuteNonQuery(conn,
+       $"INSERT INTO {tableName} " +
+       $"(DefString,DefInt,Value) " +
+       $"VALUES('DefString1',3,'Test1')");
+    SqlTask.ExecuteNonQuery(conn,
+       $"INSERT INTO {tableName} " +
+       $"(DefInt, Value) " +
+       $"VALUES(10,'ToUpdate')");
+    SqlTask.ExecuteNonQuery(conn,
+       $"INSERT INTO {tableName} " +
+       $"(DefInt, Value) " +
+       $"VALUES(10,'ToUpdate2')");
+    SqlTask.ExecuteNonQuery(conn,
+      $"INSERT INTO {tableName} " +
+      $"(Value) " +
+      $"VALUES('ToDelete')");
+}
+
+var connMan = new SqlConnectionManager(ConnectionString);
+string tableName = "ValueGeneratedColumns";
+
+var source = new MemorySource<RowWithGenerated>();
+source.DataAsList.Add(new RowWithGenerated() { Id = 1, DefInt = 3, Computed = "DefString1", Value = "Test1" });
+source.DataAsList.Add(new RowWithGenerated() { Id = 2, DefString = "DefString2", Value = "Test2" });
+source.DataAsList.Add(new RowWithGenerated() { Id = 3, DefInt = 2, Value = null });
+source.DataAsList.Add(new RowWithGenerated() { Id = null, Value = "A" });
+
+CreateTableWithDefaultAndComputed(connMan, tableName);
+InsertDestinationData(connMan, tableName);
+
+var dest = new DbMerge<RowWithGenerated>(connMan, tableName);
+dest.MergeMode = MergeMode.Full;
+
+dest.ValueGeneratedColumns = new List<ValueGenerationColumn>() {
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "Id"},
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "DefString"},
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "DefInt"},
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "Computed"},
+};
+dest.ColumnMapping = new List<DbColumnMap>() {
+    new DbColumnMap() { PropertyName="DefString", IgnoreColumn =true},
+};
+dest.IdColumns = new List<IdColumn>() {
+    new IdColumn() { IdPropertyName = "Id"}
+};
+
+var delta = new DataFrameDestination<RowWithGenerated>();
+source.LinkTo(dest).LinkTo(delta);
+
+Network.Execute(source);
+
+PrintTable(connMan, tableName);
+PrintDeltaTable(delta.DataFrame);
+
+/* Output:
+Database table:
+Id        DefString DefInt    Computed  Value
+1         DefString13         DefString1Test1
+2         A         null      A         Test2
+3         A         2         A         null
+5         A         null      A         A
+
+Calculated delta:
+Computed  Id        DefString DefInt    Value
+DefString11         null      3         Test1
+A         2         A         null      Test2
+A         3         A         2         null
+A         5         A         null      A
+A         4         null      3         ToDelete
+*/
+```
