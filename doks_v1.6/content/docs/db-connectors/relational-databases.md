@@ -15,10 +15,10 @@ If you want to start with example code right away, you will find it in the recip
 
 ## DbSource
 
-The DbSource give you access to any database table or with your database. Or you can directly pass an sql statement that is used as source.
-The use of the DbSource is very straight forward. You simple pass a connection manager (the right one for your database) and a table name.
+The DbSource gives you access to any database table or with your database. Or you can directly pass an sql statement that is used as source.
+The use of the DbSource is very straight forward. You simply pass a connection manager (the right one for your database) and a table name.
 
-Let's assume that SouceTable has two columns and is defined like this:
+Let's assume that `SourceTable` has two columns and is defined like this:
 
 ```sql
 CREATE TABLE SourceTable (
@@ -27,7 +27,7 @@ CREATE TABLE SourceTable (
 )
 ```
 
-Now we can create our strongly typed object (POCO) to match with this definition:
+Now we can create our strongly typed object (POCO) to match with with this definition:
 
 
 Let's assume we create a POCO (Plain old component object) `MySimpleRow` that looks like this:
@@ -40,7 +40,7 @@ public class MyRow {
 ```
 
 
-Now we can setup our data flow like this:
+Now we can set up our data flow like this:
 
 ```C#
 SqlConnectionManager connMan = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
@@ -48,11 +48,11 @@ DbSource<MyRow> source = new DbSource<MyRow>(connMan, "SourceTable");
 ```
 
 
-ETLBox will automatically extract missing meta information during runtime from the source table and the involved types. In our example, the source table has
+ETLBox will automatically extract missing metadata during runtime from the source table and the involved types. In our example, the source table has
 columns with exact same name as the object - ETLBox will check this and write data from the Id column into the Id property, and data from the column Value into the Value property.
-Each record in the source will be a new object that is created and then passed to the connected components.
+Each record in the source will create a new object that is then passed to the connected components.
 
-In case you want to test yourdata flow, you could connect your database source to a memory destination and check the data that you retrieved:
+In case you want to test your data flow, you could connect your database source to a memory destination and check the data that you retrieved:
 
 ```C#
 MemoryDestination dest = new MemoryDestination();
@@ -63,9 +63,9 @@ Console.WriteLine("Loaded "+dest.Data+" rows!");
 
 
 
-### Working with Sql statements
+### Working with SQL statements
 
-For the `DbSource`, you can also specify some Sql code to retrieve your data:
+For the `DbSource`, you can also specify some SQL code to retrieve your data:
 
 ```C#
 DbSource<MyRow> source = new DbSource<MyRow>() {
@@ -74,8 +74,8 @@ DbSource<MyRow> source = new DbSource<MyRow>() {
 };
 ```
 
-Please note that providing a `TableName` is not necessary when you use a Sql statement.
-There is no particular limitation if you are using custom sql code to retrieve data. E.g., you could use a complex query like this:
+Please note that providing a `TableName` is not necessary when you use a SQL statement.
+There is no particular limitation if you are using custom sql code to retrieve data. For example, you could use a complex query like this:
 
 ```C#
 DbSource source = new DbSource() {
@@ -98,7 +98,7 @@ WHERE Dummy1.Id > 100
 };
 ```
 
-You could also call a CTE or a stored procedure / function in your Sql.
+You could also call a CTE or a stored procedure / function in your SQL.
 
 ```C#
 DbSource source = new DbSource() {
@@ -112,11 +112,11 @@ DbSource source = new DbSource() {
 };
 ```
 
-{{< alert text="It is recommended that all the columns in your sql statement have a column name. E.g. a <code>SELECT * FROM table</code> could lead to problems, as there are no column names in the Sql that ETLBox could use to map with a property in your object. It is recommended to change this <code>SELECT Id, Value FROM table</code> or to provide a <code>TableDefinition</code> object containing the meta data." >}}
+{{< alert text="It is recommended that all the columns in your SQL statement have a column name. E.g. a <code>SELECT * FROM table</code> could lead to problems, as there are no column names in the SQL that ETLBox could use to map with a property in your object. It is recommended to change this <code>SELECT Id, Value FROM table</code> or to provide a <code>TableDefinition</code> object containing the meta data." >}}
 
 #### Query parameters in sql statements
 
-Instead of providing a static string, you can also pass a parameterized query. A parameterized query contains  variable placeholder that normally start with `@` (exception: Oracle uses the `:`). Any occurrence of each parameter is then replaced with the actual provided value in a parameter list.
+Instead of providing a static string, you can also use a parameterized query. A parameterized query contains variable placeholders that normally start with `@` (exception: Oracle uses the `:`). Each occurrence of a parameter is then replaced with the actual provided value in a parameter list.
 
 Here is an example:
 
@@ -133,11 +133,11 @@ DbSource source = new DbSource() {
     };
 ```
 
- Using query parameters can be beneficial for your improved performance (e.g. your database can reuse an already calculated plan when running the statement again with different parameters). Also, this reduces the risk of sql injections - any special characters in your parameter are escaped before they are inserted in the sql string.
+ Using query parameters can improve performance (e.g., your database can reuse an already calculated plan when running the statement again with different parameters). Also, this reduces the risk of sql injections - any special characters in your parameter are escaped before they are inserted in the sql string.
 
 ### Using dynamic object
 
-The default implementation of DbSource will use an ExpandoObject. This dynamic object will then properties with the same names as the columns in your source.
+The default implementation of DbSource will use an ExpandoObject. This dynamic object will then have properties with the same names as the columns in your source.
 
 ```C#
 DbSource source = new DbSource(connMan, "SourceTable");
@@ -147,7 +147,7 @@ No object is needed when using this. Make sure that all other components also ei
 
 ### Using string arrays
 
-Also you can use the DbSource to read your data directly into an array. This could be a string array. The order of the columns of your table or you sql code is then equals the order in your array. Also, you don't need any other object definition then.
+Also you can use the DbSource to read your data directly into an array. This could be a string array. The order of the columns of your table or your SQL code then matches the order in your array. Also, you don't need any other object definition then.
 
 ```C#
 DbSource<string[]> source = new DbSource<string[]>(connMan, "SourceTable");
@@ -159,11 +159,11 @@ DbSource<string[]> source = new DbSource<string[]>(connMan, "SourceTable");
 
 ETLBox will try to automatically collect the correct meta data information from the provided information.
 
-If you are passing a table name, a Sql query is send to the database that checks if the table exists and then retrieves additional information about the table (including column names, data types, identity columns and keys, default and computed values).
-This will happen when reading from a table, and also before writing into a table.
+If you are passing a table name, a SQL query is sent to the database to check if the table exists and then retrieve additional information about the table (including column names, data types, identity columns, keys, default values, and computed values).
+This will happen when reading from a table and also before writing into a table.
 
 In the simple case where you provide the `TableName` property, this table is queried for the meta data information.
-If you are providing a Sql statement, ETLBox will try to parse the provided Sql statement to parse the column names from the query. This will only works if you are explicitly define the column names in a query. Whenever there are columns names in the query, e.g. `SELECT a.Col1, CAST(b.Test2 AS INT) AS Col2) ...`, the corresponding column names `Test2` and `Col2` can be extracted from the sql. Unfortunately, this won't work for Stored Procedure or the * operation: `EXEC TestProcedure` or `SELECT * FROM table` does not provide any information about the column names.
+If you are providing a SQL statement, ETLBox will try to parse the provided SQL statement to extract the column names from the query. This will only works if you are explicitly define the column names in a query. Whenever there are columns names in the query, e.g. `SELECT a.Col1, CAST(b.Test2 AS INT) AS Col2) ...`, the corresponding column names `Test2` and `Col2` can be extracted from the sql. Unfortunately, this won't work for stored procedures or the `*` operation: `EXEC TestProcedure` or `SELECT * FROM table` does not provide any information about the column names.
 
 Nevertheless, ETLBox has 3 fallback mechanism in this case:
 - If a `TableDefinition` is provided, this information will be used instead. Please note that if you provide your own `TableDefinition`, this will always be used primarily.
@@ -173,7 +173,7 @@ Nevertheless, ETLBox has 3 fallback mechanism in this case:
 
 ## DbDestination
 
-The DbDestination will write that data from your flow into the a table. Like the DbSource, you need to pass a connection manager and the destination table name. For any property in your object, the data will be written into the table if the column names match with the property name.
+The DbDestination will write that data from your flow into the a table. Like the DbSource, you need to pass a connection manager and the destination table name. For any property in your object, the data will be written into the table if the column names match the property name.
 
 ```C#
 public class MyRow
@@ -199,7 +199,7 @@ SqlConnectionManager connMan =
 DbDestination dest = new DbDestination(connMan, "DestinationTable");
 ```
 
-Like with an object, the properties of the ExpandoObject are used to map the values to the right columns. Only if the ExpandoObject object has a property with the same name as the column in the destination table, data is written into this column.
+As with an object, the properties of the ExpandoObject are used to map the values to the right columns. Only if the ExpandoObject object has a property with the same name as the column in the destination table, data is written into this column.
 Unfortunately, the Column mapping attributes are not working here.
 
 ### Using arrays
@@ -212,13 +212,13 @@ SqlConnectionManager connMan =
 DbDestination<string[]> dest = new DbDestination<string[]>(connMan, "DestinationTable");
 ```
 
-The data is written into the columns in the same order as they are stored in the array. E.g., if your string array has three values, these values are stored into the first, second and third column of your destination table. If your destination table has more columns, these will be ignored. Identity columns (or auto increment / serial values) are ignored.
+The data is written into the columns in the same order as it is stored in the array. E.g., if your string array has three values, these values are stored into the first, second and third column of your destination table. If your destination table has more columns, these will be ignored. Identity columns (or auto increment / serial values) are ignored.
 
 ### Batch Size
 
-By default, the DbDestination will create batches of data that then are inserted in whole into the database. This is faster than creating a single insert for each incoming row. So the DbDestination is a little bit different from the other destinations: It will always wait until it has received the full amount of rows needed for a batch, and then do the insert. The default batch size is 1000.
+By default, the DbDestination will create batches of data that are then inserted in whole into the database. This is faster than creating a single insert for each incoming row. So, the DbDestination is a little bit different from the other destinations: It will always wait until it has received the full number of rows needed for a batch and then perform the insert. The default batch size is 1000.
 You can play around with the batch size to gain higher performance. 1000 rows per batch is a solid value for most operations.
-If you encounter the issue that inserted the data into the destinations takes to long, try to reduce the batch size significantly.
+If you encounter the issue that inserted the data into the destinations takes too long, try reducing the batch size significantly.
 
 ```C#
 var dest = new DbDestination<MyRow>(connMan, "DestinationTable");
@@ -231,9 +231,9 @@ If you leave the default value for batch size set, it will be changed to 100 row
 
 ### Allowing identity inserts
 
-By default, identity columns (also called auto increment or serial columns) are left untouched when writing into a  destination table. Even if you have a property with the same name or a column mapping set up for an identity column, by default no value is written from your data into the column - the identity column will auto generate a unique (and ascending) key.
+By default, identity columns (also called auto-increment or serial columns) are left untouched when writing into a destination table. Even if you have a property with the same name or a column mapping set up for an identity column, by default no value is written from your data into the column - the identity column will auto generate a unique (and ascending) key.
 
-Sometimes you want to overwrite the auto generated generated values with the values that you provide with your data. To force the DbDestination to insert values for an identity column, you can set the property `AllowIdentityInserts` to true. If set to true, the DbDestination will try to overwrite the identity column with the provided value in your data. (Make sure there is a corresponding property in your data object mapped to the identity column.
+Sometimes you want to overwrite the auto-generated generated values with the values that you provide with your data. To force the DbDestination to insert values for an identity column, you can set the property `AllowIdentityInsert` to true. If set to true, the DbDestination will try to overwrite the identity column with the provided value in your data. (Make sure there is a corresponding property in your data object mapped to the identity column.
 
 ```C#
 var dest = new DbDestination<MyRow>(connMan, "DestinationTable");
@@ -242,7 +242,7 @@ dest.AllowIdentityInsert = true;
 
 ## Column Mapping
 
-Of course the property names in the object and the column names can differ - ETLBox will only load columns from a source where it can find a matching property with the same name.
+Of course, the property names in the object and the column names can differ - ETLBox will only load columns from a source where it can find a matching property with the same name.
 If the data type is different, ETLBox will try to automatically convert the data. If the names are different, you can use the attribute DbColumnMap to define the matching columns name for a property.
 
 Let's reconsider our example at the beginning.  We create a table like this:
@@ -254,7 +254,7 @@ CREATE TABLE SourceTable (
 )
 ```
 
-Now we could define our POCO using the `DbColumnMap` attribute. In this example, we replace the property Id with the property Key. In order to still be able to read data from the Id column, we add the DbColumnMap attribute above it. Please note that the data type was changed to string as well - ETLBox will automatically try to convert the integer values into a string if data types are not matching.
+Now we could define our POCO using the `DbColumnMap` attribute. In this example, we replace the property Id with the property Key. In order to still be able to read data from the Id column, we add the DbColumnMap attribute above it. Please note that the data type was changed to string as well - ETLBox will automatically try to convert the integer values into a string if data types do not match.
 
 ```C#
 public class MyRow {
@@ -290,7 +290,7 @@ source.ColumnMapping = new[]
 Both DbSource and DbDestination allows the use of column converters.
 These are special converter function that are executed for every record in a particular column.
 The idea of this converters is to do special data conversion directly in the source/destination which are not supported
-by ETLBox. E.g. for SqlServer, it is quite common to use a date format like "20200101". This date format is not supported by
+by ETLBox. E.g. for SQLServer, it is quite common to use a date format like "20200101". This date format is not supported by
 the C# DateTime object, so you need to define your own column conversion function if you want to write this date format directly from a string value into a DbDestination.
 
 Here is an example how to write the string value "20200101" into a database column "DateCol".
@@ -323,9 +323,9 @@ dest.ColumnConverters = new[] {
 
 ## Table Definitions
 
-If you pass a table name to a `DBsource` or `DbDestination` or a Sql statement to a `DbSource`, the meta data
-of the table is automatically derived from that table or sql statement by ETLBox. For table or views this is done via a Sql statement that queries
-system information, and for the Sql statement this is done via parsing the statement.
+If you pass a table name to a `DBsource` or `DbDestination` or a SQL statement to a `DbSource`, the meta data
+of the table is automatically derived from that table or sql statement by ETLBox. For table or views this is done via a SQL statement that queries
+system information, and for the SQL statement this is done via parsing the statement.
 If you don't want ETLBox to read this information, or if you want to provide your own meta information,
 you can pass a `TableDefinition` instead.
 

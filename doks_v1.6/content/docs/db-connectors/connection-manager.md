@@ -13,9 +13,9 @@ toc: true
 
 ## Database integration
 
-Relational databases can be accessed with the DbSource and DbDestination. How to use the connectors will be explained in the next chapter [Relational databases](/docs/db-connectors/relational-databases). But before you can use them, you need the right connection manager for you database. For Sql Server you would the SqlConnectionManager, for Postgres the PostgresConnectionManager, for MySql the MySqlConnectionManager, and so on. You get the idea. 
+Relational databases can be accessed with the DbSource and DbDestination. How to use the connectors will be explained in the next chapter [Relational databases](/docs/db-connectors/relational-databases). But before you can use them, you need the right connection manager for you database. For Sql Server you would the SqlConnectionManager, for Postgres the PostgresConnectionManager, for MySql the MySqlConnectionManager, and so on. You get the idea.
 
-NoSql databases are also supported. As they are based on different concepts than relation databases (e.g. document storage, key-value store or graph database) the connection and features to interact with NoSql databases can totally different to other databases. 
+NoSql databases are also supported. As they are based on different concepts than relation databases (e.g. document storage, key-value store or graph database) the connection and features to interact with NoSql databases can totally different to other databases.
 
 ### Supported relational databases
 
@@ -33,11 +33,12 @@ Db2       | ✓ | X | Luw + z/OS + Cloud
 SAP ASE (Sybase) | ✓ | ✓ |
 SAP HANA  | ✓ | ✓ |
 Snowflake | ✓ | ✓ |
-Microsoft Access| X | ✓ | 
+Microsoft Access| X | ✓ |
+Apache Spark (SQL)| X | ✓ |
 Other databases | X | * | Generic ODBC support
-Custom connector | ** | ** | Own implementation
+Custom connector | ** | ** | Using own implementation
 
-*: *There is a limited support for other databases as well - you can use the generic Odbc or OleDb connection manager to access these databases. Please note that using these connections comes with some major limitations.* 
+*: *There is a limited support for other databases as well - you can use the generic Odbc or OleDb connection manager to access these databases. Please note that using these connections comes with some major limitations.*
 
 **: *Using a `CustomSource`/`CustomDestination` or `CustomBatchSource`/`CustomBatchDestination`, you can create your own connectors using your own implementation logic.*
 
@@ -51,12 +52,12 @@ to your database (e.g., the network address of the database, user name and passw
 
 ### Choosing the right manager
 
-Some components (e.g. the `DbSource` or the `SqlTask`) can be used to connect via ADO.NET to a database server. They will need a `ConnectionManager` class to connect with the right database. The easiest way to create a connection manager is to create a new instance while providing the connection string for your database. 
+Some components (e.g. the `DbSource` or the `SqlTask`) can be used to connect via ADO.NET to a database server. They will need a `ConnectionManager` class to connect with the right database. The easiest way to create a connection manager is to create a new instance while providing the connection string for your database.
 
 Here is an example creating a connection manager for Sql Server:
 
 ```C#
-SqlConnectionManager sqlConn = 
+SqlConnectionManager sqlConn =
     new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETL;");
 ```
 
@@ -67,7 +68,7 @@ MySqlConnectionManager mySqlConn
     = new MySqlConnectionManager("Server=10.37.128.2;Database=ETL;Uid=eb;Pwd=123;");
 PostgresConnectionManager postgresConn
     = new PostgresConnectionManager("Server=localhost;Database=ETL;User Id=eb;Password=123;");
-PostgresOdbcConnectionManager oracleOdbc = 
+PostgresOdbcConnectionManager oracleOdbc =
     new PostgresOdbcConnectionManager("Driver={PostgreSQL UNICODE};Server=localhost;Port=5432;Database=ETL;Uid=eb;Pwd=123;");
 ```
 
@@ -91,24 +92,24 @@ When you create a new connection manager, you have the choice to either pass the
  create an adequate ConnectionString object from the connection string before you pass it to the connection manager.
  The ConnectionString object does exist for every database type (e.g. for MySql it is `MySqlConnectionString`). The ConnectionString
  wraps the raw database connection string into the appropriate ConnectionStringBuilder object and also offers some more
- functionalities, e.g. like getting a connection string for the database storing system information. 
+ functionalities, e.g. like getting a connection string for the database storing system information.
 
 ```C#
 SqlConnectionString etlboxConnString = new SqlConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;");
 SqlConnectionString masterConnString = etlboxConnString.GetMasterConnection();
 
 //masterConnString is equal to "Data Source=.;Integrated Security=SSPI;"
-SqlConnectionManager conectionToMaster = new SqlConnectionManager(masterConnString); 
+SqlConnectionManager conectionToMaster = new SqlConnectionManager(masterConnString);
 ```
 
 ## Odbc & OleDb Connections
 
-The `DbSource` and `DbDestination` also work with Odbc connection. If you want to connect via Odbc or OleDb, you need to have a proper driver installed on the machine where ETLBox is executing. There is a difference between the "generic" Odbc/OleDb driver and the specialised Odbc driver. In short: if you want to connect to a database that is fully supported by ETLBox, use the Odbc/OleDb driver that has the database name in it. 
+The `DbSource` and `DbDestination` also work with Odbc connection. If you want to connect via Odbc or OleDb, you need to have a proper driver installed on the machine where ETLBox is executing. There is a difference between the "generic" Odbc/OleDb driver and the specialised Odbc driver. In short: if you want to connect to a database that is fully supported by ETLBox, use the Odbc/OleDb driver that has the database name in it.
 
 Here is an example  how you can connect to Postgres via ODBC:
-  
+
 ```C#
-PostgresOdbcConnectionManager postgresOdbc = 
+PostgresOdbcConnectionManager postgresOdbc =
     new PostgresOdbcConnectionManager("Driver={PostgreSQL UNICODE};Server=localhost;Port=5432;Database=ETL;Uid=eb;Pwd=123;");
 DbSource source = DbSource (postgresOdbc, "SourceTable");
 ```
@@ -119,8 +120,8 @@ has multiple values: INSERT INTO (..) VALUES (..),(..),(..)
 
 ### Generic Odbc and OleDb conenctions
 
-As ETLBox has some database specific code in different components, you normally would choose an Odbc or OleDb connector that fits to your database. But if your database is not fully supported yet, you can try to use the generic Odbc or OleDb connection manager. 
-Make sure you reference the Odbc or OleDb connector package. 
+As ETLBox has some database specific code in different components, you normally would choose an Odbc or OleDb connector that fits to your database. But if your database is not fully supported yet, you can try to use the generic Odbc or OleDb connection manager.
+Make sure you reference the Odbc or OleDb connector package.
 
 Unfortunately, this connector will have some limitations.
 
@@ -130,7 +131,7 @@ Unfortunately, this connector will have some limitations.
 
 E.g. you can use the generic OleDb connection manager to connect with Sql Server via OleDb
 
-You will need an OleDb connection string,. 
+You will need an OleDb connection string,.
 ```C#
 var connString = @"Provider=MSOLEDBSQL;Server=10.211.55.2;Database=ETLBox_DataFlow;UID=sa;PWD=YourStrong@Passw0rd;"
 OleDbConnectionManager conn = new OleDbConnectionManager(connString);
@@ -152,65 +153,65 @@ DbSource<MySimpleRow> source = new DbSource<MySimpleRow>(conn)
 };
 ```
 
-Same for DbDestination - the property name is also `TableDefinition` there. 
+Same for DbDestination - the property name is also `TableDefinition` there.
 
 
 ## Connection management
 
 ### Connection pooling
 
-The implementation of all connection managers is based on Microsoft ADO.NET and makes use of the underlying 
+The implementation of all connection managers is based on Microsoft ADO.NET and makes use of the underlying
 connection pooling. [Please see here for more details of connection pooling.](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling)
-This means that this actually can increase your performance, and in most scenarios you never have more 
+This means that this actually can increase your performance, and in most scenarios you never have more
 connections open that you actually need for your application.
 
 You don't need to explicitly open a connection. ETLBox will call the `Open()` method on a connection manager whenever
-needed - where it relies on the underlying ADO.NET connection pooling that either creates a new connection 
-or re-uses an existing one. Whenever the work of a component or task is done, the connection manager will return the connection back to 
+needed - where it relies on the underlying ADO.NET connection pooling that either creates a new connection
+or re-uses an existing one. Whenever the work of a component or task is done, the connection manager will return the connection back to
 the pool so that it can be reused by other components or tasks when needed.
 
 Please note that the connection pooling only works for the same connection strings. For every connection string that differs there
-is going to be a separate pool 
+is going to be a separate pool
 
-### Reusing connection managers 
+### Reusing connection managers
 
-By default, you can always reuse a connection manager as often as you like. ETLBox will always create a clone of the provided connection manager object, and in combination with the ADO.NET connection pooling it will be automatically decided if a new connection needs to be created or if an existing connection can be reused. 
-You can modify this behaviour either by setting the `LeaveOpen` property to true or by starting a transaction. 
+By default, you can always reuse a connection manager as often as you like. ETLBox will always create a clone of the provided connection manager object, and in combination with the ADO.NET connection pooling it will be automatically decided if a new connection needs to be created or if an existing connection can be reused.
+You can modify this behaviour either by setting the `LeaveOpen` property to true or by starting a transaction.
 
-### LeaveOpen 
+### LeaveOpen
 
-This behaviour - returning connections back to the pool when the work is done - does work very well in a scenario 
-with concurrent tasks. There may be a use-case where you don't won't to query your database in parallel and you 
+This behaviour - returning connections back to the pool when the work is done - does work very well in a scenario
+with concurrent tasks. There may be a use-case where you don't won't to query your database in parallel and you
 want to leave the connection open, avoiding the pooling.
 
 For this scenario you can use the `LeaveOpen` property on the connection managers.
 
 ```C#
-var sqlServerConn = 
+var sqlServerConn =
     new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
 sqlServerConn.LeaveOpen = true;
 ```
 
-### Transactions 
+### Transactions
 
-Each connection manager allows you to begin, commit or rollback a transaction. Usage is quite simple 
+Each connection manager allows you to begin, commit or rollback a transaction. Usage is quite simple
 
 ```C#
-SqlConnectionManager sqlServerConn = 
+SqlConnectionManager sqlServerConn =
     new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
 
 sqlServerConn.BeginTransaction();
-//Run some sql or start a data flow 
+//Run some sql or start a data flow
 if (success)
   sqlServerConn.CommitTransaction();
-else 
+else
   sqlServerConn.RollbackTransaction();
 ```
 
-`BeginTransaction` let you optionally define the isolation level of the transaction. Most databases are using an isolation level comparable to `Serializable` or `Snapshot` as the default level. If you define a different transaction level for a transaction, make sure that your database does support this level. 
+`BeginTransaction` let you optionally define the isolation level of the transaction. Most databases are using an isolation level comparable to `Serializable` or `Snapshot` as the default level. If you define a different transaction level for a transaction, make sure that your database does support this level.
 
 If you are starting a transaction, the connection will stay open and connected with your database during the lifetime of the transaction.
-When starting a Transaction, the property `LeaveOpen` will be set implicitly to true, indicating that a transaction has been started and the connection needs to stay alive until the connection is either commit or rolled back. When using a transaction, the connection can't be returned to the connection pool while the transaction is still alive. 
+When starting a Transaction, the property `LeaveOpen` will be set implicitly to true, indicating that a transaction has been started and the connection needs to stay alive until the connection is either commit or rolled back. When using a transaction, the connection can't be returned to the connection pool while the transaction is still alive.
 
 {{< alert text="If you are using the same connection manager for other operations, make sure that you want to have this operations part of your transaction. Keep in mind that components in a data flow are executed asynchronously, so you might need more than one connection manager for simultaneous database operations using transactions." >}}
 
@@ -230,6 +231,17 @@ Network.Execute(source);
 sqlConnDest.Commit();
 ```
 
+In ETLBox, a connection manager is a wrapper for the underlying ADO.NET connection. If there would be no transaction open, this code would work without issues. The reason for this is that the ADO.NET connection pooling would open up two connections, one for reading and one for writing. In the moment where you start a transaction, the connection pooling is "deactivated" - the same connection is used for all  operations.
+
+#### Using Multiple Active Result Set
+
+Some databases (e.g. SQLServer) have a feature called `MARS` (Multiple Actdive Result Set. If this is enabled, you can still use the same connection for reading/writing at the same time. For SQLServer, `MARS` can be enabled when connecting:
+
+```
+var sqlConnectionManager = new SqlConnectionManager("...Current Connection String Here...;MultipleActiveResultSets=True;")
+```
+
+But there are also other ways to enable this feature, depending on this database. With `MARS` enabled, you might be able to read and write data using the same connection with a transaction open.
 
 
 
