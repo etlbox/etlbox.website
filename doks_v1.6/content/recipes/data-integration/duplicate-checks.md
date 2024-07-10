@@ -7,11 +7,11 @@ images: []
 menu:
   recipes:
     parent: "data-integration"
-weight: 2160
+weight: 2110
 toc: true
 ---
 
-Please note that the best solution for duplicate detection is probably using the [Distinct](/docs/transformations/distinct/) transformation. But to give you some ideas how ETLBox can be used differently (and to showcase some other components), we demonstrate other ways to implement a duplicate detection. 
+Please note that the best solution for duplicate detection is probably using the [Distinct](/docs/transformations/distinct/) transformation. But to give you some ideas how ETLBox can be used differently (and to showcase some other components), we demonstrate other ways to implement a duplicate detection.
 
 ## Source data
 
@@ -66,15 +66,15 @@ private DbDestination<Poco> CreateDestinationTable(string tableName) {
 }
 ```
 
-## Solutions 
+## Solutions
 
 ### Using the Distinct
 
-The easiest and fastest way to detect duplicates is using the Distinct transformation. 
+The easiest and fastest way to detect duplicates is using the Distinct transformation.
 ```C#
  public void UsingDistinct() {
     CsvSource<Poco> source = CreateDuplicateCsvSource("res/UseCases/DuplicateCheck.csv");
-    
+
     Distinct<Poco> distinct = new Distinct<Poco>();
     distinct.DistinctColumns = new[] {
         new DistinctColumn() { DistinctPropertyName = "ID" }
@@ -90,7 +90,7 @@ The easiest and fastest way to detect duplicates is using the Distinct transform
 
 ### Using the RowTransformation
 
-The [RowTransformation](/docs/transformations/row/) is the Swiss army knife for most data flow tasks. So we could use it to implement our own duplicate detection. 
+The [RowTransformation](/docs/transformations/row/) is the Swiss army knife for most data flow tasks. So we could use it to implement our own duplicate detection.
 
 ```C#
 public void DuplicateCheckInRowTrans() {
@@ -121,7 +121,7 @@ public void DuplicateCheckInRowTrans() {
 ### Using the BlockTransformation
 
 You can also use the BlockTransformation to wait for all records in the transformation to arrive, and the filter the duplicates out using a simple linq statement.
-Please note that this will perform bad with big amounts of data, as the BlockTransformation will store all data in memory first before executing any code. 
+Please note that this will perform bad with big amounts of data, as the BlockTransformation will store all data in memory first before executing any code.
 
 ```C#
 public void DuplicateCheckWithBlockTrans() {

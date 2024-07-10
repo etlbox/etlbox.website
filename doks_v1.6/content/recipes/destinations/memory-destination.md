@@ -11,14 +11,14 @@ weight: 2102
 toc: true
 ---
 
-The memory source stores any received data in any .NET generic 
-{{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1" text="<code>ICollection&lt;T&gt;</code>" >}}. type. The default type for storing data is a generic `List<T>`, but any collection that implements `ICollection<T>` will also work. 
+The memory source stores any received data in any .NET generic
+{{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1" text="<code>ICollection&lt;T&gt;</code>" >}}. type. The default type for storing data is a generic `List<T>`, but any collection that implements `ICollection<T>` will also work.
 
 ## Example with strongly typed objects
 
 ### Using default list
 
-By default, your incoming data is stored in a `List<T>` object. 
+By default, your incoming data is stored in a `List<T>` object.
 ```C#
 public class MyRow
 {
@@ -34,7 +34,7 @@ MemoryDestination<MyRow> dest = new MemoryDestination<MyRow>();
 source.LinkTo(dest);
 Network.Execute(source);
 
-foreach (var row in dest.Data) 
+foreach (var row in dest.Data)
     Console.WriteLine("Received row with Id "+ row.Id + " and Value " + row.Value);
 
 /*
@@ -46,7 +46,7 @@ Received row with Id 3 and Value Test3
 
 ### Using own collection
 
-This example shows how to use a SortedSet as storage for your incoming data. 
+This example shows how to use a SortedSet as storage for your incoming data.
 
 ```C#
 public class MyRow
@@ -131,7 +131,7 @@ Received row with Id 3 and Value Test3
 
 ## Concurrent memory destination
 
-The `ConcurrentMemoryDestination` is almost the same as the `MemoryDestination`, but instead of a `ICollection<T>` for incoming data it uses a {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1" text="<code>BlockingCollection&lt;T&gt;</code>" >}} to store incoming data. 
+The `ConcurrentMemoryDestination` is almost the same as the `MemoryDestination`, but instead of a `ICollection<T>` for incoming data it uses a {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1" text="<code>BlockingCollection&lt;T&gt;</code>" >}} to store incoming data.
 
 ```C#
 var source = new MemorySource<MyRow>();
@@ -146,7 +146,7 @@ Console.WriteLine("Adding completed?" + dest.Data.IsAddingCompleted);
 dest.Data.TryTake(out MyRow firstTry);
 Console.WriteLine("Data found?" + (firstTry != null));
 
-runTask.Wait();
+await runTask;
 
 dest.Data.TryTake(out MyRow secondTry);
 Console.WriteLine("Adding completed?" + dest.Data.IsAddingCompleted);

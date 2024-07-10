@@ -7,17 +7,17 @@ images: []
 menu:
   recipes:
     parent: "data-integration"
-weight: 2150
+weight: 2110
 toc: true
 ---
 
 ## Preqrequisites
 
-This example can work stand-alone - the only dependency is that you add the ETLBox and ETLBox.Xml packages as dependency. 
+This example can work stand-alone - the only dependency is that you add the ETLBox and ETLBox.Xml packages as dependency.
 
 ### Input file
 
-Our xml input file contains the customer elements. A customer is identified by an id and a simple name. Each customer itself has one or more payments methods. A payment method consists of a type, a number and optionally a valid to element. 
+Our xml input file contains the customer elements. A customer is identified by an id and a simple name. Each customer itself has one or more payments methods. A payment method consists of a type, a number and optionally a valid to element.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -67,7 +67,7 @@ public class Customer
     [XmlAttribute("id")]
     public int Id { get; set; }
     [XmlElement("name")]
-    public string Name { get; set; }        
+    public string Name { get; set; }
     [XmlArray("payment_methods")]
     public List<PaymentMethod> PaymentMethods { get; set; }
 }
@@ -80,7 +80,7 @@ public class PaymentMethod
     [XmlElement("number")]
     public string Number { get; set; }
     [XmlElement("validto")]
-    public string ValidTo { get; set; }      
+    public string ValidTo { get; set; }
 }
 ```
 
@@ -93,7 +93,7 @@ source.XmlReaderSettings.DtdProcessing = System.Xml.DtdProcessing.Ignore;
 
 {{< alert text="Ignoring the DtdProcessing can be useful if your xml has DTD definitions that don't want to be processed (which can create new issues if your xml file is big). Setting the XmlReaderSettings allows you to manage how the xml is parsed." >}}
 
-### Flattening the array 
+### Flattening the array
 
 The goal of this example is to flatten the payment method array so that it not only contains the payment data, but also the data of the containing customer element. So we can already define how our output POCO should look like.
 
@@ -117,16 +117,16 @@ As you can see, we want to get an object that holds all payment details, along w
 MemoryDestination<PaymentMethodAndCustomer> dest = new MemoryDestination<PaymentMethodAndCustomer>();
 ```
 
-Next we use a `RowMultiplication` to flatten the nested array. The row multiplication takes one input row and can return multiple output rows as an array. (The array can also be empty). This transformation accepts two type: The type of the ingoing data (`Customer`) and the type of the outgoing data `PaymentMethodAndCustomer`. The property `RowMultiplicationFunc` is a delegate that has the currently processed customer row as an input object and return an array of newly created payment and customer objects. 
+Next we use a `RowMultiplication` to flatten the nested array. The row multiplication takes one input row and can return multiple output rows as an array. (The array can also be empty). This transformation accepts two type: The type of the ingoing data (`Customer`) and the type of the outgoing data `PaymentMethodAndCustomer`. The property `RowMultiplicationFunc` is a delegate that has the currently processed customer row as an input object and return an array of newly created payment and customer objects.
 
 
 ```C#
 RowMultiplication<Customer, PaymentMethodAndCustomer> multi = new RowMultiplication<Customer, PaymentMethodAndCustomer>();
-multi.MultiplicationFunc = 
+multi.MultiplicationFunc =
     customer =>
     {
         List<PaymentMethodAndCustomer> result = new List<PaymentMethodAndCustomer>();
-        foreach (PaymentMethod method in customer.PaymentMethods)                 
+        foreach (PaymentMethod method in customer.PaymentMethods)
         {
             var methodAndCustomer = new PaymentMethodAndCustomer();
             /* Repeating data from customer */
@@ -146,7 +146,7 @@ multi.MultiplicationFunc =
 
 ### Executing the flow
 
-Last step is to link and execute the flow. 
+Last step is to link and execute the flow.
 
 ```C#
 source.LinkTo(multi);

@@ -7,14 +7,14 @@ images: []
 menu:
   recipes:
     parent: "data-integration"
-weight: 2120
+weight: 2110
 toc: true
 ---
 
-## Prerequisites 
+## Prerequisites
 
-The example code will not go into the details of the sql code to create the necessary table or files. 
-It will focus on how to move the data from the source to the destinations. 
+The example code will not go into the details of the sql code to create the necessary table or files.
+It will focus on how to move the data from the source to the destinations.
 
 ## Import or exporting CSV files
 
@@ -38,7 +38,7 @@ No we need to create the components for the CSV source and the database destinat
 //Import CSV
 CsvSource sourceCSV = new CsvSource("NameList.csv");
 DbDestination importDest = new DbDestination(conMan, "NameTable");
-``` 
+```
 
 No we link the components together and execute the data flow.
 
@@ -48,14 +48,14 @@ sourceCSV.LinkTo(importDest);
 Network.Execute(sourceCSV);
 ```
 
-In our demo we start the data flow with `Execute()` - this will read all data from the source 
+In our demo we start the data flow with `Execute()` - this will read all data from the source
 and post it into the dataflow.  While reading data, incoming batches will already be written into the destination. The program won't continue until the flow has finished (though most of the data processing will be done in a separate task).
 
 If you know how to deal with the Tasks Parallel library, you can use `ExecuteAsync()` and instead.
 Then you could start your network with
 
 ```C#
-await Network.ExecuteAsync(sourceCSV); 
+await Network.ExecuteAsync(sourceCSV);
 ```
 
 This example only works if you have a csv file named `NameList.csv` copied into your output directory. It should
@@ -73,7 +73,7 @@ Yosemite,Sam
 Fudd,Elmer
 ```
 
-Finally, here is the code to create the necessary table on your database of choice. I used the `CreateTableTask` 
+Finally, here is the code to create the necessary table on your database of choice. I used the `CreateTableTask`
 which offers a database neutral way to create a table (this will work on SqlServer, Postgres, MySql, SQLite ...)
 But of course you can always use regular Sql or other frameworks like Entitiy Framework...
 
@@ -108,12 +108,12 @@ Id | FirstName | LastName
 
 ### Export CSV
 
-No we want to export the data again, which is just the other way round. 
+No we want to export the data again, which is just the other way round.
 
 But to spice this example a little bit
 up, we now add an object type that hold the data during the processing. You don't need to specify the object type
-as shown above - in this case, ETLBox will use a string array instead. But if you are in the need to work 
-with your data, e.g. by add a transformation in the flow, it is easier if you have defined a class that 
+as shown above - in this case, ETLBox will use a string array instead. But if you are in the need to work
+with your data, e.g. by add a transformation in the flow, it is easier if you have defined a class that
 specifies your data type.
 
 ```C#
@@ -135,7 +135,7 @@ sourceTable.LinkTo(destCSV);
 Network.Execute(sourceTable);
 ```
 
-You will find a file called `Export.csv` in your output directory. As you have 
+You will find a file called `Export.csv` in your output directory. As you have
 perhaps noted, we changed the default csv separator from "," to ";" by changing the configuration.
 The csv will look like this:
 
@@ -156,12 +156,12 @@ Id;FirstName;LastName
 
 ## Transfer across databases
 
-Sometimes you just want to transfer data across different database. Let's say we want to take the data 
-in the table `NameTable` (which we just used for our csv import) and transfer it into a Sql Server database. (It 
+Sometimes you just want to transfer data across different database. Let's say we want to take the data
+in the table `NameTable` (which we just used for our csv import) and transfer it into a Sql Server database. (It
 could have be any other database, or another Postgres database on another server).
 
 And to make it a little bit more complicated, the destination table on Sql Server looks a little bit different - it
-will also have an Id column (again as an Identity), but instead of FirstName and LastName it does only have 
+will also have an Id column (again as an Identity), but instead of FirstName and LastName it does only have
 a FullName column which is obviously a combination of first and last name.
 
 First let's create the destination table on Sql Server with a CreateTableTask (or do this manually):
@@ -212,12 +212,12 @@ source.LinkTo(trans);
 trans.LinkTo(dest);
 ```
 
-The RowTransformation has a function that concatenates first and last name and writes it into the property 
+The RowTransformation has a function that concatenates first and last name and writes it into the property
 `FullName`. Actually, this transformation wouldn't been necessary for this example - instead, you could have
 defined the property with `public string FullName => LastName + "," + FirstName;` in your `NameListElement`
-object. But this way this example demonstrated the power of the RowTransformation a little bit. 
+object. But this way this example demonstrated the power of the RowTransformation a little bit.
 
-Finally, we execute the data flow and wait for the completion. 
+Finally, we execute the data flow and wait for the completion.
 
 ```C#
 Network.Execute(source);
@@ -236,7 +236,7 @@ Id | FullName |
 7  | Sam,Yosemite
 8  | Elmer,Fudd
 
-You have successfully transfered table data from a Postgres database into a Sql Server database and transformed it 
+You have successfully transfered table data from a Postgres database into a Sql Server database and transformed it
 on-the-fly. This is one simple example of an ETL process (Extract, Transform, Load).
 
 ## Code on Github

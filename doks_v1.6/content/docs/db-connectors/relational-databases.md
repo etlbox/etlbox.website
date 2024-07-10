@@ -122,7 +122,7 @@ Here is an example:
 
 ```C#
 DbSource source = new DbSource() {
-        Sql = $@"SELECT Col1, Col2 FROM {s2c.QB}Table{s2c.QE}
+        Sql = $@"SELECT Col1, Col2 FROM table
         WHERE Col1 > @par1
         AND Col2 = @par2",
         ConnectionManager = SqlConnection,

@@ -7,17 +7,17 @@ images: []
 menu:
   recipes:
     parent: "data-integration"
-weight: 2160
+weight: 2110
 toc: true
 ---
 
-## Preqrequisites 
+## Preqrequisites
 
-This example requires the [ETLBox core package](https://www.nuget.org/packages/etlbox), and the [SSH.NET](https://www.nuget.org/packages/SSH.NET) package added to your code. The example uses SSH.NET, but other libraries will offer similar functionalities. 
+This example requires the [ETLBox core package](https://www.nuget.org/packages/etlbox), and the [SSH.NET](https://www.nuget.org/packages/SSH.NET) package added to your code. The example uses SSH.NET, but other libraries will offer similar functionalities.
 
 ## Example Code Overview
 
-Let's have a look at the whole example code first. After this, we'll dive into the details of the example. 
+Let's have a look at the whole example code first. After this, we'll dive into the details of the example.
 
 ```C#
 using ETLBox.DataFlow;
@@ -87,7 +87,7 @@ Line 10: Thanks!
 
 ### Required Model
 
-The `FileData` class is defined to hold our line content and row number which we want to read from our server. 
+The `FileData` class is defined to hold our line content and row number which we want to read from our server.
 
 ```csharp
 public class FileData {

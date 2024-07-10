@@ -7,19 +7,19 @@ images: []
 menu:
   recipes:
     parent: "data-integration"
-weight: 2130
+weight: 2110
 toc: true
 ---
 
 ## Purpose
 
 The json source and destination can communicate with any web service that can be reached with a .net HttpClient. For this example, we will read data from our demo endpoint: {{< link-ext text="https://www.etlbox.net/demo/api/orders" url="https://www.etlbox.net/demo/api/orders" >}}.
-Then we will rename and remove some columns and send each entry from the source to a local web server. 
-In this example, we will use {{< link-ext text="WireMock.NET " url="https://github.com/WireMock-Net/WireMock.Net" >}} to mock a lightweight web server in .NET. 
+Then we will rename and remove some columns and send each entry from the source to a local web server.
+In this example, we will use {{< link-ext text="WireMock.NET " url="https://github.com/WireMock-Net/WireMock.Net" >}} to mock a lightweight web server in .NET.
 
 ## Reading from REST endpoint
 
-You can directly query web services or REST APIs using the `JsonSource`. There are some minor restrictions 
+You can directly query web services or REST APIs using the `JsonSource`. There are some minor restrictions
 1) The http or https service has to send back a Json response
 2) The json needs to be an array.
 
@@ -47,16 +47,16 @@ It will return this json:
 }
 ```
 
-Please note that the root element is an object - the JsonSource will start reading data from the first array it encounters in the source. 
+Please note that the root element is an object - the JsonSource will start reading data from the first array it encounters in the source.
 
-Now we can define a POCO (plain old CLR object) that we can use in our data flow: 
+Now we can define a POCO (plain old CLR object) that we can use in our data flow:
 
 ```C#
 public class Order
 {
     public int Id { get; set; }
     public int CustomerId { get; set; }
-    public string Description { get; set; }        
+    public string Description { get; set; }
 }
 ```
 
@@ -80,7 +80,7 @@ The property `dest.Data` will now contain all items from the web service.
 
 ### HttpClient
 
-Depending on your web endpoint, you maybe want to modify your request message. You can achieve this by either overriding the default `HttpClient` used for the communication, or by modifying the `HttpRequestMessage` used as a template for the requests. All streaming connectors (e.g. `JsonSource`, `CsvDestination`, `XmlSource`,...) will support this. 
+Depending on your web endpoint, you maybe want to modify your request message. You can achieve this by either overriding the default `HttpClient` used for the communication, or by modifying the `HttpRequestMessage` used as a template for the requests. All streaming connectors (e.g. `JsonSource`, `CsvDestination`, `XmlSource`,...) will support this.
 
 In our example, we want to use a different HttpClient:
 
@@ -116,7 +116,7 @@ source.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeader
 
 ### Using JsonProperty
 
-Sometimes, you don't want to create a full C# POCO.  If you leave out some properties in your object definition, you will see that the `JsonSource` just will ignore these properties. Under the hood, the `JsonSource` (and `JsonDestination`) are using the {{< link-ext text="Newtonsof.Json library" url="https://www.newtonsoft.com/json" >}} for serializing and deserializing. You can utilize all feature of this library to modify the behavior of the Json Connector. For example, you can add the `JsonProperty` attribute to have a json property mapped to a different named property in the POCO. 
+Sometimes, you don't want to create a full C# POCO.  If you leave out some properties in your object definition, you will see that the `JsonSource` just will ignore these properties. Under the hood, the `JsonSource` (and `JsonDestination`) are using the {{< link-ext text="Newtonsof.Json library" url="https://www.newtonsoft.com/json" >}} for serializing and deserializing. You can utilize all feature of this library to modify the behavior of the Json Connector. For example, you can add the `JsonProperty` attribute to have a json property mapped to a different named property in the POCO.
 
 E.g. if you want to have the property `OrderNumber` in the json mapped to the property `Id` in your object definition, you can use the following code:
 
@@ -134,9 +134,9 @@ Deserialization is completely based on The {{< link-ext text="Newtonsoft.Json.Js
 
 ## Data Transformation
 
-When data is read from the json source, a stream is opened with the web endpoint and all data is read asynchronously. While the `JsonSource` is reading data, it will continue to post already processed records into connected components. In our example, we will use the `ColumnRename` transformation to do some renaming of the the incoming json properties. 
+When data is read from the json source, a stream is opened with the web endpoint and all data is read asynchronously. While the `JsonSource` is reading data, it will continue to post already processed records into connected components. In our example, we will use the `ColumnRename` transformation to do some renaming of the the incoming json properties.
 
-The following snipped would rename the property `Id` to `OrderId`, `CustomerId` to `CId` and remove the property `Description`. As already defined POCO can't be easily changed in .NET, the output of the transformation is an `ExpandoObject` which copies the data from the properties in the POCO into the new dynamic object with the renamed/removed columns. 
+The following snipped would rename the property `Id` to `OrderId`, `CustomerId` to `CId` and remove the property `Description`. As already defined POCO can't be easily changed in .NET, the output of the transformation is an `ExpandoObject` which copies the data from the properties in the POCO into the new dynamic object with the renamed/removed columns.
 
 ```C#
 ColumnRename<Order> rename = new ColumnRename<Order>();
@@ -148,11 +148,11 @@ rename.RenameColumns = new[]
 };
 ```
 
-But this is just an example - you could use any other ETLBox transformation to create your own transformation flow. 
+But this is just an example - you could use any other ETLBox transformation to create your own transformation flow.
 
 ## Writing into web endpoint
 
-Finally, we want to write our modified data into some kind of web endpoint. In this example, we want to take every record of the source and send it into a different REST endpoint. To verify that our code works, we will use {{< link-ext text="WireMock.NET " url="https://github.com/WireMock-Net/WireMock.Net" >}} to create a mocking web server that accepts our requests. Later on we will check the web server logs to verify if everything worked as expected. 
+Finally, we want to write our modified data into some kind of web endpoint. In this example, we want to take every record of the source and send it into a different REST endpoint. To verify that our code works, we will use {{< link-ext text="WireMock.NET " url="https://github.com/WireMock-Net/WireMock.Net" >}} to create a mocking web server that accepts our requests. Later on we will check the web server logs to verify if everything worked as expected.
 
 ### Creating Mock webserver
 
@@ -170,7 +170,7 @@ Server
 
 ### Using GetNext/HasNextUri pattern
 
-We use the `JsonDestination` to write into our endpoint. We will use the Post http method when sending the data to the endpoint. Also, we will use the same HttpClient as defined previously in this example. 
+We use the `JsonDestination` to write into our endpoint. We will use the Post http method when sending the data to the endpoint. Also, we will use the same HttpClient as defined previously in this example.
 
 In order to send every row that arrives at the destination into a different Url, we use the `GetNextUri`/`HasNextUri` pattern. The `HasNextUri` is a function that returns true if a new Uri should be used for the next record. The `GetNextUri` describes a function how to retrieve the next Url. Both function have the current processed row as well as some information about the current state of the `JsonDestination` (e.g. the number of processed rows)
 
@@ -273,7 +273,7 @@ internal class Program
                 Response.Create()
                 .WithStatusCode(200)
             );
-    }        
+    }
 
     private static HttpClient CreateDefaultHttpClient()
     {
