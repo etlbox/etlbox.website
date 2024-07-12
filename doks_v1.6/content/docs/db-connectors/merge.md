@@ -1,5 +1,5 @@
 ---
-title: "Merging & syncing tables"
+title: "Merging & Syncing Tables"
 description: "Details about the DbMerge connector"
 lead: "The following article describes how you can use the data from your data flow to insert new data in a destination table, update existing or delete removed records."
 draft: false
@@ -12,6 +12,7 @@ toc: true
 ---
 
 If you want to start with example code right away, you will find it in the recipes section for the [DbMerge](/recipes/destinations/mergedestination).
+There is also an [article available that compares an ETLBox approach with the existing database approaches](/recipes/data-integration/merge-overview). This blog article is also an easy-to-read introduction into the DbMerge destination.
 
 # Syncing tables with Merge
 
