@@ -50,6 +50,9 @@ There is no limit how many target the Multicast can be linked to.</p>
       <a class="xref" href="/api/etlbox.dataflow/multicast-1#ETLBox_DataFlow_Multicast_1_TargetBlock">Multicast&lt;ExpandoObject&gt;.TargetBlock</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/multicast-1#ETLBox_DataFlow_Multicast_1_CustomCloningStrategy">Multicast&lt;ExpandoObject&gt;.CustomCloningStrategy</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/multicast-1#ETLBox_DataFlow_Multicast_1_Reset">Multicast&lt;ExpandoObject&gt;.Reset()</a>
     </div>
     <div>

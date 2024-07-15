@@ -1,10 +1,10 @@
 #Preparations could be (untested)
 # dotnet tool update -g docfx
 # copy docfx.json into docfx_project folder
-# dotnet build DocFxToHugoMD 
+# dotnet build DocFxToHugoMD
 
 # We need to clean up the bin/obj folders (we also need to docfx cache folder stored there)
-# in order to make sure that the xdoc folders used by docfx are removed from the obj/bin folders, otherwise cached data is used which 
+# in order to make sure that the xdoc folders used by docfx are removed from the obj/bin folders, otherwise cached data is used which
 # can lead to incorrect result
 
 # Approach 1 using dotnet clean
@@ -25,7 +25,7 @@ foreach ($d in $dir){
 }
 
 #The _site and some obj folder created by docfx may contain some cached date, so we remove it as well
-#remove-item ./obj -Recurse 
+#remove-item ./obj -Recurse
 remove-item docfx_project/obj -Recurse
 remove-item docfx_project/_site -Recurse
 
@@ -33,8 +33,8 @@ remove-item docfx_project/_site -Recurse
 dotnet build ..\..\etlbox.tests --configuration Debug
 dotnet build apitransform\DocFxToHugoMD --configuration Debug
 
-docfx docfx_project/docfx.json 
+docfx docfx_project/docfx.json
 ./apitransform/DocFxToHugoMD/bin/Debug/net6.0/DocFxToHugoMD.exe
-remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v0.5\content\en\api' -Recurse
-move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v0.5\content\en\' 
+remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.6\content\api' -Recurse
+move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.6\content\'
 pause

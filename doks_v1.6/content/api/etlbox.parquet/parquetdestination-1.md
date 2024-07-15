@@ -517,7 +517,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/6d2bda795d5ab96c153661cc45a0ab298ccf4874/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
+        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/4875cc5828cf1613aece87f3c4ca5c035b39dd30/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
         <td></td>
       </tr>
     </tbody>

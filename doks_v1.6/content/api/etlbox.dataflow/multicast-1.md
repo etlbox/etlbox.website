@@ -271,6 +271,33 @@ multicast.LinkTo(dest3);</code></pre>
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_DataFlow_Multicast_1_CustomCloningStrategy_" data-uid="ETLBox.DataFlow.Multicast`1.CustomCloningStrategy*"></a>
+  <h4 id="ETLBox_DataFlow_Multicast_1_CustomCloningStrategy" data-uid="ETLBox.DataFlow.Multicast`1.CustomCloningStrategy">CustomCloningStrategy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, TInput> CustomCloningStrategy { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Multicast_1_SourceBlock_" data-uid="ETLBox.DataFlow.Multicast`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Multicast_1_SourceBlock" data-uid="ETLBox.DataFlow.Multicast`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
