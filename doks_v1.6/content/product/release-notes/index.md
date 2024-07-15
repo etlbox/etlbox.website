@@ -5,6 +5,18 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.4.1
+
+#### Features:
+
+- DataFrame now automatically converts enums into integer values
+- Multicast: Allows to override default cloning with custom cloning strategy
+- Updating packages to latest versions (including CsvHelper to 33.0.1)
+
+#### Bug Fixes:
+
+- Fixing issue with thread unsafe calls when cloning dynamic objects in Multicast
+
 ## Version 3.4.0
 
 #### Features:
@@ -23,7 +35,7 @@ draft: false
 - LinkErrorTo(..) is now part of interface IDataFlowComponent
 - Streaming sources: Adding support for MIME multipart responses
 
-#### Bug fixes:
+#### Bug Fixes:
 
 - Fixed bug where duplicate column headers can't be read using ReadFieldHeaders()
 
