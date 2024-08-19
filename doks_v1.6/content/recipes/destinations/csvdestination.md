@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-The Csv destination is your best choice if you want to create data file that are {{< link-ext url="https://www.rfc-editor.org/rfc/rfc4180" text="RFC-4180 compliant" >}}. The CsvDestination (as well as the CsvSource) relies on the 3rd party library {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper by Josh Close" >}}. Some of the Configuration properties from this library are directly exposed. 
+The Csv destination is your best choice if you want to create data file that are {{< link-ext url="https://www.rfc-editor.org/rfc/rfc4180" text="RFC-4180 compliant" >}}. The CsvDestination (as well as the CsvSource) relies on the 3rd party library {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper by Josh Close" >}}. Some of the Configuration properties from this library are directly exposed.
 
 ## Shared code
 
@@ -69,7 +69,7 @@ Test1,1.1,1
 
 ### Configure underlying CsvWriter
 
-This example shows how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to provide a different order of the header columns. Also, we can use the exposed configuration property to set up various other parameters, e.g. writing with a different delimiter or enabling quotes for strings. 
+This example shows how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to provide a different order of the header columns. Also, we can use the exposed configuration property to set up various other parameters, e.g. writing with a different delimiter or enabling quotes for strings.
 
 {{< alert text="To use a different encoding, you need to use the <code>Encoding</code> property on the <code>CsvSource</code> directly. Do not use the Encoding property on the CsvHelper Configuration object." >}}
 
@@ -123,7 +123,7 @@ Content of file 'DifferentConfig.csv'
 
 ### Map header names to properties with class maps
 
-If you are not allowed to add attributes to your object, you can use the class mapping to change the header names or the order in your csv file (and many more different options are available here). 
+If you are not allowed to add attributes to your object, you can use the class mapping to change the header names or the order in your csv file (and many more different options are available here).
 
 ```C#
 public class MyRow
@@ -172,7 +172,7 @@ RowNr,Col1,Col2
 
 ## Writing into multiple files
 
-You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files. 
+You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files.
 
 ```C#
 public class MyRow
@@ -229,7 +229,7 @@ Test8,0.8,8
 
 ## Dynamic csv file creation
 
-The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a csv file, without the need to define any strongly typed object first. 
+The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a csv file, without the need to define any strongly typed object first.
 
 ```C#
 private void CreateTable(IConnectionManager connMan, string tableName) {
@@ -375,4 +375,46 @@ Id,Value1,Value2
 ---
 */
 
+```
+
+## Creating an empty csv file if no data arrives
+
+By default, if no data arrives at a destination component, no action is performed. The following code example shows how an empty file can be generated when no data arrives at the CsvDestination.
+
+```c#
+
+public class MyRow
+{
+    public string Value1 { get; set; }
+    public decimal Value2 { get; set; }
+    public int Id { get; set; }
+}
+
+string destFile = @"res/Examples/EmptyFile.csv";
+if (File.Exists(destFile)) File.Delete(destFile);
+
+var source = new MemorySource<MyRow>();
+source.Data = new List<MyRow>();
+
+CsvDestination<MyRow> dest = new CsvDestination<MyRow>(destFile);
+dest.OnCompletion = () => {
+    if (dest.ProgressCount == 0) {
+        using (StreamWriter sw = new StreamWriter(destFile))
+        using (CsvHelper.CsvWriter cw = new CsvHelper.CsvWriter(sw, dest.Configuration)) {
+            cw.WriteHeader<MyRow>();
+        }
+    }
+};
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+PrintOutputFile(destFile);
+
+/*Output:
+Content of file 'EmptyFile.csv'
+---
+Value1,Value2,Id
+---
+*/
 ```
