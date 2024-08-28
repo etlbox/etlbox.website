@@ -418,3 +418,46 @@ Value1,Value2,Id
 ---
 */
 ```
+
+## Removing columns when using dynamic objects
+
+If you are using dynamic objects when writing into a csv file, by default all column are written into the output file. If you want to omit (or rename) particular columns, you can use the `ColumnRename` transformation.
+
+```C#
+string destFile = @"res/Examples/DynamicWithLessColumns.csv";
+
+var source = new MemorySource();
+source.Data = new List<ExpandoObject>();
+
+dynamic r1 = new ExpandoObject();
+r1.Id = 1; r1.Value = "Test1"; r1.Value2 = "A";
+source.DataAsList.Add(r1);
+
+dynamic r2 = new ExpandoObject();
+r2.Id = 2; r2.Value = "Test1"; r2.Value2 = "B";
+source.DataAsList.Add(r2);
+
+var dest = new CsvDestination(destFile);
+dest.ResourceType = ResourceType.File;
+
+var cr = new ColumnRename();
+cr.RenameColumns = new[] {
+    new RenameColumn() { CurrentName = "Value", RemoveColumn = true }
+};
+
+source.LinkTo(cr);
+cr.LinkTo(dest);
+Network.Execute(source);
+PrintOutputFile(destFile);
+
+
+/* Output:
+Content of file 'DynamicWithLessColumns.csv'
+---
+Id,Value2
+1,A
+2,B
+
+---
+*/
+```
