@@ -870,14 +870,14 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_Reflection_PropertyInfo_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">TryConvertAndSetValue(PropertyInfo, object, object)</h4>
+  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_Reflection_PropertyInfo_System_Object_System_Object_ETLBox_Helper_DataTypeConverterConfiguration_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.Reflection.PropertyInfo,System.Object,System.Object,ETLBox.Helper.DataTypeConverterConfiguration)">TryConvertAndSetValue(PropertyInfo, object, object, DataTypeConverterConfiguration)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void TryConvertAndSetValue(PropertyInfo propInfo, object obj, object value)
+    public void TryConvertAndSetValue(PropertyInfo propInfo, object obj, object value, DataTypeConverterConfiguration converterConfiguration = null)
 ```
 
 {{< rawhtml >}}
@@ -906,17 +906,22 @@ toc: false
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.helper/datatypeconverterconfiguration">DataTypeConverterConfiguration</a></td>
+        <td><span class="parametername">converterConfiguration</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <a id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_String_System_Object_System_Object_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.String,System.Object,System.Object)">TryConvertAndSetValue(string, object, object)</h4>
+  <h4 id="ETLBox_GenericTypeInfo_TryConvertAndSetValue_System_String_System_Object_System_Object_ETLBox_Helper_DataTypeConverterConfiguration_" data-uid="ETLBox.GenericTypeInfo.TryConvertAndSetValue(System.String,System.Object,System.Object,ETLBox.Helper.DataTypeConverterConfiguration)">TryConvertAndSetValue(string, object, object, DataTypeConverterConfiguration)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public void TryConvertAndSetValue(string propName, object obj, object value)
+    public void TryConvertAndSetValue(string propName, object obj, object value, DataTypeConverterConfiguration converterConfiguration = null)
 ```
 
 {{< rawhtml >}}
@@ -943,6 +948,11 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.helper/datatypeconverterconfiguration">DataTypeConverterConfiguration</a></td>
+        <td><span class="parametername">converterConfiguration</span></td>
         <td></td>
       </tr>
     </tbody>

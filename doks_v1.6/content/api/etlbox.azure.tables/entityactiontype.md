@@ -44,7 +44,7 @@ toc: false
       </tr>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_Delete">Delete</td>
-        <td><p>Delete the entity. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.deleteentity">DeleteEntity(string, string, ETag, CancellationToken)</a></p>
+        <td><p>Delete the entity. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.deleteentity#azure-data-tables-tableclient-deleteentity(system-string-system-string-azure-etag-system-threading-cancellationtoken)">DeleteEntity(string, string, ETag, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>

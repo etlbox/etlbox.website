@@ -448,8 +448,8 @@ toc: false
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecrate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecrate*"></a>
-  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecrate" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecrate">CreateOrRecrate()</h4>
+  <a id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate_" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate*"></a>
+  <h4 id="ETLBox_ControlFlow_CreateIndexTask_CreateOrRecreate" data-uid="ETLBox.ControlFlow.CreateIndexTask.CreateOrRecreate">CreateOrRecreate()</h4>
   <div class="markdown level1 summary"><p>Runs the sql to (re)create the index on a table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -457,7 +457,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public void CreateOrRecrate()
+    public void CreateOrRecreate()
 ```
 
 {{< rawhtml >}}

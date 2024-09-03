@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10329
+weight: 10333
 toc: false
 ---
 
@@ -390,7 +390,7 @@ authentication with Sql Server</p>
   <div><span class="xref">ETLBox.DbConnectionManager&lt;Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient.SqlTransaction, Microsoft.Data.SqlClient.SqlParameter&gt;.ConnectionType</span></div>
   <a id="ETLBox_SqlServer_SqlConnectionManager_DisableCheckConstraints_" data-uid="ETLBox.SqlServer.SqlConnectionManager.DisableCheckConstraints*"></a>
   <h4 id="ETLBox_SqlServer_SqlConnectionManager_DisableCheckConstraints" data-uid="ETLBox.SqlServer.SqlConnectionManager.DisableCheckConstraints">DisableCheckConstraints</h4>
-  <div class="markdown level1 summary"><p>If set to true, foreign key constraints will ot be checked when doing the bulk insert.
+  <div class="markdown level1 summary"><p>If set to true, foreign key constraints will not be checked when doing the bulk insert.
 By default, foreign key constraints are checked.
 To improve bulk insert performance, you can disable foreign key constrain checks.<br>
 This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.</p>
@@ -431,6 +431,36 @@ This only applies for bulk inserts, and only if ValueGeneratedColumns are empty.
 
 ```C#
     public bool DisableTriggers { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_SqlServer_SqlConnectionManager_KeepNulls_" data-uid="ETLBox.SqlServer.SqlConnectionManager.KeepNulls*"></a>
+  <h4 id="ETLBox_SqlServer_SqlConnectionManager_KeepNulls" data-uid="ETLBox.SqlServer.SqlConnectionManager.KeepNulls">KeepNulls</h4>
+  <div class="markdown level1 summary"><p>If inserted data into columns with a DEFAULT constraint, the default value is always used
+if the mapped property in your data object holds a null value.
+If you want to insert a NULL value instead (and not trigger the default value generation), set this property to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool KeepNulls { get; set; }
 ```
 
 {{< rawhtml >}}

@@ -1,26 +1,26 @@
 ---
-title: "JsonProperty2JsonPath.MultipleResultsInPath"
-description: "Details for Class JsonProperty2JsonPath.MultipleResultsInPath (ETLBox.Json.JsonProperty2JsonPath)"
+title: "ConvertibleTestDefinition"
+description: "Details for Class ConvertibleTestDefinition (ETLBox.Helper)"
 draft: false
 images: []
 menu:
   api:
-    parent: "etlbox.json.jsonproperty2jsonpath"
-weight: 10261
+    parent: "etlbox.helper"
+weight: 10215
 toc: false
 ---
 
 {{< rawhtml >}}
 
-            <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath">
-  <h1 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath" class="text-break">Class JsonProperty2JsonPath.MultipleResultsInPath
+            <article class="content wrap" id="_content" data-uid="ETLBox.Helper.ConvertibleTestDefinition">
+  <h1 id="ETLBox_Helper_ConvertibleTestDefinition" data-uid="ETLBox.Helper.ConvertibleTestDefinition" class="text-break">Class ConvertibleTestDefinition
 </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">JsonProperty2JsonPath.MultipleResultsInPath</span></div>
+    <div class="level1"><span class="xref">ConvertibleTestDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -46,27 +46,27 @@ toc: false
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-<h6><strong>Namespace</strong>: ETLBox.Json.JsonProperty2JsonPath</h6>
-  <h6><strong>Assembly</strong>: ETLBox.Json.dll</h6>
-  <h5 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath_syntax">Syntax</h5>
+<h6><strong>Namespace</strong>: ETLBox.Helper</h6>
+  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h5 id="ETLBox_Helper_ConvertibleTestDefinition_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public class JsonProperty2JsonPath.MultipleResultsInPath
+    public class ConvertibleTestDefinition
 ```
 
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath_JsonPathInResult_" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath.JsonPathInResult*"></a>
-  <h4 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath_JsonPathInResult" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath.JsonPathInResult">JsonPathInResult</h4>
+  <a id="ETLBox_Helper_ConvertibleTestDefinition_AddParameters_" data-uid="ETLBox.Helper.ConvertibleTestDefinition.AddParameters*"></a>
+  <h4 id="ETLBox_Helper_ConvertibleTestDefinition_AddParameters" data-uid="ETLBox.Helper.ConvertibleTestDefinition.AddParameters">AddParameters</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string JsonPathInResult { get; set; }
+    public List<object> AddParameters { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -80,20 +80,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath_OutputName_" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath.OutputName*"></a>
-  <h4 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath_OutputName" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath.OutputName">OutputName</h4>
+  <a id="ETLBox_Helper_ConvertibleTestDefinition_TargetType_" data-uid="ETLBox.Helper.ConvertibleTestDefinition.TargetType*"></a>
+  <h4 id="ETLBox_Helper_ConvertibleTestDefinition_TargetType" data-uid="ETLBox.Helper.ConvertibleTestDefinition.TargetType">TargetType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string OutputName { get; set; }
+    public Type TargetType { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -107,7 +107,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td></td>
       </tr>
     </tbody>

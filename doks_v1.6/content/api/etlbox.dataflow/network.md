@@ -216,6 +216,87 @@ t.Wait();</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Network_OnCompletion_" data-uid="ETLBox.DataFlow.Network.OnCompletion*"></a>
+  <h4 id="ETLBox_DataFlow_Network_OnCompletion" data-uid="ETLBox.DataFlow.Network.OnCompletion">OnCompletion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Action OnCompletion { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_OnException_" data-uid="ETLBox.DataFlow.Network.OnException*"></a>
+  <h4 id="ETLBox_DataFlow_Network_OnException" data-uid="ETLBox.DataFlow.Network.OnException">OnException</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Action<Exception, string> OnException { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_OnInitialization_" data-uid="ETLBox.DataFlow.Network.OnInitialization*"></a>
+  <h4 id="ETLBox_DataFlow_Network_OnInitialization" data-uid="ETLBox.DataFlow.Network.OnInitialization">OnInitialization</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Action OnInitialization { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Network_Sources_" data-uid="ETLBox.DataFlow.Network.Sources*"></a>
   <h4 id="ETLBox_DataFlow_Network_Sources" data-uid="ETLBox.DataFlow.Network.Sources">Sources</h4>
   <div class="markdown level1 summary"></div>

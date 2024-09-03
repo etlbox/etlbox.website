@@ -1,27 +1,26 @@
 ---
-title: "LogEntry"
-description: "Details for Class LogEntry (ETLBox.Logging)"
+title: "DataTypeTester"
+description: "Details for Class DataTypeTester (ETLBox.Helper)"
 draft: false
 images: []
 menu:
   api:
-    parent: "etlbox.logging"
-weight: 10269
+    parent: "etlbox.helper"
+weight: 10218
 toc: false
 ---
 
 {{< rawhtml >}}
 
-            <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogEntry">
-  <h1 id="ETLBox_Logging_LogEntry" data-uid="ETLBox.Logging.LogEntry" class="text-break">Class LogEntry
+            <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DataTypeTester">
+  <h1 id="ETLBox_Helper_DataTypeTester" data-uid="ETLBox.Helper.DataTypeTester" class="text-break">Class DataTypeTester
 </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">LogEntry</span></div>
-      <div class="level2"><a class="xref" href="/api/etlbox.logging/loghierarchyentry">LogHierarchyEntry</a></div>
+    <div class="level1"><span class="xref">DataTypeTester</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -47,27 +46,55 @@ toc: false
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-<h6><strong>Namespace</strong>: ETLBox.Logging</h6>
-  <h6><strong>Assembly</strong>: ETLBox.Logging.dll</h6>
-  <h5 id="ETLBox_Logging_LogEntry_syntax">Syntax</h5>
+<h6><strong>Namespace</strong>: ETLBox.Helper</h6>
+  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h5 id="ETLBox_Helper_DataTypeTester_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public class LogEntry
+    public class DataTypeTester
 ```
 
 {{< rawhtml >}}
+  <h3 id="fields">Fields
+</h3>
+  <h4 id="ETLBox_Helper_DataTypeTester_IgnorePropNames" data-uid="ETLBox.Helper.DataTypeTester.IgnorePropNames">IgnorePropNames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<string> IgnorePropNames
+```
+
+{{< rawhtml >}}
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_Logging_LogEntry_Action_" data-uid="ETLBox.Logging.LogEntry.Action*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Action" data-uid="ETLBox.Logging.LogEntry.Action">Action</h4>
+  <a id="ETLBox_Helper_DataTypeTester_ConvertibleTypes_" data-uid="ETLBox.Helper.DataTypeTester.ConvertibleTypes*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_ConvertibleTypes" data-uid="ETLBox.Helper.DataTypeTester.ConvertibleTypes">ConvertibleTypes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string Action { get; set; }
+    public ConvertibleTestDefinition[] ConvertibleTypes { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -81,20 +108,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="/api/etlbox.helper/convertibletestdefinition">ConvertibleTestDefinition</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_EndDate_" data-uid="ETLBox.Logging.LogEntry.EndDate*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_EndDate" data-uid="ETLBox.Logging.LogEntry.EndDate">EndDate</h4>
+  <a id="ETLBox_Helper_DataTypeTester_DateTimeStyles_" data-uid="ETLBox.Helper.DataTypeTester.DateTimeStyles*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_DateTimeStyles" data-uid="ETLBox.Helper.DataTypeTester.DateTimeStyles">DateTimeStyles</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DateTime? EndDate { get; set; }
+    public DateTimeStyles DateTimeStyles { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -108,20 +135,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimestyles">DateTimeStyles</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_Id_" data-uid="ETLBox.Logging.LogEntry.Id*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Id" data-uid="ETLBox.Logging.LogEntry.Id">Id</h4>
+  <a id="ETLBox_Helper_DataTypeTester_DefaultConvertibleTypes_" data-uid="ETLBox.Helper.DataTypeTester.DefaultConvertibleTypes*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_DefaultConvertibleTypes" data-uid="ETLBox.Helper.DataTypeTester.DefaultConvertibleTypes">DefaultConvertibleTypes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public long Id { get; set; }
+    public ConvertibleTestDefinition[] DefaultConvertibleTypes { get; }
 ```
 
 {{< rawhtml >}}
@@ -135,20 +162,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><a class="xref" href="/api/etlbox.helper/convertibletestdefinition">ConvertibleTestDefinition</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_Level_" data-uid="ETLBox.Logging.LogEntry.Level*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Level" data-uid="ETLBox.Logging.LogEntry.Level">Level</h4>
+  <a id="ETLBox_Helper_DataTypeTester_FormatProvider_" data-uid="ETLBox.Helper.DataTypeTester.FormatProvider*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_FormatProvider" data-uid="ETLBox.Helper.DataTypeTester.FormatProvider">FormatProvider</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string Level { get; set; }
+    public IFormatProvider FormatProvider { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -162,20 +189,20 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_LoadProcessId_" data-uid="ETLBox.Logging.LogEntry.LoadProcessId*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_LoadProcessId" data-uid="ETLBox.Logging.LogEntry.LoadProcessId">LoadProcessId</h4>
+  <a id="ETLBox_Helper_DataTypeTester_NumberStyles_" data-uid="ETLBox.Helper.DataTypeTester.NumberStyles*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_NumberStyles" data-uid="ETLBox.Helper.DataTypeTester.NumberStyles">NumberStyles</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public long? LoadProcessId { get; set; }
+    public NumberStyles NumberStyles { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -189,51 +216,44 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.numberstyles">NumberStyles</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_LogDate_" data-uid="ETLBox.Logging.LogEntry.LogDate*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_LogDate" data-uid="ETLBox.Logging.LogEntry.LogDate">LogDate</h4>
-  <div class="markdown level1 summary"></div>
+  <h3 id="methods">Methods
+</h3>
+  <a id="ETLBox_Helper_DataTypeTester_Convert_" data-uid="ETLBox.Helper.DataTypeTester.Convert*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_Convert_System_Object_" data-uid="ETLBox.Helper.DataTypeTester.Convert(System.Object)">Convert(dynamic)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert all properties that are currently strings to the best fitting type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public DateTime LogDate { get; set; }
+    public dynamic Convert(dynamic dynamicObject)
 ```
 
 {{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">dynamic</span></td>
+        <td><span class="parametername">dynamicObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_Message_" data-uid="ETLBox.Logging.LogEntry.Message*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Message" data-uid="ETLBox.Logging.LogEntry.Message">Message</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public string Message { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -243,51 +263,41 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="xref">dynamic</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_Source_" data-uid="ETLBox.Logging.LogEntry.Source*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_Source" data-uid="ETLBox.Logging.LogEntry.Source">Source</h4>
+  <a id="ETLBox_Helper_DataTypeTester_ConvertDynamic_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_ConvertDynamic_System_Object_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic(System.Object)">ConvertDynamic(dynamic)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string Source { get; set; }
+    public static dynamic ConvertDynamic(dynamic dynamicObject)
 ```
 
 {{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="xref">dynamic</span></td>
+        <td><span class="parametername">dynamicObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_StartDate_" data-uid="ETLBox.Logging.LogEntry.StartDate*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_StartDate" data-uid="ETLBox.Logging.LogEntry.StartDate">StartDate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public DateTime StartDate { get; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -297,51 +307,46 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">dynamic</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_TaskHash_" data-uid="ETLBox.Logging.LogEntry.TaskHash*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_TaskHash" data-uid="ETLBox.Logging.LogEntry.TaskHash">TaskHash</h4>
+  <a id="ETLBox_Helper_DataTypeTester_ConvertDynamic_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_ConvertDynamic_System_Object_System_IFormatProvider_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic(System.Object,System.IFormatProvider)">ConvertDynamic(dynamic, IFormatProvider)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public string TaskHash { get; set; }
+    public static dynamic ConvertDynamic(dynamic dynamicObject, IFormatProvider formatProvider)
 ```
 
 {{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="xref">dynamic</span></td>
+        <td><span class="parametername">dynamicObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Logging_LogEntry_TaskName_" data-uid="ETLBox.Logging.LogEntry.TaskName*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_TaskName" data-uid="ETLBox.Logging.LogEntry.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public string TaskName { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -351,34 +356,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Logging_LogEntry_TaskType_" data-uid="ETLBox.Logging.LogEntry.TaskType*"></a>
-  <h4 id="ETLBox_Logging_LogEntry_TaskType" data-uid="ETLBox.Logging.LogEntry.TaskType">TaskType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public string TaskType { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="xref">dynamic</span></td>
         <td></td>
       </tr>
     </tbody>

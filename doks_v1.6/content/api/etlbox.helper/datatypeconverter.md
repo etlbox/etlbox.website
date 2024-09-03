@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10215
+weight: 10216
 toc: false
 ---
 
@@ -65,14 +65,14 @@ various sql data types into the right database specific database or into a .NET 
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Helper_DataTypeConverter_ChangeType_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType*"></a>
-  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType_System_Object_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType(System.Object,System.Type)">ChangeType(object, Type)</h4>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ChangeType_System_Object_System_Type_ETLBox_Helper_DataTypeConverterConfiguration_" data-uid="ETLBox.Helper.DataTypeConverter.ChangeType(System.Object,System.Type,ETLBox.Helper.DataTypeConverterConfiguration)">ChangeType(object, Type, DataTypeConverterConfiguration)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static object ChangeType(object value, Type destinationType)
+    public static object ChangeType(object value, Type destinationType, DataTypeConverterConfiguration configuration = null)
 ```
 
 {{< rawhtml >}}
@@ -94,6 +94,11 @@ various sql data types into the right database specific database or into a .NET 
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">destinationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.helper/datatypeconverterconfiguration">DataTypeConverterConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
     </tbody>
