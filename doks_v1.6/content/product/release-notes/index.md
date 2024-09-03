@@ -5,6 +5,22 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.4.2
+
+#### Features:
+
+- Updating ExcelDataReader to 3.7.0
+- Network: Added OnInitialization/OnCompletion/OnException callbacks
+- SqlConnectionManager: 'KeepNulls' property enables keeping null value when inserted into column with DEFAULT constraint
+- Added DataTypeTester class that automatically detects and convert string into CLR types in a dynamic object
+
+#### Bug Fixes:
+
+- ParquetDestination: Write order property now also taken into account for dynamic objects
+- Fixed typo in method CreateIndexTask.CreateOrRecreate()
+- Fixed default value issue in cloning library
+- Changed cloning library back to Deep Cloner (this fixed security issue with old version System.Text.RegularExpression)
+
 ## Version 3.4.1
 
 #### Features:
