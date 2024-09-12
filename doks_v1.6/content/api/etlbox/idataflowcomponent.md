@@ -136,6 +136,60 @@ in the data flow faulted, the thrown exception will be stored in this property.<
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_IDataFlowComponent_ExecutionEndTime_" data-uid="ETLBox.IDataFlowComponent.ExecutionEndTime*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_ExecutionEndTime" data-uid="ETLBox.IDataFlowComponent.ExecutionEndTime">ExecutionEndTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    DateTimeOffset? ExecutionEndTime { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowComponent_ExecutionStartTime_" data-uid="ETLBox.IDataFlowComponent.ExecutionStartTime*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_ExecutionStartTime" data-uid="ETLBox.IDataFlowComponent.ExecutionStartTime">ExecutionStartTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    DateTimeOffset? ExecutionStartTime { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_IDataFlowComponent_IsReadyForProcessing_" data-uid="ETLBox.IDataFlowComponent.IsReadyForProcessing*"></a>
   <h4 id="ETLBox_IDataFlowComponent_IsReadyForProcessing" data-uid="ETLBox.IDataFlowComponent.IsReadyForProcessing">IsReadyForProcessing</h4>
   <div class="markdown level1 summary"><p>Indicates if a component was successfully initialized, linked and prepared for execution.</p>
@@ -160,6 +214,35 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowComponent_LogThreshold_" data-uid="ETLBox.IDataFlowComponent.LogThreshold*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_LogThreshold" data-uid="ETLBox.IDataFlowComponent.LogThreshold">LogThreshold</h4>
+  <div class="markdown level1 summary"><p>To avoid getting log message for every message, by default only log message are produced when 1000 rows
+are processed. Set this property to decrease or increase this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    int? LogThreshold { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -222,6 +305,34 @@ The default value is -1 (unlimited)</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_IDataFlowComponent_OnProgress_" data-uid="ETLBox.IDataFlowComponent.OnProgress*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_OnProgress" data-uid="ETLBox.IDataFlowComponent.OnProgress">OnProgress</h4>
+  <div class="markdown level1 summary"><p>This delegate is invoked each time the progress counter changes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    Action<int> OnProgress { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_IDataFlowComponent_Predecessors_" data-uid="ETLBox.IDataFlowComponent.Predecessors*"></a>
   <h4 id="ETLBox_IDataFlowComponent_Predecessors" data-uid="ETLBox.IDataFlowComponent.Predecessors">Predecessors</h4>
   <div class="markdown level1 summary"><p>All predecessors that are linked to this component.</p>
@@ -250,6 +361,34 @@ The default value is -1 (unlimited)</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_IDataFlowComponent_ProgressCount_" data-uid="ETLBox.IDataFlowComponent.ProgressCount*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_ProgressCount" data-uid="ETLBox.IDataFlowComponent.ProgressCount">ProgressCount</h4>
+  <div class="markdown level1 summary"><p>The amount of rows the current component has already processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    int ProgressCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_IDataFlowComponent_Successors_" data-uid="ETLBox.IDataFlowComponent.Successors*"></a>
   <h4 id="ETLBox_IDataFlowComponent_Successors" data-uid="ETLBox.IDataFlowComponent.Successors">Successors</h4>
   <div class="markdown level1 summary"><p>All successors that this component is linked to.</p>
@@ -274,6 +413,34 @@ The default value is -1 (unlimited)</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowComponent_Tag_" data-uid="ETLBox.IDataFlowComponent.Tag*"></a>
+  <h4 id="ETLBox_IDataFlowComponent_Tag" data-uid="ETLBox.IDataFlowComponent.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>A tag that can be used to store any object in the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    object Tag { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>

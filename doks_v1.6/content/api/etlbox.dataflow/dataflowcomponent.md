@@ -31,7 +31,6 @@ toc: false
     <h5>Implements</h5>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
     <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
-    <div><a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,7 +104,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    public abstract class DataFlowComponent : LoggableTask, IDataFlowComponent, ILoggableTask, IDataFlowLogging
+    public abstract class DataFlowComponent : LoggableTask, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -276,6 +275,60 @@ in the data flow faulted, the thrown exception will be stored in this property.<
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_ExecutionEndTime_" data-uid="ETLBox.DataFlow.DataFlowComponent.ExecutionEndTime*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_ExecutionEndTime" data-uid="ETLBox.DataFlow.DataFlowComponent.ExecutionEndTime">ExecutionEndTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DateTimeOffset? ExecutionEndTime { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_ExecutionStartTime_" data-uid="ETLBox.DataFlow.DataFlowComponent.ExecutionStartTime*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_ExecutionStartTime" data-uid="ETLBox.DataFlow.DataFlowComponent.ExecutionStartTime">ExecutionStartTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public DateTimeOffset? ExecutionStartTime { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -528,6 +581,34 @@ The default value is -1 (unlimited)</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_Tag_" data-uid="ETLBox.DataFlow.DataFlowComponent.Tag*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_Tag" data-uid="ETLBox.DataFlow.DataFlowComponent.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>A tag that can be used to store any object in the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public object Tag { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1072,9 +1153,6 @@ inside data flow components.</p>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a>
-  </div>
-  <div>
-      <a class="xref" href="/api/etlbox/idataflowlogging">IDataFlowLogging</a>
   </div>
 
 {{< /rawhtml >}}
