@@ -5,6 +5,17 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.4.3
+
+### Features:
+
+- Added ExecutionStartTime/ExecutionEndTime on each component
+- Added "Tag" object for custom reference
+
+#### Bug Fixes:
+
+- Fixes issue with "hanging network" introduced with 3.4.2
+
 ## Version 3.4.2
 
 #### Features:
