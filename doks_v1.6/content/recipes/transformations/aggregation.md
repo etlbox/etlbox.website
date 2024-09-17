@@ -13,7 +13,7 @@ toc: true
 
 ## AggregateColumn attribute
 
-This example shows how to use the `Aggregate` with the `AggregateColumn` attribute on your object. 
+This example shows how to use the `Aggregate` with the `AggregateColumn` attribute on your object.
 
 ```C#
 public class MyDetailValue
@@ -49,7 +49,7 @@ foreach (var row in dest.Data)
 ### Aggregation condition
 
 You can use the `AggregationCondition` property to filter our particular rows that you don't want to be part of your aggegration.
- 
+
 ```C#
 public class MyDetailValue
 {
@@ -75,7 +75,7 @@ agg.AggregationCondition = (row, aggregationMethod) => {
     else
         return true;
 };
-    
+
 var dest = new MemoryDestination<MyAggRow>();
 
 source.LinkTo<MyAggRow>(agg).LinkTo(dest);
@@ -90,8 +90,8 @@ foreach (var row in dest.Data)
 
 ## Attributes on dynamic input
 
-This example shows how to use the `Aggregate` with the dynamic `ExpandoObject` by setting the `AggregateColumns` property.  
- 
+This example shows how to use the `Aggregate` with the dynamic `ExpandoObject` by setting the `AggregateColumns` property.
+
 ```C#
 var source = new MemorySource();
 dynamic val1 = new ExpandoObject(); val1.DetailValue = 5; source.DataAsList.Add(val1);
@@ -122,7 +122,9 @@ foreach (dynamic row in dest.Data)
 
 ## Custom aggregation function
 
-This example shows how to set up your own aggregation function. 
+### Simple calculation
+
+This example shows how to set up your own aggregation function.
 
 ```C#
 public class MyDetailValue
@@ -155,6 +157,80 @@ foreach (var row in dest.Data)
 
 //Output
 //Sum:10
+```
+
+### Median calculation using custom function
+
+The following example shows how the Median (along with distinct count) could be calculated using the `AggregationAction` of the Aggregation.
+
+```C#
+using ETLBox.DataFlow;
+
+var source = new MemorySource<DetailsObject>();
+source.DataAsList.Add(new DetailsObject() { DetailValue = 5 });
+source.DataAsList.Add(new DetailsObject() { DetailValue = 3 });
+source.DataAsList.Add(new DetailsObject() { DetailValue = 2 });
+source.DataAsList.Add(new DetailsObject() { DetailValue = 4 });
+source.DataAsList.Add(new DetailsObject() { DetailValue = 3 });
+source.DataAsList.Add(new DetailsObject() { DetailValue = 6 });
+
+var agg = new Aggregation<DetailsObject, AggregatedObject>();
+List<int> numbers = new List<int>();
+agg.AggregationAction =
+    (detailObject, aggregatedObject) => {
+        aggregatedObject.Sum = detailObject.DetailValue + aggregatedObject.Sum;
+        aggregatedObject.Count = aggregatedObject.Count + 1;
+        if (!numbers.Contains(detailObject.DetailValue))
+            aggregatedObject.DistinctCount = aggregatedObject.DistinctCount + 1;
+        numbers.Add(detailObject.DetailValue);
+        aggregatedObject.Average = (decimal)aggregatedObject.Sum / (decimal)aggregatedObject.Count;
+        aggregatedObject.Median = CalculateMedian(numbers);
+    };
+
+
+var dest = new MemoryDestination<AggregatedObject>();
+
+source.LinkTo<AggregatedObject>(agg).LinkTo(dest);
+Network.Execute(source);
+
+foreach (var row in dest.Data) {
+    Console.WriteLine($"Sum:{row.Sum}");
+    Console.WriteLine($"Count:{row.Count}");
+    Console.WriteLine($"Distinct Count:{row.DistinctCount}");
+    Console.WriteLine($"Average:{row.Average}");
+    Console.WriteLine($"Median:{row.Median}");
+}
+
+//Output
+/*
+Sum:23
+Count:6
+Distinct Count:5
+Average:3.8333333333333333333333333333
+Median:3.5
+*/
+
+static decimal CalculateMedian(List<int> numbers) {
+    var ordered = numbers.OrderBy(x => x);
+    if (ordered.Count() % 2 == 0)
+        return ((decimal)ordered.ElementAt(numbers.Count / 2) +
+        (decimal)ordered.ElementAt((numbers.Count / 2) - 1)) / (decimal)2;
+    else
+        return numbers.OrderBy(x => x).ElementAt(numbers.Count / 2);
+}
+
+class DetailsObject {
+    public int DetailValue { get; set; }
+}
+
+class AggregatedObject {
+    public int Sum { get; set; }
+
+    public int Count { get; set; }
+    public int DistinctCount { get; set; }
+    public decimal Average { get; set; }
+    public decimal Median { get; set;}
+}
 ```
 
 ## GroupColumn attribute
@@ -199,7 +275,7 @@ foreach (var row in dest.Data)
 
 ## GroupColumn attribute on dynamic input
 
-This example show how to use set up grouping with the dynamic `ExpandoObject`. 
+This example show how to use set up grouping with the dynamic `ExpandoObject`.
 
 ```C#
 var source = new MemorySource();
@@ -251,7 +327,7 @@ foreach (dynamic row in dest.Data)
 
 ## Custom grouping function
 
-The code below demonstrate how to set up a your own grouping function. 
+The code below demonstrate how to set up a your own grouping function.
 
 ```C#
 public class MyAggRow4
@@ -295,7 +371,7 @@ foreach (var row in dest.Data)
 
 The following example was  created to show how to keep a value that is not part of an aggregate or group column.
 In this example, we want to calculate the sum of the `Score` property - grouped by `ID_A`. But we also want to keep the `ID_B` for informational purposes.
-This example shows how to keep the first encountered value of `ID_B`. If you like to keep the last value instead, you can use the `AggregationMethod.LastValue` instead. 
+This example shows how to keep the first encountered value of `ID_B`. If you like to keep the last value instead, you can use the `AggregationMethod.LastValue` instead.
 (There are also `FirstNotNullValue` and `LastNotNullValue` as alternatives)
 
 ```C#
@@ -340,9 +416,9 @@ foreach (var row in dest.Data)
 //ID_A:3 ID_B:7 Score:10
 ```
 
-### Defining own group key object 
+### Defining own group key object
 
-This example shows how to create your own group key. It will produce the same result as the previous example, but the main focus is here to demonstrate how grouping can be influence by defining your own key object. This key object is used in the internal dictionary of the Aggregation. Every time the aggregation encounters a new row, it will check if an object with the same key already exists in the internal dictionary - if yes, then the previous aggregated value is retrieved for this group. By overriding the `Equals` and `GetHashCode` methods we define our own matching condition. In this example, a new row matches with a previous row in the dictionary if the `ID_A` of both objects are equal. 
+This example shows how to create your own group key. It will produce the same result as the previous example, but the main focus is here to demonstrate how grouping can be influence by defining your own key object. This key object is used in the internal dictionary of the Aggregation. Every time the aggregation encounters a new row, it will check if an object with the same key already exists in the internal dictionary - if yes, then the previous aggregated value is retrieved for this group. By overriding the `Equals` and `GetHashCode` methods we define our own matching condition. In this example, a new row matches with a previous row in the dictionary if the `ID_A` of both objects are equal.
 
 ```C#
 public class Source
