@@ -5,6 +5,17 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.4.4
+
+#### Features:
+
+- Aggregation has new AggregationMethods and functionalities (e.g. Mean, Median, Mode, CountDistinct, CustomAggregation, Predicate,...)
+- New transformation: Pivot
+
+#### Bug Fixes:
+
+- Fixes issue with cloning dynamic objects that contain null values
+
 ## Version 3.4.3
 
 ### Features:
