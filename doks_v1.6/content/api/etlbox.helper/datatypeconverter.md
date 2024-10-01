@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10216
+weight: 10218
 toc: false
 ---
 
@@ -173,6 +173,50 @@ various sql data types into the right database specific database or into a .NET 
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_ConvertToDynamic_" data-uid="ETLBox.Helper.DataTypeConverter.ConvertToDynamic*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_ConvertToDynamic_System_Object_" data-uid="ETLBox.Helper.DataTypeConverter.ConvertToDynamic(System.Object)">ConvertToDynamic(object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static ExpandoObject ConvertToDynamic(object POCO)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">POCO</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -605,6 +649,55 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Helper_DataTypeConverter_IsNumericType_" data-uid="ETLBox.Helper.DataTypeConverter.IsNumericType*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_IsNumericType_System_Type_" data-uid="ETLBox.Helper.DataTypeConverter.IsNumericType(System.Type)">IsNumericType(Type)</h4>
+  <div class="markdown level1 summary"><p>Determines if a type is numeric.  Nullable numeric types are considered numeric.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static bool IsNumericType(Type type)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_Helper_DataTypeConverter_IsNumericType_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Boolean is not considered numeric.
+<a href="http://stackoverflow.com/a/5182747/172132">http://stackoverflow.com/a/5182747/172132</a></p>
+</div>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_ConnectionType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.ConnectionType)">TryConvertAliasName(string, ConnectionType)</h4>
   <div class="markdown level1 summary"><p>Converts a data type alias name (e.g. an alias name

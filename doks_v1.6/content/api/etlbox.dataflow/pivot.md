@@ -1,38 +1,38 @@
 ---
-title: "MongoDbDestination"
-description: "Details for Class MongoDbDestination (ETLBox.MongoDb)"
+title: "Pivot"
+description: "Details for Class Pivot (ETLBox.DataFlow)"
 draft: false
 images: []
 menu:
   api:
-    parent: "etlbox.mongodb"
-weight: 10282
+    parent: "etlbox.dataflow"
+weight: 10177
 toc: false
 ---
 
 {{< rawhtml >}}
 
-            <article class="content wrap" id="_content" data-uid="ETLBox.MongoDb.MongoDbDestination">
-  <h1 id="ETLBox_MongoDb_MongoDbDestination" data-uid="ETLBox.MongoDb.MongoDbDestination" class="text-break">Class MongoDbDestination
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Pivot">
+  <h1 id="ETLBox_DataFlow_Pivot" data-uid="ETLBox.DataFlow.Pivot" class="text-break">Class Pivot
 </h1>
-  <div class="markdown level0 summary"><p>A data flow destination for MongoDb.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
-    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1">MongoDbDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level6"><span class="xref">MongoDbDestination</span></div>
+    <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level6"><span class="xref">Pivot</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="/api/etlbox/idataflowbatchdestination-1">IDataFlowBatchDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/idataflowtransformation-2">IDataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div><a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div><a class="xref" href="/api/etlbox/idataflowbatchdestination">IDataFlowBatchDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></div>
     <div><a class="xref" href="/api/etlbox/idataflowcomponent">IDataFlowComponent</a></div>
     <div><a class="xref" href="/api/etlbox/iloggabletask">ILoggableTask</a></div>
@@ -40,79 +40,73 @@ toc: false
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_ConnectionString">MongoDbDestination&lt;ExpandoObject&gt;.ConnectionString</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_MaxBufferSize">Pivot&lt;ExpandoObject&gt;.MaxBufferSize</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_DbClient">MongoDbDestination&lt;ExpandoObject&gt;.DbClient</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotColumns">Pivot&lt;ExpandoObject&gt;.PivotColumns</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_DatabaseName">MongoDbDestination&lt;ExpandoObject&gt;.DatabaseName</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotValueColumns">Pivot&lt;ExpandoObject&gt;.PivotValueColumns</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_CollectionName">MongoDbDestination&lt;ExpandoObject&gt;.CollectionName</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_KeepEmptyValues">Pivot&lt;ExpandoObject&gt;.KeepEmptyValues</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_Session">MongoDbDestination&lt;ExpandoObject&gt;.Session</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ColumnNameGenerationFunc">Pivot&lt;ExpandoObject&gt;.ColumnNameGenerationFunc</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_CheckParameter">MongoDbDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueAggregationFunc">Pivot&lt;ExpandoObject&gt;.ValueAggregationFunc</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_InitCheckedParameter">MongoDbDestination&lt;ExpandoObject&gt;.InitCheckedParameter()</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_SourceBlock">Pivot&lt;ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_PrepareWrite">MongoDbDestination&lt;ExpandoObject&gt;.PrepareWrite()</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_TargetBlock">Pivot&lt;ExpandoObject&gt;.TargetBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_BulkInsertData__0___">MongoDbDestination&lt;ExpandoObject&gt;.BulkInsertData(ExpandoObject[])</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ProgressCount">Pivot&lt;ExpandoObject&gt;.ProgressCount</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1#ETLBox_MongoDb_MongoDbDestination_1_FinishWrite">MongoDbDestination&lt;ExpandoObject&gt;.FinishWrite()</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PrepareParameterForCheck">Pivot&lt;ExpandoObject&gt;.PrepareParameterForCheck()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite">DataFlowBatchDestination&lt;ExpandoObject&gt;.BeforeBatchWrite</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_Reset">Pivot&lt;ExpandoObject&gt;.Reset()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite">DataFlowBatchDestination&lt;ExpandoObject&gt;.AfterBatchWrite</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_CheckParameter">Pivot&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize">DataFlowBatchDestination&lt;ExpandoObject&gt;.BatchSize</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_InitComponent">Pivot&lt;ExpandoObject&gt;.InitComponent()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_UseBufferBlock">DataFlowBatchDestination&lt;ExpandoObject&gt;.UseBufferBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_CleanUpOnSuccess">Pivot&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess">DataFlowBatchDestination&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_CleanUpOnFaulted_System_Exception_">Pivot&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_System_Exception_">DataFlowBatchDestination&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">Pivot&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_InitComponent">DataFlowBatchDestination&lt;ExpandoObject&gt;.InitComponent()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1#ETLBox_DataFlow_DataFlowBatchDestination_1_WriteBatch__0___">DataFlowBatchDestination&lt;ExpandoObject&gt;.WriteBatch(ExpandoObject[])</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_TargetBlock">DataFlowDestination&lt;ExpandoObject&gt;.TargetBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_TargetAction">DataFlowDestination&lt;ExpandoObject&gt;.TargetAction</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_Buffer">DataFlowDestination&lt;ExpandoObject&gt;.Buffer</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_BufferTargetAction">DataFlowDestination&lt;ExpandoObject&gt;.BufferTargetAction</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_InternalBatchSize">DataFlowDestination&lt;ExpandoObject&gt;.InternalBatchSize</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_DEFAULT_BATCH_SIZE">DataFlowDestination&lt;ExpandoObject&gt;.DEFAULT_BATCH_SIZE</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Predecessors">DataFlowComponent.Predecessors</a>
@@ -139,9 +133,6 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_SetParentComponent_ETLBox_DataFlow_DataFlowComponent_">DataFlowComponent.SetParentComponent(DataFlowComponent)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
@@ -151,10 +142,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Reset">DataFlowComponent.Reset()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck">DataFlowComponent.PrepareParameterForCheck()</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnInitialization">DataFlowComponent.OnInitialization</a>
@@ -188,9 +176,6 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnProgress">DataFlowComponent.OnProgress</a>
@@ -280,68 +265,42 @@ toc: false
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-<h6><strong>Namespace</strong>: ETLBox.MongoDb</h6>
-  <h6><strong>Assembly</strong>: ETLBox.MongoDb.dll</h6>
-  <h5 id="ETLBox_MongoDb_MongoDbDestination_syntax">Syntax</h5>
+<h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
+  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h5 id="ETLBox_DataFlow_Pivot_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public class MongoDbDestination : MongoDbDestination<ExpandoObject>, IDataFlowBatchDestination<ExpandoObject>, IDataFlowDestination<ExpandoObject>, IDataFlowBatchDestination, IDataFlowDestination, IDataFlowComponent, ILoggableTask
+    public class Pivot : Pivot<ExpandoObject>, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
 </h3>
-  <a id="ETLBox_MongoDb_MongoDbDestination__ctor_" data-uid="ETLBox.MongoDb.MongoDbDestination.#ctor*"></a>
-  <h4 id="ETLBox_MongoDb_MongoDbDestination__ctor" data-uid="ETLBox.MongoDb.MongoDbDestination.#ctor">MongoDbDestination()</h4>
+  <a id="ETLBox_DataFlow_Pivot__ctor_" data-uid="ETLBox.DataFlow.Pivot.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot__ctor" data-uid="ETLBox.DataFlow.Pivot.#ctor">Pivot()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public MongoDbDestination()
+    public Pivot()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_MongoDb_MongoDbDestination__ctor_" data-uid="ETLBox.MongoDb.MongoDbDestination.#ctor*"></a>
-  <h4 id="ETLBox_MongoDb_MongoDbDestination__ctor_System_Int32_" data-uid="ETLBox.MongoDb.MongoDbDestination.#ctor(System.Int32)">MongoDbDestination(int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public MongoDbDestination(int batchSize)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">batchSize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="/api/etlbox/idataflowbatchdestination-1">IDataFlowBatchDestination&lt;TInput&gt;</a>
+      <a class="xref" href="/api/etlbox/idataflowtransformation-2">IDataFlowTransformation&lt;TInput, TOutput&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource&lt;TOutput&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="/api/etlbox/idataflowsource">IDataFlowSource</a>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination&lt;TInput&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="/api/etlbox/idataflowbatchdestination">IDataFlowBatchDestination</a>
   </div>
   <div>
       <a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>

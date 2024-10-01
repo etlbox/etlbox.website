@@ -79,6 +79,14 @@ public enum AttributeType
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_AttributeType_PivotColumn">PivotColumn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AttributeType_PivotValueColumn">PivotValueColumn</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AttributeType_RenameColumn">RenameColumn</td>
         <td></td>
       </tr>

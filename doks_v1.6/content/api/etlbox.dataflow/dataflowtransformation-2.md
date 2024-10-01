@@ -33,6 +33,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/filtertransformation-1">FilterTransformation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2">LookupTransformation&lt;TInput, TSource&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/multicast-1">Multicast&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowduplication-1">RowDuplication&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowmultiplication-2">RowMultiplication&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowtransformation-2">RowTransformation&lt;TInput, TOutput&gt;</a></div>

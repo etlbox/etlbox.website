@@ -270,6 +270,33 @@ public sealed class AggregateColumn : Attribute
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_AggregateColumn_CustomFunction_" data-uid="ETLBox.AggregateColumn.CustomFunction*"></a>
+  <h4 id="ETLBox_AggregateColumn_CustomFunction" data-uid="ETLBox.AggregateColumn.CustomFunction">CustomFunction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<object, object, object> CustomFunction { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_AggregateColumn_InputValuePropName_" data-uid="ETLBox.AggregateColumn.InputValuePropName*"></a>
   <h4 id="ETLBox_AggregateColumn_InputValuePropName" data-uid="ETLBox.AggregateColumn.InputValuePropName">InputValuePropName</h4>
   <div class="markdown level1 summary"><p>Property name in the input object that contains the detailed values.</p>
@@ -294,6 +321,33 @@ public sealed class AggregateColumn : Attribute
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_AggregateColumn_Predicate_" data-uid="ETLBox.AggregateColumn.Predicate*"></a>
+  <h4 id="ETLBox_AggregateColumn_Predicate" data-uid="ETLBox.AggregateColumn.Predicate">Predicate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Predicate<object> Predicate { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

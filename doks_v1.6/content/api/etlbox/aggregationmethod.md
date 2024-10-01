@@ -38,7 +38,23 @@ toc: false
     <thead>
     <tbody>
       <tr>
+        <td id="ETLBox_AggregationMethod_Concatenate">Concatenate</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AggregationMethod_Count">Count</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_CountDistinct">CountDistinct</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_CountDistinctNotNull">CountDistinctNotNull</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_Custom">Custom</td>
         <td></td>
       </tr>
       <tr>
@@ -62,11 +78,39 @@ toc: false
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_AggregationMethod_Mean">Mean</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_Median">Median</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AggregationMethod_Min">Min</td>
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_AggregationMethod_Mode">Mode</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_StandardDeviation">StandardDeviation</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_StandardDeviationSample">StandardDeviationSample</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AggregationMethod_Sum">Sum</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_Variance">Variance</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AggregationMethod_VarianceSample">VarianceSample</td>
         <td></td>
       </tr>
     </tbody>

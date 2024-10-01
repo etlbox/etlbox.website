@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10211
+weight: 10213
 toc: false
 ---
 
@@ -416,6 +416,60 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_GenericTypeInfo_PivotColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.PivotColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_PivotColumnAttributes" data-uid="ETLBox.GenericTypeInfo.PivotColumnAttributes">PivotColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<PivotColumn> PivotColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/pivotcolumn">PivotColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_PivotValueColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.PivotValueColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_PivotValueColumnAttributes" data-uid="ETLBox.GenericTypeInfo.PivotValueColumnAttributes">PivotValueColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<PivotValueColumn> PivotValueColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/pivotvaluecolumn">PivotValueColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_GenericTypeInfo_Properties_" data-uid="ETLBox.GenericTypeInfo.Properties*"></a>
   <h4 id="ETLBox_GenericTypeInfo_Properties" data-uid="ETLBox.GenericTypeInfo.Properties">Properties</h4>
   <div class="markdown level1 summary"><p>Property info of the type</p>
@@ -786,55 +840,6 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_GenericTypeInfo_IsNumericType_" data-uid="ETLBox.GenericTypeInfo.IsNumericType*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_IsNumericType_System_Type_" data-uid="ETLBox.GenericTypeInfo.IsNumericType(System.Type)">IsNumericType(Type)</h4>
-  <div class="markdown level1 summary"><p>Determines if a type is numeric.  Nullable numeric types are considered numeric.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static bool IsNumericType(Type type)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="ETLBox_GenericTypeInfo_IsNumericType_System_Type__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Boolean is not considered numeric.
-<a href="http://stackoverflow.com/a/5182747/172132">http://stackoverflow.com/a/5182747/172132</a></p>
-</div>
   <a id="ETLBox_GenericTypeInfo_RetrieveAdditionalTypeInfo_" data-uid="ETLBox.GenericTypeInfo.RetrieveAdditionalTypeInfo*"></a>
   <h4 id="ETLBox_GenericTypeInfo_RetrieveAdditionalTypeInfo_System_Reflection_PropertyInfo_System_Int32_" data-uid="ETLBox.GenericTypeInfo.RetrieveAdditionalTypeInfo(System.Reflection.PropertyInfo,System.Int32)">RetrieveAdditionalTypeInfo(PropertyInfo, int)</h4>
   <div class="markdown level1 summary"></div>
