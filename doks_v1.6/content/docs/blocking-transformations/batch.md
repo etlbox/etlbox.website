@@ -19,12 +19,12 @@ The normal `RowTransformation` will execute custom code for every processed row.
 
 #### Buffer
 
-The `BatchTransformation` has an input buffer and an output buffer. It will block execution until the buffer size is equal the batch size, or the source component has completed. 
+The `BatchTransformation` has an input buffer and an output buffer. It will block execution until the buffer size is equal the batch size, or the source component has completed.
 
 ### Code snippet
 
 ```C#
-BatchTransformation<MyInputRow,MyOutputRow> batchtrans = 
+BatchTransformation<MyInputRow,MyOutputRow> batchtrans =
     new BatchTransformation<MyInputRow,MyOutputRow>();
 batchtrans.BatchSize = 3;
 batchtrans.BatchTransformationFunc =

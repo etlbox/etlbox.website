@@ -7,22 +7,22 @@ images: []
 menu:
   docs:
     parent: "blocking-transformations"
-weight: 850
+weight: 810
 toc: true
 ---
 
 
 ## Overview
 
-A BlockTransformation waits until all data is received at the BlockTranformation - then it will be available in a List object and you can do modifications or calculations on your whole data set. Keep in mind that this transformation will need as much memory as the amount of data you loaded. 
+A BlockTransformation waits until all data is received at the BlockTranformation - then it will be available in a List object and you can do modifications or calculations on your whole data set. Keep in mind that this transformation will need as much memory as the amount of data you loaded.
 
-Input and output type doesn't have to be the same. If you use the BlockTransformation with only one type, output type will be the same as the input type. If you define both types, you will have access to a list of all data of your InputType, and you are expected to return a list of your new data of your output type. The BlockTransformation does not care how many records are going in or out - both sets can be totally different. 
+Input and output type doesn't have to be the same. If you use the BlockTransformation with only one type, output type will be the same as the input type. If you define both types, you will have access to a list of all data of your InputType, and you are expected to return a list of your new data of your output type. The BlockTransformation does not care how many records are going in or out - both sets can be totally different.
 
-#### Buffer 
+#### Buffer
 
-The BlockTransformation has an input and output buffer. You can't restrict the number of rows stored in the input buffer, as it will always store all incoming data. But you can restrict the amount of records in the output buffer using the `MaxBufferSize` property on the component. 
+The BlockTransformation has an input and output buffer. You can't restrict the number of rows stored in the input buffer, as it will always store all incoming data. But you can restrict the amount of records in the output buffer using the `MaxBufferSize` property on the component.
 
-### Code snippet 
+### Code snippet
 
 ```C#
 BlockTransformation<InputType> block = new BlockTransformation<InputType>(
@@ -35,9 +35,9 @@ BlockTransformation<InputType> block = new BlockTransformation<InputType>(
 
 ## Examples
 
-### Average calculation 
+### Average calculation
 
-This example will calculate the average price per weekday using a `BlockingTransformation`. Have a look at the [Aggregation](/docs/blocking-transformations/aggregation/) if you are in need of calculating values on your aggregated data. 
+This example will calculate the average price per weekday using a `BlockingTransformation`. Have a look at the [Aggregation](/docs/blocking-transformations/aggregation/) if you are in need of calculating values on your aggregated data.
 
 ```C#
 public class Order

@@ -7,28 +7,28 @@ images: []
 menu:
   docs:
     parent: "blocking-transformations"
-weight: 860
+weight: 810
 toc: true
 ---
 
 
 ## Overview
 
-The purpose of the WaitTransformation is to block execution of a path in your Network until another component (or multiple other components) has completed processing. The other dataflow compoment can be either a component from the same network, or a component of a different data flow. 
+The purpose of the WaitTransformation is to block execution of a path in your Network until another component (or multiple other components) has completed processing. The other dataflow compoment can be either a component from the same network, or a component of a different data flow.
 
-When waiting for a component in the same data flow, the WaitTransformation is mostly used in conjunction with a [Multicast](../../transformations/multicast) or [Predicates](../../getting-started/linking/#predicates), which split up the network in different paths. 
+When waiting for a component in the same data flow, the WaitTransformation is mostly used in conjunction with a [Multicast](../../transformations/multicast) or [Predicates](../../getting-started/linking/#predicates), which split up the network in different paths.
 
-Additionally, the WaitTransformation also accepts a `TaskCompletionSource` - so basically it can be used to wait for any Task. 
+Additionally, the WaitTransformation also accepts a `TaskCompletionSource` - so basically it can be used to wait for any Task.
 
-#### Buffer 
+#### Buffer
 
-The WaitTransformation has an input and output buffer. It won't accept any records until the component(s) in the network which are awaited are completed - once the other components are completed, the WaitTransformation will start to process all records without any delay. 
+The WaitTransformation has an input and output buffer. It won't accept any records until the component(s) in the network which are awaited are completed - once the other components are completed, the WaitTransformation will start to process all records without any delay.
 
-## Usage 
+## Usage
 
 ### With other data flow components
 
-You can simply pass an instance of any other data flow component to the WaitTransformation. 
+You can simply pass an instance of any other data flow component to the WaitTransformation.
 
 ```C#
 var dest = new DbDestination("TableName");
@@ -41,13 +41,13 @@ var row = new RowTransformation();
 var wait = new WaitTransformation<MyLinkingRow>(row, dest);
 ```
 
-Alternatively, you can pass the other component instances to the property `DataFlowComponents`. 
+Alternatively, you can pass the other component instances to the property `DataFlowComponents`.
 
 #### Example 2 networks
 
 ```C#
-/*    
-* Two data flows:         
+/*
+* Two data flows:
 *  Source1 --> Destination1 (onCompletion: set value)
 *  Source2 --> WaitTask --> RowTransformation -> Destination2 (started first)
 */
@@ -82,7 +82,7 @@ Task.WaitAll(t1, t2);
 #### Example same network
 
 ```C#
-/*             
+/*
 *  Source1 --> WaitTask --> RowTransformation -> Destination
                               |
 *  Source2 -------------------|
@@ -122,6 +122,6 @@ Network.Execute(wait);
 
 ### Waiting for TaskCompletionSource
 
-The WaitTransformation can also be used to wait for any kind of `TaskCompletionSource`. You can pass one or multiple task completion sources to the property `TaskCompletionSources`. 
+The WaitTransformation can also be used to wait for any kind of `TaskCompletionSource`. You can pass one or multiple task completion sources to the property `TaskCompletionSources`.
 
 {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskcompletionsource-1?view=net-7.0" text="Read more about creating a TaskCompletionSource" >}}.

@@ -7,18 +7,18 @@ images: []
 menu:
   docs:
     parent: "blocking-transformations"
-weight: 820
+weight: 810
 toc: true
 ---
 
 
 ### Overview
 
-Additionally to the `BatchTransformation`, the `CacheddBatchTransformation` let you access a cache object which stores the previously processed data. 
+Additionally to the `BatchTransformation`, the `CacheddBatchTransformation` let you access a cache object which stores the previously processed data.
 
 #### Buffer
 
-The `CachedBatchTransformation` has an input buffer and an output buffer. It will block execution until the buffer size is equal the batch size, or the source component has completed. Additionally to these buffer it will store the cached data in memory. 
+The `CachedBatchTransformation` has an input buffer and an output buffer. It will block execution until the buffer size is equal the batch size, or the source component has completed. Additionally to these buffer it will store the cached data in memory.
 
 ### Code snippet
 
