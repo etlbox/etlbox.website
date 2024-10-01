@@ -16,7 +16,7 @@ chatgpt-review: true
 
 The `LookupTransformation` in ETLBox is a powerful component used to enhance your ETL processes by enriching input data with additional information from a secondary data source, referred to as the lookup source. This is essential when you need to combine data from different sources to ensure your dataset is complete and comprehensive.
 
-The lookup is a partially blocking transformation. When a row arrives at the LookupTransformation, the component will start to load the lookup source data. It will block execution until either all lookup data has been loaded (Full cache mode) or the relevant lookup data has been loaded into memory (partial cache mode).
+The lookup is a partially blocking transformation. When a row arrives at the `LookupTransformation`, the component will start to load the lookup source data. It will block execution until either all lookup data has been loaded (Full cache mode) or the relevant lookup data has been loaded into memory (partial cache mode).
 
 ## Basic Lookup
 
@@ -81,12 +81,11 @@ foreach (var row in dest.Data) {
 
 ### Lookup source types
 
-As a source for the lookup transformation any ETLBox source component will do. So you could use the `DbSource` to read the lookup data from the a database table, or you could use the `CsvSource` or `JsonSource` to gather lookup data from a file. When you use the streaming connectors (like `JsonSource`, `CsvSource`, `XmlSource`, etc.) you are not limited to read data from files - you could also change the ResourceType to `ResourceType.Http` or `ResourceType.AzureBlob` to read from some web endpoint or Azure blob. If you need to have your own logic to retrieve your lookup data, you could use the CustomSource to define your own logic how to gather your lookup source data.
-
+As a source for the lookup transformation, any ETLBox source component can be used. For example, you could use the `DbSource` to read the lookup data from a database table, or you could use the `CsvSource` or `JsonSource` to gather lookup data from a file. When you use the streaming connectors (like `JsonSource`, `CsvSource`, `XmlSource`, etc.), you are not limited to reading data from files. You could also change the `ResourceType` to `ResourceType.Http` or `ResourceType.AzureBlob` to read from a web endpoint or an Azure blob. If you need custom logic to retrieve your lookup data, you could use the `CustomSource` to define your logic for gathering your lookup source data.
 
 ## Caching Modes
 
-The `LookupTransformation` offers two caching modes to optimize performance. 
+The `LookupTransformation` offers two caching modes to optimize performance.
 
 ### Full Cache
 
@@ -96,11 +95,11 @@ Full caching loads all the lookup data into memory before processing starts, mak
 lookup.CacheMode = CacheMode.Full;
 ```
 
-This will work for all source types. 
+This works for all source types.
 
 ### Partial Cache
 
-{{< alert text="The partial cache is only applicable if the Lookup source is a database. For other source types you can only use the Full Cache" >}}
+{{< alert text="The partial cache is only applicable if the Lookup source is a database. For other source types, you can only use the Full Cache" >}}
 
 Partial caching loads only the necessary lookup data as needed, which is suitable for larger datasets. This helps manage memory usage efficiently:
 
@@ -109,9 +108,21 @@ lookup.CacheMode = CacheMode.Partial;
 lookup.PartialCacheSettings.LoadBatchSize = 100; // Load data in batches of 100 records
 ```
 
-The partial cache will only work in combination with the `DbSource` as source for the Lookup.
+The partial cache will only work in combination with the `DbSource` as the source for the Lookup.
 
-###  Cache Eviction Policies
+#### MaxCacheSize
+
+The `MaxCacheSize` property controls the maximum size of the cache used in the `LookupTransformation` when in **Partial Cache** mode. This property defines how many items can be stored in the cache at any given time. If the cache reaches the specified limit, the system applies the configured **eviction policy** to remove the least relevant items.
+
+```csharp
+lookup.PartialCacheSettings.MaxCacheSize = 1000;  // Set cache size to 1000 items
+```
+
+For example, if you set `MaxCacheSize = 1000`, the cache will store up to 1000 items. When this limit is reached, the **eviction policy** (e.g., Least Recently Used, Least Frequently Used) will decide which entries to remove from the cache to make space for new data.
+
+This property is essential for managing memory usage when dealing with large datasets, ensuring that the cache remains efficient while optimizing the ETL process.
+
+### Cache Eviction Policies
 
 When using partial caching, it's important to manage the cache size. The `LookupTransformation` provides several eviction policies to control how data is removed from the cache when it reaches its maximum size:
 
@@ -128,7 +139,7 @@ lookup.PartialCacheSettings.EvictionPolicy = CacheEvictionPolicy.LeastRecentlyUs
 
 ### Partial Cache with custom SQL
 
-By default, the lookup transformation doesn't know how to retrieve the data from the database source. You can define your own Sql code that describe how to retrieve the corresponding columns from that database to refill your partial lookup cache:
+By default, the lookup transformation doesn't know how to retrieve the data from the database source. You can define your own SQL code that describes how to retrieve the corresponding columns from that database to refill your partial lookup cache:
 
 ```csharp
 lookup.CacheMode = CacheMode.Partial;
@@ -140,7 +151,7 @@ lookup.PartialCacheSettings.LoadCacheSql = inputs =>
 };
 ```
 
-This is only necessary if you want to have full control how the lookup retrieves data from the database source. If you provide the `MatchColumns` and `RetrieveColumns`, the Sql for retrieving data from the lookup database source is generated automatically. 
+This is only necessary if you want full control over how the lookup retrieves data from the database source. If you provide the `MatchColumns` and `RetrieveColumns`, the SQL for retrieving data from the lookup database source is generated automatically.
 
 ## Handling Multiple Matches
 
@@ -162,20 +173,22 @@ lookup.ApplyRetrievedCacheForMultipleOutputs = (input, cache) => {
 
 ## Using the CachedData collections
 
-You may have notice that the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` function are giving you a CachedData object that holds multiple collections with data from the lookup source. One is called `List` and is an `IEnumerable`, which you could to see your retrieved data. But accessing data in this collection can sometimes take a while, depending on the size of your lookup source data. Consider this enumerable as a convienient view on your data. 
+You may have noticed that the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` function gives you a `CachedData` object that holds multiple collections with data from the lookup source. One is called `List` and is an `IEnumerable`, which you can use to view your retrieved data. But accessing data in this collection can sometimes take a while, depending on the size of your lookup source data. Consider this enumerable a convenient view on your data.
 
-Alternatively, you can use the Items or ItemCollections. The first one will only contain data if you have set `PermitMultipleEntriesPerKey` to false. If this is set to true, you are allowing the Lookup to have more than one match for a key. Then you will find all data that matches with the key in the `ItemsCollection` dictionary. Both are dictionaries, and accessing data in here will be much faster than using the List property (which is only a wrapper for the values of the current applicable dictionary)
+Alternatively, you can use the `Items` or `ItemsCollection`. The first one will only contain data if you have set `PermitMultipleEntriesPerKey` to `false`. If this is set to `true`, you allow the lookup to have more than one match for a key. Then, you will find all the data that matches the key in the `ItemsCollection` dictionary. Both are dictionaries, and accessing data in them will be much faster than using the `List` property (which is only a wrapper for the values of the current applicable dictionary).
 
-This only applies if your are using the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` and access the `CachedData` object within this function.  When you use the LookupTransformation via the Match/Retrieve attributes only, you don’t have to worry about performance. Internally, the lookup cache will be access via the dictionary keys, and everything should run fast.
+This only applies if you are using the `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs` and accessing the `CachedData` object within this function. When you use the `LookupTransformation` via the `Match/Retrieve` attributes only, you don’t have to worry about performance. Internally, the lookup cache will be accessed via the dictionary keys, and everything should run fast.
 
 ## Defining your own keys for matching
 
-The lookup expects that the incoming and the lookup object have a unique key that then is used for matching. You can define your own custom logic how the key is retrieved from both.
+The lookup expects that the incoming and the lookup object have a unique key that is used for matching. You can define your own custom logic for how the key is retrieved from both.
 
-```C#
+```csharp
 var orderSource = new MemorySource<Order>();
 orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
-orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "Jim" });
+orderSource.DataAsList.Add(new Order
+
+() { OrderNumber = 4711, CustomerName = "Jim" });
 
 var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
 
@@ -196,9 +209,8 @@ Network.Execute(orderSource);
 
 foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
-
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
@@ -255,6 +267,15 @@ var lookup = new LookupTransformation<InputData, LookupData>();
 lookup.Source = lookupSource;
 ```
 
+#### Matching by exact Types
+
+The `UseExactNumericTypes` property determines whether exact numeric types should be used. E.g. the string "7" and the integer 7 have different data types, but will still be identified as a match from the Lookup. Settings this to true will take the data types into account.
+
+```csharp
+public bool UseExactNumericTypes { get; set; }
+```
+
+
 ### Multiple Match and Retrieve Columns
 
 You can define models with multiple match and retrieve columns, allowing for complex data transformations:
@@ -283,7 +304,7 @@ The `LookupTransformation` can handle nullable values in both input and lookup d
 
 ### Attributes with dynamic objects
 
-Instead of using classic objects for the flow, the same can be achieved using the (dynamic) ExpandoObject. This object allows you to dynamically add properties to it, and there won't be any compile-time type checks for this object. 
+Instead of using classic objects for the flow, the same can be achieved using the (dynamic) ExpandoObject. This object allows you to dynamically add properties to it, and there won't be any compile-time type checks for this object.
 
 This is how the code looks like using the ExpandoObject:
 
@@ -308,11 +329,11 @@ This is how the code looks like using the ExpandoObject:
         , InputPropertyName = "CustomerName"
         }
     };
-    lookup.RetrieveColumns = new[] { 
-        new RetrieveColumn() { 
+    lookup.RetrieveColumns = new[] {
+        new RetrieveColumn() {
             LookupSourcePropertyName = "Id",
             InputPropertyName = "CustomerId"
-        } 
+        }
     };
     lookup.Source = lookupSource;
 
@@ -325,29 +346,10 @@ This is how the code looks like using the ExpandoObject:
         Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
     //Output
-    //Order:815 Name:John Id:1 
+    //Order:815 Name:John Id:1
     //Order:4711 Name:Jim Id:2
 }
 ```
-
-
-## Additional Properties
-
-The `MaxBufferSize` property sets the maximum buffer size for the lookup transformation. This number determines how many rows are processed for each lookup operation. Default is 1000. 
-
-```csharp
-public int MaxBufferSize { get; set; }
-```
-
-The `UseExactNumericTypes` property determines whether exact numeric types should be used. E.g. the string "7" and the integer 7 have different data types, but will still be identifed as a match from the Lookup. Settings this to true will take the data types into account.
-
-```csharp
-public bool UseExactNumericTypes { get; set; }
-```
-
-
-
-
 
 
 
