@@ -8,7 +8,7 @@ draft: false
 For all other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/product/licenses/standard-eula/).
 
 {{< nowrap-code >}}
-(C) 2023 ETLBox Office Andreas Lennartz
+(C) 2024 ETLBox Office Andreas Lennartz
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 
@@ -16,6 +16,8 @@ THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND IT
 This is a license agreement and not an agreement for sale. We reserve ownership of all intellectual property rights inherent in or relating to the Software, which include, but are not limited to, all copyright, patent rights, all rights in relation to registered and unregistered trademarks (including service marks), confidential information (including trade secrets and know-how) and all rights other than those expressly granted by this License Agreement.
 
 Subject to the payment of the fee required and subject to the terms and conditions of this License Agreement, We grant to You a revocable, non- transferable and non-exclusive license (i) for Designated User(s) (as defined below) within Your organization to install and use the Software on any workstations used exclusively by such Designated User and (ii) for You to install and use the Software in connection with unlimited domains and sub-domains on unlimited servers, solely in connection with distribution of the Software in accordance with sections 3 and 4 below. This license is not sublicensable except as explicitly set forth herein. “Designated User(s)” shall mean Your employee(s) acting within the scope of their employment or Your consultant(s) or contractor(s) acting within the scope of the services they provide for You or on Your behalf for whom You have purchased a license to use the Software.
+
+Additionally, you are permitted to use the Software as part of a customer solution, where the Software is integrated into a product or service you offer to end customers, provided that the Software is embedded within your own application and cannot be independently accessed or used by your customers. Your end customers are not permitted to use the Software outside the scope of the product or service you provide, nor are they allowed to redistribute it.
 
 2. PERMITTED USES, SOURCE CODE, MODIFICATIONS
 We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.
@@ -28,11 +30,13 @@ You are required to ensure that the Software is not reused by or with any applic
 You will not owe Us any royalties for Your distribution of the Software in accordance with this License Agreement.
 
 4. PROHIBITED USES
-You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You are explicitly not allowed to redistribute the Software or Modifications as part of any product that can be described as a development toolkit or library, an application builder, a website builder or any product that is intended for use by software, application, or website developers or designers. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
+You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
 
-**You may redistribute the Software as part of Your own products.**
+You may redistribute the Software as part of Your own products , provided that the Software is embedded in such products and cannot be used independently by Your customers.
 
-UNDER NO CIRCUMSTANCES MAY YOU USE THE SOFTWARE FOR A PRODUCT THAT IS INTENDED FOR SOFTWARE OR APPLICATION DEVELOPMENT PURPOSES.
+You are allowed to deploy and distribute the Software as part of Your applications or solutions. However, the end customer is not permitted to independently use or redistribute the Software, and their usage must be limited to the specific solution you provide. The Software must remain integral to Your product or service.
+
+When distributing the Software as part of Your product, You are not required to mention or display any references to Us, and You are permitted to hide the usage of the Software from Your customers.
 
 5. TERMINATION
 This License Agreement and Your right to use the Software and Modifications will terminate immediately without notice if You fail to comply with the terms and conditions of this License Agreement. Upon termination, You agree to immediately cease using and destroy the Software or Modifications, including all accompanying documents. The provisions of sections 4, 5, 6, 7, 8, 9, 10 and 11 will survive any termination of this License Agreement.

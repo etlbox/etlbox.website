@@ -37,6 +37,11 @@
     filter: invert(100%);
 }
 
+
+.nowrap-code {
+    white-space: pre-wrap;
+    overflow: auto;
+}
 /* When embedding video via iFrame, use this
  https://css-tricks.com/fluid-width-video/
 .embedVideo {

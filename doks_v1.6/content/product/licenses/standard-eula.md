@@ -8,7 +8,7 @@ draft: false
 If you plan to purchase the REDISTRIBUTABLE package, please see our [Royality-free EULA](/product/licenses/royality-free-eula/).
 
 {{< nowrap-code >}}
-(C) 2020 ETLBox Office Andreas Lennartz
+(C) 2024 ETLBox Office Andreas Lennartz
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 
@@ -23,16 +23,14 @@ If We provide You with source code so that You can create Modifications of the o
 3. DISTRIBUTION
 You may distribute the Software company wide in any applications, frameworks, or elements (collectively referred to as an “Application” or “Applications”) that you develop using the Software in accordance with this License Agreement, provided that such distribution does not violate the restrictions set forth in section 4 of this License Agreement. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement affixed to, incorporated in or otherwise applied in connection with the Software.
 
-You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. You are required to ensure that all Applications using the Software are only distributed to servers which are directly under Your control or the control of Your company. 
+You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. You are required to ensure that all Applications using the Software are only distributed to servers which are directly under Your control or the control of Your company.
 
 You will not owe Us any royalties for Your distribution of the Software in accordance with this License Agreement.
 
 4. PROHIBITED USES
-You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You are explicitly not allowed to redistribute the Software or Modifications as part of any product that can be described as a development toolkit or library, an application builder, a website builder or any product that is intended for use by software, application, or website developers or designers. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
+You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
 
-**You may not redistribute the Software as part of a product, "appliance" or "virtual server". You may not redistribute the Software on any server which is not directly under Your control.**
-
-UNDER NO CIRCUMSTANCES MAY YOU USE THE SOFTWARE FOR A PRODUCT THAT IS INTENDED FOR SOFTWARE OR APPLICATION DEVELOPMENT PURPOSES.
+You may not redistribute the Software as part of a product, "appliance" or "virtual server". You may not redistribute the Software on any server which is not directly under Your control.
 
 5. TERMINATION
 This License Agreement and Your right to use the Software and Modifications will terminate immediately without notice if You fail to comply with the terms and conditions of this License Agreement. Upon termination, You agree to immediately cease using and destroy the Software or Modifications, including all accompanying documents. The provisions of sections 4, 5, 6, 7, 8, 9, 10 and 11 will survive any termination of this License Agreement.
