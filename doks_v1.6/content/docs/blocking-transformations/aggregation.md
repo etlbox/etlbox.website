@@ -1,7 +1,7 @@
 ---
 title: "Aggregation"
-description: "Details about the Aggregation"
-lead: "The Aggregation class allows both standard aggregation methods, such as Sum, Count, and Average, as well as custom aggregation functions, enabling flexible data filtering and advanced user-defined calculations during the aggregation process."
+description: "The Aggregation class allows both standard aggregation methods, such as Sum, Count, and Average, along with custom aggregation functions and predicates."
+lead: "This guide provides an overview of using both standard aggregation methods and custom logic with predicates, offering full control over how data is filtered and processed during aggregation."
 draft: false
 images: []
 menu:
@@ -45,7 +45,7 @@ The `Aggregation` class offers several built-in aggregation methods:
 
 These methods, combined with the ability to group or classify data, cover most common aggregation needs. If these default methods do not meet your requirements, you have the option to write your own custom aggregation function.
 
-#### Memory Footprint
+### Memory Footprint
 
 The `Aggregation` is essentially a blocking transformation, but with significantly lower memory consumption. Unlike `BlockTransformation`, which stores all incoming rows in memory before processing them, `Aggregation` operates row by row. This means that only the aggregated values are stored in memory, rather than the entire set of detail rows.
 
@@ -57,7 +57,7 @@ In summary, `Aggregation` uses less memory because it only stores the results of
 
 ## Example Aggregation
 
-### Using `AggregateColumn` Attribute
+### Using AggregateColumn Attribute
 
 There are two ways to use the `Aggregation` class. The simpler approach is to utilize the `AggregateColumn` and `GroupColumn` attributes alongside the default aggregation functions. When using the `AggregateColumn` attribute, if no `GroupColumn` is defined, the aggregation is performed on all incoming data records.
 
@@ -99,7 +99,7 @@ public static void Main()
 
 In this example, the `AggregateColumn` attribute is used to sum up the values of the `DetailValue` property from the incoming data. If no grouping is specified, the aggregation will apply to all records as a whole.
 
-### Define `AggregationColumns` Without Attributes
+### Define AggregationColumns Without Attributes
 
 When working with dynamic columns, it’s not possible to use attributes like `AggregateColumn` directly. In such cases, you can pass a list of `AggregateColumn` objects into the `Aggregation` class. This approach allows you to specify the property names for both the detail values and the aggregated values, as well as the aggregation method. This method can be used with both dynamic and normal objects and serves as an alternative to using attributes.
 
@@ -191,15 +191,15 @@ public static void Main()
 
 In this example, the custom aggregation function is defined using an action that specifies how the sum is updated each time a new record arrives. This method allows for complete flexibility in how the aggregation is performed, enabling custom calculations beyond the default methods.
 
-### Using Condition and Custom Aggregation Method
+### Custom Aggregation Method and Condition
 
-In addition to defining custom aggregation actions, you can also use a predicate to filter records before they are included in the aggregation process. A predicate is a condition that determines whether a particular record should be included in the aggregation. This adds flexibility in scenarios where you need to apply aggregation only to a subset of your data.
+In addition to defining custom aggregation actions, you can also use a overall condition to filter records before they are included in the aggregation process. A condition is a predicate that determines whether a particular record should be included in the aggregation. This adds flexibility in scenarios where you need to apply aggregation only to a subset of your data.
 
 You can also define a custom aggregation method, allowing you to calculate values in ways that go beyond the default functions like sum, min, or max. Both predicates and custom aggregation methods provide powerful ways to customize the aggregation process.
 
-#### Example: Using a Predicate
+#### Example: Using a Condition
 
-In this example, we'll aggregate values only if they meet a specified condition using a predicate. Here, we'll skip aggregating values where `DetailValue` is equal to 3.
+In this example, we'll aggregate values only if they meet a specified condition by returning `true` or `false`.
 
 ```C#
 public class MyDetailValue
@@ -291,7 +291,7 @@ public static void Main()
 
 In this example, the custom aggregation method calculates the weighted sum of `DetailValue` based on the `Weight` property. The result is 19, which is the sum of each value multiplied by its respective weight.
 
-### Combining Predicate with Custom Aggregation
+#### Combining Predicate with Custom Aggregation
 
 You can also combine both a predicate and a custom aggregation method to apply more advanced filtering and calculations.
 
@@ -335,7 +335,7 @@ In this case, the predicate filters out records where the `Weight` is less than 
 
 ## Example Aggregation with Grouping
 
-### Using `GroupingColumn`
+### Using GroupingColumn
 
 Aggregating all records together might not always be what you need. Often, you will want to classify your data based on certain properties and perform aggregation for each class separately. This process is called grouping, and it works similarly to the `GROUP BY` clause in SQL. You specify which properties are used for grouping, and the calculations are done for each group independently.
 
@@ -527,13 +527,13 @@ In this example:
 
 Instead of using attributes, you can also achieve this by passing multiple aggregation and group columns programmatically to the `AggregateColumns` and `GroupColumns` properties. This gives you the flexibility to define dynamic columns when attributes are not practical.
 
-### Using Predicate and Custom Code with `AggregationMethod.Custom`
+### Writing Custom AggregationMethod
 
 When working with `AggregationMethod.Custom`, you can define custom logic for your aggregation, allowing for calculations and processes beyond the default methods. Additionally, you can use a predicate to filter records before they are processed, ensuring only those that meet your conditions are included in the aggregation.
 
-The **predicate** allows you to define conditions for including records, while the **custom aggregation function** defines how the aggregated value is calculated.
+The `Predicate` allows you to define conditions for including records, while the `CustomFunction` defines how the aggregated value is calculated.
 
-#### Example 1: Custom Aggregation Method with Predicate
+#### Example: Custom Aggregation Method with Predicate
 
 This example demonstrates the use of a predicate to filter values and a custom function for counting only positive values. Additionally, it shows a custom summing function.
 
@@ -592,9 +592,8 @@ public static void Main()
 }
 ```
 
-**Explanation:**
-1. **Predicate for Counting**: The `Predicate` checks whether `DetailValue` is greater than 0. If the condition is true, the custom function increments the `CountIfValue`.
-2. **Custom Summing**: The `CustomFunction` for summing adds the current `DetailValue` to the existing aggregated sum, allowing for custom behavior when calculating the sum.
+In this example, for the aggregated value of `CountIfValue` we check whether `DetailValue` is greater than 0. If so, the custom function increments the `CountIfValue`.
+For the `CustomSum`, we simply add the current `DetailValue` to the existing aggregated sum, allowing us to to reimplement a simple sum function.
 
 #### Example 2: Custom Aggregation with Grouping and Dynamic Objects
 
@@ -637,7 +636,5 @@ foreach (dynamic row in dest.Data)
 //Group: B, CustomSum: 13
 ```
 
-**Explanation:**
-1. **Grouping**: The data is grouped by the dynamic `Group` property.
-2. **Custom Function**: For each group, a custom sum is calculated based on the `DetailValue` using the custom aggregation function.
+Here, the data is grouped by the dynamic `Group` property. For each group, a custom sum is calculated based on the `DetailValue` using the custom aggregation function.
 
