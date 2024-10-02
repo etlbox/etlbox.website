@@ -1,7 +1,7 @@
 ---
 title: "Aggregation"
 description: "Details about the Aggregation"
-lead: "The aggregation class let you aggregate your data by with either your own aggregation function or a default function. This can be done on your whole data or on particular groups of your data (similar to a GROUP BY in sql)."
+lead: "The Aggregation class allows both standard aggregation methods, such as Sum, Count, and Average, as well as custom aggregation functions, enabling flexible data filtering and advanced user-defined calculations during the aggregation process."
 draft: false
 images: []
 menu:
