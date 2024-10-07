@@ -11,6 +11,8 @@ weight: 2220
 toc: true
 ---
 
+{{< alert text="Please note that the best solution for pivoting data is using the <a href=\"/docs/blocking-transformations/pivot/\">Pivot</a> transformation. But to give you some ideas how ETLBox can be used differently (and to showcase some other components), this article demonstrate other ways to pivot data." >}}
+
 ## Preqrequisites
 
 The following examples can work stand-alone - the only dependency is that you add the ETLBox and ETLBox.Csv packages as dependency.

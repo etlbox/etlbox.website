@@ -11,7 +11,7 @@ weight: 2110
 toc: true
 ---
 
-Please note that the best solution for duplicate detection is probably using the [Distinct](/docs/transformations/distinct/) transformation. But to give you some ideas how ETLBox can be used differently (and to showcase some other components), we demonstrate other ways to implement a duplicate detection.
+{{< alert text="Please note that the best solution for duplicate detection is probably using the <a href=\"/docs/transformations/distinct/\">Distinct</a> transformation. But to give you some ideas how ETLBox can be used differently (and to showcase some other components), we demonstrate other ways to implement a duplicate detection." >}}
 
 ## Source data
 
