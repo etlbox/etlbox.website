@@ -256,3 +256,53 @@ Network.Execute(source);
 
 In this case, the `PivotColumns` and `PivotValueColumns` are set directly on the `Pivot` object, and the `ValueAggregationFunc` is used to sum the values from `Value1` and `Value2`. This approach gives you the flexibility to handle data dynamically without relying on predefined attributes.
 
+### Handling Missing Columns
+
+The `KeepEmptyValues` property in the ETLBox Pivot transformation controls whether missing pivoted columns (i.e., columns that do not have any data in certain rows) are retained in the output. This is useful in cases where you want to maintain a consistent set of columns across all rows, even if some rows do not contain values for certain pivoted columns. This is especially important when writing dynamic output to a CSV file, as CSV writers require all header rows to be present in the first record. Without these columns, the structure of the CSV file could be inconsistent, leading to errors or missing data in the output file.
+
+{{< alert text="By default, the KeepEmptyValues property is turned off, meaning that only columns with actual data in the rows will be included in the output. If a pivoted column has no data for a specific row, that column will be excluded from the result for that row. This default behavior is intended to produce a more compact output by avoiding the inclusion of empty or null columns, but it can lead to inconsistencies in cases where a fixed schema is required, such as when writing to a CSV file." >}}
+
+When set to `true`, the `KeepEmptyValues` property ensures that all possible pivoted columns are included in the output, even if some rows do not contain values for those columns. The missing values in these columns are filled with `null`.
+
+#### Example using `KeepEmptyValues`
+
+You can enable or disable the inclusion of empty columns by setting the `KeepEmptyValues` property in your Pivot transformation:
+
+```csharp
+var pivot = new Pivot<MyRow>();
+pivot.KeepEmptyValues = true;  // Retains columns with null values
+```
+
+Consider a scenario where you are pivoting sales data for different months, but not all months have data for each group.
+
+**Input:**
+
+| Group | Month | Sales |
+|-------|-------|-------|
+| A     | Jan   | 100   |
+| A     | Feb   | 200   |
+| B     | Jan   | 300   |
+| B     | Mar   | 400   |
+
+With `KeepEmptyValues = true`, the output will contain all potential months, even though not every group has sales data for every month.
+
+**Output:**
+
+| Group | Jan | Feb | Mar |
+|-------|-----|-----|-----|
+| A     | 100 | 200 | null |
+| B     | 300 | null | 400 |
+
+In this example, the "Feb" column for group B and the "Mar" column for group A are created, but their values are set to `null`.
+
+If `KeepEmptyValues` is set to `false`, the pivot transformation only includes columns for which data exists. Any missing columns for a specific row will not be included.
+
+**Output:**
+
+| Group | Jan | Feb | Mar |
+|-------|-----|-----|-----|
+| A     | 100 | 200 |     |
+| B     | 300 |     | 400 |
+
+Notice that the columns where no data exists (e.g., "Feb" for group B and "Mar" for group A) are not included in the output at all, making the dataset sparser.
+
