@@ -1,5 +1,5 @@
 ---
-title: "Component basics" 
+title: "Component basics"
 description: "Overview of shared properties and methods for all data flow components"
 lead: "All components in ETLBox share some properties and methods. This chapter describes the details."
 draft: false
@@ -11,59 +11,82 @@ weight: 260
 toc: true
 ---
 
-## Components 
+## Components
 
-There are several connectors available in ETLBox that allow you to connect to a database, a flat file, a web service, a C# collection or any other data source or destination that you like. The connector normally has a Source and a Destination component. The source is used to retrieve data, and the destination used to write or store your data. They are always used at the beginning or the end of data flow (though of course every flow can have multiple sources and destinations.) In between you have transformations that modify your data.
+There are several connectors available in ETLBox that allow you to connect to various data sources and destinations, including databases, flat files, web services, and C# collections. Connectors typically involve a Source (for retrieving data) and a Destination (for writing or storing data). These components are positioned at the start or end of a data flow, with optional multiple sources and destinations. In between, you can apply **transformations** to modify the data.
 
-Transformations are the transform part of an ETL pipeline. They allow you to clean, standardize, de-duplicate or manipulate your data. There are two main differentiations of transformations: Non-blocking and blocking transformation. 
+Transformations represent the **transform** part of the ETL pipeline, allowing data cleaning, standardization, deduplication, and other manipulations. Transformations can be categorized as **non-blocking** and **blocking**:
 
-#### Non-blocking transformations
+### Non-blocking Transformations
+These transformations require minimal memory, processing data as it passes through. For example, a `RowTransformation` only retains the current row in memory, plus a small input buffer for throughput optimization.
 
-A non-blocking transformation will only need as much memory as needed to do the actual work. E.g. a RowTransformation normally keeps only the current row in memory (plus some rows in an extra input buffer to increase throughput). 
+### Blocking Transformations
+Blocking transformations require more memory as they process data in batches or load all rows into memory before performing their operations. A common example is a `Sort`, which needs all data in memory to perform sorting before sending sorted rows downstream. Be mindful of memory consumption when handling large datasets with blocking transformations.
 
-#### Blocking transformations
+## Input and Output Buffer
 
-In contrast the blocking transformation: They will use much more memory because some part or the whole transformation needs to store much more data in memory before it can continue to work. A good example is the sort: Before any sorting can be done, all data needs to be loaded into memory. Then the actual sort operation is performed, and after this all rows are send to output of the sort. Not all components will be as greedy as the sort when it comes to memory consumption, but we recommend to take this into consideration when you start to load big amounts of data into a data flow that contains one or more blocking transformations. 
+Each source component includes an **output buffer**, and each destination component has an **input buffer**, both of which cache rows for optimized data flow. Transformations also have input buffers. If a transformation component is slower than its predecessor, the input buffer holds excess data until processing can continue.
 
-## Input and output buffer 
+This buffering mechanism improves throughput, enabling faster data retrieval from sources while ensuring components downstream are always ready for the next row.
 
-All sources have an output buffer - this means that every data row can be cached before it is send to the next component in the flow. All destinations have an input buffer - this means that every data row can be cached before it is written into the target. Every transformation also come with an input buffer. If the transformation receives more data in its input than it is able to process, the buffer will hold this data until the transformation can continue with the next row. 
+### Restricting Buffer Size
+You can limit buffer size by setting `MaxBufferSize` to a value greater than 0 (the default is 100,000 rows). Some components, such as `Multicast`, have multiple input buffers, but the `MaxBufferSize` setting applies to all buffers of a component.
 
-This buffering mechanism improves general throughput. E.g. a data source can read all data as fast as possible, as there will always be an input buffer in the transformation that will accept and buffer the record in memory. Whenever the next component is ready for the more data, it can always grab the next row from the buffer.
+## Static Settings Class
 
-### Restricting buffer size
+You can configure global defaults via the `Settings` class:
 
-You can restrict the maximal buffer size by setting `MaxBufferSize` to a value greater than 0 (the default value is 100000 rows).
-Sometime components have more than buffer. E.g. the Multicast has one input buffer for each component connected to its output. Nevertheless, you will always restrict the maximal buffer for all buffers of a component by setting a value for  `MaxBufferSize`.
+- **`MaxBufferSize`**: Default maximum buffer size for all components.
+- **`LoggingThresholdRows`**: Defines how often to log row processing (default is 1,000 rows).
+- **`DefaultDbConnection`**: Stores the default database connection for all components and tasks.
+- **`LogInstance`**: Allows setting a global `ILogger` instance for logging ETLBox output.
 
-## Static configuration classes
+## Shared Properties
 
-The static class `Settings` allows to set default parameters valid for all components and tasks. The values set in this class will serve as the default value. Each value can be overwritten in a dataflow component or control flow task separately.
+### Progress Count
+Each data flow component maintains a `ProgressCount`, indicating the number of processed records. Components processing rows individually increment this value by one for each row, whereas batch-oriented components increment by the batch size.
 
-- `MaxBufferSize`:  The default maximum size for all buffers in the dataflow.
-- `LoggingThresholdRows`: To avoid getting log message for every message, by default only log message are produced when 1000 rows are processed. Set this property to decrease or increase this value for a data flow components. 
-- `DefaultDbConnection`:  Store your default database connection manager here. This connection will then be used by all tasks or all data flow components that need a connection manager. 
-- `LogInstance`: An `ILogger` instance which can be used for all log output produced by ETLBox
+### Linked Components
+Each component tracks its **predecessors** and **successors** in the data flow network, accessible through the `Predecessors` and `Successors` properties.
 
-## Shared properties
+### Exception Handling
+In the event of a failure, the component responsible for the exception stores the error in the `Exception` property, making it easy to identify the fault's origin.
 
-#### Progress Count
+### Completion
+The `Completion` property holds a task that completes when the component finishes processing all records. This task is faulted or canceled if an exception occurs or if the component is downstream from an error.
 
-The `ProgressCount` property on each data flow components shows how many records the component has processed. This values is increased by 1 for every component that can process data row-by-row. Components that work batch-oriented (e.g. the DbDestination or the BatchTransformation) the progress count will only be increased by the batch size, whenever a batch was successfully processed. 
+### Tag
 
-#### Linked components
+Each data flow component includes a `Tag` property, which can hold arbitrary user-defined data or metadata relevant to the component. This allows you to associate additional context or information with each component during execution.
 
-If you are interested in the linked components of a class, each components holds a list of `Predecessors`and `Successors`. 
+You can use this property to store any type of object that might help with identification, configuration, or other metadata-related needs during the data flow's operation.
 
-#### Exception
+### OnProgress Action
 
- If your data flow fails, one of the components in your flow will have a value in the  `Exception` property, namely the originator of exception. 
- 
-#### Completion 
+The `OnProgress` property allows you to define a custom action that executes whenever a component processes a record. This is useful for monitoring and tracking progress in real-time during execution.
 
- The `Completion` property holds a task that is run to completion when the components finishes processing all records. If an exception occured somewhere in the flow, this task is then either faulted (if the component was the origin of the exception of a successor) or canceled (all other components)
+Whenever a record is processed, the component will invoke this action, passing the current progress count as an argument. This is particularly beneficial when you want to log progress or trigger external actions based on the number of rows processed.
 
-#### OnCompletion action
+```csharp
+public Action<int> OnProgress { get; set; }
+```
 
-In the `OnCompletion` action you can define your own logic that is executed when the components successfully completed processing of all records. 
+### OnInit
 
+The `OnInit` property is an action that executes when a component begins processing. It is invoked when the component is initialized, providing an opportunity to define any custom logic that needs to run at the start of the component's lifecycle.
+
+```csharp
+public Action OnInitialization { get; set; }
+```
+
+This action is ideal for setting up any initial states or logging before the main data processing begins.
+
+### OnCompletion
+
+The `OnCompletion` property enables you to define logic that runs when the component successfully finishes processing all records. You can use this to perform cleanup tasks or trigger downstream processes upon the component’s completion.
+
+```csharp
+public Action OnCompletion { get; set; }
+```
+
+This ensures that custom actions are executed at the end of processing, whether it’s logging, freeing resources, or triggering subsequent workflows.
