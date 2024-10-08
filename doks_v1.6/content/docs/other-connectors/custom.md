@@ -109,6 +109,70 @@ public static void Main()
 }
 ```
 
+### Example: Reading from a File Stream
+
+This example demonstrates how to use a `CustomSource` to read data from a CSV file and process it within an ETL pipeline. The input file `InputData.csv` is read line by line, with each line split into fields, and the processed data is then passed to the next component in the pipeline.
+
+**Input file:**
+
+```csv
+Id,Value1,Value2
+1,Test1,A
+2,Test2,B
+3,Test3,C
+4,Test4,D
+```
+
+**Example code:**
+
+```C#
+var source = new CustomSource();
+Console.WriteLine($"Data in input file:");
+Console.WriteLine(File.ReadAllText("res/examples/InputData.csv"));
+
+StreamReader stream = null;
+source.OnInitialization = () => {
+    stream = new StreamReader("res/examples/InputData.csv");
+};
+source.ReadFunc = _ => {
+    var line = stream.ReadLine();
+    var data = line.Split(',');
+    dynamic result = new ExpandoObject();
+    result.Id = data[0];
+    result.Value = data[1] + data[2];
+    return result;
+};
+source.ReadingCompleted = _ => stream.EndOfStream;
+
+var dest = new MemoryDestination();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+Console.WriteLine("");
+Console.WriteLine($"Data processed by ETL pipeline:");
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
+
+//Output
+/*
+Data in input file:
+Id,Value1,Value2
+1,Test1,A
+2,Test2,B
+3,Test3,C
+4,Test4,D
+
+Data processed by ETL pipeline:
+Id: Id Value: Value1Value2
+Id: 1 Value: Test1A
+Id: 2 Value: Test2B
+Id: 3 Value: Test3C
+Id: 4 Value: Test4D
+*/
+```
+
+
 ### Using string array
 
 Instead of parsing your input data into an object, of course you can also simply pass your array into the flow. If we modify our example again to work with arrays, we will get the following code:
@@ -255,69 +319,6 @@ CustomDestination also works with dynamic ExpandoObject. Simple use the default 
 List<ExpandoObject> rows = new List<ExpandoObject>();
 var dest = new CustomDestination();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
-```
-
-#### Example: Reading from a File Stream
-
-This example demonstrates how to use a `CustomSource` to read data from a CSV file and process it within an ETL pipeline. The input file `InputData.csv` is read line by line, with each line split into fields, and the processed data is then passed to the next component in the pipeline.
-
-**Input file:**
-
-```csv
-Id,Value1,Value2
-1,Test1,A
-2,Test2,B
-3,Test3,C
-4,Test4,D
-```
-
-**Example code:**
-
-```C#
-var source = new CustomSource();
-Console.WriteLine($"Data in input file:");
-Console.WriteLine(File.ReadAllText("res/examples/InputData.csv"));
-
-StreamReader stream = null;
-source.OnInitialization = () => {
-    stream = new StreamReader("res/examples/InputData.csv");
-};
-source.ReadFunc = _ => {
-    var line = stream.ReadLine();
-    var data = line.Split(',');
-    dynamic result = new ExpandoObject();
-    result.Id = data[0];
-    result.Value = data[1] + data[2];
-    return result;
-};
-source.ReadingCompleted = _ => stream.EndOfStream;
-
-var dest = new MemoryDestination();
-
-source.LinkTo(dest);
-Network.Execute(source);
-
-Console.WriteLine("");
-Console.WriteLine($"Data processed by ETL pipeline:");
-foreach (dynamic row in dest.Data)
-    Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
-
-//Output
-/*
-Data in input file:
-Id,Value1,Value2
-1,Test1,A
-2,Test2,B
-3,Test3,C
-4,Test4,D
-
-Data processed by ETL pipeline:
-Id: Id Value: Value1Value2
-Id: 1 Value: Test1A
-Id: 2 Value: Test2B
-Id: 3 Value: Test3C
-Id: 4 Value: Test4D
-*/
 ```
 
 ### Using arrays
