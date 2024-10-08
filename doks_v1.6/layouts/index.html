@@ -9,7 +9,8 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start" role="button">{{ i18n "get-started" }}</a>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
+        role="button">{{ i18n "get-started" }}</a>
       <p>
         <a href="/support/get-trial/">Try for free.</a>
         Get commercial licenses at <a href="/support/pricing/">low rates</a>.
@@ -17,11 +18,11 @@
     </div>
   </div>
 </section>
-  {{ if site.Params.doks.backgroundDots -}}
+{{ if site.Params.doks.backgroundDots -}}
 <div class="d-flex justify-content-start">
   <div class="bg-dots"></div>
 </div>
-  {{ end -}}
+{{ end -}}
 {{ end }}
 
 
@@ -264,9 +265,11 @@
         <h2>ETLBox core concepts</h2>
 
         <p>
-          ETLBox is a powerful and versatile C# library for performing ETL operations. With its simple and intuitive API, you can
+          ETLBox is a powerful and versatile C# library for performing ETL operations. With its simple and intuitive
+          API, you can
           quickly and easily extract data from various sources, transform it into the desired format, and load it into
-          your target system. Whether you need to move data from one database to another or process large amounts of data
+          your target system. Whether you need to move data from one database to another or process large amounts of
+          data
           for business intelligence purposes, ETLBox provides a comprehensive set of tools to streamline your work. It's
           highly customizable and flexible, so you can easily adapt it to your specific needs.
         </p>
@@ -419,11 +422,154 @@
         </p>
       </div>
     </div>
-  </section>
-  <section class="section section-sm alteredColor">
+</section>
+
+<section class="section section-sm alteredColor">
+  <div class="container">
+    <div class="text-center">
+      <h3>Explore Some of Our Supported Connectors:</h3>
+    </div>
+    <div>
+      <p>These are just a few of the many connectors ETLBox supports.
+        Whether you're integrating data from popular databases, cloud services, or other platforms, ETLBox makes
+        connecting
+        and transforming your data simple and efficient. Explore our full range of connectors to discover even more
+        possibilities for your data workflows.
+      </p>
+    </div>
+    <div class="row gx-4 align-items-center justify-content-center">
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/sqlserver.png" alt="SQLServer" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/sql-azure.png" alt="SQLServer Azure" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/postgres.png" alt="Postgres" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/oracle.png" alt="Oracle" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/mysql.png" alt="MySql" /></a>
+      </div>
+    </div>
+    <div class="row gx-4 align-items-center justify-content-center">
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/mariadb.png" alt="MariaDB" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/db2logo.png" alt="IBM DB2" class="m-3" width="60"/></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/sap-ase.png" alt="SAP ASE" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/sap-hana.png" alt="SAP Hana" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/snowflake.png" alt="Snowflake" class="m-3" /></a>
+      </div>
+    </div>
+    <div class="row gx-4 align-items-center justify-content-center">
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/access/#odbc-drivers"><img src="/images/supported/access.png" alt="Access"
+            class="m-3" width="70" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/spark.png" alt="ETLBox" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/odbc.png" alt="ETLBox" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/sql-lite.png" alt="ETLBox" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
+            src="/images/supported/oledb.png" alt="ETLBox" class="m-3" width="75" /></a>
+      </div>
+    </div>
+
+    <div class="row gx-4 align-items-center justify-content-center">
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/mongo/"><img src="/images/supported/mongodb.png" alt="Mongo DB" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/kafka/"><img src="/images/supported/kafka.png" alt="Apache Kafka" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/cosmos-db/"><img src="/images/supported/cosmos.png" alt="Azure Cosmos DB"
+            class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/service-bus/"><img src="/images/supported/servicebus.png" alt="Azure Service Bus"
+            class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/tables/"><img src="/images/supported/tables.png" alt="Azure Tables" class="m-3" /></a>
+      </div>
+    </div>
+
+    <div class="row gx-4 align-items-center justify-content-center">
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/couchbase/"><img src="/images/supported/couchbase.png" alt="Couchbase"
+            class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/nosql-connectors/redis/"><img src="/images/supported/redis.png" alt="Redis" class="m-3" /></a>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <a href="/docs/stream-connectors/parquet/"><img src="/images/supported/parquet.png" alt="Parquet"
+            class="m-3" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <div class="row gx-4 align-items-center justify-content-end">
+      <div class="col">
+        <a href="/docs/stream-connectors/xml/"><img src="/images/supported/xml.svg" alt="XML" class="m-3" height="70"
+            width="50" /></a>
+        <a href="/docs/stream-connectors/csv/"><img src="/images/supported/csv.svg" alt="CSV" class="m-3" height="70"
+            width="50" /></a>
+        <a href="/docs/stream-connectors/json/"><img src="/images/supported/json.svg" alt="JSON" class="m-3"
+            height="70" width="50" /></a>
+        <a href="/docs/stream-connectors/text/"><img src="/images/supported/txt.svg" alt="TEXT" class="m-3"
+            height="70" width="50" /></a>
+        <a href="/docs/stream-connectors/excel/"><img src="/images/supported/excel.svg" alt="EXCEL" class="m-3"
+            height="70" width="50" /></a>
+      </div>
+    </div>
+    <div>
+      <h3><b>...or create your own with our CustomConnector!</b></h3>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm">
+  <div class="container">
     <div class="text-center my-3 ">
-      <h3>1... 2... 3...</h3>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start" role="button">Ready to start?</a>
+      <h3>Build Your Dataflows with Code</h3>
+      <p>Take the next step in simplifying your data integration.
+        With ETLBox, you can easily write code to set up, connect, and transform your data exactly the way you
+        need.<br />
+        Click below to begin crafting your ETL processes with our powerful C# library.</p>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
+        role="button">Ready to start?</a>
     </div>
   </div>
 </section>

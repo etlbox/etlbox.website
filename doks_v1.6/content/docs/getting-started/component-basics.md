@@ -9,6 +9,7 @@ menu:
     parent: "getting-started"
 weight: 260
 toc: true
+chatgpt-review: true
 ---
 
 ## Components
