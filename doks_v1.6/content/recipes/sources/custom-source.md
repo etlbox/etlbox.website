@@ -85,31 +85,51 @@ foreach (dynamic row in dest.Data)
 */
 ```
 
-## Creating string array
+## Sending Stream Data into Pipeline
 
 ```C#
-List<string[]> Data = new List<string[]>()
-{
-    new string[] {  "1", "Test1" },
-    new string[] {  "2", "Test2" },
-    new string[] {  "3", "Test3" },
-};
-var source = new CustomSource<string[]>();
-source.ReadFunc = progressCount => Data[progressCount];
-source.ReadingCompleted = progressCount => progressCount >= Data.Count;
+var source = new CustomSource();
+Console.WriteLine($"Data in input file:");
+Console.WriteLine(File.ReadAllText("res/examples/InputData.csv"));
 
-var dest = new MemoryDestination<string[]>();
+StreamReader stream = null;
+source.OnInitialization = () => {
+    stream = new StreamReader("res/examples/InputData.csv");
+};
+source.ReadFunc = _ => {
+    var line = stream.ReadLine();
+    var data = line.Split(',');
+    dynamic result = new ExpandoObject();
+    result.Id = data[0];
+    result.Value = data[1] + data[2];
+    return result;
+};
+source.ReadingCompleted = _ => stream.EndOfStream;
+
+var dest = new MemoryDestination();
 
 source.LinkTo(dest);
 Network.Execute(source);
 
-foreach (var row in dest.Data)
-    Console.WriteLine($"Id: {row[0]} Value: {row[1]}");
+Console.WriteLine("");
+Console.WriteLine($"Data processed by ETL pipeline:");
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
 
 //Output
 /*
-    Id: 1 Value: Test1
-    Id: 2 Value: Test2
-    Id: 3 Value: Test3
+Data in input file:
+Id,Value1,Value2
+1,Test1,A
+2,Test2,B
+3,Test3,C
+4,Test4,D
+
+Data processed by ETL pipeline:
+Id: Id Value: Value1Value2
+Id: 1 Value: Test1A
+Id: 2 Value: Test2B
+Id: 3 Value: Test3C
+Id: 4 Value: Test4D
 */
 ```
