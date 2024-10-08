@@ -11,17 +11,17 @@ weight: 500
 toc: true
 ---
 
-The `CustomSource` and `CustomDestination` are part of the ETLBox core package - you don't need to reference any additional packages to use these connectors. 
+The `CustomSource` and `CustomDestination` are part of the ETLBox core package - you don't need to reference any additional packages to use these connectors.
 
-If you want to start with example code right away, you will find it in the recipes section for the [CustomSource](/recipes/sources/custom-source), [CustomBatchSource](/recipes/sources/custom-batchsource), [CustomDestination](/recipes/destinations/custom-destination) and [CustomBatchDestination](/recipes/destinations/custom-batchdestination). The components could also be used in other examples.  
+If you want to start with example code right away, you will find it in the recipes section for the [CustomSource](/recipes/sources/custom-source), [CustomBatchSource](/recipes/sources/custom-batchsource), [CustomDestination](/recipes/destinations/custom-destination) and [CustomBatchDestination](/recipes/destinations/custom-batchdestination). The components could also be used in other examples.
 
 ## CustomSource
 
-A custom source can generate any type of  output you need.  It will need two functions to work properly: A read function that generates one data row as output, and a reading completed predicate that returns true if you reached the end of your data. Bot functions get the current progress count as input parameters. It is optional to use the progress count - it is just an information how many rows have been processed so far from the custom source. 
+A custom source can generate any type of  output you need.  It will need two functions to work properly: A read function that generates one data row as output, and a reading completed predicate that returns true if you reached the end of your data. Bot functions get the current progress count as input parameters. It is optional to use the progress count - it is just an information how many rows have been processed so far from the custom source.
 
 #### Buffer
 
-The CustomSource has an output buffer - this means that every data row can be cached before it is send to the next component in the flow. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows. 
+The CustomSource has an output buffer - this means that every data row can be cached before it is send to the next component in the flow. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.
 
 #### Example
 
@@ -47,7 +47,7 @@ public static void Main()
         {
             Id = progressCount + 1,
             Value = Data[progressCount]
-        };                                
+        };
     };
     source.ReadingCompleted = progressCount => progressCount >= Data.Count;
 
@@ -79,14 +79,14 @@ public static void Main()
     List<string> Data = new List<string>()
     {
         "Test1", "Test2", "Test3"
-    };           
+    };
 
     var source = new CustomSource();
     source.ReadFunc = progressCount =>
     {
         dynamic result = new ExpandoObject();
         result.Id = progressCount + 1;
-        result.Value = Data[progressCount];                
+        result.Value = Data[progressCount];
         return result;
     };
     source.ReadingCompleted = progressCount => progressCount >= Data.Count;
@@ -121,7 +121,7 @@ public static void Main()
         new string[] {  "1", "Test1" },
         new string[] {  "2", "Test2" },
         new string[] {  "3", "Test3" },
-    };           
+    };
     var source = new CustomSource<string[]>();
     source.ReadFunc = progressCount => Data[progressCount];
     source.ReadingCompleted = progressCount => progressCount >= Data.Count;
@@ -146,9 +146,9 @@ public static void Main()
 
 ## Custom batch source
 
-If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource. 
+If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource.
 
-### Example 
+### Example
 
 ```C#
 public class MyRow
@@ -201,9 +201,9 @@ Batchnumber:3 - Id:3 - Value:Test3
 
 The use of a custom destination is even simpler - a custom destination  just calls an action for every received record. In this action you will the receive each incoming row as well as an progress count of already received data. It is in your responsibility to do the further processing of the record. E.g. you could execute some code which writes the line into the database, or you could add it to an internal list and the convert this list into a json. Though both things could be accomplished with either the DbDestination or the JsonDestination, here is an example for the latter one.
 
-#### Buffer 
+#### Buffer
 
-The CustomDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. This is the case if your processing takes longer than new data arrive. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows. 
+The CustomDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. This is the case if your processing takes longer than new data arrive. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.
 
 ### Example
 
@@ -226,7 +226,7 @@ public static void Main()
 
     source.LinkTo(dest);
     Network.Execute(source);
-            
+
     string json = JsonConvert.SerializeObject(rows, Formatting.Indented);
 
     Console.WriteLine(json);
@@ -247,7 +247,7 @@ public static void Main()
 }
 ```
 
-### Using dynamic object 
+### Using dynamic object
 
 CustomDestination also works with dynamic ExpandoObject. Simple use the default implementation when you want to work with an ExpandoObject.  You can access each dynamic object in your WriteAction, together with the current progress count.
 
@@ -255,6 +255,69 @@ CustomDestination also works with dynamic ExpandoObject. Simple use the default 
 List<ExpandoObject> rows = new List<ExpandoObject>();
 var dest = new CustomDestination();
 dest.WriteAction = (row, progressCount) => rows.Add(row);
+```
+
+#### Example: Reading from a File Stream
+
+This example demonstrates how to use a `CustomSource` to read data from a CSV file and process it within an ETL pipeline. The input file `InputData.csv` is read line by line, with each line split into fields, and the processed data is then passed to the next component in the pipeline.
+
+**Input file:**
+
+```csv
+Id,Value1,Value2
+1,Test1,A
+2,Test2,B
+3,Test3,C
+4,Test4,D
+```
+
+**Example code:**
+
+```C#
+var source = new CustomSource();
+Console.WriteLine($"Data in input file:");
+Console.WriteLine(File.ReadAllText("res/examples/InputData.csv"));
+
+StreamReader stream = null;
+source.OnInitialization = () => {
+    stream = new StreamReader("res/examples/InputData.csv");
+};
+source.ReadFunc = _ => {
+    var line = stream.ReadLine();
+    var data = line.Split(',');
+    dynamic result = new ExpandoObject();
+    result.Id = data[0];
+    result.Value = data[1] + data[2];
+    return result;
+};
+source.ReadingCompleted = _ => stream.EndOfStream;
+
+var dest = new MemoryDestination();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+Console.WriteLine("");
+Console.WriteLine($"Data processed by ETL pipeline:");
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
+
+//Output
+/*
+Data in input file:
+Id,Value1,Value2
+1,Test1,A
+2,Test2,B
+3,Test3,C
+4,Test4,D
+
+Data processed by ETL pipeline:
+Id: Id Value: Value1Value2
+Id: 1 Value: Test1A
+Id: 2 Value: Test2B
+Id: 3 Value: Test3C
+Id: 4 Value: Test4D
+*/
 ```
 
 ### Using arrays
@@ -271,7 +334,7 @@ dest.WriteAction = (row, progressCount) => rows.Add(row);
 
 The CustomDestination will forward your incoming data row by row to your custom method. If you need to process batches of your incoming data, you can use the CustomBatchDestination instead.
 
-### Example 
+### Example
 
 ```C#
 public class MyRow
