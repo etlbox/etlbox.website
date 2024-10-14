@@ -5,6 +5,28 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.5.0
+
+#### Features:
+
+- Network validation: Added "default" void linking if component is linked with a single predicate
+- Network class extended with helper method LinkAllErrorTo()
+-[BREAKING] ColumnRename renamed to ColumnTransformation, adding option to reorder or remove columns
+- Sort: Support for "default" data types like DateTime and String
+- Network: added StartWith() and LinkTo() methods directly on Network class (less code for linking needed)
+- Pivot: Added handling of duplicates
+- FilterTransformation: Added count of filtered/unfiltered rows
+- Added ErrorCount property for all components (only if LinkErrorTo redirects flawed rows)
+- New Component: RowValidation
+- Network initialization: Reduced initializiation steps for larger networks
+- Updated dependencies to latest versions
+
+#### Bug Fixes:
+
+- Pivot: KeepEmptyValues now have aligned order in dynamic output object
+- Fixed issue where exceptions in predicates were not properly handled
+- Improving XmlSource when reading using dynamic objects
+
 ## Version 3.4.4
 
 #### Features:
