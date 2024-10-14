@@ -1,5 +1,5 @@
 ---
-title: "Multicast (broadcast)"
+title: "Multicast (Broadcast)"
 description: "Details about the Multicast"
 lead: "The Multicast is a component which basically clones your data and send them to all connected target. It has one input and can have two or more outputs."
 draft: false
@@ -7,21 +7,21 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 660
+weight: 610
 toc: true
 ---
 
 ## Overview
 
-The `Multicast` let you send duplicates of your data into each component that you linked to its output. 
+The `Multicast` let you send duplicates of your data into each component that you linked to its output.
 
 {{< alert text="If you want to split instead of code duplication, you can use Predicates which allow you to let only certain rows pass to a linked destination. See below for further details." >}}
 
-#### Buffer 
+#### Buffer
 
-The Multicast is a non-blocking operation. It has one input buffer for each output. 
+The Multicast is a non-blocking operation. It has one input buffer for each output.
 
-### Code snippet 
+### Code snippet
 
 ```C#
 Multicast<MyDataRow> multicast = new Multicast<MyDataRow>();
@@ -32,7 +32,7 @@ multicast.LinkTo(dest3);
 
 ## Brodcast example
 
-The following code demonstrate a simple example where data would be duplicated and copied into two destinations - a database table and a Json file. 
+The following code demonstrate a simple example where data would be duplicated and copied into two destinations - a database table and a Json file.
 
 ```C#
 public class MyRow
@@ -76,15 +76,15 @@ public static void Main()
 }
 ```
 
-The multicast will create clones of the objects by creating new instances and copying the properties from the input data. Fields, Static values and non public properties will be ignored. If you want to customize how the clone is created, you can implement `ICloneable` on your object. 
+The multicast will create clones of the objects by creating new instances and copying the properties from the input data. Fields, Static values and non public properties will be ignored. If you want to customize how the clone is created, you can implement `ICloneable` on your object.
 
-### Splitting data 
+### Splitting data
 
-The `Multicast` is useful when you want to broadcast your data to all linked target. If you want to split up your data on the connected target, you don't need to use the Multicast. You can simple use predicates for this purpose.  Predicates allow you to let only certain data pass to a target.  This works because you can always link every component to more than one output component. But without Multicast or predicates in place, all message would be send only to the target that was linked first. 
+The `Multicast` is useful when you want to broadcast your data to all linked target. If you want to split up your data on the connected target, you don't need to use the Multicast. You can simple use predicates for this purpose.  Predicates allow you to let only certain data pass to a target.  This works because you can always link every component to more than one output component. But without Multicast or predicates in place, all message would be send only to the target that was linked first.
 
 Predicates are conditions that describe to which target the data is send if the condition evaluates to true. Let's modify the example above so that we send the row with the Id 1 or smaller to destination 1 and the row with Id 2 or higher to destination 2.
 
-#### Splitting data example 
+#### Splitting data example
 
 ```C#
 public class MyRow
@@ -101,10 +101,10 @@ public static void Main()
 
     var dest1 = new MemoryDestination<MyRow>();
     var dest2 = new MemoryDestination<MyRow>();
-                   
+
     source.LinkTo(dest1, row => row.Id <= 1);
     source.LinkTo(dest2, row => row.Id >= 2);
-            
+
     Network.Execute(source);
 
     Console.WriteLine($"Destination 1");

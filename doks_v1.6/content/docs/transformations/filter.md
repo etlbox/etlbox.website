@@ -1,5 +1,5 @@
 ---
-title: "Filter transformation"
+title: "Filter Transformation"
 description: "Details about the FilterTransformation"
 lead: "The FilterTransformation filters out row that do not match with a given predicate."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 675
+weight: 610
 toc: true
 ---
 
@@ -17,13 +17,13 @@ The `FilterTransformation` is a simple transformation that filter out rows which
 
 {{< alert text="The filter transformation is not the only option to filter values in a data flow. You can use predicates expression when linking components in a data flow as well. See below for more details." >}}
 
-#### Buffer 
+#### Buffer
 
 The `FilterTransformation` is a non blocking transformation, so it will only store the current row in memory (plus some additional rows in the input buffer to improve throughput). It has one input buffer.
 
-## Example 
+## Example
 
-The following example shows how we filter out a row with a particular Id value from the incoming data. 
+The following example shows how we filter out a row with a particular Id value from the incoming data.
 
 ```C#
 public class MyRow
@@ -94,11 +94,11 @@ source.LinkTo(dest, row => row.Id != 2, row => row.Id == 2); //Implicit use of v
 Network.Execute(source);
 ```
 
-By providing a second and third parameter when linking components, you can define which rows you want to keep and which rows you want to discard. 
+By providing a second and third parameter when linking components, you can define which rows you want to keep and which rows you want to discard.
 
 ## Using dynamic objects
 
-The default implementation of the `FilterTransformation` also works with an ExpandoObject. The code above could be modified like below to achieve the same result with a dynamic object. 
+The default implementation of the `FilterTransformation` also works with an ExpandoObject. The code above could be modified like below to achieve the same result with a dynamic object.
 
 ```C#
 public void ExampleFilterDynamic()

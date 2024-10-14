@@ -1,5 +1,5 @@
 ---
-title: "Column rename"
+title: "Column Rename"
 description: "Details about the ColumnRename"
 lead: "This transformation let you rename the properties names of your ingoing data. Also, you can remove columns from your flow."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 680
+weight: 610
 toc: true
 ---
 

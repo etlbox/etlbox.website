@@ -1,5 +1,5 @@
 ---
-title: "Row duplication"
+title: "Row Duplication"
 description: "Details about the RowDuplication"
 lead: "The RowDuplication simply creates duplicates of the incoming rows. You can specify how many copies you want or if you want to create a copy only if a predicate evaluates to true."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 640
+weight: 610
 toc: true
 ---
 
@@ -16,11 +16,11 @@ toc: true
 
 Sometimes you want to duplicate the rows of your input data. This can be easily done with the `RowDuplication` transformation - it will give you one or more duplicates of your data. If you want only to duplicate particular rows, you can pass a Predicate expression that define which rows can be clones and which not.
 
-#### Buffer 
+#### Buffer
 
-The `RowDuplication` is a non blocking transformation. It has one input buffer. 
+The `RowDuplication` is a non blocking transformation. It has one input buffer.
 
-### Code snippet 
+### Code snippet
 
 Here a simple example for creating three duplicates of each row:
 
@@ -69,7 +69,7 @@ public static void Main()
 }
 ```
 
-The default value for the `RowDuplication` is one, which means that every row creates one copy. 
+The default value for the `RowDuplication` is one, which means that every row creates one copy.
 
 You can set up a predicate that only creates a copy of the row if it evaluates to true. If we set the CanDuplicate property
 in the example above:

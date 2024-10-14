@@ -1,5 +1,5 @@
 ---
-title: "Row multiplication"
+title: "Row Multiplication"
 description: "Details about the RowMultiplication"
 lead: "The RowMultiplication allows to create multiple records out of one input record. It works like a RowTransformation - so it accepts an input and an output type - but instead of just modifying one records it can return an array of records (when you return an empty list, it will even remove the incoming row)."
 draft: false
@@ -7,17 +7,17 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 630
+weight: 610
 toc: true
 ---
 
 ## Overview
 
-### Description 
+### Description
 
 The RowMultiplication component is a variant of the `RowTransformation`. Like the `RowTransformation`, it accepts an input and an output type, and a transformation function (called MultiplicationFunc). The difference to the `RowTransformation` is that the `RowMultiplication` returns an array or list as return type. So from one input record you are able to create a transformation that returns one or more output records.
 
-#### Buffer 
+#### Buffer
 
 The RowMultiplication is a non blocking transformation and has one input buffer.
 
@@ -40,7 +40,7 @@ multiplication.LinkTo(dest);
 
 ## Examples
 
-Let's start with an example where input and output type are the same - we can use the simplified `RowMultiplication<TInput>` for this. In this example, we use one input record that contains a string ("ABC") and split it into three output records for each character. 
+Let's start with an example where input and output type are the same - we can use the simplified `RowMultiplication<TInput>` for this. In this example, we use one input record that contains a string ("ABC") and split it into three output records for each character.
 
 ```C#
  public class MyRow
@@ -88,7 +88,7 @@ Instead of using the same object type for input and output, we could modify the 
 ```C#
  public class MyString
 {
-    public string Text { get; set; }            
+    public string Text { get; set; }
 }
 
 public class MyChar
@@ -128,7 +128,7 @@ public static void Main()
 
 ### Normalizing document data
 
-The `RowMultiplication` can become very handy if you need to normalize document data. Consider the following json document, which contains 2 invoices. The first invoice contains 3 items, the second invoice 2 items. 
+The `RowMultiplication` can become very handy if you need to normalize document data. Consider the following json document, which contains 2 invoices. The first invoice contains 3 items, the second invoice 2 items.
 
 ```json
 {

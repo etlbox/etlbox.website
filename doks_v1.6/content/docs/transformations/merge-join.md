@@ -1,5 +1,5 @@
 ---
-title: "Merge join"
+title: "Merge Join"
 description: "Details about the MergeJoin"
 lead: "The MergeJoin transformation joins the outcome of two sources or transformations into one data record. This allows you to merge the data of two inputs into one output. "
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "transformations"
-weight: 670
+weight: 610
 toc: true
 ---
 

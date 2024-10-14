@@ -1,5 +1,5 @@
 ---
-title: "About transformations"
+title: "About Transformations"
 description: "An overview of all transformations in ETLBox"
 lead: "This article will give you an overview of all transformations that currently exist in ETLBox. If you already know what kind of transformation you are looking for, you can visit directly the article that goes more into the details."
 draft: false
@@ -13,13 +13,13 @@ toc: true
 
 ## Transformation concepts
 
-Transformations always have at least one input and one output. The purpose of a transformation component is to take the data from its input(s) and post the transformed data to its output(s). Normally this is done on a row-by-row basis for most transformations. As soon as there is any data in the input, the transformation will start and post the result to the output. 
+Transformations always have at least one input and one output. The purpose of a transformation component is to take the data from its input(s) and post the transformed data to its output(s). Normally this is done on a row-by-row basis for most transformations. As soon as there is any data in the input, the transformation will start and post the result to the output.
 
 ### Buffering
 
 Every transformation has at least one input buffer. If the transformation receives more data in its input than it is able to process, the buffer will hold this data until the transformation can continue with the next row. This buffering mechanism improves general throughput. E.g. a data source can read all data as fast as possible, as there will always be an input buffer in the transformation that will accept and buffer the record in memory. Whenever the transformation is ready for the next record there is will always be one record in the buffer waiting for processing.
 
-Sometimes transformations may have more than one input buffer. 
+Sometimes transformations may have more than one input buffer.
 
 #### Restricting buffer size
 
@@ -29,13 +29,13 @@ By default, all buffers of a component don't have a limitation how much rows the
 
 ### Non-Blocking and blocking transformations
 
-Transformation can be either blocking or non-blocking. 
+Transformation can be either blocking or non-blocking.
 
-Non-Blocking transformations will start to process data as soon as it finds something in its input buffer. In the moment where it discovers data in there, it will start to process it and send the data to registered output components. Using only non-blocking transformation is the fastest way to get data through the data flow pipeline. 
+Non-Blocking transformations will start to process data as soon as it finds something in its input buffer. In the moment where it discovers data in there, it will start to process it and send the data to registered output components. Using only non-blocking transformation is the fastest way to get data through the data flow pipeline.
 
-Blocking transformations will stop the data processing for the whole flow - the input buffer will wait until a crucial amount of data has reached the input. This means it will block processing until all components connected to this transformation have send it enough data that it can continue with processing. This will reduce the speed of your flow and consume more memory. The benefit of a blocking transformation is that you will have access to batches of data (or all data) in the memory. Sometimes this is mandatory, e.g. if you want to sort data. The sort will always wait until all data has reached the transformation - only then it is able to sort it and post the sorted data to its output. 
+Blocking transformations will stop the data processing for the whole flow - the input buffer will wait until a crucial amount of data has reached the input. This means it will block processing until all components connected to this transformation have send it enough data that it can continue with processing. This will reduce the speed of your flow and consume more memory. The benefit of a blocking transformation is that you will have access to batches of data (or all data) in the memory. Sometimes this is mandatory, e.g. if you want to sort data. The sort will always wait until all data has reached the transformation - only then it is able to sort it and post the sorted data to its output.
 
-But not all blocking transformations will block until all data has arrived in the component like the sort. For example, the `BatchTransformation` will wait until the buffer has reached the defined batched size of the component - then it will process this batch in whole. 
+But not all blocking transformations will block until all data has arrived in the component like the sort. For example, the `BatchTransformation` will wait until the buffer has reached the defined batched size of the component - then it will process this batch in whole.
 
 ## Transformations overview
 
@@ -43,48 +43,62 @@ A quick overview off all ETLBox transformations:
 
 Non-blocking|Blocking|
 ------------------------|-----------------
-RowTransformation|BatchTransformation
-CachedRowTransformation|CachedBatchTransformation
-RowMultiplication|Aggregation
-RowDuplication|CrossJoin
-LookupTransformation|BlockTransformation
+CachedRowTransformation|Aggregation
+ColumnTransformation|BatchTransformation
+Distinct|BlockTransformation
+FilterTransformation|CachedBatchTransformation
+LookupTransformation|CrossJoin
+MergeJoin|Pivot
 Multicast|Sort
-MergeJoin|
-ColumnRename|
-Distinct|
+RowDuplication|WaitTransformation
+RowMultiplication|
+RowTransformation|
+RowValidation|
 XmlSchemaValidation|
 
 
-**RowTransformation**: This transformation let you modifiy each data record with your custom written C# code
+### Non-Blocking
 
 **CachedRowTransformation**: Work the same way as the row transformations, but stores previously processed row in a cache.
 
-**RowMultiplication**: Allow you to create multiple rows based on your incoming rows - based on your own custom C# code. 
+**ColumnTransformation**: Allows you to rename, remove or reorder columns in your data flow - this is mostly relevant when using dynamic objects.
 
-**RowDuplication**: Simple duplicate your input row x times - additionally, you can add your own condition when to duplicate. 
+**Distinct**: Eliminates duplicates by returning only the first unique of incoming data and discarding or redirecting duplicates.
+
+**FilterTransformation**: Filters out rows that do not match a predicate expression.
 
 **LookupTransformation**: Allows you to store lookup data in memory and use it for enriching your data in your DataFlow.
 
+**MergeJoin**: Join your incoming data into one. Works best with sorted input. You can either always join two rows from the inputs, or define a match function which determines when the incoming rows are equal and should be joined.
+
 **Multicast**: Broadcast your incoming data into 2 or more targets.
 
-**MergeJoin**: Join your incoming data into one. Works best with sorted input. You can either always join two rows from the inputs, or define a match function which determines when the incoming rows are equal and should be joined. 
+**RowDuplication**: Simple duplicate your input row x times - additionally, you can add your own condition when to duplicate.
 
-**ColumnRename**: Allows you to rename column names in your data flow.
+**RowMultiplication**: Allow you to create multiple rows based on your incoming rows - based on your own custom C# code.
 
-**Distinct**: Eliminates duplicates by returning only the first unique of incoming data and discarding duplicates. 
+**RowTransformation**: This transformation let you modifiy each data record with your custom written C# code
 
-**XmlSchemaValidation**: Validates a given string that contains xml with a defined Xml schema definition - invalid xml is redirected to 
-the error output. 
+**RowValidation**: Validates each rows with a build-in or custom functions, and can redirect invalid rows into a different component.
 
-*BatchTransformation*: Execute your custom written C# code on a batch of incoming data. 
+**XmlSchemaValidation**: Validates a given string that contains xml with a defined Xml schema definition - invalid xml is redirected to
+the error output.
 
-**CachedBatchTransformation**: Works exactly like the BatchTransformation, but stores previously processed batches in a cache. 
+### Blocking
 
 **Aggregation**: Aggregate your data on-the-fly based on Grouping and Aggregation functions.
 
-**CrossJoin**: Takes two inputs and return one output with each record of both inputs joined with each other. 
+**BatchTransformation**: Execute your custom written C# code on a batch of incoming data.
 
-**BlockTransformation**: Allows you to execute your own custom written C# on your whole set of incoming data. 
+**BlockTransformation**: Allows you to execute your own custom written C# on your whole set of incoming data.
 
-**Sort**: Sorts your input data by your own sort function.
+**CachedBatchTransformation**: Works exactly like the BatchTransformation, but stores previously processed batches in a cache.
+
+**CrossJoin**: Takes two inputs and return one output with each record of both inputs joined with each other.
+
+**Pivot**: Pivots the rows/columns of the input.
+
+**Sort**: Sorts your input data either by your own sort function, or by particular columns.
+
+**WaitTransformation**: Blocks execution until another component (in the same or another Network) is finished.
 
