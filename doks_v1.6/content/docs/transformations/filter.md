@@ -9,23 +9,24 @@ menu:
     parent: "transformations"
 weight: 610
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The `FilterTransformation` is a simple transformation that filter out rows which do not match with a given Predicate. (A predicate is a function that either returns true or false - if the result is true, the row is kept, otherwise the row is discarded.
+The `FilterTransformation` filters rows in a data flow based on a specified predicate. A predicate is a function that returns `true` or `false`; if `true`, the row is kept, otherwise, it is discarded.
 
-{{< alert text="The filter transformation is not the only option to filter values in a data flow. You can use predicates expression when linking components in a data flow as well. See below for more details." >}}
+{{< alert text="The `FilterTransformation` is not the only method to filter values in a data flow. You can also use predicates directly when linking components. See below for details." >}}
 
-#### Buffer
+### Buffer
 
-The `FilterTransformation` is a non blocking transformation, so it will only store the current row in memory (plus some additional rows in the input buffer to improve throughput). It has one input buffer.
+The `FilterTransformation` is a non-blocking transformation, meaning it only stores the current row in memory, plus a few additional rows in an input buffer to improve throughput. It has one input buffer and performs the filtering in-memory without blocking the flow of data.
 
-## Example
+### Example
 
-The following example shows how we filter out a row with a particular Id value from the incoming data.
+Here’s how you can filter rows based on the `Id` field using the `FilterTransformation`:
 
-```C#
+```csharp
 public class MyRow
 {
     public int Id { get; set; }
@@ -40,15 +41,11 @@ public static void Main()
     source.DataAsList.Add(new MyRow() { Id = 3, Value = "Test3" });
 
     var filter = new FilterTransformation<MyRow>();
-    filter.FilterPredicate = row =>
-    {
-        return row.Id == 2;
-    };
+    filter.FilterPredicate = row => row.Id == 2;
 
     var dest = new MemoryDestination<MyRow>();
 
     source.LinkTo(filter).LinkTo(dest);
-
     Network.Execute(source);
 
     foreach (var row in dest.Data)
@@ -62,9 +59,9 @@ public static void Main()
 
 ### Using predicates when linking
 
-Instead of using a `FilterTransformation`, the same output can be produced by using predicates when linking objects. The below code would do the same thing:
+You can achieve the same filtering behavior without using the `FilterTransformation`, by applying predicates when linking components:
 
-```C#
+```csharp
 var source = new MemorySource<MyRow>();
 source.DataAsList.Add(new MyRow() { Id = 1, Value = "Test1" });
 source.DataAsList.Add(new MyRow() { Id = 2, Value = "Test2" });
@@ -79,9 +76,9 @@ source.LinkTo(voidDest, row => row.Id == 2);
 Network.Execute(source);
 ```
 
-The VoidDestination is a destination that can be used to discard records that you want to ignore. This code can be even simplified more:
+Alternatively, you can simplify the code by implicitly discarding unwanted rows:
 
-```C#
+```csharp
 var source = new MemorySource<MyRow>();
 source.DataAsList.Add(new MyRow() { Id = 1, Value = "Test1" });
 source.DataAsList.Add(new MyRow() { Id = 2, Value = "Test2" });
@@ -89,18 +86,16 @@ source.DataAsList.Add(new MyRow() { Id = 3, Value = "Test3" });
 
 var dest = new MemoryDestination<MyRow>();
 
-source.LinkTo(dest, row => row.Id != 2, row => row.Id == 2); //Implicit use of void destination
+source.LinkTo(dest, row => row.Id != 2, row => row.Id == 2);
 
 Network.Execute(source);
 ```
 
-By providing a second and third parameter when linking components, you can define which rows you want to keep and which rows you want to discard.
+## Dynamic Objects
 
-## Using dynamic objects
+The `FilterTransformation` can also work with `ExpandoObject`. Here’s an example that uses dynamic objects:
 
-The default implementation of the `FilterTransformation` also works with an ExpandoObject. The code above could be modified like below to achieve the same result with a dynamic object.
-
-```C#
+```csharp
 public void ExampleFilterDynamic()
 {
     var source = new MemorySource();
@@ -115,16 +110,11 @@ public void ExampleFilterDynamic()
     source.DataAsList.Add(r3);
 
     var filter = new FilterTransformation();
-    filter.FilterPredicate = row =>
-    {
-        dynamic r = row;
-        return r.Id == 2;
-    };
+    filter.FilterPredicate = row => ((dynamic)row).Id == 2;
 
     var dest = new MemoryDestination();
 
     source.LinkTo(filter).LinkTo(dest);
-
     Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
@@ -136,4 +126,34 @@ public void ExampleFilterDynamic()
 }
 ```
 
+## Error Handling
 
+`FilterTransformation` catches and forwards exceptions encountered during execution. By default, any exception will fault the entire data flow network. However, you can forward the exceptions to another part of the network using LinkErrorTo(). This behavior is not available when using predicates; in those cases, any uncaught exception will silently discard the record by default.
+
+```csharp
+var errorDest = new MemoryDestination<ETLBoxError>();
+filter.LinkErrorTo(errorDest);
+```
+
+
+## FilteredCount and PassedCount
+
+The `FilterTransformation` provides two properties to track the number of rows that were processed during execution.
+
+- `FilteredCount` keeps track of the number of rows that were filtered out (i.e., rows that did not pass the predicate).
+- `PassedCount` counts the number of rows that passed the predicate and were passed along to the next component in the data flow.
+
+Here’s an example usage:
+
+```csharp
+var filter = new FilterTransformation<MyRow>();
+filter.FilterPredicate = row => row.Id != 2;
+
+source.LinkTo(filter).LinkTo(dest);
+Network.Execute(source);
+
+Console.WriteLine($"Rows Passed: {filter.PassedCount}");
+Console.WriteLine($"Rows Filtered: {filter.FilteredCount}");
+```
+
+In the above example, after executing the network, the `PassedCount` will reflect the number of rows that passed the filter, while `FilteredCount` shows how many were discarded.
