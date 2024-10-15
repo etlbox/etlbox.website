@@ -28,7 +28,7 @@ CreateTableTask.CreateIfNotExists(SqlConnection,
 var source = new DbSource(SqlConnection);
 source.Sql = "SELECT 'A' as col1, 'Test' as col2";
 var dest = new DbDestination(SqlConnection, "RenameExampleDest");
-var upperCaseRename = new ColumnRename();
+var upperCaseRename = new ColumnTransformation();
 upperCaseRename.RenameFunc = name => name.ToUpper();
 source.LinkTo(upperCaseRename).LinkTo(dest);
 Network.Execute(source);

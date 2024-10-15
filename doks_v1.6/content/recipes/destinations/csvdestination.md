@@ -421,7 +421,7 @@ Value1,Value2,Id
 
 ## Removing columns when using dynamic objects
 
-If you are using dynamic objects when writing into a csv file, by default all column are written into the output file. If you want to omit (or rename) particular columns, you can use the `ColumnRename` transformation.
+If you are using dynamic objects when writing into a csv file, by default all column are written into the output file. If you want to omit (or rename or reorder) particular columns, you can use the `ColumnTransformation` for this.
 
 ```C#
 string destFile = @"res/Examples/DynamicWithLessColumns.csv";
@@ -440,9 +440,9 @@ source.DataAsList.Add(r2);
 var dest = new CsvDestination(destFile);
 dest.ResourceType = ResourceType.File;
 
-var cr = new ColumnRename();
+var cr = new ColumnTransformation();
 cr.RenameColumns = new[] {
-    new RenameColumn() { CurrentName = "Value", RemoveColumn = true }
+    new RemoveColumn() { PropertyName = "Value" }
 };
 
 source.LinkTo(cr);
