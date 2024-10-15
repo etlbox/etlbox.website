@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10186
+weight: 10191
 toc: false
 ---
 
@@ -90,13 +90,13 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck">DataFlowComponent.PrepareParameterForCheck()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
@@ -133,6 +133,9 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnProgress">DataFlowComponent.OnProgress</a>
@@ -353,9 +356,37 @@ Sort&lt;MyDataRow&gt; block = new Sort&lt;MyDataRow&gt;(comp);</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Sort_1_SortColumns_" data-uid="ETLBox.DataFlow.Sort`1.SortColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Sort_1_SortColumns" data-uid="ETLBox.DataFlow.Sort`1.SortColumns">SortColumns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<SortColumn> SortColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/sortcolumn">SortColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Sort_1_SortFunction_" data-uid="ETLBox.DataFlow.Sort`1.SortFunction*"></a>
   <h4 id="ETLBox_DataFlow_Sort_1_SortFunction" data-uid="ETLBox.DataFlow.Sort`1.SortFunction">SortFunction</h4>
-  <div class="markdown level1 summary"><p>A System.Comparison used to sort the data.</p>
+  <div class="markdown level1 summary"><p>A System.Comparison used to sort the data.
+This will always be used first, even if <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_SortColumns">SortColumns</a> are provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -566,6 +597,20 @@ If you use the error linking, any erroneous records will be caught and redirecte
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
+  <a id="ETLBox_DataFlow_Sort_1_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.Sort`1.PrepareParameterForCheck*"></a>
+  <h4 id="ETLBox_DataFlow_Sort_1_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.Sort`1.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void PrepareParameterForCheck()
+```
+
+{{< rawhtml >}}
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck">DataFlowComponent.PrepareParameterForCheck()</a></div>
   <a id="ETLBox_DataFlow_Sort_1_Reset_" data-uid="ETLBox.DataFlow.Sort`1.Reset*"></a>
   <h4 id="ETLBox_DataFlow_Sort_1_Reset" data-uid="ETLBox.DataFlow.Sort`1.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>

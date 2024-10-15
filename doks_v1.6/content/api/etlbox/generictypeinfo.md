@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10213
+weight: 10220
 toc: false
 ---
 
@@ -554,6 +554,33 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_GenericTypeInfo_RemoveColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.RemoveColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_RemoveColumnAttributes" data-uid="ETLBox.GenericTypeInfo.RemoveColumnAttributes">RemoveColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<RemoveColumn> RemoveColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/removecolumn">RemoveColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_GenericTypeInfo_RenameColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.RenameColumnAttributes*"></a>
   <h4 id="ETLBox_GenericTypeInfo_RenameColumnAttributes" data-uid="ETLBox.GenericTypeInfo.RenameColumnAttributes">RenameColumnAttributes</h4>
   <div class="markdown level1 summary"></div>
@@ -577,6 +604,33 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/renamecolumn">RenameColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_ReorderColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.ReorderColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_ReorderColumnAttributes" data-uid="ETLBox.GenericTypeInfo.ReorderColumnAttributes">ReorderColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<ReorderColumn> ReorderColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/reordercolumn">ReorderColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -635,6 +689,33 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_GenericTypeInfo_SortColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.SortColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_SortColumnAttributes" data-uid="ETLBox.GenericTypeInfo.SortColumnAttributes">SortColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<SortColumn> SortColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/sortcolumn">SortColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_GenericTypeInfo_UnderlyingPropType_" data-uid="ETLBox.GenericTypeInfo.UnderlyingPropType*"></a>
   <h4 id="ETLBox_GenericTypeInfo_UnderlyingPropType" data-uid="ETLBox.GenericTypeInfo.UnderlyingPropType">UnderlyingPropType</h4>
   <div class="markdown level1 summary"></div>
@@ -685,6 +766,33 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/updatecolumn">UpdateColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_ValidateColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.ValidateColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_ValidateColumnAttributes" data-uid="ETLBox.GenericTypeInfo.ValidateColumnAttributes">ValidateColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<ValidateColumn> ValidateColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/validatecolumn">ValidateColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

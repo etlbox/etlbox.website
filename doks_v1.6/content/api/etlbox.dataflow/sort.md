@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10187
+weight: 10192
 toc: false
 ---
 
@@ -48,6 +48,9 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_SortFunction">Sort&lt;ExpandoObject&gt;.SortFunction</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_SortColumns">Sort&lt;ExpandoObject&gt;.SortColumns</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_SourceBlock">Sort&lt;ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>
@@ -58,6 +61,9 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_Reset">Sort&lt;ExpandoObject&gt;.Reset()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_PrepareParameterForCheck">Sort&lt;ExpandoObject&gt;.PrepareParameterForCheck()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_CheckParameter">Sort&lt;ExpandoObject&gt;.CheckParameter()</a>
@@ -123,13 +129,13 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck">DataFlowComponent.PrepareParameterForCheck()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitCheckedParameter">DataFlowComponent.InitCheckedParameter()</a>
@@ -166,6 +172,9 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnProgress">DataFlowComponent.OnProgress</a>

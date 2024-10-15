@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10174
+weight: 10176
 toc: false
 ---
 
@@ -108,6 +108,33 @@ t.Wait();</code></pre>
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_DataFlow_Network_AddAutomaticVoidLinks_" data-uid="ETLBox.DataFlow.Network.AddAutomaticVoidLinks*"></a>
+  <h4 id="ETLBox_DataFlow_Network_AddAutomaticVoidLinks" data-uid="ETLBox.DataFlow.Network.AddAutomaticVoidLinks">AddAutomaticVoidLinks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool AddAutomaticVoidLinks { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Network_AllNodes_" data-uid="ETLBox.DataFlow.Network.AllNodes*"></a>
   <h4 id="ETLBox_DataFlow_Network_AllNodes" data-uid="ETLBox.DataFlow.Network.AllNodes">AllNodes</h4>
   <div class="markdown level1 summary"></div>
@@ -790,6 +817,168 @@ Connected nodes will be automatically collected.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Network_InitAndStartWith_" data-uid="ETLBox.DataFlow.Network.InitAndStartWith*"></a>
+  <h4 id="ETLBox_DataFlow_Network_InitAndStartWith__1_ETLBox_IDataFlowSource___0__" data-uid="ETLBox.DataFlow.Network.InitAndStartWith``1(ETLBox.IDataFlowSource{``0})">InitAndStartWith&lt;T&gt;(IDataFlowSource&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static Network InitAndStartWith<T>(IDataFlowSource<T> source)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_LinkAllErrorTo_" data-uid="ETLBox.DataFlow.Network.LinkAllErrorTo*"></a>
+  <h4 id="ETLBox_DataFlow_Network_LinkAllErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__" data-uid="ETLBox.DataFlow.Network.LinkAllErrorTo(ETLBox.IDataFlowDestination{ETLBox.ETLBoxError})">LinkAllErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network LinkAllErrorTo(IDataFlowDestination<ETLBoxError> errorDestination)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;<a class="xref" href="/api/etlbox/etlboxerror">ETLBoxError</a>&gt;</td>
+        <td><span class="parametername">errorDestination</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_LinkTo_" data-uid="ETLBox.DataFlow.Network.LinkTo*"></a>
+  <h4 id="ETLBox_DataFlow_Network_LinkTo__1_ETLBox_IDataFlowDestination___0__" data-uid="ETLBox.DataFlow.Network.LinkTo``1(ETLBox.IDataFlowDestination{``0})">LinkTo&lt;T&gt;(IDataFlowDestination&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network LinkTo<T>(IDataFlowDestination<T> destination)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination-1">IDataFlowDestination</a>&lt;T&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Network_ParallelExecute_" data-uid="ETLBox.DataFlow.Network.ParallelExecute*"></a>
   <h4 id="ETLBox_DataFlow_Network_ParallelExecute_ETLBox_DataFlow_Network___" data-uid="ETLBox.DataFlow.Network.ParallelExecute(ETLBox.DataFlow.Network[])">ParallelExecute(params Network[])</h4>
   <div class="markdown level1 summary"><p>Allows to execute multiple networks in parallel.</p>
@@ -1022,6 +1211,65 @@ Connected nodes will be automatically collected.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Network_StartWith_" data-uid="ETLBox.DataFlow.Network.StartWith*"></a>
+  <h4 id="ETLBox_DataFlow_Network_StartWith__1_ETLBox_IDataFlowSource___0__" data-uid="ETLBox.DataFlow.Network.StartWith``1(ETLBox.IDataFlowSource{``0})">StartWith&lt;T&gt;(IDataFlowSource&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network StartWith<T>(IDataFlowSource<T> source)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowsource-1">IDataFlowSource</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

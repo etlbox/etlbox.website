@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10324
+weight: 10332
 toc: false
 ---
 
@@ -15,7 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.RenameColumn">
   <h1 id="ETLBox_RenameColumn" data-uid="ETLBox.RenameColumn" class="text-break">Class RenameColumn
 </h1>
-  <div class="markdown level0 summary"><p>This property can be used in the ColumnRename transformation to rename a column.
+  <div class="markdown level0 summary"><p>This property can be used in the ColumnTransformation to rename a column.
 You can rename a property in either your strong typed or dynamic object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -209,35 +209,6 @@ public sealed class RenameColumn : Attribute
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_RenameColumn_ArrayIndex_" data-uid="ETLBox.RenameColumn.ArrayIndex*"></a>
-  <h4 id="ETLBox_RenameColumn_ArrayIndex" data-uid="ETLBox.RenameColumn.ArrayIndex">ArrayIndex</h4>
-  <div class="markdown level1 summary"><p>Index of the element in the array, only necessary if you use arrays
-as data type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public int? ArrayIndex { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_RenameColumn_CurrentName_" data-uid="ETLBox.RenameColumn.CurrentName*"></a>
   <h4 id="ETLBox_RenameColumn_CurrentName" data-uid="ETLBox.RenameColumn.CurrentName">CurrentName</h4>
   <div class="markdown level1 summary"><p>Current name of the column (not needed if you use this class as an attribute)</p>
@@ -290,34 +261,6 @@ as data type</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_RenameColumn_RemoveColumn_" data-uid="ETLBox.RenameColumn.RemoveColumn*"></a>
-  <h4 id="ETLBox_RenameColumn_RemoveColumn" data-uid="ETLBox.RenameColumn.RemoveColumn">RemoveColumn</h4>
-  <div class="markdown level1 summary"><p>If set to true, this column is left out when using the ColumnRename transformation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool RemoveColumn { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10142
+weight: 10144
 toc: false
 ---
 
@@ -26,7 +26,7 @@ toc: false
     <div class="level4"><span class="xref">DataFlowTransformation&lt;TInput, TOutput&gt;</span></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/aggregation-2">Aggregation&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-2">BatchTransformation&lt;TInput, TOutput&gt;</a></div>
-      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/columnrename-1">ColumnRename&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/columntransformation-1">ColumnTransformation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbmerge-1">DbMerge&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1">DbTypeCheck&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/distinct-1">Distinct&lt;TInput&gt;</a></div>
@@ -37,6 +37,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowduplication-1">RowDuplication&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowmultiplication-2">RowMultiplication&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowtransformation-2">RowTransformation&lt;TInput, TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowvalidation-1">RowValidation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/sort-1">Sort&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/waittransformation-1">WaitTransformation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.xml/xmlschemavalidation-1">XmlSchemaValidation&lt;TInput&gt;</a></div>
@@ -108,6 +109,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
     </div>
     <div>
@@ -166,6 +170,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>

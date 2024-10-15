@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10152
+weight: 10154
 toc: false
 ---
 
@@ -135,6 +135,9 @@ and the ability to define custom functions for unique key generation. It is idea
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>
@@ -417,6 +420,42 @@ The use of this function is optional.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_DataFlow_Distinct_1_AddAutomaticVoidLinkToOtherTargets_" data-uid="ETLBox.DataFlow.Distinct`1.AddAutomaticVoidLinkToOtherTargets*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_" data-uid="ETLBox.DataFlow.Distinct`1.AddAutomaticVoidLinkToOtherTargets(ETLBox.DataFlow.DataFlowComponent,ETLBox.IDataFlowDestination)">AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void AddAutomaticVoidLinkToOtherTargets(DataFlowComponent key, IDataFlowDestination voidDest)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></td>
+        <td><span class="parametername">voidDest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a></div>
   <a id="ETLBox_DataFlow_Distinct_1_CheckParameter_" data-uid="ETLBox.DataFlow.Distinct`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_Distinct_1_CheckParameter" data-uid="ETLBox.DataFlow.Distinct`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10156
+weight: 10158
 toc: false
 ---
 
@@ -49,6 +49,15 @@ By default the filter transformation will filter out null values.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_SourceBlock">FilterTransformation&lt;ExpandoObject&gt;.SourceBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_FilteredCount">FilterTransformation&lt;ExpandoObject&gt;.FilteredCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_PassedCount">FilterTransformation&lt;ExpandoObject&gt;.PassedCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_Reset">FilterTransformation&lt;ExpandoObject&gt;.Reset()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CheckParameter">FilterTransformation&lt;ExpandoObject&gt;.CheckParameter()</a>
@@ -117,13 +126,13 @@ By default the filter transformation will filter out null values.</p>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects_System_Nullable_System_Threading_CancellationToken__">DataFlowComponent.InitBufferObjects(CancellationToken?)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_Reset">DataFlowComponent.Reset()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_PrepareParameterForCheck">DataFlowComponent.PrepareParameterForCheck()</a>
@@ -163,6 +172,9 @@ By default the filter transformation will filter out null values.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>

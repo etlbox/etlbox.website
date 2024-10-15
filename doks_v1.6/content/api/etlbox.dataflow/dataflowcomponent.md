@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10135
+weight: 10137
 toc: false
 ---
 
@@ -218,6 +218,33 @@ completed and the current component has completed its buffer.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_ErrorCount_" data-uid="ETLBox.DataFlow.DataFlowComponent.ErrorCount*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_ErrorCount" data-uid="ETLBox.DataFlow.DataFlowComponent.ErrorCount">ErrorCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int ErrorCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -615,6 +642,40 @@ The default value is -1 (unlimited)</p>
   </table>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_" data-uid="ETLBox.DataFlow.DataFlowComponent.AddAutomaticVoidLinkToOtherTargets*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_" data-uid="ETLBox.DataFlow.DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(ETLBox.DataFlow.DataFlowComponent,ETLBox.IDataFlowDestination)">AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected virtual void AddAutomaticVoidLinkToOtherTargets(DataFlowComponent key, IDataFlowDestination voidDest)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></td>
+        <td><span class="parametername">voidDest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DataFlowComponent_CancelBufferAndThrowOperationCanceledException_" data-uid="ETLBox.DataFlow.DataFlowComponent.CancelBufferAndThrowOperationCanceledException*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_CancelBufferAndThrowOperationCanceledException" data-uid="ETLBox.DataFlow.DataFlowComponent.CancelBufferAndThrowOperationCanceledException">CancelBufferAndThrowOperationCanceledException()</h4>
   <div class="markdown level1 summary"></div>

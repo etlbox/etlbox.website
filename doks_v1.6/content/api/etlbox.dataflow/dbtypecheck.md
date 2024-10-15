@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10152
 toc: false
 ---
 
@@ -100,6 +100,9 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_CleanUpOnFaulted_System_Exception_">DbTypeCheck&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DbTypeCheck&lt;ExpandoObject&gt;.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_LinkFlawedTo_ETLBox_IDataFlowDestination__0__">DbTypeCheck&lt;ExpandoObject&gt;.LinkFlawedTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
@@ -202,6 +205,9 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>

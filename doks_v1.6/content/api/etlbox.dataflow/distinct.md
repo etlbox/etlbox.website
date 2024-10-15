@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10153
+weight: 10155
 toc: false
 ---
 
@@ -78,6 +78,9 @@ and the ability to define custom functions for unique key generation. It is idea
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_CleanUpOnFaulted_System_Exception_">Distinct&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">Distinct&lt;ExpandoObject&gt;.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__">Distinct&lt;ExpandoObject&gt;.LinkDuplicatesTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
@@ -180,6 +183,9 @@ and the ability to define custom functions for unique key generation. It is idea
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ProgressCount">DataFlowComponent.ProgressCount</a>

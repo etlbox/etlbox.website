@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10220
+weight: 10227
 toc: false
 ---
 
@@ -223,16 +223,15 @@ toc: false
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_Helper_DataTypeTester_Convert_" data-uid="ETLBox.Helper.DataTypeTester.Convert*"></a>
-  <h4 id="ETLBox_Helper_DataTypeTester_Convert_System_Object_" data-uid="ETLBox.Helper.DataTypeTester.Convert(System.Object)">Convert(dynamic)</h4>
-  <div class="markdown level1 summary"><p>Tries to convert all properties that are currently strings to the best fitting type.</p>
-</div>
+  <a id="ETLBox_Helper_DataTypeTester_TryConvertStringProperties_" data-uid="ETLBox.Helper.DataTypeTester.TryConvertStringProperties*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_TryConvertStringProperties_System_Object_" data-uid="ETLBox.Helper.DataTypeTester.TryConvertStringProperties(System.Object)">TryConvertStringProperties(dynamic)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public dynamic Convert(dynamic dynamicObject)
+    public dynamic TryConvertStringProperties(dynamic dynamicObject)
 ```
 
 {{< rawhtml >}}
@@ -268,59 +267,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Helper_DataTypeTester_ConvertDynamic_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic*"></a>
-  <h4 id="ETLBox_Helper_DataTypeTester_ConvertDynamic_System_Object_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic(System.Object)">ConvertDynamic(dynamic)</h4>
+  <a id="ETLBox_Helper_DataTypeTester_TryConvertStringProperties_" data-uid="ETLBox.Helper.DataTypeTester.TryConvertStringProperties*"></a>
+  <h4 id="ETLBox_Helper_DataTypeTester_TryConvertStringProperties_System_Object_System_IFormatProvider_" data-uid="ETLBox.Helper.DataTypeTester.TryConvertStringProperties(System.Object,System.IFormatProvider)">TryConvertStringProperties(dynamic, IFormatProvider)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static dynamic ConvertDynamic(dynamic dynamicObject)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">dynamic</span></td>
-        <td><span class="parametername">dynamicObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">dynamic</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_Helper_DataTypeTester_ConvertDynamic_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic*"></a>
-  <h4 id="ETLBox_Helper_DataTypeTester_ConvertDynamic_System_Object_System_IFormatProvider_" data-uid="ETLBox.Helper.DataTypeTester.ConvertDynamic(System.Object,System.IFormatProvider)">ConvertDynamic(dynamic, IFormatProvider)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public static dynamic ConvertDynamic(dynamic dynamicObject, IFormatProvider formatProvider)
+    public dynamic TryConvertStringProperties(dynamic dynamicObject, IFormatProvider formatProvider)
 ```
 
 {{< rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10177
+weight: 10180
 toc: false
 ---
 
@@ -15,7 +15,16 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Pivot">
   <h1 id="ETLBox_DataFlow_Pivot" data-uid="ETLBox.DataFlow.Pivot" class="text-break">Class Pivot
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><h2 id="use-the-pivot-transformation-to-pivot-your-dataexample">Use the Pivot transformation to pivot your data.
+Example:</h2>
+<h2 id="monthmonthvaluejan100feb200mar300">Month,MonthValue
+Jan,100
+Feb,200
+Mar,300</h2>
+<h2 id="will-become">will become</h2>
+<h2 id="janfebmar100200300">Jan,Feb,Mar
+100,200,300</h2>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -56,6 +65,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueAggregationFunc">Pivot&lt;ExpandoObject&gt;.ValueAggregationFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_DuplicateAggregationFunc">Pivot&lt;ExpandoObject&gt;.DuplicateAggregationFunc</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_SourceBlock">Pivot&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -136,6 +148,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
     </div>
     <div>
@@ -176,6 +191,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CancelComponent">DataFlowComponent.CancelComponent()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ErrorCount">DataFlowComponent.ErrorCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_OnProgress">DataFlowComponent.OnProgress</a>

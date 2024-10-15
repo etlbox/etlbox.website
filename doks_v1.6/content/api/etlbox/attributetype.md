@@ -87,7 +87,15 @@ public enum AttributeType
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_AttributeType_RemoveColumn">RemoveColumn</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AttributeType_RenameColumn">RenameColumn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AttributeType_ReorderColumn">ReorderColumn</td>
         <td></td>
       </tr>
       <tr>
@@ -99,7 +107,15 @@ public enum AttributeType
         <td></td>
       </tr>
       <tr>
+        <td id="ETLBox_AttributeType_SortColumn">SortColumn</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="ETLBox_AttributeType_UpdateColumn">UpdateColumn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AttributeType_ValidateColumn">ValidateColumn</td>
         <td></td>
       </tr>
       <tr>

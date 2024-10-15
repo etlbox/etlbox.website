@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10218
+weight: 10225
 toc: false
 ---
 
@@ -856,6 +856,158 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><p>The converted database specific type name</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_TryParseToBool_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToBool*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryParseToBool_System_Object_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToBool(System.Object)">TryParseToBool(object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static bool? TryParseToBool(object value)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_TryParseToDate_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToDate*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryParseToDate_System_Object_System_IFormatProvider_System_Globalization_DateTimeStyles_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToDate(System.Object,System.IFormatProvider,System.Globalization.DateTimeStyles)">TryParseToDate(object, IFormatProvider, DateTimeStyles)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static DateTimeOffset? TryParseToDate(object value, IFormatProvider formatProvider, DateTimeStyles dateTimeStyles)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimestyles">DateTimeStyles</a></td>
+        <td><span class="parametername">dateTimeStyles</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Helper_DataTypeConverter_TryParseToDecimal_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToDecimal*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryParseToDecimal_System_Object_System_Globalization_NumberStyles_System_IFormatProvider_" data-uid="ETLBox.Helper.DataTypeConverter.TryParseToDecimal(System.Object,System.Globalization.NumberStyles,System.IFormatProvider)">TryParseToDecimal(object, NumberStyles, IFormatProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static decimal? TryParseToDecimal(object value, NumberStyles numberStyles, IFormatProvider formatProvider)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.numberstyles">NumberStyles</a></td>
+        <td><span class="parametername">numberStyles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
