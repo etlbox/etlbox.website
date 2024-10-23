@@ -21,7 +21,7 @@ ETLBox is a fully functional alternative to other ETL tools like SQLServer Integ
 
 ETLBox is developed in C# and targets .NET Standard 2.0 and higher. It can be used by almost every {{< link-ext text=".NET version" url="https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support" >}} out there supported by Microsoft, including .NET Framework 4.X, .NET Core 2.X, .NET Core 3.X, .NET 5.0 and .NET 6.0. If you are still using .NET Framework, we recommend to use a Framework version not less than 4.7.2.
 
-All ETLBox {{< link-ext url="https://www.nuget.org/packages?q=etlbox" text="packages are hosted on nuget" >}}. You will need to install always the {{< link-ext="https://www.nuget.org/packages/ETLBox/" text="core pacakge" >}} when working with ETLBox. It  contains the default connectors and transformations.
+All ETLBox {{< link-ext url="https://www.nuget.org/profiles/ETLBoxperts" text="packages are hosted on nuget" >}}. You will need to install always the {{< link-ext="https://www.nuget.org/packages/ETLBox/" text="core pacakge" >}} when working with ETLBox. It  contains the default connectors and transformations.
 
 Simply add it to your project using your nuget package manager.
 
@@ -314,7 +314,7 @@ With this configuration, you should now see log output printed on your console!
 
 ## Where to continue
 
-Now you are ready to try out ETLBox. All {{< link-ext text="ETLBox packages are available on nuget" url="https://www.nuget.org/packages?q=etlbox" >}}. The free versions allows you to process up to 5.000 for a component - this should be enough to perform tests in your test environment. If you are ready to deploy ETLBox in your production environment, [please purchase the adequate license](/support/pricing/). If you want to try ETLBox without limitations, you can [request a free trial key](/support/get-trial/).
+Now you are ready to try out ETLBox. All {{< link-ext text="ETLBox packages are available on nuget" url="https://www.nuget.org/profiles/ETLBoxperts" >}}. The free versions allows you to process up to 5.000 for a component - this should be enough to perform tests in your test environment. If you are ready to deploy ETLBox in your production environment, [please purchase the adequate license](/support/pricing/). If you want to try ETLBox without limitations, you can [request a free trial key](/support/get-trial/).
 
 To learn more about ETLBox, just continue reading.
 
