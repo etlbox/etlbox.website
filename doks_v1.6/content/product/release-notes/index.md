@@ -5,6 +5,26 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.5.1
+
+### Features:
+
+- SqlTask.ExecuteNonQuery/ExecuteReader/ExecuteScalar: Added CancellationToken parameter
+- Aggregation now also works only with GroupColumns \(equivalent to a GROUP BY\)
+- ColumnTransformation: Order index is now equivalent to the position in the resulting order
+- Aggregation using dynamic objects: 'double' is preserved as data type when aggregating
+- ColumnTransformation: Check dynamic object performance
+- DbMerge now offers a CompareFunc to override comparison check
+- Lookup: Added ShouldSkipRow which specifies a condition when a row should be skipped
+- Pivot: Renaming PivotValueColumn to PivotValue, ValueAggregationFunc to ValueCombination and DuplicateAggregationFunc to ValueAggregation
+- Pivot: Introducing PivotRow to specify the columns for grouping
+
+#### Bug Fixes:
+
+- DbMerge: Proper exception message when one of the IdColumns of a POCO is not writeable
+- Exception during stream creation in streaming destination now written into Exception property
+
+
 ## Version 3.5.0
 
 #### Features:
