@@ -55,19 +55,22 @@ Mar,300</h2>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotColumns">Pivot&lt;ExpandoObject&gt;.PivotColumns</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotValueColumns">Pivot&lt;ExpandoObject&gt;.PivotValueColumns</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotValues">Pivot&lt;ExpandoObject&gt;.PivotValues</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_PivotRows">Pivot&lt;ExpandoObject&gt;.PivotRows</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_KeepEmptyValues">Pivot&lt;ExpandoObject&gt;.KeepEmptyValues</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ColumnNameGenerationFunc">Pivot&lt;ExpandoObject&gt;.ColumnNameGenerationFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ColumnNameGeneration">Pivot&lt;ExpandoObject&gt;.ColumnNameGeneration</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueAggregationFunc">Pivot&lt;ExpandoObject&gt;.ValueAggregationFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueCombination">Pivot&lt;ExpandoObject&gt;.ValueCombination</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_DuplicateAggregationFunc">Pivot&lt;ExpandoObject&gt;.DuplicateAggregationFunc</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueAggregation">Pivot&lt;ExpandoObject&gt;.ValueAggregation</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_SourceBlock">Pivot&lt;ExpandoObject&gt;.SourceBlock</a>

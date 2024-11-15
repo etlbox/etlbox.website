@@ -443,15 +443,15 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_GenericTypeInfo_PivotValueColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.PivotValueColumnAttributes*"></a>
-  <h4 id="ETLBox_GenericTypeInfo_PivotValueColumnAttributes" data-uid="ETLBox.GenericTypeInfo.PivotValueColumnAttributes">PivotValueColumnAttributes</h4>
+  <a id="ETLBox_GenericTypeInfo_PivotRowAttributes_" data-uid="ETLBox.GenericTypeInfo.PivotRowAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_PivotRowAttributes" data-uid="ETLBox.GenericTypeInfo.PivotRowAttributes">PivotRowAttributes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public List<PivotValueColumn> PivotValueColumnAttributes { get; set; }
+    public List<PivotRow> PivotRowAttributes { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -465,7 +465,34 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/pivotvaluecolumn">PivotValueColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/pivotrow">PivotRow</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_PivotValueAttributes_" data-uid="ETLBox.GenericTypeInfo.PivotValueAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_PivotValueAttributes" data-uid="ETLBox.GenericTypeInfo.PivotValueAttributes">PivotValueAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<PivotValue> PivotValueAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/pivotvalue">PivotValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -654,6 +654,50 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteNonQueryAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteNonQueryAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteNonQueryAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.ControlFlow.DbTask.ExecuteNonQueryAsync(System.Nullable{System.Threading.CancellationToken})">ExecuteNonQueryAsync(CancellationToken?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<int> ExecuteNonQueryAsync(CancellationToken? cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_DbTask_ExecuteReader_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReader*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteReader" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReader">ExecuteReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -678,6 +722,50 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteReaderAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReaderAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteReaderAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.ControlFlow.DbTask.ExecuteReaderAsync(System.Nullable{System.Threading.CancellationToken})">ExecuteReaderAsync(CancellationToken?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task ExecuteReaderAsync(CancellationToken? cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -748,6 +836,50 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync(System.Nullable{System.Threading.CancellationToken})">ExecuteScalarAsync(CancellationToken?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<object> ExecuteScalarAsync(CancellationToken? cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
   <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync__1" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync``1">ExecuteScalarAsync&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -759,6 +891,65 @@ toc: false
 ```
 
 {{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync_" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync*"></a>
+  <h4 id="ETLBox_ControlFlow_DbTask_ExecuteScalarAsync__1_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.ControlFlow.DbTask.ExecuteScalarAsync``1(System.Nullable{System.Threading.CancellationToken})">ExecuteScalarAsync&lt;T&gt;(CancellationToken?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Task<T> ExecuteScalarAsync<T>(CancellationToken? cancellationToken)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -866,14 +1057,14 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync(System.String,System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task})">LogErrorsAndCloseAsync(string, Func&lt;IConnectionManager, Task&gt;)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseAsync_System_String_System_Nullable_System_Threading_CancellationToken__System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseAsync(System.String,System.Nullable{System.Threading.CancellationToken},System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task})">LogErrorsAndCloseAsync(string, CancellationToken?, Func&lt;IConnectionManager, Task&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Task LogErrorsAndCloseAsync(string sqlOperationType, Func<IConnectionManager, Task> asyncAction = null)
+    public Task LogErrorsAndCloseAsync(string sqlOperationType, CancellationToken? cancellationToken = null, Func<IConnectionManager, Task> asyncAction = null)
 ```
 
 {{< rawhtml >}}
@@ -890,6 +1081,11 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sqlOperationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
       <tr>
@@ -915,14 +1111,14 @@ toc: false
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync*"></a>
-  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Action_ETLBox_IConnectionManager__System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync(System.String,System.Action{ETLBox.IConnectionManager},System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task},System.Boolean)">LogErrorsAndCloseCoreAsync(string, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</h4>
+  <h4 id="ETLBox_ControlFlow_DbTask_LogErrorsAndCloseCoreAsync_System_String_System_Nullable_System_Threading_CancellationToken__System_Action_ETLBox_IConnectionManager__System_Func_ETLBox_IConnectionManager_System_Threading_Tasks_Task__System_Boolean_" data-uid="ETLBox.ControlFlow.DbTask.LogErrorsAndCloseCoreAsync(System.String,System.Nullable{System.Threading.CancellationToken},System.Action{ETLBox.IConnectionManager},System.Func{ETLBox.IConnectionManager,System.Threading.Tasks.Task},System.Boolean)">LogErrorsAndCloseCoreAsync(string, CancellationToken?, Action&lt;IConnectionManager&gt;, Func&lt;IConnectionManager, Task&gt;, bool)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Task LogErrorsAndCloseCoreAsync(string sqlOperationType, Action<IConnectionManager> syncAction = null, Func<IConnectionManager, Task> asyncAction = null, bool sync = false)
+    public Task LogErrorsAndCloseCoreAsync(string sqlOperationType, CancellationToken? cancellationToken = null, Action<IConnectionManager> syncAction = null, Func<IConnectionManager, Task> asyncAction = null, bool sync = false)
 ```
 
 {{< rawhtml >}}
@@ -939,6 +1135,11 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sqlOperationType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
       <tr>

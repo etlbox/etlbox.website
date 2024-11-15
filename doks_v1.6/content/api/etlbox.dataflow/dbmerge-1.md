@@ -588,6 +588,37 @@ the DbMerge can decide if the column needs to be updated.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_CompareFunc_" data-uid="ETLBox.DataFlow.DbMerge`1.CompareFunc*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_CompareFunc" data-uid="ETLBox.DataFlow.DbMerge`1.CompareFunc">CompareFunc</h4>
+  <div class="markdown level1 summary"><p>By default, the CompareColumns are used to determine if a row needs to be updated.
+You can override the matching behavior using your own compare function which takes the current row and the
+row from the destination table as input and returns true if the row needs to be updated, and false if not.
+You still need to define the CompareColumns to specify which columns should be retrieved from the destination table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<object, object, bool> CompareFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_ConnectionManager_" data-uid="ETLBox.DataFlow.DbMerge`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_ConnectionManager" data-uid="ETLBox.DataFlow.DbMerge`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>

@@ -274,8 +274,8 @@ Mar,300</h2>
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_Pivot_1_ColumnNameGenerationFunc_" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGenerationFunc*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_ColumnNameGenerationFunc" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGenerationFunc">ColumnNameGenerationFunc</h4>
+  <a id="ETLBox_DataFlow_Pivot_1_ColumnNameGeneration_" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGeneration*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_ColumnNameGeneration" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGeneration">ColumnNameGeneration</h4>
   <div class="markdown level1 summary"><p>If set, this function is used to generate the column name for the pivoted columns.
 Otherwise, the output will concatenate the names of the pivot columns.</p>
 </div>
@@ -284,7 +284,7 @@ Otherwise, the output will concatenate the names of the pivot columns.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<Dictionary<string, object>, string> ColumnNameGenerationFunc { get; set; }
+    public Func<Dictionary<string, object>, string> ColumnNameGeneration { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -299,35 +299,6 @@ Otherwise, the output will concatenate the names of the pivot columns.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Pivot_1_DuplicateAggregationFunc_" data-uid="ETLBox.DataFlow.Pivot`1.DuplicateAggregationFunc*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_DuplicateAggregationFunc" data-uid="ETLBox.DataFlow.Pivot`1.DuplicateAggregationFunc">DuplicateAggregationFunc</h4>
-  <div class="markdown level1 summary"><p>When working on non-aggregated input data, only the last values is used in the Pivot.
-Use the DuplicateAggregationFunc to define how to handle duplicates in the input data.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<Pivot<TInput>.PivotDuplicate, object> DuplicateAggregationFunc { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot</a>&lt;TInput&gt;.<a class="xref" href="ETLBox.DataFlow.Pivot-1.PivotDuplicate.html">PivotDuplicate</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -417,16 +388,16 @@ If you want to avoid grouping, you need to remove these columns from your data b
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Pivot_1_PivotValueColumns_" data-uid="ETLBox.DataFlow.Pivot`1.PivotValueColumns*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_PivotValueColumns" data-uid="ETLBox.DataFlow.Pivot`1.PivotValueColumns">PivotValueColumns</h4>
-  <div class="markdown level1 summary"><p>Value columns which contain the values for the pivot columns.</p>
+  <a id="ETLBox_DataFlow_Pivot_1_PivotRows_" data-uid="ETLBox.DataFlow.Pivot`1.PivotRows*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_PivotRows" data-uid="ETLBox.DataFlow.Pivot`1.PivotRows">PivotRows</h4>
+  <div class="markdown level1 summary"><p>The rows that are kept in the output. If not set, all rows are kept.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public ICollection<PivotValueColumn> PivotValueColumns { get; set; }
+    public ICollection<PivotRow> PivotRows { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -440,7 +411,35 @@ If you want to avoid grouping, you need to remove these columns from your data b
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/pivotvaluecolumn">PivotValueColumn</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/pivotrow">PivotRow</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Pivot_1_PivotValues_" data-uid="ETLBox.DataFlow.Pivot`1.PivotValues*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_PivotValues" data-uid="ETLBox.DataFlow.Pivot`1.PivotValues">PivotValues</h4>
+  <div class="markdown level1 summary"><p>Value columns which contain the values for the pivot columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<PivotValue> PivotValues { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/pivotvalue">PivotValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -532,16 +531,45 @@ If you want to avoid grouping, you need to remove these columns from your data b
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.TargetBlock</a></div>
-  <a id="ETLBox_DataFlow_Pivot_1_ValueAggregationFunc_" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregationFunc*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_ValueAggregationFunc" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregationFunc">ValueAggregationFunc</h4>
-  <div class="markdown level1 summary"><p>If multiple values for a pivot column are found, this function is used to aggregate the values.</p>
+  <a id="ETLBox_DataFlow_Pivot_1_ValueAggregation_" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregation*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_ValueAggregation" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregation">ValueAggregation</h4>
+  <div class="markdown level1 summary"><p>When working on non-aggregated input data, only the last values is used in the Pivot.
+Use the ValueAggregationFunc to define how to handle aggregation of the values in the input data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<Dictionary<string, object>, object> ValueAggregationFunc { get; set; }
+    public Func<Pivot<TInput>.PivotDuplicate, object> ValueAggregation { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot</a>&lt;TInput&gt;.<a class="xref" href="ETLBox.DataFlow.Pivot-1.PivotDuplicate.html">PivotDuplicate</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Pivot_1_ValueCombination_" data-uid="ETLBox.DataFlow.Pivot`1.ValueCombination*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_ValueCombination" data-uid="ETLBox.DataFlow.Pivot`1.ValueCombination">ValueCombination</h4>
+  <div class="markdown level1 summary"><p>If multiple values for a pivot column are found, this function is used to combine the values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<Dictionary<string, object>, object> ValueCombination { get; set; }
 ```
 
 {{< rawhtml >}}

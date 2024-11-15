@@ -1001,7 +1001,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </tbody>
   </table>
   <a id="ETLBox_IConnectionManager_ExecuteNonQueryAsync_" data-uid="ETLBox.IConnectionManager.ExecuteNonQueryAsync*"></a>
-  <h4 id="ETLBox_IConnectionManager_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.IConnectionManager.ExecuteNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_IConnectionManager_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.IConnectionManager.ExecuteNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken})">ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that doesn't return any data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1009,7 +1009,7 @@ to the ADO.NET connection pool for further reuse.</p>
 {{< /rawhtml >}}
 
 ```C#
-    Task<int> ExecuteNonQueryAsync(string command, IEnumerable<QueryParameter> parameterList = null)
+    Task<int> ExecuteNonQueryAsync(string command, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null)
 ```
 
 {{< rawhtml >}}
@@ -1033,6 +1033,12 @@ to the ADO.NET connection pool for further reuse.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
     </tbody>
@@ -1117,7 +1123,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <a id="ETLBox_IConnectionManager_ExecuteReaderAsync_" data-uid="ETLBox.IConnectionManager.ExecuteReaderAsync*"></a>
-  <h4 id="ETLBox_IConnectionManager_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.IConnectionManager.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
+  <h4 id="ETLBox_IConnectionManager_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.IConnectionManager.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?, int, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that does return multiple rows in multiple columns.
 Define a read action for each columns of your result set.</p>
 </div>
@@ -1126,7 +1132,7 @@ Define a read action for each columns of your result set.</p>
 {{< /rawhtml >}}
 
 ```C#
-    Task ExecuteReaderAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
+    Task ExecuteReaderAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1150,6 +1156,12 @@ Define a read action for each columns of your result set.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of query parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
       <tr>
@@ -1249,7 +1261,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <a id="ETLBox_IConnectionManager_ExecuteScalarAsync_" data-uid="ETLBox.IConnectionManager.ExecuteScalarAsync*"></a>
-  <h4 id="ETLBox_IConnectionManager_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.IConnectionManager.ExecuteScalarAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_IConnectionManager_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.IConnectionManager.ExecuteScalarAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken})">ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that returns a single row in a single column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1257,7 +1269,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
 {{< /rawhtml >}}
 
 ```C#
-    Task<object> ExecuteScalarAsync(string command, IEnumerable<QueryParameter> parameterList = null)
+    Task<object> ExecuteScalarAsync(string command, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null)
 ```
 
 {{< rawhtml >}}
@@ -1281,6 +1293,12 @@ The order of the columns corresponds with the order of the passed actions.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
     </tbody>
@@ -1360,7 +1378,7 @@ as all tasks and components will try to open a connection if no open connection 
 
 {{< rawhtml >}}
   <a id="ETLBox_IConnectionManager_OpenAsync_" data-uid="ETLBox.IConnectionManager.OpenAsync*"></a>
-  <h4 id="ETLBox_IConnectionManager_OpenAsync" data-uid="ETLBox.IConnectionManager.OpenAsync">OpenAsync()</h4>
+  <h4 id="ETLBox_IConnectionManager_OpenAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.IConnectionManager.OpenAsync(System.Nullable{System.Threading.CancellationToken})">OpenAsync(CancellationToken?)</h4>
   <div class="markdown level1 summary"><p>Opens the connection to the database asynchrously. Normally you don't have to do this on your own,
 as all tasks and components will try to open a connection if no open connection is found.</p>
 </div>
@@ -1369,10 +1387,28 @@ as all tasks and components will try to open a connection if no open connection 
 {{< /rawhtml >}}
 
 ```C#
-    Task OpenAsync()
+    Task OpenAsync(CancellationToken? cancellationToken)
 ```
 
 {{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>

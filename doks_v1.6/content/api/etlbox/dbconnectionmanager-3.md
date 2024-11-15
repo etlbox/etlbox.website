@@ -992,55 +992,6 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DbConnectionManager_3_BulkNonQueryAsync_" data-uid="ETLBox.DbConnectionManager`3.BulkNonQueryAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_BulkNonQueryAsync_System_String_System_Collections_Generic_IEnumerable__2__" data-uid="ETLBox.DbConnectionManager`3.BulkNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{`2})">BulkNonQueryAsync(string, IEnumerable&lt;TParameter&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected Task<int> BulkNonQueryAsync(string commandText, IEnumerable<TParameter> parameterList)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">commandText</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DbConnectionManager_3_BulkReader_" data-uid="ETLBox.DbConnectionManager`3.BulkReader*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_BulkReader_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.BulkReader(System.String,System.Collections.Generic.IEnumerable{`2},System.Action,System.Action,System.Action{System.Object}[])">BulkReader(string, IEnumerable&lt;TParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1086,70 +1037,6 @@ This will leave the underlying ADO.NET connection open until the transaction is 
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
         <td><span class="parametername">rowActions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DbConnectionManager_3_BulkReaderAsync_" data-uid="ETLBox.DbConnectionManager`3.BulkReaderAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_BulkReaderAsync_System_String_System_Collections_Generic_IEnumerable__2__System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.BulkReaderAsync(System.String,System.Collections.Generic.IEnumerable{`2},System.Action,System.Action,System.Action{System.Object}[])">BulkReaderAsync(string, IEnumerable&lt;TParameter&gt;, Action, Action, params Action&lt;object&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    protected Task BulkReaderAsync(string commandText, IEnumerable<TParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] rowActions)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">commandText</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TParameter&gt;</td>
-        <td><span class="parametername">parameterList</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
-        <td><span class="parametername">beforeRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
-        <td><span class="parametername">afterRowReadAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</td>
-        <td><span class="parametername">rowActions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1628,7 +1515,7 @@ to the ADO.NET connection pool for further reuse.</p>
     </tbody>
   </table>
   <a id="ETLBox_DbConnectionManager_3_ExecuteNonQueryAsync_" data-uid="ETLBox.DbConnectionManager`3.ExecuteNonQueryAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.DbConnectionManager`3.ExecuteNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_DbConnectionManager_3_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.DbConnectionManager`3.ExecuteNonQueryAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken})">ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that doesn't return any data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1636,7 +1523,7 @@ to the ADO.NET connection pool for further reuse.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Task<int> ExecuteNonQueryAsync(string commandText, IEnumerable<QueryParameter> parameterList = null)
+    public Task<int> ExecuteNonQueryAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null)
 ```
 
 {{< rawhtml >}}
@@ -1659,6 +1546,12 @@ to the ADO.NET connection pool for further reuse.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
     </tbody>
@@ -1743,7 +1636,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <a id="ETLBox_DbConnectionManager_3_ExecuteReaderAsync_" data-uid="ETLBox.DbConnectionManager`3.ExecuteReaderAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</h4>
+  <h4 id="ETLBox_DbConnectionManager_3_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__System_Int32_System_Action_System_Action_System_Action_System_Object____" data-uid="ETLBox.DbConnectionManager`3.ExecuteReaderAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken},System.Int32,System.Action,System.Action,System.Action{System.Object}[])">ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?, int, Action, Action, params Action&lt;object&gt;[])</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that does return multiple rows in multiple columns.
 Define a read action for each columns of your result set.</p>
 </div>
@@ -1752,7 +1645,7 @@ Define a read action for each columns of your result set.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Task ExecuteReaderAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
+    public Task ExecuteReaderAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null, int limit = 2147483647, Action beforeRowReadAction = null, Action afterRowReadAction = null, params Action<object>[] actions)
 ```
 
 {{< rawhtml >}}
@@ -1776,6 +1669,12 @@ Define a read action for each columns of your result set.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of query parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
       <tr>
@@ -1874,7 +1773,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
     </tbody>
   </table>
   <a id="ETLBox_DbConnectionManager_3_ExecuteScalarAsync_" data-uid="ETLBox.DbConnectionManager`3.ExecuteScalarAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.DbConnectionManager`3.ExecuteScalarAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</h4>
+  <h4 id="ETLBox_DbConnectionManager_3_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.DbConnectionManager`3.ExecuteScalarAsync(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter},System.Nullable{System.Threading.CancellationToken})">ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</h4>
   <div class="markdown level1 summary"><p>Executes a query asynchronously against the database that returns a single row in a single column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1882,7 +1781,7 @@ The order of the columns corresponds with the order of the passed actions.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Task<object> ExecuteScalarAsync(string commandText, IEnumerable<QueryParameter> parameterList = null)
+    public Task<object> ExecuteScalarAsync(string commandText, IEnumerable<QueryParameter> parameterList = null, CancellationToken? cancellationToken = null)
 ```
 
 {{< rawhtml >}}
@@ -1905,6 +1804,12 @@ The order of the columns corresponds with the order of the passed actions.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="/api/etlbox.controlflow/queryparameter">QueryParameter</a>&gt;</td>
         <td><span class="parametername">parameterList</span></td>
         <td><p>The optional list of parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
 </td>
       </tr>
     </tbody>
@@ -1985,9 +1890,7 @@ as all tasks and components will try to open a connection if no open connection 
 {{< rawhtml >}}
   <a id="ETLBox_DbConnectionManager_3_OpenAsync_" data-uid="ETLBox.DbConnectionManager`3.OpenAsync*"></a>
   <h4 id="ETLBox_DbConnectionManager_3_OpenAsync" data-uid="ETLBox.DbConnectionManager`3.OpenAsync">OpenAsync()</h4>
-  <div class="markdown level1 summary"><p>Opens the connection to the database asynchrously. Normally you don't have to do this on your own,
-as all tasks and components will try to open a connection if no open connection is found.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -2012,15 +1915,17 @@ as all tasks and components will try to open a connection if no open connection 
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DbConnectionManager_3_OpenCoreAsync_" data-uid="ETLBox.DbConnectionManager`3.OpenCoreAsync*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_OpenCoreAsync_System_Boolean_" data-uid="ETLBox.DbConnectionManager`3.OpenCoreAsync(System.Boolean)">OpenCoreAsync(bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_DbConnectionManager_3_OpenAsync_" data-uid="ETLBox.DbConnectionManager`3.OpenAsync*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_OpenAsync_System_Nullable_System_Threading_CancellationToken__" data-uid="ETLBox.DbConnectionManager`3.OpenAsync(System.Nullable{System.Threading.CancellationToken})">OpenAsync(CancellationToken?)</h4>
+  <div class="markdown level1 summary"><p>Opens the connection to the database asynchrously. Normally you don't have to do this on your own,
+as all tasks and components will try to open a connection if no open connection is found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public Task OpenCoreAsync(bool sync = false)
+    public Task OpenAsync(CancellationToken? cancellationToken)
 ```
 
 {{< rawhtml >}}
@@ -2035,9 +1940,10 @@ as all tasks and components will try to open a connection if no open connection 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">sync</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>?</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional CancellationToken</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -62,6 +62,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_OnNoMatchFound">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.OnNoMatchFound</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ShouldSkipRow">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.ShouldSkipRow</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_PermitMultipleEntriesPerKey">LookupTransformation&lt;ExpandoObject, ExpandoObject&gt;.PermitMultipleEntriesPerKey</a>
     </div>
     <div>

@@ -74,19 +74,19 @@ toc: false
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteNonQuery_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteNonQuery(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteNonQueryAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__">IConnectionManager.ExecuteNonQueryAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteScalar_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteScalar(string, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__">IConnectionManager.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;)</a>
+      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteScalarAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__">IConnectionManager.ExecuteScalarAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">IConnectionManager.ExecuteReader(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Int32_System_Action_System_Action_System_Action_System_Object____">IConnectionManager.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, int, Action, Action, params Action&lt;object&gt;[])</a>
+      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_ExecuteReaderAsync_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__System_Nullable_System_Threading_CancellationToken__System_Int32_System_Action_System_Action_System_Action_System_Object____">IConnectionManager.ExecuteReaderAsync(string, IEnumerable&lt;QueryParameter&gt;, CancellationToken?, int, Action, Action, params Action&lt;object&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_BeginTransaction_System_Data_IsolationLevel_">IConnectionManager.BeginTransaction(IsolationLevel)</a>
@@ -110,7 +110,7 @@ toc: false
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_Open">IConnectionManager.Open()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_OpenAsync">IConnectionManager.OpenAsync()</a>
+      <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_OpenAsync_System_Nullable_System_Threading_CancellationToken__">IConnectionManager.OpenAsync(CancellationToken?)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/iconnectionmanager#ETLBox_IConnectionManager_Close">IConnectionManager.Close()</a>

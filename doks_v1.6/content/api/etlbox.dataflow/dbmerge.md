@@ -69,6 +69,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CompareColumns">DbMerge&lt;ExpandoObject&gt;.CompareColumns</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CompareFunc">DbMerge&lt;ExpandoObject&gt;.CompareFunc</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_UpdateColumns">DbMerge&lt;ExpandoObject&gt;.UpdateColumns</a>
     </div>
     <div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10331
+weight: 10333
 toc: false
 ---
 
@@ -15,7 +15,7 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.RemoveColumn">
   <h1 id="ETLBox_RemoveColumn" data-uid="ETLBox.RemoveColumn" class="text-break">Class RemoveColumn
 </h1>
-  <div class="markdown level0 summary"><p>This property can be used in the ColumnRename transformation to remove a column/property.
+  <div class="markdown level0 summary"><p>This property can be used in the ColumnTrnansformation to remove a column/property.
 You can remove a property in either your strong typed or dynamic object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.redis"
-weight: 10328
+weight: 10330
 toc: false
 ---
 

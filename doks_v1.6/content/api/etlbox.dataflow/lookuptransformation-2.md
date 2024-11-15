@@ -661,6 +661,36 @@ Otherwise, only the first occurence will be loaded into the cache.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_LookupTransformation_2_ShouldSkipRow_" data-uid="ETLBox.DataFlow.LookupTransformation`2.ShouldSkipRow*"></a>
+  <h4 id="ETLBox_DataFlow_LookupTransformation_2_ShouldSkipRow" data-uid="ETLBox.DataFlow.LookupTransformation`2.ShouldSkipRow">ShouldSkipRow</h4>
+  <div class="markdown level1 summary"><p>Specifies if a row should be skipped based on the input row.
+If this function returns true, the row will be skipped and not be processed by the lookup.
+Will only be invoked if <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheToInput">ApplyRetrievedCacheToInput</a> or <a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2#ETLBox_DataFlow_LookupTransformation_2_ApplyRetrievedCacheForMultipleOutputs">ApplyRetrievedCacheForMultipleOutputs</a> is not set!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Predicate<TInput> ShouldSkipRow { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_LookupTransformation_2_Source_" data-uid="ETLBox.DataFlow.LookupTransformation`2.Source*"></a>
   <h4 id="ETLBox_DataFlow_LookupTransformation_2_Source" data-uid="ETLBox.DataFlow.LookupTransformation`2.Source">Source</h4>
   <div class="markdown level1 summary"><p>The source component from which the lookup data is retrieved. E.g. a <a class="xref" href="/api/etlbox.dataflow/dbsource">DbSource</a> or a <a class="xref" href="/api/etlbox.dataflow/memorysource">MemorySource</a>.</p>

@@ -15,11 +15,9 @@ toc: false
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ColumnTransformation">
   <h1 id="ETLBox_DataFlow_ColumnTransformation" data-uid="ETLBox.DataFlow.ColumnTransformation" class="text-break">Class ColumnTransformation
 </h1>
-  <div class="markdown level0 summary"><p>ColumnRename allows you to rename the column or properties names of your ingoing data.
-This transformation works with objects, ExpandoObjects and arrays as input data type.<br>
-ColumnRename will always convert the input type into a (dynamic) ExpandoObject.
-Provide a column mapping with the old and the new name. The mapping can also be automatically retrieved from
-existing ColumnMap attributes.</p>
+  <div class="markdown level0 summary"><p>Allows you to rename, remove or reorders the columns/properties of your ingoing data.
+This transformation works with objects and dynamic ExpandoObjects as input data type.<br>
+It will always convert the input type into an ExpandoObject as output.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,6 +89,9 @@ existing ColumnMap attributes.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">ColumnTransformation&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_OrderColumns_System_Collections_Generic_List_System_String__">ColumnTransformation&lt;ExpandoObject&gt;.OrderColumns(List&lt;string&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
