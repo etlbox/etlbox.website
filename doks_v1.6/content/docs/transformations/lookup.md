@@ -351,6 +351,56 @@ This is how the code looks like using the ExpandoObject:
 }
 ```
 
+## Skipping Rows
+
+The `ShouldSkipRow` property allows you to specify a condition to determine if an input row should be skipped. When this property is set, rows satisfying the condition will not be processed by the lookup. This property is only applicable when neither `ApplyRetrievedCacheToInput` nor `ApplyRetrievedCacheForMultipleOutputs` is set.
+
+#### Example: Skipping Rows Based on Input Conditions
+
+This example demonstrates how to use the `ShouldSkipRow` property to skip rows where the `CustomerName` field is null or empty.
+
+```c#
+public class Order
+{
+    public int OrderNumber { get; set; }
+    public string CustomerName { get; set; }
+    public int? CustomerId { get; set; }
+}
+
+public class Customer
+{
+    [RetrieveColumn(nameof(Order.CustomerId))]
+    public int? Id { get; set; }
+    [MatchColumn(nameof(Order.CustomerName))]
+    public string Name { get; set; }
+}
+
+var orderSource = new MemorySource<Order>();
+orderSource.DataAsList.Add(new Order() { OrderNumber = 815, CustomerName = "John" });
+orderSource.DataAsList.Add(new Order() { OrderNumber = 4711, CustomerName = "X" });
+orderSource.DataAsList.Add(new Order() { OrderNumber = 1234, CustomerName = "Jim" });
+
+var lookupSource = new DbSource<Customer>(SqlConnection, "CustomerTable");
+
+var lookup = new LookupTransformation<Order, Customer>();
+lookup.Source = lookupSource;
+
+// Set the condition to skip rows with null or empty CustomerName
+lookup.ShouldSkipRow = row => row.CustomerName == "X";
+
+var dest = new MemoryDestination<Order>();
+
+orderSource.LinkTo(lookup).LinkTo(dest);
+Network.Execute(orderSource);
+
+foreach (var row in dest.Data)
+    Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
+
+//Output
+//Order:815 Name:John Id:1
+//Order:4711 Name: Id:
+//Order:1234 Name:Jim Id:2
+```
 
 
 
