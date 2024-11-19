@@ -13,7 +13,7 @@ toc: true
 
 ## Introduction
 
-The Pivot transformation in ETLBox allows you to turn a vertical set of rows into a horizontal table, essentially converting rows into columns. This is  useful when dealing with structured data that you want to summarize or reshape, such as turning a list of monthly values into a single row where each column represents a month.
+The Pivot transformation in ETLBox allows you to turn a vertical set of rows into a horizontal table, essentially converting rows into columns. This is useful when dealing with structured data that you want to summarize or reshape, such as turning a list of monthly values into a single row where each column represents a month.
 
 For example, given the following input data:
 
@@ -31,13 +31,13 @@ Jan,Feb,Mar
 100,200,300
 ```
 
-The transformation involves specifying which columns should be pivoted (i.e., which columns will become the headers) and which columns will provide the values under those headers.
+The transformation involves specifying which columns should be pivoted (i.e., which columns will become the headers), which columns provide the values under those headers, and which columns group the rows to be pivoted.
 
 ```csharp
 public class MyRow {
     [PivotColumn]
     public string Month { get; set; }
-    [PivotValueColumn]
+    [PivotValue]
     public double MonthValue { get; set; }
 }
 
@@ -55,32 +55,33 @@ pivot.LinkTo(dest);
 Network.Execute(source);
 ```
 
-The `Month` property is marked with the `PivotColumn` attribute, indicating that it should be used as a header. The `MonthValue` property is marked with the `PivotValueColumn` attribute, meaning its values will appear under the corresponding months.
+The `Month` property is marked with the `PivotColumn` attribute, and the `MonthValue` property is marked with the `PivotValue` attribute. Any properties not marked with these attributes will be ignored in the output.
 
-{{< alert text="The Pivot will always generate a (dynamic) ExpandoObject as output object." >}}
+{{< alert text="The Pivot transformation will always generate a (dynamic) ExpandoObject as the output object." >}}
 
-### PivotColumns and PivotValueColumns
+## PivotColumn, PivotValue, and PivotRow
 
-You can define the columns to be pivoted either using attributes on a class (as shown in the previous example) or by directly assigning the `PivotColumns` and `PivotValueColumns` properties when using dynamic objects like `ExpandoObject`. This flexibility allows you to handle both predefined and dynamic data structures.
+You can define pivot columns, pivot values, and rows either by using attributes on a class (as shown above) or by directly setting the `PivotColumns`, `PivotValues`, and `PivotRows` properties when using dynamic objects like `ExpandoObject`. This flexibility allows you to handle both predefined and dynamic data structures.
 
-For example, if you are working with dynamic data (like `ExpandoObject`), you can specify the pivot columns and value columns directly:
+For example, if working with dynamic data, you can specify these properties directly:
 
 ```csharp
 var pivot = new Pivot();
+pivot.PivotRows = new[] { new PivotRow() { PropertyName = "Group" } };
 pivot.PivotColumns = new[] { new PivotColumn() { PropertyName = "Month" } };
-pivot.PivotValueColumns = new[] { new PivotValueColumn() { PropertyName = "MonthValue" } };
+pivot.PivotValues = new[] { new PivotValue() { PropertyName = "MonthValue" } };
 ```
 
-This way, you can dynamically decide which columns to pivot and which to use for the values.
+This approach provides greater flexibility for handling dynamic data structures without predefined class definitions.
 
-### Aggregating Values
+## Combining Values with ValueCombination
 
-In cases where you have multiple values to aggregate, ETLBox provides the `ValueAggregationFunc`, which allows you to define how these values should be combined. This function accepts a dictionary of the values from the pivoted columns and returns the aggregated result.
+In cases where multiple values exist for the same pivoted column, ETLBox provides the `ValueCombination` function. This function allows you to define how to combine the values, such as summing them, averaging them, or concatenating strings.
 
-For instance, if you have two columns containing values (`Value1` and `Value2`) and you want to sum them together during the pivot operation, you can define the `ValueAggregationFunc` like this:
+Here’s an example of summing multiple values during the pivot operation:
 
 ```csharp
-pivot.ValueAggregationFunc = dict => {
+pivot.ValueCombination = dict => {
     double sum = 0;
     foreach (var entry in dict) {
         sum += double.Parse(entry.Value.ToString());
@@ -89,11 +90,9 @@ pivot.ValueAggregationFunc = dict => {
 };
 ```
 
-This function will sum all the values in the dictionary and return the total as the aggregated value for each pivoted column.
+### Example: Using ValueCombination
 
-#### Example: Using ValueAggregationFunc
-
-Let’s look at an example where we have two values (`Value1` and `Value2`) for each month, and we want to sum these values together for each pivoted column.
+Consider input data like this:
 
 ```csv
 Month,Value1,Value2
@@ -102,7 +101,7 @@ Feb,200,2000
 Mar,300,3000
 ```
 
-The goal is to sum `Value1` and `Value2` for each month and display the result under the respective month. The output will look like this:
+The goal is to sum `Value1` and `Value2` for each month. The output will look like this:
 
 ```csv
 Jan,Feb,Mar
@@ -119,9 +118,12 @@ source.DataAsList.Add(CreateExampleEntry("Mar", 300, 3000));
 
 var pivot = new Pivot();
 pivot.PivotColumns = new[] { new PivotColumn() { PropertyName = "Month" } };
-pivot.PivotValueColumns = new[] { new PivotValueColumn() { PropertyName = "Value1" }, new PivotValueColumn() { PropertyName = "Value2" } };
+pivot.PivotValues = new[] {
+    new PivotValue() { PropertyName = "Value1" },
+    new PivotValue() { PropertyName = "Value2" }
+};
 
-pivot.ValueAggregationFunc = dict => {
+pivot.ValueCombination = dict => {
     double sum = 0;
     foreach (var entry in dict) {
         sum += double.Parse(entry.Value.ToString());
@@ -130,27 +132,80 @@ pivot.ValueAggregationFunc = dict => {
 };
 
 var dest = new MemoryDestination();
-
 source.LinkTo(pivot);
 pivot.LinkTo(dest);
 
 Network.Execute(source);
 
-private ExpandoObject CreateExampleEntry(string month, string year, object val1, object val2) {
+private ExpandoObject CreateExampleEntry(string month, object val1, object val2) {
     dynamic result = new ExpandoObject();
     result.Month = month;
-    result.Year = year;
     result.Value1 = val1;
     result.Value2 = val2;
     return result;
 }
 ```
 
-In this example, we define the `PivotColumns` as the `Month` column, and the `PivotValueColumns` as both `Value1` and `Value2`. The `ValueAggregationFunc` is used to sum the values from these two columns for each month, producing a single result for each pivoted column in the output.
+This code sums `Value1` and `Value2` for each pivoted column (month).
 
-## Pivot With Groups
+## Handling Non-Aggregated Data with ValueAggregation
 
-Pivoting with groups allows you to pivot within subsets of the data defined by one or more group columns. For instance, suppose you have sales data for different groups and months. The input might look like this:
+In some cases, you may encounter input data where multiple values exist for the same pivoted column. By default, the `Pivot` transformation only retains the last value for each pivoted column when duplicates are present. However, if you want to control how these duplicate values are handled, you can use the `ValueAggregation` property. This property provides a function that defines how to aggregate the old and new values whenever duplicates are detected.
+
+For example, consider the following input data:
+
+```csv
+Month,MonthValue
+Jan,100
+Feb,200
+Jan,1000
+Mar,300
+Mar,3000
+Jan,10000
+```
+
+Without any aggregation logic, the output will retain only the last value for each pivoted column, resulting in:
+
+```csv
+Jan,Feb,Mar
+10000,200,3000
+```
+
+If you want to aggregate the duplicate values instead of overwriting them, you can define a custom aggregation function using the `ValueAggregation` property. For instance, if you want to sum all duplicate values, you can configure the `Pivot` transformation like this:
+
+```csharp
+var pivot = new Pivot<NoGroupRow>();
+pivot.ValueAggregation = duplicateInfo => {
+    return (double)duplicateInfo.OldValue + (double)duplicateInfo.NewValue;
+};
+```
+
+This function takes a `PivotDuplicate` object as input, which contains information about the column name, the old value, and the new value. By summing the old and new values, the transformation ensures that all duplicate values contribute to the final result. With this configuration, the output for the above data will look like this:
+
+```csv
+Jan,Feb,Mar
+11100,200,3300
+```
+
+The `ValueAggregation` property is particularly useful when you need precise control over how duplicates are processed. It operates at the individual column level, handling conflicts between old and new values for the same pivoted column.
+
+In contrast, the `ValueCombination` property serves a different purpose. It is used when there are multiple value columns, and you need to combine their values into a single result. For example, if you are pivoting `Value1` and `Value2` columns for each month and want to sum their values into one combined result, you would use `ValueCombination`:
+
+```csharp
+pivot.ValueCombination = dict => {
+    double sum = 0;
+    foreach (var entry in dict) {
+        sum += double.Parse(entry.Value.ToString());
+    }
+    return sum;
+};
+```
+
+While `ValueCombination` works at the level of multiple value columns during the initial pivoting process, `ValueAggregation` focuses on resolving conflicts within a single pivoted column after duplicates are detected. Both properties can be used independently or together.
+
+## Handling Grouped Data with PivotRow
+
+When pivoting within grouped data, the `PivotRow` attribute (or the `PivotRows` property) defines the grouping columns. For example, consider sales data grouped by `Group` and `Month`:
 
 ```csv
 Group,Month,MonthValue
@@ -162,7 +217,7 @@ B,Feb,500
 B,Mar,600
 ```
 
-In this scenario, the output would pivot the `Month` column within each `Group`, resulting in the following:
+The output might look like this:
 
 ```csv
 Group,Jan,Feb,Mar
@@ -170,14 +225,15 @@ A,100,200,300
 B,400,500,600
 ```
 
-Here’s the code to achieve this:
+Here’s how to implement this:
 
 ```csharp
 public class MyRow {
+    [PivotRow]
     public string Group { get; set; }
     [PivotColumn]
     public string Month { get; set; }
-    [PivotValueColumn]
+    [PivotValue]
     public double MonthValue { get; set; }
 }
 
@@ -201,9 +257,9 @@ Network.Execute(source);
 As you can see, all properties in your data object that are not defined as either `PivotColumn` or `PivotValueColumn` are automatically used as columns for grouping.
 You can have as many group columns as you like. Depending on your desired output, you might want to remove some columns before using the Pivot.
 
-### Using Pivot with Dynamic Objects
+## Using Pivot with Dynamic Objects
 
-In some cases, the data structure may not be known at compile time, or you may want more flexibility in how the pivot is performed. In these situations, you can use `ExpandoObject` instead of a predefined class, and configure the `PivotColumns` and `PivotValueColumns` properties directly.
+In some cases, the data structure may not be known at compile time, or you may want more flexibility in how the pivot is performed. In these situations, you can use `ExpandoObject` instead of a predefined class, and configure the `PivotColumns` and `PivotValues` properties directly.
 
 Consider the following example where the input data is dynamically generated:
 
@@ -234,12 +290,12 @@ pivot.PivotColumns = new[] {
     new PivotColumn() { PropertyName = "Month" },
     new PivotColumn() { PropertyName = "Year" }
 };
-pivot.PivotValueColumns = new[] {
+pivot.PivotValues = new[] {
     new PivotValueColumn() { PropertyName = "Value1" },
     new PivotValueColumn() { PropertyName = "Value2" }
 };
 
-pivot.ValueAggregationFunc = dict => {
+pivot.ValueCombination = dict => {
     double sum = 0;
     foreach (var entry in dict) {
         sum += double.Parse(entry.Value.ToString());
@@ -252,11 +308,18 @@ source.LinkTo(pivot);
 pivot.LinkTo(dest);
 
 Network.Execute(source);
+
+private ExpandoObject CreateExampleEntry(string month, string year, object val1, object val2) {
+    dynamic result = new ExpandoObject();
+    result.Month = month;
+    result.Year = year;
+    result.Value1 = val1;
+    result.Value2 = val2;
+    return result;
+}
 ```
 
-In this case, the `PivotColumns` and `PivotValueColumns` are set directly on the `Pivot` object, and the `ValueAggregationFunc` is used to sum the values from `Value1` and `Value2`. This approach gives you the flexibility to handle data dynamically without relying on predefined attributes.
-
-### Handling Missing Columns
+## Handling Missing Columns
 
 The `KeepEmptyValues` property in the ETLBox Pivot transformation controls whether missing pivoted columns (i.e., columns that do not have any data in certain rows) are retained in the output. This is useful in cases where you want to maintain a consistent set of columns across all rows, even if some rows do not contain values for certain pivoted columns. This is especially important when writing dynamic output to a CSV file, as CSV writers require all header rows to be present in the first record. Without these columns, the structure of the CSV file could be inconsistent, leading to errors or missing data in the output file.
 
@@ -264,7 +327,7 @@ The `KeepEmptyValues` property in the ETLBox Pivot transformation controls wheth
 
 When set to `true`, the `KeepEmptyValues` property ensures that all possible pivoted columns are included in the output, even if some rows do not contain values for those columns. The missing values in these columns are filled with `null`.
 
-#### Example using `KeepEmptyValues`
+### Example using KeepEmptyValues
 
 You can enable or disable the inclusion of empty columns by setting the `KeepEmptyValues` property in your Pivot transformation:
 
@@ -305,4 +368,3 @@ If `KeepEmptyValues` is set to `false`, the pivot transformation only includes c
 | B     | 300 |     | 400 |
 
 Notice that the columns where no data exists (e.g., "Feb" for group B and "Mar" for group A) are not included in the output at all, making the dataset sparser.
-
