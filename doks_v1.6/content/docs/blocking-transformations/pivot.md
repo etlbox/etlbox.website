@@ -57,7 +57,7 @@ pivot.LinkTo(dest);
 Network.Execute(source);
 ```
 
-The `Month` property is marked with the `PivotColumn` attribute, and the `MonthValue` property is marked with the `PivotValue` attribute. Any properties not marked with these attributes (and not marked as `PivotRow`) will be ignored in the output.
+The `Month` property is marked with the `PivotColumn` attribute, and the `MonthValue` property is marked with the `PivotValue` attribute.
 
 {{< alert text="The Pivot transformation will always generate a (dynamic) ExpandoObject as the output object." >}}
 
@@ -111,6 +111,8 @@ pivot.LinkTo(dest);
 
 Network.Execute(source);
 ```
+
+{{< alert text="If no <code>PivotRow</code> is specified at all, all properties that are not marked as <code>PivotColumn</code> or <code>PivotValue</code> are automatically used as a PivotRow. If more than one <code>PivotRow</code> is specified, all other properties not marked as <code>PivotColumn</code> or <code>PivotValue</code> are ignored." >}}
 
 ### PivotColumn, PivotValue, and PivotRow
 
