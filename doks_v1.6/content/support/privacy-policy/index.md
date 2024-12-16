@@ -21,7 +21,7 @@ VAT Number: DE368638493
 
 Phone: +49 30 72621 1087
 E-Mail: mail&commat;etlbox&period;net
-Authorized representative: Andreas Lennartz
+Authorized representative / Managing Director: Andreas Lennartz
 {{< /nowrap-code >}}
 
 
