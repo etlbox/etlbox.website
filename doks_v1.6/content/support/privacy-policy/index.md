@@ -17,7 +17,7 @@ Germany
 
 Registration Number: HRB 263153 B
 Registered in: Berlin (Charlottenburg)
-VAT Number: DE333985271
+VAT Number: DE368638493
 
 Phone: +49 30 72621 1087
 E-Mail: mail&commat;etlbox&period;net
