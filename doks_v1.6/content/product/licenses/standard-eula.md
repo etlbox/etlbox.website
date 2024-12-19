@@ -5,7 +5,7 @@ lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
 draft: false
 ---
 
-If you plan to purchase the REDISTRIBUTABLE package, please see our [Royality-free EULA](/product/licenses/royality-free-eula/).
+If you plan to purchase the REDISTRIBUTABLE package, please see our [Redistribution EULA](/product/licenses/redistribution-eula/).
 
 {{< nowrap-code >}}
 (C) 2024 ETLBox Office Andreas Lennartz
