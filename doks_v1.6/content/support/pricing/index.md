@@ -25,9 +25,6 @@ If you are not a company, please contact us and let us know your country of resi
 #### Educational, Non-Profit, and Other Licenses
 If you are interested in other licensing options, please contact us and describe your specific needs.
 
-#### Are there perpetual licenses?
-To ensure you always have access to the latest version and features of ETLBox, we promote annual licenses. Under certain conditions you might be eligible for a perpetual license, please ask for a quote.
-
 #### What if I need to change a subscription?
 Not a problem. Just let us know, and we'll create a custom invoice so that you only pay the difference. You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
 
@@ -35,15 +32,12 @@ Not a problem. Just let us know, and we'll create a custom invoice so that you o
 You can optionally purchase access to the ETLBox source code.
 
 #### What does "Company-wide use" mean?
-The standard licenses (Personal Use, Company-Wide Use) are targeted at company-wide usage. Only developers from the registered company may build software or apps on top of ETLBox. If you plan to distribute ETLBox as part of your products to 3rd parties, please obtain a REDISTRIBUTABLE license.
+The standard licenses (Personal Use, Company-Wide Use) allows usage of ETLBox inside your own company only.
+Only developers from the registered company may build software or apps on top of ETLBox.
+If you plan to distribute ETLBox as part of your products to 3rd parties, please obtain a REDISTRIBUTABLE license.
 
 #### Software as a Service - which license should I choose?
 If your SaaS is deployed on servers under your control, you may choose between the Company-Wide Use and Redistributable licenses. Please ask for a quote and provide us with a short description of your setup.
 
 #### What is the REDISTRIBUTABLE license for?
-
-The REDISTRIBUTABLE license lets you use ETLBox in software products you sell or ship to customers. It provides license-check-free packages and source code access, enabling you to integrate ETLBox seamlessly into your own product for distribution without additional licensing requirements. No backlinking, mentioning, or additional licensing is required.
-
-#### What is the Royalits-Free EULA for
-The REDISTRIBUTABLE license includes a Royalty-Free EULA, allowing you to redistribute ETLBox in your products. It provides access to a license-check-free NuGet package and source code, which you can integrate into your projects without limitations or renewal requirements.
-
+The REDISTRIBUTABLE license lets you use ETLBox in software products you sell or ship to customers. It provides license-check-free packages and source code access, enabling you to integrate ETLBox into your own product for distribution.
