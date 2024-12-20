@@ -104,8 +104,8 @@
   force = true
 
 [[redirects]]
-  from = "/rf-eula"
-  to = "https://www.etlbox.net/product/licenses/royality-free-eula/"
+  from = "/redist-eula"
+  to = "https://www.etlbox.net/product/licenses/redistribution-eula/"
   status = 302
   force = true
 
