@@ -5,6 +5,21 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.5.2
+
+### Features:
+
+- Pivot: ValueCombination has been removed
+- Pivot: Added FlattenAggregationResults to flatten data if 2 or more PivotValues are used
+- Pivot: Added GrandTotal for columns and rows
+- Pivot: PivotValues now use same aggregation methods, custom functions and predicates like AggregationColumn
+- ColumnTransformation: ReorderFunc now accepts object as return value, e.g. for sorting of string or date values
+- CustomDestination: Adding WriteActionAsync
+
+### Bug Fixes:
+
+- FilterTransformation: Fixed issue for backpressure cases
+
 ## Version 3.5.1
 
 ### Features:
