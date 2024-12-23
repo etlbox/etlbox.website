@@ -4,10 +4,10 @@ description = "Simple API to code ETL jobs in .NET & C#. Extremely fast data pro
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["docs","recipes"]
 
 #[social]
-  #twitter = "getdoks"
+  #twitter = "etlbox"
 
 # Doks (@thulite/doks-core)
 [doks]
@@ -44,7 +44,7 @@ mainSections = ["docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["docs","recipes","api"] # (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = true # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
@@ -59,7 +59,7 @@ mainSections = ["docs"]
   docsVersion = "1.0"
 
   # UX
-  headerBar = false # true (default) or false
+  headerBar = true # true (default) or false
   backgroundDots = true # true (default) or false
 
   # Homepage
@@ -77,6 +77,7 @@ mainSections = ["docs"]
   docsRepo = "https://github.com/etlbox/etlbox.website"
   docsRepoBranch = "main/doks_v1.8" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
+
 
   # SCSS colors
   # backGround = "yellowgreen"
@@ -132,7 +133,7 @@ mainSections = ["docs"]
     name = "ETLBox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
-    article = ["docs", "recipes"]  # Article sections
+    article = ["docs", "recipes"] # Article sections
     newsArticle = [] # NewsArticle sections
     blogPosting = [] # BlogPosting sections
     product = [] # Product sections

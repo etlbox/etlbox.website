@@ -1,8 +1,8 @@
 {
-  "name": "doks",
-  "version": "0.0.0",
-  "description": "Doks theme",
-  "author": "Thulite",
+  "name": "etlbox",
+  "version": "1.8.0",
+  "description": "ETLBox Website",
+  "author": "ETLBoxperts GmbH",
   "license": "MIT",
   "scripts": {
     "create": "hugo new",

@@ -2,6 +2,9 @@
   publish = "public"
   functions = "functions"
 
+[functions]
+  directory = "assets/lambda"
+
 [build.environment]
   NODE_VERSION = "20.11.0"
   NPM_VERSION = "10.2.4"
@@ -45,7 +48,6 @@
     public,
     max-age=31536000'''
     Access-Control-Allow-Origin = "*"
-
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
