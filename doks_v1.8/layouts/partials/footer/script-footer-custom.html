@@ -11,3 +11,7 @@
   {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
 {{ end -}}
 */}}
+
+{{ if eq (hugo.Environment) "production" -}}
+  <script defer data-domain="etlbox.net" src="https://plausible.io/js/script.js" crossorigin="anonymous"></script>
+{{ end -}}

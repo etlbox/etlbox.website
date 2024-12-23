@@ -1,1 +1,51 @@
-// Put your custom SCSS variables here
+$blue: hsl(206, 100%, 35%); //changed
+$purple: hsl(206, 82%, 63%);  //changed
+$red: hsl(339, 82%, 63%);
+$yellow: hsl(41, 82%, 63%);
+$green: hsl(101, 82%, 63%);
+
+$primary: $blue; //changed
+$info: $blue;
+
+$font-family-sans-serif: //changed
+  "Segoe UI",
+  system-ui,
+  -apple-system,
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
+
+$font-size-base: 0.9rem; //changed
+$font-size-md: $font-size-base * 1.125;
+$font-size-xl: $font-size-base * 1.375;
+
+$headings-font-weight: 700;
+$headings-color: null;
+
+$lead-font-weight: 400;
+
+// Dark color mode variables
+$light-bg-subtle-dark: hsl(224, 14%, 16%);
+$light-border-subtle-dark: hsl(224, 10%, 23%);
+
+$body-bg-dark: hsl(224, 10%, 10%);
+$body-overlay-dark: hsl(224, 14%, 16%);
+$border-dark: hsl(224, 14%, 16%);
+$body-color-dark: hsl(224, 6%, 77%);
+$headings-color-dark: hsl(0, 0%, 100%);
+$dots-dark: darken($body-color-dark, 50%);
+$link-color-dark: hsl(224, 100%, 85%);
+$button-color-dark: $link-color-dark;
+$focus-color-dark: lighten($link-color-dark, 2.5%);
+
+$navbar-dark-color: $body-color-dark;
+$navbar-dark-hover-color: $link-color-dark;
+$navbar-dark-active-color: $link-color-dark;
+

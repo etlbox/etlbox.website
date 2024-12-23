@@ -1,0 +1,60 @@
+.alteredColor {
+    background: #f3f3f3;
+}
+
+@include color-mode(dark) {
+    .alteredColor {
+        background: $gray-700 !important;
+    }
+}
+
+
+
+.embedVideo video {
+    width: 95%;
+    padding-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+        width: 50%;
+      }
+}
+
+
+#testimonials {
+    height: 10vw;
+
+    img {
+        width: 50%;
+
+    @include media-breakpoint-up(lg) {
+        width: 30%;
+      }
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+
+.nowrap-code {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+/* When embedding video via iFrame, use this
+ https://css-tricks.com/fluid-width-video/
+.embedVideo {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.embedVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/

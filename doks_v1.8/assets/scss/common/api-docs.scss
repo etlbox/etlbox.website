@@ -1,0 +1,183 @@
+/* Api documentation styles */
+
+.api .card {
+    margin: 1rem;
+    font-size: $font-size-base;
+  }
+
+.api .card .card-header {
+    color:$body-color;
+    font-weight: 700;
+    font-size: $font-size-base*1.1;
+}
+
+@include color-mode(dark) {
+    .api .card .card-header {
+        color: $body-color-dark;
+    }
+}
+
+.api-content {
+    font-size: $font-size-base*1;
+}
+
+.api-content .inheritance .level0::before,
+.api-content .inheritance .level1::before,
+.api-content .inheritance .level2::before,
+.api-content .inheritance .level3::before,
+.api-content .inheritance .level4::before,
+.api-content .inheritance .level5::before,
+.api-content .inheritance .level5::before,
+.api-content .inheritance .level6::before,
+.api-content .inheritance .level7::before,
+.api-content .inheritance .level8::before,
+.api-content .inheritance .level9::before,
+.api-content .inheritance .level10::before,
+.api-content .inheritance .level11::before,
+.api-content .inheritance .level12::before,
+.api-content .inheritance .level13::before,
+.api-content .inheritance .level14::before,
+.api-content .inheritance .level15::before {
+    content: "↳";
+    margin-right: 5px;
+}
+
+.api-content .inheritance .level0 {
+    margin-left: 0em;
+}
+
+.api-content .inheritance .level1 {
+    margin-left: 1em;
+}
+
+.api-content .inheritance .level2 {
+    margin-left: 2em;
+}
+
+.api-content .inheritance .level3 {
+    margin-left: 3em;
+}
+
+.api-content .inheritance .level4 {
+    margin-left: 4em;
+}
+
+.api-content .inheritance .level5 {
+    margin-left: 5em;
+}
+
+.api-content .inheritance .level6 {
+    margin-left: 6em;
+}
+
+.api-content .inheritance .level7 {
+    margin-left: 7em;
+}
+
+.api-content .inheritance .level8 {
+    margin-left: 8em;
+}
+
+.api-content .inheritance .level9 {
+    margin-left: 9em;
+}
+
+.api-content .inheritance .level10 {
+    margin-left: 10em;
+}
+
+.api-content .inheritance .level11 {
+    margin-left: 11em;
+}
+
+.api-content .inheritance .level12 {
+    margin-left: 12em;
+}
+
+.api-content .inheritance .level13 {
+    margin-left: 13em;
+}
+
+.api-content .inheritance .level14 {
+    margin-left: 14em;
+}
+
+.api-content .inheritance .level15 {
+    margin-left: 15em;
+}
+
+
+.api-content .level1.summary {
+    margin: 1em 0 1em 0;
+}
+
+.api-content span.parametername,
+.api-content span.paramref,
+.api-content span.typeparamref {
+    font-style: italic;
+}
+.api-content span.languagekeyword {
+    font-weight: bold;
+}
+
+.api-content .table {
+    margin-bottom: 10px;
+}
+.api-content table p {
+    margin-bottom: 0;
+}
+.api-content table a {
+    display: inline-block;
+}
+
+.api-content h1,
+.api-content .h1,
+.api-content h2,
+.api-content .h2,
+.api-content h3,
+.api-content .h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.api-content h4,
+.api-content .h4,
+.api-content h5,
+.api-content .h5,
+.api-content h6,
+.api-content .h6 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.api-content .decalaration,
+.api-content .overrides,
+.api-content .propertyValue,
+.api-content .parameters,
+.api-content .returns
+{
+    font-weight: 600;
+    font-size:$font-size-base;
+    color: #666;
+}
+
+.api-content .divider {
+    margin: 0 5px;
+    color: #cccccc;
+}
+.api-content hr {
+    border-color: #cccccc;
+}
+
+.api-content table {
+    margin-top: 15px;
+}
+
+.api-content .inheritance h5,
+.inheritedMembers h5 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.api-content pre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
