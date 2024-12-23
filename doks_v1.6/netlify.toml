@@ -126,3 +126,9 @@
   to = "https://www.etlbox.net/support/privacy-policy/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/pricing"
+  to = "https://www.etlbox.net/support/pricing/"
+  status = 302
+  force = true
