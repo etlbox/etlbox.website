@@ -1,10 +1,31 @@
 const https = require('https');
 
-const packages = ['ETLBox', 'ETLBox.SqlServer', 'ETLBox.Xml'];
+// Liste der NuGet-Pakete
+const packages = ['ETLBox', 'ETLBox.SqlServer', 'ETLBox.Json'];
+
+// Cache-Variable und Ablaufzeit (z.B. 12 Stunden)
+let cache = { downloads: 0, timestamp: 0 };
+const CACHE_DURATION = 12 * 60 * 60 * 1000; // 12 Stunden in Millisekunden
 
 exports.handler = async () => {
   try {
+    // Überprüfe, ob der Cache noch gültig ist
+    if (Date.now() - cache.timestamp < CACHE_DURATION) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ totalDownloads: cache.downloads }),
+      };
+    }
+
+    // Lade die Daten neu, wenn der Cache abgelaufen ist
     const totalDownloads = await fetchTotalDownloads(packages);
+
+    // Cache aktualisieren
+    cache = {
+      downloads: totalDownloads,
+      timestamp: Date.now(),
+    };
+
     return {
       statusCode: 200,
       body: JSON.stringify({ totalDownloads }),
