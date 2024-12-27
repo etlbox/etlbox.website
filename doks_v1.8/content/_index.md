@@ -8,7 +8,7 @@ images: []
  Use a simple syntax to create easy or complex data flows. Works with strongly typed and dynamic objects.
 
 {{< tabs "create-new-site" >}}
-{{< tab "Dynamic Table Copy" >}}
+{{< tab "Table Copy" >}}
 
 ```C#
 string mySqlConnString =
@@ -52,7 +52,7 @@ await Network.Execute(source); //Start the flow
 ```
 
 {{< /tab >}}
-{{< tab "Merge Into Database Table" >}}
+{{< tab "Database Merge" >}}
 
 ```C#
 public class MyMergeRow : MergeableRow
