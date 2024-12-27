@@ -4,7 +4,7 @@ const https = require('https');
 const packages = ['ETLBox', 'ETLBox.SqlServer', 'ETLBox.Json'];
 
 // Cache variable and expiration time (e.g., 12 hours)
-let cache = { downloads: 0, timestamp: 0 };
+let cache = { downloads: 0, packageCount: 0, timestamp: 0 };
 const CACHE_DURATION = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 
 exports.handler = async (event) => {
@@ -22,7 +22,10 @@ exports.handler = async (event) => {
           'Access-Control-Allow-Origin': allowOrigin,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ totalDownloads: cache.downloads }),
+        body: JSON.stringify({
+          totalDownloads: cache.downloads,
+          packageCount: cache.packageCount
+        }),
       };
     }
 
@@ -32,6 +35,7 @@ exports.handler = async (event) => {
     // Update the cache
     cache = {
       downloads: totalDownloads,
+      packageCount: packages.length,
       timestamp: Date.now(),
     };
 
@@ -41,7 +45,10 @@ exports.handler = async (event) => {
         'Access-Control-Allow-Origin': allowOrigin,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ totalDownloads }),
+      body: JSON.stringify({
+        totalDownloads: totalDownloads,
+        packageCount: packages.length
+      }),
     };
   } catch (error) {
     return {
