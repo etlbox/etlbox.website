@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.mongodb"
-weight: 10288
+weight: 10274
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MongoDb.MongoDbDestination`1">
-  <h1 id="ETLBox_MongoDb_MongoDbDestination_1" data-uid="ETLBox.MongoDb.MongoDbDestination`1" class="text-break">Class MongoDbDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_MongoDb_MongoDbDestination_1" data-uid="ETLBox.MongoDb.MongoDbDestination`1" class="text-break">Class MongoDbDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for MongoDb.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

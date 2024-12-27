@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.redis.redisdestination`1"
-weight: 10329
+weight: 10313
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Redis.RedisDestination`1.RedisSetParameter">
-  <h1 id="ETLBox_Redis_RedisDestination_1_RedisSetParameter" data-uid="ETLBox.Redis.RedisDestination`1.RedisSetParameter" class="text-break">Class RedisDestination&lt;TInput&gt;.RedisSetParameter
-</h1>
+  <h1 id="ETLBox_Redis_RedisDestination_1_RedisSetParameter" data-uid="ETLBox.Redis.RedisDestination`1.RedisSetParameter" class="text-break">Class RedisDestination&lt;TInput&gt;.RedisSetParameter</h1>
   <div class="markdown level0 summary"><p>Additional redis parameter that are used when setting the key/value pairs in redis.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

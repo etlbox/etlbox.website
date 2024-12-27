@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json.jsonproperty2jsonpath"
-weight: 10270
+weight: 10257
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath">
-  <h1 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath" class="text-break">Class JsonProperty2JsonPath.MultipleResultsInPath
-</h1>
+  <h1 id="ETLBox_Json_JsonProperty2JsonPath_MultipleResultsInPath" data-uid="ETLBox.Json.JsonProperty2JsonPath.MultipleResultsInPath" class="text-break">Class JsonProperty2JsonPath.MultipleResultsInPath</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

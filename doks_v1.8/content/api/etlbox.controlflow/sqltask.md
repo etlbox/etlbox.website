@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10082
+weight: 10075
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.SqlTask">
-  <h1 id="ETLBox_ControlFlow_SqlTask" data-uid="ETLBox.ControlFlow.SqlTask" class="text-break">Class SqlTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_SqlTask" data-uid="ETLBox.ControlFlow.SqlTask" class="text-break">Class SqlTask</h1>
   <div class="markdown level0 summary"><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data,
 ExecuteScalar for statements that return only one row and one column or
 ExecuteReader for SQL that returns multiple rows or columns</p>

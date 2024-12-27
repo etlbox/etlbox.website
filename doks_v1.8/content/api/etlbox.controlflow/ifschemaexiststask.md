@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10072
+weight: 10065
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.IfSchemaExistsTask">
-  <h1 id="ETLBox_ControlFlow_IfSchemaExistsTask" data-uid="ETLBox.ControlFlow.IfSchemaExistsTask" class="text-break">Class IfSchemaExistsTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_IfSchemaExistsTask" data-uid="ETLBox.ControlFlow.IfSchemaExistsTask" class="text-break">Class IfSchemaExistsTask</h1>
   <div class="markdown level0 summary"><p>Checks if a schema exists. In MySql or MariaDb, use the IfDatabaseExistsTask instead.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

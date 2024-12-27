@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10220
+weight: 10212
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.GenericTypeInfo">
-  <h1 id="ETLBox_GenericTypeInfo" data-uid="ETLBox.GenericTypeInfo" class="text-break">Class GenericTypeInfo
-</h1>
+  <h1 id="ETLBox_GenericTypeInfo" data-uid="ETLBox.GenericTypeInfo" class="text-break">Class GenericTypeInfo</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

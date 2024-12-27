@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10323
+weight: 10308
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.PivotRow">
-  <h1 id="ETLBox_PivotRow" data-uid="ETLBox.PivotRow" class="text-break">Class PivotRow
-</h1>
+  <h1 id="ETLBox_PivotRow" data-uid="ETLBox.PivotRow" class="text-break">Class PivotRow</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify the colunns used for pivoting data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10353
+weight: 10337
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ValidateColumn">
-  <h1 id="ETLBox_ValidateColumn" data-uid="ETLBox.ValidateColumn" class="text-break">Class ValidateColumn
-</h1>
+  <h1 id="ETLBox_ValidateColumn" data-uid="ETLBox.ValidateColumn" class="text-break">Class ValidateColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines a default or custom check that is applied to a property.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

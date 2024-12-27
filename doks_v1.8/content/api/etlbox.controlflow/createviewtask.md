@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10054
+weight: 10047
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateViewTask">
-  <h1 id="ETLBox_ControlFlow_CreateViewTask" data-uid="ETLBox.ControlFlow.CreateViewTask" class="text-break">Class CreateViewTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateViewTask" data-uid="ETLBox.ControlFlow.CreateViewTask" class="text-break">Class CreateViewTask</h1>
   <div class="markdown level0 summary"><p>Creates or alters a view.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

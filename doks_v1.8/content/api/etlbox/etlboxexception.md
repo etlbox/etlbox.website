@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10213
+weight: 10205
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ETLBoxException">
-  <h1 id="ETLBox_ETLBoxException" data-uid="ETLBox.ETLBoxException" class="text-break">Class ETLBoxException
-</h1>
+  <h1 id="ETLBox_ETLBoxException" data-uid="ETLBox.ETLBoxException" class="text-break">Class ETLBoxException</h1>
   <div class="markdown level0 summary"><p>The generic ETLBox Exception. See inner exception for more details.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

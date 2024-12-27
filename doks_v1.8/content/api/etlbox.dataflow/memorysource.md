@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10169
+weight: 10160
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MemorySource">
-  <h1 id="ETLBox_DataFlow_MemorySource" data-uid="ETLBox.DataFlow.MemorySource" class="text-break">Class MemorySource
-</h1>
+  <h1 id="ETLBox_DataFlow_MemorySource" data-uid="ETLBox.DataFlow.MemorySource" class="text-break">Class MemorySource</h1>
   <div class="markdown level0 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
 By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
 </div>
@@ -304,15 +303,13 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_MemorySource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">MemorySource&lt;MyRow&gt; source = new MemorySource&lt;MyRow&gt;();
-                       source.Data = new List&lt;MyRow&gt;()
-                       {
-                           new MyRow() { Id = 1, Value = "Test1" },
-                           new MyRow() { Id = 2, Value = "Test2" },
-                           new MyRow() { Id = 3, Value = "Test3" }
-                       };</code>
-</pre>
+  <pre><code class="lang-csharp">MemorySource&lt;MyRow&gt; source = new MemorySource&lt;MyRow&gt;();
+source.Data = new List&lt;MyRow&gt;()
+{
+    new MyRow() { Id = 1, Value = "Test1" },
+    new MyRow() { Id = 2, Value = "Test2" },
+    new MyRow() { Id = 3, Value = "Test3" }
+};</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_MemorySource__ctor_" data-uid="ETLBox.DataFlow.MemorySource.#ctor*"></a>

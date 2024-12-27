@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10224
+weight: 10216
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.ConvertibleTestDefinition">
-  <h1 id="ETLBox_Helper_ConvertibleTestDefinition" data-uid="ETLBox.Helper.ConvertibleTestDefinition" class="text-break">Class ConvertibleTestDefinition
-</h1>
+  <h1 id="ETLBox_Helper_ConvertibleTestDefinition" data-uid="ETLBox.Helper.ConvertibleTestDefinition" class="text-break">Class ConvertibleTestDefinition</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

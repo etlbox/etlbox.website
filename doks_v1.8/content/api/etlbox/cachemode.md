@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10042
+weight: 10035
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.CacheMode">
-  <h1 id="ETLBox_CacheMode" data-uid="ETLBox.CacheMode" class="text-break">Enum CacheMode
-</h1>
+  <h1 id="ETLBox_CacheMode" data-uid="ETLBox.CacheMode" class="text-break">Enum CacheMode</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_CacheMode_Full">Full</td>
         <td></td>
@@ -46,6 +45,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

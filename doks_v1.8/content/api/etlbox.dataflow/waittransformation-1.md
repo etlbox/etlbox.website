@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10202
+weight: 10194
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.WaitTransformation`1">
-  <h1 id="ETLBox_DataFlow_WaitTransformation_1" data-uid="ETLBox.DataFlow.WaitTransformation`1" class="text-break">Class WaitTransformation&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_WaitTransformation_1" data-uid="ETLBox.DataFlow.WaitTransformation`1" class="text-break">Class WaitTransformation&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>The WaitTransformation will wait for other components in the data flow before it continues to process data.
 Alternatively, the WaitTransformation can wait for one or more TaskCompletionSources before data can pass.</p>
 </div>

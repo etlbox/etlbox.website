@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10174
+weight: 10165
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Multicast`1">
-  <h1 id="ETLBox_DataFlow_Multicast_1" data-uid="ETLBox.DataFlow.Multicast`1" class="text-break">Class Multicast&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_Multicast_1" data-uid="ETLBox.DataFlow.Multicast`1" class="text-break">Class Multicast&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A multicast broadcast data from the input into two or more outputs.
 Every linked component will receive a copy of the rows that the Multicast receives.
 There is no limit how many target the Multicast can be linked to.</p>

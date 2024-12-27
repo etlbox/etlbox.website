@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10052
+weight: 10045
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateSchemaTask">
-  <h1 id="ETLBox_ControlFlow_CreateSchemaTask" data-uid="ETLBox.ControlFlow.CreateSchemaTask" class="text-break">Class CreateSchemaTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateSchemaTask" data-uid="ETLBox.ControlFlow.CreateSchemaTask" class="text-break">Class CreateSchemaTask</h1>
   <div class="markdown level0 summary"><p>Creates a schema. For MySql or MariaDb, use the CreateDatabaseTask instead.
 The Create method will throw an exception if the schema already exists.
 CreateIfNotExists will only create a schema if it doesn't exists.</p>

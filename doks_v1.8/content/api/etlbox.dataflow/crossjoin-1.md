@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10124
+weight: 10115
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CrossJoin`1">
-  <h1 id="ETLBox_DataFlow_CrossJoin_1" data-uid="ETLBox.DataFlow.CrossJoin`1" class="text-break">Class CrossJoin&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_CrossJoin_1" data-uid="ETLBox.DataFlow.CrossJoin`1" class="text-break">Class CrossJoin&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
 The input for the first table will be loaded into memory before join starts.
 Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
@@ -307,17 +306,15 @@ The InMemory target should always be the target of the smaller amount of data to
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_CrossJoin_1_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">CrossJoin&lt;InputType1, InputType2, OutputType&gt; crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType&gt;();
-                                                                                                                                                                                                                                            crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) =&gt; {
-                                                                                                                                                                                                                                                return new OutputType() {
-                                                                                                                                                                                                                                                    Result = leftRow.Value1 + rightRow.Value2
-                                                                                                                                                                                                                                                };
-                                                                                                                                                                                                                                            });
-                                                                                                                                                                                                                                            source1.LinkTo(join.InMemoryTarget);
-                                                                                                                                                                                                                                            source2.LinkTo(join.PassingTarget);
-                                                                                                                                                                                                                                            join.LinkTo(dest);</code>
-</pre>
+  <pre><code class="lang-csharp">CrossJoin&lt;InputType1, InputType2, OutputType&gt; crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType&gt;();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) =&gt; {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_CrossJoin_1__ctor_" data-uid="ETLBox.DataFlow.CrossJoin`1.#ctor*"></a>

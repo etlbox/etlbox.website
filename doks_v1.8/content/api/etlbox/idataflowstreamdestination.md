@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10254
+weight: 10242
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowStreamDestination">
-  <h1 id="ETLBox_IDataFlowStreamDestination" data-uid="ETLBox.IDataFlowStreamDestination" class="text-break">Interface IDataFlowStreamDestination
-</h1>
+  <h1 id="ETLBox_IDataFlowStreamDestination" data-uid="ETLBox.IDataFlowStreamDestination" class="text-break">Interface IDataFlowStreamDestination</h1>
   <div class="markdown level0 summary"><p>Implemented by data flow destinations that allow writing data in a stream</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10273
+weight: 10260
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.KeyColumn">
-  <h1 id="ETLBox_KeyColumn" data-uid="ETLBox.KeyColumn" class="text-break">Class KeyColumn
-</h1>
+  <h1 id="ETLBox_KeyColumn" data-uid="ETLBox.KeyColumn" class="text-break">Class KeyColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used as as Key when the object is stored in a
 Key/Value database (e.g. Couchbase or Redis). The key column must either be of type string
 or implement the ToString() method.</p>

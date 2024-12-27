@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10309
+weight: 10294
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.SnowflakeOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_SnowflakeOdbcConnectionManager" data-uid="ETLBox.Odbc.SnowflakeOdbcConnectionManager" class="text-break">Class SnowflakeOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_SnowflakeOdbcConnectionManager" data-uid="ETLBox.Odbc.SnowflakeOdbcConnectionManager" class="text-break">Class SnowflakeOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Snowflake Connection manager for an ODBC connection.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>

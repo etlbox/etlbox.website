@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10077
+weight: 10070
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ProcedureParameter">
-  <h1 id="ETLBox_ControlFlow_ProcedureParameter" data-uid="ETLBox.ControlFlow.ProcedureParameter" class="text-break">Class ProcedureParameter
-</h1>
+  <h1 id="ETLBox_ControlFlow_ProcedureParameter" data-uid="ETLBox.ControlFlow.ProcedureParameter" class="text-break">Class ProcedureParameter</h1>
   <div class="markdown level0 summary"><p>A parameter used in a procedure</p>
 </div>
   <div class="markdown level0 conceptual"></div>

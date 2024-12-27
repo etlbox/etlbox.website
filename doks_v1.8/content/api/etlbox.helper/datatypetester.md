@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10227
+weight: 10219
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DataTypeTester">
-  <h1 id="ETLBox_Helper_DataTypeTester" data-uid="ETLBox.Helper.DataTypeTester" class="text-break">Class DataTypeTester
-</h1>
+  <h1 id="ETLBox_Helper_DataTypeTester" data-uid="ETLBox.Helper.DataTypeTester" class="text-break">Class DataTypeTester</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

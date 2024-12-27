@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10092
+weight: 10085
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Csv.CsvDestination`1">
-  <h1 id="ETLBox_Csv_CsvDestination_1" data-uid="ETLBox.Csv.CsvDestination`1" class="text-break">Class CsvDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Csv_CsvDestination_1" data-uid="ETLBox.Csv.CsvDestination`1" class="text-break">Class CsvDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

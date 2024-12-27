@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10051
+weight: 10044
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateProcedureTask">
-  <h1 id="ETLBox_ControlFlow_CreateProcedureTask" data-uid="ETLBox.ControlFlow.CreateProcedureTask" class="text-break">Class CreateProcedureTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateProcedureTask" data-uid="ETLBox.ControlFlow.CreateProcedureTask" class="text-break">Class CreateProcedureTask</h1>
   <div class="markdown level0 summary"><p>Creates or updates a procedure.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

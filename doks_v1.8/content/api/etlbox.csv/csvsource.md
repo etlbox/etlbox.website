@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10095
+weight: 10088
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Csv.CsvSource">
-  <h1 id="ETLBox_Csv_CsvSource" data-uid="ETLBox.Csv.CsvSource" class="text-break">Class CsvSource
-</h1>
+  <h1 id="ETLBox_Csv_CsvSource" data-uid="ETLBox.Csv.CsvSource" class="text-break">Class CsvSource</h1>
   <div class="markdown level0 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
 Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
 </div>
@@ -379,10 +378,8 @@ Data is read a as string from the source and dynamically converted into the corr
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Csv_CsvSource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">CsvSource&lt;CSVData&gt; source = new CsvSource&lt;CSVData&gt;("Demo.csv");
-                                                                                  source.Configuration.Delimiter = ";";</code>
-</pre>
+  <pre><code class="lang-csharp">CsvSource&lt;CSVData&gt; source = new CsvSource&lt;CSVData&gt;("Demo.csv");
+source.Configuration.Delimiter = ";";</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Csv_CsvSource__ctor_" data-uid="ETLBox.Csv.CsvSource.#ctor*"></a>

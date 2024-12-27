@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10043
+weight: 10036
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ChangeAction">
-  <h1 id="ETLBox_ChangeAction" data-uid="ETLBox.ChangeAction" class="text-break">Enum ChangeAction
-</h1>
+  <h1 id="ETLBox_ChangeAction" data-uid="ETLBox.ChangeAction" class="text-break">Enum ChangeAction</h1>
   <div class="markdown level0 summary"><p>The result of a merge operation - after the merge this reflects the operations applied to the record.
 Exists: A record with the same id was found, but both records were equal
 Insert: A record with the id didn't exist, so this records was inserted
@@ -43,7 +42,7 @@ NotFound: A record from the source was flagged as a deletion, but was not found 
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_ChangeAction_Delete">Delete</td>
         <td></td>
@@ -69,6 +68,6 @@ NotFound: A record from the source was flagged as a deletion, but was not found 
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

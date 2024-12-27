@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10277
+weight: 10264
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LoadProcessTask">
-  <h1 id="ETLBox_Logging_LoadProcessTask" data-uid="ETLBox.Logging.LoadProcessTask" class="text-break">Class LoadProcessTask
-</h1>
+  <h1 id="ETLBox_Logging_LoadProcessTask" data-uid="ETLBox.Logging.LoadProcessTask" class="text-break">Class LoadProcessTask</h1>
   <div class="markdown level0 summary"><p>Let you manage load process logging.
 You can start, stop and abort load processes with this task.
 It also allows you to create a the required table in your database.</p>

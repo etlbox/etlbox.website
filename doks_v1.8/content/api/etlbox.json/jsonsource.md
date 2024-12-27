@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10272
+weight: 10259
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonSource">
-  <h1 id="ETLBox_Json_JsonSource" data-uid="ETLBox.Json.JsonSource" class="text-break">Class JsonSource
-</h1>
+  <h1 id="ETLBox_Json_JsonSource" data-uid="ETLBox.Json.JsonSource" class="text-break">Class JsonSource</h1>
   <div class="markdown level0 summary"><p>Reads data from a json source. This can be any http resource or a file.
 By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>
@@ -373,9 +372,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Json_JsonSource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">JsonSource&lt;POCO&gt; source = new JsonSource&lt;POCO&gt;("https://jsonplaceholder.typicode.com/todos");</code>
-</pre>
+  <pre><code class="lang-csharp">JsonSource&lt;POCO&gt; source = new JsonSource&lt;POCO&gt;("https://jsonplaceholder.typicode.com/todos");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Json_JsonSource__ctor_" data-uid="ETLBox.Json.JsonSource.#ctor*"></a>

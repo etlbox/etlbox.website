@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10132
+weight: 10123
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomDestination`1">
-  <h1 id="ETLBox_DataFlow_CustomDestination_1" data-uid="ETLBox.DataFlow.CustomDestination`1" class="text-break">Class CustomDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomDestination_1" data-uid="ETLBox.DataFlow.CustomDestination`1" class="text-break">Class CustomDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -338,6 +337,34 @@ dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_CustomDestination_1_WriteActionAsync_" data-uid="ETLBox.DataFlow.CustomDestination`1.WriteActionAsync*"></a>
+  <h4 id="ETLBox_DataFlow_CustomDestination_1_WriteActionAsync" data-uid="ETLBox.DataFlow.CustomDestination`1.WriteActionAsync">WriteActionAsync</h4>
+  <div class="markdown level1 summary"><p>Async implementation of the <a class="xref" href="/api/etlbox.dataflow/customdestination-1#ETLBox_DataFlow_CustomDestination_1_WriteAction">WriteAction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, int, Task> WriteActionAsync { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

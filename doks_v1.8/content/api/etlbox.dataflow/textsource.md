@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10197
+weight: 10189
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.TextSource">
-  <h1 id="ETLBox_DataFlow_TextSource" data-uid="ETLBox.DataFlow.TextSource" class="text-break">Class TextSource
-</h1>
+  <h1 id="ETLBox_DataFlow_TextSource" data-uid="ETLBox.DataFlow.TextSource" class="text-break">Class TextSource</h1>
   <div class="markdown level0 summary"><p>Reads data from a text file.
 Each line is read as a string and converted into an object by the <a class="xref" href="/api/etlbox.dataflow/textsource-1#ETLBox_DataFlow_TextSource_1_ParseLineFunc">ParseLineFunc</a>.
 A line is defined as a sequence of characters followed by a line feed(&quot;\n&quot;), a carriage return (&quot;\r&quot;),

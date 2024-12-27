@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10210
+weight: 10202
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DeleteColumn">
-  <h1 id="ETLBox_DeleteColumn" data-uid="ETLBox.DeleteColumn" class="text-break">Class DeleteColumn
-</h1>
+  <h1 id="ETLBox_DeleteColumn" data-uid="ETLBox.DeleteColumn" class="text-break">Class DeleteColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used to identify if the record is supposed to be deleted.
 If this attribute is set and the given value matches the column of the assigned property,
 the DbMerge will know that if the records matches (identifed by the IdColumn attribute)

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.hana"
-weight: 10340
+weight: 10324
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Sap.Hana.HanaConnectionString">
-  <h1 id="ETLBox_Sap_Hana_HanaConnectionString" data-uid="ETLBox.Sap.Hana.HanaConnectionString" class="text-break">Class HanaConnectionString
-</h1>
+  <h1 id="ETLBox_Sap_Hana_HanaConnectionString" data-uid="ETLBox.Sap.Hana.HanaConnectionString" class="text-break">Class HanaConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a SAP HANA database in an object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10223
+weight: 10215
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.ConversionContext">
-  <h1 id="ETLBox_Helper_ConversionContext" data-uid="ETLBox.Helper.ConversionContext" class="text-break">Class ConversionContext
-</h1>
+  <h1 id="ETLBox_Helper_ConversionContext" data-uid="ETLBox.Helper.ConversionContext" class="text-break">Class ConversionContext</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

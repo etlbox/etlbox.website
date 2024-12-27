@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10140
+weight: 10131
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1">
-  <h1 id="ETLBox_DataFlow_DataFlowJoinTarget_1" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1" class="text-break">Class DataFlowJoinTarget&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DataFlowJoinTarget_1" data-uid="ETLBox.DataFlow.DataFlowJoinTarget`1" class="text-break">Class DataFlowJoinTarget&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A target block base implementation</p>
 </div>
   <div class="markdown level0 conceptual"></div>

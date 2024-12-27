@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10073
+weight: 10066
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.IfTableOrViewExistsTask">
-  <h1 id="ETLBox_ControlFlow_IfTableOrViewExistsTask" data-uid="ETLBox.ControlFlow.IfTableOrViewExistsTask" class="text-break">Class IfTableOrViewExistsTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_IfTableOrViewExistsTask" data-uid="ETLBox.ControlFlow.IfTableOrViewExistsTask" class="text-break">Class IfTableOrViewExistsTask</h1>
   <div class="markdown level0 summary"><p>Checks if a table exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

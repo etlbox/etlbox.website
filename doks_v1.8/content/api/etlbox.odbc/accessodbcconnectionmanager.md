@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10300
+weight: 10285
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_AccessOdbcConnectionManager" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager" class="text-break">Class AccessOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_AccessOdbcConnectionManager" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager" class="text-break">Class AccessOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager for an ODBC connection to Access databases.
 This connection manager also is based on ADO.NET.
 ODBC by default does not support a Bulk Insert - and Access does not support the insert into (...) values (...),(...),(...)

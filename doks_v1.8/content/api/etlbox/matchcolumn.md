@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10286
+weight: 10272
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MatchColumn">
-  <h1 id="ETLBox_MatchColumn" data-uid="ETLBox.MatchColumn" class="text-break">Class MatchColumn
-</h1>
+  <h1 id="ETLBox_MatchColumn" data-uid="ETLBox.MatchColumn" class="text-break">Class MatchColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines that this property is used to match with the property of the object
 used in the Source for a Lookup identified by the given lookupSourcePropertyName.</p>
 </div>

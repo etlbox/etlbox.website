@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10045
+weight: 10038
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ConnectionType">
-  <h1 id="ETLBox_ConnectionType" data-uid="ETLBox.ConnectionType" class="text-break">Enum ConnectionType
-</h1>
+  <h1 id="ETLBox_ConnectionType" data-uid="ETLBox.ConnectionType" class="text-break">Enum ConnectionType</h1>
   <div class="markdown level0 summary"><p>All databases types that ETLBox supports with Connection Managers</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -37,7 +36,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_ConnectionType_Access">Access</td>
         <td></td>
@@ -95,6 +94,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

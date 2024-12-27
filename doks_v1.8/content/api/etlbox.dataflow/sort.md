@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10192
+weight: 10184
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Sort">
-  <h1 id="ETLBox_DataFlow_Sort" data-uid="ETLBox.DataFlow.Sort" class="text-break">Class Sort
-</h1>
+  <h1 id="ETLBox_DataFlow_Sort" data-uid="ETLBox.DataFlow.Sort" class="text-break">Class Sort</h1>
   <div class="markdown level0 summary"><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
@@ -275,12 +274,10 @@ This is a blocking transformation - no output will be produced until all input d
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_Sort_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">Comparison&lt;MyDataRow&gt; comp = new Comparison&lt;MyDataRow&gt;(
-                                                                                                         (x, y) =&gt; y.Value2 - x.Value2
-                                                                                                     );
-                                                                                                     Sort&lt;MyDataRow&gt; block = new Sort&lt;MyDataRow&gt;(comp);</code>
-</pre>
+  <pre><code class="lang-csharp">Comparison&lt;MyDataRow&gt; comp = new Comparison&lt;MyDataRow&gt;(
+    (x, y) =&gt; y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow&gt; block = new Sort&lt;MyDataRow&gt;(comp);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Sort__ctor_" data-uid="ETLBox.DataFlow.Sort.#ctor*"></a>

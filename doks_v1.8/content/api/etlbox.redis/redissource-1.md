@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.redis"
-weight: 10331
+weight: 10315
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Redis.RedisSource`1">
-  <h1 id="ETLBox_Redis_RedisSource_1" data-uid="ETLBox.Redis.RedisSource`1" class="text-break">Class RedisSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Redis_RedisSource_1" data-uid="ETLBox.Redis.RedisSource`1" class="text-break">Class RedisSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Redis. Redis is a key/value store.<br>
 You can define a different scan pattern to describe which keys should be retrieved. (Default pattern
 is * which retrieves all key).

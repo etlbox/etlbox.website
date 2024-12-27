@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10096
+weight: 10089
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Aggregation`2">
-  <h1 id="ETLBox_DataFlow_Aggregation_2" data-uid="ETLBox.DataFlow.Aggregation`2" class="text-break">Class Aggregation&lt;TInput, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_Aggregation_2" data-uid="ETLBox.DataFlow.Aggregation`2" class="text-break">Class Aggregation&lt;TInput, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Aggregates data by the given aggregation methods.
 The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
 When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10123
+weight: 10114
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ConversionError">
-  <h1 id="ETLBox_DataFlow_ConversionError" data-uid="ETLBox.DataFlow.ConversionError" class="text-break">Class ConversionError
-</h1>
+  <h1 id="ETLBox_DataFlow_ConversionError" data-uid="ETLBox.DataFlow.ConversionError" class="text-break">Class ConversionError</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

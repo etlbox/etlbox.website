@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10305
+weight: 10290
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.OdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_OdbcConnectionManager" data-uid="ETLBox.Odbc.OdbcConnectionManager" class="text-break">Class OdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_OdbcConnectionManager" data-uid="ETLBox.Odbc.OdbcConnectionManager" class="text-break">Class OdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Generic OdbcConnectionManager - try this connection manager if no particular connection manager
 for your database exists. E.g. for MySql use the MySqlOdbcConnectionManager.
 Make sure to set the <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_ConnectionType">ConnectionType</a> to fit with your database when creating an instance.

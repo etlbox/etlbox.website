@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10182
+weight: 10174
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowDuplication">
-  <h1 id="ETLBox_DataFlow_RowDuplication" data-uid="ETLBox.DataFlow.RowDuplication" class="text-break">Class RowDuplication
-</h1>
+  <h1 id="ETLBox_DataFlow_RowDuplication" data-uid="ETLBox.DataFlow.RowDuplication" class="text-break">Class RowDuplication</h1>
   <div class="markdown level0 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
 property if you want to duplicate only particular rows.</p>
 </div>
@@ -275,12 +274,10 @@ property if you want to duplicate only particular rows.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_RowDuplication_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">var source = new DbSource&lt;InputType&gt;("SourceTable");
-                       RowDuplication&lt;InputType&gt; duplication = new RowDuplication&lt;InputType&gt;(3);
-                       var dest = new CsvDestination&lt;InputType&gt;("output.csv");
-                       source.LinkTo(duplication).LinkTo(dest);</code>
-</pre>
+  <pre><code class="lang-csharp">var source = new DbSource&lt;InputType&gt;("SourceTable");
+RowDuplication&lt;InputType&gt; duplication = new RowDuplication&lt;InputType&gt;(3);
+var dest = new CsvDestination&lt;InputType&gt;("output.csv");
+source.LinkTo(duplication).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_RowDuplication__ctor_" data-uid="ETLBox.DataFlow.RowDuplication.#ctor*"></a>

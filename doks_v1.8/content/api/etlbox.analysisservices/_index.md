@@ -2,5 +2,5 @@
 title : "ETLBox.AnalysisServices"
 description: "All classes of the namespace ETLBox.AnalysisServices"
 draft: false
-weight: 600
+weight: 200
 ---

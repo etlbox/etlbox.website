@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10134
+weight: 10125
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomSource`1">
-  <h1 id="ETLBox_DataFlow_CustomSource_1" data-uid="ETLBox.DataFlow.CustomSource`1" class="text-break">Class CustomSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomSource_1" data-uid="ETLBox.DataFlow.CustomSource`1" class="text-break">Class CustomSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Define your own source block. This block generates data from a your own custom written functions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

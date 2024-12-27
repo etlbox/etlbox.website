@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10355
+weight: 10339
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ValueGenerationColumn">
-  <h1 id="ETLBox_ValueGenerationColumn" data-uid="ETLBox.ValueGenerationColumn" class="text-break">Class ValueGenerationColumn
-</h1>
+  <h1 id="ETLBox_ValueGenerationColumn" data-uid="ETLBox.ValueGenerationColumn" class="text-break">Class ValueGenerationColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column for the property generates a value (either on inserting, on updating or both).</p>
 </div>
   <div class="markdown level0 conceptual"></div>

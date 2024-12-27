@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10190
+weight: 10182
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowValidation">
-  <h1 id="ETLBox_DataFlow_RowValidation" data-uid="ETLBox.DataFlow.RowValidation" class="text-break">Class RowValidation
-</h1>
+  <h1 id="ETLBox_DataFlow_RowValidation" data-uid="ETLBox.DataFlow.RowValidation" class="text-break">Class RowValidation</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

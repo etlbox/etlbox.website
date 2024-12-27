@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10266
+weight: 10253
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonDestination`1">
-  <h1 id="ETLBox_Json_JsonDestination_1" data-uid="ETLBox.Json.JsonDestination`1" class="text-break">Class JsonDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Json_JsonDestination_1" data-uid="ETLBox.Json.JsonDestination`1" class="text-break">Class JsonDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A Json destination defines a json file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

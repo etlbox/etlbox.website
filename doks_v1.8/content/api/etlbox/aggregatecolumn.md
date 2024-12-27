@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10007
+weight: 10000
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AggregateColumn">
-  <h1 id="ETLBox_AggregateColumn" data-uid="ETLBox.AggregateColumn" class="text-break">Class AggregateColumn
-</h1>
+  <h1 id="ETLBox_AggregateColumn" data-uid="ETLBox.AggregateColumn" class="text-break">Class AggregateColumn</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify the aggregation property for aggregations.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

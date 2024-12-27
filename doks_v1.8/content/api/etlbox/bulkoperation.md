@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10041
+weight: 10034
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.BulkOperation">
-  <h1 id="ETLBox_BulkOperation" data-uid="ETLBox.BulkOperation" class="text-break">Enum BulkOperation
-</h1>
+  <h1 id="ETLBox_BulkOperation" data-uid="ETLBox.BulkOperation" class="text-break">Enum BulkOperation</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_BulkOperation_Delete">Delete</td>
         <td></td>
@@ -50,6 +49,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

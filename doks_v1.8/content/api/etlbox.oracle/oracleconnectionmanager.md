@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.oracle"
-weight: 10315
+weight: 10300
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Oracle.OracleConnectionManager">
-  <h1 id="ETLBox_Oracle_OracleConnectionManager" data-uid="ETLBox.Oracle.OracleConnectionManager" class="text-break">Class OracleConnectionManager
-</h1>
+  <h1 id="ETLBox_Oracle_OracleConnectionManager" data-uid="ETLBox.Oracle.OracleConnectionManager" class="text-break">Class OracleConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of an ETLBox connection to an Oracle database.
 Usess the official Oracle ADO.NET driver for .NET core.</p>
 </div>

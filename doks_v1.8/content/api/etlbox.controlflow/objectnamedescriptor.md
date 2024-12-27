@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10074
+weight: 10067
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor">
-  <h1 id="ETLBox_ControlFlow_ObjectNameDescriptor" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor" class="text-break">Class ObjectNameDescriptor
-</h1>
+  <h1 id="ETLBox_ControlFlow_ObjectNameDescriptor" data-uid="ETLBox.ControlFlow.ObjectNameDescriptor" class="text-break">Class ObjectNameDescriptor</h1>
   <div class="markdown level0 summary"><p>Applies database specific formatting to an object names.
 E.g. schema.ViewName would create [schema].[ViewName] for SqlServer and &quot;schema&quot;.&quot;ViewName&quot; for Postgres</p>
 </div>

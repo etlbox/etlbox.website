@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10070
+weight: 10063
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.IfIndexExistsTask">
-  <h1 id="ETLBox_ControlFlow_IfIndexExistsTask" data-uid="ETLBox.ControlFlow.IfIndexExistsTask" class="text-break">Class IfIndexExistsTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_IfIndexExistsTask" data-uid="ETLBox.ControlFlow.IfIndexExistsTask" class="text-break">Class IfIndexExistsTask</h1>
   <div class="markdown level0 summary"><p>Checks if an index exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

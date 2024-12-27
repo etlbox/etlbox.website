@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10218
+weight: 10210
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Excel.ExcelSource`1">
-  <h1 id="ETLBox_Excel_ExcelSource_1" data-uid="ETLBox.Excel.ExcelSource`1" class="text-break">Class ExcelSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Excel_ExcelSource_1" data-uid="ETLBox.Excel.ExcelSource`1" class="text-break">Class ExcelSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Reads data from a excel source. While reading the data from the file, data is also asnychronously posted into the targets.
 You can define a sheet name and a range - only the data in the specified sheet and range is read. Otherwise, all data
 in all sheets will be processed.</p>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10350
+weight: 10334
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SqlServer.SqlConnectionManager">
-  <h1 id="ETLBox_SqlServer_SqlConnectionManager" data-uid="ETLBox.SqlServer.SqlConnectionManager" class="text-break">Class SqlConnectionManager
-</h1>
+  <h1 id="ETLBox_SqlServer_SqlConnectionManager" data-uid="ETLBox.SqlServer.SqlConnectionManager" class="text-break">Class SqlConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a classic ADO.NET connection to a (Microsoft) Sql Server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

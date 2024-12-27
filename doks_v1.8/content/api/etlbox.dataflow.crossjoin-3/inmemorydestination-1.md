@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.crossjoin`3"
-weight: 10126
+weight: 10117
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CrossJoin`3.InMemoryDestination`1">
-  <h1 id="ETLBox_DataFlow_CrossJoin_3_InMemoryDestination_1" data-uid="ETLBox.DataFlow.CrossJoin`3.InMemoryDestination`1" class="text-break">Class CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_CrossJoin_3_InMemoryDestination_1" data-uid="ETLBox.DataFlow.CrossJoin`3.InMemoryDestination`1" class="text-break">Class CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

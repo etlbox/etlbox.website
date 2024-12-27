@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10159
+weight: 10150
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ICachedData`1">
-  <h1 id="ETLBox_DataFlow_ICachedData_1" data-uid="ETLBox.DataFlow.ICachedData`1" class="text-break">Interface ICachedData&lt;TCache&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_ICachedData_1" data-uid="ETLBox.DataFlow.ICachedData`1" class="text-break">Interface ICachedData&lt;TCache&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>

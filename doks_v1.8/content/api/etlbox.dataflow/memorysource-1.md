@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10168
+weight: 10159
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MemorySource`1">
-  <h1 id="ETLBox_DataFlow_MemorySource_1" data-uid="ETLBox.DataFlow.MemorySource`1" class="text-break">Class MemorySource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_MemorySource_1" data-uid="ETLBox.DataFlow.MemorySource`1" class="text-break">Class MemorySource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Define a source based on a generic .NET collection. This could be a List&lt;T&gt; or any other IEnumerable&lt;T&gt;.
 By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
 </div>

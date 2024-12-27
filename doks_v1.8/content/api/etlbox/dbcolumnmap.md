@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10207
+weight: 10199
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DbColumnMap">
-  <h1 id="ETLBox_DbColumnMap" data-uid="ETLBox.DbColumnMap" class="text-break">Class DbColumnMap
-</h1>
+  <h1 id="ETLBox_DbColumnMap" data-uid="ETLBox.DbColumnMap" class="text-break">Class DbColumnMap</h1>
   <div class="markdown level0 summary"><p>This attribute defines the mapping between property names in the objects and column names
 in the database.
 By default, when reading or writing data from/into a database, properties in your objects

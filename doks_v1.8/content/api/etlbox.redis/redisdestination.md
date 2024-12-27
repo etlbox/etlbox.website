@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.redis"
-weight: 10330
+weight: 10314
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Redis.RedisDestination">
-  <h1 id="ETLBox_Redis_RedisDestination" data-uid="ETLBox.Redis.RedisDestination" class="text-break">Class RedisDestination
-</h1>
+  <h1 id="ETLBox_Redis_RedisDestination" data-uid="ETLBox.Redis.RedisDestination" class="text-break">Class RedisDestination</h1>
   <div class="markdown level0 summary"><p>A data flow destination for Redis. Regis is a key/value store.
 You can define a key column using either a KeyColumnAttribute on your object or assign a value
 to the KeyColumn property. If no key column is provided, a Guid is created and used as key.

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10257
+weight: 10245
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowTransformation`2">
-  <h1 id="ETLBox_IDataFlowTransformation_2" data-uid="ETLBox.IDataFlowTransformation`2" class="text-break">Interface IDataFlowTransformation&lt;TInput, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_IDataFlowTransformation_2" data-uid="ETLBox.IDataFlowTransformation`2" class="text-break">Interface IDataFlowTransformation&lt;TInput, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Implemented by transformations that have one or more inputs of the same type and one or more outputs of the same type</p>
 </div>
   <div class="markdown level0 conceptual"></div>

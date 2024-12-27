@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10185
+weight: 10177
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowMultiplication">
-  <h1 id="ETLBox_DataFlow_RowMultiplication" data-uid="ETLBox.DataFlow.RowMultiplication" class="text-break">Class RowMultiplication
-</h1>
+  <h1 id="ETLBox_DataFlow_RowMultiplication" data-uid="ETLBox.DataFlow.RowMultiplication" class="text-break">Class RowMultiplication</h1>
   <div class="markdown level0 summary"><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

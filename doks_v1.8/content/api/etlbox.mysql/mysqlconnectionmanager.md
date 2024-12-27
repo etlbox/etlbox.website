@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.mysql"
-weight: 10292
+weight: 10278
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MySql.MySqlConnectionManager">
-  <h1 id="ETLBox_MySql_MySqlConnectionManager" data-uid="ETLBox.MySql.MySqlConnectionManager" class="text-break">Class MySqlConnectionManager
-</h1>
+  <h1 id="ETLBox_MySql_MySqlConnectionManager" data-uid="ETLBox.MySql.MySqlConnectionManager" class="text-break">Class MySqlConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a ETLBox connection to a MySql Server.
 Uses the official MySql ADO.NET driver for .NET.</p>
 </div>

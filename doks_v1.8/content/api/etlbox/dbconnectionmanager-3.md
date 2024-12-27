@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10208
+weight: 10200
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DbConnectionManager`3">
-  <h1 id="ETLBox_DbConnectionManager_3" data-uid="ETLBox.DbConnectionManager`3" class="text-break">Class DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;
-</h1>
+  <h1 id="ETLBox_DbConnectionManager_3" data-uid="ETLBox.DbConnectionManager`3" class="text-break">Class DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</h1>
   <div class="markdown level0 summary"><p>The generic implementation on which all connection managers are based on</p>
 </div>
   <div class="markdown level0 conceptual"></div>

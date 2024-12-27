@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10311
+weight: 10296
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.SqlOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_SqlOdbcConnectionManager" data-uid="ETLBox.Odbc.SqlOdbcConnectionManager" class="text-break">Class SqlOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_SqlOdbcConnectionManager" data-uid="ETLBox.Odbc.SqlOdbcConnectionManager" class="text-break">Class SqlOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Sql Server Connection manager for an ODBC connection.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10240
+weight: 10230
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IConnectionManager">
-  <h1 id="ETLBox_IConnectionManager" data-uid="ETLBox.IConnectionManager" class="text-break">Interface IConnectionManager
-</h1>
+  <h1 id="ETLBox_IConnectionManager" data-uid="ETLBox.IConnectionManager" class="text-break">Interface IConnectionManager</h1>
   <div class="markdown level0 summary"><p>Common properties and methods for all database connection managers</p>
 </div>
   <div class="markdown level0 conceptual"></div>

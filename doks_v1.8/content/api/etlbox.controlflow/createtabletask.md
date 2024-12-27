@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10053
+weight: 10046
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateTableTask">
-  <h1 id="ETLBox_ControlFlow_CreateTableTask" data-uid="ETLBox.ControlFlow.CreateTableTask" class="text-break">Class CreateTableTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateTableTask" data-uid="ETLBox.ControlFlow.CreateTableTask" class="text-break">Class CreateTableTask</h1>
   <div class="markdown level0 summary"><p>Creates a table. If the tables exists, this task won't change the table.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

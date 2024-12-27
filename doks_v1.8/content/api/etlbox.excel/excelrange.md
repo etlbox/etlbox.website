@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10217
+weight: 10209
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Excel.ExcelRange">
-  <h1 id="ETLBox_Excel_ExcelRange" data-uid="ETLBox.Excel.ExcelRange" class="text-break">Class ExcelRange
-</h1>
+  <h1 id="ETLBox_Excel_ExcelRange" data-uid="ETLBox.Excel.ExcelRange" class="text-break">Class ExcelRange</h1>
   <div class="markdown level0 summary"><p>Defines a range in an excel file where the data is located.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10047
+weight: 10040
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.Constraint">
-  <h1 id="ETLBox_ControlFlow_Constraint" data-uid="ETLBox.ControlFlow.Constraint" class="text-break">Class Constraint
-</h1>
+  <h1 id="ETLBox_ControlFlow_Constraint" data-uid="ETLBox.ControlFlow.Constraint" class="text-break">Class Constraint</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

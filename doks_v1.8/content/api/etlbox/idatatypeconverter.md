@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10258
+weight: 10246
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataTypeConverter">
-  <h1 id="ETLBox_IDataTypeConverter" data-uid="ETLBox.IDataTypeConverter" class="text-break">Interface IDataTypeConverter
-</h1>
+  <h1 id="ETLBox_IDataTypeConverter" data-uid="ETLBox.IDataTypeConverter" class="text-break">Interface IDataTypeConverter</h1>
   <div class="markdown level0 summary"><p>Describe methods that allows to intercept the CREATE TABLE sql generation in a CreateTableTask.
 It will convert the data type that is defined in a TableColumn into a custom database specific type.</p>
 </div>

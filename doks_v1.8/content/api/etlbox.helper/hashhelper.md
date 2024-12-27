@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10230
+weight: 10222
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.HashHelper">
-  <h1 id="ETLBox_Helper_HashHelper" data-uid="ETLBox.Helper.HashHelper" class="text-break">Class HashHelper
-</h1>
+  <h1 id="ETLBox_Helper_HashHelper" data-uid="ETLBox.Helper.HashHelper" class="text-break">Class HashHelper</h1>
   <div class="markdown level0 summary"><p>This class creates unique strings containing hash values.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

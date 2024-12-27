@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.oracle"
-weight: 10316
+weight: 10301
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Oracle.OracleConnectionString">
-  <h1 id="ETLBox_Oracle_OracleConnectionString" data-uid="ETLBox.Oracle.OracleConnectionString" class="text-break">Class OracleConnectionString
-</h1>
+  <h1 id="ETLBox_Oracle_OracleConnectionString" data-uid="ETLBox.Oracle.OracleConnectionString" class="text-break">Class OracleConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a Oracle server in an object.
 Internally the OracleConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10214
+weight: 10206
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Excel.ExcelColumn">
-  <h1 id="ETLBox_Excel_ExcelColumn" data-uid="ETLBox.Excel.ExcelColumn" class="text-break">Class ExcelColumn
-</h1>
+  <h1 id="ETLBox_Excel_ExcelColumn" data-uid="ETLBox.Excel.ExcelColumn" class="text-break">Class ExcelColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines either which column index is mapped to the property or the
 header name that identifies the column
 By default, when reading from an excel file, a header column is expected in the first row.

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.ase"
-weight: 10338
+weight: 10322
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Sap.Ase.AseConnectionManager">
-  <h1 id="ETLBox_Sap_Ase_AseConnectionManager" data-uid="ETLBox.Sap.Ase.AseConnectionManager" class="text-break">Class AseConnectionManager
-</h1>
+  <h1 id="ETLBox_Sap_Ase_AseConnectionManager" data-uid="ETLBox.Sap.Ase.AseConnectionManager" class="text-break">Class AseConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a classic ADO.NET connection to a (Sybase) SAP ASE database.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

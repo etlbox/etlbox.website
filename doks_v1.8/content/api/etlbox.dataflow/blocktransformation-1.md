@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10103
+weight: 10096
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.BlockTransformation`1">
-  <h1 id="ETLBox_DataFlow_BlockTransformation_1" data-uid="ETLBox.DataFlow.BlockTransformation`1" class="text-break">Class BlockTransformation&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_BlockTransformation_1" data-uid="ETLBox.DataFlow.BlockTransformation`1" class="text-break">Class BlockTransformation&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
 After all data is in the buffer, the transformation function
 is executed for the complete data and the result posted into the targets.
@@ -341,14 +340,12 @@ But as this block any processing until all data is buffered, it will also need t
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_BlockTransformation_1_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">BlockTransformation&lt;InputType&gt; block = new BlockTransformation&lt;InputType&gt;(
-                                                                                                                                                 inputData =&gt; {
-                                                                                                                                                     inputData.RemoveRange(1, 2);
-                                                                                                                                                     inputData.Add(new InputType() { Value = 1 });
-                                                                                                                                                     return inputData;
-                                                                                                                                             });</code>
-</pre>
+  <pre><code class="lang-csharp">BlockTransformation&lt;InputType&gt; block = new BlockTransformation&lt;InputType&gt;(
+    inputData =&gt; {
+        inputData.RemoveRange(1, 2);
+        inputData.Add(new InputType() { Value = 1 });
+        return inputData;
+});</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_BlockTransformation_1__ctor_" data-uid="ETLBox.DataFlow.BlockTransformation`1.#ctor*"></a>

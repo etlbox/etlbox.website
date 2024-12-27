@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10336
+weight: 10320
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ResourceType">
-  <h1 id="ETLBox_ResourceType" data-uid="ETLBox.ResourceType" class="text-break">Enum ResourceType
-</h1>
+  <h1 id="ETLBox_ResourceType" data-uid="ETLBox.ResourceType" class="text-break">Enum ResourceType</h1>
   <div class="markdown level0 summary"><p>The type of resource you are using for a streaming source or destination.
 E.g. you can read Json data from a file or via http from a web service.</p>
 </div>
@@ -38,7 +37,7 @@ E.g. you can read Json data from a file or via http from a web service.</p>
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_ResourceType_AzureBlob">AzureBlob</td>
         <td></td>
@@ -52,6 +51,6 @@ E.g. you can read Json data from a file or via http from a web service.</p>
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

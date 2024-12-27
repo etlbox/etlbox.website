@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10058
+weight: 10051
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropProcedureTask">
-  <h1 id="ETLBox_ControlFlow_DropProcedureTask" data-uid="ETLBox.ControlFlow.DropProcedureTask" class="text-break">Class DropProcedureTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_DropProcedureTask" data-uid="ETLBox.ControlFlow.DropProcedureTask" class="text-break">Class DropProcedureTask</h1>
   <div class="markdown level0 summary"><p>Drops a procedure. Use DropIfExists to drop a procedure only if it exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

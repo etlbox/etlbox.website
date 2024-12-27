@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10139
+weight: 10130
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1">
-  <h1 id="ETLBox_DataFlow_DataFlowExecutableSource_1" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1" class="text-break">Class DataFlowExecutableSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DataFlowExecutableSource_1" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1" class="text-break">Class DataFlowExecutableSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Base implementation for a source that can be executed.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

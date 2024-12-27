@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.analysisservices"
-weight: 10015
+weight: 10008
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AnalysisServices.XmlaTask">
-  <h1 id="ETLBox_AnalysisServices_XmlaTask" data-uid="ETLBox.AnalysisServices.XmlaTask" class="text-break">Class XmlaTask
-</h1>
+  <h1 id="ETLBox_AnalysisServices_XmlaTask" data-uid="ETLBox.AnalysisServices.XmlaTask" class="text-break">Class XmlaTask</h1>
   <div class="markdown level0 summary"><p>This task can execute any XMLA.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

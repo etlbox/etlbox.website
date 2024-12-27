@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10060
+weight: 10053
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropTableTask">
-  <h1 id="ETLBox_ControlFlow_DropTableTask" data-uid="ETLBox.ControlFlow.DropTableTask" class="text-break">Class DropTableTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_DropTableTask" data-uid="ETLBox.ControlFlow.DropTableTask" class="text-break">Class DropTableTask</h1>
   <div class="markdown level0 summary"><p>Drops a table. Use DropIfExists to drop a table only if it exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

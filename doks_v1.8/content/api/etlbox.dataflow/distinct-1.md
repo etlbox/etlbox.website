@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10154
+weight: 10145
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Distinct`1">
-  <h1 id="ETLBox_DataFlow_Distinct_1" data-uid="ETLBox.DataFlow.Distinct`1" class="text-break">Class Distinct&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_Distinct_1" data-uid="ETLBox.DataFlow.Distinct`1" class="text-break">Class Distinct&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>The 'Distinct' class in ETLBox is designed to efficiently filter out duplicate records in a data flow.
 It operates by generating unique hash values for each record based on specified properties, allowing for precise identification and exclusion of duplicates.
 This class supports various functionalities like setting DistinctColumns for targeted filtering, linking to other transformations or destinations to handle duplicates,

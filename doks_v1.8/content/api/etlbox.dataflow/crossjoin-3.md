@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10125
+weight: 10116
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CrossJoin`3">
-  <h1 id="ETLBox_DataFlow_CrossJoin_3" data-uid="ETLBox.DataFlow.CrossJoin`3" class="text-break">Class CrossJoin&lt;TInput1, TInput2, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_CrossJoin_3" data-uid="ETLBox.DataFlow.CrossJoin`3" class="text-break">Class CrossJoin&lt;TInput1, TInput2, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
 The input for the first table will be loaded into memory before join starts.
 Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
@@ -412,7 +411,7 @@ Always have the smaller amount of data flown into this target.</p>
   </table>
   <a id="ETLBox_DataFlow_CrossJoin_3_PassingTarget_" data-uid="ETLBox.DataFlow.CrossJoin`3.PassingTarget*"></a>
   <h4 id="ETLBox_DataFlow_CrossJoin_3_PassingTarget" data-uid="ETLBox.DataFlow.CrossJoin`3.PassingTarget">PassingTarget</h4>
-  <div class="markdown level1 summary"><p>Every row that the PassingTarget receives is joined with all data from the <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_InMemoryData">InMemoryData</a>.</p>
+  <div class="markdown level1 summary"><p>Every row that the PassingTarget receives is joined with all data from the <span class="xref">ETLBox.DataFlow.CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryData</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

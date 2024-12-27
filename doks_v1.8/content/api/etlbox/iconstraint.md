@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10242
+weight: 10231
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IConstraint">
-  <h1 id="ETLBox_IConstraint" data-uid="ETLBox.IConstraint" class="text-break">Interface IConstraint
-</h1>
+  <h1 id="ETLBox_IConstraint" data-uid="ETLBox.IConstraint" class="text-break">Interface IConstraint</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>

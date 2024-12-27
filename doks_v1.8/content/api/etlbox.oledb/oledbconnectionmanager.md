@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.oledb"
-weight: 10312
+weight: 10297
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.OleDb.OleDbConnectionManager">
-  <h1 id="ETLBox_OleDb_OleDbConnectionManager" data-uid="ETLBox.OleDb.OleDbConnectionManager" class="text-break">Class OleDbConnectionManager
-</h1>
+  <h1 id="ETLBox_OleDb_OleDbConnectionManager" data-uid="ETLBox.OleDb.OleDbConnectionManager" class="text-break">Class OleDbConnectionManager</h1>
   <div class="markdown level0 summary"><p>Generic OleDbConnection - try this connection manager if no particular connection manager
 for your database exists.
 There are some limitations to the ETLBox functionality when you use this connection manager:</p>

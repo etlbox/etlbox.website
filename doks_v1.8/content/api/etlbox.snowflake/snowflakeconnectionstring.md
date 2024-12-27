@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.snowflake"
-weight: 10345
+weight: 10329
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Snowflake.SnowflakeConnectionString">
-  <h1 id="ETLBox_Snowflake_SnowflakeConnectionString" data-uid="ETLBox.Snowflake.SnowflakeConnectionString" class="text-break">Class SnowflakeConnectionString
-</h1>
+  <h1 id="ETLBox_Snowflake_SnowflakeConnectionString" data-uid="ETLBox.Snowflake.SnowflakeConnectionString" class="text-break">Class SnowflakeConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a Snowflake server in an object.
 Internally the SnowflakeDbConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

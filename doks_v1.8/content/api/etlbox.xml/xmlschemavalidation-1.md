@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10360
+weight: 10344
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlSchemaValidation`1">
-  <h1 id="ETLBox_Xml_XmlSchemaValidation_1" data-uid="ETLBox.Xml.XmlSchemaValidation`1" class="text-break">Class XmlSchemaValidation&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Xml_XmlSchemaValidation_1" data-uid="ETLBox.Xml.XmlSchemaValidation`1" class="text-break">Class XmlSchemaValidation&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Validate XML code in your incoming data against a XML schema definition.
 You need to define how the XML string can be read from your data row and the schema definition.
 Rows with a schema that is not valid are send to the error output..</p>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10201
+weight: 10193
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.VoidDestination">
-  <h1 id="ETLBox_DataFlow_VoidDestination" data-uid="ETLBox.DataFlow.VoidDestination" class="text-break">Class VoidDestination
-</h1>
+  <h1 id="ETLBox_DataFlow_VoidDestination" data-uid="ETLBox.DataFlow.VoidDestination" class="text-break">Class VoidDestination</h1>
   <div class="markdown level0 summary"><p>This destination serves as a recycle bin for data that is not supposed to go into any other destination.
 Every records in the dataflow needs to enter any kind of destination in order to have a dataflow completed.
 Use this target for data that you don't want to use in a destination, but you still want your dataflow to complete property.</p>

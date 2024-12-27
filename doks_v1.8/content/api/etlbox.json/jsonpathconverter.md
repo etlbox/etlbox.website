@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10268
+weight: 10255
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonPathConverter">
-  <h1 id="ETLBox_Json_JsonPathConverter" data-uid="ETLBox.Json.JsonPathConverter" class="text-break">Class JsonPathConverter
-</h1>
+  <h1 id="ETLBox_Json_JsonPathConverter" data-uid="ETLBox.Json.JsonPathConverter" class="text-break">Class JsonPathConverter</h1>
   <div class="markdown level0 summary"><p>A JsonConverter that support json path expression in JsonProperty attributes.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

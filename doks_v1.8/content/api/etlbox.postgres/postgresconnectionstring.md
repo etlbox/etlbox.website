@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.postgres"
-weight: 10327
+weight: 10311
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Postgres.PostgresConnectionString">
-  <h1 id="ETLBox_Postgres_PostgresConnectionString" data-uid="ETLBox.Postgres.PostgresConnectionString" class="text-break">Class PostgresConnectionString
-</h1>
+  <h1 id="ETLBox_Postgres_PostgresConnectionString" data-uid="ETLBox.Postgres.PostgresConnectionString" class="text-break">Class PostgresConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a Postgres server in an object.
 Internally the NpgsqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

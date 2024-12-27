@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlite"
-weight: 10348
+weight: 10332
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SQLite.SQLiteConnectionManager">
-  <h1 id="ETLBox_SQLite_SQLiteConnectionManager" data-uid="ETLBox.SQLite.SQLiteConnectionManager" class="text-break">Class SQLiteConnectionManager
-</h1>
+  <h1 id="ETLBox_SQLite_SQLiteConnectionManager" data-uid="ETLBox.SQLite.SQLiteConnectionManager" class="text-break">Class SQLiteConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager for an SQLite connection based on ADO.NET.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

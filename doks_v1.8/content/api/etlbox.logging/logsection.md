@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10281
+weight: 10267
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogSection">
-  <h1 id="ETLBox_Logging_LogSection" data-uid="ETLBox.Logging.LogSection" class="text-break">Class LogSection
-</h1>
+  <h1 id="ETLBox_Logging_LogSection" data-uid="ETLBox.Logging.LogSection" class="text-break">Class LogSection</h1>
   <div class="markdown level0 summary"><p>A log section will execute your code block, wrapping the action with log messages indicating start and end.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

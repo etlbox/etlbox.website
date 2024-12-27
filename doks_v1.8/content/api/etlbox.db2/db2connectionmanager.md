@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.db2"
-weight: 10204
+weight: 10196
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Db2.Db2ConnectionManager">
-  <h1 id="ETLBox_Db2_Db2ConnectionManager" data-uid="ETLBox.Db2.Db2ConnectionManager" class="text-break">Class Db2ConnectionManager
-</h1>
+  <h1 id="ETLBox_Db2_Db2ConnectionManager" data-uid="ETLBox.Db2.Db2ConnectionManager" class="text-break">Class Db2ConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a ETLBox connection to a Db2 Server.
 Uses the official Db2 ADO.NET driver for .NET Core.</p>
 </div>

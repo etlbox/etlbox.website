@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10236
+weight: 10228
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.StringExtension">
-  <h1 id="ETLBox_Helper_StringExtension" data-uid="ETLBox.Helper.StringExtension" class="text-break">Class StringExtension
-</h1>
+  <h1 id="ETLBox_Helper_StringExtension" data-uid="ETLBox.Helper.StringExtension" class="text-break">Class StringExtension</h1>
   <div class="markdown level0 summary"><p>Extension methods for strings</p>
 </div>
   <div class="markdown level0 conceptual"></div>

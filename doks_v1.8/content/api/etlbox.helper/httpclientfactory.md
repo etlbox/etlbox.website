@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10231
+weight: 10223
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.HttpClientFactory">
-  <h1 id="ETLBox_Helper_HttpClientFactory" data-uid="ETLBox.Helper.HttpClientFactory" class="text-break">Class HttpClientFactory
-</h1>
+  <h1 id="ETLBox_Helper_HttpClientFactory" data-uid="ETLBox.Helper.HttpClientFactory" class="text-break">Class HttpClientFactory</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

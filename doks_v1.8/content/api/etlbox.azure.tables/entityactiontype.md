@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10035
+weight: 10028
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.Tables.EntityActionType">
-  <h1 id="ETLBox_Azure_Tables_EntityActionType" data-uid="ETLBox.Azure.Tables.EntityActionType" class="text-break">Enum EntityActionType
-</h1>
+  <h1 id="ETLBox_Azure_Tables_EntityActionType" data-uid="ETLBox.Azure.Tables.EntityActionType" class="text-break">Enum EntityActionType</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.Azure.Tables</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_Azure_Tables_EntityActionType_Add">Add</td>
         <td><p>Add the entity to the table. This is equivalent to <a class="xref" href="https://learn.microsoft.com/dotnet/api/azure.data.tables.tableclient.addentity">AddEntity&lt;T&gt;(T, CancellationToken)</a>.</p>
@@ -72,6 +71,6 @@ toc: false
 </td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

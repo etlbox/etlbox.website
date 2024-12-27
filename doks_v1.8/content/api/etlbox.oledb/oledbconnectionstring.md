@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.oledb"
-weight: 10313
+weight: 10298
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.OleDb.OleDbConnectionString">
-  <h1 id="ETLBox_OleDb_OleDbConnectionString" data-uid="ETLBox.OleDb.OleDbConnectionString" class="text-break">Class OleDbConnectionString
-</h1>
+  <h1 id="ETLBox_OleDb_OleDbConnectionString" data-uid="ETLBox.OleDb.OleDbConnectionString" class="text-break">Class OleDbConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string in an object.
 Internally the OdbcConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

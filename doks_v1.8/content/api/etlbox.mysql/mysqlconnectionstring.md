@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.mysql"
-weight: 10293
+weight: 10279
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MySql.MySqlConnectionString">
-  <h1 id="ETLBox_MySql_MySqlConnectionString" data-uid="ETLBox.MySql.MySqlConnectionString" class="text-break">Class MySqlConnectionString
-</h1>
+  <h1 id="ETLBox_MySql_MySqlConnectionString" data-uid="ETLBox.MySql.MySqlConnectionString" class="text-break">Class MySqlConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
 Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

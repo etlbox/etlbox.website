@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10083
+weight: 10076
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.TableColumn">
-  <h1 id="ETLBox_ControlFlow_TableColumn" data-uid="ETLBox.ControlFlow.TableColumn" class="text-break">Class TableColumn
-</h1>
+  <h1 id="ETLBox_ControlFlow_TableColumn" data-uid="ETLBox.ControlFlow.TableColumn" class="text-break">Class TableColumn</h1>
   <div class="markdown level0 summary"><p>A column in table</p>
 </div>
   <div class="markdown level0 conceptual"></div>

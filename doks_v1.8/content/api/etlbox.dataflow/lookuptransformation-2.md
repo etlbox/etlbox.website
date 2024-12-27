@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10162
+weight: 10153
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.LookupTransformation`2">
-  <h1 id="ETLBox_DataFlow_LookupTransformation_2" data-uid="ETLBox.DataFlow.LookupTransformation`2" class="text-break">Class LookupTransformation&lt;TInput, TSource&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_LookupTransformation_2" data-uid="ETLBox.DataFlow.LookupTransformation`2" class="text-break">Class LookupTransformation&lt;TInput, TSource&gt;</h1>
   <div class="markdown level0 summary"><p>The lookup transformation enriches the incoming data with data from the lookup source.
 Data from the lookup source is read into memory when the first record arrives.
 For each incoming row, the lookup tries to find a matching record in the

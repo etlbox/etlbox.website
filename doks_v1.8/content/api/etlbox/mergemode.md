@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10287
+weight: 10273
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MergeMode">
-  <h1 id="ETLBox_MergeMode" data-uid="ETLBox.MergeMode" class="text-break">Enum MergeMode
-</h1>
+  <h1 id="ETLBox_MergeMode" data-uid="ETLBox.MergeMode" class="text-break">Enum MergeMode</h1>
   <div class="markdown level0 summary"><p>The mode of operation a DbMerge may work in.
 Full means that source contains all data, NoDeletions that source contains all data but no deletions are executed,
 Delta means that source has only delta information and deletions are deferred from a particular property and
@@ -41,7 +40,7 @@ InsertsOnly will only insert new rows into the destination.</p>
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_MergeMode_Delta">Delta</td>
         <td></td>
@@ -63,6 +62,6 @@ InsertsOnly will only insert new rows into the destination.</p>
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10352
+weight: 10336
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.UpdateColumn">
-  <h1 id="ETLBox_UpdateColumn" data-uid="ETLBox.UpdateColumn" class="text-break">Class UpdateColumn
-</h1>
+  <h1 id="ETLBox_UpdateColumn" data-uid="ETLBox.UpdateColumn" class="text-break">Class UpdateColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if a column in the destination is updated.
 Use the IdColumn attribute to define if a row in the destination matches with your object.
 If they match, you can use the UpdateColumn to describe which columns

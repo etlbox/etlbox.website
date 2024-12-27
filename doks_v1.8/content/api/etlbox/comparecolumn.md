@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10044
+weight: 10037
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.CompareColumn">
-  <h1 id="ETLBox_CompareColumn" data-uid="ETLBox.CompareColumn" class="text-break">Class CompareColumn
-</h1>
+  <h1 id="ETLBox_CompareColumn" data-uid="ETLBox.CompareColumn" class="text-break">Class CompareColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is included in the comparison to identify
 object that exists and needs to be updated.</p>
 </div>

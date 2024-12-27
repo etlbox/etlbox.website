@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10301
+weight: 10286
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.AseOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_AseOdbcConnectionManager" data-uid="ETLBox.Odbc.AseOdbcConnectionManager" class="text-break">Class AseOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_AseOdbcConnectionManager" data-uid="ETLBox.Odbc.AseOdbcConnectionManager" class="text-break">Class AseOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>SAP Ase Connection manager for an ODBC connection.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>

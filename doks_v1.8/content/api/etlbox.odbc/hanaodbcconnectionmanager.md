@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10302
+weight: 10287
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.HanaOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_HanaOdbcConnectionManager" data-uid="ETLBox.Odbc.HanaOdbcConnectionManager" class="text-break">Class HanaOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_HanaOdbcConnectionManager" data-uid="ETLBox.Odbc.HanaOdbcConnectionManager" class="text-break">Class HanaOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>SAP HANA Connection manager for an ODBC connection based on ADO.NET.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>

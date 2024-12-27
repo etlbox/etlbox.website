@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10341
+weight: 10325
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SelectColumn">
-  <h1 id="ETLBox_SelectColumn" data-uid="ETLBox.SelectColumn" class="text-break">Class SelectColumn
-</h1>
+  <h1 id="ETLBox_SelectColumn" data-uid="ETLBox.SelectColumn" class="text-break">Class SelectColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used as Select for the <a class="xref" href="/api/etlbox.dataflow/dbsource">DbSource</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>

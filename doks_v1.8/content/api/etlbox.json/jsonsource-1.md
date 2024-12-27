@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10271
+weight: 10258
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonSource`1">
-  <h1 id="ETLBox_Json_JsonSource_1" data-uid="ETLBox.Json.JsonSource`1" class="text-break">Class JsonSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Json_JsonSource_1" data-uid="ETLBox.Json.JsonSource`1" class="text-break">Class JsonSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Reads data from a json source. This can be any http resource or a file.
 By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>

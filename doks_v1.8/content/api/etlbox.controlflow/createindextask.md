@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10050
+weight: 10043
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateIndexTask">
-  <h1 id="ETLBox_ControlFlow_CreateIndexTask" data-uid="ETLBox.ControlFlow.CreateIndexTask" class="text-break">Class CreateIndexTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateIndexTask" data-uid="ETLBox.ControlFlow.CreateIndexTask" class="text-break">Class CreateIndexTask</h1>
   <div class="markdown level0 summary"><p>Creates an index if the index doesn't exists, otherwise the index is dropped and recreated.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

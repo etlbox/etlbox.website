@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10151
+weight: 10142
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbTypeCheck`1">
-  <h1 id="ETLBox_DataFlow_DbTypeCheck_1" data-uid="ETLBox.DataFlow.DbTypeCheck`1" class="text-break">Class DbTypeCheck&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DbTypeCheck_1" data-uid="ETLBox.DataFlow.DbTypeCheck`1" class="text-break">Class DbTypeCheck&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>This component will check all properties of incoming records for type consistency
 against their corresponding columns in an existing database table.
 Flawed records can be redirected by using the <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_LinkFlawedTo_ETLBox_IDataFlowDestination__0__">LinkFlawedTo(IDataFlowDestination&lt;TInput&gt;)</a>

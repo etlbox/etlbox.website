@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlserver"
-weight: 10351
+weight: 10335
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SqlServer.SqlConnectionString">
-  <h1 id="ETLBox_SqlServer_SqlConnectionString" data-uid="ETLBox.SqlServer.SqlConnectionString" class="text-break">Class SqlConnectionString
-</h1>
+  <h1 id="ETLBox_SqlServer_SqlConnectionString" data-uid="ETLBox.SqlServer.SqlConnectionString" class="text-break">Class SqlConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a sql server in an object.
 Internally the SqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

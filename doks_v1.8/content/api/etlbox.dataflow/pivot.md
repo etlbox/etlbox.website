@@ -6,24 +6,15 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10180
+weight: 10171
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Pivot">
-  <h1 id="ETLBox_DataFlow_Pivot" data-uid="ETLBox.DataFlow.Pivot" class="text-break">Class Pivot
-</h1>
-  <div class="markdown level0 summary"><h2 id="use-the-pivot-transformation-to-pivot-your-dataexample">Use the Pivot transformation to pivot your data.
-Example:</h2>
-<h2 id="monthmonthvaluejan100feb200mar300">Month,MonthValue
-Jan,100
-Feb,200
-Mar,300</h2>
-<h2 id="will-become">will become</h2>
-<h2 id="janfebmar100200300">Jan,Feb,Mar
-100,200,300</h2>
+  <h1 id="ETLBox_DataFlow_Pivot" data-uid="ETLBox.DataFlow.Pivot" class="text-break">Class Pivot</h1>
+  <div class="markdown level0 summary"><p>Use the Pivot transformation to pivot your data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -64,13 +55,19 @@ Mar,300</h2>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_KeepEmptyValues">Pivot&lt;ExpandoObject&gt;.KeepEmptyValues</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ColumnNameGeneration">Pivot&lt;ExpandoObject&gt;.ColumnNameGeneration</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ColumnNameCombination">Pivot&lt;ExpandoObject&gt;.ColumnNameCombination</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueCombination">Pivot&lt;ExpandoObject&gt;.ValueCombination</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_FlattenAggregationResults">Pivot&lt;ExpandoObject&gt;.FlattenAggregationResults</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_ValueAggregation">Pivot&lt;ExpandoObject&gt;.ValueAggregation</a>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_AddGrandTotalColumn">Pivot&lt;ExpandoObject&gt;.AddGrandTotalColumn</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_AddGrandTotalRows">Pivot&lt;ExpandoObject&gt;.AddGrandTotalRows</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_CustomValueAggregation">Pivot&lt;ExpandoObject&gt;.CustomValueAggregation</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/pivot-1#ETLBox_DataFlow_Pivot_1_SourceBlock">Pivot&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -296,6 +293,14 @@ Mar,300</h2>
 ```
 
 {{< rawhtml >}}
+  <h5 id="ETLBox_DataFlow_Pivot_examples"><strong>Examples</strong></h5>
+  <pre><code class="lang-csharp">Month,MonthValue
+Jan,100
+Feb,200
+Mar,300
+will become
+Jan,Feb,Mar
+100,200,300</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Pivot__ctor_" data-uid="ETLBox.DataFlow.Pivot.#ctor*"></a>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10022
+weight: 10015
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AseConnectionString">
-  <h1 id="ETLBox_AseConnectionString" data-uid="ETLBox.AseConnectionString" class="text-break">Class AseConnectionString
-</h1>
+  <h1 id="ETLBox_AseConnectionString" data-uid="ETLBox.AseConnectionString" class="text-break">Class AseConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a (Sybase) SAP ASE database in an object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

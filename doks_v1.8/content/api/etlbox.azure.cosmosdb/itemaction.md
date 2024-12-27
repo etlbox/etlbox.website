@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.cosmosdb"
-weight: 10028
+weight: 10021
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.CosmosDb.ItemAction">
-  <h1 id="ETLBox_Azure_CosmosDb_ItemAction" data-uid="ETLBox.Azure.CosmosDb.ItemAction" class="text-break">Enum ItemAction
-</h1>
+  <h1 id="ETLBox_Azure_CosmosDb_ItemAction" data-uid="ETLBox.Azure.CosmosDb.ItemAction" class="text-break">Enum ItemAction</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.Azure.CosmosDb</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_Azure_CosmosDb_ItemAction_Create">Create</td>
         <td></td>
@@ -58,6 +57,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

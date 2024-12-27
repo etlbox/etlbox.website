@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.mariadb"
-weight: 10284
+weight: 10270
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MariaDb.MariaDbConnectionManager">
-  <h1 id="ETLBox_MariaDb_MariaDbConnectionManager" data-uid="ETLBox.MariaDb.MariaDbConnectionManager" class="text-break">Class MariaDbConnectionManager
-</h1>
+  <h1 id="ETLBox_MariaDb_MariaDbConnectionManager" data-uid="ETLBox.MariaDb.MariaDbConnectionManager" class="text-break">Class MariaDbConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a ETLBox connection to a MariaDb Server.
 Uses the MySqlConnector package which is an ADO.NET driver for .NET and offers full support for MariaDb.</p>
 </div>

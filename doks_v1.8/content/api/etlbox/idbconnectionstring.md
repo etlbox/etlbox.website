@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10259
+weight: 10247
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDbConnectionString">
-  <h1 id="ETLBox_IDbConnectionString" data-uid="ETLBox.IDbConnectionString" class="text-break">Interface IDbConnectionString
-</h1>
+  <h1 id="ETLBox_IDbConnectionString" data-uid="ETLBox.IDbConnectionString" class="text-break">Interface IDbConnectionString</h1>
   <div class="markdown level0 summary"><p>The generic defintion of a connection string</p>
 </div>
   <div class="markdown level0 conceptual"></div>

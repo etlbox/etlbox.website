@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10260
+weight: 10248
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IdColumn">
-  <h1 id="ETLBox_IdColumn" data-uid="ETLBox.IdColumn" class="text-break">Class IdColumn
-</h1>
+  <h1 id="ETLBox_IdColumn" data-uid="ETLBox.IdColumn" class="text-break">Class IdColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines if the column is used as an Id for the <a class="xref" href="/api/etlbox.dataflow/dbmerge">DbMerge</a>
 or the <a class="xref" href="/api/etlbox.dataflow/dbdestination">DbDestination</a>.</p>
 </div>

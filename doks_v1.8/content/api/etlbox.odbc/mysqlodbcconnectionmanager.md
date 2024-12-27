@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10304
+weight: 10289
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.MySqlOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_MySqlOdbcConnectionManager" data-uid="ETLBox.Odbc.MySqlOdbcConnectionManager" class="text-break">Class MySqlOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_MySqlOdbcConnectionManager" data-uid="ETLBox.Odbc.MySqlOdbcConnectionManager" class="text-break">Class MySqlOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>MySql Connection manager for an ODBC connection.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>

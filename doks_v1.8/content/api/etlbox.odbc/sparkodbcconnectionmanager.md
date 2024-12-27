@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10310
+weight: 10295
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.SparkOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_SparkOdbcConnectionManager" data-uid="ETLBox.Odbc.SparkOdbcConnectionManager" class="text-break">Class SparkOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_SparkOdbcConnectionManager" data-uid="ETLBox.Odbc.SparkOdbcConnectionManager" class="text-break">Class SparkOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Spark Connection manager for an ODBC connection.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

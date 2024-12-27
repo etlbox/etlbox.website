@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.neo4j"
-weight: 10295
+weight: 10281
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Neo4j.Neo4jDestination">
-  <h1 id="ETLBox_Neo4j_Neo4jDestination" data-uid="ETLBox.Neo4j.Neo4jDestination" class="text-break">Class Neo4jDestination
-</h1>
+  <h1 id="ETLBox_Neo4j_Neo4jDestination" data-uid="ETLBox.Neo4j.Neo4jDestination" class="text-break">Class Neo4jDestination</h1>
   <div class="markdown level0 summary"><p>A data flow destination for inserting data into a couchbase bucket.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

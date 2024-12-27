@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.lookuptransformation`2"
-weight: 10163
+weight: 10154
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings">
-  <h1 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings" class="text-break">Class LookupTransformation&lt;TInput, TSource&gt;.PartialDbCacheSettings
-</h1>
+  <h1 id="ETLBox_DataFlow_LookupTransformation_2_PartialDbCacheSettings" data-uid="ETLBox.DataFlow.LookupTransformation`2.PartialDbCacheSettings" class="text-break">Class LookupTransformation&lt;TInput, TSource&gt;.PartialDbCacheSettings</h1>
   <div class="markdown level0 summary"><p>Defines properties to configure a partial cache in a Lookup.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

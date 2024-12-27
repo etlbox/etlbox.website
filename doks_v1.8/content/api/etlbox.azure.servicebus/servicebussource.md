@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.servicebus"
-weight: 10033
+weight: 10026
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource">
-  <h1 id="ETLBox_Azure_ServiceBus_ServiceBusSource" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource" class="text-break">Class ServiceBusSource
-</h1>
+  <h1 id="ETLBox_Azure_ServiceBus_ServiceBusSource" data-uid="ETLBox.Azure.ServiceBus.ServiceBusSource" class="text-break">Class ServiceBusSource</h1>
   <div class="markdown level0 summary"><p>A data flow source for Azure service bus.
 This will receive messages from the source for furhter processing.
 <a class="xref" href="/api/etlbox.azure.servicebus/servicebussource-1#ETLBox_Azure_ServiceBus_ServiceBusSource_1_MaxMessages">MaxMessages</a> to adjust the number of messages fetched per request.

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10283
+weight: 10269
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogTask">
-  <h1 id="ETLBox_Logging_LogTask" data-uid="ETLBox.Logging.LogTask" class="text-break">Class LogTask
-</h1>
+  <h1 id="ETLBox_Logging_LogTask" data-uid="ETLBox.Logging.LogTask" class="text-break">Class LogTask</h1>
   <div class="markdown level0 summary"><p>Used this task for custom log messages.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10335
+weight: 10319
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ReorderColumn">
-  <h1 id="ETLBox_ReorderColumn" data-uid="ETLBox.ReorderColumn" class="text-break">Class ReorderColumn
-</h1>
+  <h1 id="ETLBox_ReorderColumn" data-uid="ETLBox.ReorderColumn" class="text-break">Class ReorderColumn</h1>
   <div class="markdown level0 summary"><p>This property can be used in the ColumnTransformation to change the order of a column in the outgoing dynamic object.
 Please note that there is no guarantee that the order of the columns is preserved by the dynamic object.
 But in the current implementation of the ExpandoObject in the CLR, it seems that this is the case.</p>

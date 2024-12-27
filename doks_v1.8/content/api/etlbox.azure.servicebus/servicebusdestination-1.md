@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.servicebus"
-weight: 10030
+weight: 10023
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1">
-  <h1 id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1" class="text-break">Class ServiceBusDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Azure_ServiceBus_ServiceBusDestination_1" data-uid="ETLBox.Azure.ServiceBus.ServiceBusDestination`1" class="text-break">Class ServiceBusDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for Azure service bus.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

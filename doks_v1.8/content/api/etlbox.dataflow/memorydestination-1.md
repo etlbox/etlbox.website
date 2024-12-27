@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10166
+weight: 10157
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MemoryDestination`1">
-  <h1 id="ETLBox_DataFlow_MemoryDestination_1" data-uid="ETLBox.DataFlow.MemoryDestination`1" class="text-break">Class MemoryDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_MemoryDestination_1" data-uid="ETLBox.DataFlow.MemoryDestination`1" class="text-break">Class MemoryDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A destination in memory - it will store all data in a collection
 that you assign to the Data property. By default, a List is used to store th data.
 If you need to access the data concurrently while rows are still written into the target,

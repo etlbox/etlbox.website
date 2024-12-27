@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10317
+weight: 10302
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Parquet.ParquetColumn">
-  <h1 id="ETLBox_Parquet_ParquetColumn" data-uid="ETLBox.Parquet.ParquetColumn" class="text-break">Class ParquetColumn
-</h1>
+  <h1 id="ETLBox_Parquet_ParquetColumn" data-uid="ETLBox.Parquet.ParquetColumn" class="text-break">Class ParquetColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines the mapping between a property name and the name of a column in a parquet file.
 When using the ParquetDestination, the WriteOrder defines the order of the columns in the file.</p>
 </div>

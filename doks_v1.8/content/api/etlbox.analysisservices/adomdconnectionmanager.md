@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.analysisservices"
-weight: 10014
+weight: 10007
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AnalysisServices.AdomdConnectionManager">
-  <h1 id="ETLBox_AnalysisServices_AdomdConnectionManager" data-uid="ETLBox.AnalysisServices.AdomdConnectionManager" class="text-break">Class AdomdConnectionManager
-</h1>
+  <h1 id="ETLBox_AnalysisServices_AdomdConnectionManager" data-uid="ETLBox.AnalysisServices.AdomdConnectionManager" class="text-break">Class AdomdConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

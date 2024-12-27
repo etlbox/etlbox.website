@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10246
+weight: 10235
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowDestination`1">
-  <h1 id="ETLBox_IDataFlowDestination_1" data-uid="ETLBox.IDataFlowDestination`1" class="text-break">Interface IDataFlowDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_IDataFlowDestination_1" data-uid="ETLBox.IDataFlowDestination`1" class="text-break">Interface IDataFlowDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">

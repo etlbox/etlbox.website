@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10056
+weight: 10049
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropDatabaseTask">
-  <h1 id="ETLBox_ControlFlow_DropDatabaseTask" data-uid="ETLBox.ControlFlow.DropDatabaseTask" class="text-break">Class DropDatabaseTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_DropDatabaseTask" data-uid="ETLBox.ControlFlow.DropDatabaseTask" class="text-break">Class DropDatabaseTask</h1>
   <div class="markdown level0 summary"><p>Drops a database. Use DropIfExists to drop a database only if it exists. In MySql, this will drop a schema.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10186
+weight: 10178
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowTransformation`1">
-  <h1 id="ETLBox_DataFlow_RowTransformation_1" data-uid="ETLBox.DataFlow.RowTransformation`1" class="text-break">Class RowTransformation&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_RowTransformation_1" data-uid="ETLBox.DataFlow.RowTransformation`1" class="text-break">Class RowTransformation&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -318,12 +317,10 @@ toc: false
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_RowTransformation_1_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">RowTransformation&lt;InputType, OutputType&gt; trans = new RowTransformation&lt;InputType, OutputType&gt;(
-                                                                                                                                                                                                           row =&gt; {
-                                                                                                                                                                                                               return new OutputType() { Value = row.Value + 1 };
-                                                                                                                                                                                                           });</code>
-</pre>
+  <pre><code class="lang-csharp">RowTransformation&lt;InputType, OutputType&gt; trans = new RowTransformation&lt;InputType, OutputType&gt;(
+row =&gt; {
+    return new OutputType() { Value = row.Value + 1 };
+});</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_RowTransformation_1__ctor_" data-uid="ETLBox.DataFlow.RowTransformation`1.#ctor*"></a>

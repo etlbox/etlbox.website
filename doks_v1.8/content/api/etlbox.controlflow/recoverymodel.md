@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10079
+weight: 10072
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.RecoveryModel">
-  <h1 id="ETLBox_ControlFlow_RecoveryModel" data-uid="ETLBox.ControlFlow.RecoveryModel" class="text-break">Enum RecoveryModel
-</h1>
+  <h1 id="ETLBox_ControlFlow_RecoveryModel" data-uid="ETLBox.ControlFlow.RecoveryModel" class="text-break">Enum RecoveryModel</h1>
   <div class="markdown level0 summary"><p>The sql server recovery models.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -37,7 +36,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_ControlFlow_RecoveryModel_BulkLogged">BulkLogged</td>
         <td></td>
@@ -55,6 +54,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.analysis"
-weight: 10012
+weight: 10005
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Analysis.DataFrameSource`1">
-  <h1 id="ETLBox_Analysis_DataFrameSource_1" data-uid="ETLBox.Analysis.DataFrameSource`1" class="text-break">Class DataFrameSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Analysis_DataFrameSource_1" data-uid="ETLBox.Analysis.DataFrameSource`1" class="text-break">Class DataFrameSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

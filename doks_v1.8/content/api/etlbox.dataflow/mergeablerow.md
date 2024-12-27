@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10170
+weight: 10161
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MergeableRow">
-  <h1 id="ETLBox_DataFlow_MergeableRow" data-uid="ETLBox.DataFlow.MergeableRow" class="text-break">Class MergeableRow
-</h1>
+  <h1 id="ETLBox_DataFlow_MergeableRow" data-uid="ETLBox.DataFlow.MergeableRow" class="text-break">Class MergeableRow</h1>
   <div class="markdown level0 summary"><p>Inherit from this class if you want to use your data object with a DBMerge,
 but don't want to implement <a class="xref" href="/api/etlbox/imergeablerow">IMergeableRow</a> yourself.
 You still needs that you have flagged the id properties with the IdColumn attribute

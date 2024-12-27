@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10362
+weight: 10346
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlSource`1">
-  <h1 id="ETLBox_Xml_XmlSource_1" data-uid="ETLBox.Xml.XmlSource`1" class="text-break">Class XmlSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Xml_XmlSource_1" data-uid="ETLBox.Xml.XmlSource`1" class="text-break">Class XmlSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Reads data from a xml source. This can be any http resource or a file.
 By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>

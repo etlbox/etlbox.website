@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10262
+weight: 10249
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ILoggableTask">
-  <h1 id="ETLBox_ILoggableTask" data-uid="ETLBox.ILoggableTask" class="text-break">Interface ILoggableTask
-</h1>
+  <h1 id="ETLBox_ILoggableTask" data-uid="ETLBox.ILoggableTask" class="text-break">Interface ILoggableTask</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10318
+weight: 10303
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Parquet.ParquetDestination`1">
-  <h1 id="ETLBox_Parquet_ParquetDestination_1" data-uid="ETLBox.Parquet.ParquetDestination`1" class="text-break">Class ParquetDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Parquet_ParquetDestination_1" data-uid="ETLBox.Parquet.ParquetDestination`1" class="text-break">Class ParquetDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

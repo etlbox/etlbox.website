@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10094
+weight: 10087
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Csv.CsvSource`1">
-  <h1 id="ETLBox_Csv_CsvSource_1" data-uid="ETLBox.Csv.CsvSource`1" class="text-break">Class CsvSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Csv_CsvSource_1" data-uid="ETLBox.Csv.CsvSource`1" class="text-break">Class CsvSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
 Data is read a as string from the source and dynamically converted into the corresponding data format.</p>
 </div>

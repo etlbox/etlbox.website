@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10080
+weight: 10073
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.RowCountOptions">
-  <h1 id="ETLBox_ControlFlow_RowCountOptions" data-uid="ETLBox.ControlFlow.RowCountOptions" class="text-break">Enum RowCountOptions
-</h1>
+  <h1 id="ETLBox_ControlFlow_RowCountOptions" data-uid="ETLBox.ControlFlow.RowCountOptions" class="text-break">Enum RowCountOptions</h1>
   <div class="markdown level0 summary"><p>Used in the RowCountTask. None forces the RowCountTask to do a normal COUNT(<em>) and works on all databases.
 QuickQueryMode only works on SqlServer and uses the partition table which can be much faster on tables with a big amount of data.
 DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
@@ -39,7 +38,7 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_ControlFlow_RowCountOptions_DirtyRead">DirtyRead</td>
         <td></td>
@@ -57,6 +56,6 @@ DirtyRead does a normal COUNT(</em>) but also reading uncommitted reads.</p>
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

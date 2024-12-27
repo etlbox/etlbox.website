@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10099
+weight: 10092
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration">
-  <h1 id="ETLBox_DataFlow_AzureBlobStorageConfiguration" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration" class="text-break">Class AzureBlobStorageConfiguration
-</h1>
+  <h1 id="ETLBox_DataFlow_AzureBlobStorageConfiguration" data-uid="ETLBox.DataFlow.AzureBlobStorageConfiguration" class="text-break">Class AzureBlobStorageConfiguration</h1>
   <div class="markdown level0 summary"><p>Contains configuration details to connect with an Azure Blob Storage</p>
 </div>
   <div class="markdown level0 conceptual"></div>

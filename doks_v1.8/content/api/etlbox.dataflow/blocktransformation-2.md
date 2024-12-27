@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10104
+weight: 10097
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.BlockTransformation`2">
-  <h1 id="ETLBox_DataFlow_BlockTransformation_2" data-uid="ETLBox.DataFlow.BlockTransformation`2" class="text-break">Class BlockTransformation&lt;TInput, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_BlockTransformation_2" data-uid="ETLBox.DataFlow.BlockTransformation`2" class="text-break">Class BlockTransformation&lt;TInput, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A block transformation will wait for all data from the flow to be loaded into its buffer.
 After all data is in the buffer, the transformation function
 is executed for the complete data and the result posted into the targets.

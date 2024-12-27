@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10172
+weight: 10163
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MergeJoin`3">
-  <h1 id="ETLBox_DataFlow_MergeJoin_3" data-uid="ETLBox.DataFlow.MergeJoin`3" class="text-break">Class MergeJoin&lt;TInput1, TInput2, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_MergeJoin_3" data-uid="ETLBox.DataFlow.MergeJoin`3" class="text-break">Class MergeJoin&lt;TInput1, TInput2, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
 Each row from the left join target will be merged with a row from the right join target.
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>

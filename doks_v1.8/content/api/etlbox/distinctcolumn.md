@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10211
+weight: 10203
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DistinctColumn">
-  <h1 id="ETLBox_DistinctColumn" data-uid="ETLBox.DistinctColumn" class="text-break">Class DistinctColumn
-</h1>
+  <h1 id="ETLBox_DistinctColumn" data-uid="ETLBox.DistinctColumn" class="text-break">Class DistinctColumn</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify distinct properties in an object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

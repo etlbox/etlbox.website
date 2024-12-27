@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10176
+weight: 10167
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Network">
-  <h1 id="ETLBox_DataFlow_Network" data-uid="ETLBox.DataFlow.Network" class="text-break">Class Network
-</h1>
+  <h1 id="ETLBox_DataFlow_Network" data-uid="ETLBox.DataFlow.Network" class="text-break">Class Network</h1>
   <div class="markdown level0 summary"><p>The network class allows you execute, monitor and cancel data flows.
 You need to provide at least one start node to run the network. All other linked components
 will be retrieved automatically. If you provide more nodes, the algorithm will determine if

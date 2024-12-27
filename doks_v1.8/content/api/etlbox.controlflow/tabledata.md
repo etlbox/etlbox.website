@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10084
+weight: 10077
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.TableData">
-  <h1 id="ETLBox_ControlFlow_TableData" data-uid="ETLBox.ControlFlow.TableData" class="text-break">Class TableData
-</h1>
+  <h1 id="ETLBox_ControlFlow_TableData" data-uid="ETLBox.ControlFlow.TableData" class="text-break">Class TableData</h1>
   <div class="markdown level0 summary"><p>Defines a list of rows that can be inserted into a table</p>
 </div>
   <div class="markdown level0 conceptual"></div>

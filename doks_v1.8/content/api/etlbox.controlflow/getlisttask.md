@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10065
+weight: 10058
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.GetListTask">
-  <h1 id="ETLBox_ControlFlow_GetListTask" data-uid="ETLBox.ControlFlow.GetListTask" class="text-break">Class GetListTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_GetListTask" data-uid="ETLBox.ControlFlow.GetListTask" class="text-break">Class GetListTask</h1>
   <div class="markdown level0 summary"><p>Returns a list of all user databases on the server. Make sure to connect with the correct permissions!
 In MySql, this will return a list of all schemas.</p>
 </div>

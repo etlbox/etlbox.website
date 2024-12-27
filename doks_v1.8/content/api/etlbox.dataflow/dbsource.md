@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10141
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbSource">
-  <h1 id="ETLBox_DataFlow_DbSource" data-uid="ETLBox.DataFlow.DbSource" class="text-break">Class DbSource
-</h1>
+  <h1 id="ETLBox_DataFlow_DbSource" data-uid="ETLBox.DataFlow.DbSource" class="text-break">Class DbSource</h1>
   <div class="markdown level0 summary"><p>A database source defines either a table or sql query that returns data from a database.
 Multiple database are supported. Use the corresponding connection manager that fits to your database.</p>
 </div>
@@ -334,10 +333,8 @@ Multiple database are supported. Use the corresponding connection manager that f
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_DbSource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">SqlConnectionManager connMan = new SqlConnectionManager("Data Source=localhost");
-                                                                                   DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, "dbo.table");</code>
-</pre>
+  <pre><code class="lang-csharp">SqlConnectionManager connMan = new SqlConnectionManager("Data Source=localhost");
+DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, "dbo.table");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_DbSource__ctor_" data-uid="ETLBox.DataFlow.DbSource.#ctor*"></a>

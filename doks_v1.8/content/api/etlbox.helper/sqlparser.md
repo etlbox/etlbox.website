@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10235
+weight: 10227
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.SqlParser">
-  <h1 id="ETLBox_Helper_SqlParser" data-uid="ETLBox.Helper.SqlParser" class="text-break">Class SqlParser
-</h1>
+  <h1 id="ETLBox_Helper_SqlParser" data-uid="ETLBox.Helper.SqlParser" class="text-break">Class SqlParser</h1>
   <div class="markdown level0 summary"><p>Helper class for parsing sql statements</p>
 </div>
   <div class="markdown level0 conceptual"></div>

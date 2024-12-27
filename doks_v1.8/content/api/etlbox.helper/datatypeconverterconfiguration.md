@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10226
+weight: 10218
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DataTypeConverterConfiguration">
-  <h1 id="ETLBox_Helper_DataTypeConverterConfiguration" data-uid="ETLBox.Helper.DataTypeConverterConfiguration" class="text-break">Class DataTypeConverterConfiguration
-</h1>
+  <h1 id="ETLBox_Helper_DataTypeConverterConfiguration" data-uid="ETLBox.Helper.DataTypeConverterConfiguration" class="text-break">Class DataTypeConverterConfiguration</h1>
   <div class="markdown level0 summary"><p>Conversion settings for the DataTypeConverter.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

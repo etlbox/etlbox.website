@@ -6,24 +6,15 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10178
+weight: 10169
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Pivot`1">
-  <h1 id="ETLBox_DataFlow_Pivot_1" data-uid="ETLBox.DataFlow.Pivot`1" class="text-break">Class Pivot&lt;TInput&gt;
-</h1>
-  <div class="markdown level0 summary"><h2 id="use-the-pivot-transformation-to-pivot-your-dataexample">Use the Pivot transformation to pivot your data.
-Example:</h2>
-<h2 id="monthmonthvaluejan100feb200mar300">Month,MonthValue
-Jan,100
-Feb,200
-Mar,300</h2>
-<h2 id="will-become">will become</h2>
-<h2 id="janfebmar100200300">Jan,Feb,Mar
-100,200,300</h2>
+  <h1 id="ETLBox_DataFlow_Pivot_1" data-uid="ETLBox.DataFlow.Pivot`1" class="text-break">Class Pivot&lt;TInput&gt;</h1>
+  <div class="markdown level0 summary"><p>Use the Pivot transformation to pivot your data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -258,6 +249,14 @@ Mar,300</h2>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Pivot_1_examples"><strong>Examples</strong></h5>
+  <pre><code class="lang-csharp">Month,MonthValue
+Jan,100
+Feb,200
+Mar,300
+will become
+Jan,Feb,Mar
+100,200,300</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Pivot_1__ctor_" data-uid="ETLBox.DataFlow.Pivot`1.#ctor*"></a>
@@ -274,9 +273,65 @@ Mar,300</h2>
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_Pivot_1_ColumnNameGeneration_" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGeneration*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_ColumnNameGeneration" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameGeneration">ColumnNameGeneration</h4>
-  <div class="markdown level1 summary"><p>If set, this function is used to generate the column name for the pivoted columns.
+  <a id="ETLBox_DataFlow_Pivot_1_AddGrandTotalColumn_" data-uid="ETLBox.DataFlow.Pivot`1.AddGrandTotalColumn*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_AddGrandTotalColumn" data-uid="ETLBox.DataFlow.Pivot`1.AddGrandTotalColumn">AddGrandTotalColumn</h4>
+  <div class="markdown level1 summary"><p>Adds a grand total for each column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool AddGrandTotalColumn { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Pivot_1_AddGrandTotalRows_" data-uid="ETLBox.DataFlow.Pivot`1.AddGrandTotalRows*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_AddGrandTotalRows" data-uid="ETLBox.DataFlow.Pivot`1.AddGrandTotalRows">AddGrandTotalRows</h4>
+  <div class="markdown level1 summary"><p>Adds a grand total for each column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool AddGrandTotalRows { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Pivot_1_ColumnNameCombination_" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameCombination*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_ColumnNameCombination" data-uid="ETLBox.DataFlow.Pivot`1.ColumnNameCombination">ColumnNameCombination</h4>
+  <div class="markdown level1 summary"><p>If set, this function is used to combine the column name for the pivoted columns.
 Otherwise, the output will concatenate the names of the pivot columns.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -284,7 +339,7 @@ Otherwise, the output will concatenate the names of the pivot columns.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public Func<Dictionary<string, object>, string> ColumnNameGeneration { get; set; }
+    public Func<Dictionary<string, object>, string> ColumnNameCombination { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -303,9 +358,71 @@ Otherwise, the output will concatenate the names of the pivot columns.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Pivot_1_CustomValueAggregation_" data-uid="ETLBox.DataFlow.Pivot`1.CustomValueAggregation*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_CustomValueAggregation" data-uid="ETLBox.DataFlow.Pivot`1.CustomValueAggregation">CustomValueAggregation</h4>
+  <div class="markdown level1 summary"><p>Use the ValueAggregationFunc to define how to handle aggregation of the values in the input data.
+Setting this function is not required. If you don't set it, the PivotValues attributes and their
+AggregationMethod (or CustomFunction) will be used to aggregate the values. If set,
+this will override any CustomFunction or AggregationMethod set in the PivotValues attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<Pivot<TInput>.ValueAggregationInput, object> CustomValueAggregation { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot</a>&lt;TInput&gt;.<a class="xref" href="/api/etlbox.dataflow.pivot-1/valueaggregationinput/">ValueAggregationInput</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Pivot_1_FlattenAggregationResults_" data-uid="ETLBox.DataFlow.Pivot`1.FlattenAggregationResults*"></a>
+  <h4 id="ETLBox_DataFlow_Pivot_1_FlattenAggregationResults" data-uid="ETLBox.DataFlow.Pivot`1.FlattenAggregationResults">FlattenAggregationResults</h4>
+  <div class="markdown level1 summary"><p>This only applies if 2 or more PivotValues are specified.
+All PivotValues will be aggregated into an array of PivotAggregationResult objects.
+This function can be used to flatten the array of PivotAggregationResult objects into a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<PivotAggregationResult[], string, object> FlattenAggregationResults { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/pivotaggregationresult">PivotAggregationResult</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Pivot_1_KeepEmptyValues_" data-uid="ETLBox.DataFlow.Pivot`1.KeepEmptyValues*"></a>
   <h4 id="ETLBox_DataFlow_Pivot_1_KeepEmptyValues" data-uid="ETLBox.DataFlow.Pivot`1.KeepEmptyValues">KeepEmptyValues</h4>
-  <div class="markdown level1 summary"><p>If set to true, all rows will contain all columns, even if they are empty (null).</p>
+  <div class="markdown level1 summary"><p>By default, all rows will contain all columns, even if they are empty (null).
+Set this to false, and the dynamic output object won't contain columns that are empty/null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -531,63 +648,6 @@ If you want to avoid grouping, you need to remove these columns from your data b
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.TargetBlock</a></div>
-  <a id="ETLBox_DataFlow_Pivot_1_ValueAggregation_" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregation*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_ValueAggregation" data-uid="ETLBox.DataFlow.Pivot`1.ValueAggregation">ValueAggregation</h4>
-  <div class="markdown level1 summary"><p>When working on non-aggregated input data, only the last values is used in the Pivot.
-Use the ValueAggregationFunc to define how to handle aggregation of the values in the input data.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<Pivot<TInput>.PivotDuplicate, object> ValueAggregation { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot</a>&lt;TInput&gt;.<a class="xref" href="ETLBox.DataFlow.Pivot-1.PivotDuplicate.html">PivotDuplicate</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_Pivot_1_ValueCombination_" data-uid="ETLBox.DataFlow.Pivot`1.ValueCombination*"></a>
-  <h4 id="ETLBox_DataFlow_Pivot_1_ValueCombination" data-uid="ETLBox.DataFlow.Pivot`1.ValueCombination">ValueCombination</h4>
-  <div class="markdown level1 summary"><p>If multiple values for a pivot column are found, this function is used to combine the values.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Func<Dictionary<string, object>, object> ValueCombination { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_DataFlow_Pivot_1_CheckParameter_" data-uid="ETLBox.DataFlow.Pivot`1.CheckParameter*"></a>

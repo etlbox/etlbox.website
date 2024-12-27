@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.cosmosdb"
-weight: 10026
+weight: 10019
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1">
-  <h1 id="ETLBox_Azure_CosmosDb_CosmosSource_1" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1" class="text-break">Class CosmosSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Azure_CosmosDb_CosmosSource_1" data-uid="ETLBox.Azure.CosmosDb.CosmosSource`1" class="text-break">Class CosmosSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Couchbase</p>
 </div>
   <div class="markdown level0 conceptual"></div>

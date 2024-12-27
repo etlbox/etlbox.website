@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10343
+weight: 10327
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Settings">
-  <h1 id="ETLBox_Settings" data-uid="ETLBox.Settings" class="text-break">Class Settings
-</h1>
+  <h1 id="ETLBox_Settings" data-uid="ETLBox.Settings" class="text-break">Class Settings</h1>
   <div class="markdown level0 summary"><p>Contains static information which affects all Dataflow tasks in ETLBox.
 Here you can set the threshold value when information about processed records should appear.</p>
 </div>

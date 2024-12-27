@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10363
+weight: 10347
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlSource">
-  <h1 id="ETLBox_Xml_XmlSource" data-uid="ETLBox.Xml.XmlSource" class="text-break">Class XmlSource
-</h1>
+  <h1 id="ETLBox_Xml_XmlSource" data-uid="ETLBox.Xml.XmlSource" class="text-break">Class XmlSource</h1>
   <div class="markdown level0 summary"><p>Reads data from a xml source. This can be any http resource or a file.
 By default, data is pulled via httpclient. Use the ResourceType property to read data from a file.</p>
 </div>
@@ -388,9 +387,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Xml_XmlSource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">XmlSource&lt;POCO&gt; source = new XmlSource&lt;POCO&gt;("https://test.com");</code>
-</pre>
+  <pre><code class="lang-csharp">XmlSource&lt;POCO&gt; source = new XmlSource&lt;POCO&gt;("https://test.com");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Xml_XmlSource__ctor_" data-uid="ETLBox.Xml.XmlSource.#ctor*"></a>

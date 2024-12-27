@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.apache.kafka"
-weight: 10020
+weight: 10013
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Apache.Kafka.KafkaSource`1">
-  <h1 id="ETLBox_Apache_Kafka_KafkaSource_1" data-uid="ETLBox.Apache.Kafka.KafkaSource`1" class="text-break">Class KafkaSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Apache_Kafka_KafkaSource_1" data-uid="ETLBox.Apache.Kafka.KafkaSource`1" class="text-break">Class KafkaSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Apache Kafka.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

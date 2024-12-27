@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10119
+weight: 10110
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ColumnTransformation`1">
-  <h1 id="ETLBox_DataFlow_ColumnTransformation_1" data-uid="ETLBox.DataFlow.ColumnTransformation`1" class="text-break">Class ColumnTransformation&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_ColumnTransformation_1" data-uid="ETLBox.DataFlow.ColumnTransformation`1" class="text-break">Class ColumnTransformation&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Allows you to rename, remove or reorders the columns/properties of your ingoing data.
 This transformation works with objects and dynamic ExpandoObjects as input data type.<br>
 It will always convert the input type into an ExpandoObject as output.</p>
@@ -454,7 +453,7 @@ the <a class="xref" href="/api/etlbox/reordercolumn">ReorderColumn</a> attribute
 {{< /rawhtml >}}
 
 ```C#
-    public Func<string, int> ReorderFunc { get; set; }
+    public Func<string, object> ReorderFunc { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -468,7 +467,7 @@ the <a class="xref" href="/api/etlbox/reordercolumn">ReorderColumn</a> attribute
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -658,50 +657,6 @@ If you use the error linking, any erroneous records will be caught and redirecte
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">DataFlowComponent.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a></div>
-  <a id="ETLBox_DataFlow_ColumnTransformation_1_OrderColumns_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.OrderColumns*"></a>
-  <h4 id="ETLBox_DataFlow_ColumnTransformation_1_OrderColumns_System_Collections_Generic_List_System_String__" data-uid="ETLBox.DataFlow.ColumnTransformation`1.OrderColumns(System.Collections.Generic.List{System.String})">OrderColumns(List&lt;string&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public List<string> OrderColumns(List<string> namesInInput)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td><span class="parametername">namesInInput</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_ColumnTransformation_1_PrepareParameterForCheck_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.PrepareParameterForCheck*"></a>
   <h4 id="ETLBox_DataFlow_ColumnTransformation_1_PrepareParameterForCheck" data-uid="ETLBox.DataFlow.ColumnTransformation`1.PrepareParameterForCheck">PrepareParameterForCheck()</h4>
   <div class="markdown level1 summary"></div>

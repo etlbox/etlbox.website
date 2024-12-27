@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10135
+weight: 10126
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomSource">
-  <h1 id="ETLBox_DataFlow_CustomSource" data-uid="ETLBox.DataFlow.CustomSource" class="text-break">Class CustomSource
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomSource" data-uid="ETLBox.DataFlow.CustomSource" class="text-break">Class CustomSource</h1>
   <div class="markdown level0 summary"><p>Define your own source block. This block generates data from a your own custom written functions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -303,23 +302,21 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_CustomSource_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp"> List&lt;string&gt; Data = new List&lt;string&gt;()
-                        {
-                            "Test1", "Test2", "Test3"
-                        };
-                        var source = new CustomSource&lt;MyRow&gt;();
-                        source.ReadFunc = progressCount =&gt;
-                        {
-                            return new MyRow()
-                            {
-                                Id = progressCount + 1,
-                                Value = Data[progressCount]
-                            };    
-                           return result;
-                        };
-                       source.ReadCompletedFunc =  progressCount =&gt; progressCount &gt;= Data.Count;</code>
-</pre>
+  <pre><code class="lang-csharp"> List&lt;string&gt; Data = new List&lt;string&gt;()
+ {
+     "Test1", "Test2", "Test3"
+ };
+ var source = new CustomSource&lt;MyRow&gt;();
+ source.ReadFunc = progressCount =&gt;
+ {
+     return new MyRow()
+     {
+         Id = progressCount + 1,
+         Value = Data[progressCount]
+     };    
+    return result;
+ };
+source.ReadCompletedFunc =  progressCount =&gt; progressCount &gt;= Data.Count;</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_CustomSource__ctor_" data-uid="ETLBox.DataFlow.CustomSource.#ctor*"></a>

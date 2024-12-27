@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10143
+weight: 10134
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1">
-  <h1 id="ETLBox_DataFlow_DataFlowStreamSource_1" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1" class="text-break">Class DataFlowStreamSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DataFlowStreamSource_1" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1" class="text-break">Class DataFlowStreamSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

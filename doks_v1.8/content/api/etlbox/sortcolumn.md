@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10346
+weight: 10330
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SortColumn">
-  <h1 id="ETLBox_SortColumn" data-uid="ETLBox.SortColumn" class="text-break">Class SortColumn
-</h1>
+  <h1 id="ETLBox_SortColumn" data-uid="ETLBox.SortColumn" class="text-break">Class SortColumn</h1>
   <div class="markdown level0 summary"><p>This attribute can be used in the Sort to define the columns by which the data will be sorted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

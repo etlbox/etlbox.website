@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10269
+weight: 10256
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonProperty2JsonPath">
-  <h1 id="ETLBox_Json_JsonProperty2JsonPath" data-uid="ETLBox.Json.JsonProperty2JsonPath" class="text-break">Class JsonProperty2JsonPath
-</h1>
+  <h1 id="ETLBox_Json_JsonProperty2JsonPath" data-uid="ETLBox.Json.JsonProperty2JsonPath" class="text-break">Class JsonProperty2JsonPath</h1>
   <div class="markdown level0 summary"><p>Defines a json property name (SearchPropertyName) to which a json path is applied.
 Output will be written into a property which name is defined via OutputPropertyName.</p>
 </div>

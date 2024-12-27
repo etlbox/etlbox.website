@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10233
+weight: 10225
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.NoFlushStream">
-  <h1 id="ETLBox_Helper_NoFlushStream" data-uid="ETLBox.Helper.NoFlushStream" class="text-break">Class NoFlushStream
-</h1>
+  <h1 id="ETLBox_Helper_NoFlushStream" data-uid="ETLBox.Helper.NoFlushStream" class="text-break">Class NoFlushStream</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

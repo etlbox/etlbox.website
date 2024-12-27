@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10008
+weight: 10001
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AggregationMethod">
-  <h1 id="ETLBox_AggregationMethod" data-uid="ETLBox.AggregationMethod" class="text-break">Enum AggregationMethod
-</h1>
+  <h1 id="ETLBox_AggregationMethod" data-uid="ETLBox.AggregationMethod" class="text-break">Enum AggregationMethod</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_AggregationMethod_Concatenate">Concatenate</td>
         <td></td>
@@ -114,6 +113,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

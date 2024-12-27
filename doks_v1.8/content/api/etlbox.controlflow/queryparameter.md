@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10078
+weight: 10071
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.QueryParameter">
-  <h1 id="ETLBox_ControlFlow_QueryParameter" data-uid="ETLBox.ControlFlow.QueryParameter" class="text-break">Class QueryParameter
-</h1>
+  <h1 id="ETLBox_ControlFlow_QueryParameter" data-uid="ETLBox.ControlFlow.QueryParameter" class="text-break">Class QueryParameter</h1>
   <div class="markdown level0 summary"><p>A parameter used in a sql query</p>
 </div>
   <div class="markdown level0 conceptual"></div>

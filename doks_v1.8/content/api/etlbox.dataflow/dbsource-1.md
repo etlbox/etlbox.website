@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10149
+weight: 10140
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbSource`1">
-  <h1 id="ETLBox_DataFlow_DbSource_1" data-uid="ETLBox.DataFlow.DbSource`1" class="text-break">Class DbSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DbSource_1" data-uid="ETLBox.DataFlow.DbSource`1" class="text-break">Class DbSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A database source defines either a table or sql query that returns data from a database.
 Multiple database are supported. Use the corresponding connection manager that fits to your database.</p>
 </div>

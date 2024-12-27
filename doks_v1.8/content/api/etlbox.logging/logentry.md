@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10278
+weight: 10265
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogEntry">
-  <h1 id="ETLBox_Logging_LogEntry" data-uid="ETLBox.Logging.LogEntry" class="text-break">Class LogEntry
-</h1>
+  <h1 id="ETLBox_Logging_LogEntry" data-uid="ETLBox.Logging.LogEntry" class="text-break">Class LogEntry</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

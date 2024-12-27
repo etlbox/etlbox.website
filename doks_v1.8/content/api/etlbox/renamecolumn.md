@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10334
+weight: 10318
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.RenameColumn">
-  <h1 id="ETLBox_RenameColumn" data-uid="ETLBox.RenameColumn" class="text-break">Class RenameColumn
-</h1>
+  <h1 id="ETLBox_RenameColumn" data-uid="ETLBox.RenameColumn" class="text-break">Class RenameColumn</h1>
   <div class="markdown level0 summary"><p>This property can be used in the ColumnTransformation to rename a column.
 You can rename a property in either your strong typed or dynamic object.</p>
 </div>

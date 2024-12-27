@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10171
+weight: 10162
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.MergeJoin`1">
-  <h1 id="ETLBox_DataFlow_MergeJoin_1" data-uid="ETLBox.DataFlow.MergeJoin`1" class="text-break">Class MergeJoin&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_MergeJoin_1" data-uid="ETLBox.DataFlow.MergeJoin`1" class="text-break">Class MergeJoin&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
 Each row from the left join target will be merged with a row from the right join target.
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
@@ -313,18 +312,16 @@ can be compared with a left or right join.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_MergeJoin_1_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">MergeJoin&lt;InputType1, InputType2, OutputType&gt; join = new MergeJoin&lt;InputType1, InputType2, OutputType&gt;();
-                                                                                                                                                                                                                                                             join.MergeJoinFunc =  (leftRow, rightRow) =&gt; {
-                                                                                                                                                                                                                                                                 return new OutputType()
-                                                                                                                                                                                                                                                                 {
-                                                                                                                                                                                                                                                                     Result = leftRow.Value 1 + rightRow.Value2
-                                                                                                                                                                                                                                                                 };
-                                                                                                                                                                                                                                                             });
-                                                                                                                                                                                                                                                             source1.LinkTo(join.LeftInput);
-                                                                                                                                                                                                                                                             source2.LinkTo(join.RightInput);
-                                                                                                                                                                                                                                                             join.LinkTo(dest);</code>
-</pre>
+  <pre><code class="lang-csharp">MergeJoin&lt;InputType1, InputType2, OutputType&gt; join = new MergeJoin&lt;InputType1, InputType2, OutputType&gt;();
+join.MergeJoinFunc =  (leftRow, rightRow) =&gt; {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_MergeJoin_1__ctor_" data-uid="ETLBox.DataFlow.MergeJoin`1.#ctor*"></a>

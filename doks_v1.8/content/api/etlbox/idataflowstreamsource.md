@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10256
+weight: 10244
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowStreamSource">
-  <h1 id="ETLBox_IDataFlowStreamSource" data-uid="ETLBox.IDataFlowStreamSource" class="text-break">Interface IDataFlowStreamSource
-</h1>
+  <h1 id="ETLBox_IDataFlowStreamSource" data-uid="ETLBox.IDataFlowStreamSource" class="text-break">Interface IDataFlowStreamSource</h1>
   <div class="markdown level0 summary"><p>Implemented by data flow sources that allow reading data from a stream source</p>
 </div>
   <div class="markdown level0 conceptual"></div>

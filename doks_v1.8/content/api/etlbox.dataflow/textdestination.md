@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10195
+weight: 10187
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.TextDestination">
-  <h1 id="ETLBox_DataFlow_TextDestination" data-uid="ETLBox.DataFlow.TextDestination" class="text-break">Class TextDestination
-</h1>
+  <h1 id="ETLBox_DataFlow_TextDestination" data-uid="ETLBox.DataFlow.TextDestination" class="text-break">Class TextDestination</h1>
   <div class="markdown level0 summary"><p>Writes data into a text file. Each line in the output is created by calling the
 <a class="xref" href="/api/etlbox.dataflow/textdestination-1#ETLBox_DataFlow_TextDestination_1_WriteLineFunc">WriteLineFunc</a> or by invoking ToString() on the object.</p>
 </div>

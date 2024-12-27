@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10359
+weight: 10343
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlDestination">
-  <h1 id="ETLBox_Xml_XmlDestination" data-uid="ETLBox.Xml.XmlDestination" class="text-break">Class XmlDestination
-</h1>
+  <h1 id="ETLBox_Xml_XmlDestination" data-uid="ETLBox.Xml.XmlDestination" class="text-break">Class XmlDestination</h1>
   <div class="markdown level0 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -342,10 +341,8 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Xml_XmlDestination_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">XmlDestination&lt;MyRow&gt; dest = new XmlDestination&lt;MyRow&gt;("/path/to/file.json");
-                                                                                                                              dest.Wait(); //Wait for all data to arrive</code>
-</pre>
+  <pre><code class="lang-csharp">XmlDestination&lt;MyRow&gt; dest = new XmlDestination&lt;MyRow&gt;("/path/to/file.json");
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Xml_XmlDestination__ctor_" data-uid="ETLBox.Xml.XmlDestination.#ctor*"></a>

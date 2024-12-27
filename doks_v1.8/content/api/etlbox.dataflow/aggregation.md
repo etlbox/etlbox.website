@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10097
+weight: 10090
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Aggregation">
-  <h1 id="ETLBox_DataFlow_Aggregation" data-uid="ETLBox.DataFlow.Aggregation" class="text-break">Class Aggregation
-</h1>
+  <h1 id="ETLBox_DataFlow_Aggregation" data-uid="ETLBox.DataFlow.Aggregation" class="text-break">Class Aggregation</h1>
   <div class="markdown level0 summary"><p>Aggregates data by the given aggregation methods.
 The aggregate is a partial-blocking transformation - only the aggregation values are stored in separate memory objects.
 When all rows have been processed by the aggregation, the aggregated values are written into the output.</p>
@@ -306,21 +305,19 @@ When all rows have been processed by the aggregation, the aggregated values are 
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_Aggregation_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">public class MyDetailValue
-                       {
-                           public int DetailValue { get; set; }
-                       }
-                       public class MyAggRow
-                       {
-                           [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
-                           public int AggValue { get; set; }
-                       }
-                       var source = new DbSource&lt;MyDetailValue&gt;("DetailValues");
-                       var agg = new Aggregation&lt;MyDetailValue, MyAggRow&gt;();
-                       var dest = new MemoryDestination&lt;MyAggRow&gt;();
-                       source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);</code>
-</pre>
+  <pre><code class="lang-csharp">public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+public class MyAggRow
+{
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
+}
+var source = new DbSource&lt;MyDetailValue&gt;("DetailValues");
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow&gt;();
+var dest = new MemoryDestination&lt;MyAggRow&gt;();
+source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Aggregation__ctor_" data-uid="ETLBox.DataFlow.Aggregation.#ctor*"></a>

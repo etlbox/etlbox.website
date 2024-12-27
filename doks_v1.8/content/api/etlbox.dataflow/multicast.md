@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10175
+weight: 10166
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Multicast">
-  <h1 id="ETLBox_DataFlow_Multicast" data-uid="ETLBox.DataFlow.Multicast" class="text-break">Class Multicast
-</h1>
+  <h1 id="ETLBox_DataFlow_Multicast" data-uid="ETLBox.DataFlow.Multicast" class="text-break">Class Multicast</h1>
   <div class="markdown level0 summary"><p>A multicast broadcast data from the input into two or more outputs.
 Every linked component will receive a copy of the rows that the Multicast receives.
 There is no limit how many target the Multicast can be linked to.</p>
@@ -273,12 +272,10 @@ There is no limit how many target the Multicast can be linked to.</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_Multicast_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">Multicast&lt;MyDataRow&gt; multicast = new Multicast&lt;MyDataRow&gt;();
-                                                                                 multicast.LinkTo(dest1);
-                                                                                 multicast.LinkTo(dest2);
-                                                                                 multicast.LinkTo(dest3);</code>
-</pre>
+  <pre><code class="lang-csharp">Multicast&lt;MyDataRow&gt; multicast = new Multicast&lt;MyDataRow&gt;();
+multicast.LinkTo(dest1);
+multicast.LinkTo(dest2);
+multicast.LinkTo(dest3);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_Multicast__ctor_" data-uid="ETLBox.DataFlow.Multicast.#ctor*"></a>

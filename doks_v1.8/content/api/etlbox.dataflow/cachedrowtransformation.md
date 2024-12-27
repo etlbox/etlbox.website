@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10114
+weight: 10107
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CachedRowTransformation">
-  <h1 id="ETLBox_DataFlow_CachedRowTransformation" data-uid="ETLBox.DataFlow.CachedRowTransformation" class="text-break">Class CachedRowTransformation
-</h1>
+  <h1 id="ETLBox_DataFlow_CachedRowTransformation" data-uid="ETLBox.DataFlow.CachedRowTransformation" class="text-break">Class CachedRowTransformation</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

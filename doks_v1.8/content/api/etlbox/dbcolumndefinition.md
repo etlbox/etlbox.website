@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10206
+weight: 10198
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DbColumnDefinition">
-  <h1 id="ETLBox_DbColumnDefinition" data-uid="ETLBox.DbColumnDefinition" class="text-break">Class DbColumnDefinition
-</h1>
+  <h1 id="ETLBox_DbColumnDefinition" data-uid="ETLBox.DbColumnDefinition" class="text-break">Class DbColumnDefinition</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

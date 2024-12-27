@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10093
+weight: 10086
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Csv.CsvDestination">
-  <h1 id="ETLBox_Csv_CsvDestination" data-uid="ETLBox.Csv.CsvDestination" class="text-break">Class CsvDestination
-</h1>
+  <h1 id="ETLBox_Csv_CsvDestination" data-uid="ETLBox.Csv.CsvDestination" class="text-break">Class CsvDestination</h1>
   <div class="markdown level0 summary"><p>A Csv destination defines a csv file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -327,10 +326,8 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Csv_CsvDestination_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">CsvDestination&lt;MyRow&gt; dest = new CsvDestination&lt;MyRow&gt;("/path/to/file.csv");
-                                                                                                                                  dest.Wait(); //Wait for all data to arrive</code>
-</pre>
+  <pre><code class="lang-csharp">CsvDestination&lt;MyRow&gt; dest = new CsvDestination&lt;MyRow&gt;("/path/to/file.csv");
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Csv_CsvDestination__ctor_" data-uid="ETLBox.Csv.CsvDestination.#ctor*"></a>

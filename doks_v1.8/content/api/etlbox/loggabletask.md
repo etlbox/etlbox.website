@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10274
+weight: 10261
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.LoggableTask">
-  <h1 id="ETLBox_LoggableTask" data-uid="ETLBox.LoggableTask" class="text-break">Class LoggableTask
-</h1>
+  <h1 id="ETLBox_LoggableTask" data-uid="ETLBox.LoggableTask" class="text-break">Class LoggableTask</h1>
   <div class="markdown level0 summary"><p>This class contains properties that are needed for logging.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

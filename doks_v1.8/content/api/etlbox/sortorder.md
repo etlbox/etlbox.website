@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10347
+weight: 10331
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SortOrder">
-  <h1 id="ETLBox_SortOrder" data-uid="ETLBox.SortOrder" class="text-break">Enum SortOrder
-</h1>
+  <h1 id="ETLBox_SortOrder" data-uid="ETLBox.SortOrder" class="text-break">Enum SortOrder</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_SortOrder_Ascending">Ascending</td>
         <td></td>
@@ -46,6 +45,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

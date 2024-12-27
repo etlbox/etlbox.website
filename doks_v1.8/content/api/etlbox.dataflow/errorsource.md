@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10156
+weight: 10147
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ErrorSource">
-  <h1 id="ETLBox_DataFlow_ErrorSource" data-uid="ETLBox.DataFlow.ErrorSource" class="text-break">Class ErrorSource
-</h1>
+  <h1 id="ETLBox_DataFlow_ErrorSource" data-uid="ETLBox.DataFlow.ErrorSource" class="text-break">Class ErrorSource</h1>
   <div class="markdown level0 summary"><p>Works as a source component for any errors. Another component
 can use this source to redirect errors into the error data flow.</p>
 </div>

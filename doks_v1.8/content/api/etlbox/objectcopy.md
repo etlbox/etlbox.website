@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10299
+weight: 10284
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ObjectCopy">
-  <h1 id="ETLBox_ObjectCopy" data-uid="ETLBox.ObjectCopy" class="text-break">Class ObjectCopy
-</h1>
+  <h1 id="ETLBox_ObjectCopy" data-uid="ETLBox.ObjectCopy" class="text-break">Class ObjectCopy</h1>
   <div class="markdown level0 summary"><p>This class exposes cloning functionality for objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10036
+weight: 10029
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.Tables.ExpandObjectTableEntity">
-  <h1 id="ETLBox_Azure_Tables_ExpandObjectTableEntity" data-uid="ETLBox.Azure.Tables.ExpandObjectTableEntity" class="text-break">Class ExpandObjectTableEntity
-</h1>
+  <h1 id="ETLBox_Azure_Tables_ExpandObjectTableEntity" data-uid="ETLBox.Azure.Tables.ExpandObjectTableEntity" class="text-break">Class ExpandObjectTableEntity</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

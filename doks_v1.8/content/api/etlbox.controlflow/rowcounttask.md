@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10081
+weight: 10074
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.RowCountTask">
-  <h1 id="ETLBox_ControlFlow_RowCountTask" data-uid="ETLBox.ControlFlow.RowCountTask" class="text-break">Class RowCountTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_RowCountTask" data-uid="ETLBox.ControlFlow.RowCountTask" class="text-break">Class RowCountTask</h1>
   <div class="markdown level0 summary"><p>Count the row in a table. This task normally uses the  COUNT(*) method (could take some time on big tables).
 You can pass a a filter condition for the count.</p>
 </div>

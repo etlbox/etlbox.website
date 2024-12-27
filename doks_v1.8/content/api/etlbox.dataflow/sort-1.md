@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10191
+weight: 10183
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Sort`1">
-  <h1 id="ETLBox_DataFlow_Sort_1" data-uid="ETLBox.DataFlow.Sort`1" class="text-break">Class Sort&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_Sort_1" data-uid="ETLBox.DataFlow.Sort`1" class="text-break">Class Sort&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10357
+weight: 10341
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.ElementMetaData">
-  <h1 id="ETLBox_Xml_ElementMetaData" data-uid="ETLBox.Xml.ElementMetaData" class="text-break">Class ElementMetaData
-</h1>
+  <h1 id="ETLBox_Xml_ElementMetaData" data-uid="ETLBox.Xml.ElementMetaData" class="text-break">Class ElementMetaData</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

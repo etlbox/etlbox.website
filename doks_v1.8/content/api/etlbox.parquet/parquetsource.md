@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10321
+weight: 10306
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Parquet.ParquetSource">
-  <h1 id="ETLBox_Parquet_ParquetSource" data-uid="ETLBox.Parquet.ParquetSource" class="text-break">Class ParquetSource
-</h1>
+  <h1 id="ETLBox_Parquet_ParquetSource" data-uid="ETLBox.Parquet.ParquetSource" class="text-break">Class ParquetSource</h1>
   <div class="markdown level0 summary"><p>Reads data from a parquet source. While reading the data from the file, data is also asynchronously posted into the targets.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

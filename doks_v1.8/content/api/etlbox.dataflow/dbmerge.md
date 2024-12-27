@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10148
+weight: 10139
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbMerge">
-  <h1 id="ETLBox_DataFlow_DbMerge" data-uid="ETLBox.DataFlow.DbMerge" class="text-break">Class DbMerge
-</h1>
+  <h1 id="ETLBox_DataFlow_DbMerge" data-uid="ETLBox.DataFlow.DbMerge" class="text-break">Class DbMerge</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.cosmosdb"
-weight: 10029
+weight: 10022
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.CosmosDb.ItemActionOption">
-  <h1 id="ETLBox_Azure_CosmosDb_ItemActionOption" data-uid="ETLBox.Azure.CosmosDb.ItemActionOption" class="text-break">Class ItemActionOption
-</h1>
+  <h1 id="ETLBox_Azure_CosmosDb_ItemActionOption" data-uid="ETLBox.Azure.CosmosDb.ItemActionOption" class="text-break">Class ItemActionOption</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

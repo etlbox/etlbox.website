@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10225
+weight: 10217
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DataTypeConverter">
-  <h1 id="ETLBox_Helper_DataTypeConverter" data-uid="ETLBox.Helper.DataTypeConverter" class="text-break">Class DataTypeConverter
-</h1>
+  <h1 id="ETLBox_Helper_DataTypeConverter" data-uid="ETLBox.Helper.DataTypeConverter" class="text-break">Class DataTypeConverter</h1>
   <div class="markdown level0 summary"><p>This class provides static methods and an implementation of IDataTypeConverter that converts
 various sql data types into the right database specific database or into a .NET data type.</p>
 </div>

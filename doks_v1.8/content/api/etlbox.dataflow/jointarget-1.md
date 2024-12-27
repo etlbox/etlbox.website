@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10161
+weight: 10152
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.JoinTarget`1">
-  <h1 id="ETLBox_DataFlow_JoinTarget_1" data-uid="ETLBox.DataFlow.JoinTarget`1" class="text-break">Class JoinTarget&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_JoinTarget_1" data-uid="ETLBox.DataFlow.JoinTarget`1" class="text-break">Class JoinTarget&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A target block that serves as a destination for components that can have multiple inputs.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

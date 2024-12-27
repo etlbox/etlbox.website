@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10121
+weight: 10112
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ConcurrentMemoryDestination`1">
-  <h1 id="ETLBox_DataFlow_ConcurrentMemoryDestination_1" data-uid="ETLBox.DataFlow.ConcurrentMemoryDestination`1" class="text-break">Class ConcurrentMemoryDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_ConcurrentMemoryDestination_1" data-uid="ETLBox.DataFlow.ConcurrentMemoryDestination`1" class="text-break">Class ConcurrentMemoryDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A destination in memory - it will store all data in a BlockingCollection&lt;T&gt;
 The BlockingCollection&lt;T&gt; allows you to access the data concurrently while rows are still written into the target.
 If you don't need to work with your data before the flow finishes, you can use

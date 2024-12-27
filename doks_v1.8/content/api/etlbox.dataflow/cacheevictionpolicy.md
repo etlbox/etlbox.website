@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10115
+weight: 10108
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CacheEvictionPolicy">
-  <h1 id="ETLBox_DataFlow_CacheEvictionPolicy" data-uid="ETLBox.DataFlow.CacheEvictionPolicy" class="text-break">Enum CacheEvictionPolicy
-</h1>
+  <h1 id="ETLBox_DataFlow_CacheEvictionPolicy" data-uid="ETLBox.DataFlow.CacheEvictionPolicy" class="text-break">Enum CacheEvictionPolicy</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_DataFlow_CacheEvictionPolicy_FirstInFirstOut">FirstInFirstOut</td>
         <td></td>
@@ -58,6 +57,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

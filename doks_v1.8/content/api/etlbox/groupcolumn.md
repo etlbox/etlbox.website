@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10221
+weight: 10213
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.GroupColumn">
-  <h1 id="ETLBox_GroupColumn" data-uid="ETLBox.GroupColumn" class="text-break">Class GroupColumn
-</h1>
+  <h1 id="ETLBox_GroupColumn" data-uid="ETLBox.GroupColumn" class="text-break">Class GroupColumn</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify the grouping property for aggregations. The passed column name
 identifies the property in the aggregation output object.</p>
 </div>

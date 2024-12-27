@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sap.hana"
-weight: 10339
+weight: 10323
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Sap.Hana.HanaConnectionManager">
-  <h1 id="ETLBox_Sap_Hana_HanaConnectionManager" data-uid="ETLBox.Sap.Hana.HanaConnectionManager" class="text-break">Class HanaConnectionManager
-</h1>
+  <h1 id="ETLBox_Sap_Hana_HanaConnectionManager" data-uid="ETLBox.Sap.Hana.HanaConnectionManager" class="text-break">Class HanaConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager of a classic ADO.NET connection to a SAP HANA database.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

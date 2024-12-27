@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10251
+weight: 10239
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowSource`1">
-  <h1 id="ETLBox_IDataFlowSource_1" data-uid="ETLBox.IDataFlowSource`1" class="text-break">Interface IDataFlowSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_IDataFlowSource_1" data-uid="ETLBox.IDataFlowSource`1" class="text-break">Interface IDataFlowSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>Shared methods for linking of source components</p>
 </div>
   <div class="markdown level0 conceptual"></div>

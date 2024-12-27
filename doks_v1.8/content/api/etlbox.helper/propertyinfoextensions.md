@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10234
+weight: 10226
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.PropertyInfoExtensions">
-  <h1 id="ETLBox_Helper_PropertyInfoExtensions" data-uid="ETLBox.Helper.PropertyInfoExtensions" class="text-break">Class PropertyInfoExtensions
-</h1>
+  <h1 id="ETLBox_Helper_PropertyInfoExtensions" data-uid="ETLBox.Helper.PropertyInfoExtensions" class="text-break">Class PropertyInfoExtensions</h1>
   <div class="markdown level0 summary"><p>Reflection helper class that allows to directly set values in properties.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

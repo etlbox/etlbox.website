@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10133
+weight: 10124
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomDestination">
-  <h1 id="ETLBox_DataFlow_CustomDestination" data-uid="ETLBox.DataFlow.CustomDestination" class="text-break">Class CustomDestination
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomDestination" data-uid="ETLBox.DataFlow.CustomDestination" class="text-break">Class CustomDestination</h1>
   <div class="markdown level0 summary"><p>Define your own destination block. This block accepts all data from the flow and sends each incoming row to your custom Action, along with a count of processed rows.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -38,6 +37,9 @@ toc: false
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/customdestination-1#ETLBox_DataFlow_CustomDestination_1_WriteAction">CustomDestination&lt;ExpandoObject&gt;.WriteAction</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/customdestination-1#ETLBox_DataFlow_CustomDestination_1_WriteActionAsync">CustomDestination&lt;ExpandoObject&gt;.WriteActionAsync</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/customdestination-1#ETLBox_DataFlow_CustomDestination_1_CheckParameter">CustomDestination&lt;ExpandoObject&gt;.CheckParameter()</a>
@@ -264,11 +266,9 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_DataFlow_CustomDestination_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">List&lt;MyRow&gt; rows = new List&lt;MyRow&gt;();
-                       var dest = new CustomDestination&lt;MyRow&gt;();
-                       dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);</code>
-</pre>
+  <pre><code class="lang-csharp">List&lt;MyRow&gt; rows = new List&lt;MyRow&gt;();
+var dest = new CustomDestination&lt;MyRow&gt;();
+dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_DataFlow_CustomDestination__ctor_" data-uid="ETLBox.DataFlow.CustomDestination.#ctor*"></a>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.mariadb"
-weight: 10285
+weight: 10271
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.MariaDb.MariaDbConnectionString">
-  <h1 id="ETLBox_MariaDb_MariaDbConnectionString" data-uid="ETLBox.MariaDb.MariaDbConnectionString" class="text-break">Class MariaDbConnectionString
-</h1>
+  <h1 id="ETLBox_MariaDb_MariaDbConnectionString" data-uid="ETLBox.MariaDb.MariaDbConnectionString" class="text-break">Class MariaDbConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string to a MySql server in an object.
 Internally the MySqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

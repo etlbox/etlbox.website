@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10076
+weight: 10069
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.ProcedureDefinition">
-  <h1 id="ETLBox_ControlFlow_ProcedureDefinition" data-uid="ETLBox.ControlFlow.ProcedureDefinition" class="text-break">Class ProcedureDefinition
-</h1>
+  <h1 id="ETLBox_ControlFlow_ProcedureDefinition" data-uid="ETLBox.ControlFlow.ProcedureDefinition" class="text-break">Class ProcedureDefinition</h1>
   <div class="markdown level0 summary"><p>Defines a procedure</p>
 </div>
   <div class="markdown level0 conceptual"></div>

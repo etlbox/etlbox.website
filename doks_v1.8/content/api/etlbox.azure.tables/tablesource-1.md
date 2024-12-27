@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10039
+weight: 10032
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.Tables.TableSource`1">
-  <h1 id="ETLBox_Azure_Tables_TableSource_1" data-uid="ETLBox.Azure.Tables.TableSource`1" class="text-break">Class TableSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Azure_Tables_TableSource_1" data-uid="ETLBox.Azure.Tables.TableSource`1" class="text-break">Class TableSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Couchbase</p>
 </div>
   <div class="markdown level0 conceptual"></div>

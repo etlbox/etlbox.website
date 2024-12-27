@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10147
+weight: 10138
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbMerge`1">
-  <h1 id="ETLBox_DataFlow_DbMerge_1" data-uid="ETLBox.DataFlow.DbMerge`1" class="text-break">Class DbMerge&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_DbMerge_1" data-uid="ETLBox.DataFlow.DbMerge`1" class="text-break">Class DbMerge&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Inserts, updates and (optionally) deletes data in database target.
 Before the Merge is executed, all data from the destination is read into memory.
 A delta table is generated that stores information if a records was inserted, updated, deleted or hasn't been touched (existed).</p>

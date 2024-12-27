@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10057
+weight: 10050
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropIndexTask">
-  <h1 id="ETLBox_ControlFlow_DropIndexTask" data-uid="ETLBox.ControlFlow.DropIndexTask" class="text-break">Class DropIndexTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_DropIndexTask" data-uid="ETLBox.ControlFlow.DropIndexTask" class="text-break">Class DropIndexTask</h1>
   <div class="markdown level0 summary"><p>Drops an index. Use DropIfExists to drop an index only if it exists.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

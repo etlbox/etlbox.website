@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10137
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DbDestination">
-  <h1 id="ETLBox_DataFlow_DbDestination" data-uid="ETLBox.DataFlow.DbDestination" class="text-break">Class DbDestination
-</h1>
+  <h1 id="ETLBox_DataFlow_DbDestination" data-uid="ETLBox.DataFlow.DbDestination" class="text-break">Class DbDestination</h1>
   <div class="markdown level0 summary"><p>A DbDestination represents a database table where ingoing data from the flow is written into.
 Inserts are done in batches (using Bulk insert or an equivalent INSERT statement).</p>
 </div>

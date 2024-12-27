@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.cosmosdb"
-weight: 10024
+weight: 10017
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.CosmosDb.CosmosDestination`1">
-  <h1 id="ETLBox_Azure_CosmosDb_CosmosDestination_1" data-uid="ETLBox.Azure.CosmosDb.CosmosDestination`1" class="text-break">Class CosmosDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Azure_CosmosDb_CosmosDestination_1" data-uid="ETLBox.Azure.CosmosDb.CosmosDestination`1" class="text-break">Class CosmosDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for inserting data into a couchbase bucket.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

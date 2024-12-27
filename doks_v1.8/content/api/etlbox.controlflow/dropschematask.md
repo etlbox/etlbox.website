@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10059
+weight: 10052
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.DropSchemaTask">
-  <h1 id="ETLBox_ControlFlow_DropSchemaTask" data-uid="ETLBox.ControlFlow.DropSchemaTask" class="text-break">Class DropSchemaTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_DropSchemaTask" data-uid="ETLBox.ControlFlow.DropSchemaTask" class="text-break">Class DropSchemaTask</h1>
   <div class="markdown level0 summary"><p>Drops a schema. Use DropIfExists to drop a schema only if it exists. For MySql or MariaDb, use the DropDatabase task instead.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

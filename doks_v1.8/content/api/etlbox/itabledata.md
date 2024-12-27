@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10264
+weight: 10251
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ITableData">
-  <h1 id="ETLBox_ITableData" data-uid="ETLBox.ITableData" class="text-break">Interface ITableData
-</h1>
+  <h1 id="ETLBox_ITableData" data-uid="ETLBox.ITableData" class="text-break">Interface ITableData</h1>
   <div class="markdown level0 summary"><p>A list of rows and a column mapping ready for bulk insert</p>
 </div>
   <div class="markdown level0 conceptual"></div>

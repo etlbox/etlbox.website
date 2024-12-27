@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.snowflake"
-weight: 10344
+weight: 10328
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager">
-  <h1 id="ETLBox_Snowflake_SnowflakeConnectionManager" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager" class="text-break">Class SnowflakeConnectionManager
-</h1>
+  <h1 id="ETLBox_Snowflake_SnowflakeConnectionManager" data-uid="ETLBox.Snowflake.SnowflakeConnectionManager" class="text-break">Class SnowflakeConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager that describes an ETLBox connection to a Snowflake Server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

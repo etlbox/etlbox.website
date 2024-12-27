@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10085
+weight: 10078
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.TableDefinition">
-  <h1 id="ETLBox_ControlFlow_TableDefinition" data-uid="ETLBox.ControlFlow.TableDefinition" class="text-break">Class TableDefinition
-</h1>
+  <h1 id="ETLBox_ControlFlow_TableDefinition" data-uid="ETLBox.ControlFlow.TableDefinition" class="text-break">Class TableDefinition</h1>
   <div class="markdown level0 summary"><p>A definition for a table in a database</p>
 </div>
   <div class="markdown level0 conceptual"></div>

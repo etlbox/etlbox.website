@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10265
+weight: 10252
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.ExpandoJsonPathConverter">
-  <h1 id="ETLBox_Json_ExpandoJsonPathConverter" data-uid="ETLBox.Json.ExpandoJsonPathConverter" class="text-break">Class ExpandoJsonPathConverter
-</h1>
+  <h1 id="ETLBox_Json_ExpandoJsonPathConverter" data-uid="ETLBox.Json.ExpandoJsonPathConverter" class="text-break">Class ExpandoJsonPathConverter</h1>
   <div class="markdown level0 summary"><p>Allows to pass JsonPath string that are applied for particular property names - this will work one on the first level
 of the</p>
 </div>

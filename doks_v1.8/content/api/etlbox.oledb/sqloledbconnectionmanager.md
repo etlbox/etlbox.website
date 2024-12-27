@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.oledb"
-weight: 10314
+weight: 10299
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.OleDb.SqlOleDbConnectionManager">
-  <h1 id="ETLBox_OleDb_SqlOleDbConnectionManager" data-uid="ETLBox.OleDb.SqlOleDbConnectionManager" class="text-break">Class SqlOleDbConnectionManager
-</h1>
+  <h1 id="ETLBox_OleDb_SqlOleDbConnectionManager" data-uid="ETLBox.OleDb.SqlOleDbConnectionManager" class="text-break">Class SqlOleDbConnectionManager</h1>
   <div class="markdown level0 summary"><p>Sql Server Connection manager for an OleDb connection to Sql Server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

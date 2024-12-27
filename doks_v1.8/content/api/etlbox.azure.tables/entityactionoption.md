@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10034
+weight: 10027
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.Tables.EntityActionOption">
-  <h1 id="ETLBox_Azure_Tables_EntityActionOption" data-uid="ETLBox.Azure.Tables.EntityActionOption" class="text-break">Class EntityActionOption
-</h1>
+  <h1 id="ETLBox_Azure_Tables_EntityActionOption" data-uid="ETLBox.Azure.Tables.EntityActionOption" class="text-break">Class EntityActionOption</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

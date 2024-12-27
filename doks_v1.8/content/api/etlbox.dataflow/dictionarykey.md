@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10153
+weight: 10144
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DictionaryKey">
-  <h1 id="ETLBox_DataFlow_DictionaryKey" data-uid="ETLBox.DataFlow.DictionaryKey" class="text-break">Class DictionaryKey
-</h1>
+  <h1 id="ETLBox_DataFlow_DictionaryKey" data-uid="ETLBox.DataFlow.DictionaryKey" class="text-break">Class DictionaryKey</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

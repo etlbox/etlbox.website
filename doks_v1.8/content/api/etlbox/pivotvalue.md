@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10324
+weight: 10309
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.PivotValue">
-  <h1 id="ETLBox_PivotValue" data-uid="ETLBox.PivotValue" class="text-break">Class PivotValue
-</h1>
+  <h1 id="ETLBox_PivotValue" data-uid="ETLBox.PivotValue" class="text-break">Class PivotValue</h1>
   <div class="markdown level0 summary"><p>This attribute is used to identify the colunns used for pivoting data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -175,8 +174,118 @@ public sealed class PivotValue : Attribute
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_PivotValue__ctor_" data-uid="ETLBox.PivotValue.#ctor*"></a>
+  <h4 id="ETLBox_PivotValue__ctor_ETLBox_AggregationMethod_" data-uid="ETLBox.PivotValue.#ctor(ETLBox.AggregationMethod)">PivotValue(AggregationMethod)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public PivotValue(AggregationMethod aggregationMethod)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/aggregationmethod">AggregationMethod</a></td>
+        <td><span class="parametername">aggregationMethod</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_PivotValue_AggregationMethod_" data-uid="ETLBox.PivotValue.AggregationMethod*"></a>
+  <h4 id="ETLBox_PivotValue_AggregationMethod" data-uid="ETLBox.PivotValue.AggregationMethod">AggregationMethod</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public AggregationMethod AggregationMethod { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/aggregationmethod">AggregationMethod</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_PivotValue_CustomFunction_" data-uid="ETLBox.PivotValue.CustomFunction*"></a>
+  <h4 id="ETLBox_PivotValue_CustomFunction" data-uid="ETLBox.PivotValue.CustomFunction">CustomFunction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<object, object, object> CustomFunction { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_PivotValue_Predicate_" data-uid="ETLBox.PivotValue.Predicate*"></a>
+  <h4 id="ETLBox_PivotValue_Predicate" data-uid="ETLBox.PivotValue.Predicate">Predicate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Predicate<object> Predicate { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_PivotValue_PropertyName_" data-uid="ETLBox.PivotValue.PropertyName*"></a>
   <h4 id="ETLBox_PivotValue_PropertyName" data-uid="ETLBox.PivotValue.PropertyName">PropertyName</h4>
   <div class="markdown level1 summary"></div>

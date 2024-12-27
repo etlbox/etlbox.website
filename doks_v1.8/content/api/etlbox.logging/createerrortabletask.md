@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10275
+weight: 10262
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.CreateErrorTableTask">
-  <h1 id="ETLBox_Logging_CreateErrorTableTask" data-uid="ETLBox.Logging.CreateErrorTableTask" class="text-break">Class CreateErrorTableTask
-</h1>
+  <h1 id="ETLBox_Logging_CreateErrorTableTask" data-uid="ETLBox.Logging.CreateErrorTableTask" class="text-break">Class CreateErrorTableTask</h1>
   <div class="markdown level0 summary"><p>This task will create a table that can store exceptions (and information about the affected records)
 that occur during a data flow execution</p>
 </div>

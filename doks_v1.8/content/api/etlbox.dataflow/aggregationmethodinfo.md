@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10098
+weight: 10091
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.AggregationMethodInfo">
-  <h1 id="ETLBox_DataFlow_AggregationMethodInfo" data-uid="ETLBox.DataFlow.AggregationMethodInfo" class="text-break">Class AggregationMethodInfo
-</h1>
+  <h1 id="ETLBox_DataFlow_AggregationMethodInfo" data-uid="ETLBox.DataFlow.AggregationMethodInfo" class="text-break">Class AggregationMethodInfo</h1>
   <div class="markdown level0 summary"><p>Used in the <a class="xref" href="/api/etlbox.dataflow/aggregation">Aggregation</a> transformation - contains information about the current aggregation
 method and properties when invoking the AggregationCondition.</p>
 </div>

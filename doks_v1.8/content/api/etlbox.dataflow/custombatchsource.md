@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10131
+weight: 10122
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomBatchSource">
-  <h1 id="ETLBox_DataFlow_CustomBatchSource" data-uid="ETLBox.DataFlow.CustomBatchSource" class="text-break">Class CustomBatchSource
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomBatchSource" data-uid="ETLBox.DataFlow.CustomBatchSource" class="text-break">Class CustomBatchSource</h1>
   <div class="markdown level0 summary"><p>Define your own source block. This block allows you to read batches of data from your own custom written functions,
 which are then send subsequently into your data flow.</p>
 </div>

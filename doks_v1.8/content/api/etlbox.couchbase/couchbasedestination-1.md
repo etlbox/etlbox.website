@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.couchbase"
-weight: 10088
+weight: 10081
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Couchbase.CouchbaseDestination`1">
-  <h1 id="ETLBox_Couchbase_CouchbaseDestination_1" data-uid="ETLBox.Couchbase.CouchbaseDestination`1" class="text-break">Class CouchbaseDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Couchbase_CouchbaseDestination_1" data-uid="ETLBox.Couchbase.CouchbaseDestination`1" class="text-break">Class CouchbaseDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for inserting data into a couchbase bucket.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

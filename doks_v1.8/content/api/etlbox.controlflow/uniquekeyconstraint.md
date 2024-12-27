@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10087
+weight: 10080
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.UniqueKeyConstraint">
-  <h1 id="ETLBox_ControlFlow_UniqueKeyConstraint" data-uid="ETLBox.ControlFlow.UniqueKeyConstraint" class="text-break">Class UniqueKeyConstraint
-</h1>
+  <h1 id="ETLBox_ControlFlow_UniqueKeyConstraint" data-uid="ETLBox.ControlFlow.UniqueKeyConstraint" class="text-break">Class UniqueKeyConstraint</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

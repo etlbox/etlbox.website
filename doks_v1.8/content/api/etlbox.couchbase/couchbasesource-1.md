@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.couchbase"
-weight: 10090
+weight: 10083
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Couchbase.CouchbaseSource`1">
-  <h1 id="ETLBox_Couchbase_CouchbaseSource_1" data-uid="ETLBox.Couchbase.CouchbaseSource`1" class="text-break">Class CouchbaseSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Couchbase_CouchbaseSource_1" data-uid="ETLBox.Couchbase.CouchbaseSource`1" class="text-break">Class CouchbaseSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Couchbase</p>
 </div>
   <div class="markdown level0 conceptual"></div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10361
+weight: 10345
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlSchemaValidation">
-  <h1 id="ETLBox_Xml_XmlSchemaValidation" data-uid="ETLBox.Xml.XmlSchemaValidation" class="text-break">Class XmlSchemaValidation
-</h1>
+  <h1 id="ETLBox_Xml_XmlSchemaValidation" data-uid="ETLBox.Xml.XmlSchemaValidation" class="text-break">Class XmlSchemaValidation</h1>
   <div class="markdown level0 summary"><p>Validate XML code in your incoming data against a XML schema definition.
 You need to define how the XML string can be read from your data row and the schema definition.
 Rows with a schema that is not valid are send to the error output..</p>
@@ -276,14 +275,12 @@ Rows with a schema that is not valid are send to the error output..</p>
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Xml_XmlSchemaValidation_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">    XmlSchemaValidation&lt;MyXmlRow&gt; schemaValidation = new XmlSchemaValidation&lt;MyXmlRow&gt;();
-                            schemaValidation.XmlSelector = row =&gt; row.Xml;
-                        schemaValidation.XmlSchema = xsdMarkup;
-                        source.LinkTo(schemaValidation);
-                        schemaValidation.LinkTo(dest);
-                        schemaValidation.LinkErrorTo(error);</code>
-</pre>
+  <pre><code class="lang-csharp">    XmlSchemaValidation&lt;MyXmlRow&gt; schemaValidation = new XmlSchemaValidation&lt;MyXmlRow&gt;();
+    schemaValidation.XmlSelector = row =&gt; row.Xml;
+schemaValidation.XmlSchema = xsdMarkup;
+source.LinkTo(schemaValidation);
+schemaValidation.LinkTo(dest);
+schemaValidation.LinkErrorTo(error);</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Xml_XmlSchemaValidation__ctor_" data-uid="ETLBox.Xml.XmlSchemaValidation.#ctor*"></a>

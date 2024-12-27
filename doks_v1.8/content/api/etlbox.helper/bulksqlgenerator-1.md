@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10222
+weight: 10214
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.BulkSqlGenerator`1">
-  <h1 id="ETLBox_Helper_BulkSqlGenerator_1" data-uid="ETLBox.Helper.BulkSqlGenerator`1" class="text-break">Class BulkSqlGenerator&lt;T&gt;
-</h1>
+  <h1 id="ETLBox_Helper_BulkSqlGenerator_1" data-uid="ETLBox.Helper.BulkSqlGenerator`1" class="text-break">Class BulkSqlGenerator&lt;T&gt;</h1>
   <div class="markdown level0 summary"><p>This class creates the necessary sql statements that simulate the missing bulk insert function in various database or Odbc/OleDb connections.
 Normally this will be a insert into with multiple values, but depending on the database type this can be different.</p>
 </div>

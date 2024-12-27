@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10358
+weight: 10342
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Xml.XmlDestination`1">
-  <h1 id="ETLBox_Xml_XmlDestination_1" data-uid="ETLBox.Xml.XmlDestination`1" class="text-break">Class XmlDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Xml_XmlDestination_1" data-uid="ETLBox.Xml.XmlDestination`1" class="text-break">Class XmlDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A Xml destination defines a xml file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

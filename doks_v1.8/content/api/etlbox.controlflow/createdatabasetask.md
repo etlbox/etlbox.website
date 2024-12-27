@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10049
+weight: 10042
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CreateDatabaseTask">
-  <h1 id="ETLBox_ControlFlow_CreateDatabaseTask" data-uid="ETLBox.ControlFlow.CreateDatabaseTask" class="text-break">Class CreateDatabaseTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CreateDatabaseTask" data-uid="ETLBox.ControlFlow.CreateDatabaseTask" class="text-break">Class CreateDatabaseTask</h1>
   <div class="markdown level0 summary"><p>Will create a database if the database doesn't exists. In MySql or MariaDb, this will create a schema.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

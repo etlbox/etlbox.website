@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10181
+weight: 10173
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowDuplication`1">
-  <h1 id="ETLBox_DataFlow_RowDuplication_1" data-uid="ETLBox.DataFlow.RowDuplication`1" class="text-break">Class RowDuplication&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_RowDuplication_1" data-uid="ETLBox.DataFlow.RowDuplication`1" class="text-break">Class RowDuplication&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
 property if you want to duplicate only particular rows.</p>
 </div>

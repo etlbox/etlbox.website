@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.json"
-weight: 10267
+weight: 10254
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Json.JsonDestination">
-  <h1 id="ETLBox_Json_JsonDestination" data-uid="ETLBox.Json.JsonDestination" class="text-break">Class JsonDestination
-</h1>
+  <h1 id="ETLBox_Json_JsonDestination" data-uid="ETLBox.Json.JsonDestination" class="text-break">Class JsonDestination</h1>
   <div class="markdown level0 summary"><p>A Json destination defines a json file where data from the flow is inserted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -324,10 +323,8 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_Json_JsonDestination_examples"><strong>Examples</strong></h5>
-  <pre>
-  <code class="lang-csharp">JsonDestination&lt;MyRow&gt; dest = new JsonDestination&lt;MyRow&gt;("/path/to/file.json");
-                                                                                                                                 dest.Wait(); //Wait for all data to arrive</code>
-</pre>
+  <pre><code class="lang-csharp">JsonDestination&lt;MyRow&gt; dest = new JsonDestination&lt;MyRow&gt;("/path/to/file.json");
+dest.Wait(); //Wait for all data to arrive</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_Json_JsonDestination__ctor_" data-uid="ETLBox.Json.JsonDestination.#ctor*"></a>

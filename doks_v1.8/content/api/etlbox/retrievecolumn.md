@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10337
+weight: 10321
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.RetrieveColumn">
-  <h1 id="ETLBox_RetrieveColumn" data-uid="ETLBox.RetrieveColumn" class="text-break">Class RetrieveColumn
-</h1>
+  <h1 id="ETLBox_RetrieveColumn" data-uid="ETLBox.RetrieveColumn" class="text-break">Class RetrieveColumn</h1>
   <div class="markdown level0 summary"><p>This attribute defines that this property is used to store the lookup value of the property from the object
 used in the Source for a Lookup identified by the given lookupSourcePropertyName.</p>
 </div>

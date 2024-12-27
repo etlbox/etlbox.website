@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10066
+weight: 10059
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.GetTableListTask">
-  <h1 id="ETLBox_ControlFlow_GetTableListTask" data-uid="ETLBox.ControlFlow.GetTableListTask" class="text-break">Class GetTableListTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_GetTableListTask" data-uid="ETLBox.ControlFlow.GetTableListTask" class="text-break">Class GetTableListTask</h1>
   <div class="markdown level0 summary"><p>Returns a list of all tables in the currently connected database.<br>
 Make sure to connect with the correct permissions!</p>
 </div>

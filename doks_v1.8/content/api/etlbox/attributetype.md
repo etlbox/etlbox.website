@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10023
+weight: 10016
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.AttributeType">
-  <h1 id="ETLBox_AttributeType" data-uid="ETLBox.AttributeType" class="text-break">Enum AttributeType
-</h1>
+  <h1 id="ETLBox_AttributeType" data-uid="ETLBox.AttributeType" class="text-break">Enum AttributeType</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox</h6>
@@ -37,7 +36,7 @@ public enum AttributeType
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_AttributeType_AggregateColumn">AggregateColumn</td>
         <td></td>
@@ -127,6 +126,6 @@ public enum AttributeType
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.postgres"
-weight: 10326
+weight: 10310
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Postgres.PostgresConnectionManager">
-  <h1 id="ETLBox_Postgres_PostgresConnectionManager" data-uid="ETLBox.Postgres.PostgresConnectionManager" class="text-break">Class PostgresConnectionManager
-</h1>
+  <h1 id="ETLBox_Postgres_PostgresConnectionManager" data-uid="ETLBox.Postgres.PostgresConnectionManager" class="text-break">Class PostgresConnectionManager</h1>
   <div class="markdown level0 summary"><p>Connection manager that describes an ETLBox connection to a Postgres Server.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

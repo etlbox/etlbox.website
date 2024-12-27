@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10129
+weight: 10120
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.CustomBatchDestination">
-  <h1 id="ETLBox_DataFlow_CustomBatchDestination" data-uid="ETLBox.DataFlow.CustomBatchDestination" class="text-break">Class CustomBatchDestination
-</h1>
+  <h1 id="ETLBox_DataFlow_CustomBatchDestination" data-uid="ETLBox.DataFlow.CustomBatchDestination" class="text-break">Class CustomBatchDestination</h1>
   <div class="markdown level0 summary"><p>Define your own batch destination block.
 This block accepts all data from the flow and will create batches of incoming data
 which can be processed with the WriteBatchAction.</p>

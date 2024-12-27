@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10249
+weight: 10238
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IDataFlowExecutableSource">
-  <h1 id="ETLBox_IDataFlowExecutableSource" data-uid="ETLBox.IDataFlowExecutableSource" class="text-break">Interface IDataFlowExecutableSource
-</h1>
+  <h1 id="ETLBox_IDataFlowExecutableSource" data-uid="ETLBox.IDataFlowExecutableSource" class="text-break">Interface IDataFlowExecutableSource</h1>
   <div class="markdown level0 summary"><p>Shared methods for sources that can be executed</p>
 </div>
   <div class="markdown level0 conceptual"></div>

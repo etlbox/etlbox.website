@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10046
+weight: 10039
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask">
-  <h1 id="ETLBox_ControlFlow_CleanUpSchemaTask" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask" class="text-break">Class CleanUpSchemaTask
-</h1>
+  <h1 id="ETLBox_ControlFlow_CleanUpSchemaTask" data-uid="ETLBox.ControlFlow.CleanUpSchemaTask" class="text-break">Class CleanUpSchemaTask</h1>
   <div class="markdown level0 summary"><p>Tries to remove all database objects from the given schema(s).
 Currently only SqlServer and Oracle support this task.</p>
 </div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10187
+weight: 10179
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.RowTransformation`2">
-  <h1 id="ETLBox_DataFlow_RowTransformation_2" data-uid="ETLBox.DataFlow.RowTransformation`2" class="text-break">Class RowTransformation&lt;TInput, TOutput&gt;
-</h1>
+  <h1 id="ETLBox_DataFlow_RowTransformation_2" data-uid="ETLBox.DataFlow.RowTransformation`2" class="text-break">Class RowTransformation&lt;TInput, TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

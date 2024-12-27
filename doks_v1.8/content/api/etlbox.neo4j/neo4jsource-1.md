@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.neo4j"
-weight: 10296
+weight: 10282
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Neo4j.Neo4jSource`1">
-  <h1 id="ETLBox_Neo4j_Neo4jSource_1" data-uid="ETLBox.Neo4j.Neo4jSource`1" class="text-break">Class Neo4jSource&lt;TOutput&gt;
-</h1>
+  <h1 id="ETLBox_Neo4j_Neo4jSource_1" data-uid="ETLBox.Neo4j.Neo4jSource`1" class="text-break">Class Neo4jSource&lt;TOutput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow source for Couchbase</p>
 </div>
   <div class="markdown level0 conceptual"></div>

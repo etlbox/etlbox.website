@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10228
+weight: 10220
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Helper.DateTimeOffsetHandling">
-  <h1 id="ETLBox_Helper_DateTimeOffsetHandling" data-uid="ETLBox.Helper.DateTimeOffsetHandling" class="text-break">Enum DateTimeOffsetHandling
-</h1>
+  <h1 id="ETLBox_Helper_DateTimeOffsetHandling" data-uid="ETLBox.Helper.DateTimeOffsetHandling" class="text-break">Enum DateTimeOffsetHandling</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
 <h6><strong>Namespace</strong>: ETLBox.Helper</h6>
@@ -36,7 +35,7 @@ toc: false
         <th>Description</th>
       </tr>
     <thead>
-    <tbody>
+    </thead></thead><tbody>
       <tr>
         <td id="ETLBox_Helper_DateTimeOffsetHandling_ToLocal">ToLocal</td>
         <td></td>
@@ -46,6 +45,6 @@ toc: false
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 
 {{< /rawhtml >}}

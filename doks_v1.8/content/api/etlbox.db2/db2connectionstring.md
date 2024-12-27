@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.db2"
-weight: 10205
+weight: 10197
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Db2.Db2ConnectionString">
-  <h1 id="ETLBox_Db2_Db2ConnectionString" data-uid="ETLBox.Db2.Db2ConnectionString" class="text-break">Class Db2ConnectionString
-</h1>
+  <h1 id="ETLBox_Db2_Db2ConnectionString" data-uid="ETLBox.Db2.Db2ConnectionString" class="text-break">Class Db2ConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a connection string to a Db2 server in an object.
 Internally the Db2SqlConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10263
+weight: 10250
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.IMergeableRow">
-  <h1 id="ETLBox_IMergeableRow" data-uid="ETLBox.IMergeableRow" class="text-break">Interface IMergeableRow
-</h1>
+  <h1 id="ETLBox_IMergeableRow" data-uid="ETLBox.IMergeableRow" class="text-break">Interface IMergeableRow</h1>
   <div class="markdown level0 summary"><p>Represents table row in destination database when inserting data using <a class="xref" href="/api/etlbox.dataflow/dbmerge-1">DbMerge&lt;TInput&gt;</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>

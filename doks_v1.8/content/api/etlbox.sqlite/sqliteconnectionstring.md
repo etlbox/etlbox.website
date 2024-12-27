@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.sqlite"
-weight: 10349
+weight: 10333
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.SQLite.SQLiteConnectionString">
-  <h1 id="ETLBox_SQLite_SQLiteConnectionString" data-uid="ETLBox.SQLite.SQLiteConnectionString" class="text-break">Class SQLiteConnectionString
-</h1>
+  <h1 id="ETLBox_SQLite_SQLiteConnectionString" data-uid="ETLBox.SQLite.SQLiteConnectionString" class="text-break">Class SQLiteConnectionString</h1>
   <div class="markdown level0 summary"><p>A helper class for encapsulating a conection string in an object.
 Internally the SQLiteConnectionStringBuilder is used to access the values of the given connection string.</p>
 </div>

@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.logging"
-weight: 10282
+weight: 10268
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Logging.LogSettings">
-  <h1 id="ETLBox_Logging_LogSettings" data-uid="ETLBox.Logging.LogSettings" class="text-break">Class LogSettings
-</h1>
+  <h1 id="ETLBox_Logging_LogSettings" data-uid="ETLBox.Logging.LogSettings" class="text-break">Class LogSettings</h1>
   <div class="markdown level0 summary"><p>Contains static information which affects all ETLBox tasks and general logging behavior for all components.
 Here you can set default connections string, disable the logging for all processes or set the current stage used in your logging configuration.</p>
 </div>

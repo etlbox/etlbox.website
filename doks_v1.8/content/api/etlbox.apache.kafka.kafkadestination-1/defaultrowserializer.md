@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.apache.kafka.kafkadestination`1"
-weight: 10016
+weight: 10009
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1.DefaultRowSerializer">
-  <h1 id="ETLBox_Apache_Kafka_KafkaDestination_1_DefaultRowSerializer" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1.DefaultRowSerializer" class="text-break">Class KafkaDestination&lt;TInput&gt;.DefaultRowSerializer
-</h1>
+  <h1 id="ETLBox_Apache_Kafka_KafkaDestination_1_DefaultRowSerializer" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1.DefaultRowSerializer" class="text-break">Class KafkaDestination&lt;TInput&gt;.DefaultRowSerializer</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

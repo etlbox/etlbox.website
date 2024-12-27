@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.apache.kafka"
-weight: 10017
+weight: 10010
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1">
-  <h1 id="ETLBox_Apache_Kafka_KafkaDestination_1" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1" class="text-break">Class KafkaDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Apache_Kafka_KafkaDestination_1" data-uid="ETLBox.Apache.Kafka.KafkaDestination`1" class="text-break">Class KafkaDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for MongoDb.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

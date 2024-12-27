@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.tables"
-weight: 10037
+weight: 10030
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Azure.Tables.TableDestination`1">
-  <h1 id="ETLBox_Azure_Tables_TableDestination_1" data-uid="ETLBox.Azure.Tables.TableDestination`1" class="text-break">Class TableDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Azure_Tables_TableDestination_1" data-uid="ETLBox.Azure.Tables.TableDestination`1" class="text-break">Class TableDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A data flow destination for inserting data into a couchbase bucket.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

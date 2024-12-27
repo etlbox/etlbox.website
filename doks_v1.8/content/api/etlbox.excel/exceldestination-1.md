@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10215
+weight: 10207
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Excel.ExcelDestination`1">
-  <h1 id="ETLBox_Excel_ExcelDestination_1" data-uid="ETLBox.Excel.ExcelDestination`1" class="text-break">Class ExcelDestination&lt;TInput&gt;
-</h1>
+  <h1 id="ETLBox_Excel_ExcelDestination_1" data-uid="ETLBox.Excel.ExcelDestination`1" class="text-break">Class ExcelDestination&lt;TInput&gt;</h1>
   <div class="markdown level0 summary"><p>A Excel destination creates an excel files with formatted data. The output will look similar to a csv file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>

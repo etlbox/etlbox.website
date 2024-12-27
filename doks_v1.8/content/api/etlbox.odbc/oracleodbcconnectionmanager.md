@@ -6,15 +6,14 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10307
+weight: 10292
 toc: false
 ---
 
 {{< rawhtml >}}
 
             <article class="content wrap" id="_content" data-uid="ETLBox.Odbc.OracleOdbcConnectionManager">
-  <h1 id="ETLBox_Odbc_OracleOdbcConnectionManager" data-uid="ETLBox.Odbc.OracleOdbcConnectionManager" class="text-break">Class OracleOdbcConnectionManager
-</h1>
+  <h1 id="ETLBox_Odbc_OracleOdbcConnectionManager" data-uid="ETLBox.Odbc.OracleOdbcConnectionManager" class="text-break">Class OracleOdbcConnectionManager</h1>
   <div class="markdown level0 summary"><p>Oracle Connection manager for an ODBC connection.
 ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
 <pre><code class="lang-csharp">insert into (...) values (..),(..),(..) statements.</code></pre>
