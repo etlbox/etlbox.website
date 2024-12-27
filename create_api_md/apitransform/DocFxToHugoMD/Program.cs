@@ -70,7 +70,7 @@ Below is an overview of all classes in each namespace.";
                 return true;
             string[] filterListStartsWith = new[]
             {
-                "ETLBox.EntityFramework"
+                "EFBox"
             };
             foreach (var startWith in filterListStartsWith)
                 if (fileName.StartsWith(startWith)) return true;

@@ -83,6 +83,7 @@ namespace DocFxToHugoMD
         private void TryParseTitle(string linetocheck) {
             if (linetocheck.StartsWith(@"<h1")) {
                 Title = linetocheck.Substring(linetocheck.IndexOf(">") + 1);
+                Title = Title.Replace("</h1>", "");
                 Title = ReplaceBrackets(Title);
             }
         }
@@ -122,7 +123,11 @@ namespace DocFxToHugoMD
             {
                 "ETLBox.Sap.Hana.HanaConnectionString.html",
                 "etlbox.sap.hana/hanaconnectionstring"
-            }
+            },
+            {
+                "ETLBox.DataFlow.Pivot-1.ValueAggregationInput.html",                
+                "etlbox.dataflow.pivot-1/valueaggregationinput/"
+            },
         };
         private string AdjustLinks(string line) {
             if (!line.Contains(" href=")) return line;            
