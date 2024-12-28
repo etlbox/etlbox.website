@@ -1,7 +1,44 @@
 const https = require('https');
 
 // List of NuGet packages
-const packages = ['ETLBox', 'ETLBox.SqlServer', 'ETLBox.Json'];
+const packages = [
+  'EFBox',
+  'EFBox.MySql',
+  'EFBox.Postgres',
+  'EFBox.SqlServer',
+  'ETLBox',
+  'ETLBox.Analysis',
+  'ETLBox.AnalysisServices',
+  'ETLBox.Apache.Kafka',
+  'ETLBox.Azure.CosmosDb',
+  'ETLBox.Azure.ServiceBus',
+  'ETLBox.Azure.Tables',
+  'ETLBox.Couchbase',
+  'ETLBox.Csv',
+  'ETLBox.Db2',
+  'ETLBox.EntityFramework',
+  'ETLBox.EntityFramework.MySql',
+  'ETLBox.EntityFramework.SqlServer',
+  'ETLBox.Excel',
+  'ETLBox.Json',
+  'ETLBox.Logging',
+  'ETLBox.MariaDb',
+  'ETLBox.MongoDb',
+  'ETLBox.MySql',
+  'ETLBox.Neo4j',
+  'ETLBox.Odbc',
+  'ETLBox.OleDb',
+  'ETLBox.Oracle',
+  'ETLBox.Parquet',
+  'ETLBox.Postgres',
+  'ETLBox.Redis',
+  'ETLBox.Sap.Ase',
+  'ETLBox.Sap.Hana',
+  'ETLBox.Snowflake',
+  'ETLBox.SQLite',
+  'ETLBox.SqlServer',
+  'ETLBox.Xml'
+];
 
 // Cache variable and expiration time (e.g., 12 hours)
 let cache = { downloads: 0, packageCount: 0, timestamp: 0 };
