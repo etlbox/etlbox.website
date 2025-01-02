@@ -402,6 +402,65 @@ foreach (var row in dest.Data)
 //Order:1234 Name:Jim Id:2
 ```
 
+### Removing Unmatched Rows
 
+The **`RemoveUnmatchedRows`** property in the `LookupTransformation` makes it easy to filter out rows that don’t have a match in the lookup source. When this option is enabled, only rows with valid matches are included in the output.
 
+#### Example
 
+```csharp
+public class InputRow {
+    public int? Id { get; set; }
+    public string Value { get; set; }
+
+}
+
+public class LookupRow {
+    public int? LookupId { get; set; }
+    public string LookupValue { get; set; }
+}
+
+var inputSource = new MemorySource<InputRow>();
+inputSource.DataAsList = new List<InputRow> {
+    new InputRow { Id = 1 },
+    new InputRow { Id = 2 },
+    new InputRow { Id = 3 },
+    new InputRow { Id = 4 },
+};
+
+var lookupSource = new MemorySource<LookupRow>();
+lookupSource.DataAsList = new List<LookupRow> {
+    new LookupRow { LookupId = 1, LookupValue = "Value1" },
+    new LookupRow { LookupId = 3, LookupValue = "Value3" },
+};
+
+var lookup = new LookupTransformation<InputRow, LookupRow>();
+lookup.Source = lookupSource;
+lookup.MatchColumns = new[] {
+    new MatchColumn { LookupSourcePropertyName = "LookupId", InputPropertyName = "Id" }
+};
+lookup.RetrieveColumns = new[] {
+    new RetrieveColumn { LookupSourcePropertyName = "LookupValue", InputPropertyName = "Value" }
+};
+
+// Remove rows without matches
+lookup.RemoveUnmatchedRows = true;
+
+var dest = new MemoryDestination<InputRow>();
+inputSource.LinkTo(lookup);
+lookup.LinkTo(dest);
+Network.Execute(inputSource);
+
+// Output results
+foreach (var row in dest.Data)
+    Console.WriteLine($"Id: {row.Id}, Value: {row.Value}");
+```
+
+#### Output
+
+```
+Id: 1, Value: Value1
+Id: 3, Value: Value3
+```
+
+This is especially useful when you only need rows that successfully match in the lookup, without having to write additional filtering logic.
