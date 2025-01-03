@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-The Xml destination converts data from your data flow into corresponding xml code. Internally, it uses the build-in .NET Xml Serializer.  
+The Xml destination converts data from your data flow into corresponding xml code. Internally, it uses the build-in .NET Xml Serializer.
 
 ## Shared code
 
@@ -107,7 +107,7 @@ Content of file 'SimpleWithPOCO.xml'
 
 ### Configure Xml serialization
 
-This example shows how we can use the System.Xml.Serializer attributes to customize our xml output. 
+This example shows how we can use the System.Xml.Serializer attributes to customize our xml output.
 
 ```C#
 [XmlRoot("Element")]
@@ -179,7 +179,7 @@ Content of file 'POCOWithConfig.xml'
 
 ### Dynamic xml file creation
 
-The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a xml file, without the need to define any strongly typed object first. 
+The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a xml file, without the need to define any strongly typed object first.
 
 ```C#
 public static SqlConnectionString ConnectionString => Config.SqlConnection.ConnectionString("DataFlow");
@@ -244,7 +244,7 @@ Content of file 'TableIntoXml.xml'
 
 ## Writing into multiple files
 
-You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files. 
+You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files.
 
 ```C#
 [XmlRoot("Element")]
@@ -350,7 +350,7 @@ Content of file 'multiple_files_2.xml'
 */
 ```
 
-## Resource types 
+## Resource types
 
 ### Writing into Azure blob storage
 
@@ -512,7 +512,7 @@ Received POST request with body:
 
 ## Utilizing your own stream
 
-All streaming connector support that you provide your own stream. The following example shows how to use your own file stream. 
+All streaming connector support that you provide your own stream. The following example shows how to use your own file stream.
 
 ```C#
 [XmlRoot("Element")]
@@ -576,4 +576,62 @@ Content of file 'OwnStream.xml'
 </Root>
 ---
 */
+```
+
+## Writing Dynamic Objects  with Attributes
+
+This example demonstrates how to write dynamic objects to an XML file, converting specific properties to attributes. The `ShouldConvertDynamicPropToAttribute` predicate is used to determine which properties should be converted to XML attributes.
+
+```C#
+string destFile = @"res/Examples/DynamicWithAttributes.xml";
+
+var source = new MemorySource();
+source.DataAsList.Add(CreateDynamicObject(1, "Test1"));
+source.DataAsList.Add(CreateDynamicObject(2, "Test2"));
+source.DataAsList.Add(CreateDynamicObject(3, "Test3"));
+
+var dest = new XmlDestination(destFile);
+dest.ShouldConvertDynamicPropToAttribute = el =>
+    el.Name == "Id" || el.Name == "Flag";
+dest.Encoding = Encoding.UTF8;
+
+source.LinkTo(dest);
+Network.Execute(source);
+PrintFile(destFile);
+
+/* Output:
+Content of file 'DynamicWithAttributes.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <Dynamic Id="1">
+    <Value>Test1</Value>
+    </Dynamic>
+    <Dynamic Id="2">
+    <Value />
+    <Nested Flag="true">
+        <Number>0.2</Number>
+    </Nested>
+    </Dynamic>
+    <Dynamic Id="3">
+    <Value>Test3</Value>
+    <Nested Flag="true">
+        <Number>0.3</Number>
+    </Nested>
+    </Dynamic>
+</Root>
+---
+*/
+
+private ExpandoObject CreateDynamicObject(int id, string val) {
+    dynamic r = new ExpandoObject();
+    r.Id = id;
+    r.Value = id == 2 ? null : val;
+    if (id >= 2) {
+        r.Nested = new ExpandoObject();
+        r.Nested.Number = id * 0.1m;
+        r.Nested.Flag = true;
+    }
+    return r;
+}
 ```

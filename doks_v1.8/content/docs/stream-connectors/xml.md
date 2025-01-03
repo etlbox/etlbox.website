@@ -17,7 +17,7 @@ If you need to work with xml code, make sure to add the latest {{< link-ext text
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
-If you want to start with example code right away, you will find it in the recipes section for the [XmlSource](/recipes/sources/xmlsource) and [XmlDestination](/recipes/destinations/xmldestination). The components could also be used in other examples.  
+If you want to start with example code right away, you will find it in the recipes section for the [XmlSource](/recipes/sources/xmlsource) and [XmlDestination](/recipes/destinations/xmldestination). The components could also be used in other examples.
 
 ## XmlSource
 
@@ -37,7 +37,7 @@ Let's assume your xml file looks like this:
 </Root>
 ```
 
-Xml reading is based on the Microsoft XmlSerializer (using System.Xml.Serialization). You can make use of the default xml attribute 
+Xml reading is based on the Microsoft XmlSerializer (using System.Xml.Serialization). You can make use of the default xml attribute
 annotations to influence how data is read by the XmlSerializer. For the example xml above, the following code could read the xml file:
 
 ```C#
@@ -92,7 +92,7 @@ public class Category
 }
 
 XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
-//If necessary, you can change the Xml readder settings 
+//If necessary, you can change the Xml readder settings
 //source.XmlReaderSettings = new System.Xml.XmlReaderSettings() { }
 MemoryDestination <MyRow> destination = new MemoryDestination<MyRow>();
 
@@ -109,7 +109,7 @@ foreach (var entry in destination.Data) {
 
 XmlSource does also support the dynamic ExpandoObject. If you want to use it, you can define an ElementName that contains the data you actually
 want to parse - as you normally are not interested in your root element. ETLBox then will look for this Element and parse every occurrence of
-it into an ExpandoObject and send it into the connected components. 
+it into an ExpandoObject and send it into the connected components.
 
 Here is an example. If your xml looks like this:
 
@@ -142,9 +142,9 @@ XmlSource source = new XmlSource("demo2.xml", ResourceType.File)
 
 #### Version 2.7.1 and later
 
-Attributes can be accessed via their name and the prefix `at_` (and text data outside of elements via the prefix `tx_`) If you like to have a different prefix, you can adjust the `AttributePrefixForDynamic` and `TextPrefixForDynamic` properties. If you want to have the same behaviour as in previous ETLBox versions, you can set `AttributePrefixForDynamic = "@"` and `TextPrefixForDynamic = "#"`. 
+Attributes can be accessed via their name and the prefix `at_` (and text data outside of elements via the prefix `tx_`) If you like to have a different prefix, you can adjust the `AttributePrefixForDynamic` and `TextPrefixForDynamic` properties. If you want to have the same behaviour as in previous ETLBox versions, you can set `AttributePrefixForDynamic = "@"` and `TextPrefixForDynamic = "#"`.
 
-Consider the following xml: 
+Consider the following xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -205,7 +205,7 @@ rowTrans.TransformationFunc = row => {
 }
 ```
 
-Instead, we need to convert the relevant `ExpandoObject` into an `IDictionary<string,object>` first: 
+Instead, we need to convert the relevant `ExpandoObject` into an `IDictionary<string,object>` first:
 
 ```C#
 XmlSource<MyRow> source = new XmlSource<MyRow>("example.xml", ResourceType.File);
@@ -250,20 +250,20 @@ source.ResourceType = ResourceType.File;
 source.CollectUnparsedData = true;
 
 source.GetNextUri = meta => {
-    Console.WriteLine(meta.UnparsedData); 
+    Console.WriteLine(meta.UnparsedData);
     return $"res/XmlSource/TodosWithLink_NextPage.xml";
 };
 source.HasNextUri = meta => {
-    Console.WriteLine(meta.UnparsedData); 
+    Console.WriteLine(meta.UnparsedData);
     return true;
 };
 ```
 
 ### Changing element names
 
-If some cases, the source file contains elements with different names which contain our data. If you are using the dynamic approach, you can use the `ElementNameRetrievalFunc` to adjust the element name before reading the next element. The provided `StreamMetaData` object will contain the name of the next element inside the `AdditionalData` property. 
+If some cases, the source file contains elements with different names which contain our data. If you are using the dynamic approach, you can use the `ElementNameRetrievalFunc` to adjust the element name before reading the next element. The provided `StreamMetaData` object will contain the name of the next element inside the `AdditionalData` property.
 
-Here is an example of using this feature: 
+Here is an example of using this feature:
 
 ```C#
 string sourceFile = "res/Examples/DifferentElementNames.xml";
@@ -330,7 +330,7 @@ public class MyRow
     public string Col2 { get; set; }
 }
 
-XmlDestination<MyRow> dest = 
+XmlDestination<MyRow> dest =
   new XmlDestination<MyRow>("dest.xml", ResourceType.File);
 ```
 
@@ -346,7 +346,7 @@ Could create an output that looks like this:
 
 ### XmlDestination with dynamic object
 
-The XmlDestination also supports creating xml output from dynamic objects. 
+The XmlDestination also supports creating xml output from dynamic objects.
 
 ```C#
 var source = new DbSource(SqlConnection, "Table");
@@ -355,3 +355,21 @@ source.LinkTo(dest);
 Network.Execute(source);
 ```
 
+
+### Writing Dynamic Objects with Attributes
+
+The **`ShouldConvertDynamicPropToAttribute`** property lets you decide which dynamic object properties should be written as XML attributes instead of elements. By providing a condition in the predicate, you can specify the properties to treat as attributes, while others are written as regular elements. This gives you more control over how your XML output is structured and makes it easier to match specific formatting requirements.
+
+#### Usage
+
+```C#
+// Configure XML destination
+var dest = new XmlDestination("output.xml");
+dest.ShouldConvertDynamicPropToAttribute = el =>
+    el.Name == "Id" || el.Name == "Flag";
+dest.Encoding = Encoding.UTF8;
+
+// Execute data flow
+source.LinkTo(dest);
+Network.Execute(source);
+```
