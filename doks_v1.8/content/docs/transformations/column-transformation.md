@@ -11,25 +11,33 @@ weight: 610
 toc: true
 ---
 
-## Overview
+## **Overview**
 
-This `ColumnTransfomration` works with strongly typed objects (POCOs) and the dynamic `ExpandoObject` as input data types. You can specify the columns that need to be removed, reordered or renamed by either using the attributes `RenameColumn`, `ReorderColumn`, and `RemoveColumn`, or assigning instances of the to the corresponding `RenameColumns`, `ReorderColumns` or `RemoveColumns` property.
+The `ColumnTransformation` component is designed to rename, remove, and reorder columns in your input data. It supports transformations for both **strongly typed objects (POCOs)** and **dynamic `ExpandoObject`** inputs.
 
-If no attribute/mapping is provided, the transformation will convert your ingoing data type into an `ExpandoObject` without any changes. So this transformation can also be used to convert your incoming POCO into a dynamic `ExpandoObject`.
+You can define transformations through:
+1. **Attributes** (`RenameColumn`, `ReorderColumn`, `RemoveColumn`) on POCOs.
+2. **Mappings** assigned to properties (`RenameColumns`, `ReorderColumns`, `RemoveColumns`).
+3. **Dynamic Functions** for custom logic (`RenameFunc`, `RemoveFunc`, `ReorderFunc`).
 
 {{< alert text="The <code>ColumnTransformation</code> component will always output as result an dynamic <code>ExpandoObject</code>, regardless of your input type" >}}
 
-#### Buffer
+#### **Buffer**
 
-The `ColumnTransformation` is a non-blocking transformation and has one input buffer.
+`ColumnTransformation` is a **non-blocking transformation** with a single input buffer.
 
-### Renaming Columns
+## **Renaming Columns**
 
-To rename columns, provide a list via the `RenameColumns` property. You can also apply the `RenameColumn` attribute directly to strongly typed object properties. Each rename entry must include the old name and new name. To remove a column, set the `RemoveColumn` flag to true.
+Columns can be renamed using:
+1. **Attributes** applied to POCO properties.
+2. **Mappings** provided via the `RenameColumns` property.
+3. **Dynamic Functions** assigned to the `RenameFunc`.
 
-Example using Attributes, using a POCO for the input data:
+### Example - Using Attributes (POCO)
 
-```C#
+You can use the `RenameColumn` attribute directly on the property in your POCO.
+
+```csharp
 public class MyInputRow
 {
     [RenameColumn("NewCol1")]
@@ -39,34 +47,45 @@ public class MyInputRow
 }
 
 var source = new DbSource<MyInputRow>("Table1");
-var map = new ColumnRename<MyInputRow>();
-var dest = new CsvDestination("output.csv");
-source.LinkTo<ExpandoObject>(map).LinkTo(dest);
+var map = new ColumnTransformation<MyInputRow>();
+var dest = new CsvDestination<MyInputRow>("output.csv");
+source.LinkTo(map).LinkTo(dest);
 ```
 
-Example using the `RenameColumns` property using the `ExpandoObject` for the whole flow:
+### Example - Using Mappings
 
-```C#
-var source = new DbSource<ExpandoObject>("Table1");
-var map = new ColumnRename<MyInputRow>();
+This will work with POCOs and dynamic objects as well.
+
+```csharp
+var map = new ColumnTransformation();
 map.RenameColumns = new []
 {
     new RenameColumn() { CurrentName = "Col1", NewName = "NewCol1" },
     new RenameColumn() { CurrentName = "Col2", NewName="NewCol2" }
 };
-var dest = new CsvDestination("output.csv");
-
-source.LinkTo(map).LinkTo(dest);
 ```
 
-{{< alert text="When you specify your columns using the `RenameColumns` property, any potential attribute assignment will be ignored." >}}
+{{< alert text="When you specify your columns using the <code>RenameColumns</code> property, any potential attribute assignment will be ignored." >}}
 
+### Example - Using Dynamic Functions
 
-### Reordering Columns
+```csharp
+var map = new ColumnTransformation();
+map.RenameFunc = colName => colName == "OldCol1" ? "NewCol1" : colName;
+```
 
-You can reorder columns using the `ReorderColumns` property or the `ReorderColumn` attribute. Specify the new position index for each column to be reordered.
+## **Reordering Columns**
 
-Example:
+Columns can be reordered based on:
+
+1. **Attributes** specifying indexes (`ReorderColumn`).
+2. **Mappings** provided via the `ReorderColumns` property.
+3. **Dynamic Functions** using `ReorderFunc`.
+
+### Example - Using Attributes (POCO)
+
+You can reorder columns using the `ReorderColumn` attribute. Specify the new position index for each column to be reordered.
+
 ```C#
 public class MyInputRow
 {
@@ -79,31 +98,105 @@ public class MyInputRow
     public string Col2 { get; set; }
 }
 var source = new DbSource<MyInputRow>("Table1");
-var map = new ColumnRename<MyInputRow>();
-var dest = new CsvDestination("output.csv");
-source.LinkTo<ExpandoObject>(map).LinkTo(dest);
+var columnTrans = new ColumnTransformation<MyInputRow>();
+var dest = new CsvDestination<MyInputRow>("output.csv");
+source.LinkTo(map).LinkTo(dest);
 ```
 
-The resulting `ExpandoObject` will have the input columns added in the order by the given index property.
+### Example - Using Mappings
 
-### Removing Columns
+This will work with POCOs and dynamic objects as well.
 
-Columns can be removed by providing the current name and setting the `RemoveColumn` flag to true, or by applying the `RemoveColumn` attribute to the property.
+```csharp
+columnTrans.ReorderColumns = new[] {
+    new ReorderColumn() { PropertyName = "Col1", Index = 3 },
+    new ReorderColumn() { PropertyName = "Col2", Index = 1 }
+};
+```
 
-Example:
+{{< alert text="When you specify your columns using the <code>ReoderColumns</code> property, any potential attribute assignment will be ignored." >}}
+
+
+### Example - Using Dynamic Functions
+
+The output of the `ReorderFunc` can be anything that is sotarble.
+
+So returning an integer will work:
+
+```csharp
+columnTrans.ReorderFunc = colName => colName == "Col2" ? 1 : 2;
+```
+
+But you could return a string value also:
+```C#
+columnTrans.ReorderFunc = (colName) => {
+    if (colName == "Region") return "";
+    else if (colName == "GrandTotal") return "ZZZZZ";
+    else return colName;
+};
+```
+
+## **Removing Columns**
+
+Columns can be removed via:
+1. **Attributes** (`RemoveColumn`).
+2. **Mappings** in the `RemoveColumns` property.
+3. **Dynamic Functions** through `RemoveFunc`.
+
+### Example - Using Attributes (POCO)
+
 ```C#
 public class MyInputRow
 {
+    [RemoveColumn]
     public int Col1 { get; set; }
 
-    [RemoveColumn]
     public string Col2 { get; set; }
 }
 ```
 
-## Combined Example
+### Example - Using Mappings
 
-This example demonstrates how to use the attributes RenameColumn, RemoveColumn, and ReorderColumn to reorder and remove columns from an object.
+This will work with POCOs and dynamic objects as well.
+
+```csharp
+columnTrans.RemoveColumns = new[] {
+    new RemoveColumn() { PropertyName = "Col3" },
+};
+```
+
+{{< alert text="When you specify your columns using the <code>ReoderColumns</code> property, any potential attribute assignment will be ignored." >}}
+
+### Example - Using Dynamic Functions
+
+```csharp
+columnTrans.RemoveFunc = colName => colName == "RemoveCol";
+```
+
+## Nested Object Handling
+
+The `ColumnTransformation` supports **nested objects** within columns. Transformations are applied to the **top-level properties only**, and nested properties remain intact unless explicitly modified.
+
+### Example - Nested Objects
+
+```csharp
+dynamic input = new ExpandoObject();
+input.Col1 = 1;
+input.Col2 = new { Nested1 = "Value1", Nested2 = "Value2" };
+
+var map = new ColumnTransformation();
+map.RenameColumns = new List<RenameColumn>()
+{
+    new RenameColumn() { CurrentName = "Col2", NewName = "RenamedCol2" }
+};
+
+var dest = new MemoryDestination();
+source.LinkTo(map).LinkTo(dest);
+```
+
+## Combined Examples
+
+This examples demonstrates how to use the attributes RenameColumn, RemoveColumn, and ReorderColumn to reorder and remove columns from an object.
 
 ### Using POCO
 
@@ -180,25 +273,4 @@ map.ReorderColumns = new List<ReorderColumn>()
     new ReorderColumn() { PropertyName = "Col2", Index = 1 }
 };
 map.RemoveColumns = new List<RemoveColumn>()
-{
-    new RemoveColumn() { PropertyName = "Col3" }
-};
-
-var dest = new MemoryDestination();
-source.LinkTo(map).LinkTo(dest);
-Network.Execute(source);
-
-dynamic output = dest.Data.First();
-IDictionary<string, object> outputDict = dest.Data.First();
-
-Console.WriteLine("Order of keys in output");
-for (int i = 1; i <= outputDict.Keys.Count; i++)
-    Console.WriteLine(i + ":" + outputDict.ElementAt(i - 1).Key);
-// Output
-/*
-   Order of keys in output:
-   1: Col2
-   2: RenamedCol1
-   Col3 is removed, and the column Col1 has been renamed to RenamedCol1.
-*/
 ```
