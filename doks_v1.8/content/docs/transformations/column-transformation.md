@@ -11,7 +11,7 @@ weight: 610
 toc: true
 ---
 
-## **Overview**
+## Overview
 
 The `ColumnTransformation` component is designed to rename, remove, and reorder columns in your input data. It supports transformations for both **strongly typed objects (POCOs)** and **dynamic `ExpandoObject`** inputs.
 
@@ -20,13 +20,13 @@ You can define transformations through:
 2. **Mappings** assigned to properties (`RenameColumns`, `ReorderColumns`, `RemoveColumns`).
 3. **Dynamic Functions** for custom logic (`RenameFunc`, `RemoveFunc`, `ReorderFunc`).
 
-{{< alert text="The <code>ColumnTransformation</code> component will always output as result an dynamic <code>ExpandoObject</code>, regardless of your input type" >}}
+{{< alert text="The <code>ColumnTransformation</code> component will always output as result a dynamic <code>ExpandoObject</code>, regardless of your input type" >}}
 
-#### **Buffer**
+#### Buffer
 
 `ColumnTransformation` is a **non-blocking transformation** with a single input buffer.
 
-## **Renaming Columns**
+## Renaming Columns
 
 Columns can be renamed using:
 1. **Attributes** applied to POCO properties.
@@ -74,7 +74,7 @@ var map = new ColumnTransformation();
 map.RenameFunc = colName => colName == "OldCol1" ? "NewCol1" : colName;
 ```
 
-## **Reordering Columns**
+## Reordering Columns
 
 Columns can be reordered based on:
 
@@ -114,12 +114,11 @@ columnTrans.ReorderColumns = new[] {
 };
 ```
 
-{{< alert text="When you specify your columns using the <code>ReoderColumns</code> property, any potential attribute assignment will be ignored." >}}
-
+{{< alert text="When you specify your columns using the <code>ReorderColumns</code> property, any potential attribute assignment will be ignored." >}}
 
 ### Example - Using Dynamic Functions
 
-The output of the `ReorderFunc` can be anything that is sotarble.
+The output of the `ReorderFunc` can be anything that is sortable.
 
 So returning an integer will work:
 
@@ -136,7 +135,7 @@ columnTrans.ReorderFunc = (colName) => {
 };
 ```
 
-## **Removing Columns**
+## Removing Columns
 
 Columns can be removed via:
 1. **Attributes** (`RemoveColumn`).
@@ -165,7 +164,7 @@ columnTrans.RemoveColumns = new[] {
 };
 ```
 
-{{< alert text="When you specify your columns using the <code>ReoderColumns</code> property, any potential attribute assignment will be ignored." >}}
+{{< alert text="When you specify your columns using the <code>RemoveColumns</code> property, any potential attribute assignment will be ignored." >}}
 
 ### Example - Using Dynamic Functions
 
@@ -196,7 +195,7 @@ source.LinkTo(map).LinkTo(dest);
 
 ## Combined Examples
 
-This examples demonstrates how to use the attributes RenameColumn, RemoveColumn, and ReorderColumn to reorder and remove columns from an object.
+This example demonstrates how to use the attributes `RenameColumn`, `RemoveColumn`, and `ReorderColumn` to reorder and remove columns from an object.
 
 ### Using POCO
 
