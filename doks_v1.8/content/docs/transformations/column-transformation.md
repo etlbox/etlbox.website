@@ -33,7 +33,7 @@ Columns can be renamed using:
 2. **Mappings** provided via the `RenameColumns` property.
 3. **Dynamic Functions** assigned to the `RenameFunc`.
 
-### Example - Using Attributes (POCO)
+#### Example - Using Attributes (POCO)
 
 You can use the `RenameColumn` attribute directly on the property in your POCO.
 
@@ -52,7 +52,7 @@ var dest = new CsvDestination<MyInputRow>("output.csv");
 source.LinkTo(map).LinkTo(dest);
 ```
 
-### Example - Using Mappings
+#### Example - Using Mappings
 
 This will work with POCOs and dynamic objects as well.
 
@@ -67,7 +67,7 @@ map.RenameColumns = new []
 
 {{< alert text="When you specify your columns using the <code>RenameColumns</code> property, any potential attribute assignment will be ignored." >}}
 
-### Example - Using Dynamic Functions
+#### Example - Using Dynamic Functions
 
 ```csharp
 var map = new ColumnTransformation();
@@ -82,7 +82,7 @@ Columns can be reordered based on:
 2. **Mappings** provided via the `ReorderColumns` property.
 3. **Dynamic Functions** using `ReorderFunc`.
 
-### Example - Using Attributes (POCO)
+#### Example - Using Attributes (POCO)
 
 You can reorder columns using the `ReorderColumn` attribute. Specify the new position index for each column to be reordered.
 
@@ -103,7 +103,7 @@ var dest = new CsvDestination<MyInputRow>("output.csv");
 source.LinkTo(map).LinkTo(dest);
 ```
 
-### Example - Using Mappings
+#### Example - Using Mappings
 
 This will work with POCOs and dynamic objects as well.
 
@@ -116,7 +116,7 @@ columnTrans.ReorderColumns = new[] {
 
 {{< alert text="When you specify your columns using the <code>ReorderColumns</code> property, any potential attribute assignment will be ignored." >}}
 
-### Example - Using Dynamic Functions
+#### Example - Using Dynamic Functions
 
 The output of the `ReorderFunc` can be anything that is sortable.
 
@@ -142,7 +142,7 @@ Columns can be removed via:
 2. **Mappings** in the `RemoveColumns` property.
 3. **Dynamic Functions** through `RemoveFunc`.
 
-### Example - Using Attributes (POCO)
+#### Example - Using Attributes (POCO)
 
 ```C#
 public class MyInputRow
@@ -154,7 +154,7 @@ public class MyInputRow
 }
 ```
 
-### Example - Using Mappings
+#### Example - Using Mappings
 
 This will work with POCOs and dynamic objects as well.
 
@@ -166,7 +166,7 @@ columnTrans.RemoveColumns = new[] {
 
 {{< alert text="When you specify your columns using the <code>RemoveColumns</code> property, any potential attribute assignment will be ignored." >}}
 
-### Example - Using Dynamic Functions
+#### Example - Using Dynamic Functions
 
 ```csharp
 columnTrans.RemoveFunc = colName => colName == "RemoveCol";
@@ -176,7 +176,7 @@ columnTrans.RemoveFunc = colName => colName == "RemoveCol";
 
 The `ColumnTransformation` supports **nested objects** within columns. Transformations are applied to the **top-level properties only**, and nested properties remain intact unless explicitly modified.
 
-### Example - Nested Objects
+#### Example - Nested Objects
 
 ```csharp
 dynamic input = new ExpandoObject();
