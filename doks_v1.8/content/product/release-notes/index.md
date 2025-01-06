@@ -14,7 +14,6 @@ _This release includes an anonymous usage tracking feature to help us understand
 - XmlDestination now offers ShouldConvertDynamicPropToAttribute to specify attributes for dynamic rows
 - Package update - this version will still support .NET Framework
 - LookupTransformation: Added RemoveUnmatchedRows flag which will omit rows that don't match to simulate INNER JOIN behavior
--
 
 ### Bug Fixes:
 
