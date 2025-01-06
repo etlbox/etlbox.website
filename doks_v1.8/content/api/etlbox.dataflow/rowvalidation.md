@@ -81,7 +81,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_CleanUpOnFaulted_System_Exception_">RowValidation&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">RowValidation&lt;ExpandoObject&gt;.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+      <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">RowValidation&lt;ExpandoObject&gt;.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_LinkInvalidTo_ETLBox_IDataFlowDestination__0__">RowValidation&lt;ExpandoObject&gt;.LinkInvalidTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>

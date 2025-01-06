@@ -79,7 +79,7 @@ and the ability to define custom functions for unique key generation. It is idea
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_CleanUpOnFaulted_System_Exception_">Distinct&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">Distinct&lt;ExpandoObject&gt;.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+      <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">Distinct&lt;ExpandoObject&gt;.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_LinkDuplicatesTo_ETLBox_IDataFlowDestination__0__">Distinct&lt;ExpandoObject&gt;.LinkDuplicatesTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>

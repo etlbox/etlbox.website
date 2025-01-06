@@ -107,33 +107,6 @@ t.Wait();</code></pre>
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_Network_AddAutomaticVoidLinks_" data-uid="ETLBox.DataFlow.Network.AddAutomaticVoidLinks*"></a>
-  <h4 id="ETLBox_DataFlow_Network_AddAutomaticVoidLinks" data-uid="ETLBox.DataFlow.Network.AddAutomaticVoidLinks">AddAutomaticVoidLinks</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public bool AddAutomaticVoidLinks { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_Network_AllNodes_" data-uid="ETLBox.DataFlow.Network.AllNodes*"></a>
   <h4 id="ETLBox_DataFlow_Network_AllNodes" data-uid="ETLBox.DataFlow.Network.AllNodes">AllNodes</h4>
   <div class="markdown level1 summary"></div>
@@ -377,8 +350,62 @@ t.Wait();</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Network_TryAddComplementVoidLinks_" data-uid="ETLBox.DataFlow.Network.TryAddComplementVoidLinks*"></a>
+  <h4 id="ETLBox_DataFlow_Network_TryAddComplementVoidLinks" data-uid="ETLBox.DataFlow.Network.TryAddComplementVoidLinks">TryAddComplementVoidLinks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool TryAddComplementVoidLinks { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_DataFlow_Network_AddComplementVoidLinks_" data-uid="ETLBox.DataFlow.Network.AddComplementVoidLinks*"></a>
+  <h4 id="ETLBox_DataFlow_Network_AddComplementVoidLinks" data-uid="ETLBox.DataFlow.Network.AddComplementVoidLinks">AddComplementVoidLinks()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Network AddComplementVoidLinks()
+```
+
+{{< rawhtml >}}
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.dataflow/network">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Network_ApplyToAllNodes_" data-uid="ETLBox.DataFlow.Network.ApplyToAllNodes*"></a>
   <h4 id="ETLBox_DataFlow_Network_ApplyToAllNodes_System_Action_ETLBox_IDataFlowComponent__" data-uid="ETLBox.DataFlow.Network.ApplyToAllNodes(System.Action{ETLBox.IDataFlowComponent})">ApplyToAllNodes(Action&lt;IDataFlowComponent&gt;)</h4>
   <div class="markdown level1 summary"><p>Will apply the given action on all nodes in the network.</p>

@@ -101,7 +101,7 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_CleanUpOnFaulted_System_Exception_">DbTypeCheck&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DbTypeCheck&lt;ExpandoObject&gt;.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">DbTypeCheck&lt;ExpandoObject&gt;.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_LinkFlawedTo_ETLBox_IDataFlowDestination__0__">DbTypeCheck&lt;ExpandoObject&gt;.LinkFlawedTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>

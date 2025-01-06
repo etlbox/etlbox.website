@@ -493,15 +493,15 @@ toc: false
   </table>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_DataFlow_RowValidation_1_AddAutomaticVoidLinkToOtherTargets_" data-uid="ETLBox.DataFlow.RowValidation`1.AddAutomaticVoidLinkToOtherTargets*"></a>
-  <h4 id="ETLBox_DataFlow_RowValidation_1_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_" data-uid="ETLBox.DataFlow.RowValidation`1.AddAutomaticVoidLinkToOtherTargets(ETLBox.DataFlow.DataFlowComponent,ETLBox.IDataFlowDestination)">AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</h4>
+  <a id="ETLBox_DataFlow_RowValidation_1_AddComplementVoidLinkToOtherTargets_" data-uid="ETLBox.DataFlow.RowValidation`1.AddComplementVoidLinkToOtherTargets*"></a>
+  <h4 id="ETLBox_DataFlow_RowValidation_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_" data-uid="ETLBox.DataFlow.RowValidation`1.AddComplementVoidLinkToOtherTargets(System.Func{System.Type,ETLBox.IDataFlowDestination},System.Delegate)">AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    protected override void AddAutomaticVoidLinkToOtherTargets(DataFlowComponent key, IDataFlowDestination voidDest)
+    protected override void AddComplementVoidLinkToOtherTargets(Func<Type, IDataFlowDestination> createAutomaticVoidDestination, Delegate pred)
 ```
 
 {{< rawhtml >}}
@@ -516,19 +516,19 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></td>
-        <td><span class="parametername">key</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a>&gt;</td>
+        <td><span class="parametername">createAutomaticVoidDestination</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="/api/etlbox/idataflowdestination">IDataFlowDestination</a></td>
-        <td><span class="parametername">voidDest</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Delegate</a></td>
+        <td><span class="parametername">pred</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a></div>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">DataFlowComponent.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a></div>
   <a id="ETLBox_DataFlow_RowValidation_1_CheckParameter_" data-uid="ETLBox.DataFlow.RowValidation`1.CheckParameter*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_CheckParameter" data-uid="ETLBox.DataFlow.RowValidation`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>

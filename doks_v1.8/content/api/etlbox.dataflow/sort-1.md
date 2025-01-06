@@ -89,7 +89,7 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddAutomaticVoidLinkToOtherTargets_ETLBox_DataFlow_DataFlowComponent_ETLBox_IDataFlowDestination_">DataFlowComponent.AddAutomaticVoidLinkToOtherTargets(DataFlowComponent, IDataFlowDestination)</a>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">DataFlowComponent.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
@@ -357,7 +357,9 @@ Sort&lt;MyDataRow&gt; block = new Sort&lt;MyDataRow&gt;(comp);</code></pre>
   </table>
   <a id="ETLBox_DataFlow_Sort_1_SortColumns_" data-uid="ETLBox.DataFlow.Sort`1.SortColumns*"></a>
   <h4 id="ETLBox_DataFlow_Sort_1_SortColumns" data-uid="ETLBox.DataFlow.Sort`1.SortColumns">SortColumns</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Columns by which the input data is sorted.
+If SortColumsn are defined, the <a class="xref" href="/api/etlbox.dataflow/sort-1#ETLBox_DataFlow_Sort_1_SortFunction">SortFunction</a> must be empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
