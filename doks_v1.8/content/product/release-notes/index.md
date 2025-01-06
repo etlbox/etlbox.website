@@ -9,19 +9,19 @@ draft: false
 
 #### Features
 
-_This release includes an anonymous usage tracking feature to help us understand how ETLBox is being used and improve the product. No personal data is collected, and the tracking applies only to free users without a license key. If you want to disable this tracking, please contact us!_
+_This release includes an anonymous installation tracking feature to help us understand how often ETLBox is installed and improve the product. No personal data is collected, and the tracking applies only to free users without a license key. If you want to disable this feature or would like to have more information about it, please contact us!_
 
 - XmlDestination now offers ShouldConvertDynamicPropToAttribute to specify attributes for dynamic rows
 - Package update - this version will still support .NET Framework
 - LookupTransformation: Added RemoveUnmatchedRows flag which will omit rows that don't match to simulate INNER JOIN behavior
 
-### Bug Fixes:
+#### Bug Fixes:
 
 - Renamed automatic void linking to ComplementVoidLinking, disabled by default, fixed issues with backpressure
 
 ## Version 3.5.2
 
-### Features:
+#### Features:
 
 - Pivot: ValueCombination has been removed
 - Pivot: Added FlattenAggregationResults to flatten data if 2 or more PivotValues are used
@@ -30,13 +30,13 @@ _This release includes an anonymous usage tracking feature to help us understand
 - ColumnTransformation: ReorderFunc now accepts object as return value, e.g. for sorting of string or date values
 - CustomDestination: Adding WriteActionAsync
 
-### Bug Fixes:
+#### Bug Fixes:
 
 - FilterTransformation: Fixed issue for backpressure cases
 
 ## Version 3.5.1
 
-### Features:
+#### Features:
 
 - SqlTask.ExecuteNonQuery/ExecuteReader/ExecuteScalar: Added CancellationToken parameter
 - Aggregation now also works only with GroupColumns \(equivalent to a GROUP BY\)
@@ -89,7 +89,7 @@ _This release includes an anonymous usage tracking feature to help us understand
 
 ## Version 3.4.3
 
-### Features:
+#### Features:
 
 - Added ExecutionStartTime/ExecutionEndTime on each component
 - Added "Tag" object for custom reference
