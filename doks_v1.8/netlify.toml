@@ -100,6 +100,12 @@
   force = true
 
 [[redirects]]
+  from = "/nuget-license"
+  to = "https://www.etlbox.net/product/licenses/standard-eula/"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "/register-license"
   to = "https://www.etlbox.net/product/register-license/"
   status = 302
