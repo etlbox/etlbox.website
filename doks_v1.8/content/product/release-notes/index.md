@@ -5,6 +5,21 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.6.0
+
+#### Features
+
+_This release includes an anonymous usage tracking feature to help us understand how ETLBox is being used and improve the product. No personal data is collected, and the tracking applies only to free users without a license key. If you want to disable this tracking, please contact us!_
+
+- XmlDestination now offers ShouldConvertDynamicPropToAttribute to specify attributes for dynamic rows
+- Package update - this version will still support .NET Framework
+- LookupTransformation: Added RemoveUnmatchedRows flag which will omit rows that don't match to simulate INNER JOIN behavior
+-
+
+### Bug Fixes:
+
+- Renamed automatic void linking to ComplementVoidLinking, disabled by default, fixed issues with backpressure
+
 ## Version 3.5.2
 
 ### Features:
