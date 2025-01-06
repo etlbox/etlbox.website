@@ -5,6 +5,10 @@ lead: "Release notes are starting with version 2.3.0"
 draft: false
 ---
 
+## Version 3.6.1
+
+_Resolved issues with corrupted packaging in version 3.6.0. This release contains no functional changes._
+
 ## Version 3.6.0
 
 #### Features
