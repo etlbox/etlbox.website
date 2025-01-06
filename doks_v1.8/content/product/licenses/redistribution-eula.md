@@ -8,14 +8,16 @@ draft: false
 For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/product/licenses/standard-eula/).
 
 {{< nowrap-code >}}
-(C) 2024 ETLBox Office Andreas Lennartz
+Redistribution End-user License Agreement
+
+(C) 2024 ETLBoxperts GmbH
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 
 1. OWNERSHIP, LICENSE GRANT
 This is a license agreement and not an agreement for sale. We reserve ownership of all intellectual property rights inherent in or relating to the Software, which include, but are not limited to, all copyright, patent rights, all rights in relation to registered and unregistered trademarks (including service marks), confidential information (including trade secrets and know-how) and all rights other than those expressly granted by this License Agreement.
 
-Subject to the payment of the fee required and subject to the terms and conditions of this License Agreement, We grant to You a revocable, non- transferable and non-exclusive license (i) for Designated User(s) (as defined below) within Your organization to install and use the Software on any workstations used exclusively by such Designated User and (ii) for You to install and use the Software in connection with unlimited domains and sub-domains on unlimited servers, solely in connection with distribution of the Software in accordance with sections 3 and 4 below. This license is not sublicensable except as explicitly set forth herein. “Designated User(s)” shall mean Your employee(s) acting within the scope of their employment or Your consultant(s) or contractor(s) acting within the scope of the services they provide for You or on Your behalf for whom You have purchased a license to use the Software.
+Subject to the payment of the fee required and subject to the terms and conditions of this License Agreement, We grant to You a revocable, non-transferable, and non-exclusive license (i) for Designated User(s) (as defined below) within Your organization to install and use the Software on any workstations used exclusively by such Designated User and (ii) for You to install and use the Software in connection with unlimited domains and sub-domains on unlimited servers, solely in connection with distribution of the Software in accordance with sections 3 and 4 below. This license is not sublicensable except as explicitly set forth herein. “Designated User(s)” shall mean Your employee(s) acting within the scope of their employment or Your consultant(s) or contractor(s) acting within the scope of the services they provide for You or on Your behalf for whom You have purchased a license to use the Software.
 
 Additionally, you are permitted to use the Software as part of a customer solution, where the Software is integrated into a product or service you offer to end customers, provided that the Software is embedded within your own application and cannot be independently accessed or used by your customers. Your end customers are not permitted to use the Software outside the scope of the product or service you provide, nor are they allowed to redistribute it.
 
@@ -23,20 +25,30 @@ Additionally, you are permitted to use the Software as part of a customer soluti
 We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.
 
 3. DISTRIBUTION
-You may distribute the Software in any applications, frameworks, or elements (collectively referred to as an “Application” or “Applications”) that you develop using the Software in accordance with this License Agreement, provided that such distribution does not violate the restrictions set forth in section 4 of this License Agreement. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement affixed to, incorporated in or otherwise applied in connection with the Software.
+You may distribute the Software as part of Your applications, frameworks, or solutions (collectively referred to as “Applications”) in accordance with this License Agreement, provided that the Software is embedded within Your Applications and cannot be used independently by end customers.
 
-You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. For example, if You install the Software on a customer’s server, that customer is not permitted to use the Software independently of Your application.
+You must ensure that:
+- The Software is only accessible as an integral part of Your Application and not exposed for standalone use.
+- Your end customers cannot extract, modify, or redistribute the Software separately from Your Application.
 
-You will not owe Us any royalties for Your distribution of the Software in accordance with this License Agreement.
+You may install and deploy the Software on customer servers as part of Your Application, provided that the Software remains embedded in Your Application and is not accessible as a separate component.
+
+You are not required to pay royalties for distributing the Software as permitted under this License Agreement.
+
+You are required to report annually to Us the number of customers or installations where the Software has been distributed as part of Your Applications.
 
 4. PROHIBITED USES
-You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.
+You may not:
+- Distribute the Software as a standalone product or make it available as a separate component for any purpose.
+- Permit end customers to use the Software independently or for software development or application development purposes.
+- Modify, reverse-engineer, decompile, or disassemble the Software except as explicitly permitted by law.
+- Remove, obscure, or alter any copyright, trademark, or proprietary notices included with the Software.
 
-You may redistribute the Software as part of Your own products , provided that the Software is embedded in such products and cannot be used independently by Your customers.
+You are allowed to hide the use of the Software within Your Application and are not required to include references to Us in Your product branding or documentation.
 
-You are allowed to deploy and distribute the Software as part of Your applications or solutions. However, the end customer is not permitted to independently use or redistribute the Software, and their usage must be limited to the specific solution you provide. The Software must remain integral to Your product or service.
+The Software must remain embedded in Your Application and may not be used outside the context of the specific solution You provide to Your customers.
 
-When distributing the Software as part of Your product, You are not required to mention or display any references to Us, and You are permitted to hide the usage of the Software from Your customers.
+Additionally, You agree to report the number of developers using the Software annually, regardless of the number of installations or customers, as part of compliance with this License Agreement.
 
 5. TERMINATION
 This License Agreement and Your right to use the Software and Modifications will terminate immediately without notice if You fail to comply with the terms and conditions of this License Agreement. Upon termination, You agree to immediately cease using and destroy the Software or Modifications, including all accompanying documents. The provisions of sections 4, 5, 6, 7, 8, 9, 10 and 11 will survive any termination of this License Agreement.
@@ -45,16 +57,16 @@ This License Agreement and Your right to use the Software and Modifications will
 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE AND OUR SUPPLIERS DISCLAIM ALL WARRANTIES AND CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT, WITH REGARD TO THE SOFTWARE. WE DO NOT GUARANTEE THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE, AND YOU ACKNOWLEDGE THAT IT IS NOT TECHNICALLY PRACTICABLE FOR US TO DO SO.
 
 7. LIMITATION OF LIABILITIES
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, OUR ENTIRE LIABILITY UNDER ANY PROVISION OF THIS LICENSE AGREEMENT SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, OUR ENTIRE LIABILITY UNDER ANY PROVISION OF THIS LICENSE AGREEMENT SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE.
 
 8. VERIFICATION
 We or a certified auditor acting on Our behalf, may, upon its reasonable request and at its expense, audit You with respect to the use of the Software. Such audit may be conducted by mail, electronic means or through an in-person visit to Your place of business. Any such in-person audit shall be conducted during regular business hours at Your facilities and shall not unreasonably interfere with Your business activities. We shall not remove, copy, or redistribute any electronic material during the course of an audit. If an audit reveals that You are using the Software in a way that is in material violation of the terms of the License Agreement, then You shall pay Our reasonable costs of conducting the audit. In the case of a material violation, You agree to pay Us any amounts owing that are attributable to the unauthorized use. In the alternative, We reserve the right, at Our sole option, to terminate the licenses for the Software.
 
 9. THIRD PARTY SOFTWARE
-The Software may contain third party open-source software which requires notices and/or additional terms and conditions. Such required third party software notices and/or additional terms and conditions are located in the license information of each referenced package of the Software distribution package, and are made a part of and incorporated by reference into this Agreement. By accepting this Agreement, you are also accepting the additional terms and conditions, if any, set forth therein.
+The Software may contain third-party open-source software which requires notices and/or additional terms and conditions. Such required third-party software notices and/or additional terms and conditions are located in the license information of each referenced package of the Software distribution package, and are made a part of and incorporated by reference into this Agreement. By accepting this Agreement, you are also accepting the additional terms and conditions, if any, set forth therein.
 
 10. PAYMENT AND TAXES
-If credit has been extended to You by Us, all payments under this License Agreement are due within thirty (30) days of the date We mail an invoice to You. If We have not extended credit to You, You shall be required to make payment concurrent with the delivery of the Software by Us. All amounts payable are gross amounts but exclusive of any value added tax, use tax, sales tax or similar tax. You shall be entitled to withhold from payments any applicable withholding taxes and comply with all applicable tax and employment legislation. Each party shall pay all taxes (including, but not limited to, taxes based upon its income) or levies imposed on it under applicable laws, regulations and tax treaties as a result of this Agreement and any payments made hereunder (including those required to be withheld or deducted from payments). Each party shall furnish evidence of such paid taxes as is sufficient to enable the other party to obtain any credits available to it, including original withholding tax certificates.
+If credit has been extended to You by Us, all payments under this License Agreement are due within thirty (30) days of the date We mail an invoice to You. If We have not extended credit to You, You shall be required to make payment concurrent with the delivery of the Software by Us. All amounts payable are gross amounts but exclusive of any value-added tax, use tax, sales tax or similar tax. You shall comply with all applicable tax and employment legislation.
 
 11. MISCELLANEOUS
 The license granted herein applies only to the version of the Software available when purchased in connection with the terms of this License Agreement. Any previous or subsequent license granted to You for use of the Software shall be governed by the terms and conditions of the agreement entered in connection with purchase of that version of the Software. You agree that you will comply with all applicable laws and regulations with respect to the Software, including without limitation all export and re-export control laws and regulations.
