@@ -140,3 +140,9 @@
   to = "https://www.etlbox.net/recipes/basics/basic-example/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/release-notes/"
+  to = "https://www.etlbox.net/product/release-notes/"
+  status = 302
+  force = true
