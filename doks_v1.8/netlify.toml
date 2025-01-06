@@ -128,3 +128,15 @@
   to = "https://www.etlbox.net/support/pricing/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/get-started"
+  to = "https://www.etlbox.net/docs/getting-started/quick-start/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/code-examples"
+  to = "https://www.etlbox.net/recipes/basics/basic-example/"
+  status = 302
+  force = true

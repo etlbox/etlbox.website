@@ -15,16 +15,16 @@ string mySqlConnString =
   @"Server=localhost;Database=ETLBox;Uid=user;Pwd=password;";
 string postgresConnString =
   @"Server=.;Initial Catalog=ETLBox;Trusted_Connection=true;";
-
 var sourceCon = new MySqlConnectionManager(mySqlConnString);
 var destCon = new PostgresConnectionManager(postgresConnString);
 
+//Create the dataflow components
 var source = new DbSource(sourceCon, "SourceTableName");
 var dest = new DbDestination(destCon, "DestTableName");
-//Use dest.ColumnMapping to change column name mapping
 
-source.LinkTo(dest); //Link the nodes in the network
-await Network.ExecuteAsync(source); //Start the flow
+//Link the source and destination, run the dataflow
+source.LinkTo(dest);
+await Network.ExecuteAsync(source);
 ```
 
 
@@ -36,6 +36,7 @@ string connString =
   @"Source=.;Trusted_Connection=true;Initial Catalog=ETLBox;"
 var destCon = new SqlConnectionManager(connString);
 
+//Create the dataflow components
 var source = new CsvSource(sourceCon, "SourceData.csv");
 var dest = new DbDestination(destCon, "DestinationTable");
 
@@ -47,8 +48,9 @@ dest.ColumnMapping = new[] {
     }
 };
 
-source.LinkTo(dest); //Link the nodes in the network
-await Network.Execute(source); //Start the flow
+//Link the source and destination, run the dataflow
+source.LinkTo(dest);
+await Network.ExecuteAsync(source);
 ```
 
 {{< /tab >}}
@@ -66,10 +68,13 @@ public class MyMergeRow : MergeableRow
     public bool DeleteThisRow { get; set; }
 }
 
+//Create the dataflow components
 DbSource<MyMergeRow> source = new (connection, "SourceTable");
 DbMerge<MyMergeRow> mergeDest = new (connection, "DestinationTable");
 merge.MergeMode = MergeMode.Full;
 merge.CacheMode = CacheMode.Partial;
+
+//Link the source and destination, run the dataflow
 source.LinkTo(merge);
 Network.Execute(source);
 ```
