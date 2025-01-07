@@ -25,3 +25,4 @@ Azure Cosmos DB|Multi-Model|✓|✓
 Neo4j|Graph|✓|o
 Azure Service Bus|Event|✓|✓
 Azure Tables|Key-Value|✓|✓
+Apache Kafka|Event|✓|✓
