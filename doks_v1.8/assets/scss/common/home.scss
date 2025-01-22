@@ -32,16 +32,36 @@
     }
 }
 
+
+.nowrap-code {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.carousel-indicators,
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
 }
 
 
-.nowrap-code {
-    white-space: pre-wrap;
-    overflow: auto;
-}
+// .overlay-box {
+//     position: absolute;
+//     bottom: 0; /* Ensure the box is positioned at the bottom */
+//     left: 0;
+//     width: 100%;
+//     padding: 10px;
+//     color: white;
+//     font-weight: bold;
+//     z-index: 1;
+//   }
+.overlay-box {
+    position: relative; /* Change to relative to avoid overlapping */
+
+    font-weight: bold;
+    z-index: 1;
+  }
+
 /* When embedding video via iFrame, use this
  https://css-tricks.com/fluid-width-video/
 .embedVideo {
@@ -58,3 +78,4 @@
     height: 100%;
 }
 */
+
