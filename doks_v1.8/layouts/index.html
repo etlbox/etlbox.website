@@ -3,14 +3,14 @@
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
       <h1>
-        <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox" width="76" height="76" />
+        <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76" height="76" />
         {{ .Title }}
       </h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
-        role="button">{{ i18n "get-started" }}</a>
+        role="button" aria-label="Get started with ETLBox">Get Started</a>
       <p>
         <a href="/support/get-trial/">Try for free.</a>
         Get commercial licenses at <a href="/support/pricing/">low rates</a>.
@@ -18,7 +18,7 @@
       <p>
         <div class="d-flex justify-content-center align-items-center">
           <span class="fs-5 me-2">
-            <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener">
+            <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener nofollow" aria-label="View ETLBox packages on NuGet">
               <b id="packages-count">0</b> packages </a> with over
           </span>
           <span class="badge bg-primary fs-5 p-3" id="downloads-badge">0</span>

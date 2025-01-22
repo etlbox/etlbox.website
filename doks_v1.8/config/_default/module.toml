@@ -44,13 +44,13 @@
   target = "data"
 
 ## i18n
-[[mounts]]
-  source = "node_modules/@thulite/doks-core/i18n"
-  target = "i18n"
+#[[mounts]]
+#  source = "node_modules/@thulite/doks-core/i18n"
+#  target = "i18n"
 
-[[mounts]]
-  source = "i18n"
-  target = "i18n"
+#[[mounts]]
+#  source = "i18n"
+#  target = "i18n"
 
 ## layouts
 [[mounts]]
