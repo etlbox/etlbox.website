@@ -1,31 +1,115 @@
 {{ define "main" }}
 <section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1>
-        <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76" height="76" />
-        {{ .Title }}
-      </h1>
-    </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
-        role="button" aria-label="Get started with ETLBox">Get Started</a>
-      <p>
-        <a href="/support/get-trial/">Try for free.</a>
-        Get commercial licenses at <a href="/support/pricing/">low rates</a>.
-      </p>
-      <p>
-        <div class="d-flex justify-content-center align-items-center">
-          <span class="fs-5 me-2">
-            <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener nofollow" aria-label="View ETLBox packages on NuGet">
-              <b id="packages-count">0</b> packages </a> with over
-          </span>
-          <span class="badge bg-primary fs-5 p-3" id="downloads-badge">0</span>
-          <span class="ms-2 fs-5">Total downloads</span>
+  <div class="row justify-content-center align-items-center">
+
+    <!-- Right Side -->
+    <div class="col-lg-8 order-lg-2">
+      <div class="row justify-content-center">
+        <div class="col-lg-16 text-center">
+          <h1>
+            <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76"
+              height="76" />
+            {{ .Title }}
+          </h1>
         </div>
-      </p>
+        <div class="col-lg-12 text-center">
+          <p class="lead">{{ .Params.lead | safeHTML }}</p>
+          <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
+            role="button" aria-label="Get started with ETLBox">Get Started</a>
+          <p>
+            <a href="/support/get-trial/">Try for free.</a>
+            Get commercial licenses at <a href="/support/pricing/">low rates</a>.
+          </p>
+          <p>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="fs-5 me-2">
+              <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener nofollow"
+                aria-label="View ETLBox packages on NuGet">
+                <b id="packages-count">0</b> packages </a> with over
+            </span>
+            <span class="badge bg-primary fs-5 p-3" id="downloads-badge">0</span>
+            <span class="ms-2 fs-5">Total downloads</span>
+          </div>
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- Left Side -->
+    <div class="col-lg-8 order-lg-1 text-center text-lg-start" >
+
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <div class="row">
+              <div class="col-6 d-flex flex-column justify-content-center">
+                <div ><img src="/images/customer/flowwright_logo.png" alt="Flowwright Logo"  /> </div>
+              </div>
+              <div class="col-10 d-flex flex-column">
+                <p style="font-weight:600;font-size:larger;line-height:normal;">“ETLBox is exceptionally well-designed, efficiently handling massive datasets with millions of records without straining server resources.<br />
+                  Its integration was achieved in no time, delivering outstanding results."
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <div><img src="/images/customer/flowwright_desktop.png" alt="Another Image" class="mx-5" height="150" width="150" /></div>
+              </div>
+              <div class="col-10">
+                <div style="margin-left: auto;transform: scaleX(-1);" class="mx-5">
+                  <img src="/images/customer/flowwright_headshot.png" alt="Flowwright Customer"  height="150" width="150"/></div>
+              </div>
+            </div>
+
+
+            <div class="row position-relative" >
+              <div class="col-8 overlay-box"
+                style="background-color:rgba(188, 195, 250, 0.5);">
+                <p style="font-weight:normal;font-size:small;line-height:normal;margin-top:10px;margin-left:10px;">
+                  FlowWright, a leading business process automation platform (Low-code, no-code), empowers organizations with dynamic and intelligent solutions.
+                </p>
+              </div>
+              <div class="col-8 overlay-box"
+               style="background-color: rgba(35, 85, 147, 0.5);"
+              >
+                <p style="margin-top:10px;margin-left:10px;">Dileepa Wijayanayake<br />
+                  CTO<br />
+                  FlowWright, USA
+                  </p>
+              </div>
+            </div>
+<div class="row" style="height:50px;"></div>
+
+          </div>
+          <div class="carousel-item">
+            Next
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+
   </div>
 </section>
 {{ if site.Params.doks.backgroundDots -}}
@@ -34,7 +118,6 @@
 </div>
 {{ end -}}
 {{ end }}
-
 
 
 {{ define "sidebar-prefooter" }}
@@ -452,53 +535,57 @@
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
             src="/images/supported/sqlserver.png" alt="SQLServer" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sql-azure.png" alt="SQLServer Azure" width="180"/></a>
+            src="/images/supported/sql-azure.png" alt="SQLServer Azure" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/postgres.png" alt="Postgres" width="180"/></a>
+            src="/images/supported/postgres.png" alt="Postgres" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/oracle.png" alt="Oracle" width="180"/></a>
+            src="/images/supported/oracle.png" alt="Oracle" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/mysql.png" alt="MySql" width="180"/></a>
+            src="/images/supported/mysql.png" alt="MySql" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/mariadb.png" alt="MariaDB" class="m-3" width="180"/></a>
+            src="/images/supported/mariadb.png" alt="MariaDB" class="m-3" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/db2logo.png" alt="IBM DB2" class="m-3" width="60"/></a>
+            src="/images/supported/db2logo.png" alt="IBM DB2" class="m-3" width="60" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sap-ase.png" alt="SAP ASE" class="m-3" width="180"/></a>
+            src="/images/supported/sap-ase.png" alt="SAP ASE" class="m-3" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sap-hana.png" alt="SAP Hana" class="m-3" width="180"/></a>
+            src="/images/supported/sap-hana.png" alt="SAP Hana" class="m-3" width="180" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/snowflake.png" alt="Snowflake" class="m-3" width="180"/></a>
+            src="/images/supported/snowflake.png" alt="Snowflake" class="m-3" width="180" /></a>
         <a href="/docs/db-connectors/access/#odbc-drivers"><img src="/images/supported/access.png" alt="Access"
             class="m-3" width="40" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/spark.png" alt="ETLBox" class="m-3" width="120"/></a>
+            src="/images/supported/spark.png" alt="ETLBox" class="m-3" width="120" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/odbc.png" alt="ETLBox" class="m-3" width="130"/></a>
+            src="/images/supported/odbc.png" alt="ETLBox" class="m-3" width="130" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sql-lite.png" alt="ETLBox" class="m-3" width="120"/></a>
+            src="/images/supported/sql-lite.png" alt="ETLBox" class="m-3" width="120" /></a>
         <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
             src="/images/supported/oledb.png" alt="ETLBox" class="m-3" width="45" /></a>
-        <a href="/docs/nosql-connectors/mongo/"><img src="/images/supported/mongodb.png" alt="Mongo DB" class="m-3" width="170"/></a>
-        <a href="/docs/nosql-connectors/kafka/"><img src="/images/supported/kafka.png" alt="Apache Kafka" class="m-3" width="140"/></a>
+        <a href="/docs/nosql-connectors/mongo/"><img src="/images/supported/mongodb.png" alt="Mongo DB" class="m-3"
+            width="170" /></a>
+        <a href="/docs/nosql-connectors/kafka/"><img src="/images/supported/kafka.png" alt="Apache Kafka" class="m-3"
+            width="140" /></a>
         <a href="/docs/nosql-connectors/cosmos-db/"><img src="/images/supported/cosmos.png" alt="Azure Cosmos DB"
-            class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/service-bus/"><img src="/images/supported/servicebus.png" alt="Azure Service Bus"
             class="m-3" width="140" /></a>
-        <a href="/docs/nosql-connectors/tables/"><img src="/images/supported/tables.png" alt="Azure Tables" class="m-3" width="140"/></a>
+        <a href="/docs/nosql-connectors/service-bus/"><img src="/images/supported/servicebus.png"
+            alt="Azure Service Bus" class="m-3" width="140" /></a>
+        <a href="/docs/nosql-connectors/tables/"><img src="/images/supported/tables.png" alt="Azure Tables" class="m-3"
+            width="140" /></a>
         <a href="/docs/nosql-connectors/couchbase/"><img src="/images/supported/couchbase.png" alt="Couchbase"
-            class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/redis/"><img src="/images/supported/redis.png" alt="Redis" class="m-3" width="140" /></a>
-        <a href="/docs/stream-connectors/parquet/"><img src="/images/supported/parquet.png" alt="Parquet"
-            class="m-3" width="140"/></a>
+            class="m-3" width="140" /></a>
+        <a href="/docs/nosql-connectors/redis/"><img src="/images/supported/redis.png" alt="Redis" class="m-3"
+            width="140" /></a>
+        <a href="/docs/stream-connectors/parquet/"><img src="/images/supported/parquet.png" alt="Parquet" class="m-3"
+            width="140" /></a>
         <a href="/docs/stream-connectors/xml/"><img src="/images/supported/xml.svg" alt="XML" class="m-3" height="70"
             width="50" /></a>
         <a href="/docs/stream-connectors/csv/"><img src="/images/supported/csv.svg" alt="CSV" class="m-3" height="70"
             width="50" /></a>
-        <a href="/docs/stream-connectors/json/"><img src="/images/supported/json.svg" alt="JSON" class="m-3"
-            height="70" width="50" /></a>
-        <a href="/docs/stream-connectors/text/"><img src="/images/supported/txt.svg" alt="TEXT" class="m-3"
-            height="70" width="50" /></a>
+        <a href="/docs/stream-connectors/json/"><img src="/images/supported/json.svg" alt="JSON" class="m-3" height="70"
+            width="50" /></a>
+        <a href="/docs/stream-connectors/text/"><img src="/images/supported/txt.svg" alt="TEXT" class="m-3" height="70"
+            width="50" /></a>
         <a href="/docs/stream-connectors/excel/"><img src="/images/supported/excel_s.png" alt="EXCEL" class="m-3"
             height="90" width="140" /></a>
       </div>
