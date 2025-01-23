@@ -1,3 +1,7 @@
+// Loaded & Executed on the start page only
+
+/** Fetch NuGet download count from the Lambda function */
+//Init download counter
 document.addEventListener('DOMContentLoaded', async () => {
   const badgeElement = document.getElementById('downloads-badge');
   const packageElement = document.getElementById('packages-count');

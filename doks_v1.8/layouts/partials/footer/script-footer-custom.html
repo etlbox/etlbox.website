@@ -13,7 +13,8 @@
 */}}
 
 {{ if .IsHome -}}
-  {{ partial "footer/esbuild" (dict "src" "js/downloads-badge.js" "load" "defer" "transpile" false) -}}
+  {{ partial "footer/esbuild" (dict "src" "js/download-badge.js" "load" "defer" "transpile" false) -}}
+  {{ partial "footer/esbuild" (dict "src" "js/glide-carousels.js" "load" "defer" "transpile" false) -}}
 {{ end -}}
 
 {{ if eq (hugo.Environment) "production" -}}

@@ -4,6 +4,10 @@
 @import "common/forms";
 @import "common/api-docs";
 
+@import "glide/glide.core";
+@import "glide/glide.theme";
+//@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 //Custom fonts
 @font-face {
   font-family: SegoeUI;
