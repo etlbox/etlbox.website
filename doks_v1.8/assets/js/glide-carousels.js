@@ -8,6 +8,16 @@ S (Small): Mobile phones (≥576px to <768px).
 XS (Extra Small): Small mobile devices (<576px).
 */
 
+
+// Neuer Glider mit 1 Element per View
+var singleGlide = new Glide('.glide-single', {
+  type: 'carousel',
+  startAt: 0,
+  perView: 1 // Always show only 1 element
+});
+
+singleGlide.mount();
+
 /** Glide - a carousel implementation */
 import Glide from '@glidejs/glide'
 var glide = new Glide('.glide', {
