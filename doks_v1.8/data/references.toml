@@ -1,0 +1,34 @@
+[[customer]]
+name = "Commonwealth Bank of Australia"
+country = "Australia"
+link = "https://www.commbank.com.au/"
+image_light = "images/references/cba.png"
+image_dark = "images/references/cba_dark.png"
+
+[[customer]]
+name = "Brunata"
+country = "Denmark"
+link = "https://brunata.dk"
+image_light = "images/references/brunata_logo.png"
+image_dark = "images/references/brunata_logo_dark.png"
+
+[[customer]]
+name = "Deloitte"
+country = "Ireland, India"
+link = "https://www.deloitte.com"
+image_light = "images/references/deloitte.svg"
+image_dark = "images/references/deloitte_dark.svg"
+
+[[customer]]
+name = "IWG"
+country = "Switzerland"
+link = "https://www.iwgplc.com"
+image_light = "images/references/iwg.svg"
+image_dark = "images/references/iwg.svg"
+
+[[customer]]
+name = "Flowwright"
+country = "U.S.A."
+link = "https://www.flowwright.com/etl-extract-transform-load"
+image_light = "images/references/flowwright.png"
+image_dark = "images/references/flowwright_dark.png"

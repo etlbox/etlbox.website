@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
+<section class="section section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center align-items-center">
 
     <!-- Right Side -->
-    <div class="col-lg-8 order-lg-2">
+    <div class="col-lg-8 order-lg-1">
       <div class="row justify-content-center">
         <div class="col-lg-16 text-center">
           <h1>
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Left Side -->
-    <div class="col-lg-8 order-lg-1 text-center text-lg-start">
+    <div class="col-lg-8 order-lg-2 text-center text-lg-start">
 
 
       <div id="carouselExampleIndicators" class="carousel slide">
@@ -52,7 +52,7 @@
 
             <div class="row">
               <div class="col-6 d-flex flex-column justify-content-center">
-                <div><img src="/images/customer/flowwright_logo.png" alt="Flowwright Logo" /> </div>
+                <div><img src="/images/references/flowwright.png" alt="Flowwright Logo" /> </div>
               </div>
               <div class="col-10 d-flex flex-column">
                 <p style="font-weight:600;font-size:larger;line-height:normal;">“ETLBox is exceptionally well-designed,
@@ -125,61 +125,33 @@
 
 {{ define "sidebar-prefooter" }}
 <section class="section section-sm">
+  <div class="d-flex justify-content-center align-items-center text-center mt-4">
+    <h1 class="d-inline-flex align-items-center mb-0">
+      <i class="bi-heart text-danger me-2"></i>
+      <span class="fs-5">Loved by our customers across the globe</span>
+    </h1>
+  </div>
+
   <div class="glide">
     <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
+      <ul class="glide__slides reference-carousel">
 
+        {{ range .Site.Data.references.customer }}
         <li class="glide__slide">
-          <div class="card bg-light refcard">
-            <div class="card-body">
+          <div class="card bg-light">
+            <div class="card-body d-flex flex-column">
               <p class="card-text">
-                <a href="https://www.commbank.com.au/" target="_blank" rel="noopener nofollow">
-                  <img src="images/references/cba_light.png" alt="Commonwealth Bank of Australia" class="light-mode-image" loading="lazy" style="max-width:100%;height:auto;width:20rem;">
-                  <img src="images/references/cba_dark.png" alt="Commonwealth Bank of Australia" class="dark-mode-image" loading="lazy">
+                <a href="{{ .link }}" target="_blank" rel="noopener nofollow">
+                  <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo" loading="lazy">
+                  <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo" loading="lazy">
                 </a>
               </p>
-              <p class="card-text"><strong>Commonwealth Bank of Australia</strong><br />
-              Australia</p>
+              <p class="card-text mt-auto"><strong>{{ .name }}</strong><br />
+              {{ .country }}</p>
             </div>
           </div>
-
-
         </li>
-        <li class="glide__slide">
-          <div>
-            <a href="https://brunata.dk" target="_blank" rel="noopener">
-              <img src="images/references/brunata_logo.png" alt="Brunata">
-            </a>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <div>
-            <a href="https://www.deloitte.com/" target="_blank" rel="noopener">
-              <img src="images/references/deloitte.svg" alt="Deloitte">
-            </a>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <div>
-            <a href="https://www.meusburger.com/" target="_blank" rel="noopener">
-              <img src="images/references/meusburger.svg" alt="Meusburger">
-            </a>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <div>
-            <a href="https://novogenia.com/" target="_blank" rel="noopener">
-              <img src="images/references/novogenia.png" alt="Novogenia">
-            </a>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <div>
-            <a href="https://www.iwgplc.com/" target="_blank" rel="noopener">
-              <img src="images/references/iwg.svg" alt="IWG PLC">
-            </a>
-          </div>
-        </li>
+        {{ end }}
       </ul>
     </div>
 
