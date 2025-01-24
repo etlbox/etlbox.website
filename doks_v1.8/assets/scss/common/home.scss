@@ -39,6 +39,7 @@
 }
 
 
+/** Image switches for light and dark mode */
 .light-mode-image {
     display: block;
 }
@@ -58,26 +59,26 @@
     }
 }
 
-//Used in home page on top
-// .overlay-box {
-//     position: relative;
-//     font-weight: bold;
-//     z-index: 1;
-// }
+/** New common background colos */
+.bg-light-blue {
+    background-color: rgba(188, 195, 250, 0.5);
+    /* Helles Blau */
+}
 
-.logo-image {
-    position: absolute;
-    z-index: 2; /* Über dem Desktop-Bild */
-  }
-
-  .desktop-image {
-    position: absolute; /* Desktop kann frei positioniert werden */
-    z-index: 1; /* Desktop liegt unter dem Logo */
-  }
+.bg-dark-blue {
+    background-color: rgba(35, 85, 147, 0.5);
+    /* Dunkles Blau */
+}
 
 
+/** Reference page only: */
 
-//Usen in References on home page
+
+.slide-images {
+    height: 8rem;
+}
+
+//Used in reference carousel only
 .fixed-size-logo {
     width: 15rem;
     /* Einheitliche Breite */
