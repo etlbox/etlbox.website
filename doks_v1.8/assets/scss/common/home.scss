@@ -16,7 +16,7 @@
 
     @include media-breakpoint-up(lg) {
         width: 50%;
-      }
+    }
 }
 
 
@@ -26,9 +26,9 @@
     img {
         width: 50%;
 
-    @include media-breakpoint-up(lg) {
-        width: 30%;
-      }
+        @include media-breakpoint-up(lg) {
+            width: 30%;
+        }
     }
 }
 
@@ -38,12 +38,25 @@
     overflow: auto;
 }
 
-.carousel-indicators,
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
+
+.light-mode-image {
+    display: block;
 }
 
+.dark-mode-image {
+    display: none;
+}
+
+
+@include color-mode(dark) {
+    .light-mode-image {
+        display: none;
+    }
+
+    .dark-mode-image {
+        display: block;
+    }
+}
 
 // .overlay-box {
 //     position: absolute;
@@ -56,11 +69,12 @@
 //     z-index: 1;
 //   }
 .overlay-box {
-    position: relative; /* Change to relative to avoid overlapping */
+    position: relative;
+    /* Change to relative to avoid overlapping */
 
     font-weight: bold;
     z-index: 1;
-  }
+}
 
 /* When embedding video via iFrame, use this
  https://css-tricks.com/fluid-width-video/
@@ -78,4 +92,3 @@
     height: 100%;
 }
 */
-

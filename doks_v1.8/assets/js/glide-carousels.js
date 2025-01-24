@@ -2,4 +2,10 @@
 
 /** Glide - a carousel implementation (bootstrap was not properly working) */
 import Glide from '@glidejs/glide'
-new Glide('.glide').mount()
+var glide = new Glide('.glide', {
+  type: 'carousel',
+  startAt: 0,
+  perView: 3
+})
+
+glide.mount()
