@@ -50,7 +50,7 @@
   &#{$se}bullets {
     position: absolute;
     z-index: 2;
-    bottom: 2em;
+    bottom: 0em;
     left: 50%;
     display: inline-flex;
     list-style: none;
@@ -99,7 +99,7 @@
 }
 
 
-//Customization of glider for dark mode and reusing bootstrap icons
+//Customization of carousel indicators
 .carousel-indicators,
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {

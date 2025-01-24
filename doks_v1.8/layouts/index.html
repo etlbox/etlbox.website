@@ -27,7 +27,7 @@
                 aria-label="View ETLBox packages on NuGet">
                 <b id="packages-count">0</b> packages </a> with over
             </span>
-            <span class="badge bg-primary fs-5 p-3" id="downloads-badge">0</span>
+            <span class="badge bg-secondary fs-5 p-2" id="downloads-badge">0</span>
             <span class="ms-2 fs-5">Total downloads</span>
           </div>
           </p>
@@ -128,7 +128,7 @@
   <div class="d-flex justify-content-center align-items-center text-center mt-4">
     <h1 class="d-inline-flex align-items-center mb-0">
       <i class="bi-heart text-danger me-2"></i>
-      <span class="fs-5">Loved by our customers across the globe</span>
+      <span class="fs-5">Making data dreams come true in  <span class="badge bg-secondary fs-5" id="country-count">0</span> countries (and counting!)</span>
     </h1>
   </div>
 
@@ -138,15 +138,15 @@
 
         {{ range .Site.Data.references.customer }}
         <li class="glide__slide">
-          <div class="card bg-light">
-            <div class="card-body d-flex flex-column">
+          <div class="card bg-light mx-2">
+            <div class="card-body d-flex flex-column ps-4">
               <p class="card-text">
                 <a href="{{ .link }}" target="_blank" rel="noopener nofollow">
                   <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo" loading="lazy">
                   <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo" loading="lazy">
                 </a>
               </p>
-              <p class="card-text mt-auto"><strong>{{ .name }}</strong><br />
+              <p class="card-text ps-2"><strong>{{ .name }}</strong><br />
               {{ .country }}</p>
             </div>
           </div>

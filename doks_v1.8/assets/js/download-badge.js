@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const badgeElement = document.getElementById('downloads-badge');
   const packageElement = document.getElementById('packages-count');
+  const countryElement = document.getElementById('country-count');
 
   // Check if the elements exist
   if (!badgeElement || !packageElement) {
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const data = await response.json();
     const totalDownloads = data.totalDownloads;
     const packageCount = data.packageCount;
+    const countryCount = 18;
 
     // Function to animate numbers
     function animateValue(element, start, end, duration) {
@@ -39,9 +41,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     animateValue(badgeElement, 0, totalDownloads, animationDuration);
     animateValue(packageElement, 0, packageCount, animationDuration);
+    animateValue(countryElement, 0, countryCount, animationDuration);
   } catch (error) {
     console.error('Error fetching data:', error);
-    badgeElement.textContent = 'Error';
-    packageElement.textContent = 'Error';
+    badgeElement.textContent = '1M+';
+    packageElement.textContent = '36+';
+    countryElement.textContent = '18+';
   }
 });
