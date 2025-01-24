@@ -13,6 +13,9 @@ XS (Extra Small): Small mobile devices (<576px).
 var singleGlide = new Glide('.glide-single', {
   type: 'carousel',
   startAt: 0,
+  focusAt: 'center',
+  peek: 0,
+  gap: 0,
   perView: 1 // Always show only 1 element
 });
 

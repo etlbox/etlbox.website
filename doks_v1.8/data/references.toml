@@ -32,3 +32,10 @@ country = "U.S.A."
 link = "https://www.flowwright.com/etl-extract-transform-load"
 image_light = "images/references/flowwright.png"
 image_dark = "images/references/flowwright_dark.png"
+
+[[customer]]
+name = "VIS Performance"
+country = "Denmark"
+link = "https://www.vis-performance.dk"
+image_light = "images/references/vis.svg"
+image_dark = "images/references/vis.svg"
