@@ -34,28 +34,6 @@
   autoLaunch = false
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
-  # CORS und Security-Header nur für die Produktion
-[[context.production.headers]]
-  for = "/*"
-  [context.production.headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' https://*.netlify.com; manifest-src 'self' https://*.etlbox.net https://*.netlify.com; connect-src 'self' https://*.etlbox.net https://*.algolia.net https://*.algolianet.com https://plausible.io https://*.netlify.com; font-src 'self' https://*.etlbox.net https://*.netlify.com; img-src 'self' https://*.etlbox.net https://*.netlify.com https://avatars.githubusercontent.com data:; script-src 'self' 'unsafe-inline' https://*.etlbox.net https://*.algolia.net https://*.algolianet.com https://*.netlify.com https://plausible.io 'nonce-dXNlcj0iaGVsbG8iLGRvbWFpbj0iaGVua3ZlcmxpbmRlLmNvbSIsZG9jdW1lbnQud3JpdGUodXNlcisiQCIrZG9tYWluKTs=' 'sha256-aWZ3y/RxbBYKHXH0z8+8ljrHG1mSBvyzSfxSMjBSaXk=' 'sha256-Wfb6BDd/i0sTBJm6TFHYI/RfB+SW1jx/2OZ7EqVWu2c='; style-src 'self' https://*.etlbox.net https://*.netlify.com 'unsafe-inline'"
-    X-Frame-Options = "SAMEORIGIN"
-    Referrer-Policy = "strict-origin"
-    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
-    Cache-Control= '''
-    public,
-    max-age=31536000'''
-    Access-Control-Allow-Origin = "*"
-
-# CORS deaktivieren oder weniger restriktive Header verwenden
-[[context.deploy-preview.headers]]
-  for = "/*"
-  [context.deploy-preview.headers.values]
-    Access-Control-Allow-Origin = "null"
-    Content-Security-Policy = "default-src 'self'; connect-src 'self';"
 
 # [[headers]]
 #   for = "/*"
@@ -71,6 +49,14 @@
 #     public,
 #     max-age=31536000'''
 #     Access-Control-Allow-Origin = "*"
+
+# Deactive CORS for preview
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "null"
+    Content-Security-Policy = "default-src 'self'; connect-src 'self';"
+
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
