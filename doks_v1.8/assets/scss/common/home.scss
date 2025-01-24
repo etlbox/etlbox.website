@@ -59,32 +59,23 @@
 }
 
 //Used in home page on top
-.overlay-box {
-    position: relative;
-    font-weight: bold;
-    z-index: 1;
-}
+// .overlay-box {
+//     position: relative;
+//     font-weight: bold;
+//     z-index: 1;
+// }
 
-.row.position-relative {
-    position: relative; /* Lokaler Bezugspunkt für absolut positionierte Elemente */
-  }
-
-
-  .custom-bg-right {
-    position: relative; /* Basisposition für das Pseudo-Element */
-    z-index: 1; /* Sicherstellen, dass Inhalte über dem Hintergrund erscheinen */
-  }
-
-  .custom-bg-right::before {
-    content: '';
+.logo-image {
     position: absolute;
-    top: 0;
-    left: 0; /* Startet am linken Rand des Containers */
-    width: 100vw; /* Deckt die gesamte Bildschirmbreite ab */
-    height: 100%; /* Passt sich der Höhe des Containers an */
-    background-color: #f0f0f0; /* Grauer Hintergrund */
-    z-index: -1; /* Hintergrund hinter den Inhalt legen */
+    z-index: 2; /* Über dem Desktop-Bild */
   }
+
+  .desktop-image {
+    position: absolute; /* Desktop kann frei positioniert werden */
+    z-index: 1; /* Desktop liegt unter dem Logo */
+  }
+
+
 
 //Usen in References on home page
 .fixed-size-logo {
