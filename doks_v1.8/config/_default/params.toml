@@ -41,7 +41,7 @@ mainSections = ["docs","recipes"]
   alertDismissable = true # true (default) or false
 
   # Bootstrap
-  bootstrapJavascript = true # false (default) or true
+  bootstrapJavascript = false # false (default) or true
 
   # Nav
   sectionNav = ["docs","recipes","api"] # (default) or list of sections (e.g. ["docs", "guides"])
