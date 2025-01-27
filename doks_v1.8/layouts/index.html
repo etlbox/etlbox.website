@@ -40,7 +40,7 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
 
-            {{ range .Site.Data.statements.statement }}
+            {{ range .Site.Data.home.statements.statement }}
             <li class="glide__slide">
 
               <!-- Quote Row -->
@@ -55,10 +55,11 @@
               <!-- Images Row -->
               <div class="row align-items-end customer-slide-images">
                 <!-- Logo -->
-                <div class="col-sm-5 order-2 order-sm-1 d-flex justify-content-center position-relative customer-slide-logo">
+                <div
+                  class="col-sm-5 order-2 order-sm-1 d-flex justify-content-center position-relative customer-slide-logo">
                   <div>
-                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid responsive-image" />
-                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid"  />
+                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid" />
+                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid" />
                   </div>
                 </div>
                 <!-- Desktop Image -->
@@ -68,7 +69,8 @@
                   </div>
                 </div>
                 <!-- Headshot -->
-                <div class="col-sm-4 order-3 order-sm-3 d-flex justify-content-center align-items-end position-relative customer-slide-headshot" >
+                <div
+                  class="col-sm-4 order-3 order-sm-3 d-flex justify-content-center align-items-end position-relative customer-slide-headshot">
                   <div>
                     <img src="{{ .headshot }}" alt="Headshot" class="img-fluid" />
                   </div>
@@ -140,7 +142,7 @@
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
 
-        {{ range .Site.Data.references.customer }}
+        {{ range .Site.Data.home.references.customer }}
         <li class="glide__slide">
           <div class="card bg-light mx-2">
             <div class="card-body d-flex flex-column ps-4">
@@ -176,7 +178,121 @@
 </section>
 
 
+
 <section class="section section-sm alteredColor">
+  <div class="container my-4">
+    <div class="row">
+      <!-- Left Content Column -->
+      <div class="col-lg-9">
+        <div>
+          <h2 class="mb-4"> <i class="bi bi-box-seam me-2"></i>What’s Inside the Box?</h2>
+          <p>Explore the full scope of ETLBox and how it simplifies your <strong>ETL pipelines</strong> and <strong>data integration</strong> workflows.</p>
+
+          <h3 class="mt-4"><i class="bi-cloud"></i> Supports Everything</h3>
+          <p><span>Designed for the latest .NET platforms, including <strong>.NET 8, .NET 9</strong>, and .NET Framework 4.8.x. <br />
+             Works on Azure, Windows, Linux, macOS, Docker, Kubernetes, and other OS across x86, x64 or arm64 architectures.</span></p>
+
+          <h3 class="mt-4"><i class="bi-link"></i> Connects Everywhere:</h3>
+          <p><span>SQL Server, Postgres, SQLite, Oracle, MySql, MariaDB,
+              Db2, SAP ASE (Sybase), SAP HANA, Snowflake, Microsoft Access, Apache Spark (SQL), ODBC, MongoDb, Couchbase, Redis, Azure Cosmos DB, Neo4j,
+              Azure Service Bus, Azure Tables, Apache Kafka, Csv, Json, Xml, Excel, Text, Parquet, REST, GraphQL, Azure Blob Storage, Azure Data Lake,
+              Azure Cosmos DB, Azure Service Bus, Azure Tables, WebAPIs, and more...</span></p>
+
+          <h3 class="mt-4"><i class="bi-arrow-repeat"></i> Transforms Anything</h3>
+          <p><span>CachedRowTransformation,
+              ColumnTransformation, Distinct, FilterTransformation, LookupTransformation, MergeJoin, Multicast,
+              RowDuplication, RowMultiplication, RowTransformation, RowValidation, XmlSchemaValidation, Aggregation, BatchTransformation,
+              BlockTransformation, CachedBatchTransformation, CrossJoin, Pivot, Sort, WaitTransformation</span></p>
+        </div>
+      </div>
+
+      <!-- Right Image Column -->
+      <div class="col-lg-7">
+        <div class="row justify-content-center">
+          {{ range .Site.Data.home.connectors.connector }}
+          <div class="col-8 col-lg-5 d-flex justify-content-center align-items-center m-1">
+            <a href="{{ .link }}"><img src="{{ .image }}" alt="{{ .alt }}" class="img-fluid" style="height:50px; width:auto;object-fit:contain;" /></a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-sm">
+  <div class="container my-4">
+    <div class="text-center mb-4">
+      <h2>Why Choose ETLBox?</h2>
+      <p class="lead">ETLBox combines flexibility, performance, and reliability to deliver unparalleled value to
+        developers and organizations.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-speedometer2"></i> High-Performance Data Transfers</h3>
+        <p>Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum
+          performance even for large datasets.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-cash-stack"></i> Significant Cost Savings</h3>
+        <p>Save over 50% compared to custom development and reduce development time with ready-to-use ETL components.
+        </p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-box-seam"></i> Comprehensive Integrations</h3>
+        <p>Seamless integration with virtually all relevant data sources, including SQL, NoSQL, files, and cloud
+          services like Azure.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-layers"></i> Advanced Transformation Features</h3>
+        <p>Leverage powerful transformation functions to manipulate, clean, and harmonize data efficiently for your
+          specific needs.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-cloud-arrow-down"></i> Cross-Platform Compatibility</h3>
+        <p>Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad
+          compatibility.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-journal-code"></i> Exceptional Documentation</h3>
+        <p>Comprehensive and detailed documentation makes it easy for developers to get started and unlock the full
+          potential of ETLBox.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-shield-check"></i> Security and Stability</h3>
+        <p>Proven in production across various industries, ETLBox offers enterprise-grade stability and superior
+          security compared to open-source alternatives.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-people"></i> Professional Support</h3>
+        <p>Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth
+          implementation.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-gift"></i> Flexible Licensing and Free Trial</h3>
+        <p>Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment
+          risks.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-code-square"></i> Manage Your Changes</h3>
+        <p>Track your changes with Git (or other source code controls), integrate with your current code review process, and connect with your existing CI/CD platform.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-terminal"></i> Build ETL in .NET</h3>
+        <p>Code your ETL with your favorite .NET language, fitting your team’s skills, and benefiting from a mature toolset.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h3 class="h5"><i class="bi-check2-circle"></i> Test-Driven Data Flows</h3>
+        <p>Create your ETL jobs in a test-driven way and ensure your data flow works after every change. ETLBox integrates with popular test frameworks like xUnit, NUnit, or MSTest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-sm">
   <div class="container my-4">
     <div class="row">
       <!-- Left Content Column -->
@@ -280,63 +396,6 @@
 </section>
 
 
-<section class="section section-sm alteredColor">
-  <div class="container my-4">
-    <div class="text-center mb-4">
-      <h2>Why Choose ETLBox?</h2>
-      <p class="lead">ETLBox combines flexibility, performance, and reliability to deliver unparalleled value to
-        developers and organizations.</p>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-speedometer2"></i> High-Performance Data Transfers</h3>
-        <p>Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum
-          performance even for large datasets.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-cash-stack"></i> Significant Cost Savings</h3>
-        <p>Save over 50% compared to custom development and reduce development time with ready-to-use ETL components.
-        </p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-box-seam"></i> Comprehensive Integrations</h3>
-        <p>Seamless integration with virtually all relevant data sources, including SQL, NoSQL, files, and cloud
-          services like Azure.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-layers"></i> Advanced Transformation Features</h3>
-        <p>Leverage powerful transformation functions to manipulate, clean, and harmonize data efficiently for your
-          specific needs.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-cloud-arrow-down"></i> Cross-Platform Compatibility</h3>
-        <p>Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad
-          compatibility.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-journal-code"></i> Exceptional Documentation</h3>
-        <p>Comprehensive and detailed documentation makes it easy for developers to get started and unlock the full
-          potential of ETLBox.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-shield-check"></i> Security and Stability</h3>
-        <p>Proven in production across various industries, ETLBox offers enterprise-grade stability and superior
-          security compared to open-source alternatives.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-people"></i> Professional Support</h3>
-        <p>Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth
-          implementation.</p>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-gift"></i> Flexible Licensing and Free Trial</h3>
-        <p>Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment
-          risks.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section section-sm">
   <div class="container my-4">
@@ -472,63 +531,6 @@
       </div>
       -->
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section section-sm">
-  <div class="text-center my-4">
-    <h2>Ask <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a> about ETLBox</h2>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-3 col-lg-1 align-self-start">
-        <img src="images/AinBox.jpg" height="42" width="42" alt="Andreas" />
-      </div>
-      <div class="col-13 col-lg-8 align-self-center">Hi ChatGPT, could you give me an introduction into ETLBox?</div>
-      <div class="col-lg-4"></div>
-    </div>
-  </div>
-</section>
-<section class="section section-sm alteredColor">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-3 col-lg-1 align-self-start">
-        <img src="images/OpenAI.jpg" height="42" width="42" alt="Andreas" />
-      </div>
-      <div class="col-13 col-lg-8 align-self-center">
-        <p>Yes, of course!</p>
-
-        <p>ETLBox is a commercial, .NET-based library for Extract-Transform-Load (ETL) processes. ETL is a critical
-          aspect
-          of data management, and is used to extract data from a variety of sources, clean and transform it into a
-          desired
-          format, and then load it into a target system, such as a data warehouse or a database. ETLBox provides a set
-          of
-          simple, yet powerful components that can be used to automate these tasks.</p>
-
-        <p>The key benefits of using ETLBox include:</p>
-
-        <ol>
-          <li>Simplicity: ETLBox provides an easy-to-use API that makes it simple to implement ETL processes.</li>
-
-          <li>Flexibility: ETLBox supports a wide range of data sources and targets, and provides the ability to
-            transform
-            data in many ways, such as by performing lookups, splitting columns, and aggregating data.</li>
-
-          <li>Performance: ETLBox is designed for high performance and can handle large amounts of data efficiently.
-          </li>
-
-          <li>.NET support: ETLBox is written in C# and is fully integrated with the .NET framework, making it a natural
-            choice for developers who are already familiar with .NET.</li>
-        </ol>
-        In conclusion, ETLBox is a great choice for anyone who needs to implement ETL processes and wants a powerful,
-        yet simple, solution that is commercially supported.
-      </div>
-      <div class="col-lg-4"></div>
     </div>
   </div>
 </section>

@@ -1,0 +1,139 @@
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/sqlserver.png"
+alt = "SQLServer"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/sql-azure.png"
+alt = "SQLServer Azure"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/postgres.png"
+alt = "Postgres"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/oracle.png"
+alt = "Oracle"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/mysql.png"
+alt = "MySql"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/mariadb.png"
+alt = "MariaDB"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/db2logo.png"
+alt = "IBM DB2"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/sap-ase.png"
+alt = "SAP ASE"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/sap-hana.png"
+alt = "SAP Hana"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/snowflake.png"
+alt = "Snowflake"
+
+[[connector]]
+link = "/docs/db-connector/access/#odbc-drivers"
+image = "/images/supported/access.png"
+alt = "Access"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/spark.png"
+alt = "ETLBox"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/odbc.png"
+alt = "ETLBox"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/sql-lite.png"
+alt = "ETLBox"
+
+[[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image = "/images/supported/oledb.png"
+alt = "ETLBox"
+
+[[connector]]
+link = "/docs/nosql-connector/mongo/"
+image = "/images/supported/mongodb.png"
+alt = "Mongo DB"
+
+[[connector]]
+link = "/docs/nosql-connector/kafka/"
+image = "/images/supported/kafka.png"
+alt = "Apache Kafka"
+
+[[connector]]
+link = "/docs/nosql-connector/cosmos-db/"
+image = "/images/supported/cosmos.png"
+alt = "Azure Cosmos DB"
+
+[[connector]]
+link = "/docs/nosql-connector/service-bus/"
+image = "/images/supported/servicebus.png"
+alt = "Azure Service Bus"
+
+[[connector]]
+link = "/docs/nosql-connector/tables/"
+image = "/images/supported/tables.png"
+alt = "Azure Tables"
+
+[[connector]]
+link = "/docs/nosql-connector/couchbase/"
+image = "/images/supported/couchbase.png"
+alt = "Couchbase"
+
+[[connector]]
+link = "/docs/nosql-connector/redis/"
+image = "/images/supported/redis.png"
+alt = "Redis"
+
+[[connector]]
+link = "/docs/stream-connector/parquet/"
+image = "/images/supported/parquet.png"
+alt = "Parquet"
+
+[[connector]]
+link = "/docs/stream-connector/xml/"
+image = "/images/supported/xml.svg"
+alt = "XML"
+
+[[connector]]
+link = "/docs/stream-connector/csv/"
+image = "/images/supported/csv.svg"
+alt = "CSV"
+
+[[connector]]
+link = "/docs/stream-connector/json/"
+image = "/images/supported/json.svg"
+alt = "JSON"
+
+[[connector]]
+link = "/docs/stream-connector/text/"
+image = "/images/supported/txt.svg"
+alt = "TEXT"
+
+[[connector]]
+link = "/docs/stream-connector/excel/"
+image = "/images/supported/excel_s.png"
+alt = "EXCEL"
