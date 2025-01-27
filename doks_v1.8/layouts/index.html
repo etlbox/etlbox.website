@@ -41,7 +41,7 @@
           <ul class="glide__slides">
 
             {{ range .Site.Data.statements.statement }}
-            <li class="glide__slide"  >
+            <li class="glide__slide">
 
               <!-- Quote Row -->
               <div class="row">
@@ -55,44 +55,45 @@
               <!-- Images Row -->
               <div class="row align-items-end customer-slide-images">
                 <!-- Logo -->
-                <div class="col-5 d-flex justify-content-center position-relative customer-slide-logo">
+                <div class="col-sm-5 d-flex justify-content-center position-relative customer-slide-logo">
                   <div>
-                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid"  />
-                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid" />
+                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid responsive-image" />
+                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid"  />
                   </div>
                 </div>
                 <!-- Desktop Image -->
-                <div class="col-6 d-flex justify-content-end align-items-end ms-3">
+                <div class="col-sm-6 d-flex justify-content-end align-items-end ms-3">
                   <div>
                     <img src="{{ .desktop }}" alt="Desktop Image" class="img-fluid" />
                   </div>
                 </div>
                 <!-- Headshot -->
-                <div class="col-4 d-flex justify-content-end align-items-end">
-                  <div >
-                    <img src="{{ .headshot }}" alt="Headshot" class="img-fluid"  />
+                <div class="col-sm-4 d-flex justify-content-center align-items-end position-relative customer-slide-headshot" >
+                  <div>
+                    <img src="{{ .headshot }}" alt="Headshot" class="img-fluid" />
                   </div>
                 </div>
               </div>
 
               <!-- Information Rows -->
-              <div class="row mx-1" >
-                <div class="col-9 bg-light-blue">
+              <div class="row mx-1">
+                <div class="col-sm-9 bg-light-blue rounded-start">
                   <p class="fs-6 lh-sm ps-2 pt-1">
                     {{ .company_description }}
                   </p>
                 </div>
-                <div class="col-7 bg-dark-blue">
+                <div class="col-sm-7 bg-dark-blue rounded-end">
                   <p class="fs-6 ps-2 pt-1">
                     <strong>{{ .name }}<br /></strong>
                     {{ .position }}<br />
                     {{ .company }}
                   </p>
                 </div>
+
               </div>
 
               <!-- Additional Space -->
-              <div class="row mt-3"></div>
+              <div class="row mt-4"></div>
             </li>
             {{ end }}
 
@@ -185,21 +186,30 @@
           <p>Explore the full scope of ETLBox and how it simplifies your data integration workflows.</p>
 
           <h3 class="mt-4"><i class="bi-link"></i> Database Connectors</h3>
-          <p><strong>SQL Databases:</strong> <span class="fs-6">SQL Server, Postgres, SQLite, Oracle, MySql, MariaDB, Db2, SAP ASE (Sybase), SAP HANA, Snowflake, Microsoft Access, Apache Spark (SQL), ODBC, and more...</span></p>
-          <p><strong>NoSQL Databases:</strong> <span class="fs-6">MongoDb, Couchbase, Redis, Azure Cosmos DB, Neo4j, Azure Service Bus, Azure Tables, Apache Kafka, and more...</span></p>
+          <p><strong>SQL Databases:</strong> <span class="fs-6">SQL Server, Postgres, SQLite, Oracle, MySql, MariaDB,
+              Db2, SAP ASE (Sybase), SAP HANA, Snowflake, Microsoft Access, Apache Spark (SQL), ODBC, and more...</span>
+          </p>
+          <p><strong>NoSQL Databases:</strong> <span class="fs-6">MongoDb, Couchbase, Redis, Azure Cosmos DB, Neo4j,
+              Azure Service Bus, Azure Tables, Apache Kafka, and more...</span></p>
 
           <h3 class="mt-4"><i class="bi-file-earmark-text"></i> Supported Data Storage Types</h3>
-          <p><strong>Flat-File Formats:</strong> <span class="fs-6">Csv, Json, Xml, Excel, Text, Parquet, and more...</span></p>
+          <p><strong>Flat-File Formats:</strong> <span class="fs-6">Csv, Json, Xml, Excel, Text, Parquet, and
+              more...</span></p>
 
           <h3 class="mt-4"><i class="bi-arrow-repeat"></i> Transformations</h3>
-          <p><strong>Non-Blocking Transformations:</strong> <span class="fs-6">CachedRowTransformation, ColumnTransformation, Distinct, FilterTransformation, LookupTransformation, MergeJoin, Multicast, RowDuplication, RowMultiplication, RowTransformation, RowValidation, XmlSchemaValidation</span></p>
-          <p><strong>Blocking Transformations:</strong> <span class="fs-6">Aggregation, BatchTransformation, BlockTransformation, CachedBatchTransformation, CrossJoin, Pivot, Sort, WaitTransformation</span></p>
+          <p><strong>Non-Blocking Transformations:</strong> <span class="fs-6">CachedRowTransformation,
+              ColumnTransformation, Distinct, FilterTransformation, LookupTransformation, MergeJoin, Multicast,
+              RowDuplication, RowMultiplication, RowTransformation, RowValidation, XmlSchemaValidation</span></p>
+          <p><strong>Blocking Transformations:</strong> <span class="fs-6">Aggregation, BatchTransformation,
+              BlockTransformation, CachedBatchTransformation, CrossJoin, Pivot, Sort, WaitTransformation</span></p>
 
           <h3 class="mt-4"><i class="bi-gear"></i> Supported Platforms</h3>
-          <p><strong>.NET and OS Support:</strong> <span class="fs-6">All supported .NET versions, .NET Framework 4.8.X, Windows, Linux, macOS</span></p>
+          <p><strong>.NET and OS Support:</strong> <span class="fs-6">All supported .NET versions, .NET Framework 4.8.X,
+              Windows, Linux, macOS</span></p>
 
           <h3 class="mt-4"><i class="bi-cloud"></i> Cloud Integration</h3>
-          <p><strong>Azure Services:</strong> <span class="fs-6">REST, GraphQL, Azure Blob Storage, Azure Data Lake, Azure Cosmos DB, Azure Service Bus, Azure Tables, WebAPIs, and more...</span></p>
+          <p><strong>Azure Services:</strong> <span class="fs-6">REST, GraphQL, Azure Blob Storage, Azure Data Lake,
+              Azure Cosmos DB, Azure Service Bus, Azure Tables, WebAPIs, and more...</span></p>
         </div>
       </div>
 
@@ -208,7 +218,8 @@
         <div class="mb-4">
           <img src="images/home/timesaved.png" class="img-fluid rounded" alt="Saved time with ETLBox">
         </div>
-        <p class="fw-bold text-secondary">With ETLBox, achieve up to <span class="text-success">20% savings</span> on development time.</p>
+        <p class="fw-bold text-secondary">With ETLBox, achieve up to <span class="text-success">20% savings</span> on
+          development time.</p>
       </div>
     </div>
   </div>
@@ -221,27 +232,37 @@
       <!-- Left Content Column -->
       <div class="col-lg-10">
         <h2 class="mb-4">Why ETLBox?</h2>
-        <p>ETLBox is designed to empower developers and data professionals to build efficient and reliable ETL workflows. Here’s why ETLBox stands out:</p>
+        <p>ETLBox is designed to empower developers and data professionals to build efficient and reliable ETL
+          workflows. Here’s why ETLBox stands out:</p>
 
         <h3 class="mt-4"><i class="bi-lightning"></i> Fast and Efficient</h3>
-        <p><strong>In-Memory Processing:</strong> ETLBox processes data in-memory, enabling up to 100x faster performance compared to traditional disk-based ETL tools.</p>
-        <p><strong>Big Data Ready:</strong> Efficiently handles large-scale data volumes using .NET's TPL Dataflow library.</p>
+        <p><strong>In-Memory Processing:</strong> ETLBox processes data in-memory, enabling up to 100x faster
+          performance compared to traditional disk-based ETL tools.</p>
+        <p><strong>Big Data Ready:</strong> Efficiently handles large-scale data volumes using .NET's TPL Dataflow
+          library.</p>
 
         <h3 class="mt-4"><i class="bi-bezier2"></i> Flexible and Customizable</h3>
         <p><strong>Custom Logic:</strong> Add your own transformations or connectors to meet unique project needs.</p>
-        <p><strong>Seamless Integration:</strong> Works with SQL, NoSQL, files, and cloud services, making it the perfect choice for hybrid environments.</p>
+        <p><strong>Seamless Integration:</strong> Works with SQL, NoSQL, files, and cloud services, making it the
+          perfect choice for hybrid environments.</p>
 
         <h3 class="mt-4"><i class="bi-shield-check"></i> Reliable and Test-Driven</h3>
-        <p><strong>Robust Testing:</strong> Integrates with popular testing frameworks like xUnit, NUnit, and MSTest to ensure data flows remain reliable over time.</p>
-        <p><strong>Error Handling:</strong> Built-in mechanisms for retrying failed tasks and logging errors provide peace of mind.</p>
+        <p><strong>Robust Testing:</strong> Integrates with popular testing frameworks like xUnit, NUnit, and MSTest to
+          ensure data flows remain reliable over time.</p>
+        <p><strong>Error Handling:</strong> Built-in mechanisms for retrying failed tasks and logging errors provide
+          peace of mind.</p>
 
         <h3 class="mt-4"><i class="bi-laptop"></i> Developer-Friendly</h3>
-        <p><strong>Built for .NET:</strong> Leverage your existing knowledge of C#, Visual Basic, or F# to create ETL workflows without learning a new language.</p>
-        <p><strong>Source Control Friendly:</strong> Easily integrate with Git and CI/CD pipelines for version control and automation.</p>
+        <p><strong>Built for .NET:</strong> Leverage your existing knowledge of C#, Visual Basic, or F# to create ETL
+          workflows without learning a new language.</p>
+        <p><strong>Source Control Friendly:</strong> Easily integrate with Git and CI/CD pipelines for version control
+          and automation.</p>
 
         <h3 class="mt-4"><i class="bi-cloud"></i> Cross-Platform and Scalable</h3>
-        <p><strong>Platform Agnostic:</strong> Runs on Windows, Linux, and macOS, offering flexibility for deployment.</p>
-        <p><strong>Cloud-Ready:</strong> Fully supports Azure services like Azure Blob Storage, Azure Data Lake, and more.</p>
+        <p><strong>Platform Agnostic:</strong> Runs on Windows, Linux, and macOS, offering flexibility for deployment.
+        </p>
+        <p><strong>Cloud-Ready:</strong> Fully supports Azure services like Azure Blob Storage, Azure Data Lake, and
+          more.</p>
       </div>
 
       <!-- Right Image Column -->
@@ -251,7 +272,8 @@
         </div>
         <p class="fw-bold text-secondary">"ETLBox makes ETL workflows effortless, reliable, and fast."</p>
         <p><strong>Start your ETL journey today!</strong></p>
-        <a class="btn btn-primary btn-cta rounded-pill btn-lg mt-3" href="/docs/getting-started/quick-start" role="button">Learn More</a>
+        <a class="btn btn-primary btn-cta rounded-pill btn-lg mt-3" href="/docs/getting-started/quick-start"
+          role="button">Learn More</a>
       </div>
     </div>
   </div>
@@ -262,45 +284,55 @@
   <div class="container my-4">
     <div class="text-center mb-4">
       <h2>Why Choose ETLBox?</h2>
-      <p class="lead">ETLBox combines flexibility, performance, and reliability to deliver unparalleled value to developers and organizations.</p>
+      <p class="lead">ETLBox combines flexibility, performance, and reliability to deliver unparalleled value to
+        developers and organizations.</p>
     </div>
 
     <div class="row">
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-speedometer2"></i> High-Performance Data Transfers</h3>
-        <p>Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum performance even for large datasets.</p>
+        <p>Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum
+          performance even for large datasets.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-cash-stack"></i> Significant Cost Savings</h3>
-        <p>Save over 50% compared to custom development and reduce development time with ready-to-use ETL components.</p>
+        <p>Save over 50% compared to custom development and reduce development time with ready-to-use ETL components.
+        </p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-box-seam"></i> Comprehensive Integrations</h3>
-        <p>Seamless integration with virtually all relevant data sources, including SQL, NoSQL, files, and cloud services like Azure.</p>
+        <p>Seamless integration with virtually all relevant data sources, including SQL, NoSQL, files, and cloud
+          services like Azure.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-layers"></i> Advanced Transformation Features</h3>
-        <p>Leverage powerful transformation functions to manipulate, clean, and harmonize data efficiently for your specific needs.</p>
+        <p>Leverage powerful transformation functions to manipulate, clean, and harmonize data efficiently for your
+          specific needs.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-cloud-arrow-down"></i> Cross-Platform Compatibility</h3>
-        <p>Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad compatibility.</p>
+        <p>Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad
+          compatibility.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-journal-code"></i> Exceptional Documentation</h3>
-        <p>Comprehensive and detailed documentation makes it easy for developers to get started and unlock the full potential of ETLBox.</p>
+        <p>Comprehensive and detailed documentation makes it easy for developers to get started and unlock the full
+          potential of ETLBox.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-shield-check"></i> Security and Stability</h3>
-        <p>Proven in production across various industries, ETLBox offers enterprise-grade stability and superior security compared to open-source alternatives.</p>
+        <p>Proven in production across various industries, ETLBox offers enterprise-grade stability and superior
+          security compared to open-source alternatives.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-people"></i> Professional Support</h3>
-        <p>Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth implementation.</p>
+        <p>Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth
+          implementation.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h3 class="h5"><i class="bi-gift"></i> Flexible Licensing and Free Trial</h3>
-        <p>Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment risks.</p>
+        <p>Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment
+          risks.</p>
       </div>
     </div>
   </div>

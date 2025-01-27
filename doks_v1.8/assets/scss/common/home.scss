@@ -71,19 +71,45 @@
 }
 
 
-/** Reference page only: */
-
-
+/** Customer slide in the right of the home page: */
 .customer-slide-images {
-    height: 9rem;
+    // height: 9rem;
+    height: auto;
+    min-height: 8rem;
 }
 
 .customer-slide-logo {
-    left:2.5rem;
-    bottom:1rem;
+    left: 2.5rem;
+    bottom: 1rem;
 }
 
-//Used in reference carousel only
+.customer-slide-headshot {
+    right: 2rem;
+}
+
+@media (max-width: 576px) {
+    .customer-slide-images img {
+        max-width: 50%;
+        height: auto;
+        left: 0rem;
+        bottom: 0rem;
+        right: 0rem;
+        justify-content: center;
+    }
+
+    .customer-slide-logo {
+        justify-self: center;
+        left: 0rem;
+        bottom: 0rem;
+    }
+
+    .customer-slide-headshot {
+        right: 0rem;
+    }
+
+}
+
+/** Used in reference carousel on the home page */
 .fixed-size-logo {
     width: 15rem;
     /* Einheitliche Breite */
