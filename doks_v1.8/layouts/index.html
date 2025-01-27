@@ -45,7 +45,7 @@
 
               <!-- Quote Row -->
               <div class="row">
-                <div class="col-18">
+                <div class="col-18 text-start">
                   <p>
                     <i>"{{ .quote }}"</i>
                   </p>
@@ -55,20 +55,20 @@
               <!-- Images Row -->
               <div class="row align-items-end customer-slide-images">
                 <!-- Logo -->
-                <div class="col-sm-5 d-flex justify-content-center position-relative customer-slide-logo">
+                <div class="col-sm-5 order-2 order-sm-1 d-flex justify-content-center position-relative customer-slide-logo">
                   <div>
                     <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid responsive-image" />
                     <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid"  />
                   </div>
                 </div>
                 <!-- Desktop Image -->
-                <div class="col-sm-6 d-flex justify-content-end align-items-end ms-3">
+                <div class="col-sm-6 order-1 order-sm-2 d-flex justify-content-end align-items-end ms-3">
                   <div>
                     <img src="{{ .desktop }}" alt="Desktop Image" class="img-fluid" />
                   </div>
                 </div>
                 <!-- Headshot -->
-                <div class="col-sm-4 d-flex justify-content-center align-items-end position-relative customer-slide-headshot" >
+                <div class="col-sm-4 order-3 order-sm-3 d-flex justify-content-center align-items-end position-relative customer-slide-headshot" >
                   <div>
                     <img src="{{ .headshot }}" alt="Headshot" class="img-fluid" />
                   </div>
@@ -77,12 +77,12 @@
 
               <!-- Information Rows -->
               <div class="row mx-1">
-                <div class="col-sm-9 bg-light-blue rounded-start">
+                <div class="col-sm-9 order-2 order-sm-1 bg-light-blue rounded-start text-start">
                   <p class="fs-6 lh-sm ps-2 pt-1">
                     {{ .company_description }}
                   </p>
                 </div>
-                <div class="col-sm-7 bg-dark-blue rounded-end">
+                <div class="col-sm-7 order-1 order-sm-2 bg-dark-blue rounded-end text-start">
                   <p class="fs-6 ps-2 pt-1">
                     <strong>{{ .name }}<br /></strong>
                     {{ .position }}<br />
