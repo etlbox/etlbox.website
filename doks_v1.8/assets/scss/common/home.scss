@@ -89,7 +89,7 @@
 
 @media (max-width: 576px) {
     .customer-slide-images img {
-        max-width: 40%;
+        max-width: 50%;
         height: auto;
         margin-top: 1rem;
         justify-content: center;
@@ -104,6 +104,20 @@
      .customer-slide-headshot {
          right: 0rem;
      }
+
+     .rounded-bottom-sm {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      .rounded-top-sm {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
 }
 
 /** Used in reference carousel on the home page */
