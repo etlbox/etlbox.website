@@ -1,69 +1,38 @@
 [[main]]
+  name = "Product"
+  url = "product/start/"
+  weight = 10
+  identifier = "product"
+
+[[main]]
   name = "Docs"
   url = "/docs/getting-started/quick-start/"
   identifier = "docs"
-  weight = 10
+  weight = 20
 
 [[main]]
   name = "Recipes"
   identifier = "recipes"
   url = "/recipes/basics/basic-example"
-  weight = 20
+  weight = 30
 
 [[main]]
   name = "API"
   url = "/api/"
   identifier = "api"
-  weight = 30
-
-[[main]]
-  name = "Product"
   weight = 40
-  identifier = "product"
-
-[[main]]
-  name = "Support"
-  identifier = "support"
-  url = "/support/options/"
-  weight = 41
-  parent = "product"
-
-[[main]]
-  name = "Release notes"
-  identifier = "release-notes"
-  url = "/product/release-notes/"
-  weight = 42
-  parent = "product"
-
-[[main]]
-  name = "Register license"
-  identifier = "register-license"
-  url = "/product/register-license"
-  weight = 43
-  parent = "product"
-
-[[main]]
-  name = "Try yourself"
-  identifier = "trial"
-  url = "/support/get-trial"
-  weight = 44
-  parent = "product"
 
 [[main]]
   name = "Pricing"
-  url = "/support/pricing"
+  url = "/pricing"
   identifier = "pricing"
   weight = 50
 
-[[more]]
-  name = "More"
-  identifier = "more"
+[[main]]
+  name = "Support"
+  url = "/support/start/"
+  identifier = "support"
   weight = 60
-
-[[more]]
-  name = "More"
-  identifier = "more"
-  weight = 315
 
 [[social]]
   name = "Nuget"
@@ -93,7 +62,7 @@
 
  [[footer_2]]
    name = "Pricing"
-   url = "/support/pricing"
+   url = "/pricing"
    weight = 540
 
  [[footer_2]]
