@@ -1,8 +1,14 @@
 ---
 title: "Release notes"
-description: "Release Notes"
-lead: "Release notes are starting with version 2.3.0"
+description: "ETLBox Release notes (starting with 2.3.1)"
+lead: "Release notes are starting with version 2.3.0."
 draft: false
+images: []
+menu:
+  docs:
+    parent: "details"
+weight: 20
+toc: true
 ---
 
 ## Version 3.6.1

@@ -6,20 +6,20 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
+    parent: "introduction"
 weight: 230
 toc: true
 ---
 
 ## Generic approach
 
-Almost all components in ETLBox can be defined with a strongly typed object, also known as *POCO* (Plain old component object). This object can be used to store and process rows of your data in your data flow. 
+Almost all components in ETLBox can be defined with a strongly typed object, also known as *POCO* (Plain old component object). This object can be used to store and process rows of your data in your data flow.
 
-Most sources provide a column name for every data column. E.g., in a Csv file you normally have a header at the top row with names for each column. In a database table, there are always column names stored along with your data. 
+Most sources provide a column name for every data column. E.g., in a Csv file you normally have a header at the top row with names for each column. In a database table, there are always column names stored along with your data.
 
-The idea is that you define an object in C# where the name of the columns in the source match with the property names in your object. At best also the data type of the your source data would match with the data type in your object. 
+The idea is that you define an object in C# where the name of the columns in the source match with the property names in your object. At best also the data type of the your source data would match with the data type in your object.
 
-When a source reads data, it will try to map the column names from the source to the property names in your data object. E.g. a column named `Value1` 
+When a source reads data, it will try to map the column names from the source to the property names in your data object. E.g. a column named `Value1`
 would be stored in the property with the same name. Optionally, you can add some mapping logic to your. For a database source, you could use the `DbColumnMap` attribute, which defines which column is mapped to which property. If there is no matching property at, the column will be ignored.
 
 ### Example mapping
@@ -41,11 +41,11 @@ DbSource<MySimpleRow> source = new DbSource<MySimpleRow>("demotable");
 ```
 The DbSource is used as a generic class - it is created using the type `MySimpleRow`. In this example, `MySimpleRow` is our *POCO*.
 
-The table `demotable` has 2 columns: `Value1` with an `INT` data type and `Value2` with a `VARCHAR` data type. The *POCO* `MySimpleRow` has two properties: `Value1` and `Value2`. `Value2` comes with a `DbColumnMap("Value2")` attribute. When the data flow is executed and data is loaded from the source, the property `Value1` is automatically mapped to the table column `Value1` because of their matching names. The table column `Value2` is mapped to the property `Col2` because of the definition of the DbColumnMap attribute. 
+The table `demotable` has 2 columns: `Value1` with an `INT` data type and `Value2` with a `VARCHAR` data type. The *POCO* `MySimpleRow` has two properties: `Value1` and `Value2`. `Value2` comes with a `DbColumnMap("Value2")` attribute. When the data flow is executed and data is loaded from the source, the property `Value1` is automatically mapped to the table column `Value1` because of their matching names. The table column `Value2` is mapped to the property `Col2` because of the definition of the DbColumnMap attribute.
 
 {{< alert text="The ColumMap attribute is only valid for the <code>DbSource</code>, <code>DbDestination</code> and <code>DbMerge</code>. Other sources can use different mapping methods." >}}
 
-### Ignored columns 
+### Ignored columns
 
 If you use a POCO to describe you data type, this object can have a different amount of properties. In our example above, we could define a POCO that contains an additional property (Let's call it AnotherValue) and leave out Col2. Our object would look like this:
 
@@ -73,12 +73,12 @@ Whenever you read data from any source (database, csv, json, ...) or you write i
 
 ## Dynamic object approach
 
-Sometimes you don't want (or can) create an object during design-time for your data flow components. You want the properties (and perhaps methods etc.) created during run-time. Though .NET is a typed language, it does support dynamic objects. This basically means that you can define object where no type checks are executed when you compile you program. Defining a dynamic object is quite simple: when you create it, you use the `dynamic` keyword as type. 
+Sometimes you don't want (or can) create an object during design-time for your data flow components. You want the properties (and perhaps methods etc.) created during run-time. Though .NET is a typed language, it does support dynamic objects. This basically means that you can define object where no type checks are executed when you compile you program. Defining a dynamic object is quite simple: when you create it, you use the `dynamic` keyword as type.
 
 ### ExpandoObject
 
 The easiest and most convenient approach to use dynamic objects in C# is to create an `ExpandoObject`. The `ExpandoObject` can be cast into
-a `dynamic` type, which will tell the compiler to ignore type checks for instances of this class. 
+a `dynamic` type, which will tell the compiler to ignore type checks for instances of this class.
 
 Here is a simple example of using the `ExpandoObject`
 
@@ -95,7 +95,7 @@ The Microsoft documentation gives you a good explanation of the {{< link-ext tex
 
 ### ExpandoObject in ETLBox
 
-In order to use the ExpandoObject and dynamic objects with ETLBox, you simple type your data flow with this object. 
+In order to use the ExpandoObject and dynamic objects with ETLBox, you simple type your data flow with this object.
 
 ```C#
 DbSource<ExpandoObject> source = new DbSource<ExpandoObject>("sourceTable");
@@ -107,7 +107,7 @@ Alternatively, you just use the non generic object - which is a shortcut for usi
 DbSource source = new DbSource("sourceTable");
 ```
 
-Both code line are exactly the same. 
+Both code line are exactly the same.
 
 Let's walk through an example and assume we have two tables. The table `sourceTable` has two columns: `SourceCol1` and `SourceCol2`, both integer values.
 The table `destTable` has one column: `DestColSum`, also an integer value.
@@ -143,7 +143,7 @@ source.LinkTo(trans).LinkTo(dest);
 Network.Execute(source);
 ```
 
-In this example code, the data is read from a DbSource into an ExpandoObject. The properties `SourceCol1` and `SourceCol2` are created automatically by the `DbSource` - ETLBox will recognize that it is an ExpandoObject and create the dynamic object based on the column names and type in the source 
+In this example code, the data is read from a DbSource into an ExpandoObject. The properties `SourceCol1` and `SourceCol2` are created automatically by the `DbSource` - ETLBox will recognize that it is an ExpandoObject and create the dynamic object based on the column names and type in the source
 
 In the RowTransformation, we need to convert the ExpandoObject into a `dynamic` object first, so that you don't get any errors message when you compile your code. Now we can assign a new property to the (same) ExpandoObject - in this case, it's called `DestColSum` as a sum of the properties `SourceCol1` and `SourceCol2`.
 
@@ -164,7 +164,7 @@ public class MyRow {
 DbSource<MyRow> source = new DbSource<MyRow>("sourceTable");
 
 //Act
-RowTransformation<MyRow,ExpandoObject> trans = 
+RowTransformation<MyRow,ExpandoObject> trans =
     new RowTransformation<MyRow,ExpandoObject>(
     sourcedata =>
     {
@@ -184,13 +184,13 @@ Now the sourceData variable in the RowTransformation would be of type `MyRow` - 
 ## Working with Arrays
 
 Working with dynamic or strongly typed objects is the recommended way to use ETLBox components. But ETLBox offers a third way to create your data flow without
-defining object types and the need to create a POCO for your data. You can simple use an array as data type - it should either be an array of type object or string. An string array could have advantages if you read data from json or csv, object could be the better choice when reading from databases. 
+defining object types and the need to create a POCO for your data. You can simple use an array as data type - it should either be an array of type object or string. An string array could have advantages if you read data from json or csv, object could be the better choice when reading from databases.
 
 Here is an example code snipped for reading data from a file.
 
 ```C#
 CsvSource<string[]> source = new CsvSource<string[]>("text.csv");
-RowTransformation<string[]> row = new RowTransformation<string[]>( 
+RowTransformation<string[]> row = new RowTransformation<string[]>(
     row => {
         row[0] = row[0] + ".test";
         row[2] = row[2] * 7;
@@ -202,18 +202,18 @@ source.LinkTo(row).LinkTo(dest);
 Network.Execute(source);
 ```
 
-In this example, you would have all data from the first column in your csv file accessible at the first position of the string array, and so on. All your data will be automatically converted into a string data type. This will also work for a DbDestination - the string data will then automatically be converted into back into the 
-right data type. Of course you will get an error if data types won't match (e.g. if you want to store the value "xyz" in an integer column). 
+In this example, you would have all data from the first column in your csv file accessible at the first position of the string array, and so on. All your data will be automatically converted into a string data type. This will also work for a DbDestination - the string data will then automatically be converted into back into the
+right data type. Of course you will get an error if data types won't match (e.g. if you want to store the value "xyz" in an integer column).
 
-This approach is very useful when reading from a source where you get only string data, e.g. CSV or Json. 
+This approach is very useful when reading from a source where you get only string data, e.g. CSV or Json.
 
-### Converting arrays 
+### Converting arrays
 
 You could use the `RowTransformation` if you want to convert your string array into an object:
 
 ```C#
-RowTransformation<string[], MySimpleRow> row = 
-    new RowTransformation<string[], MySimpleRow>( 
+RowTransformation<string[], MySimpleRow> row =
+    new RowTransformation<string[], MySimpleRow>(
     row => {
         new MySimpleRow() {
             Col1 = row[0];

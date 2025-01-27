@@ -6,7 +6,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
+    parent: "introduction"
 weight: 260
 toc: true
 chatgpt-review: true

@@ -4,7 +4,7 @@ description = "Simple API to code ETL jobs in .NET & C#. Extremely fast data pro
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs","recipes"]
+mainSections = ["product","docs","recipes"]
 
 #[social]
   #twitter = "etlbox"
@@ -44,7 +44,7 @@ mainSections = ["docs","recipes"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs","recipes","api"] # (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["product", "docs","recipes","api"] # (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = true # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
@@ -133,7 +133,7 @@ mainSections = ["docs","recipes"]
     name = "ETLBox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
-    article = ["docs", "recipes"] # Article sections
+    article = ["product", "docs", "recipes"] # Article sections
     newsArticle = [] # NewsArticle sections
     blogPosting = [] # BlogPosting sections
     product = [] # Product sections

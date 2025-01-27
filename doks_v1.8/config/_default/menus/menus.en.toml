@@ -1,12 +1,12 @@
 [[main]]
   name = "Product"
-  url = "product/start/"
-  weight = 10
   identifier = "product"
+  url = "/product/getting-started/introduction"
+  weight = 10
 
 [[main]]
   name = "Docs"
-  url = "/docs/getting-started/quick-start/"
+  url = "/docs/introduction/simple-flow/"
   identifier = "docs"
   weight = 20
 
@@ -30,7 +30,7 @@
 
 [[main]]
   name = "Support"
-  url = "/support/start/"
+  url = "/support/options/"
   identifier = "support"
   weight = 60
 
@@ -41,8 +41,8 @@
   weight = 490
 
  [[footer_1]]
-   name = "Home"
-   url = "/"
+   name = "Produkt"
+   url = "/product/getting-started/introduction"
    weight = 500
 
  [[footer_1]]
