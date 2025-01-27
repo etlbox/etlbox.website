@@ -53,30 +53,30 @@
               </div>
 
               <!-- Images Row -->
-              <div class="row align-items-end slide-images">
+              <div class="row align-items-end customer-slide-images">
                 <!-- Logo -->
-                <div class="col-5 d-flex justify-content-center h-100">
-                  <div class="d-flex align-items-start mt-3">
-                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid" width="130" />
-                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid" width="130">
+                <div class="col-5 d-flex justify-content-center position-relative customer-slide-logo">
+                  <div>
+                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid"  />
+                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid" />
                   </div>
                 </div>
                 <!-- Desktop Image -->
-                <div class="col-6 d-flex justify-content-center">
+                <div class="col-6 d-flex justify-content-end align-items-end ms-3">
                   <div>
-                    <img src="{{ .desktop }}" alt="Desktop Image" class="img-fluid" width="130" />
+                    <img src="{{ .desktop }}" alt="Desktop Image" class="img-fluid" />
                   </div>
                 </div>
                 <!-- Headshot -->
-                <div class="col-4 d-flex justify-content-end">
-                  <div class="me-3">
-                    <img src="{{ .headshot }}" alt="Headshot" class="img-fluid" width="100" />
+                <div class="col-4 d-flex justify-content-end align-items-end">
+                  <div >
+                    <img src="{{ .headshot }}" alt="Headshot" class="img-fluid"  />
                   </div>
                 </div>
               </div>
 
               <!-- Information Rows -->
-              <div class="row m-1" >
+              <div class="row mx-1" >
                 <div class="col-9 bg-light-blue">
                   <p class="fs-6 lh-sm ps-2 pt-1">
                     {{ .company_description }}
