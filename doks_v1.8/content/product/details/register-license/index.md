@@ -29,7 +29,15 @@ To register your license key with ETLBox, you have 3 options:
 
 Open the file with a text editor of your choice, and copy the content. Add the following line to your code:
 
+For ETLBox 3.6.X and later:
 ```C#
+using ETLBox.Licensing;
+LicenseService.CurrentKey = "content_of_license_file";
+```
+
+For ETLBox 3.5.X and previous versions:
+```C#
+using ETLBoxOffice.LicenseManager;
 LicenseCheck.LicenseKey = "content_of_license_file";
 ```
 
