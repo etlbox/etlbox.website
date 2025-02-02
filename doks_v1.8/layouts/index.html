@@ -36,7 +36,7 @@
 
     <div class="col-lg-8 order-lg-2 text-center text-lg-start card bg-light">
 
-      <div class="glide-single">
+      <div class="glide-single-customer">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
 
@@ -138,7 +138,7 @@
     </h1>
   </div>
 
-  <div class="glide">
+  <div class="glide glide-carousel-reference">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
 
@@ -392,17 +392,31 @@
 </section>
 
 
-<section>
-  <div class="col-lg-7">
-    <div class="row justify-content-center">
-      {{ range .Site.Data.home.connectors.connector }}
-      <div class="col-8 col-lg-5 d-flex justify-content-center align-items-center m-1">
-        <a href="{{ .link }}"><img src="{{ .image }}" alt="{{ .alt }}" class="img-fluid"
-            style="height:50px; width:auto;object-fit:contain;" /></a>
-      </div>
-      {{ end }}
+<section class="section section-md">
+
+  <div class="glide glide-carousel-connector">
+
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+
+        {{ range .Site.Data.home.connectors.connector }}
+        <li class="glide__slide">
+          <div class="">
+            <p class="card-text">
+              {{/*  <a href="{{ .link }}">  */}}
+                <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo" loading="lazy">
+                <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo" loading="lazy">
+              {{/*  </a>  */}}
+            </p>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
     </div>
+
   </div>
+
+
 </section>
 
 
