@@ -579,8 +579,6 @@
 
 
 
-
-
 <section class="section section-sm">
   <div class="container my-4">
     <div class="text-center">
@@ -588,36 +586,38 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-lg-5">
-        <h2><i class="bi-lightning"></i>&nbsp;Fast and efficient</h2>
+      <!-- Left Column: Updated Content -->
+      <div class="col-lg-7">
+        <h2><i class="bi-lightning"></i>&nbsp;Simple, Yet Powerful</h2>
         <p>
-          <b>Process your data in-Memory:</b><br />
-          Code your ETL with your favorite .NET language fitting your team’s
-          skills and that is coming with a mature toolset.
+          ETLBox makes it easy to design high-performance ETL processes with just a few lines of code.
+          Whether you’re handling small datasets or processing millions of records, ETLBox will scale to meet your needs.
         </p>
 
-        <h2><i class="bi-minecart-loaded"></i>&nbsp;Made for big data</h2>
+        <h2><i class="bi-gear-wide-connected"></i>&nbsp;Flexible Data Workflows</h2>
         <p>
-          <b>Process any workload:</b><br />
-          ETLBox relies on
-          <a href="https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library"
-            target="_blank" rel="noopener">Microsoft's System.Threading.TPL.Dataflow <i
-              class="bi-box-arrow-up-right"></i></a>
-          library and is designed to process efficiently big amounts of any
-          data.
+          ETLBox provides a flexible data-flow engine that allows you to customize transformations,
+          integrate with multiple data sources, and optimize performance without sacrificing simplicity.
         </p>
 
-        <h2><i class="bi-intersect"></i>&nbsp;Connect everything</h2>
-        <p>
-          <b>Process data from anywhere:</b><br />
-          ETLBox supports a wide range of Sql & NoSql databases, flat files, web
-          services, and more - perfect as a foundation for your tailor made data
-          integregation platform.
-        </p>
+        <h2><i class="bi-list-check"></i>&nbsp;What You Can Do with ETLBox</h2>
+        <ul class="list-unstyled lh-sm">
+          <li><i class="bi-dot"></i> Convert data from various sources to a common format</li>
+          <li><i class="bi-dot"></i> Prepare data for analysis and visualization</li>
+          <li><i class="bi-dot"></i> Migrate data between databases</li>
+          <li><i class="bi-dot"></i> Reduce memory usage with optimized data streaming</li>
+          <li><i class="bi-dot"></i> Enrich data using lookups, joins, and aggregations</li>
+          <li><i class="bi-dot"></i> Synchronize data across multiple systems and environments</li>
+          <li><i class="bi-dot"></i> Export data to CSV, JSON, XML, Parquet, and more</li>
+          <li><i class="bi-dot"></i> Perform bulk data imports and exports efficiently</li>
+          <li><i class="bi-dot"></i> And so much more to explore with ETLBox!</li>
+
+        </ul>
       </div>
 
-      <div class="col-lg-10 offset-1">
-        <h2>ETL made easy</h2>
+      <!-- Right Column: Code Examples -->
+      <div class="col-lg-9">
+        <h2>ETL Made Easy</h2>
         <p>
           {{ .Content }}
         </p>
@@ -625,6 +625,9 @@
     </div>
   </div>
 </section>
+
+
+
 
 <section class="section section-sm alteredColor">
   <div class="container my-4">
