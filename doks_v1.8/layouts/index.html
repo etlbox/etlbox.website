@@ -129,7 +129,7 @@
 
 
 {{ define "sidebar-prefooter" }}
-<section class="section section-md">
+<section class="section section-sm">
   <div class="d-flex justify-content-center align-items-center text-center mt-4 mx-3">
     <h1 class="d-inline-flex align-items-center mb-0">
       <i class="bi-heart text-danger me-2"></i>
@@ -178,49 +178,51 @@
 </section>
 
 
-<section class="section section-md alteredColor">
+<section class="section section-sm alteredColor">
   <div class="container py-0 my-0">
 
-    <div class="bg-light border rounded mb-2">
-      <div class="row">
-        <div class="col-lg-8">
-          <h4 class="mb-0"><i class="bi-box"></i> What is ETLBox?</h4>
-          <p>
+    <div class="mb-2">
+      <div class="row justify-content-center align-items-start">
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1"><i class="bi-box me-2"></i> What is ETLBox?</h5>
+          <p class="small">
             ETLBox is a lightweight ETL (Extract, Transform, Load) library and data integration toolbox for .NET.
             It helps you create and manage data integration pipelines to extract data from different sources,
             transform it into the format you need, and load it into databases, APIs, or files.
           </p>
         </div>
-        <div class="col-lg-8">
-          <p>
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1"><i class="bi-terminal me-2"></i> Why Choose ETLBox?</h5>
+          <p class="small">
             Whether you're migrating data, synchronizing systems, or automating workflows, ETLBox provides the
             components to handle these tasks efficiently. ETLBox is a flexible alternative to traditional ETL
             tools like SQL Server Integration Services (SSIS) or Azure Data Factory.
           </p>
         </div>
-        <div class="col-lg-8">
-          <p>
-            Unlike those tools, ETLBox does not rely on a graphical user interface, making it ideal for developers
-            who prefer programmatic control. It supports parallel execution and real-time processing, making it a
-            solid choice for building scalable data solutions.
+      {{/*  </div>
+      <div class="row justify-content-center align-items-start">  */}}
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1"><i class="bi-terminal me-2"></i> Why Skip the GUI?</h5>
+          <p class="small">
+            Unlike traditional ETL tools, ETLBox does not rely on a graphical user interface,
+            making it ideal for developers who prefer programmatic control.
+            It features a powerful data-flow engine with built-in parallel execution,
+            designed to handle large data volumes efficiently—even when the data exceeds available memory.
+
+
           </p>
         </div>
-        <div class="col-lg-8">
-          <h4 class="mt-4"><i class="bi-box2-heart"></i> What’s Inside the Box?</h4>
-          <p>
-            Explore the full scope of ETLBox and how it simplifies your ETL pipelines and data integration workflows.
-          </p>
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1"><i class="bi-box2-heart me-2"></i> What’s Inside (the Box)?</h4>
+            <p class="small">
+              Explore the full scope of ETLBox and how it simplifies your ETL pipelines and data integration workflows.
+              ETLBox offers a wide range of components, from simple data
+              extraction to complex transformation and seamless loading into your target systems.
+            </p>
         </div>
 
       </div>
 
-
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-
-      </div>
     </div>
 
     <div class="row g-2">
@@ -267,7 +269,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-5">
+      <div class="col-lg-4 col-md-6">
         <div class="card m-0 h-100">
           <div class="card-header text-center text-white bg-dark">
             <h5 class="m-1"><i class="bi-lightning-charge"></i> High-Speed Processing</h5>
@@ -390,42 +392,6 @@
   </div>
 </section>
 
-
-
-<section class="section section-sm alteredColor">
-  <div class="container my-4">
-    <div class="row">
-      <!-- Left Content Column -->
-      <div class="col-lg-9">
-        <div>
-
-          <h3 class="mt-4"><i class="bi-cloud"></i> Supports Everything</h3>
-          <p><span>Designed for the latest .NET platforms, including <strong>.NET 8, .NET 9</strong>, and .NET Framework
-              4.8.x. <br />
-              Works on Azure, Windows, Linux, macOS, Docker, Kubernetes, and other OS across x86, x64 or arm64
-              architectures.</span></p>
-
-          <h3 class="mt-4"><i class="bi-link"></i> Connects Everywhere:</h3>
-          <p><span>SQL Server, Postgres, SQLite, Oracle, MySql, MariaDB,
-              Db2, SAP ASE (Sybase), SAP HANA, Snowflake, Microsoft Access, Apache Spark (SQL), ODBC, MongoDb,
-              Couchbase, Redis, Azure Cosmos DB, Neo4j,
-              Azure Service Bus, Azure Tables, Azure Blob Storage, Azure Data Lake, Apache Kafka, Csv, Json, Xml, Excel,
-              Text, Parquet, REST, GraphQL, WebAPIs, and more...</span></p>
-
-          <h3 class="mt-4"><i class="bi-arrow-repeat"></i> Transforms Anything</h3>
-          <p><span>CachedRowTransformation,
-              ColumnTransformation, Distinct, FilterTransformation, LookupTransformation, MergeJoin, Multicast,
-              RowDuplication, RowMultiplication, RowTransformation, RowValidation, XmlSchemaValidation, Aggregation,
-              BatchTransformation,
-              BlockTransformation, CachedBatchTransformation, CrossJoin, Pivot, Sort, WaitTransformation</span></p>
-        </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
 
 <section>
   <div class="col-lg-7">
