@@ -191,26 +191,35 @@
             transform it into the format you need, and load it into databases, APIs, or files.
           </p>
         </div>
-        <div class="col-lg-4 col-md-8">
+
+        {{/*  <div class="col-lg-4 col-md-8">
           <h5 class="mb-1"><i class="bi-check-circle me-2"></i> Why Choose ETLBox?</h5>
           <p class="small">
             Whether you're migrating data, synchronizing systems, or automating workflows, ETLBox provides the
             components to handle these tasks efficiently. ETLBox is a flexible alternative to traditional ETL
             tools like SQL Server Integration Services (SSIS) or Azure Data Factory.
           </p>
-        </div>
+        </div>  */}}
 
         <div class="col-lg-4 col-md-8">
           <h5 class="mb-1"><i class="bi-terminal me-2"></i> Why Skip the GUI?</h5>
           <p class="small">
             Unlike traditional ETL tools, ETLBox does not rely on a graphical user interface,
             making it ideal for developers who prefer programmatic control.
-            It features a powerful data-flow engine with built-in parallel execution,
-            designed to handle large data volumes efficiently—even when the data exceeds available memory.
-
-
+            It has a powerful data-flow engine with built-in parallel execution,
+            designed to handle large data volumes efficiently — even when the data exceeds available memory.
           </p>
         </div>
+
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1"><i class="bi-window me-2"></i> Need a GUI?</h5>
+          <p class="small">
+            If you're looking for a GUI, ETLBox might not be the right fit. However, there's <strong>FlowWright</strong>,
+            a fully featured ETL tool that is powered by ETLBox under the hood, offering a graphical interface with
+            the same performance and flexibility.
+          </p>
+        </div>
+
         <div class="col-lg-4 col-md-8">
           <h5 class="mb-1"><i class="bi-box2-heart me-2"></i> What’s Inside (the Box)?</h4>
             <p class="small">
@@ -392,7 +401,7 @@
 </section>
 
 
-<section class="section section-md">
+<section class="section section-md alteredColor">
 
   <div class="glide glide-carousel-connector">
 
@@ -403,10 +412,9 @@
         <li class="glide__slide">
           <div class="">
             <p class="card-text">
-              {{/*  <a href="{{ .link }}">  */}}
-                <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo" loading="lazy">
-                <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo" loading="lazy">
-              {{/*  </a>  */}}
+              {{/* <a href="{{ .link }}"> */}}
+                <img src="{{ .image }}" alt="{{ .alt }}" class="fixed-size-logo" loading="lazy">
+                {{/* </a> */}}
             </p>
           </div>
         </li>
@@ -420,7 +428,7 @@
 </section>
 
 
-<section class="section section-sm">
+<section class="section section-sm ">
   <div class="container my-4">
     <div class="text-center mb-4">
       <h2>Why Choose ETLBox?</h2>
@@ -432,54 +440,73 @@
         inserts, updates, and deletes. With its ability to handle streaming data and parallel workflows, ETLBox delivers
         performance and flexibility for modern data integration tasks. Developers can rely on built-in connectors or
         extend the library to fit custom requirements.</p>
+      <p>
+        Whether you're migrating data, synchronizing systems, or automating workflows, ETLBox provides the components to
+        handle these tasks efficiently.
+        ETLBox is a flexible alternative to traditional ETL tools like SQL Server Integration Services (SSIS) or Azure
+        Data Factory.
+      </p>
       <p><b>Boris will Farbe hier!</b></p>
     </div>
+  </div>
+</section>
 
+<section class="section section-sm alteredColor">
+  <div class="container my-4">
     <div class="row">
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-code-square"></i> Easy and Fast to Develop</h3>
-        <p>Build complex data flows with minimal code and maximum efficiency. Use a developer friendly and easy-to-use
+        <h1 class="m-1"><i class="bi-terminal large"></i></h1>
+        <h5 class="m-1">Easy and Fast to Develop</h5>
+        <p class="m-1">Build complex data flows with minimal code and maximum efficiency. Use a developer friendly and easy-to-use
           API.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-terminal"></i> Great Documentation</h3>
-        <p>No great software without great documentation. We've got extensive documentation and code examples for nearly
+        <h1 class="m-1"><i class="bi-book large"></i></h1>
+        <h5 class="m-1">Great Documentation</h5>
+        <p class="m-1">No great software without great documentation. We've got extensive documentation and code examples for nearly
           everything.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-check2-circle"></i> Stable, Reliable, and Here to Stay</h3>
-        <p>A commercial C# library built by developers for developers.
+        <h1 class="m-1"><i class="bi-lock large"></i></h1>
+        <h5 class="m-1">Stable, Reliable, and Here to Stay</h5>
+        <p class="m-1">A commercial C# library built by developers for developers.
           Backed by our customer base ensuring long-term stability and support.
         </p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-speedometer2"></i> Build for High Performance </h3>
-        <p>Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum
+        <h1 class="m-1"><i class="bi-speedometer2 large"></i></h1>
+        <h5 class="m-1">Build for High Performance </h5>
+        <p class="m-1">Efficiently handles extract, transform, and load processes with in-memory data processing, ensuring maximum
           performance even for large datasets.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-cash-stack"></i> Significant Time Savings</h3>
-        <p>Save over 80% compared to custom development and reduce development time with ready-to-use ETL components.
+        <h1 class="m-1"><i class="bi-cash-stack large"></i></h1>
+        <h5 class="m-1">Significant Time Savings</h5>
+        <p class="m-1">Save over 80% compared to custom development and reduce development time with ready-to-use ETL components.
         </p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-cloud-arrow-down"></i> Cross-Platform Compatibility</h3>
-        <p>Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad
+        <h1 class="m-1"><i class="bi-globe large"></i></h1>
+        <h5 class="m-1">Cross-Platform Compatibility</h5>
+        <p class="m-1">Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring broad
           compatibility.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-shield-check"></i> Security and Stability</h3>
-        <p>Proven in production across various industries, ETLBox offers enterprise-grade stability and superior
+        <h1 class="m-1"><i class="bi-shield-check large"></i></h1>
+        <h5 class="m-1">Security and Stability</h5>
+        <p class="m-1">Proven in production across various industries, ETLBox offers enterprise-grade stability and superior
           security compared to open-source alternatives.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-people"></i> Professional Support</h3>
-        <p>Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth
+        <h1 class="m-1"><i class="bi-people large"></i></h1>
+        <h5 class="m-1">Professional Support</h5>
+        <p class="m-1">Access expert support, coaching, and training to maximize the efficiency of your team and ensure a smooth
           implementation.</p>
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
-        <h3 class="h5"><i class="bi-gift"></i> Flexible Licensing and Free Trial</h3>
-        <p>Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment
+        <h1 class="m-1"><i class="bi-gift large"></i></h1>
+        <h5 class="m-1">Flexible Licensing and Free Trial</h5>
+        <p class="m-1">Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize investment
           risks.</p>
       </div>
 

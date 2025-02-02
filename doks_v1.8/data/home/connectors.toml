@@ -1,139 +1,139 @@
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/sqlserver.png"
+image = "/images/supported/sqlserver.png"
 alt = "SQLServer"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/sql-azure.png"
+image = "/images/supported/sql-azure.png"
 alt = "SQLServer Azure"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/postgres.png"
+image = "/images/supported/postgres.png"
 alt = "Postgres"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/oracle.png"
+image = "/images/supported/oracle.png"
 alt = "Oracle"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/mysql.png"
+image = "/images/supported/mysql.png"
 alt = "MySql"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/mariadb.png"
+image = "/images/supported/mariadb.png"
 alt = "MariaDB"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/db2logo.png"
+image = "/images/supported/db2logo.png"
 alt = "IBM DB2"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/sap-ase.png"
+image = "/images/supported/sap-ase.png"
 alt = "SAP ASE"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/sap-hana.png"
+image = "/images/supported/sap-hana.png"
 alt = "SAP Hana"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/snowflake.png"
+image = "/images/supported/snowflake.png"
 alt = "Snowflake"
 
 [[connector]]
 link = "/docs/db-connector/access/#odbc-drivers"
-image_light = "/images/supported/access.png"
+image = "/images/supported/access.png"
 alt = "Access"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/spark.png"
+image = "/images/supported/spark.png"
 alt = "ETLBox"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/odbc.png"
+image = "/images/supported/odbc.png"
 alt = "ETLBox"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/sql-lite.png"
+image = "/images/supported/sql-lite.png"
 alt = "ETLBox"
 
 [[connector]]
 link = "/docs/db-connector/connection-manager/#supported-relational-databases"
-image_light = "/images/supported/oledb.png"
+image = "/images/supported/oledb.png"
 alt = "ETLBox"
 
 [[connector]]
 link = "/docs/nosql-connector/mongo/"
-image_light = "/images/supported/mongodb.png"
+image = "/images/supported/mongodb.png"
 alt = "Mongo DB"
 
 [[connector]]
 link = "/docs/nosql-connector/kafka/"
-image_light = "/images/supported/kafka.png"
+image = "/images/supported/kafka.png"
 alt = "Apache Kafka"
 
 [[connector]]
 link = "/docs/nosql-connector/cosmos-db/"
-image_light = "/images/supported/cosmos.png"
+image = "/images/supported/cosmos.png"
 alt = "Azure Cosmos DB"
 
 [[connector]]
 link = "/docs/nosql-connector/service-bus/"
-image_light = "/images/supported/servicebus.png"
+image = "/images/supported/servicebus.png"
 alt = "Azure Service Bus"
 
 [[connector]]
 link = "/docs/nosql-connector/tables/"
-image_light = "/images/supported/tables.png"
+image = "/images/supported/tables.png"
 alt = "Azure Tables"
 
 [[connector]]
 link = "/docs/nosql-connector/couchbase/"
-image_light = "/images/supported/couchbase.png"
+image = "/images/supported/couchbase.png"
 alt = "Couchbase"
 
 [[connector]]
 link = "/docs/nosql-connector/redis/"
-image_light = "/images/supported/redis.png"
+image = "/images/supported/redis.png"
 alt = "Redis"
 
 [[connector]]
 link = "/docs/stream-connector/parquet/"
-image_light = "/images/supported/parquet.png"
+image = "/images/supported/parquet.png"
 alt = "Parquet"
 
 [[connector]]
 link = "/docs/stream-connector/xml/"
-image_light = "/images/supported/xml.svg"
+image = "/images/supported/xml.svg"
 alt = "XML"
 
 [[connector]]
 link = "/docs/stream-connector/csv/"
-image_light = "/images/supported/csv.svg"
+image = "/images/supported/csv.svg"
 alt = "CSV"
 
 [[connector]]
 link = "/docs/stream-connector/json/"
-image_light = "/images/supported/json.svg"
+image = "/images/supported/json.svg"
 alt = "JSON"
 
 [[connector]]
 link = "/docs/stream-connector/text/"
-image_light = "/images/supported/txt.svg"
+image = "/images/supported/txt.svg"
 alt = "TEXT"
 
 [[connector]]
 link = "/docs/stream-connector/excel/"
-image_light = "/images/supported/excel_s.png"
+image = "/images/supported/excel_s.png"
 alt = "EXCEL"
