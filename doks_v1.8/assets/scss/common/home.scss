@@ -1,14 +1,12 @@
-.alteredColor {
-    background: #f3f3f3;
-}
+// .alteredColor {
+//     background: #f3f3f3;
+// }
 
-@include color-mode(dark) {
-    .alteredColor {
-        background: $gray-700 !important;
-    }
-}
-
-
+// @include color-mode(dark) {
+//     .alteredColor {
+//         background: $gray-700 !important;
+//     }
+// }
 
 .embedVideo video {
     width: 95%;
@@ -129,3 +127,9 @@
     object-fit: contain;
     /* Skaliert das Bild und schneidet es, falls nötig */
 }
+
+
+.diagram-kroki {
+    width: 50% !important;
+    height: auto;
+  }
