@@ -65,19 +65,12 @@ ETLBox enables you to build data processing workflows by creating a network—or
 This architecture allows ETLBox to scale efficiently, even when handling large volumes of data.
 
 ```kroki {type=mermaid}
-flowchart TD
-    %% Define nodes with icons and styles
-    CsvSource@{ icon: "fas:fa-file-csv", label: "CSV Source", form: "square", h: 50, fill: "#FFA726", stroke: "#FF7043", strokeWidth: 2 }
-    DbSource@{ icon: "fas:fa-database", label: "Database Source", form: "square", h: 50, fill: "#29B6F6", stroke: "#0288D1", strokeWidth: 2 }
-    Distinct@{ icon: "fas:fa-clone", label: "Distinct", form: "circle", h: 50, fill: "#66BB6A", stroke: "#388E3C", strokeWidth: 2 }
-    Aggregation@{ icon: "fas:fa-layer-group", label: "Aggregation", form: "circle", h: 50, fill: "#AB47BC", stroke: "#8E24AA", strokeWidth: 2 }
-    DbDestination@{ icon: "fas:fa-database", label: "Database Destination", form: "square", h: 50, fill: "#29B6F6", stroke: "#0288D1", strokeWidth: 2 }
-
-    %% Define edges
-    CsvSource --> Distinct
-    DbSource --> Distinct
-    Distinct --> Aggregation
-    Aggregation --> DbDestination
+flowchart LR
+  A[Start] --Some text--> B(Continue)
+  B --> C{Evaluate}
+  C -- One --> D[Option 1]
+  C -- Two --> E[Option 2]
+  C -- Three --> F[fa:fa-car Option 3]
 ```
 
 ### Applying These Concepts in Code
