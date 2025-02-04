@@ -21,7 +21,7 @@ mainSections = ["product","docs","recipes"]
 
   ## Button
   navBarButton = true # false (default) or true
-  navBarButtonUrl = "/support/get-trial/"
+  navBarButtonUrl = "/product/getting-started/get-trial/"
   navBarButtonText = "Try now!"
 
   # FlexSearch
