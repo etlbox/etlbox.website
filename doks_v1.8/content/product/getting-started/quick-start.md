@@ -1,7 +1,7 @@
 ---
-title: "Quickstart"
-description: "Quickstart: Basic usage of ETLBox."
-lead: "Let's get started. This page gives you a brief overview of the basic concepts and usage."
+title: "Quick Start"
+description: "Learn how to create your first ETL pipeline with ETLBox. This guide covers the essentials."
+lead: "Get started with ETLBox, the lightweight ETL library for .NET developers. This quick start guide walks you through building your first data pipeline — from connecting to data sources and applying transformations to loading data into databases — all with simple, code-first workflows."
 draft: false
 images: []
 menu:
@@ -11,93 +11,66 @@ weight: 30
 toc: true
 ---
 
-## What is ETLBox
+## Creating a Data Flow
 
-ETLBox is a lightweight ETL (extract, transform, load) library and data integration toolbox for .NET. You can use it to read any data from different sources and connect them with customizable transformations. Finally, you can export the data into different databases, web endpoints, file types or any other destinations. While data is processed in memory, you can choose between different transformation components to harmonize, filter, aggregate, validate and clean your data.
+Let’s build your first ETL pipeline. A typical ETLBox data flow consists of three steps:
 
-ETLBox is a fully functional alternative to other ETL tools like SQLServer Integrations Services (SSIS) or Azure Data Factory. The main difference to other toolsets is that it doesn't come with a User Interface. But no worries! Working with ETLBox, you will discover that creating data flows programmatically is the best approach for solving most of your ETL and data integration related problems.
+1. **Define Components:** Sources, transformations, and destinations.
+2. **Link Components:** Establish data paths between them.
+3. **Execute the Flow:** Start the data movement process.
 
-### How to get ETLBox
+{{< smallnote >}}
+ETLBox processes data asynchronously. This means while data is still being read from the source, transformations and destinations can process it simultaneously.
+ optimizing performance and memory usage. Each component uses buffers to store additional rows when needed, optimizing performance and memory usage. At any given time, only the data within these buffers is kept in memory, minimizing overall memory consumption.
+{{< /smallnote >}}
 
-ETLBox is developed in C# and targets .NET Standard 2.0 and higher. It can be used by almost every {{< link-ext text=".NET version" url="https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support" >}} out there supported by Microsoft, including .NET Framework 4.X, .NET Core 2.X, .NET Core 3.X, .NET 5.0 and .NET 6.0. If you are still using .NET Framework, we recommend to use a Framework version not less than 4.7.2.
+## Example: Processing Order Data
 
-All ETLBox {{< link-ext url="https://www.nuget.org/profiles/ETLBoxperts" text="packages are hosted on nuget" >}}. You will need to install always the {{< link-ext="https://www.nuget.org/packages/ETLBox/" text="core pacakge" >}} when working with ETLBox. It  contains the default connectors and transformations.
+In this example, we’ll:
+- Read order data from a web API.
+- Enrich it with customer information from a CSV file.
+- Store the results in a SQL Server database.
+- Log specific data to a file.
 
-Simply add it to your project using your nuget package manager.
+**Prerequisites:**
 
-```
-dotnet add package ETLBox
-```
+- A SQL Server database (can run via Docker).
+- Internet access to fetch demo data from [ETLBox Demo API](https://www.etlbox.net/demo/api/orders).
 
-The connectors are in separate packages - depending on your needs, choose the right connector package from the list. Pick the {{< link-ext url="https://www.nuget.org/packages/ETLBox.SqlServer/" text="ETLBox.SqlServer" >}} package if you want to connect to a (Azure) SQLServer database, or choose {{< link-ext url="https://www.nuget.org/packages/ETLBox.Json/" text="ETLBox.Json" >}}  if you want to load data from a Json file or REST endpoint.
+If you have Docker installed, it is quite easy to run {{< link-ext url="https://hub.docker.com/_/microsoft-mssql-server" text="SQL Server" >}} in a container. You can also use any other supported database, e.g. {{< link-ext url="https://hub.docker.com/_/mysql" text="MySql" >}} or {{< link-ext url="https://hub.docker.com/_/postgres" text="Postgres" >}}.
 
-### Data and Control Flow
+### Setting Up the Database
 
-ETLBox is split into two main components: Data Flow components and Control Flow tasks. The Data Flow part provides the core components to create data integrations or ETL jobs. This module is the heart of ETLBox: It enables you to construct complex data pipelines that can transform, clean, enrich or distribute your data however you like.
-
-The tasks available in the Control Flow module allow you to execute common database queries with a simple syntax. You can create tables or read table definitions using an easy-to-read C# syntax that works on every supported database.
-
-Both components support the {{< link-ext url="https://docs.microsoft.com/en-us/dotnet/core/extensions/logging" text="logging API" >}} that works with a variety of built-in and third party logging providers.
-
-## Creating a data flow
-
-Let's dive directly into creating our first ETL code.
-
-ETLBox provides a big set of Data Flow components to construct your own ETL pipeline. To create a Data Flow pipeline, you need to follow three steps:
-
-1. Define the components
-2. Link the components
-3. Execute the network
-
-After the last step is started, the source will start reading and post its data into the components connected to its output. As soon as a connected component retrieves any data in its input, the component will start with processing the data and then send it further down the line to its own connected components. The dataflow will finish when all data from the source(s) are read, processed by the transformation(s) and arrived in the destination(s).
-
-Transformations are not always needed - you can directly connect a source to a destination. Normally, each source has one output, each destination one input and each transformation at least one input and one or more outputs.
-
-All data is processed asynchronously by the components. Each component has its own set of buffers, so while the source is still reading data, the transformations  can already process it and the destinations can start writing the processed information into their target. So in an optimal flow only the currently processed row is stored in memory. Depending on the processing speed of your components, the buffer of each component can store additional rows to optimize throughput. E.g., database destinations will always wait until their buffer contains enough data to perform a bulk insert which is much faster than insert each row one by one.
-
-### Data Flow example
-
-This example data flow will read order data from an example web endpoint, extract a value for each data record, enrich the data with customer information stored in a local csv file and then store the modified data in a SQLServer table and create a log file for a particular customer.
-
-This setup requires:
-
-- Some local database (e.g. SqlServer)
-- Internet access to retrieve order data from {{< link-ext url="https://www.etlbox.net/demo/api/orders" text="www.etlbox.net/demo/api/orders" >}}
-
-#### Preparation
-
-Let's start with creating the destination table on the databases. If you have Docker installed, it is quite easy to run a {{< link-ext url="https://hub.docker.com/_/microsoft-mssql-server" text="SQLServer" >}} in a container (you can also other any other supported database, e.g. {{< link-ext url="https://hub.docker.com/_/mysql" text="MySql" >}} ).
-
-There are two ways to create the destination table - the simplest way is to use the corresponding Sql statement.
+You can create the destination table manually:
 
 ```sql
-CREATE TABLE  `orders` (
+CREATE TABLE orders (
     Id INT NOT NULL PRIMARY KEY,
-    Description VARCHAR(50) NULL,
-    CustomerName VARCHAR(500) NULL,
+    Description VARCHAR(50),
+    CustomerName VARCHAR(500),
     Quantity SMALLINT NOT NULL
-)
+);
 ```
 
-Alternatively, you can already use the Control Flow tasks that are part of the core package of ETLBox. They are very handy if you want to use a simple syntax for basic database operation.
+Or, you can already use ETLBox’s Control Flow tasks:
 
-```C#
-SqlConnectionManager sqlConnMan =
-    new SqlConnectionManager("Data Source=.;User Id=x;Password=x;");
-
-CreateTableTask.Create(sqlConnMan, "orders", new List<TableColumn>()
-{
-    new TableColumn("Id", "INT", allowNulls:false, isPrimaryKey:true),
+```csharp
+var sqlConnMan = new SqlConnectionManager("Data Source=.;User Id=x;Password=x;");
+CreateTableTask.Create(sqlConnMan, "orders", new List<TableColumn> {
+    new TableColumn("Id", "INT", allowNulls: false, isPrimaryKey: true),
     new TableColumn("Description", "VARCHAR(50)"),
     new TableColumn("CustomerName", "VARCHAR(500)"),
     new TableColumn("Quantity", "SMALLINT")
 });
 ```
 
+{{< callout context="tip" title="One Codebase, Any Database" icon="outline/rocket" >}}
+With Control Flow tasks, you can use the same code for different databases—no need to rewrite anything when switching between systems.
+{{< /callout >}}
 
-{{< alert text="If you have a different database already installed, simply replace the connection string and connection manager with the database type you are using. For example, if you have a MySql database, you can use the MySqlConnectionManager." >}}
+### Preparing Data Models
 
-Looking at the data that we will receive from our demo web endpoint, we see the following structure for one record
+Looking at the data that we receive from our demo web endpoint, we get the following JSON structure for one record:
 
 ```json
 {
@@ -112,25 +85,22 @@ Looking at the data that we will receive from our demo web endpoint, we see the 
 }
 ```
 
+Now let’s create a strongly typed object, also known as POCO (Plain old CLR object) that we can later use in our data flow to hold this data.
 
-Now let's create a strongly typed object, also known as POCO (Plain old component object) that we can later use in our data flow to hold this data.
-
-```C#
-public class OrderRow
-  {
-      [DbColumnMap("Id")]
-      public long OrderNumber { get; set; }
-      public int CustomerId { get; set; }
-      public string Description { get; set; }
-      public int Quantity { get; set; }
-      public string CustomerName { get; set; }
-  }
+```csharp
+public class OrderRow {
+    [DbColumnMap("Id")]
+    public long OrderNumber { get; set; }
+    public int CustomerId { get; set; }
+    public string Description { get; set; }
+    public int Quantity { get; set; }
+    public string CustomerName { get; set; }
+}
 ```
 
-You may have noticed that the Destination table doesn't have a column `OrderNumber`, but instead the `Id` column. By default, ETLBox will try to match the column names with your property names. The DbColumnMap attribute will enable the right mapping between the property `OrderNumber` in our input data and the column `Id` in our destination table.
+You’ve probably noticed that the destination table has an `Id` column instead of `OrderNumber`. By default, ETLBox matches property names with column names, but the `DbColumnMap` attribute lets you map `OrderNumber` from the JSON data to the `Id` column in the table.
 
-Lastly, we will need a customer csv file that contains a mapping between a customer id and a customer name.
-Our file `customer.csv` contains the following data:
+You’ll also need a CSV file (`customer.csv`) for customer info:
 
 ```csv
 Id,Name
@@ -139,60 +109,55 @@ Id,Name
 3,"Kristin Wells"
 ```
 
-### Step 1 - creating components
+## Step 1: Defining Components
 
-The first step consists of creating the components, including a json source, the proper transformations, and two destination components - one for our database table and the other one for our log file data.
+Here’s the full setup for sources, transformations, and destinations:
 
-Here is the complete code for setting up the components:
-
-```C#
-var source =
-  new JsonSource<OrderRow>("https://www.etlbox.net/demo/api/orders",
-  ResourceType.Http);
+```csharp
+var source = new JsonSource<OrderRow>();
+source.ResourceType = ResourceType.Http;
+source.Uri = "https://www.etlbox.net/demo/api/orders";
 
 var rowTransformation = new RowTransformation<OrderRow>();
 rowTransformation.TransformationFunc = row => {
-    row.Quantity = int.Parse(row.Description.Split(":").ElementAt(1));
+    row.Quantity = int.Parse(row.Description.Split(":")[1]);
     return row;
 };
 
 var lookup = new LookupTransformation<OrderRow, ExpandoObject>();
 lookup.Source = new CsvSource("files/customer.csv");
 lookup.MatchColumns = new[] {
-    new MatchColumn() { LookupSourcePropertyName = "Id",
-                        InputPropertyName = "CustomerId" }
+    new MatchColumn { LookupSourcePropertyName = "Id", InputPropertyName = "CustomerId" }
 };
 lookup.RetrieveColumns = new[] {
-    new RetrieveColumn() { LookupSourcePropertyName = "Name",
-                           InputPropertyName = "CustomerName" }
+    new RetrieveColumn { LookupSourcePropertyName = "Name", InputPropertyName = "CustomerName" }
 };
 
 var multicast = new Multicast<OrderRow>();
 
 var dbDest = new DbDestination<OrderRow>(sqlConnMan, "orders");
+
 var textDest = new TextDestination<OrderRow>("files/order_data.log");
-textDest.WriteLineFunc = row => {
-    return $"{row.OrderNumber}\t{row.CustomerName}\t{row.Quantity}";
-};
+textDest.WriteLineFunc = row => $"{row.OrderNumber}\t{row.CustomerName}\t{row.Quantity}";
 ```
 
-In the code above, we establish a connection to our web service using a `JsonSource`. The `ResourceType.Http` tells the `JsonSource` to establish a web connection to the provided url.
+This code configures a `JsonSource` to connect to a web service and retrieve order data. The `ResourceType.Http` indicates that the data will be fetched over an HTTP connection.
 
-The `RowTransformation`will take every incoming row from the source and retrieve the Quantity from the Description in the json data.
+The `RowTransformation` is set up to process each incoming row. It includes a function that extracts the `Quantity` value from the `Description` field by splitting the string and converting the relevant part to an integer.
 
-The `Lookup` will use the `customer.csv` file to load all customer information into memory and then enrich any incoming data row with the right customer name.
+The `LookupTransformation` is configured to enrich incoming data with customer information from the `customer.csv` file. It’s set to match the `CustomerId` from the incoming data with the `Id` in the CSV file and retrieve the corresponding `Name`.
 
-The `Multicast` will duplicate the data and broadcast every incoming row into both destinations - into the database table defined by the `DbSource` and into the log file destination defined by the `TextDestination`.
+The `Multicast` component is initialized to allow data duplication, enabling the same data to be sent to multiple destinations.
 
-The `DbDestination` will use the provided connection manager (which we already defined above) and bulk insert the data into the database table. The default batch is 1000 rows - so in our example there will be only one bulk insert performed to insert all data.
+The `DbDestination` is set up to insert data into the `orders` table in the database using the provided connection manager (`sqlConnMan`). This operation will be performed as a bulk insert, allowing us to insert large amounts of data if necessary.
 
-The `TextDestination` can be used to generate any kind of output - in our example we decided for a tab delimited text format.
+The `TextDestination` is configured to output data to a log file (`order_data.log`). The `WriteLineFunc` specifies the format for each log entry, using tab delimiters to separate `OrderNumber`, `CustomerName`, and `Quantity`.
 
-### Step 2 - linking components
+## Step 2: Linking Components
 
-Now that we are done with the setup, let's continue with the second step and link the components together.
+Now, we’ll connect everything to form the data pipeline:
 
-```C#
+```csharp
 source.LinkTo(rowTransformation);
 rowTransformation.LinkTo(lookup);
 lookup.LinkTo(multicast);
@@ -202,40 +167,67 @@ multicast.LinkTo(textDest,
     row => row.CustomerName != "Clark Kent");
 ```
 
-Our data flow network will be defined using the `LinkTo` method. The json endpoint will send the data to the `RowTransformation`. The `RowTransfomration` will then forward the transformed rows to the `Lookup`. The `Lookup` will enrich the data and sent it into the `Multicast`,  and the `Multicast` sends a copy of each row into the SQLServer table and some of the rows into the log file destination.
+This structure ensures that:
+- All orders are saved to the database.
+- Only orders from **Clark Kent** are logged.
 
-When the `Multicast` is connected to the `TextDestination`, you will notice that there are two conditions added to the `LinkTo` method. The first condition tells the link to only accept records where the CustomerName is equal "Clark Kent". Unfortunately, our data flow will only finish until all records from the source have arrived at a destination - that's why we tell the link to discard all other records (and sent them into a `VoidDestination`).
+If we visualize this data flow as a diagram, it would look like this:
 
-### Step 3 - execution
+```kroki {type=mermaid}
+flowchart LR
+  source[JsonSource] --> rowTransformation[RowTransformation]
+  rowTransformation --> lookup[LookupTransformation]
+  lookup --> multicast[Multicast]
+  multicast --> dbDest[DbDestination]
+  multicast --> textDest[TextDestination]
+```
 
-Finally, the third step is to start the data flow. To simplify your programmer's life, this can be done with a synchronous call that blocks execution until the flow has finished and all data has arrived in the destination.
+## Step 3: Executing the Data Flow
 
-```C#
+Start the pipeline with asynchronous execution:
+
+```csharp
+await Network.ExecuteAsync(source);
+```
+
+Or run it synchronously (blocking):
+
+```csharp
 Network.Execute(source);
 ```
 
-`Network.Execute(source)` is a shortcut for `Network.ExecuteAsync(source).GetAwaiter().GetResult()`
+This runs the network, and data flows from the source through each component to the destinations.
 
-{{< alert text="Regardless if you start the execution of the network with a synchronous or asynchronous call, the data flow itself will always execute asynchronously in the background using multiple tasks. This guarantees that while data is read from the source, it can be processed from the transformation and asynchronously written into the destinations." >}}
+{{< callout context="note" title="Always Asynchronous" icon="outline/info-circle" >}}
+Both methods trigger the execution of the network. Each component runs as a separate task, handling operations asynchronously and in parallel behind the scenes. Even with the blocking call, the pipeline processes data asynchronously at the component level.
+{{< /callout >}}
 
+### Viewing the Output
 
-Now let's see our output. If we run `SELECT * FROM orders` on our SQLServer database, we should get the following result:
+If we run the following query on our SQL Server database:
 
-Id|Description|CustomerName|Quantity
---|-----------|------------|--------
-10100|T-Shirts: 7|Clark Kent|7
-10200|Jeans: 12|Peter Parker|12
-10300|Shoes: 15|Kristin Wells|15
-10400|Shoes: 15|Clark Kent|15
-10500|Jeans: 3|Peter Parker|3
-10600|T-Shirts: 4|Kristin Wells|4
-10700|Shoes: 10|Clark Kent|10
-10800|Jeans: 3|Peter Parker|3
-10900|T-Shirts: 10|Kristin Wells|10
-11000|T-Shirts: 10|Clark Kent|10
+```sql
+SELECT * FROM orders;
+```
 
+We should see the following result:
 
-And our log file `order_data.log` contains this data:
+**Table `orders`:**
+
+| Id    | Description   | CustomerName   | Quantity |
+|-------|---------------|----------------|----------|
+| 10100 | T-Shirts: 7   | Clark Kent     | 7        |
+| 10200 | Jeans: 12     | Peter Parker   | 12       |
+| 10300 |Shoes: 15      |Kristin Wells   |15        |
+| 10400 |Shoes: 15      |Clark Kent      |15        |
+| 10500 |Jeans: 3       |Peter Parker    |3         |
+| 10600 |T-Shirts: 4    |Kristin Wells   |4         |
+| 10700 |Shoes: 10      |Clark Kent      |10        |
+| 10800 |Jeans: 3       |Peter Parker    |3         |
+| 10900 |T-Shirts: 10   |Kristin Wells   |10        |
+| 11000 |T-Shirts: 10   |Clark Kent      |10        |
+
+**Log File `order_data.log`:**
 
 ```csv
 10100	Clark Kent	7
@@ -244,80 +236,15 @@ And our log file `order_data.log` contains this data:
 11000	Clark Kent	10
 ```
 
-#### Code on Github
+### Code on Github
 
-{{< link-ext text="The whole code for this example is available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/QuickStart" >}}.
-
-
-## Using the Control Flow tasks
-
-Control Flow tasks let you execute common queries with a unified syntax on your database: They allow you to create or delete tables, procedures, schemas or other objects with a few lines of code. There are also tasks that support in truncating tables, counting rows or executing arbitrary Sql code. The advantage of the tasks is that they work on every supported database. So instead of writing different Sql queries for MySql or SQLServer to retrieve information about existing tables, you can reuse the same code and simply switch the database connection managers. This improves the readability of your code a lot, encapsulates your logic and gives you more time to focus on your real work. Control Flow tasks also eliminate the need to write or wrap the "boilerplate" code which is needed for using the regular ADO.NET approach.
-
-Here are some code examples:
-
-```C#
-//Create a connection manager
-var conn = new SqlConnectionManager
-  ("Server=.;Trusted_Connection=true;Initial Catalog=ETLBox");
-
-//Execute some Sql
-SqlTask.ExecuteNonQuery(conn, $@"EXEC myProc");
-
-//Count rows
-int count = RowCountTask.Count(conn, "demo.table1").Value;
-
-//Read definition of a table
-TableDefinition def = TableDefinition.FromTableName(connectionManager, "demoTable");
-
-//Drop a table if it exists
-DropTableTask.DropIfExists(sqlConnMan, "demoTable");
-```
-
-## Logging
-
-By default, ETLBox supports the Microsoft.Extensions.Logging API. You can freely choose if you prefer to use Serilog, NLog or any other log mechanism that implements the `ILogger` interface.
-
-The following example shows how to use NLog with ETLBox. Depending on your log framework that you choose, the steps may be different.
-
-First step is to add a dependency to the latest nuget package {{< link-ext text="NLog.Extensions.Logging" url="https://www.nuget.org/packages/NLog.Extensions.Logging" >}}.
-
-To set up the nlog configuration, you can create a configuration called `nlog.config`, which contains at least a target and a logger rule. Please take care that the file is copied to your output directory when running your project. The config file could look like this:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xsi:schemaLocation="NLog NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <rules>
-    <logger name="*" minlevel="Info" writeTo="console" />
-  </rules>
-  <targets>
-    <target name="console" xsi:type="Console" />
-  </targets>
-</nlog>
-```
-
-Now you need to create an ILogger instance. This log instance needs to be assigned to the static property `Logging.Logger`. This example uses the `LoggerFactory` for creating the logger instance. You could also retrieve the instance using Dependency Injection - e.g. if you create an Azure Function you already get a valid logger instance that you can use.
-
-```C#
-using var loggerFactory = LoggerFactory.Create(builder => {
-    builder
-        .AddFilter("Microsoft", Microsoft.Extensions.Logging.LogLevel.Warning)
-        .AddFilter("System", Microsoft.Extensions.Logging.LogLevel.Warning)
-        .SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace)
-        .AddNLog("nlog.config");
-});
-ETLBox.Settings.LogInstance = loggerFactory.CreateLogger("Default");
-```
-
-With this configuration, you should now see log output printed on your console!
-
-## Where to continue
-
-Now you are ready to try out ETLBox. All {{< link-ext text="ETLBox packages are available on nuget" url="https://www.nuget.org/profiles/ETLBoxperts" >}}. The free versions allows you to process up to 5.000 for a component - this should be enough to perform tests in your test environment. If you are ready to deploy ETLBox in your production environment, [please purchase the adequate license](/pricing/). If you want to try ETLBox without limitations, you can [request a free trial key](/support/get-trial/).
-
-To learn more about ETLBox, just continue reading.
+The whole {{< link-ext text=" example code is also available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/QuickStart" >}}.
 
 
+#### What's Next?
 
+- Try ETLBox for free with processing limits, or [request a trial key](/product/getting-started/get-trial/) for full access.
+- When you’re ready for production, [purchase a license](/pricing/).
+- Check out the {{< link-ext text="ETLBox Demo Repository on GitHub" url=https://github.com/etlbox/etlbox.demo/tree/main/QuickStart" >}}.
 
+Learn more about the possiblities of ETLBox in the next article.
