@@ -174,12 +174,13 @@ This structure ensures that:
 If we visualize this data flow as a diagram, it would look like this:
 
 ```kroki {type=mermaid}
+%%{init: {'theme':'neutral'}}%%
 flowchart LR
-  source[JsonSource] --> rowTransformation[RowTransformation]
-  rowTransformation --> lookup[LookupTransformation]
-  lookup --> multicast[Multicast]
-  multicast --> dbDest[DbDestination]
-  multicast --> textDest[TextDestination]
+  source[JsonSource] --> rowTransformation(RowTransformation)
+  rowTransformation --> lookup(LookupTransformation)
+  lookup --> multicast((Multicast))
+  multicast --> dbDest[(DbDestination)]
+  multicast --> textDest[[TextDestination]]
 ```
 
 ## Step 3: Executing the Data Flow
