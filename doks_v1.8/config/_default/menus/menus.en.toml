@@ -1,7 +1,7 @@
 [[main]]
   name = "Product"
   identifier = "product"
-  url = "/product/getting-started/introduction"
+  url = "/product/getting-started/welcome"
   weight = 10
 
 [[main]]
@@ -42,7 +42,7 @@
 
  [[footer_1]]
    name = "Produkt"
-   url = "/product/getting-started/introduction"
+   url = "/product/getting-started/welcome"
    weight = 500
 
  [[footer_1]]

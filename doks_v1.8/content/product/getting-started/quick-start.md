@@ -240,7 +240,6 @@ We should see the following result:
 
 The whole {{< link-ext text=" example code is also available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/QuickStart" >}}.
 
-
 #### What's Next?
 
 - Try ETLBox for free with processing limits, or [request a trial key](/product/getting-started/get-trial/) for full access.

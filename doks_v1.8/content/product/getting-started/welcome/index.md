@@ -65,12 +65,13 @@ ETLBox enables you to build data processing workflows by creating a network—or
 This architecture allows ETLBox to scale efficiently, even when handling large volumes of data.
 
 ```kroki {type=mermaid}
+%%{init: {'theme':'neutral'}}%%
 flowchart LR
-  A[Start] --Some text--> B(Continue)
-  B --> C{Evaluate}
-  C -- One --> D[Option 1]
-  C -- Two --> E[Option 2]
-  C -- Three --> F[fa:fa-car Option 3]
+  S1[(Source 1)] --Extracts--> T1(Transformation 1)
+  S2[(Source 2)] --Extracts--> T1(Transformation 1)
+  T1 --Transforms--> T2(Transformation 2)
+  T2 --Loads --> D[[Destination1]]
+  T2 --Loads-->  E[[Destination2]]
 ```
 
 ### Applying These Concepts in Code
