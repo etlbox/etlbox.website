@@ -39,7 +39,7 @@
 
 /** Image switches for light and dark mode */
 .light-mode-image {
-    display: block;
+    display:inline;
 }
 
 .dark-mode-image {
@@ -53,7 +53,7 @@
     }
 
     .dark-mode-image {
-        display: block;
+        display: inline;
     }
 }
 
