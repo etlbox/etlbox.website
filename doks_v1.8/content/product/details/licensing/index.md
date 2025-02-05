@@ -1,7 +1,7 @@
 ---
 title: "Licensing Options"
-description: "Comparing ETLBox Licensing Options: Company vs. Redistributable Licenses"
-lead: "When choosing the right licensing option for ETLBox, it's essential to understand the differences between the Company and the OEM License (also known as the Redistributable License). Each is tailored to specific use cases and distribution needs."
+description: "ETLBox Licensing Options: Choose the Right Plan for Your Needs"
+lead: "Whether you're using ETLBox for internal projects or integrating it into commercial products, we offer flexible licensing options tailored to fit your business needs."
 draft: false
 images: []
 menu:
@@ -10,6 +10,102 @@ menu:
 weight: 100
 toc: true
 ---
+
+## Which License is Right for You?
+
+ETLBox offers three main licensing models:
+- 🆓 **FREE**, for testing and personal use
+- 🏢 **COMPANY**, for company-wide use
+- 📦 **ENTERPRISE OEM**, allowing Redistribution as part of your product
+
+Let's compare the differences.
+
+### 🏢 Company License
+
+The **COMPANY** License is perfect for businesses that plan to use ETLBox internally where you control the deployment environment.
+
+**Key Features**:
+- **Per-Developer Licensing:** One license per developer, valid across multiple projects within your organization.
+- **Unlimited Internal Deployments:** Use ETLBox in unlimited applications and on unlimited servers within your company.
+
+**License Details:**
+- **License Duration:** 1 year, with annual renewal.
+- **License Key:** New key provided upon renewal.
+- **Source Code Access:** Available as an optional add-on.
+
+**Best For:**
+- Internal business applications
+- Companies with direct control over deployment environments
+
+**Licensing Agreement:**
+- Governed by the [Standard End-User License Agreement (EULA)](/pricing/eula/standard-eula/).
+
+
+
+## 📦 ENTERPRISE OEM
+
+The **ENTERPRISE OEM License** (a.k.a the Redistributable License) is designed for companies that want to embed ETLBox into products distributed to external customers.
+
+**Key Features:**
+- **Redistribution Rights:** Integrate ETLBox into commercial software without license checks for your customers.
+- **Source Code Access:** Full access to ETLBox source code, included by default.
+- **White-Label Friendly:** No requirement to mention ETLBox in your product.
+
+**License Details:**
+- **License Model:** Annual base fee + per-customer fee.
+- **License Duration:** 1 year, renewable annually.
+- **No License Checks:** Distribute without needing end-user activation.
+
+**Best For:**
+- Software vendors embedding ETLBox in commercial products
+- ISVs distributing applications to external clients
+- Companies without direct control over customer deployment environments
+
+**Licensing Agreement:**
+- Governed by the [Redistribution EULA](/pricing/eula/redistribution-eula/).
+
+
+## **Feature Comparison**
+
+| **Feature**               | **Company License**                                           | **Redistributable License (OEM)**                               |
+|---------------------------|---------------------------------------------------------------|----------------------------------------------------------------|
+| **Intended Use**          | Internal use                                                 | Integration into commercial products distributed to customers |
+| **Licensing Model**       | Per-developer                                                | Annual base fee + per-customer fee                             |
+| **License Duration**      | 1 year (renewable annually)                                  | 1 year (renewable annually)                                   |
+| **Source Code Access**    | Optional (charged separately)                                | Included                                                      |
+| **License Checks**        | Required                                                      | Not required                                                  |
+| **Branding Requirements** | No ETLBox branding required                                  | No ETLBox branding required                                   |
+
+---
+
+## **Choosing the Right License**
+
+- **Go with the Company License** if you’re using ETLBox internally, in SaaS apps hosted under your control, or in environments where you manage deployment.
+- **Opt for the Redistributable License (OEM)** if you’re embedding ETLBox in software you distribute to third-party customers.
+
+Still unsure? [Contact us for guidance](/support/options/).
+
+---
+
+## **Need Pricing Details?**
+
+Check out our [Pricing Page](/pricing/) for detailed information, or [request a custom quote](/support/contact/purchase/) tailored to your needs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Company License
 
