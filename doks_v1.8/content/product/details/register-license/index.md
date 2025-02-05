@@ -1,7 +1,7 @@
 ---
-title: "Register License key"
+title: "Register License Key"
 description: "How to register an ETLBox license key"
-lead: "If you purchase a package without source code access, you can remove all ETLBox limitations from the nuget package by registering a license key."
+lead: "To unlock the full functionality of ETLBox, you need to register your license key. This guide explains the different methods to register your license, whether you're working locally or in cloud environments like Azure."
 draft: false
 images: []
 menu:
@@ -11,71 +11,110 @@ weight: 110
 toc: true
 ---
 
-## License file
+## License File Overview
 
-If you have received a license file (normally named `etlbox.lic`) from us, you need to make sure that ETLBox can read this license. The file itself can be opened with any text editor of your choice. It is encoded in UTF8 and human readable.
+When you purchase a license, you’ll receive a license file, typically named `etlbox.lic`. This file is encoded in UTF-8 and can be opened with any text editor. It’s human-readable and contains encrypted license information.
 
-The content of the file will look like this:
+**Sample License File Content:**
 
 ```text
-2010-01-01|ETLBoxOffice|Andreas Lennartz|andreas.lennartz@etlbox.net||oPuwE+8bnjgELq1bJCf3PG5VRW9iY81ICgRZoRddVwd9FuEFSYddrz6PmP1u4g2QSQ+0hqvC/VRTm4ZgUJsJYqEOvr0tfYcL9l9enH1DgdTG5bInSLc7+C+vTxRbpHYn5Pz05YUA3IWqtv6LRfiakQlTxl8NYwUhgL249Q9x3Co=
+2010-01-01|COMPANY: 3DEVS|ANNUAL:2010-01-01|SUPPORT:STANDARD|CUSTOMER:ETLBoxperts GmbH|MAIL:support@etlbox.net||oPuwE+8bnjgELq1bJCf3PG5VRW9iY81ICgRZoRddVwd9FuEFSYddrz6PmP1u4g2QSQ+0hqvC/VRTm4ZgUJsJYqEOvr0tfYcL9l9enH1DgdTG5bInSLc7+C+vTxRbpHYn5Pz05YUA3IWqtv6LRfiakQlTxl8NYwUhgL249Q9x3Co=
 ```
 
-## Register the license
+## Register Your License Key
 
-To register your license key with ETLBox, you have 3 options:
+You can register your ETLBox license key in three different ways. Choose the method that best fits your environment.
 
-#### Option 1:
+### Option 1 - Programmatically (Recommended)
 
-Open the file with a text editor of your choice, and copy the content. Add the following line to your code:
+This is the preferred method, as it works in all environments.
 
-For ETLBox 3.6.X and later:
+- Open the `etlbox.lic` file with a text editor.
+- Copy the entire content of the file.
+- Add the following code to your project before executing any DataFlow:
+
+
+{{< tabs "nuget-options" >}}
+{{< tab "Latest versions" >}}
 ```C#
 using ETLBox.Licensing;
 LicenseService.CurrentKey = "content_of_license_file";
 ```
-
-For ETLBox 3.5.X and previous versions:
+{{< /tab >}}
+{{< tab "ETLBox 3.5.X and before" >}}
 ```C#
 using ETLBoxOffice.LicenseManager;
 LicenseCheck.LicenseKey = "content_of_license_file";
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-This line needs to be called before you execute a data flow. This will work in any environment, and is the preferred option to register your license key.
+{{< callout context="note" title="Note" icon="outline/info-circle" >}}
+Make sure this line is executed before any ETL operations start.
+{{< /callout >}}
 
-#### Option 2
 
-Set up a user-wide, machine-wide or process-wide environment variable with the name `etlbox`. Copy the content of your license file into this environment variable. (Logout/Login or restart your system if necessary)
+### Option 2 - Environment Variable
 
-##### Azure functions/web app or other azure services:
+You can set the license key as an environment variable, which works across different systems and deployment environments.
 
-Go into the Configuration -&gt; App Settings of your function or web app. {{< link-ext text="See the Microsoft docs how to configure app settings in Azure" url="https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings" >}}
+- Set an environment variable named `etlbox`.
+- Copy the content of your `etlbox.lic` file as the value of this variable.
+- Restart your system or application if necessary.
 
-Add a new application setting. Enter `etlbox` as name and copy the content of your etlbox.lic file as value.
+#### Using Azure Functions or Azure Web Apps:
 
-#### Option 3
+- Go to Configuration → App Settings in your Azure Function or Web App settings.
+- Add a new setting:
+  - Name: `etlbox`
+  - Value: Paste the content of your `etlbox.lic` file.
 
-Just copy the file in the same folder where the ETLBox.dll resides. This is normally the root folder of your project.
-If you add it to the sources of your project, make sure that the option `Copy to output directory` is set to `Copy always` or `Copy if newer`.
+{{< link-ext text="Learn more about configuring Azure App Settings" url="https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings" >}}
 
-##### Azure functions / Azure web app:
+### Option 3 - File-Based
 
-There are different deployment methods available for your Azure Function or Web App. Some deployments methods will give you access to the file system on your Azure File Storage. In this case you can copy the etlbox.lic file into the same folder where your executable resides.
+You can place the `etlbox.lic` file directly alongside the ETLBox DLL.
 
-If you are using the Zip deploy method, you won't have access to the files on your file storage. If you still want to use the file based approach, you can add the etlbox.lic file as a resource to your project. The file is now embedded as a resource and the license check is able to extract the license from the resource file automatically.
+- Copy `etlbox.lic` to the same folder as ETLBox.dll (usually the root of your project).
 
-## FAQ
+#### Visual Studio Projects
 
-#### Which option do you recommend
+If you’re adding the license file to your project in Visual Studio, and you want to make sure that it is automatically copied into your output folder:
 
-We recommend that you start using option 1 to register your key. Option 2 and 3 are still available for compatibility reasons, but may become obsolete in future versions.
+1. Right-click on `etlbox.lic` in **Solution Explorer**.
+2. Select **Properties**.
+3. Set **Copy to Output Directory** to either:
+   - **Copy always**, or
+   - **Copy if newer**.
 
-#### How long is my license valid?
+![Properties - Copy to Output Directory](copy_output_screenshot.png)
 
-The implemented license check in ETLBox will basically just verify if the date at the beginning of the license string is still in the future. For non trial licenses, there is an additional grace period where the license will still work for 90 days after this date (though a warning is written into the log file).
+#### Project File Configuration
 
-#### Why is there no online license check?
+If you prefer to edit the project file (`.csproj`) directly, add the following entry:
 
-Security is a matter that we take seriously. We don't want to create any vulnerabilities by adding unnecessary web requests to your code base.
-The only web request that ETBox will make are the ones that you explicitly trigger, e.g. if you use the JsonSource with an URL to get data from a web service. Other than that, ETLBox won't try to connect anywhere else. That's why the whole license is implemented offline.
+```xml
+<ItemGroup>
+  <None Update="etlbox.lic">
+    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+```
+
+#### For Azure Functions / Web Apps:
+
+- With File System Access:
+  Deploy the `etlbox.lic` file to the same folder as your application files.
+
+- Using Zip Deploy (No File System Access):
+  - Add `etlbox.lic` as an embedded resource in your project.
+  - ETLBox will automatically detect the license from the embedded resource during runtime.
+
+## Troubleshooting License Issues
+
+- Ensure the license key is registered before any ETL operations start.
+- Double-check that the key or file content hasn’t been altered.
+- For environment variables, restart your system or application after setting them.
+- If using Azure, verify that the app settings are correctly applied.
+- Still having issues? [Contact ETLBox Support for assistance](/support/options).
 
