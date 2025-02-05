@@ -8,14 +8,14 @@ images: []
 menu:
   docs:
     parent: "db-connectors"
-weight: 360
+weight: 140
 toc: true
 ---
 
 
 ## Features
 
-DbTypeCheck will check incoming rows to ensure their compatibility with the data types of corresponding columns in a designated table.  By supplying a `TableName` and a `ConnectionManager`, the component automatically retrieves a `TableDefinition` from the source. Additionally, `ColumnMapping`, akin to that used in `DbDestination`, can be provided. DbTypeCheck verifies if each property's data type and value in the incoming row match the mapped column. 
+DbTypeCheck will check incoming rows to ensure their compatibility with the data types of corresponding columns in a designated table.  By supplying a `TableName` and a `ConnectionManager`, the component automatically retrieves a `TableDefinition` from the source. Additionally, `ColumnMapping`, akin to that used in `DbDestination`, can be provided. DbTypeCheck verifies if each property's data type and value in the incoming row match the mapped column.
 
 Designed as a transformation component, DbTypeCheck has two outputs. The primary output, utilized through `LinkTo`, redirects all rows that pass the type check. Flawed rows are redirected to other components using the `LinkFlawedTo` method. The type check's behavior can be tailored through various properties of the component.
 
@@ -114,7 +114,7 @@ string tableName = "dbtypecheck_example";
 var tableCols = new List<TableColumn> {
     new TableColumn("Id", "INT", allowNulls: false, isPrimaryKey: true, isIdentity:true),
     new TableColumn("IntCol", "INT", allowNulls: false),
-    new TableColumn("StringCol", "VARCHAR(5)", allowNulls: true),    
+    new TableColumn("StringCol", "VARCHAR(5)", allowNulls: true),
 };
 DropTableTask.DropIfExists(connection, tableName);
 CreateTableTask.CreateIfNotExists(connection, tableName, tableCols);
@@ -132,14 +132,14 @@ var source = new MemorySource<MyDataTypeRow>(
                 SomeInt = 2,
                 SomeString = "TO_LONG",
             },
-            //Will fail, IntCol does not allow null 
+            //Will fail, IntCol does not allow null
             new MyDataTypeRow() {
-                SomeInt = null, 
+                SomeInt = null,
                 SomeString = "X",
             },
             //Will fail, CustomCheck requires SomeInt to be greater than 0
             new MyDataTypeRow() {
-                SomeInt = -1, 
+                SomeInt = -1,
                 SomeString = "X",
             }
     });

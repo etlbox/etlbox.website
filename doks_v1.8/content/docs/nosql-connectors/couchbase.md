@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
@@ -35,7 +35,7 @@ Network.Execute(source);
 
 ### QueryOptions
 
-When retrieving data from the bucket, you can pass along some QueryOptions. 
+When retrieving data from the bucket, you can pass along some QueryOptions.
 
 ```C#
 var source = new CouchbaseSource<MyRow>();
@@ -67,11 +67,11 @@ You can specify Couchbase `InsertOptions` that are used when inserting data by s
 
 ### Key Columns
 
-By default, Couchbase will generate a key when inserting data. You can define your key for each record. 
+By default, Couchbase will generate a key when inserting data. You can define your key for each record.
 
 #### KeyColumn Attribute
 
-One way to define the key column is to use `KeyColumn` attribute on the property in your strongly typed object that holds the key value. 
+One way to define the key column is to use `KeyColumn` attribute on the property in your strongly typed object that holds the key value.
 
 ```C#
  public class MyRowWithKeyAttr
@@ -84,11 +84,11 @@ One way to define the key column is to use `KeyColumn` attribute on the property
 }
 ```
 
-When inserting data of the type `MyRowWithKeyAttr`, each inserted record will get the key value that is stored in the `KeyCol` property of the record. 
+When inserting data of the type `MyRowWithKeyAttr`, each inserted record will get the key value that is stored in the `KeyCol` property of the record.
 
 #### KeyColumn for dynamic objects
 
-If you are using dynamic objects or if you want to specify your key column manually, you can define the key column by passing the property name as string to the `KeyColumn`. 
+If you are using dynamic objects or if you want to specify your key column manually, you can define the key column by passing the property name as string to the `KeyColumn`.
 
 ```C#
 var dest = new CouchbaseDestination();
@@ -105,9 +105,9 @@ var source = new CouchbaseSource<MyRow>();
 source.CouchbaseCluster = cluster;
 ```
 
-## Using dynamic objects 
+## Using dynamic objects
 
-The `CouchbaseSource` and `CouchbaseDestination` support both the data retrieval with dynamic object. 
+The `CouchbaseSource` and `CouchbaseDestination` support both the data retrieval with dynamic object.
 
 ```C#
 var source = new CouchbaseSource();

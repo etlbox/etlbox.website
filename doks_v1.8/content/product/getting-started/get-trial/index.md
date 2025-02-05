@@ -1,7 +1,7 @@
 ---
 title: "Try for free"
-description: "Try all functionaliites of ETLBox for free"
-lead: "Try for free"
+description: "Unlock the Full Potential of ETLBox — Start Your Free Trial Today"
+lead: "Experience yourself how ETLBox can simplify your ETL workflows. With our free trial, you get full access to all features — no limitations, no hidden restrictions."
 draft: false
 images: []
 menu:

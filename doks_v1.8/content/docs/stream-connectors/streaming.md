@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "stream-connectors"
-weight: 410
+weight: 310
 toc: true
 ---
 
@@ -15,28 +15,28 @@ toc: true
 
 ETLBox currently supports the following data storage types:
 
-- Csv 
+- Csv
 - Json
 - Xml
-- Excel 
+- Excel
 - Text
 - Parquet
 
-This article covers functionalities that are shared by all of these data types. 
+This article covers functionalities that are shared by all of these data types.
 
 There is a connector package for each data type that must be included together with the core package to read the data. E.g. for Json you need to add the {{< link-ext url="https://www.nuget.org/packages/ETLBox.Json" text="ETLBox.Json" >}} package.
 
 {{< alert text="If you need to read binary data, take a look at the <code>CustomSource</code> and <code>CustomDestination</code> - these custom connectors allow you to define your own parsing logic."  >}}
 
-All these different storage types can be read either from a flat file (e.g. a .csv file on your local machine or a network share) or via a http web service endpoint. So you could read a csv file from a network storage located at `//Volumes/user/data.csv/`, but you could also read csv files from a REST endpoint on `https://test.com/getcsv/`. 
+All these different storage types can be read either from a flat file (e.g. a .csv file on your local machine or a network share) or via a http web service endpoint. So you could read a csv file from a network storage located at `//Volumes/user/data.csv/`, but you could also read csv files from a REST endpoint on `https://test.com/getcsv/`.
 
-Also, all these types (except excel) can also be written into a file or send to a http endpoint. E.g. you can write a text file into you local windows folder at `c:/data/text.csv` or send it as a POST into `https://test.com/postcsv`. 
+Also, all these types (except excel) can also be written into a file or send to a http endpoint. E.g. you can write a text file into you local windows folder at `c:/data/text.csv` or send it as a POST into `https://test.com/postcsv`.
 
-Once the data is read from one of these types into a data flow, all transformation that ETLBox offers can be used to transform the data. So these connectors make it easy to transfer an xml into a database table or to send an excel as json to a web service. 
+Once the data is read from one of these types into a data flow, all transformation that ETLBox offers can be used to transform the data. So these connectors make it easy to transfer an xml into a database table or to send an excel as json to a web service.
 
-### Streaming data 
+### Streaming data
 
-All data that is read or written with these connectors supports streaming. Streaming for a source means that data will be send into a data flow while it is still read from the source. Imagine you receive a json from a webservice that contains a lot of data - ETLBox will start reading the data from the input stream of the web response. Every element of the data that was already received will be send to the connected components immediately. So while the source server is still transferring data, the ETLBox data will already start processing the data received. 
+All data that is read or written with these connectors supports streaming. Streaming for a source means that data will be send into a data flow while it is still read from the source. Imagine you receive a json from a webservice that contains a lot of data - ETLBox will start reading the data from the input stream of the web response. Every element of the data that was already received will be send to the connected components immediately. So while the source server is still transferring data, the ETLBox data will already start processing the data received.
 
 If you source is sending you data faster than your data flow process, each connector will use an internal buffer to store the already received data. The buffer size can be adjusted with the `MaxBufferSize` property available on each connector.
 
@@ -44,8 +44,8 @@ If you source is sending you data faster than your data flow process, each conne
 
 All streaming sources and destinations in this article can be set to work either with a file or to use data from a web service. If you want to access a file on your drive or a network share, set the `ResourceType` property to `ResourceType.File`. This is default value for all connectors (Csv, Excel, Text, Xml and Json).
 
-Another option is `ResourceType.Http` - and allows you to read/write data from a http endpoint.Instead of a filename just provide a url. Furthermore, the components also have 
-a `HttpClient` and for sources a `HttpRequestMessage` property that can be used to configure the http request, e.g. to add authentication, change the request type from GET to POST or to use https instead. 
+Another option is `ResourceType.Http` - and allows you to read/write data from a http endpoint.Instead of a filename just provide a url. Furthermore, the components also have
+a `HttpClient` and for sources a `HttpRequestMessage` property that can be used to configure the http request, e.g. to add authentication, change the request type from GET to POST or to use https instead.
 
 The third option is `ResourceType.AzureBlob` if you want to access data from Azure Blob Storage. Use the `AzureBlobStorage` property to define additional connection settings. The simplest way is to set a value for `AzureBlobStorage.ConnectionString` and  `AzureBlobStorage.ContainerName`. But you can also use the different authentication methods, e.g. by providing an existing BlobClient.
 
@@ -53,7 +53,7 @@ The third option is `ResourceType.AzureBlob` if you want to access data from Azu
 
 #### ResourceType File
 
-The simplest approach is to write your data into a file, either on your local storage or on a network share. 
+The simplest approach is to write your data into a file, either on your local storage or on a network share.
 
 ```C#
 XmlSource source = new XmlSource("path/source.xml");
@@ -94,7 +94,7 @@ source.HttpRequestMessage.Headers.CacheControl = new System.Net.Http.Headers.Cac
 
 #### MIME multipart responses
 
-If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source. 
+If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source.
 
 E.g. if you receive a response like this:
 
@@ -133,7 +133,7 @@ If your csv data is stored in an Azure Blob storage, you can retrieve it like th
 ```C#
 var source = new CsvSource("simple.csv");
 source.ResourceType = ResourceType.AzureBlob;
-source.AzureBlobStorage.ConnectionString =  
+source.AzureBlobStorage.ConnectionString =
   @"Endpoint=https://storageappconfig.azconfig.io;Id=youridhere;Secret=yoursecrethere";
 source.AzureBlobStorage.ContainerName = "csv-source";
 ```
@@ -142,7 +142,7 @@ The other way you can write data into Azure Blob storage:
 
 ```C#
 CsvDestination dest = new CsvDestination("simple.csv");
-dest.AzureBlobStorage.ConnectionString = 
+dest.AzureBlobStorage.ConnectionString =
   @"Endpoint=https://storageappconfig.azconfig.io;Id=youridhere;Secret=yoursecrethere";
 dest.AzureBlobStorage.ContainerName = "csv-destination";
 dest.AzureBlobStorage.BlockBlobOpenWriteOptions = new BlockBlobOpenWriteOptions() {
@@ -151,11 +151,11 @@ dest.AzureBlobStorage.BlockBlobOpenWriteOptions = new BlockBlobOpenWriteOptions(
 dest.ResourceType = ResourceType.AzureBlob;
 ```
 
-### Shared properties 
+### Shared properties
 
 #### Paging
 
-A common scenario is that you need to create multiple calls to a http endpoint in order to receive all data. E.g. your first request to an endpoint will be via a GET request to `http://test.com/data?page=1`. To receive all data, you will need to increase the page number and repeat the request until you don't get any data in the response. 
+A common scenario is that you need to create multiple calls to a http endpoint in order to receive all data. E.g. your first request to an endpoint will be via a GET request to `http://test.com/data?page=1`. To receive all data, you will need to increase the page number and repeat the request until you don't get any data in the response.
 This can be accomplished in ETLBox with using the `GetNextUri` and `HasNextUri` properties.
 
 ```C#
@@ -179,13 +179,13 @@ Each streaming source can skip some rows at the beginning of the stream. These r
 
 #### Encoding
 
-For sources and destinations that deal with text (so every streaming source except excel) you can define the used Encoding. The default Encoding is UTF-8 - if you need a different encoding, please overwrite the `Encoding` property. 
+For sources and destinations that deal with text (so every streaming source except excel) you can define the used Encoding. The default Encoding is UTF-8 - if you need a different encoding, please overwrite the `Encoding` property.
 
 ### Pass existing Stream
 
-By default, all streaming source and destination will create a `StreamReader` or `StreamWriter` based on the existing configuration of the component. E.g. if you pass a filename to a `CsvSource`, the component will create a StreamReader that reads from a newly created FileStream on the file. 
+By default, all streaming source and destination will create a `StreamReader` or `StreamWriter` based on the existing configuration of the component. E.g. if you pass a filename to a `CsvSource`, the component will create a StreamReader that reads from a newly created FileStream on the file.
 
-If you already have an existing stream and you want to pass this to the Source or Destination, you can use the `CreateStreamReader` (for sources) or `CreateStreamWriter` (for destinations) function. This function allows you to inject the creation of the StreamReader/StreamWriter in the component. 
+If you already have an existing stream and you want to pass this to the Source or Destination, you can use the `CreateStreamReader` (for sources) or `CreateStreamWriter` (for destinations) function. This function allows you to inject the creation of the StreamReader/StreamWriter in the component.
 
 ```C#
 MemoryStream memStream = new MemoryStream(100);
@@ -204,9 +204,9 @@ source.CreateStreamReader = url =>
 
 #### Modify or enrich rows directly after reading
 
-Each streaming source offers the `RowModificationAction`. This Action (`Action<TOutput, StreamMetaData>`) allows to modify a record directly after it is read from the source and before it is send to the next component. While processing of data in other components can happen asynchronously, the execution of this action is synchronous for the source and always occurs after each record was read and before a new record is read. (Execution of reading a row and invoking this action will take place in the same thread). 
+Each streaming source offers the `RowModificationAction`. This Action (`Action<TOutput, StreamMetaData>`) allows to modify a record directly after it is read from the source and before it is send to the next component. While processing of data in other components can happen asynchronously, the execution of this action is synchronous for the source and always occurs after each record was read and before a new record is read. (Execution of reading a row and invoking this action will take place in the same thread).
 
-One usage example would be to get the URI used for the current record (when combined with `GetNextUri`/`HasNextUri`). 
+One usage example would be to get the URI used for the current record (when combined with `GetNextUri`/`HasNextUri`).
 
 ```C#
 public class MySimpleRow

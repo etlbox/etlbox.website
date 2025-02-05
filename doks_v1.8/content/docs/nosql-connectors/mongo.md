@@ -7,17 +7,17 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
 ## MongoSource
 
-The `MongoSource` let you read data from MongoDb. Serialization from the json into your data object will use the default deserialization build-in in the MongoDb C# driver (using the `BsonSerializer`). 
+The `MongoSource` let you read data from MongoDb. Serialization from the json into your data object will use the default deserialization build-in in the MongoDb C# driver (using the `BsonSerializer`).
 
-If you want to change the default deserialization, {{< link-ext text="you can use the static classes provided by the driver" url="https://mongodb.github.io/mongo-csharp-driver/1.11/serialization/" >}}. 
+If you want to change the default deserialization, {{< link-ext text="you can use the static classes provided by the driver" url="https://mongodb.github.io/mongo-csharp-driver/1.11/serialization/" >}}.
 
-### Example 
+### Example
 
 ```C#
 var source = new MongoDbSource<MyRow>();
@@ -31,9 +31,9 @@ source.LinkTo(dest);
 Network.Execute(source);
 ```
 
-### Filter 
+### Filter
 
-You can add a filter to get only particular data. When the filter is applied, the find options are used to add additional limitation, e.g. the batch size for the filtering. 
+You can add a filter to get only particular data. When the filter is applied, the find options are used to add additional limitation, e.g. the batch size for the filtering.
 
 ```C#
 var source = new MongoDbSource<MyRow>();
@@ -46,7 +46,7 @@ source.FindOptions = new FindOptions()
 ```
 ## MongoDestination
 
-The `MongoDestination` will write your incoming data as json into a collection in MongoDb. The default Bson serializtion from the MongoDb C# driver is used. 
+The `MongoDestination` will write your incoming data as json into a collection in MongoDb. The default Bson serializtion from the MongoDb C# driver is used.
 
 ```C#
 var dest = new MongoDbDestination<MyRow>();
@@ -61,7 +61,7 @@ Network.Execute(source);
 
 ## Using dynamic objects
 
-The `MonogSource` and `MongoDestination` support both the `ExpandoObject`. 
+The `MonogSource` and `MongoDestination` support both the `ExpandoObject`.
 
 ```C#
 var source = new MongoDbSource();

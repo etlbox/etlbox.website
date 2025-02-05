@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "other-connectors"
-weight: 500
+weight: 400
 toc: true
 ---
 
@@ -62,11 +62,11 @@ This introduction and example provide a basic understanding of how to use Micros
 
 ## Loading from DataFrames with ETLBox
 
-The `DataFameSource` and `DataFrameDestination` are part of the ETLBox.Analysis nuget package. 
+The `DataFameSource` and `DataFrameDestination` are part of the ETLBox.Analysis nuget package.
 
 ### Using POCOs
 
-You can simply connect the `DataFrameSource` to an existing DataFrame. This allows you to use the underlying data frame as a source for a data flow pipeline. Here is an example how to load the data into a memory object. Please note that this will convert the columnar storage into a classic row-based storage. 
+You can simply connect the `DataFrameSource` to an existing DataFrame. This allows you to use the underlying data frame as a source for a data flow pipeline. Here is an example how to load the data into a memory object. Please note that this will convert the columnar storage into a classic row-based storage.
 
 Here is an example using a strongly typed object:
 
@@ -101,7 +101,7 @@ public class MyRow {
 
 ### Adding Column Mapping
 
-When extracting from an existing data frame using a POCO to map your rows into, you can also describe how the column in the data frame should be mapped to the properties in your object. If needed, you can map column with different naming to your properties, or ignore columns that have the same name as the property. 
+When extracting from an existing data frame using a POCO to map your rows into, you can also describe how the column in the data frame should be mapped to the properties in your object. If needed, you can map column with different naming to your properties, or ignore columns that have the same name as the property.
 
 Here is an example:
 
@@ -131,9 +131,9 @@ foreach (var row in dest.Data) {
 
 /* Output */
 /*
-Col1: 1, Col2: A, Col3: 
-Col1: 2, Col2: B, Col3: 
-Col1: 3, Col2: C, Col3: 
+Col1: 1, Col2: A, Col3:
+Col1: 2, Col2: B, Col3:
+Col1: 3, Col2: C, Col3:
 */
 ```
 
@@ -180,11 +180,11 @@ Col1:3, Col2:Test3, Col3:3.3, Col4:
 
 ## Loading into Data Frames
 
-Instead of extracting data out of a data frame, you can also load data into a data frame using the `DataFrameDestination`. 
+Instead of extracting data out of a data frame, you can also load data into a data frame using the `DataFrameDestination`.
 
 ### Using POCOs
 
-Here is an example of loading data into a data frame using a strongly typed object. 
+Here is an example of loading data into a data frame using a strongly typed object.
 
 ```C#
 public class MyRow {
@@ -221,15 +221,15 @@ Console.WriteLine(filteredDf.ToString());
 
 /* Output */
 /*
-Col1      Col2      Col3      
-2         Test2     null       
-3         Test3     3.3 
+Col1      Col2      Col3
+2         Test2     null
+3         Test3     3.3
 */
 ```
 
 ### Adding Column Mapping
 
-When loading data into a data frame, you can use the DataFrameColumnMap attribute to map the name of the column in the data frame with a property in your object. Alternatively, you can define if a property should not be part of the destination data frame. 
+When loading data into a data frame, you can use the DataFrameColumnMap attribute to map the name of the column in the data frame with a property in your object. Alternatively, you can define if a property should not be part of the destination data frame.
 
 ```C#
 public class MyRowWithCM {
@@ -266,10 +266,10 @@ Console.WriteLine(dest.DataFrame.ToString());
 
 /* Output */
 /*
-Key       Value     
-1         Test1     
-2         Test2     
-3         Test3    
+Key       Value
+1         Test1
+2         Test2
+3         Test3
 */
 ```
 
@@ -294,7 +294,7 @@ r3.Col1 = 3;
 r3.Col2 = "Test3";
 r3.Col3 = 3.3;
 data.DataAsList.Add(r3);
-         
+
 var dest = new DataFrameDestination();
 
 data.LinkTo(dest);
@@ -304,9 +304,9 @@ Console.WriteLine(dest.DataFrame.ToString());
 
 /* Output */
 /*
-Col1      Col2      Col3      
-1         Test1     1.1       
-2         Test2     null      
-3         Test3     3.3   
+Col1      Col2      Col3
+1         Test1     1.1
+2         Test2     null
+3         Test3     3.3
 */
 ```

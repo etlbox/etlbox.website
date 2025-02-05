@@ -7,13 +7,13 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
 # ETLBox.Apache.Kafka package
 
-In order to use the Apache Kafka connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Apache.Kafka" text="ETLBox.Apache.Kafka" >}} to your project. 
+In order to use the Apache Kafka connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Apache.Kafka" text="ETLBox.Apache.Kafka" >}} to your project.
 
 ## Kafka Source Example
 
@@ -80,7 +80,7 @@ private void ProduceTestDataTyped(string topicName, int id, string valueSerializ
 
 ### Using custom serializer
 
-You can also define your own custom deserializer when extracting data from the Kafka queue. In the following example, we use our own serializer when creating the test data, and then pass a custom deserializer to the `KafkaSource` when reading the data. 
+You can also define your own custom deserializer when extracting data from the Kafka queue. In the following example, we use our own serializer when creating the test data, and then pass a custom deserializer to the `KafkaSource` when reading the data.
 
 ```C#
 string topicName = "DifferentSerializerTopic";
@@ -163,7 +163,7 @@ private void ProduceTestDataTyped(string topicName, int id, string valueSerializ
 
 ## Kafka Destination Example
 
-We can use the `KafkaDestination` to write any serializable data as an event into the Kafka event queue. Here is an example to write data from a MemorySource into a Kafka target. By default, data is serialized as the event text as a (formatted) json string. 
+We can use the `KafkaDestination` to write any serializable data as an event into the Kafka event queue. Here is an example to write data from a MemorySource into a Kafka target. By default, data is serialized as the event text as a (formatted) json string.
 
 ```C#
 string topicName = "SimpleWriteTopic";
@@ -175,7 +175,7 @@ source.DataAsList.Add(new Row() { Id = 3, Value = "Test3" });
 
 var dest = new KafkaDestination<Row>() {
     ProducerConfig = new ProducerConfig() {
-        BootstrapServers = fixture.ConnectionString                    
+        BootstrapServers = fixture.ConnectionString
     },
     TopicName = topicName,
 };
@@ -191,7 +191,7 @@ public class Row {
 
 ### Custom serialization and transactions
 
-When writing data into the Kafka event queue, you can also define your own serialization function. If needed, you can insert your data inside a transaction - simply set the `UseTransaction` property to `true`. 
+When writing data into the Kafka event queue, you can also define your own serialization function. If needed, you can insert your data inside a transaction - simply set the `UseTransaction` property to `true`.
 
 ```C#
 string topicName = "WithTransactionTopic";
@@ -206,7 +206,7 @@ var dest = new KafkaDestination<Row>() {
         BootstrapServers = fixture.ConnectionString
     },
     TopicName = topicName,
-    UseTransaction = true,       
+    UseTransaction = true,
     BuilderContext = builder => builder.SetValueSerializer(new CustomRowSerializer())
 };
 
