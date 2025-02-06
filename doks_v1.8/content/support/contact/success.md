@@ -1,16 +1,18 @@
 ---
-title: "We will get back to you!"
-description: "Thanks for your request"
+title: "We’ve Received Your Request!"
+description: "Thanks for your request."
 draft: false
 ---
 
-We successfully received your request. Normally you will hear from us within 24 hours. 
+Thank you for reaching out! Your message has been successfully submitted, and we’ll get back to you normally **within 48 hours**.
 
-#### No response received yet?
+#### Need an Update?
 
-If you don't hear back from you, or if you like to get an update on the status of your request, don't hesitate to contact us!
+If you haven’t received a response or would like to check the status of your request, feel free to get in touch.
 
-See all contact options on our [support site](/support/options/).
+👉 Visit our [Support page](/support/options/) for all contact options.
 
-Of course you can always send us an email to <a href="mailto:support%40etlbox&period;net">support&commat;etlbox&period;net</a>
-    
+📧 Or email us directly at <a href="mailto:support%40etlbox&period;net">support&commat;etlbox&period;net</a>.
+
+**We look forward to assisting you!**
+

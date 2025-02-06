@@ -1,31 +1,58 @@
-<form class="contactforms" name="contact-form" method="POST" data-netlify="true" action="/support/contact/success">
-    <div class="row form-group">
-        <label class="col-sm-3" for="email">Your e-Mail:</label>
-        <div class="col-sm-7">
-            <input class="form-control" type="email" id="email" name="contactemail" placeholder="Enter email"
-                required="required" />
-        </div>
-    </div>
-    <div class="row form-group">
-        <label class="col-sm-3" for="name">Your Name:</label>
-        <div class="col-sm-7">
-            <input class="form-control" type="text" id="name" name="contactname" placeholder="Enter your name"
-                required="required" />
+<form class="contactforms my-4" name="contact-form" method="POST" data-netlify="true" action="/support/contact/success">
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="email">Your Email:</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="email" id="email" name="contactemail" placeholder="Enter your email" required>
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-3" for="message">How can we assist you?</label>
-        <div class="col-sm-7">
-            <textarea class="form-control" rows="10" id="message" name="contactmessage" placeholder="Enter your message"
-            required="required"></textarea>
+    <div class="row mb-3  justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="name">Your Name:</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="name" name="contactname" placeholder="Enter your name" required>
         </div>
     </div>
 
-    <div class="row form-group">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-7">
-            <button type="submit" class="btn btn-primary btn-cta rounded-pill">Submit your message <i class="bi-envelope"></i></button>
+    <div class="row mb-3  justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="topic">What is your request about?</label>
+        <div class="col-lg-8 col-md-12">
+            <select class="form-control" id="topic" name="contacttopic">
+                <option value="" selected disabled>Select a topic</option>
+                <option value="general">General Inquiry</option>
+                <option value="licensing">Licensing Questions</option>
+                <option value="support">Technical Support</option>
+                <option value="feature">Feature Request</option>
+                <option value="partnership">Partnership / Collaboration</option>
+            </select>
         </div>
     </div>
+
+    <div class="row mb-3  justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="message">How can we assist you?</label>
+        <div class="col-lg-8 col-md-12">
+            <textarea class="form-control" rows="8" id="message" name="contactmessage" placeholder="Enter your message" required></textarea>
+        </div>
+    </div>
+
+    <div class="row mb-3  justify-content-center">
+        <div class="col-md-4"></div>
+        <div class="col-lg-8 col-md-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="videoCall" name="videoCall">
+                <label class="form-check-label fw-bold" for="videoCall">
+                    I would like to schedule a video call.
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-cta rounded-pill px-4 py-2">
+                Send Your Message <i class="bi-envelope"></i>
+            </button>
+        </div>
+    </div>
+
 </form>
