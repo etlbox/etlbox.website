@@ -42,7 +42,7 @@ Depending on your use case, you might need additional packages. For example:
 - You can explore {{< link-ext url="https://www.nuget.org/profiles/ETLBoxperts" text="all our packages here" >}}.
 
 {{< tabs "nuget-options" >}}
-{{< tab ".NET CLI" >}}
+{{< tab "dotnet CLI" >}}
 ```cmd
 dotnet add package ETLBox
 dotnet add package ETLBox.Json
@@ -66,7 +66,7 @@ This command is intended to be used within the Package Manager Console in Visual
 For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files" text="PackageReference" >}}, copy this XML node into the project file to reference the package.
 {{< /smallnote >}}
 {{< /tab >}}
-{{< tab "Script & Interactive" >}}
+{{< tab "Script and Interactive" >}}
 ```cmd
 > #r "nuget: ETLBox, 3.6.1"
 > #r "nuget: ETLBox.Json, 3.6.1"
