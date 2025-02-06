@@ -1,35 +1,19 @@
 ---
-title: "Privacy Policy & Legal information"
+title: "Legal Notice & Privacy Policy"
 description: "We do not collect any personal data - and we are an official company in Berlin, Germany."
 draft: false
 images: []
 ---
 
-## Legal Information
+### Legal Notice
 
-ETLBoxperts GmbH is a company located and registered in Berlin, Germany.
+{{< company-address >}}
 
-{{< nowrap-code >}}
-ETLBoxperts GmbH
-Landsberger Str. 218
-12623 Berlin
-Germany
-
-Registration Number: HRB 263153 B
-Registered in: Berlin (Charlottenburg)
-VAT Number: DE368638493
-
-Phone: +49 30 72621 1087
-E-Mail: mail&commat;etlbox&period;net
-Authorized representative / Managing Director: Andreas Lennartz
-{{< /nowrap-code >}}
-
-
-## Privacy Policy
+### Privacy Policy
 
 We respect your privacy. We do not use cookies and we do not collect any personal data.
 
-### Website visitors
+#### Website visitors
 
 - No personal information is collected.
 - No information is stored in the browser.
@@ -37,7 +21,6 @@ We respect your privacy. We do not use cookies and we do not collect any persona
 - No information is shared with advertising companies.
 - No information is mined and harvested for personal and behavioral trends.
 - No information is monetized.
-
 
 ### Disclaimer
 
@@ -48,3 +31,5 @@ The contents of our pages have been created with the utmost care. However, we ca
 #### Accountability for links
 
 Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately.
+
+
