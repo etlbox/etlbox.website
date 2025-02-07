@@ -1,7 +1,7 @@
 ---
-title: "Simple flow"
+title: "Simple Flow"
 description: "A simple data flow with ETLBox"
-lead: "The main part of ETLBox are the data flow components. They are the building blocks for the ETL part, and contain classes that help you to to extracting, transform and load data.  This example will lead you through a simple data flow step-by-step."
+lead: "Data Flow is at the heart of ETLBox. These components form the foundation of an ETL pipeline, allowing you to extract, transform, and load data seamlessly. In this guide, we’ll walk through a simple data flow step-by-step."
 draft: false
 images: []
 menu:
@@ -9,45 +9,71 @@ menu:
     parent: "introduction"
 weight: 10
 toc: true
+chatgpt-review: true
 ---
 
-## What is a data flow?
+## What is a Data Flow?
 
-You have some data somewhere - stored in some files, a database table or a web service. Now you want to define a pipeline which takes this data, transforms it "on the fly" and writes it into a target (this could be again a database, a file or anywhere else). This is the pure essence of an ETL process: extracting, transforming, loading.
-The foundation to define such a data flow in ETLBox are called components. When these components are linked together, you will get some sort of pipeline where you data will run through. We will call this as a data flow.
+A data flow is a pipeline that moves and transforms data from one place to another. Whether your data is stored in files, databases, or web services, ETLBox lets you build a process that **extracts** the data, **transforms** it on the fly, and **loads** it into a target system—this is the core of ETL (Extract, Transform, Load).
 
-### Source components
+In ETLBox, a data flow is created by linking **components** together. These components define where the data comes from, how it should be processed, and where it should go.
 
-All data flow pipelines will need at least one or more sources. Sources are basically everything that can read data from someplace
-(e.g. Csv file or database table) and then post this data into the pipeline. All sources are able to read data asynchronously.
-That means, while the component reads data from the source, it simultaneously sends the already processed data to components that are connected to source.
-This is crucial when you operate with big amounts of data - you want be able to process chunks of data from the source and you want to avoid to load your source data into memory as a whole.
+```kroki {type=mermaid}
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+  source[Extract using <b>Sources</b>] --> transformation(<b>Transformations</b>)
+  transformation --> destination[Load into <b>Destinations</b>]
+```
 
-There are different build-in data sources in ETLBox, e.g.: `CsvSource`, `DbSource` or `ExelSource` that can be easily used to connect to your data. If the predefined connectors are not able to satisfiy your needs, you can write your own source by extending the `CustomSource`.
+### Key Data Flow Components
 
-Once a source starts reading data, it will start sending data to its connected components. These could be either a Transformation or Destination.
-Posting data into the flow always happens asynchronously in separate threads (even if you use the blocking Execute() method to start the flow).
+#### Source Components
+
+A data flow always starts with a **source**. Sources read data from files, databases, APIs, or other storage systems and feed it into the pipeline.
+
+- ETLBox provides built-in sources like `CsvSource`, `DbSource`, and `ExcelSource`.
+- If needed, you can create a **custom source** by extending `CustomSource`.
+
+**How ETLBox Handles Data Efficiently:**
+- Sources read data **asynchronously**, meaning data is read and processed at the same time.
+- This minimizes memory usage—data is streamed instead of being fully loaded into memory.
 
 ### Transformations
 
-Transformations always have at least one input and one output. A transformation can receive data from one or multiple sources (or other transformations), and the transformation output can link to one or more destinations or other transformations. The purpose of a transformation component is to take the data from its input(s) and post the transformed data to its output(s). This is normally done on a row-by-row basis for non-blocking transformation. There are some transformation that operation on batches of data, and some transformation will block processing until some or all data arrived in one of the input buffer of the component - these are called blocking or partially blocking transformations. Additionally, every transformation has a limited input buffer in order to improve throughput. As soon as there is any data in the input, non-blocking transformation will start processing and post the result to the output.
+Transformations modify, clean, or enrich the data as it moves through the pipeline.
 
-### Destination components
+- **Non-blocking transformations** process each row as soon as it arrives.
+- **Blocking transformations** (like sorting) wait for all data to arrive before processing.
+- Some transformations work in batches for improved efficiency.
 
-Destination components normally have only one input. They define a target for your data, e.g. a database table, a file or a .NET collection.
-If you are in need of your own written destination component, you can extend the `CustomDestination`.
+Each transformation has an **input buffer** to optimize throughput. Once data arrives, transformations process it and send it to the next step.
 
-Every Destination comes with a limited input buffer. So for a csv destination, data can be stored in this input buffer because writing into file could be slower than processing the data rows. A database destination will even wait until enough data was buffered, so that a whole batch of data can be written into the database using a bulk insert operation.
+### Destination Components
 
-## A simple dataflow
+Destinations define where the processed data is stored—such as a database, file, or API.
 
-Let's look at a simple data flow like this:
+- Common destinations include `DbDestination`, `CsvDestination`, and `MemoryDestination`.
+- To create a custom destination, extend `CustomDestination`.
 
-Csv File (Source) --> Row transformation --> Database destination.
+Destinations use **buffering** to improve performance:
+- A CSV destination buffers data before writing to avoid slow file operations.
+- A database destination waits until enough rows are collected, then performs a bulk insert for efficiency.
+
+
+## Building a Simple Data Flow
+
+Let’s walk through a simple ETL pipeline that reads data from a CSV file, transforms it, and stores it in a SQL Server database.
+
+```kroki {type=mermaid}
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+  source[CsvSource] --> transformation(RowTransformation)
+  transformation --> destination[DbDestination]
+```
 
 ### Source file
 
-The input file "demodata.csv"  has the following content:
+The input file `demodata.csv` contains order data:
 
 rownr|name|quantity_m|quantity_l|price_in_cents
 -----|----|----------|----------|--------------
@@ -55,12 +81,11 @@ rownr|name|quantity_m|quantity_l|price_in_cents
 2|"Shirt"|3|7|1500
 3|"Jeans"|5|2|3000
 
-It should simulate orders for clothing. All data is separated with a ",", and the first row is the header.
+All data is separated with a ",", and the first row is the header.
 
 ### Destination table
 
-We want to store the data from the file in a destination table in Sql Server.
-The destination table will look like this:
+We want to store this data in a SQL Server table:
 
 ColumnName|Data Type|Constraints
 ----------|---------|----------
@@ -71,53 +96,47 @@ Price|DECIMAL(10,2)|
 
 ### Creating the components
 
-First we need to create a source, in this example it contain the order data. This will look like this:
+#### Step1: Define the Source
+
+We start with a CSV source component:
 
 ```C#
-CsvSource<string[]> source = new CsvSource<string[]>("demodata.csv");
+CsvSource<MyRow> source = new CsvSource<MyRow>("demodata.csv");
 ```
 
-We now add a row transformation. The output format of the `CsvSource` is a string array. In this example,
-we will convert the csv string array into an `Order` object and add some logic in the transformation.
+With MyRow defined as
 
 ```C#
-RowTransformation<string[], Order> rowTrans = new RowTransformation<string[], Order>(
-    row => new Order()
-    {
-        Item = row[1],
-        Quantity = int.Parse(row[2]) + int.Parse(row[3]),
-        Price = int.Parse(row[4]) / 100
-    });
+public class MyRow {
+    [CsvHelper.Configuration.Attributes.Name("rownr")]
+    public string Id { get; set; }
+    public string name { get; set; }
+    public string quantity_m { get; set; }
+    public string quantity_l { get; set; }
+    public string price_in_cents { get; set; }
+}
 ```
 
-*Please note that you don't have to necessarily use a string array for reading csv file. You can use the CsvSource
-already with the right data object.*
+This reads the CSV file and outputs each row as a `MyRow` object.
 
-Now we need to create a destination. For the database destination we need a connection manager that stores
-the connection string and provides support for a native ADO.NET connection to the database.
+We'll convert the CSV data into an Order object and calculate the total quantity:
+The output format of the `CsvSource` is an instance of  `MyRow`.
+
+### Step 2: Apply a Transformation
+
+We'll convert the CSV data into an Order object and calculate the total quantity:
 
 ```C#
-SqlConnectionManager connMan = new SqlConnectionManager("Data Source=.;Initial Catalog=demo;Integrated Security=false;User=sa;password=reallyStrongPwd123");
+RowTransformation<MyRow, Order> rowTrans = new RowTransformation<MyRow, Order>();
+rowTrans.TransformationFunc =
+  row => new Order() {
+      Item = row.name,
+      Quantity = int.Parse(row.quantity_m) + int.Parse(row.quantity_l),
+      Price = int.Parse(row.price_in_cents) / 100
+  };
 ```
 
-Always use the right connection manager for you database - e.g., the SqlConnectionManager will connect with
-a Sql Server (and expects a sql server connection string). There are also other connection managers
-(e.g. `SQLiteConnectionManager` for SQLite, `PostgresConnectionManager` for Postgres or `MySqlConnectionManager`
-for MySql).
-
-{{< alert text="If you don't want to pass the connection manager object over and over again to your DataFlow or ControlFlow objects, you can store a default connection in the static property <code>Settings.DefaultDbConnection</code>" >}}
-
-No we need a database destination.
-
-```C#
-DbDestination<Order> dest = new DbDestination<Order>(connMan, "OrderTable");
-```
-
-Notice that the destination is typed with the `Order` object.
-We also need to pass the connection manager to the DbDestination so that connection to our Sql Server can be used,
-and we provide the table name for the destination table.
-
-The Order object is a POCO (Plain Old Component Object) and looks like this:
+The Order object is a POCO (Plain Old C# Object):
 
  ```C#
 public class Order
@@ -128,30 +147,162 @@ public class Order
 }
 ```
 
+#### Step 3: Define the Destination
+
+To store data in SQL Server, we first set up a connection manager:
+
+```C#
+SqlConnectionManager connMan = new SqlConnectionManager("Data Source=.;Initial Catalog=demo;Integrated Security=false;User=sa;password=reallyStrongPwd123");
+```
+
+{{< callout context="caution" title="Attention" icon="outline/alert-triangle" >}}
+Ensure you use the correct connection manager for your database. For example, `SqlConnectionManager` is designed for SQL Server and requires a corresponding connection string. Simply use the connection manager that matches your database, such as `SQLiteConnectionManager` for SQLite, `PostgresConnectionManager` for PostgreSQL, or `MySqlConnectionManager` for MySQL.
+{{< /callout >}}
+
+
+Then, we create the database destination:
+
+```C#
+DbDestination<Order> dest = new DbDestination<Order>(connMan, "OrderTable");
+```
+
+If you don't want to pass the connection manager object over and over again to your DataFlow or ControlFlow objects, you can store a default connection in the static property <code>Settings.DefaultDbConnection</code>"
+
+
 ### Linking the components
 
-Until now we have only created the components, but we didn't define the Data Flow pipe. Let's do this now:
+Now, we link the components together to define the data flow:
 
 ```C#
 source.LinkTo(rowTrans);
 rowTrans.LinkTo(dest);
 ```
 
-This will create a data  flow pipe CsvSource -> RowTransformation -> DbDestination. If your data flow becomes more complex, linking will
-become an essential part of your creation. There are transformations that have more than one input or output, and destinations accepts data from
-several sources. Even sources can split data across their destinations - you can defines rules how to split data as so called predicates.
+This creates the following pipeline:
+
+📄 CSV Source ➝ 🔄 Row Transformation ➝ 📊 Database Destination
+
+You can link multiple sources, transformations, and destinations to build complex flows, including splitting, merging, and conditional routing.
 
 ### Executing the dataflow
 
-Now we will give the source the command to start reading data.
+To run the pipeline, simply execute the source:
 
 ```C#
-Network.Execute(source);
+await Network.ExecuteAsync(source);
 ```
 
-This code will execute as an synchronous task - though the data flow itself will run in it's own thread.
-To operate totally asynchronously, you could use the `Network.ExecuteAsync(source)` method. Each component does expose a `public Task Completion` property, which gives you information if the component is still running or already completed.
+- Need sync execution? Use `Network.Execute(source)`.
 
-## View the full code
+In both cases, this starts reading data asynchronously, so transformations and inserts happen in parallel. Each component different properties to track progress, including a `Completion` task and `ProgressCount`.
+
+### Verifying the Output
+
+After executing the data flow, the transformed data is written into the SQL Server table. Running a `SELECT * FROM OrderTable` will return:
+
+| Id | Item    | Quantity | Price  |
+|----|--------|---------|--------|
+| 1  | T-Shirt | 5       | 12.00  |
+| 2  | Shirt   | 10      | 15.00  |
+| 3  | Jeans   | 7       | 30.00  |
+
+This confirms that the CSV data was successfully transformed and stored in the database.
+
+{{< callout context="note" title="Designed for Big Data" icon="outline/info-circle" >}}
+This approach efficiently handles large datasets. For example, if the input would contain 100,000 rows, the process completes in just a few seconds, depending on system performance. Even with millions of rows, ETLBox maintains performance by streaming data and processing it in chunks, ensuring that only a limited amount is kept in memory at any time.
+{{< /callout >}}
+
+## Using ExpandoObject for a Flexible Data Structure
+
+Instead of reading CSV data into a strongly typed object (`MyRow`), we can modify our example to use a dynamic `ExpandoObject`. This allows us to handle data more flexibly without defining a class.
+
+### Modifying the Source
+
+We configure `CsvSource` to output dynamic objects instead of a predefined class.
+
+```csharp
+CsvSource source = new CsvSource("demodata.csv");
+```
+
+which is a shortcut for
+
+```csharp
+CsvSource<ExpandoObject> source = new CsvSource<ExpandoObject>("demodata.csv");
+```
+
+Since `CsvSource` now returns `ExpandoObject`, each row is dynamically structured.
+
+Whenever a non-generic version of a component is used (e.g., `CsvSource` instead of `CsvSource<ExpandoObject>`), it defaults to `ExpandoObject`. The same applies to other components like `DbSource`, which is a shortcut for `DbSource<ExpandoObject>`.
+
+
+### Apply a Transformation
+
+The transformation will still convert the data into an `Order` object, but now it processes an `ExpandoObject` instead of `MyRow`. In the example below, we demonstrate two ways of accessing properties: using the `dynamic` keyword for some fields and treating `ExpandoObject` as an `IDictionary<string, object>` for others.
+
+```csharp
+ RowTransformation<ExpandoObject, Order> rowTrans = new RowTransformation<ExpandoObject, Order>();
+ rowTrans.TransformationFunc =
+   row => {
+       dynamic dynamicRow = row as ExpandoObject;
+       IDictionary<string, object> dictRow = row as IDictionary<string, object>;
+       Order order = new Order() {
+           Item = dynamicRow.name,
+           Quantity = int.Parse(dictRow["quantity_m"].ToString()) + int.Parse(dictRow["quantity_l"].ToString()),
+           Price = int.Parse(dictRow["price_in_cents"].ToString()) / 100
+       };
+       return order;
+   };
+```
+
+- Why `ToString()`? Since `ExpandoObject` stores values as `object` by default, we convert numeric fields to `string` before parsing them.
+
+
+### Depp Dive: Working with ExpandoObject
+
+In C#, `ExpandoObject` is both a `dynamic` object and an `IDictionary<string, object>`.
+
+**Accessing properties dynamically**:
+
+If you know the field names in advance, you can use the `dynamic` keyword:
+
+```csharp
+dynamic obj = new ExpandoObject();
+obj.Name = "T-Shirt";
+Console.WriteLine(obj.Name);  // Output: T-Shirt
+```
+
+**Using ExpandoObject as a dictionary**:
+
+For a more generic approach, treat it as an `IDictionary<string, object>`:
+
+```csharp
+ExpandoObject expando = new ExpandoObject();
+var dict = (IDictionary<string, object>)expando;
+dict["Name"] = "Jeans";
+dict["Price"] = 39.99;
+Console.WriteLine(dict["Name"]); // Output: Jeans
+```
+
+
+
+{{< callout context="tip" title="ExpandoObject for flexibility" icon="outline/bulb" >}}
+This approach is especially useful when dealing with column names that contain spaces or when dynamically processing property names retrieved from a configuration file.
+{{< /callout >}}
+
+## Summary
+
+- Sources read data asynchronously and post it into the pipeline.
+- Transformations modify data on the fly before passing it along, and have buffer to improve throughput
+- Destinations store data in a database, file, or memory.
+- ETLBox handles data efficiently, streaming it instead of loading everything into memory.
+- Using `ExpandoObject` allows for greater flexibility when handling dynamic or unknown data structures.
+
+Now that you've seen a simple data flow, you can explore more advanced scenarios in the next guides.
+
+### View the full code
 
 This demo code is available online - {{< link-ext text="view the full code on Github" url="https://github.com/etlbox/etlbox.demo/tree/main/SimpleFlow" >}}.
+
+
+
+
