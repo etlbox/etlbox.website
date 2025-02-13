@@ -257,7 +257,7 @@ The transformation will still convert the data into an `Order` object, but now i
 - Why `ToString()`? Since `ExpandoObject` stores values as `object` by default, we convert numeric fields to `string` before parsing them.
 
 
-### Depp Dive: Working with ExpandoObject
+### Deep Dive: Working with ExpandoObject
 
 In C#, `ExpandoObject` is both a `dynamic` object and an `IDictionary<string, object>`.
 
