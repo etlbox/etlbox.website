@@ -260,3 +260,62 @@ This example highlights the flexibility ETLBox offers for creating intricate dat
 {{< callout context="tip" icon="outline/rocket" >}}
 With normal predicates, you can only split your data. To merge data streams, use the `MergeJoin` component. For broadcasting the same data to multiple outputs, use the `Multicast` component."
 {{< /callout >}}
+
+### Merging Data with MergeJoin
+
+The `MergeJoin` transformation allows you to combine data from two input sources based on a matching condition. It supports both simple joins (without comparison logic) and advanced joins where you define how rows are compared.
+
+**Example**:
+
+```csharp
+var source1 = new MemorySource<MyLeftRow>();
+source1.DataAsList.Add(new MyLeftRow() { FirstName = "Elvis" });
+source1.DataAsList.Add(new MyLeftRow() { FirstName = "Marilyn" });
+
+var source2 = new MemorySource<MyRightRow>();
+source2.DataAsList.Add(new MyRightRow() { LastName = "Presley" });
+source2.DataAsList.Add(new MyRightRow() { LastName = "Monroe" });
+
+var join = new MergeJoin<MyLeftRow, MyRightRow, MyOutputRow>(
+    (left, right) => new MyOutputRow { FullName = left.FirstName + " " + right.LastName }
+);
+
+var dest = new MemoryDestination<MyOutputRow>();
+
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);
+Network.Execute(source1, source2);
+
+foreach (var row in dest.Data)
+    Console.WriteLine(row.FullName);
+// Output: Elvis Presley, Marilyn Monroe
+```
+
+This component is especially useful when combining data from different sources that share a common key.
+
+### Broadcasting Data with Multicast
+
+The `Multicast` transformation replicates data from one source to multiple destinations. Each output receives the same data, enabling broadcasting the same data to different destinations.
+
+**Example**:
+
+```csharp
+var source = new MemorySource<MyRow>();
+source.DataAsList.Add(new MyRow() { Id = 1, Value = "A" });
+source.DataAsList.Add(new MyRow() { Id = 2, Value = "B" });
+
+var dest1 = new MemoryDestination<MyRow>();
+var dest2 = new MemoryDestination<MyRow>();
+
+var multicast = new Multicast<MyRow>();
+
+source.LinkTo(multicast);
+multicast.LinkTo(dest1);
+multicast.LinkTo(dest2);
+
+Network.Execute(source);
+```
+
+In this example, both `dest1` and `dest2` receive identical copies of the data from `source`.
+
