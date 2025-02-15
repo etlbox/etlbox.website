@@ -292,7 +292,7 @@ foreach (var row in dest.Data)
 // Output: Elvis Presley, Marilyn Monroe
 ```
 
-This component is especially useful when combining data from different sources that share a common key.
+This component is especially useful when combining data from different sources that share a common key. [Read more about the `MergeJoin` here](/docs/transformations/merge-join).
 
 ### Broadcasting Data with Multicast
 
@@ -317,5 +317,5 @@ multicast.LinkTo(dest2);
 Network.Execute(source);
 ```
 
-In this example, both `dest1` and `dest2` receive identical copies of the data from `source`.
+In this example, both `dest1` and `dest2` receive identical copies of the data from `source`.  [Read more about the `Multicast` here](/docs/transformations/multicast).
 
