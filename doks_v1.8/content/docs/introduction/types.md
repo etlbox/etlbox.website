@@ -1,7 +1,7 @@
 ---
-title: "Working with types"
-description: "Details how to execute, link and start/wait for a data flow."
-lead: "ETLBox supports generic components that are typed to an object, but also works well with dynamic objects. Some components also allow to use an array as type. This chapter will give insight how to operate on your data with different types."
+title: "Working with Types"
+description: "Learn how to use strongly typed objects (POCOs) and dynamic ExpandoObject in ETLBox. This guide explains automatic property mapping, type conversions, and how to dynamically adapt ETL processes using configuration files."
+lead: "ETLBox supports both strongly typed objects (POCOs) and dynamic objects (ExpandoObject). Components can operate on predefined data structures or adjust dynamically to different datasets. This chapter explains how to work with different data types in ETLBox."
 draft: false
 images: []
 menu:
@@ -9,169 +9,161 @@ menu:
     parent: "introduction"
 weight: 30
 toc: true
+chatgpt-review: true
 ---
+
+ETLBox allows you to work with data in two main ways:
+
+- **Strongly typed objects (POCOs)** – Ideal when your data structure is known at design time.
+- **Dynamic objects (`ExpandoObject`)** – Flexible for scenarios where data structures may change or be configured at runtime.
+
+When defining ETLBox components, you can specify a type explicitly (e.g., `DbSource<MyRow>`) or leave it unspecified, in which case the component defaults to using `ExpandoObject`. Some transformations, such as `RowTransformation`, allow you to convert data between types during processing, while others, like `ColumnTransformation`, always output a dynamic object.
 
 ## Generic approach
 
-Almost all components in ETLBox can be defined with a strongly typed object, also known as *POCO* (Plain old component object). This object can be used to store and process rows of your data in your data flow.
+A Plain Old C# Object (POCO) provides a structured way to represent data in ETLBox components. If your data has well-defined columns, you can map them to properties in a POCO, ensuring type safety and easy access.
 
-Most sources provide a column name for every data column. E.g., in a Csv file you normally have a header at the top row with names for each column. In a database table, there are always column names stored along with your data.
+### Automapping Column Names
 
-The idea is that you define an object in C# where the name of the columns in the source match with the property names in your object. At best also the data type of the your source data would match with the data type in your object.
+When working with sources and destinations, ETLBox automatically maps column names to matching property names in your POCO. If a column name differs from the property name, you can use attributes like DbColumnMap to specify the mapping explicitly.
 
-When a source reads data, it will try to map the column names from the source to the property names in your data object. E.g. a column named `Value1`
-would be stored in the property with the same name. Optionally, you can add some mapping logic to your. For a database source, you could use the `DbColumnMap` attribute, which defines which column is mapped to which property. If there is no matching property at, the column will be ignored.
-
-### Example mapping
-
-```C#
-//Prepare table
-SqlTask.ExecuteNonQuery(@"CREATE TABLE demotable (
+```csharp
+SqlTask.ExecuteNonQuery(@"CREATE TABLE sourcetable (
   Value1 INT NULL,
   Value2 VARCHAR(100) NULL
  )");
 
-public class MySimpleRow {
+public class MyRow {
     public int Value1 { get; set; }
     [DbColumnMap("Value2")]
     public string Col2 { get; set; }
 }
 
-DbSource<MySimpleRow> source = new DbSource<MySimpleRow>("demotable");
+DbSource<MyRow> source = new DbSource<MyRow>("sourcetable");
 ```
-The DbSource is used as a generic class - it is created using the type `MySimpleRow`. In this example, `MySimpleRow` is our *POCO*.
 
-The table `demotable` has 2 columns: `Value1` with an `INT` data type and `Value2` with a `VARCHAR` data type. The *POCO* `MySimpleRow` has two properties: `Value1` and `Value2`. `Value2` comes with a `DbColumnMap("Value2")` attribute. When the data flow is executed and data is loaded from the source, the property `Value1` is automatically mapped to the table column `Value1` because of their matching names. The table column `Value2` is mapped to the property `Col2` because of the definition of the DbColumnMap attribute.
+- `Value1` in the database is mapped to `Value1` in `MyRow` automatically.
+- `Value2` in the database is mapped to `Col2` in `MyRow` using the `DbColumnMap` attribute.
+- If a column exists in the database but not in the POCO, it is ignored.
 
-{{< alert text="The ColumMap attribute is only valid for the <code>DbSource</code>, <code>DbDestination</code> and <code>DbMerge</code>. Other sources can use different mapping methods." >}}
+{{< callout context="note" icon="outline/info-circle" >}}
+The `DbColumnMap` attribute only applies to `DbSource`, `DbDestination`, and `DbMerge`.  Other sources use different mapping techniques.
+{{< /callout >}}
 
-### Ignored columns
+### Ignoring Unmapped Properties
 
-If you use a POCO to describe you data type, this object can have a different amount of properties. In our example above, we could define a POCO that contains an additional property (Let's call it AnotherValue) and leave out Col2. Our object would look like this:
+A POCO can contain more or fewer properties than the actual data. Any properties without a matching column in the source will remain unset.
 
-```C#
-//Prepare table
-SqlTask.ExecuteNonQuery(@"CREATE TABLE demotable (
-  Value1 INT NULL,
-  Value2 VARCHAR(100) NULL
- )");
-
+```csharp
 public class MyNewRow {
     public int Value1 { get; set; }
-    public string AnotherValue { get; set; }
+    public string AnotherValue { get; set; } // Ignored
 }
-DbSource<MyNewRow> source = new DbSource<MyNewRow>("demotable");
+
+DbSource<MyNewRow> source = new DbSource<MyNewRow>("sourcetable");
 ```
 
-If we would use this object to map it with our source table, there would be only data read from `Value1`. Because the property
-AnotherValue doesn't have a match in the source, no data will be read from this column.
+In this case, `AnotherValue` is simply ignored when reading from `sourcetable`.
 
+## Dynamic Objects
 
-### Automatic data type conversion
+Sometimes, you need to define object properties at runtime. In .NET, `ExpandoObject` allows dynamic property creation.
 
-Whenever you read data from any source (database, csv, json, ...) or you write into any destination, sometimes the data types in your object will be different than the ones your database table or your object. ETLBox will always try to convert the data into the right type: E.g. when you read data from a CSV file, by default the data comes as a string. But if your object defines a numeric data type like int or double, it will be automatically converted. Or if you write into a database table, there could be a DECIMAL column in your table, and your object could hold a string value. As long as the string in your object can be converted into a decimal value, ETLBox will automatically try to cast your data into the right type.
-
-## Dynamic object approach
-
-Sometimes you don't want (or can) create an object during design-time for your data flow components. You want the properties (and perhaps methods etc.) created during run-time. Though .NET is a typed language, it does support dynamic objects. This basically means that you can define object where no type checks are executed when you compile you program. Defining a dynamic object is quite simple: when you create it, you use the `dynamic` keyword as type.
-
-### ExpandoObject
-
-The easiest and most convenient approach to use dynamic objects in C# is to create an `ExpandoObject`. The `ExpandoObject` can be cast into
-a `dynamic` type, which will tell the compiler to ignore type checks for instances of this class.
-
-Here is a simple example of using the `ExpandoObject`
-
-```C#
+```csharp
 dynamic sampleObject = new ExpandoObject();
 sampleObject.Id = 3;
-//Sample object now has a property "Id" of type int with the value 3
 sampleObject.Test = "Dynamic Property";
-//Adds a property "Test" of type string to sampleObject
-
+IDictionary<string,object> sampleObjectAsDict = sampleObject as IDictionary<string,object>;
+sampleObjectAsDict["Id"] = 9;
 ```
 
-The Microsoft documentation gives you a good explanation of the {{< link-ext text="possibilities of the ExpandoObject and the use of <code>dynamic</code>" url="https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=netframework-4.8" >}}.
+Every `ExpandoObject` implements `IDictionary<string, object>`, allowing properties to be accessed and modified dynamically like dictionary entries. For more details, see the {{< link-ext text="Microsoft documentation" url="https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject" >}}.
 
-### ExpandoObject in ETLBox
+### Using ExpandoObject
 
-In order to use the ExpandoObject and dynamic objects with ETLBox, you simple type your data flow with this object.
+If your data structure is dynamic or unknown at design time, you can use `ExpandoObject` instead of a POCO. When an ETLBox component is not given a specific type, it defaults to using `ExpandoObject`.
 
-```C#
-DbSource<ExpandoObject> source = new DbSource<ExpandoObject>("sourceTable");
+```csharp
+DbSource<ExpandoObject> source = new DbSource<ExpandoObject>("sourcetable");
 ```
 
-Alternatively, you just use the non generic object - which is a shortcut for using the ExpandoObject as type.
+or simply:
 
-```C#
-DbSource source = new DbSource("sourceTable");
+```csharp
+DbSource source = new DbSource("sourcetable"); // Defaults to ExpandoObject
 ```
 
-Both code line are exactly the same.
+When reading from a database, `DbSource` will automatically create properties in the `ExpandoObject` based on the column names and data types in sourceTable. This applies to all sources and destination components in ETLBox.
 
-Let's walk through an example and assume we have two tables. The table `sourceTable` has two columns: `SourceCol1` and `SourceCol2`, both integer values.
-The table `destTable` has one column: `DestColSum`, also an integer value.
+### Example: Applying transformations
 
-This would be the Sql code to create this tables:
+The following example shows how the `ExpandoObject` can be used within a transformation.
 
-```sql
-CREATE TABLE sourceTable (
-    SourceCol1 INT NULL,
-    SourceCol2 INT NULL
-)
-CREATE TABLE destTable (
-    DestColSum INT NULL
-)
-```
+```csharp
+DbSource source = new DbSource("sourcetable");
 
-We could now define the following data flow:
-
-```C#
-DbSource source = new DbSource("sourceTable");
-
-//Act
 RowTransformation trans = new RowTransformation(
-    sourcedata =>
-    {
-        dynamic c = sourcedata as ExpandoObject;
+    row => {
+        dynamic c = row as ExpandoObject;
         c.DestColSum = c.SourceCol1 + c.SourceCol2;
         return c;
     });
-DbDestination dest = new DbDestination("destTable");
+
+DbDestination dest = new DbDestination("desttable");
 
 source.LinkTo(trans).LinkTo(dest);
 Network.Execute(source);
 ```
 
-In this example code, the data is read from a DbSource into an ExpandoObject. The properties `SourceCol1` and `SourceCol2` are created automatically by the `DbSource` - ETLBox will recognize that it is an ExpandoObject and create the dynamic object based on the column names and type in the source
+Here, `DbSource` loads columns dynamically into an `ExpandoObject`. The transformation adds `DestColSum`, which is stored in `desttable` if a column with the same name (or an additional mapping for this column) exists.
 
-In the RowTransformation, we need to convert the ExpandoObject into a `dynamic` object first, so that you don't get any errors message when you compile your code. Now we can assign a new property to the (same) ExpandoObject - in this case, it's called `DestColSum` as a sum of the properties `SourceCol1` and `SourceCol2`.
+{{< callout context="tip" outline="outline/rocket" >}}
+This allows the same ETL process to handle different datasets dynamically, making it easy to adapt by modifying configurations instead of changing code.
+{{< /callout >}}
 
-When we write into the destination, ETLBox will see that there are the properties on the ExpandoObject: `DestColSum`, `SourceCol1` and `SourceCol2`. But only the name of one matches
-with the destination column name: `DestColSum`. The other two properties will be ignored, and data stored in `DestColSum` will be written into the target.
+## Transformations that modify types
 
-### Mixing types
+Some transformation can convert between different types. Let's have a look at an example where the `RowTransformation` allows you to convert between different data types as data moves through the pipeline.
 
-Of course you can combine both approaches in one data flow. Some transformations allow you define different types for input and output. Then you can define in your own code how to cast your data into the new type. We could rewrite our example above like this:
-
-```C#
-//Creating the POCO
+```csharp
 public class MyRow {
     public int SourceCol1 { get; set; }
     public int SourceCol2 { get; set; }
 }
 
-DbSource<MyRow> source = new DbSource<MyRow>("sourceTable");
+DbSource<MyRow> source = new DbSource<MyRow>("sourcetable");
 
-//Act
-RowTransformation<MyRow,ExpandoObject> trans =
-    new RowTransformation<MyRow,ExpandoObject>(
-    sourcedata =>
-    {
-        dynamic result = new ExpandoObject();
-        result.DestColSum = sourceData.SourceCol1 + sourceData.SourceCol2;
-        return result;
-    });
+RowTransformation<MyRow, ExpandoObject> trans =
+    new RowTransformation<MyRow, ExpandoObject>(
+        row => {
+            dynamic result = new ExpandoObject();
+            result.DestColSum = row.Value1 + row.Col2;
+            return result;
+        });
+
+DbDestination dest = new DbDestination("desttable");
+
+source.LinkTo(trans).LinkTo(dest);
+Network.Execute(source);
+```
+
+Here, the transformation converts a POCO (`MyRow`) into an `ExpandoObject`, dynamically adding a new property. Of course the output of the `RowTransformation` could also have been another POCO.
+
+### Transformations that Output Dynamic
+
+Some transformations always output a dynamic `ExpandoObject`, even if the input is a POCO. One such transformation is `ColumnTransformation`.
+
+```csharp
+DbSource<MyRow> source = new DbSource<MyRow>("sourcetable");
+
+ColumnTransformation<MyRow> trans = new ColumnTransformation<MyRow>();
+trans.RemoveColumns = new[] {
+    new RemoveColumn() { PropertyName = "Col2" }
+};
+trans.RenameColumns = new[] {
+    new RenameColumn() { CurrentName = "Value1", NewName = "DestCol1" }
+};
+
 DbDestination dest = new DbDestination("destTable");
 
 source.LinkTo(trans);
@@ -179,45 +171,131 @@ trans.LinkTo(dest);
 Network.Execute(source);
 ```
 
-Now the sourceData variable in the RowTransformation would be of type `MyRow` - accessing the properties doesn't need any casting. For the output,we create a new dynamic ExpandObject and assign the sum of the source column to the (newly) created property `DestColSum`. The outcome of this example would be the exact same as in the previous example.
+The transformation removes `Col2` and renames `Value1` to `DestCol1`. The output is always a dynamic object.
 
-## Working with Arrays
+## Advantages of ExpandoObject
 
-Working with dynamic or strongly typed objects is the recommended way to use ETLBox components. But ETLBox offers a third way to create your data flow without
-defining object types and the need to create a POCO for your data. You can simple use an array as data type - it should either be an array of type object or string. An string array could have advantages if you read data from json or csv, object could be the better choice when reading from databases.
+`ExpandoObject` makes ETL processes more adaptable:
 
-Here is an example code snipped for reading data from a file.
+- **Handles schema changes** without modifying code
+- **Works with different datasets** using a single pipeline
+- **Can be configured dynamically** with external files
 
-```C#
-CsvSource<string[]> source = new CsvSource<string[]>("text.csv");
-RowTransformation<string[]> row = new RowTransformation<string[]>(
-    row => {
-        row[0] = row[0] + ".test";
-        row[2] = row[2] * 7;
+### Example using Configuration File
+
+`ExpandoObject` allows ETL processes to handle different datasets dynamically. Instead of defining a fixed schema in code, a configuration file can control how data is mapped and transformed.
+
+#### Configuration file
+
+```json
+{
+    "sourceColumnProperties": [
+        {
+            "name": "Value1"
+        },
+        {
+            "name": "Value2"
         }
-);
-DbDestination<string[]> dest = new DbDestination<string[]>("DestinationTable");
+    ],
+    "destinationColumn": [
+        {
+            "name": "Dest1",
+            "sourceName": "Value1",
+            "convert": true,
+            "trim": false
+        },
+        {
+            "name": "Dest2",
+            "sourceName": "Value2",
+            "convert": false,
+            "trim": true
+        }
+    ]
+}
+```
 
-source.LinkTo(row).LinkTo(dest);
+This configuration defines:
+- **Source columns** (`Value1`, `Value2`) from a database table
+- **Destination columns** (`Dest1`, `Dest2`) with optional transformations
+  - `convert: true` converts `Value1` to a string
+  - `trim: true` trims `Value2` and keeps only the first character
+
+#### Data Pipeline
+
+```csharp
+using ETLBox;
+using ETLBox.ControlFlow;
+using ETLBox.DataFlow;
+using ETLBox.Postgres;
+using Newtonsoft.Json;
+using System.Dynamic;
+
+// Create database connection
+PostgresConnectionManager dbConnection = new PostgresConnectionManager("Server=localhost;Database=demo;User Id=postgres;Password=etlboxpassword;");
+Settings.DefaultDbConnection = dbConnection;
+
+// Create and populate source table
+SqlTask.ExecuteNonQuery(@"DROP TABLE IF EXISTS demotable");
+SqlTask.ExecuteNonQuery(@"CREATE TABLE demotable (
+  ""Value1"" INT NULL,
+  ""Value2"" VARCHAR(100) NULL
+ )");
+SqlTask.ExecuteNonQuery(@"INSERT INTO demotable (""Value1"", ""Value2"") VALUES (1, 'FirstTest'), (2, 'SecondTest'), (3, 'ThirdTest')");
+
+// Create destination table
+SqlTask.ExecuteNonQuery(@"DROP TABLE IF EXISTS destinationtable");
+SqlTask.ExecuteNonQuery(@"CREATE TABLE destinationtable (
+  ""Dest1"" VARCHAR(100),
+  ""Dest2"" VARCHAR(1) NULL
+ )");
+
+// Load configuration
+string configJson = File.ReadAllText("config.json");
+dynamic config = JsonConvert.DeserializeObject<ExpandoObject>(configJson);
+
+// Read from source table
+DbSource source = new DbSource("demotable");
+
+RowTransformation trans = new RowTransformation(row => {
+    IDictionary<string, object> c = row as IDictionary<string, object>;
+    IDictionary<string, object> result = new ExpandoObject();
+
+    foreach (var configEntry in config.destinationColumn) {
+        string sourceName = configEntry.sourceName;
+        string destName = configEntry.name;
+
+        if (c.ContainsKey(sourceName)) {
+            object value = c[sourceName];
+
+            // Apply optional transformations
+            if (configEntry.convert == true)
+                value = value.ToString();
+            if (configEntry.trim == true && value is string)
+                value = (value as string).Trim().Substring(0, 1);
+
+            result[destName] = value;
+        }
+    }
+    return result as ExpandoObject;
+});
+
+// Write to destination table
+DbDestination dest = new DbDestination("destinationtable");
+
+source.LinkTo(trans).LinkTo(dest);
 Network.Execute(source);
 ```
 
-In this example, you would have all data from the first column in your csv file accessible at the first position of the string array, and so on. All your data will be automatically converted into a string data type. This will also work for a DbDestination - the string data will then automatically be converted into back into the
-right data type. Of course you will get an error if data types won't match (e.g. if you want to store the value "xyz" in an integer column).
+This data pipeline  reads data from `demotable`, applies transformations based on the configuration, and writes the results into `destinationtable`.
 
-This approach is very useful when reading from a source where you get only string data, e.g. CSV or Json.
+**Example output in `destinationtable` after execution:**
 
-### Converting arrays
+| Dest1 | Dest2 |
+|-------|-------|
+| 1     | F     |
+| 2     | S     |
+| 3     | T     |
 
-You could use the `RowTransformation` if you want to convert your string array into an object:
+The process dynamically adapts column mappings and transformations, making it reusable for different datasets.
 
-```C#
-RowTransformation<string[], MySimpleRow> row =
-    new RowTransformation<string[], MySimpleRow>(
-    row => {
-        new MySimpleRow() {
-            Col1 = row[0];
-            Value2 = int.Parse(row[1]);
-        }
-    );
-```
+{{< link-ext text="The code for this example is also available on GitHub, along with other example and demo codings." url="https://github.com/etlbox/etlbox.demo/tree/main/DynamicTypeConversion" >}}.
