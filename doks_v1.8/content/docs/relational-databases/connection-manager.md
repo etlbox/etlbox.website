@@ -201,3 +201,31 @@ var sqlConnectionManager = new SqlConnectionManager("Data Source=.;Integrated Se
 ```
 
 For databases that do not support MARS, separate connections are required to avoid transaction conflicts.
+
+
+## Microsoft Access Connection
+
+Microsoft Access databases can only be accessed via ODBC. The correct driver must match your application's architecture (32-bit or 64-bit). Use the appropriate ODBC Data Source Administrator when configuring the connection.
+
+Latest drivers:
+- [Access Driver >2016](https://www.microsoft.com/en-us/download/details.aspx?id=54920)
+- [Access Driver >2010](https://www.microsoft.com/en-us/download/details.aspx?id=13255)
+
+Keeping `LeaveOpen = true` is recommended to avoid [multi-threading issues](https://stackoverflow.com/questions/37432816/microsoft-ace-oledb-12-0-bug-in-multithread-scenario).
+
+To connect, use `AccessOdbcConnectionManager`:
+
+```csharp
+DbDestination dest = new DbDestination(
+    new AccessOdbcConnectionManager(
+          "Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\\DB\\Test.mdb"
+    ), "DestinationTable"
+);
+dest.BatchSize = 1000;
+```
+
+Since Access does not support bulk inserts, `DbDestination` simulates this using a temporary table.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+The batch size is limited—setting it too high may cause 'Query too complex' errors. Reduce the batch size if needed.
+{{< /callout >}}
