@@ -1,0 +1,15 @@
+{{- $src_light := .Get "src_light" -}}
+{{- $src_dark := .Get "src_dark" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $link := .Get "link" -}}
+
+<div class="text-center w-100 p-2">
+  {{- if $link -}}
+    <a href="{{ $link }}">
+  {{- end -}}
+      <img src="{{ $src_light }}" class="img-fluid w-50 light-mode-image" alt="{{ $alt }}">
+      <img src="{{ $src_dark }}" class="img-fluid w-50 dark-mode-image" alt="{{ $alt }}">
+  {{- if $link -}}
+    </a>
+  {{- end -}}
+</div>
