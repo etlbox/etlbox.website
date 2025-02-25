@@ -39,3 +39,10 @@ country = "Denmark"
 link = "https://www.vis-performance.dk"
 image_light = "/images/references/vis.svg"
 image_dark = "/images/references/vis.svg"
+
+[[customer]]
+name = "FASTEC"
+country = "Germany"
+link = "https://www.fastec.de"
+image_light = "/images/references/fastec.svg"
+image_dark = "/images/references/fastec.svg"
