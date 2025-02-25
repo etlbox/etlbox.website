@@ -1,6 +1,6 @@
 ---
 title: "Database Connectors"
-description: "An overview of existing database connectors in ETLBox and their concepts."
+description: "This article provides an overview of ETLBox's database connectors, explaining how to read, write, and merge data using DbSource, DbDestination, and DbMerge. It also covers supported databases and connection management."
 lead: "ETLBox provides components for reading, writing, and merging data in relational databases. These components ensure efficient data processing by utilizing streaming reads and bulk operations where possible."
 draft: false
 images: []
