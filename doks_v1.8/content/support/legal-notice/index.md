@@ -3,6 +3,7 @@ title: "Legal Notice & Privacy Policy"
 description: "We do not collect any personal data - and we are an official company in Berlin, Germany."
 draft: false
 images: []
+toc: false
 ---
 
 ### Legal Notice

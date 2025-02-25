@@ -48,11 +48,13 @@
 				{{ if site.Params.doks.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
 				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
+				{{ if and site.Params.doks.editPage (ne .Params.toc false) -}}
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
 			</div>
-			{{ partial "main/docs-navigation.html" . }}
+			{{ if ne .Params.toc false -}}
+				{{ partial "main/docs-navigation.html" . }}
+			{{ end -}}
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
 				{{ partial "main/docs-navigation.html" . }}

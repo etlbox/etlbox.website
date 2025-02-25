@@ -2,6 +2,7 @@
 title: "We’ve Received Your Request!"
 description: "Thanks for your request."
 draft: false
+toc: false
 ---
 
 Thank you for reaching out! Your message has been successfully submitted, and we’ll get back to you normally **within 48 hours**.
