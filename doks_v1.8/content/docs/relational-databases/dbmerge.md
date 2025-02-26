@@ -94,29 +94,35 @@ As an alternative, you can implement `IMergeableRow` yourself if you need more c
 - The row with `Key = 3` remains unchanged.
 - The row with `Key = 4` is deleted.
 
+## Merge Modes in DbMerge
 
-# 2. Understanding Syncing Approaches
+DbMerge supports different merge modes to control how changes are applied to the destination table:
 
-DbMerge synchronizes a destination table with a source, depending on whether the source provides full or delta data.
+- **Full** – Inserts, updates, and deletes records missing from the source.
+- **Delta** – Inserts and updates records; deletions require an explicit delete flag.
+- **InsertsAndUpdatesOnly** – Processes only inserts and updates, leaving existing records untouched.
+- **UpdatesOnly** – Updates existing records without inserting new ones or deleting any records.
 
-## Full vs. Delta Merge
+### Full vs. Delta Merge
 
-### Full Merge
-The source provides the entire dataset. Any records missing from the source are considered deleted. The destination table is fully synchronized to match the source. This approach is useful when the source does not track changes.
+**Full Merge**
 
-### Delta Merge
-The source provides only new, updated, or deleted records. This is typically based on change tracking mechanisms such as timestamps or Change Data Capture (CDC). Delta merging reduces the amount of processed data but requires explicit handling of deletions.
+In a full merge, the source provides a complete dataset, meaning that any records missing from the source are considered deleted in the destination. The destination table is fully synchronized to match the source. This approach is useful when the source does not track changes and always provides a full snapshot of the data.
 
-### Merge Modes in DbMerge
+The previous example already demonstrated a full merge, where DbMerge automatically identified and removed missing records.
 
-DbMerge supports different merge modes to control how changes are applied:
+**Delta Merge**
 
-- **Full**: Inserts, updates, and deletes missing records.
-- **Delta**: Inserts and updates; deletions require a delete flag.
-- **InsertsAndUpdatesOnly**: Processes only inserts and updates, no deletions.
-- **UpdatesOnly**: Updates existing records without inserting new ones or deleting records.
+In a delta merge, the source provides only new, updated, or deleted records. This typically relies on change tracking mechanisms such as timestamps or Change Data Capture (CDC).
 
-## Example: Delta Merge with Delete Flag
+- **Inserts and updates** are processed as usual.
+- **Deletions require an explicit delete flag**, as missing records in the source are not automatically removed.
+
+### Example: Delta Merge with Delete Flag
+
+To enable deletions in a delta merge, a column must explicitly mark records for deletion.
+
+**POCO Definition**
 
 ```csharp
 public class MyMergeRow : MergeableRow {
@@ -132,12 +138,15 @@ public class MyMergeRow : MergeableRow {
 }
 ```
 
+**Data Flow Configuration**
+
 ```csharp
 var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
 var source = new MemorySource<MyMergeRow>(new List<MyMergeRow> {
     new MyMergeRow { Key = 1, Value = "Updated Value" },
     new MyMergeRow { Key = 4, Value = "Deleted Row", DeleteFlag = "DELETE" }
 });
+
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Delta
 };
@@ -146,7 +155,7 @@ source.LinkTo(merge);
 Network.Execute(source);
 ```
 
-### Destination Table Before Merge
+**Destination Table Before Merge**
 
 | Key | Value         |
 |-----|-------------|
@@ -155,7 +164,7 @@ Network.Execute(source);
 | 3   | Test - Exists |
 | 4   | Test - Deleted |
 
-### Output After Execution
+**Output After Execution**
 
 | Key | Value          | ChangeAction |
 |-----|--------------|--------------|
@@ -164,100 +173,138 @@ Network.Execute(source);
 | 3   | Test - Exists | Exists      |
 | 4   | - (Deleted)  | Delete      |
 
-- If `Key = 1` exists, its `Value` is updated.
-- If `Key = 4` exists, it is deleted because `DeleteFlag = "DELETE"`.
-- Other records remain unchanged.
-
-## Choosing the Right Approach
-- Use **full merge** if the source does not track changes or deletions must be inferred.
-- Use **delta merge** if the source provides change tracking and you want to optimize performance.
-
-This ensures that only relevant changes are applied, reducing unnecessary database operations and improving efficiency.
+- `Key = 1` exists in both source and destination, so its `Value` is **updated**.
+- `Key = 4` exists in the destination but is **deleted** because `DeleteFlag = "DELETE"`.
+- `Key = 2` and `Key = 3` remain **unchanged** since they were not part of the incoming data.
 
 
-# 3. DbMerge Component & Configuration
+## Using POCOs and Dynamic Objects
 
-DbMerge is a destination component that applies inserts, updates, and optional deletions based on incoming data. It requires a destination table and can be configured using various properties.
+DbMerge supports both strongly typed POCOs and dynamic objects (`ExpandoObject`).
 
-## Basic Usage
+- POCOs use attributes (`IdColumn`, `CompareColumn`, `UpdateColumn`) to define merge behavior.
+- ExpandoObject requires manual mapping since attributes cannot be applied dynamically.
+- POCOs can also use manual mapping instead of attributes by configuring `IdColumns`, `CompareColumns`, and `UpdateColumns` explicitly.
 
-A DbMerge instance is created by specifying a connection and a destination table.
+### Example: POCO-based Merge with Attributes
 
 ```csharp
-var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+public class MyMergeRow : MergeableRow {
+    [IdColumn]
+    public int Key { get; set; }
+    [CompareColumn]
+    [UpdateColumn]
+    public string Value { get; set; }
+}
+```
+
+```csharp
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
 ```
 
-To merge data, a source component provides the input records:
+### Example: POCO-based Merge with Manual Mapping
 
 ```csharp
-var source = new MemorySource<MyMergeRow>(new List<MyMergeRow> {
-    new MyMergeRow { Key = 1, Value = "Insert this" },
-    new MyMergeRow { Key = 2, Value = "Update this" }
-});
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full
+};
+merge.IdColumns.Add(new IdColumn("Key"));
+merge.CompareColumns.Add(new CompareColumn("Value"));
+merge.UpdateColumns.Add(new UpdateColumn("Value"));
+```
+
+### Example: Dynamic Merge with ExpandoObject
+
+```csharp
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+var source = new MemorySource<ExpandoObject>();
+
+dynamic row1 = new ExpandoObject();
+row1.Key = 1;
+row1.Value = "Updated Value";
+
+source.DataAsList.Add(row1);
+
+var merge = new DbMerge(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full
+};
+merge.IdColumns.Add(new IdColumn("Key"));
+merge.CompareColumns.Add(new CompareColumn("Value"));
 
 source.LinkTo(merge);
 Network.Execute(source);
 ```
 
-This reads the source data, compares it with the destination table, and applies the necessary changes.
+When using `ExpandoObject`, column mappings must be defined manually using `IdColumns`, `CompareColumns`, and `UpdateColumns`. POCOs can use either approach, depending on preference and flexibility requirements.
 
-## Required and Optional Properties
+## Configuring DbMerge
+
+DbMerge provides several configuration options to control how data is processed. Required properties define the basic setup, while optional properties allow fine-tuning for performance, column mapping, and deletion handling.
 
 ### Required Properties
 
-- **ConnectionManager**: Defines the database connection.
-- **TableName**: Specifies the target table.
-- **MergeMode**: Determines how changes are applied.
-- **IdColumns**: Specifies the primary key(s) used for matching records.
+- **ConnectionManager** – Defines the database connection. If left empty, `ETLBox.Settings.DefaultDbConnection` is used.
+- **TableName** or **TableDefinition** – Specifies the target table, either by name or with a custom schema definition.
+- **MergeMode** – Determines how changes are applied. Default is `MergeMode.Delta`.
+- **IdColumns** – Identifies the key columns used for matching records.
 
 ### Optional Properties
 
-- **CompareColumns**: Defines which columns determine if a record has changed.
-- **UpdateColumns**: Specifies which columns should be updated.
-- **DeleteColumns**: Identifies records to be deleted in delta mode.
-- **BatchSize**: Defines the number of records processed per batch.
-- **CacheMode**: Controls how destination data is loaded into memory.
+- **CompareColumns** / **CompareFunc** – Defines which columns determine if a record has changed. Use either a list of column names or a custom comparison function.
+- **UpdateColumns** – Specifies which columns should be updated. If empty, all non-IdColumns are updated.
+- **DeleteColumns** – Identifies records to be deleted in Delta mode.
+- **BatchSize** – Defines the number of records processed per batch.
+- **CacheMode**, **MaxCacheSize**, **EvictionPolicy** – Controls how destination data is loaded into memory and manages cache behavior for large datasets.
+- **ColumnMapping** – Maps object properties to different database column names.
+- **IgnoreDefaultColumnsOnInsert** – Prevents default column values from being explicitly inserted.
+- **UseTruncateMethod** – Truncates the destination table before merging instead of performing deletes.
+- **FindDuplicates** – Detects duplicate records in the input and prevents multiple operations on the same key within a batch.
+- **ValueGeneratedColumns** – Allows reading back auto-generated values after insert/update operations.
+- **ColumnConverters** – Transforms column values before writing them to the destination.
+- **AllowIdentityInsert** – Enables inserting explicit values into identity (auto-increment) columns.
 
-## Example: Configuring IdColumns and CompareColumns
+## Configuring Matching, Comparison, and Updates
+
+DbMerge allows fine-grained control over how records are matched, compared, updated, and deleted. These configurations can be applied in two ways:
+
+1. **Using Attributes** (for POCOs) – Recommended when working with strongly typed objects.
+2. **Using Properties** (for both POCOs and `ExpandoObject`) – Allows dynamic configuration at runtime.
+
+The following examples show how to configure IdColumns, CompareColumns, UpdateColumns, and DeleteColumns using both approaches.
+
+### Example: Configuring IdColumns and CompareColumns
+
+**Using Attributes (POCOs Only)**
+
+```csharp
+public class MyMergeRow : MergeableRow {
+    [IdColumn]
+    public int Key { get; set; }
+
+    [CompareColumn]
+    public string Value { get; set; }
+}
+```
+
+**Using Properties (POCOs & ExpandoObject)**
 
 ```csharp
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
-    MergeMode = MergeMode.Full,
-    IdColumns = { new IdColumn("Key") },
-    CompareColumns = { new CompareColumn("Value") }
+    MergeMode = MergeMode.Full
 };
+merge.IdColumns.Add(new IdColumn("Key"));
+merge.CompareColumns.Add(new CompareColumn("Value"));
 ```
 
-This ensures that `Key` is used to match records, and `Value` is checked for updates.
+This ensures that `Key` is used to match records, and `Value` is checked to detect updates.
 
-## Example: Using UpdateColumns
+### Example: Using UpdateColumns
 
-By default, all non-ID columns are updated. To restrict updates to specific fields, define `UpdateColumns`:
+By default, all non-ID columns are updated when a change is detected. To restrict updates to specific fields, define `UpdateColumns`.
 
-```csharp
-var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
-    MergeMode = MergeMode.Full,
-    UpdateColumns = { new UpdateColumn("Value") }
-};
-```
-
-This updates only the `Value` column, even if other fields have changed.
-
-DbMerge provides flexibility in configuring how records are merged, ensuring efficient and controlled data updates.
-
-
-# 4. Working with Data Structures
-
-DbMerge can process both strongly typed objects (POCOs) and dynamic objects (`ExpandoObject`). The way data is handled depends on the chosen approach.
-
-## Using POCOs with DbMerge
-
-A POCO (Plain Old CLR Object) defines a structured data model. DbMerge relies on attributes to determine how records are merged.
-
-### Example: Defining a POCO for Merging
+**Using Attributes (POCOs Only)**
 
 ```csharp
 public class MyMergeRow : MergeableRow {
@@ -270,64 +317,77 @@ public class MyMergeRow : MergeableRow {
 }
 ```
 
-### How Attributes Work
-
-- **IdColumn**: Identifies unique records in the destination.
-- **CompareColumn**: Determines if a record has changed.
-- **UpdateColumn**: Specifies which columns should be updated.
-
-If no `CompareColumn` is set, all non-ID columns are compared. If no `UpdateColumn` is set, all non-ID columns are updated.
-
-### Example: Merging Data Using a POCO
+**Using Properties (POCOs & ExpandoObject)**
 
 ```csharp
-var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
-var source = new MemorySource<MyMergeRow>(new List<MyMergeRow> {
-    new MyMergeRow { Key = 1, Value = "Updated Value" },
-    new MyMergeRow { Key = 2, Value = "New Entry" }
-});
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-
-source.LinkTo(merge);
-Network.Execute(source);
+merge.UpdateColumns.Add(new UpdateColumn("Value"));
 ```
 
-## Using Dynamic Objects (`ExpandoObject`)
+This ensures that only the `Value` column is updated, even if other fields have changed.
 
-Instead of strongly typed objects, DbMerge also supports `ExpandoObject`, which allows defining data dynamically at runtime.
+### Example: Using DeleteColumns for Delta Mode
 
-### Example: Merging Data Using Dynamic Objects
+When using Delta mode, deletions must be explicitly marked with a DeleteColumn.
+
+**Using Attributes (POCOs Only)**
 
 ```csharp
-var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
-var source = new MemorySource<ExpandoObject>();
+public class MyMergeRow : MergeableRow {
+    [IdColumn]
+    public int Key { get; set; }
 
-dynamic row1 = new ExpandoObject();
-row1.Key = 1;
-row1.Value = "Updated Value";
+    [CompareColumn]
+    public string Value { get; set; }
 
-dynamic row2 = new ExpandoObject();
-row2.Key = 2;
-row2.Value = "New Entry";
-
-source.DataAsList.Add(row1);
-source.DataAsList.Add(row2);
-
-var merge = new DbMerge(conn, "DestinationTable") {
-    MergeMode = MergeMode.Full
-};
-merge.IdColumns.Add(new IdColumn() { IdPropertyName = "Key" });
-merge.CompareColumns.Add(new CompareColumn() { ComparePropertyName = "Value" });
-
-source.LinkTo(merge);
-Network.Execute(source);
+    [DeleteColumn("DELETE")]
+    public string DeleteFlag { get; set; }
+}
 ```
 
-When using `ExpandoObject`, attributes cannot be applied. Instead, properties are defined dynamically, and `IdColumns`, `CompareColumns`, and `UpdateColumns` must be set manually.
+**Using Properties (POCOs & ExpandoObject)**
 
-DbMerge supports both structured POCOs and flexible dynamic objects, allowing users to choose the best approach for their data integration needs.
+```csharp
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Delta
+};
+merge.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteFlag", DeleteOnMatchValue = "DELETE" });
+```
+
+Records with `DeleteFlag = "DELETE"` will be removed from the destination table, while other changes are processed normally.
+
+
+### Using CompareFunc for Custom Comparison
+
+`CompareFunc` provides a **flexible alternative** to `CompareColumns`, allowing custom logic to determine if a record has changed. This is useful for case-insensitive comparisons, ignoring whitespace, or applying business rules.
+
+#### Example: Using CompareFunc
+
+```csharp
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full,
+    CompareFunc = (source, dest) => source.Value.Trim().ToLower() == dest.Value.Trim().ToLower()
+};
+```
+
+This prevents updates when differences are only in case or whitespace.
+
+#### Example: CompareFunc with Multiple Conditions
+
+```csharp
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full,
+    CompareFunc = (source, dest) =>
+        source.Value.Trim() == dest.Value.Trim() &&
+        Math.Abs(source.Amount - dest.Amount) < 0.01
+};
+```
+
+This ensures updates only if both conditions are met—ignoring extra spaces in `Value` and allowing minor rounding differences in `Amount`.
+
+
 
 # 5. Handling Special Cases
 
