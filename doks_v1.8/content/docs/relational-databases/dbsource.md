@@ -20,7 +20,10 @@ A `DbSource` requires a connection manager and either a table name or an SQL que
 
 ```csharp
 var conn = new SqlConnectionManager("Data Source=.;Initial Catalog=ETL;Integrated Security=SSPI;");
-var source = new DbSource<MyRow>(conn, "SourceTable");
+var source = new DbSource<MyRow>() {
+  ConnectionManager = conn,
+  TableName = "SourceTable"
+};
 ```
 
 For this example, assume the database table has the following definition:
@@ -252,11 +255,11 @@ public class MyRow {
 }
 ```
 
-By default, `DbSource` will try to match column names exactly. However, since the database uses different naming conventions, mapping will fail unless a `ColumnResolver` is used.
+By default, `DbSource` will try to match column names exactly. However, since the database uses different naming conventions, mapping will fail unless a `ColumnToPropertyNamesResolver` is used.
 
 ```csharp
 var source = new DbSource<MyRow>(conn, "SourceTable");
-source.ColumnResolver = columnName => columnName.Replace("col_", "");
+source.ColumnToPropertyNamesResolver = columnName => columnName.Replace("col_", "");
 ```
 
 With this resolver, `col_Id` will map to `Id` and `col_Value` will map to `Value`. This approach avoids the need for manual column mappings when dealing with databases that use prefixes, different casing, or other variations in column naming.

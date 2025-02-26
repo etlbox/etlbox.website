@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "relational-databases"
-weight: 140
+weight: 160
 toc: true
 chatgpt-review: true
 ---
