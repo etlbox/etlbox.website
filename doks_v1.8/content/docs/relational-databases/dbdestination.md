@@ -421,11 +421,11 @@ To detect and prevent errors before insertion, use `DbTypeCheck` to validate dat
 
 [Learn more about DbTypeCheck and how to validate records before insertion.](../db-type-check)
 
-## Reading Value-Generated Columns
+## Value-Generated Columns
 
 Some database columns are automatically populated by the database, such as identity columns, computed columns, or columns with default values. `DbDestination` can retrieve these values after inserting or updating records, ensuring that in-memory objects are updated with the generated values.
 
-### Example
+### Reading Value-Generated Columns
 
 Assume the following table structure:
 
@@ -487,4 +487,16 @@ Row1: Id=1, Value=Test1, CreatedDate=2024-02-25 12:34:56
 Row2: Id=2, Value=Test2, CreatedDate=2024-02-25 12:34:56
 ```
 
+### Ignoring Default Columns on Insert
 
+By default, `DbDestination` includes all columns in insert operations. However, some columns may have database-defined default values that should not be explicitly inserted. The `IgnoreDefaultColumnsOnInsert` option prevents these columns from being included in insert statements, allowing the database to assign default values instead.
+
+#### Example: Ignoring Default Columns
+
+```csharp
+var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
+    IgnoreDefaultColumnsOnInsert = true
+};
+```
+
+With this setting enabled, columns with default values in the database schema are omitted from insert statements, ensuring that the database-generated values are used.
