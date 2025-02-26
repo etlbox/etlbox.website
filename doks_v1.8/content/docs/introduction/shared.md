@@ -122,6 +122,18 @@ Console.WriteLine($"Rows processed: {component.ProgressCount}");
 Console.WriteLine($"Errors: {component.ErrorCount}");
 ```
 
+### Limiting Rows in Sources
+
+The `Limit` property restricts the number of rows read from a source. This is useful for debugging or when only a subset of data is needed for processing.
+
+```csharp
+var source = new DbSource<MyRow>(conn, "SourceTable") {
+    Limit = 3 // Read only the first 3 rows
+};
+```
+
+This property applies only to source components and does not affect transformations or destinations.
+
 ### Execution Timing
 
 Components track when they start and finish processing data:
@@ -203,11 +215,11 @@ var component = new RowTransformation<MyRow>(row => row);
 component.OnCompletion = () => Console.WriteLine("Processing complete");
 ```
 
-### OnError
+### OnException
 
-The `OnError` action is triggered when an error occurs in the component. This allows logging or handling errors without immediately stopping execution.
+The `OnException` action is triggered when an error occurs in the component. This allows logging or handling errors without immediately stopping execution.
 
 ```csharp
 var component = new RowTransformation<MyRow>(row => row);
-component.OnError = (ex) => Console.WriteLine($"Error in {component.ComponentName}: {ex.Message}");
+component.OnException = (ex, recordAsJson) => Console.WriteLine($"Error in {component.TaskName}: {ex.Message}. Flawed record: '{recordAsJson}'");
 ```
