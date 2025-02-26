@@ -185,6 +185,15 @@ var source = new DbSource<MyRow>(conn, "SourceTable");
 
 This ensures that values from the `DB_Id` column in the database are mapped to the `Id` property in the object.
 
+You could also ignore columns using attributes in POCO classes by applying `DbColumnMap` with `IgnoreColumn = true`.
+
+```csharp
+[DbColumnMap(IgnoreColumn = true)]
+public string Value { get; set; }
+```
+
+In this case, `Value` would be ignored when reading from the database.
+
 ### Manual Column Mapping
 
 By default, ETLBox automatically matches properties to database columns based on their names. However, if column names differ or explicit control is needed, manual column mapping can be used.  This option is available for both POCOs and `ExpandoObject`, allowing you to override or define mappings as needed.
@@ -205,6 +214,12 @@ source.ColumnMapping = new[] {
 ```
 
 If `ColumnMapping` is set, it overrides any attribute-based mappings (`DbColumnMap` attributes on the class will be ignored).
+
+Specific columns can be ignored by setting `IgnoreColumn = true`.
+
+```csharp
+new DbColumnMap { PropertyName="Value", IgnoreColumn = true }
+```
 
 #### Example: Mapping for ExpandoObject
 
@@ -320,19 +335,19 @@ This groups queries into batches of 500 keys per request, ensuring efficient exe
 
 If an error occurs while reading a record, `DbSource` automatically redirects the faulty record to an error flow if `LinkErrorTo` is used. Errors do not halt execution unless explicitly configured to do so.
 
-When an error occurs, the record is wrapped inside an `ETLBoxException`. The original data is stored in the `RecordAsJson` property, ensuring that the problematic record is preserved and can be analyzed later.
+When an error occurs, the record is wrapped inside an `ETLBoxError`. The original data is stored in the `RecordAsJson` property, ensuring that the problematic record is preserved and can be analyzed later.
 
 #### Example: Capturing Errors
 
 ```csharp
 var source = new DbSource<MyRow>(conn, "SourceTable");
-var errorDest = new MemoryDestination<ETLBoxException>();
+var errorDest = new MemoryDestination<ETLBoxError>();
 
 source.LinkErrorTo(errorDest);
 Network.Execute(source);
 
 foreach (var error in errorDest.Data) {
-    Console.WriteLine($"Error: {error.Message}");
+    Console.WriteLine($"Error: {error.ErrorText}");
     Console.WriteLine($"Faulty Record: {error.RecordAsJson}");
 }
 ```

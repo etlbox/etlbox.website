@@ -83,6 +83,17 @@ var dest = new DbDestination<MyRow>(conn, "DestinationTable");
 
 This ensures that property `Prop1` is mapped to the `Id` column and property `Prop2` mapped to the `Value` column in the `DestinationTable`.
 
+#### Ignoring Columns
+
+You can also ignore columns using attributes in POCO classes by applying `DbColumnMap` with `IgnoreColumn = true`.
+
+```csharp
+[DbColumnMap(IgnoreColumn = true)]
+public string TemporaryField { get; set; }
+```
+
+In this example, `TemporaryField` will be ignored when writing to the database.
+
 ### Manual Column Mapping
 
 By default, ETLBox automatically matches properties to database columns based on their names. However, if column names differ or explicit control is needed, manual column mapping can be used. This option is available for both POCOs and `ExpandoObject`, allowing you to override or define mappings as needed.
@@ -103,6 +114,12 @@ dest.ColumnMapping = new[] {
 ```
 
 If `ColumnMapping` is set, it overrides any attribute-based mappings (`DbColumnMap` attributes on the class will be ignored).
+
+Specific columns can be ignored by setting `IgnoreColumn = true`. This ensures that the corresponding property is excluded from the database operation.
+
+```csharp
+  new DbColumnMap { PropertyName = "TemporaryField", IgnoreColumn = true }
+```
 
 #### Example: Mapping for ExpandoObject
 
@@ -203,55 +220,192 @@ var dest = new DbDestination<MyRow>() {
 
 Make sure the database allows identity inserts.
 
-## Bulk Operations
+### BeforeBatchWrite and AfterBatchWrite
 
-`DbDestination` supports BulkInsert, BulkUpdate, and BulkDelete. BulkInsert is the default mode of operation.
+`DbDestination` provides two hooks, `BeforeBatchWrite` and `AfterBatchWrite`, which allow executing custom logic before and after each batch insert operation. These hooks can be useful for logging, data transformations, or triggering external processes.
 
-### Bulk Update
+#### BeforeBatchWrite
 
-Instead of inserting new rows, `BulkUpdate` modifies existing records. The `IdColumns` define matching criteria, and `UpdateColumns` specify which fields to update.
+The `BeforeBatchWrite` action is triggered before a batch of records is inserted into the database.
 
 ```csharp
+var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
+    BeforeBatchWrite = batch => Console.WriteLine($"Inserting batch with {batch.Count} records.")
+};
+```
+
+In `BeforeBatchWrite`, the data can be modified before it is written to the database, allowing for last-minute transformations or adjustments within the batch.
+
+#### AfterBatchWrite
+
+The `AfterBatchWrite` action is called after a batch has been successfully written to the database.
+
+```csharp
+var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
+    AfterBatchWrite = batch => Console.WriteLine($"Successfully inserted batch with {batch.Count} records.")
+};
+```
+
+These hooks operate at the batch level, meaning they are executed once per batch, not for individual records.
+
+
+## Auto Mapping and Table Definition
+
+`DbDestination` automatically maps object properties to matching database table columns by retrieving metadata from the database. Most of the time, the schema can be determined through ADO.NET, and no further configuration is necessary. However, in rare cases where metadata cannot be retrieved, a `TableDefinition` can be provided to manually specify the structure of the table.
+
+### Providing a Table Definition
+
+A `TableDefinition` ensures that `DbDestination` correctly recognizes column names and data types when metadata cannot be retrieved automatically. While only column names and data types are usually required, providing additional details such as primary keys and constraints improves performance and prevents errors.
+
+```csharp
+var tableDef = new TableDefinition("DestinationTable", new List<TableColumn> {
+    new TableColumn("Id", "INT", allowNulls: false, isPrimaryKey: true),
+    new TableColumn("Value", "VARCHAR(100)", allowNulls: true)
+});
+
+var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
+    TableDefinition = tableDef
+};
+```
+
+#### Metadata Retrieval Priority
+
+ETLBox determines table metadata in the following order:
+
+1. **Explicit TableDefinition**: If a `TableDefinition` is provided, it takes priority over all other metadata sources.
+2. **SQL-Based Metadata Retrieval**: If no `TableDefinition` is given, ETLBox queries the database system tables to gather schema details.
+3. **ADO.NET Schema Retrieval**: If SQL-based retrieval fails, ETLBox attempts to read metadata from the underlying ADO.NET connection.
+
+
+## Bulk Update and Bulk Delete
+
+Bulk operations allow modifying or removing existing records efficiently by specifying key columns for matching. Unlike standard insert operations, these methods work directly on existing records without requiring a separate query.
+
+### Bulk Update Example
+
+Assume the following initial state of the database table:
+
+```sql
+CREATE TABLE DestinationTable (
+    Id INT NOT NULL PRIMARY KEY,
+    Value VARCHAR(50) NULL
+);
+
+INSERT INTO DestinationTable (Id, Value) VALUES
+(1, 'OldValue1'),
+(2, 'OldValue2'),
+(3, 'OldValue3');
+```
+
+The goal is to update the `Value` column where `Id` matches incoming records.
+
+```csharp
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+var source = new MemorySource<MyRow>(new List<MyRow> {
+    new MyRow { Id = 1, Value = "NewValue1" },
+    new MyRow { Id = 3, Value = "NewValue3" }
+});
+
 var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
     BulkOperation = BulkOperation.Update,
-    IdColumns = new[] { new IdColumn("Id") },
-    UpdateColumns = new[] { new UpdateColumn("Value") }
+    IdColumns = new[] { new IdColumn() { IdPropertyName = "Id" } },
+    UpdateColumns = new[] { new UpdateColumn() { UpdatePropertyName = "Value" } }
 };
+
+source.LinkTo(dest);
+Network.Execute(source);
 ```
 
-### Bulk Delete
+**Result after execution:**
 
-To delete records based on matching criteria, use `BulkDelete`.
+```sql
+SELECT * FROM DestinationTable;
+
+Id | Value
+---+-----------
+1  | NewValue1
+2  | OldValue2
+3  | NewValue3
+```
+
+Rows with `Id = 1` and `Id = 3` are updated, while `Id = 2` remains unchanged.
+
+### Bulk Delete Example
+
+BulkDelete removes records matching the provided `IdColumns`.
+
+**Initial state:**
+
+```sql
+CREATE TABLE DestinationTable (
+    Id INT NOT NULL PRIMARY KEY,
+    Value VARCHAR(50) NULL
+);
+
+INSERT INTO DestinationTable (Id, Value) VALUES
+(1, 'Value1'),
+(2, 'Value2'),
+(3, 'Value3');
+```
+
+To delete records with `Id = 1` and `Id = 3`:
 
 ```csharp
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+var source = new MemorySource<MyRow>(new List<MyRow> {
+    new MyRow { Id = 1 },
+    new MyRow { Id = 3 }
+});
+
 var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
     BulkOperation = BulkOperation.Delete,
-    IdColumns = new[] { new IdColumn("Id") }
+    IdColumns = new[] { new IdColumn() { IdPropertyName = "Id" } }
 };
+
+source.LinkTo(dest);
+Network.Execute(source);
 ```
 
-This removes all records with matching `Id`.
+**Result after execution:**
+
+```sql
+SELECT * FROM DestinationTable;
+
+Id | Value
+---+-----------
+2  | Value2
+```
+
+Records with `Id = 1` and `Id = 3` are removed, while `Id = 2` remains in the table.
 
 ## Error Handling
 
-If an error occurs while writing a record, `DbDestination` automatically redirects the faulty record to an error flow if `LinkErrorTo` is used. Errors do not halt execution unless explicitly configured to do so.
+If an error occurs while writing data, `DbDestination` automatically redirects faulty records to an error flow when `LinkErrorTo` is used. In this case, errors are only redirected and do not halt execution.
 
-When an error occurs, the record is wrapped inside an `ETLBoxException`. The original data is stored in the `RecordAsJson` property, ensuring that the problematic record is preserved and can be analyzed later.
+When performing a bulk operation, databases enforce an "all-or-nothing" rule, meaning that if any record in the batch fails, the entire batch is rejected. As a result, `DbDestination` redirects the whole batch as a single flawed record. The `RecordAsJson` property will contain an array of records instead of a single row.
 
-### Example: Capturing Errors
+The batch size influences how many records are redirected in case of failure. If `BatchSize = 1000`, an error in any row will cause all 1000 rows to be sent to the error destination.
+
+#### Example: Capturing Errors
 
 ```csharp
 var dest = new DbDestination<MyRow>(conn, "DestinationTable");
-var errorDest = new MemoryDestination<ETLBoxException>();
+var errorDest = new MemoryDestination<ETLBoxError>();
 
 dest.LinkErrorTo(errorDest);
 Network.Execute(dest);
 
 foreach (var error in errorDest.Data) {
-    Console.WriteLine($"Error: {error.Message}");
-    Console.WriteLine($"Faulty Record: {error.RecordAsJson}");
+    Console.WriteLine($"Error: {error.ErrorText}");
+    Console.WriteLine($"Faulty Records: {error.RecordAsJson}");
 }
 ```
+
+### Avoiding Insert Failures
+
+To detect and prevent errors before insertion, use `DbTypeCheck` to validate data types and constraints before attempting to write into the database.
+
+[Learn more about DbTypeCheck and how to validate records before insertion.](../db-type-check)
 
 ## Example Data Flow
 
