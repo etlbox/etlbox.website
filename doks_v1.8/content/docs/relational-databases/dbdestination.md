@@ -63,6 +63,22 @@ var dest = new DbDestination() {
 Network.InitAndStartWith(source).LinkTo(dest).Execute();
 ```
 
+### Example Data Flow
+
+The following example loads data from memory into a database.
+
+```csharp
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+var source = new MemorySource<MyRow>(new List<MyRow> {
+    new MyRow { Id = 1, Value = "A" },
+    new MyRow { Id = 2, Value = "B" }
+});
+var dest = new DbDestination<MyRow>(conn, "DestinationTable");
+
+source.LinkTo(dest);
+Network.Execute(source);
+```
+
 ## Column Mapping
 
 When the database column names differ from the object property names, column mapping is required.
@@ -82,8 +98,6 @@ var dest = new DbDestination<MyRow>(conn, "DestinationTable");
 ```
 
 This ensures that property `Prop1` is mapped to the `Id` column and property `Prop2` mapped to the `Value` column in the `DestinationTable`.
-
-#### Ignoring Columns
 
 You can also ignore columns using attributes in POCO classes by applying `DbColumnMap` with `IgnoreColumn = true`.
 
@@ -407,20 +421,70 @@ To detect and prevent errors before insertion, use `DbTypeCheck` to validate dat
 
 [Learn more about DbTypeCheck and how to validate records before insertion.](../db-type-check)
 
-## Example Data Flow
+## Reading Value-Generated Columns
 
-The following example loads data from memory into a database.
+Some database columns are automatically populated by the database, such as identity columns, computed columns, or columns with default values. `DbDestination` can retrieve these values after inserting or updating records, ensuring that in-memory objects are updated with the generated values.
+
+### Example
+
+Assume the following table structure:
+
+```sql
+CREATE TABLE DestinationTable (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Value VARCHAR(100) NULL,
+    CreatedDate DATETIME DEFAULT GETDATE()
+);
+```
+
+And a corresponding POCO:
+
+```C#
+public class MyRow {
+    public int? Id { get; set; } // Nullable to allow reading back generated value
+    public string Value { get; set; }
+    public DateTime? CreatedAt { get; set; } // Nullable for default value handling
+}
+```
+
+The `Id` column is an identity column that increments automatically, and `CreatedDate` is populated with the current timestamp when a record is inserted.
+
+To correctly retrieve these values after insertion, configure `DbDestination` as follows:
 
 ```csharp
 var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
-var source = new MemorySource<MyRow>(new List<MyRow> {
-    new MyRow { Id = 1, Value = "A" },
-    new MyRow { Id = 2, Value = "B" }
-});
+var source = new MemorySource<MyRow>();
+
+var row1 = new MyRow { Id = 0, Value = "Test1", CreatedDate = null };
+var row2 = new MyRow { Id = 0, Value = "Test2", CreatedDate = null };
+
+source.DataAsList.Add(row1);
+source.DataAsList.Add(row2);
+
 var dest = new DbDestination<MyRow>(conn, "DestinationTable");
+dest.ValueGeneratedColumns = new List<ValueGenerationColumn>() {
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "Id" },
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) { ValueGenerationPropertyName = "CreatedDate" }
+};
 
 source.LinkTo(dest);
 Network.Execute(source);
+
+// Now row1 and row2 contain the generated values
+Console.WriteLine($"Row1: Id={row1.Id}, Value={row1.Value}, CreatedDate={row1.CreatedDate}");
+Console.WriteLine($"Row2: Id={row2.Id}, Value={row2.Value}, CreatedDate={row2.CreatedDate}");
 ```
 
-This simple flow is useful for debugging ETL processes.
+In this example, `Id` is auto-generated (identity), and after insertion, `DbDestination` retrieves the assigned values.
+`CreatedDate` is set by the database when a row is inserted, and its value is also retrieved after the operation.
+
+#### Expected Output
+
+After execution, `row1` and `row2` will contain the database-generated values:
+
+```
+Row1: Id=1, Value=Test1, CreatedDate=2024-02-25 12:34:56
+Row2: Id=2, Value=Test2, CreatedDate=2024-02-25 12:34:56
+```
+
+
