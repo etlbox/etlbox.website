@@ -46,3 +46,52 @@ country = "Germany"
 link = "https://www.fastec.de"
 image_light = "/images/references/fastec.svg"
 image_dark = "/images/references/fastec.svg"
+
+[[customer]]
+name = "Calpine Energy Solutions"
+country = "U.S.A"
+link = "https://www.calpine.com"
+image_light = "/images/references/calpine.png"
+image_dark = "/images/references/calpine.png"
+
+[[customer]]
+name = "Digitain"
+country = "Armenia"
+link = "https://www.digitain.com"
+image_light = "/images/references/digitain_light.png"
+image_dark = "/images/references/digitain.png"
+
+[[customer]]
+name = "Health Catalyst"
+country = "U.S.A"
+link = "https://www.healthcatalyst.com/"
+image_light = "/images/references/healthcatalyst.svg"
+image_dark = "/images/references/healthcatalyst.svg"
+
+[[customer]]
+name = "Regal Rexnord"
+country = "U.S.A, Mexiko"
+link = "https://www.regalrexnord.com/"
+image_light = "/images/references/regalrexnord_light.svg"
+image_dark = "/images/references/regalrexnord_dark.svg"
+
+[[customer]]
+name = "Normandin Beaudry"
+country = "Canada"
+link = "https://www.normandin-beaudry.ca/"
+image_light = "/images/references/normandin-beaudry.png"
+image_dark = "/images/references/normandin-beaudry.png"
+
+[[customer]]
+name = "EECO"
+country = "U.S.A"
+link = "https://eecoonline.com/"
+image_light = "/images/references/eeco.png"
+image_dark = "/images/references/eeco.png"
+
+[[customer]]
+name = "SEW Eurodrive"
+country = "Germany"
+link = "https://www.sew-eurodrive.de/"
+image_light = "/images/references/sew-eurodrive_light.svg"
+image_dark = "/images/references/sew-eurodrive_dark.svg"
