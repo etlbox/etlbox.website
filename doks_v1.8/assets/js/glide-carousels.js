@@ -45,7 +45,7 @@ var connectorGlide = new Glide('.glide-carousel-connector', {
   type: 'carousel',
   startAt: 0,
   autoplay: 1000,
-  animationDuration: 2000,
+  animationDuration: 2500,
   animationTimingFunc: 'linear',
   perView: 8, // Default for xl
   breakpoints: {
