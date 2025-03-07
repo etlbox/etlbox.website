@@ -13,7 +13,7 @@ If you plan to purchase the REDISTRIBUTABLE package, please see our [Redistribut
 {{< nowrap-code >}}
 Standard End-user License Agreement
 
-(C) 2024 ETLBoxperts GmbH
+(C) 2025 ETLBoxperts GmbH
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 

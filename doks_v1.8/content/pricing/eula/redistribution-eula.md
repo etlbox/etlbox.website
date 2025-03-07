@@ -13,7 +13,7 @@ For other licenses than our REDISTRIBUTABLE license, please refer to our [Standa
 {{< nowrap-code >}}
 Redistribution End-user License Agreement
 
-(C) 2024 ETLBoxperts GmbH
+(C) 2025 ETLBoxperts GmbH
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 

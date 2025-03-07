@@ -1,7 +1,7 @@
 ---
 title: "Quick Start"
 description: "Learn how to create your first ETL pipeline with ETLBox. This guide covers the essentials."
-lead: "Get started with ETLBox, the lightweight ETL library for .NET developers. This quick start guide walks you through building your first data pipeline — from connecting to data sources and applying transformations to loading data into databases — all with simple, code-first workflows."
+lead: "Get started with ETLBox, the complete ETL library for .NET developers. This quick start guide walks you through building your first data pipeline — from connecting to data sources and applying transformations to loading data into databases — all with simple, code-first workflows."
 draft: false
 images: []
 menu:

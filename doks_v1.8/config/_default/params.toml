@@ -22,7 +22,11 @@ mainSections = ["product","docs","recipes"]
   ## Button
   navBarButton = true # false (default) or true
   navBarButtonUrl = "/product/getting-started/get-trial/"
-  navBarButtonText = "Try now!"
+  navBarButtonText = "Try"
+
+  ## Button 2
+  navBarButtonUrl2 = "/pricing/"
+  navBarButtonText2 = "Buy"
 
   # FlexSearch
   flexSearch = true # true (default) or false

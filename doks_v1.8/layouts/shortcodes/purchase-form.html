@@ -1,95 +1,85 @@
-<form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success">
-    <div class="row form-group">
-        <label class="col-sm-4" for="email">Your e-Mail <span class="small">(*required)</span>:</label>
-        <div class="col-sm-9">
-            <input class="form-control" type="email" id="email" name="contactemail" placeholder="Enter email"
-                required="required" />
+<form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success" class="container mt-4">
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="email">Your e-Mail <span class="small">(*required)</span>:</label>
+        <div class="col-md-8">
+            <input class="form-control" type="email" id="email" name="contactemail" placeholder="Enter email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="name">Your Name <span class="small">(*required)</span>:</label>
-        <div class="col-sm-9">
-            <input class="form-control" type="text" id="name" name="contactname" placeholder="Enter your name"
-                required="required" />
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="name">Your Name <span class="small">(*required)</span>:</label>
+        <div class="col-md-8">
+            <input class="form-control" type="text" id="name" name="contactname" placeholder="Enter your name" required>
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="company">Company name:</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" id="company"  name="company" placeholder="Enter your company name" />
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="company">Company Name:</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name">
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="company">VAT number: </label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" id="vat" name="vat" placeholder="Your VAT number (EU companies only)" />
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="vat">VAT Number:</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="vat" name="vat" placeholder="Your VAT number (EU companies only)">
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="phone">Your phone number:</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" id="phone" name="phone" placeholder="Your phone number (including country prefix)" />
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="phone">Your Phone Number:</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Your phone number (including country prefix)">
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="address">Your address:</label>
-        <div class="col-sm-9">
-            <textarea class="form-control" rows="4" name="address" id="address"  placeholder="Your address and country"></textarea>
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="address">Your Address:</label>
+        <div class="col-md-8">
+            <textarea class="form-control" rows="4" name="address" id="address" placeholder="Your address and country"></textarea>
         </div>
     </div>
 
-    <div class="row form-group">
-        <label class="col-sm-4" for="licensetype">License type <span class="small">(*required)</span>:</label>
-        <div class="col-sm-9">
-            <select class="form-control" id="licensetype" name="licensetype" required="required">
-                <option name="purchasecompany" value="purchasecompany">COMPANY license</option>
-                <option name="purchaseenterprise" value="purchaseenterprise">ENTERPRISE OEM license</option>
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="licensetype">License Type <span class="small">(*required)</span>:</label>
+        <div class="col-md-8">
+            <select class="form-select" id="licensetype" name="licensetype" required>
+                <option value="purchasecompany">COMPANY license</option>
+                <option value="purchaseenterprise">ENTERPRISE OEM license</option>
             </select>
         </div>
     </div>
 
-     <div class="row form-group">
-        <label class="col-sm-4" for="paymentmethod">Payment method</label>
-        <div class="col-sm-9">
-            <select class="form-control" id="paymenttype" name="payment">
-                <option name="creditcard" value="creditcard">Credit Card</option>
-                <option name="paypal" value="paypal">Paypal</option>
-                <option name="banktransfer" value="banktransfer">Wire Transfer</option>
-                <option name="other" value="other">Other</option>
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="paymentmethod">Payment Method:</label>
+        <div class="col-md-8">
+            <select class="form-select" id="paymenttype" name="payment">
+                <option value="creditcard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="banktransfer">Wire Transfer</option>
+                <option value="other">Other</option>
             </select>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-8 offset-md-4 small text-muted">
+            Please note that you don't need to enter your payment details yet. We will first verify your request and send you an invoice with payment details. Payments with credit card will be handled via our 3rd party payment provider <a href="https://stripe.com" target="_blank">Stripe</a>.
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label class="col-md-4 col-form-label" for="message">Additional Instructions:</label>
+        <div class="col-md-8">
+            <textarea class="form-control" rows="4" id="message" name="contactmessage" placeholder="Enter additional instructions"></textarea>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-9"><span class="small">
-            Please note that you don't need to enter your payments details yet.
-            We will first need to verify your request, and get back to you with an invoice containing the payment
-            details.
-            Payments with credit card will be handled via our 3rd party payment provider <a
-                href="https://stripe.com" target="_blank">Stripe</a>.
-        </span>
-        </div>
-    </div>
-
-
-    <div class="row form-group">
-        <label class="col-sm-4" for="message">Additional instructions:</label>
-        <div class="col-sm-9">
-            <textarea class="form-control" rows="10" id="message" name="contactmessage"
-                placeholder="Enter additional instructions"></textarea>
-        </div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-7">
-            <button type="submit" class="btn btn-primary btn-cta rounded-pill btn-lg">Request purchase <i class="bi-envelope"></i></button>
+        <div class="col-md-8 offset-md-4">
+            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request Purchase <i class="bi-envelope"></i></button>
         </div>
     </div>
 </form>
