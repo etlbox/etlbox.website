@@ -41,13 +41,13 @@ url = "https://www.nuget.org/profiles/ETLBoxperts"
 weight = 490
 
 [[footer_1]]
-name = "Produkt"
+name = "Product"
 url = "/product/getting-started/welcome"
 weight = 500
 
 [[footer_1]]
 name = "Docs"
-url = "/docs/getting-started/quick-start"
+url = "/docs/introduction/simple-flow/"
 weight = 510
 
 [[footer_1]]
@@ -67,17 +67,17 @@ weight = 540
 
 [[footer_2]]
 name = "Try yourself"
-url = "/support/get-trial"
+url = "/product/getting-started/get-trial/"
 weight = 560
 
 [[footer_2]]
 name = "Register license"
-url = "/product/register-license"
+url = "/product/details/register-license"
 weight = 570
 
 [[footer_2]]
 name = "Release notes"
-url = "/product/release-notes"
+url = "/product/details/release-notes"
 weight = 580
 
 [[footer_3]]
@@ -92,5 +92,5 @@ weight = 600
 
 [[footer_3]]
 name = "Privacy Policy"
-url = "/support/legal-notice/"
+url = "/support/legal-notice/#privacy-policy"
 weight = 610
