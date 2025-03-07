@@ -11,6 +11,23 @@ weight: 120
 toc: true
 ---
 
+## Version 3.7.0
+
+#### Features
+
+- Distinct: Added counter properties for distinct and duplicate values
+- DataTypeCheck: Added counter properties for valid and flawed rows
+- RowValidation: Added counter properties for valid and invalid data
+- New transformation: ConditionalSplit
+- Adding BulkOperations extensions for any IDbConnection
+- Flexible mapping of property to column names for DbDestination and DbSource
+- ExcelSource can now also read from hidden sheets (enabled by default)
+- [BREAKING] Renaming DestinationTableDefinition to TableDefinition in DbMerge
+
+#### Bug Fixes:
+
+- Fixed issues when reading value generated columns
+
 ## Version 3.6.1
 
 _Resolved issues with corrupted packaging in version 3.6.0. This release contains no functional changes._
