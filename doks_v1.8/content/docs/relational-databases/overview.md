@@ -37,6 +37,37 @@ Custom connector | ** | ** | Using own implementation
 
 \*\* *A `CustomSource` or `CustomDestination` can be implemented to create a database connector with custom logic.*
 
+### Database Package Requirements
+
+To use ETLBox with a specific database, you need to install the corresponding ETLBox database package. The core package `ETLBox` is always required, but the database-specific package ensures compatibility and optimized performance.
+
+| Database  | Required Package |
+|-----------|-----------------|
+| SQL Server | `ETLBox.SqlServer` |
+| PostgreSQL | `ETLBox.Postgres` |
+| SQLite | `ETLBox.SQLite` |
+| Oracle | `ETLBox.Oracle` |
+| MySQL | `ETLBox.MySql` |
+| MariaDB | `ETLBox.MariaDb` |
+| Db2 | `ETLBox.Db2` |
+| SAP ASE (Sybase) | `ETLBox.Sap.Ase` |
+| SAP HANA | `ETLBox.Sap.Hana` |
+| Snowflake | `ETLBox.Snowflake` |
+| Microsoft Access | `ETLBox.Odbc` |
+| Apache Spark (SQL) | `ETLBox.Odbc` |
+
+For ODBC-based connections, the generic `ETLBox.Odbc` package is available, but database-specific packages are recommended for best performance and feature support. For OleDB connections, reference the `ETLBox.OleDb` package.
+
+#### Installing the Required Package
+
+Use the following command to install the package for your database:
+
+```sh
+dotnet add package ETLBox.SqlServer
+```
+
+Replace `ETLBox.SqlServer` with the appropriate package name for your database. Once installed, the package provides the necessary connection manager and database-specific optimizations.
+
 ## Managing Database Connections
 
 To interact with a database, ETLBox uses connection managers, which handle communication and abstract database-specific differences. Each database type has its corresponding connection manager. Here is an example for `SqlConnectionManager`:
