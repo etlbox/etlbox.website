@@ -59,12 +59,13 @@ The **COMPANY** License is perfect for businesses that plan to use ETLBox intern
 
 ### 📦 Enterprise OEM License
 
-The **ENTERPRISE OEM** License (also known as the **Redistributable** License) is designed for companies that want to embed ETLBox into products distributed to external customers.
+The **ENTERPRISE OEM** License (also known as the **Redistributable** License) is designed for companies that want to embed ETLBox into products distributed to external customers or offer it as part of a **Software-as-a-Service (SaaS)** solution.
 
 **Key Features:**
 - **Redistribution Rights:** Package ETLBox with your product, no end-user license checks required.
 - **Source Code Access:** Full access to ETLBox source code, included by default.
 - **White-Label Friendly:** No requirement to mention ETLBox in your product.
+- **SaaS Deployment**: Use ETLBox as part of a cloud-based, multi-tenant, or on-demand service.
 
 **License Details:**
 - **License Model:** Annual base fee + per-customer fee.
@@ -74,7 +75,8 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 **Best For:**
 - Software vendors embedding ETLBox in commercial products
 - ISVs distributing applications to external clients
-- Companies without direct control over customer deployment environments
+- Companies offering ETLBox as part of a SaaS solution
+- Organizations deploying ETLBox in cloud-based environments for external users
 
 **Licensing Agreement:**
 - Governed by the [Redistribution EULA](/pricing/eula/redistribution-eula/).
@@ -84,7 +86,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 
 | **Feature**               | 🆓 **Free License**                | 🏢 **COMPANY**                        | 📦 **ENTERPRISE OEM**                |
 |---------------------------|------------------------------------|----------------------------------------|-------------------------------------|
-| **Intended Use**          | Testing & personal projects        | Internal company use                   | Redistribution in commercial products |
+| **Intended Use**          | Testing & personal projects        | Internal company use                   | Redistribution/SaaS in commercial products |
 | **Licensing Model**       | Not for commercial use             | Per-developer                          | Base fee + per-customer fee          |
 | **License Duration**      | Unlimited                          | 1 year (renewable annually)            | 1 year (renewable annually)          |
 | **Row Limit**             | 5,000 rows per DataFlow            | Unlimited                              | Unlimited                            |
@@ -97,7 +99,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 
 - **Choose the Free License** if you’re testing ETLBox or working on personal projects.
 - **Go with the COMPANY License** if you’re using ETLBox internally or within your organization’s infrastructure.
-- **Opt for the ENTERPRISE OEM License** if you’re embedding ETLBox in commercial software distributed to third-party customers.
+- **Opt for the ENTERPRISE OEM License** if you’re embedding ETLBox in commercial software distributed to third-party customers, or as part of a SaaS solution.
 
 Still unsure? [Contact us for guidance](/support/options/).
 

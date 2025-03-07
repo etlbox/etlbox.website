@@ -3,9 +3,12 @@ title: "Standard End-user License Agreement"
 description: "The standard end-user license agreement for most packages."
 lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
 draft: false
+images: []
+weight: 100
+toc: false
 ---
 
-If you plan to purchase the REDISTRIBUTABLE package, please see our [Redistribution EULA](/product/licenses/redistribution-eula/).
+If you plan to purchase the REDISTRIBUTABLE package, please see our [Redistribution EULA](../redistribution-eula/).
 
 {{< nowrap-code >}}
 Standard End-user License Agreement

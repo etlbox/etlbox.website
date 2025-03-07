@@ -1,7 +1,8 @@
 ---
 title: "Purchase ETLBox"
-description: "Fill out the form to purchase ETLBox"
+description: "Fill out the form to purchase ETLBox."
 draft: false
+images: []
 toc: false
 ---
 

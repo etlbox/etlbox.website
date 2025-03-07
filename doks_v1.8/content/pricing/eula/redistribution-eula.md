@@ -3,9 +3,12 @@ title: "Redistribution End-user License Agreement"
 description: "The redistribution EULA for the REDISTRIBUTABLE license."
 lead: "This EULA allows redistribution of ETLBox and comes with the REDISTRIBUTABLE package."
 draft: false
+images: []
+weight: 100
+toc: false
 ---
 
-For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/product/licenses/standard-eula/).
+For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](../standard-eula).
 
 {{< nowrap-code >}}
 Redistribution End-user License Agreement
