@@ -1931,7 +1931,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_RewindReadIndex_" data-uid="ETLBox.ControlFlow.TableData.RewindReadIndex*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_RewindReadIndex" data-uid="ETLBox.ControlFlow.TableData.RewindReadIndex">RewindReadIndex()</h4>
+  <h4 id="ETLBox_ControlFlow_TableData_RewindReadIndex_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.RewindReadIndex(System.Int32)">RewindReadIndex(int)</h4>
   <div class="markdown level1 summary"><p>The IDataReader is iterated via the Read() method - once the last record was read,
 the Read() will return false. If you want to iterate again, you can use
 this method to &quot;rewind&quot; and start with the first record again.</p>
@@ -1941,10 +1941,27 @@ this method to &quot;rewind&quot; and start with the first record again.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public void RewindReadIndex()
+    public void RewindReadIndex(int position = 0)
 ```
 
 {{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="/api/etlbox/itabledata">ITableData</a>

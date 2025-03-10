@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10148
+weight: 10150
 toc: false
 ---
 
@@ -26,6 +26,7 @@ By default the filter transformation will filter out null values.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">FilterTransformation&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/conditionalsplit">ConditionalSplit</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/filtertransformation">FilterTransformation</a></div>
   </div>
   <div class="implements">
@@ -337,7 +338,8 @@ By default the filter transformation will filter out null values.</p>
   </table>
   <a id="ETLBox_DataFlow_FilterTransformation_1_FilteredCount_" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilteredCount*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_FilteredCount" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilteredCount">FilteredCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Numbers of rows that were filtered out.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -364,7 +366,8 @@ By default the filter transformation will filter out null values.</p>
   </table>
   <a id="ETLBox_DataFlow_FilterTransformation_1_PassedCount_" data-uid="ETLBox.DataFlow.FilterTransformation`1.PassedCount*"></a>
   <h4 id="ETLBox_DataFlow_FilterTransformation_1_PassedCount" data-uid="ETLBox.DataFlow.FilterTransformation`1.PassedCount">PassedCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Numbers of rows that were not filtered out.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

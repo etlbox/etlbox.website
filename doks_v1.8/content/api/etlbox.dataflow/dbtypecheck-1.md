@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10142
+weight: 10144
 toc: false
 ---
 
@@ -448,6 +448,34 @@ add a column mapping: DbColumnName: &quot;Id&quot; -&gt; PropertyName: &quot;Key
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbTypeCheck_1_FlawedCount_" data-uid="ETLBox.DataFlow.DbTypeCheck`1.FlawedCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbTypeCheck_1_FlawedCount" data-uid="ETLBox.DataFlow.DbTypeCheck`1.FlawedCount">FlawedCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that did not match with the table definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int FlawedCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbTypeCheck_1_FlawedSourceBlock_" data-uid="ETLBox.DataFlow.DbTypeCheck`1.FlawedSourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_DbTypeCheck_1_FlawedSourceBlock" data-uid="ETLBox.DataFlow.DbTypeCheck`1.FlawedSourceBlock">FlawedSourceBlock</h4>
   <div class="markdown level1 summary"><p>Internal output buffer block for flawed records.</p>
@@ -679,6 +707,34 @@ Use when automatic definition reading is not possible or only specific columns a
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
+  <a id="ETLBox_DataFlow_DbTypeCheck_1_ValidCount_" data-uid="ETLBox.DataFlow.DbTypeCheck`1.ValidCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbTypeCheck_1_ValidCount" data-uid="ETLBox.DataFlow.DbTypeCheck`1.ValidCount">ValidCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that matched with the table definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int ValidCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_DataFlow_DbTypeCheck_1_AddComplementVoidLinkToOtherTargets_" data-uid="ETLBox.DataFlow.DbTypeCheck`1.AddComplementVoidLinkToOtherTargets*"></a>

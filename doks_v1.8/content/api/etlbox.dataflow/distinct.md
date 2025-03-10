@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10148
 toc: false
 ---
 
@@ -56,6 +56,12 @@ and the ability to define custom functions for unique key generation. It is idea
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_GetUniqueKeyFunc">Distinct&lt;ExpandoObject&gt;.GetUniqueKeyFunc</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_DistinctCount">Distinct&lt;ExpandoObject&gt;.DistinctCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_DuplicateCount">Distinct&lt;ExpandoObject&gt;.DuplicateCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/distinct-1#ETLBox_DataFlow_Distinct_1_Reset">Distinct&lt;ExpandoObject&gt;.Reset()</a>

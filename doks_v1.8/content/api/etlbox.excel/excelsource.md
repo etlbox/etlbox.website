@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10211
+weight: 10220
 toc: false
 ---
 
@@ -57,6 +57,9 @@ in all sheets will be processed.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.excel/excelsource-1#ETLBox_Excel_ExcelSource_1_SheetNumber">ExcelSource&lt;ExpandoObject&gt;.SheetNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.excel/excelsource-1#ETLBox_Excel_ExcelSource_1_IgnoreHiddenSheets">ExcelSource&lt;ExpandoObject&gt;.IgnoreHiddenSheets</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.excel/excelsource-1#ETLBox_Excel_ExcelSource_1_IgnoreBlankRows">ExcelSource&lt;ExpandoObject&gt;.IgnoreBlankRows</a>

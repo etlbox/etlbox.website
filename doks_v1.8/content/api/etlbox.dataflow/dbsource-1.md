@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10140
+weight: 10142
 toc: false
 ---
 
@@ -495,6 +495,42 @@ then you can simply add a column mapping: DbColumnName: &quot;Key&quot; -&gt; Pr
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver_" data-uid="ETLBox.DataFlow.DbSource`1.ColumnToPropertyNamesResolver*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver" data-uid="ETLBox.DataFlow.DbSource`1.ColumnToPropertyNamesResolver">ColumnToPropertyNamesResolver</h4>
+  <div class="markdown level1 summary"><p>A custom resolver function that maps columns names in the source table
+to corresponding property names in the data object.
+You can only use either the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver">ColumnToPropertyNamesResolver</a> or specify a <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnMapping">ColumnMapping</a>, not both.
+Use this to define dynamic mappings, such as converting lowercase column names
+to camel_case column names in the data object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<string, string> ColumnToPropertyNamesResolver { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver_examples">Examples</h5>
+  <p>Assume your database columns are all lowercase (e.g., &quot;firstname&quot;, &quot;lastname&quot;),
+and your POCO properties are camelCase (e.g., &quot;FirstName&quot;, &quot;LastName&quot;).</p>
+<pre><code class="lang-csharp">dest.ColumnToPropertyResolver = colName =&gt; colName.ToCamelCase();</code></pre>
   <a id="ETLBox_DataFlow_DbSource_1_ConnectionManager_" data-uid="ETLBox.DataFlow.DbSource`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_ConnectionManager" data-uid="ETLBox.DataFlow.DbSource`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>

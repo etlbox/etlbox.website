@@ -437,6 +437,33 @@ Not all databases may support this.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_TableColumn_HasDefaultValue_" data-uid="ETLBox.ControlFlow.TableColumn.HasDefaultValue*"></a>
+  <h4 id="ETLBox_ControlFlow_TableColumn_HasDefaultValue" data-uid="ETLBox.ControlFlow.TableColumn.HasDefaultValue">HasDefaultValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool HasDefaultValue { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_TableColumn_IdentityIncrement_" data-uid="ETLBox.ControlFlow.TableColumn.IdentityIncrement*"></a>
   <h4 id="ETLBox_ControlFlow_TableColumn_IdentityIncrement" data-uid="ETLBox.ControlFlow.TableColumn.IdentityIncrement">IdentityIncrement</h4>
   <div class="markdown level1 summary"><p>Only SqlServer: The increment value for an identity column</p>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10138
+weight: 10140
 toc: false
 ---
 
@@ -674,36 +674,6 @@ You still need to define the CompareColumns to specify which columns should be r
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_DbMerge_1_DestinationTableDefinition_" data-uid="ETLBox.DataFlow.DbMerge`1.DestinationTableDefinition*"></a>
-  <h4 id="ETLBox_DataFlow_DbMerge_1_DestinationTableDefinition" data-uid="ETLBox.DataFlow.DbMerge`1.DestinationTableDefinition">DestinationTableDefinition</h4>
-  <div class="markdown level1 summary"><p>The table definition of the destination table. By default, the table definition is read from the database.
-Provide a table definition if the definition of the target can't be read automatically or you want the DbMerge
-only to use the columns in the provided definition.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public TableDefinition DestinationTableDefinition { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy_" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy">EvictionPolicy</h4>
   <div class="markdown level1 summary"><p>The eviction policy used for the partial cache.
@@ -795,7 +765,7 @@ Please note that this may have an impact on the overall memory consumption, as a
   </table>
   <a id="ETLBox_DataFlow_DbMerge_1_IgnoreDefaultColumnsOnInsert_" data-uid="ETLBox.DataFlow.DbMerge`1.IgnoreDefaultColumnsOnInsert*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_IgnoreDefaultColumnsOnInsert" data-uid="ETLBox.DataFlow.DbMerge`1.IgnoreDefaultColumnsOnInsert">IgnoreDefaultColumnsOnInsert</h4>
-  <div class="markdown level1 summary"><p>If set to true, columns that have a default value declartions in the database are
+  <div class="markdown level1 summary"><p>If set to true, columns that have a default value declartion in the database are
 ignored when inserting data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -912,6 +882,36 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
+  <a id="ETLBox_DataFlow_DbMerge_1_TableDefinition_" data-uid="ETLBox.DataFlow.DbMerge`1.TableDefinition*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_TableDefinition" data-uid="ETLBox.DataFlow.DbMerge`1.TableDefinition">TableDefinition</h4>
+  <div class="markdown level1 summary"><p>The table definition of the destination table. By default, the table definition is read from the database.
+Provide a table definition if the definition of the target can't be read automatically or you want the DbMerge
+only to use the columns in the provided definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public TableDefinition TableDefinition { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_TableName_" data-uid="ETLBox.DataFlow.DbMerge`1.TableName*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_TableName" data-uid="ETLBox.DataFlow.DbMerge`1.TableName">TableName</h4>
   <div class="markdown level1 summary"><p>The name of the target database table for the merge.</p>
