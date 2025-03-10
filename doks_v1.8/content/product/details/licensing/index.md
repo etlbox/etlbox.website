@@ -54,7 +54,7 @@ The **COMPANY** License is perfect for businesses that plan to use ETLBox intern
 - Companies with direct control over deployment environments
 
 **Licensing Agreement:**
-- Governed by the [Standard End-User License Agreement (EULA)](/pricing/eula/standard-eula/).
+- Governed by the [Standard End-User License Agreement (EULA)](/support/eula/standard-eula/).
 
 
 ### 📦 Enterprise OEM License
@@ -79,7 +79,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 - Organizations deploying ETLBox in cloud-based environments for external users
 
 **Licensing Agreement:**
-- Governed by the [Redistribution EULA](/pricing/eula/redistribution-eula/).
+- Governed by the [Redistribution EULA](/support/eula/redistribution-eula/).
 
 
 ## Feature Comparison
