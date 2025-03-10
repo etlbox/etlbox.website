@@ -114,6 +114,7 @@
 
         <div class="glide__bullets" data-glide-el="controls[nav]">
           {{ range $index, $_ := .Site.Data.home.statements.statement }}
+          <!-- The first bullet needs to have the active by default, otherwise the active style will be cleaned from the styles when deploying in prod -->
           <button class="glide__bullet {{ if eq $index 0 }}glide__bullet--active{{ end }}" data-glide-dir="={{ $index }}"></button>
           {{ end }}
         </div>
