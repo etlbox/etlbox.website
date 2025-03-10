@@ -125,4 +125,4 @@ public static void Main()
 
 {{< alert text="Make sure when using predicates that always all rows arrive at any kind of destination. Use a <code>VoidDestination</code> for records that you don't want to keep, or use the third parameter of the <code>LinkTo</code> method." >}}
 
-[You can also read more about predicates and linking here.](/docs/getting-started/linking/#predicates)
+[You can also read more about predicates and linking here.](/docs/introduction/linking/)

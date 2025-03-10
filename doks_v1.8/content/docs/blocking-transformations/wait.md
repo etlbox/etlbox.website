@@ -16,7 +16,7 @@ toc: true
 
 The purpose of the WaitTransformation is to block execution of a path in your Network until another component (or multiple other components) has completed processing. The other dataflow compoment can be either a component from the same network, or a component of a different data flow.
 
-When waiting for a component in the same data flow, the WaitTransformation is mostly used in conjunction with a [Multicast](../../transformations/multicast) or [Predicates](../../getting-started/linking/#predicates), which split up the network in different paths.
+When waiting for a component in the same data flow, the WaitTransformation is mostly used in conjunction with a [Multicast](../../transformations/multicast) or [Predicates](/docs/introduction/linking/), which split up the network in different paths.
 
 Additionally, the WaitTransformation also accepts a `TaskCompletionSource` - so basically it can be used to wait for any Task.
 

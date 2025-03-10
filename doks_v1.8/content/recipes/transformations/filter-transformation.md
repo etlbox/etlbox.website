@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-{{< alert text="Instead of the FilterTransformation, you can also use Linking with different Predicates to achieve the same behaviour. <a href=\"/docs/getting-started/linking/#predicates\">Read more about linking with predicates</a>" >}}
+{{< alert text="Instead of the FilterTransformation, you can also use Linking with different Predicates to achieve the same behaviour. <a href=\"/docs/introduction/linking\">Read more about linking with predicates</a>" >}}
 
 
 ## Filter with POCO
@@ -87,7 +87,7 @@ Assert.Collection(dest.Data,
 
 ### Predicate linking with implicit void
 
-This example shows how the third parameter of the `LinkTo` method can be used to discard unwanted records. 
+This example shows how the third parameter of the `LinkTo` method can be used to discard unwanted records.
 
 ```C#
 public void ExampleFilterLinkingWithPredicateAndImplicitVoid() {

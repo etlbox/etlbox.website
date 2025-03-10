@@ -96,19 +96,19 @@
 
 [[redirects]]
   from = "/std-eula"
-  to = "https://www.etlbox.net/product/licenses/standard-eula/"
+  to = "https://www.etlbox.net/pricing/eula/standard-eula/"
   status = 302
   force = true
 
 [[redirects]]
   from = "/redist-eula"
-  to = "https://www.etlbox.net/product/licenses/redistribution-eula/"
+  to = "https://www.etlbox.net/pricing/eula/redistribution-eula/"
   status = 302
   force = true
 
 [[redirects]]
   from = "/nuget-license"
-  to = "https://www.etlbox.net/product/licenses/standard-eula/"
+  to = "https://www.etlbox.net/pricing/eula/standard-eula/"
   status = 302
   force = true
 
