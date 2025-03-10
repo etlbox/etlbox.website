@@ -8,7 +8,7 @@ weight: 100
 toc: false
 ---
 
-For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](../standard-eula).
+For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/pricing/eula/standard-eula).
 
 {{< nowrap-code >}}
 Redistribution End-user License Agreement
