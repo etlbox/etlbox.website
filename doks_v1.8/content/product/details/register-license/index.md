@@ -118,3 +118,85 @@ If you prefer to edit the project file (`.csproj`) directly, add the following e
 - If using Azure, verify that the app settings are correctly applied.
 - Still having issues? [Contact ETLBox Support for assistance](/support/options).
 
+
+## Accessing the License-Free Package Feed
+
+If you have purchased the license-free package access, you can retrieve ETLBox from our private GitHub NuGet package feed. This feed contains only the core ETLBox package, while database-specific extensions (e.g., `ETLBox.SqlServer`, `ETLBox.Postgres`) remain available via NuGet.org. The license check is enforced only in the core package—once referenced in your project, the restriction is removed, allowing you to use all other ETLBox packages from NuGet.org as usual.
+
+### Adding the GitHub Package Source
+
+You can access the GitHub package feed by adding the following package source:
+
+```
+https://nuget.pkg.github.com/etlbox/index.json
+```
+
+There are two ways to configure this:
+
+#### Option 1 - Using Visual Studio
+
+1. Open **Visual Studio**.
+2. Navigate to **Tools** → **NuGet Package Manager** → **Package Manager Settings**.
+3. In the left panel, select **Package Sources**.
+4. Click the green **+** icon in the top right corner.
+5. Enter:
+   - **Name**: etlbox
+   - **Source**: `https://nuget.pkg.github.com/etlbox/index.json`
+6. Click **Update** and ensure the feed is enabled.
+
+![Visual Studio Options - Adding Nuget Package Source](nuget_package_screenshot.jpg)
+
+#### Option 2 - Command Line (NuGet CLI)
+
+You can also add the package source using the NuGet CLI:
+
+{{< tabs "nuget-options" >}}
+{{< tab "dotnet CLI" >}}
+```cmd
+dotnet nuget add source "https://nuget.pkg.github.com/etlbox/index.json" --name "etlbox"
+```
+{{< /tab >}}
+{{< tab "Package Manager" >}}
+```ps1
+PM> Register-PackageSource -Name "etlbox" -Location "https://nuget.pkg.github.com/etlbox/index.json" -ProviderName NuGet
+```
+{{< smallnote >}}
+This command is intended to be used within the Package Manager Console in Visual Studio.
+{{< /smallnote >}}
+{{< /tab >}}
+
+{{< /tabs >}}
+
+#### Where is this Configuration Stored?
+
+On Windows, NuGet sources are stored in:
+
+```
+%APPDATA%\NuGet\NuGet.Config
+```
+
+On Linux/macOS:
+
+```
+~/.nuget/NuGet/NuGet.Config
+```
+
+This file contains XML entries defining the configured package sources. If needed, you can manually edit it to add the GitHub feed:
+
+```xml
+<configuration>
+  <packageSources>
+    <add key="ETLBox GitHub Feed" value="https://nuget.pkg.github.com/etlbox/index.json" />
+  </packageSources>
+</configuration>
+```
+
+### Understanding Versioning for License-Free Packages
+
+To avoid conflicts when using both NuGet.org and GitHub package feeds, the license-free versions in the GitHub feed always have an additional `.1` at the end.
+
+For example:
+- If the official ETLBox version on NuGet.org is `3.7.0`,
+- The corresponding GitHub feed version will be `3.7.0.1`.
+
+This ensures that you can install both feeds without versioning conflicts in your project.
