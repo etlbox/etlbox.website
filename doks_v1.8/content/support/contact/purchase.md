@@ -1,11 +1,13 @@
 ---
 title: "Purchase ETLBox"
-description: "Fill out the form to purchase ETLBox"
+description: "Fill out the form to purchase ETLBox."
 draft: false
+images: []
+toc: false
 ---
 
-Thanks for your interest in ETLBox. 
-Please fill out the details below. 
+Thanks for your interest in ETLBox.
+Please fill out the details below.
 
 We will verify your request and get back to you normally within 24 hours.
 

@@ -7,25 +7,25 @@ images: []
 menu:
   docs:
     parent: "stream-connectors"
-weight: 420
+weight: 320
 toc: true
 ---
 
 #### Csv connector package
 
-The {{< link-ext url="https://nuget.org/packages/ETLBox.Csv" text="ETLBox.Csv" >}} package include the CsvSource and CsvDestination classes. 
+The {{< link-ext url="https://nuget.org/packages/ETLBox.Csv" text="ETLBox.Csv" >}} package include the CsvSource and CsvDestination classes.
 
-The csv connector package is based on the {{< link-ext text="CsvHelper library created by Josh Close" url="https://joshclose.github.io/CsvHelper/" >}}. Both classes expose the `CsvHelper.Configuration` property which can be used to directly configure the import/export settings of csv helper. You can find {{< link-ext url="https://joshclose.github.io/CsvHelper/examples/configuration/" text="examples how to configure in the CsvHelper documentation" >}}. E.g. you can change the delimiter or the separator values. 
+The csv connector package is based on the {{< link-ext text="CsvHelper library created by Josh Close" url="https://joshclose.github.io/CsvHelper/" >}}. Both classes expose the `CsvHelper.Configuration` property which can be used to directly configure the import/export settings of csv helper. You can find {{< link-ext url="https://joshclose.github.io/CsvHelper/examples/configuration/" text="examples how to configure in the CsvHelper documentation" >}}. E.g. you can change the delimiter or the separator values.
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a webpoint or an Azure blob. See <a href=\"../streaming\">Shared Functionalites</a> for a list of all shared properties between all streaming connectors."  >}}
 
-If you want to start with example code right away, you will find it in the recipes section for the [CsvSource](/recipes/sources/csvsource) and [CsvDestination](/recipes/destinations/csvdestination). The components could also be used in other examples.  
+If you want to start with example code right away, you will find it in the recipes section for the [CsvSource](/recipes/sources/csvsource) and [CsvDestination](/recipes/destinations/csvdestination). The components could also be used in other examples.
 
 ## CsvSource
 
-A CsvSource simple reads data from a csv file or from a web service endpoint. 
+A CsvSource simple reads data from a csv file or from a web service endpoint.
 
-Let's assume you have an input file like this: 
+Let's assume you have an input file like this:
 
 ```csv
 Row_Nr;Value
@@ -33,7 +33,7 @@ Row_Nr;Value
 2;Test2
 ```
 
-Here is the ETLBox code snippet how to setup the CsvSource: 
+Here is the ETLBox code snippet how to setup the CsvSource:
 
 ```C#
 CsvSource source = new CsvSource("Demo.csv");
@@ -41,11 +41,11 @@ source.Configuration.Delimiter = ";";
 source.Configuration.IgnoreBlankLines = true;
 ```
 
-This will create a source component that reads the data from a "Demo.csv" file and send it into a data flow. 
+This will create a source component that reads the data from a "Demo.csv" file and send it into a data flow.
 
 There are several configuration options for the Reader that you can set in the Configuration property. Learn more
 about these options [in the CsvHelper.Configuration api documentation](https://joshclose.github.io/CsvHelper/api/CsvHelper.Configuration/Configuration/).
-The default output data type of the CsvSource is an ExpandoObject. This is a dynamic object which will contain a property 
+The default output data type of the CsvSource is an ExpandoObject. This is a dynamic object which will contain a property
 for each column in your csv file. The first row of your file is supposed to be a header record (unless you use the SkipRows property to define how many
 rows needs to be skipped before your header starts). The header will define the property names of the ExpandoObject.
 
@@ -56,7 +56,7 @@ This is an example to transform the dynamic object into a regular .NET object:
 
 ```C#
 CsvSource<ExpandoObject> source = new CsvSource<ExpandoObject>("Demo.csv");
-RowTransformation<ExpandoObject,MyDataObject> trans = 
+RowTransformation<ExpandoObject,MyDataObject> trans =
     new RowTransformation<ExpandoObject,MyDataObject> (
         csvdata =>
         {
@@ -71,7 +71,7 @@ RowTransformation<ExpandoObject,MyDataObject> trans =
 
 ### Using object types
 
-Of course you can  use your data object as type for the CsvSource. The following code would directly read the data from the csv file 
+Of course you can  use your data object as type for the CsvSource. The following code would directly read the data from the csv file
 into the right object type.
 
 ```C#
@@ -96,13 +96,13 @@ public class MyCsvData {
 CsvSource<MyCsvData> source = new CsvSource<MyCsvData>("Demo.csv");
 ```
 
-See the full documentation {{< link-ext text="about CsvHelepr attributes here" url="https://joshclose.github.io/CsvHelper/examples/configuration/attributes" >}} or 
+See the full documentation {{< link-ext text="about CsvHelepr attributes here" url="https://joshclose.github.io/CsvHelper/examples/configuration/attributes" >}} or
 read more {{< link-ext text="about class maps" url="https://joshclose.github.io/CsvHelper/examples/configuration" >}}.
 
 ### Read field headers
 
-There are cases where you want to read the headers of a csv file before you actually start processing the data. This can be done by defining a `CsvSource` and call the 
-method `ReadFieldHeaders` - this will use the current properties of the `CsvSource` and read the header data and the first row from the source. The header data is then returned by the method. 
+There are cases where you want to read the headers of a csv file before you actually start processing the data. This can be done by defining a `CsvSource` and call the
+method `ReadFieldHeaders` - this will use the current properties of the `CsvSource` and read the header data and the first row from the source. The header data is then returned by the method.
 
 ```C#
 var source = new CsvSource<MySimpleRow>("file.csv", ResourceType.File);
@@ -121,14 +121,14 @@ source.Configuration.HasHeaderRecord = false;
 
 ## CsvDestination
 
-A CSV destination will create a file containing the data in the desired CSV format. 
+A CSV destination will create a file containing the data in the desired CSV format.
 
-The CsvDestination will work with the dynamic (ExpandoObject) as well as with regular object or arrays. 
+The CsvDestination will work with the dynamic (ExpandoObject) as well as with regular object or arrays.
 Here is an example how you can use a classic object to write data into a Csv file:
 
 ```C#
 public class MySimpleRow
-{    
+{
     [Name("Header1")]
     [Index(1)]
     public int Col1 { get; set; }
@@ -149,6 +149,6 @@ Header1,Header2
 3,Test3
 ```
 
-If you use the ExpandoObject, the header names will be derived from the property names. In most cases, this will work as expected. 
+If you use the ExpandoObject, the header names will be derived from the property names. In most cases, this will work as expected.
 If you use an array, e.g. `CsvDestination<string[]>`, you won't get a header column.
 

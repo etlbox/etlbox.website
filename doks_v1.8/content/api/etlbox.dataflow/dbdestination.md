@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10137
+weight: 10139
 toc: false
 ---
 
@@ -52,6 +52,9 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ColumnMapping">DbDestination&lt;ExpandoObject&gt;.ColumnMapping</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_IgnoreDefaultColumnsOnInsert">DbDestination&lt;ExpandoObject&gt;.IgnoreDefaultColumnsOnInsert</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_IdColumns">DbDestination&lt;ExpandoObject&gt;.IdColumns</a>
     </div>
     <div>
@@ -68,6 +71,9 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_BulkOperation">DbDestination&lt;ExpandoObject&gt;.BulkOperation</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver">DbDestination&lt;ExpandoObject&gt;.PropertyToColumnNamesResolver</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ConnectionManager">DbDestination&lt;ExpandoObject&gt;.ConnectionManager</a>

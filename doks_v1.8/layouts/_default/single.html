@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<div class="row flex-xl-nowrap">
+	<div class="row flex-lg-nowrap">
 		{{ if (in site.Params.doks.sectionNav .Section) -}}
 		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
 			{{ partial "sidebar/section-menu.html" . }}
@@ -19,7 +19,7 @@
 			{{ if eq .Section "api" -}}
 			<main class="api-content col-lg-12 col-xl-12 mx-xl-auto">
 			{{ else -}}
-			<main class="docs-content col-lg-12 col-xl-12 mx-xl-auto">
+			<main class="docs-content col-lg-15 col-xl-12 mx-xl-auto">
 			{{ end -}}
 		{{ end -}}
 			{{ if site.Params.doks.breadcrumbTrail -}}
@@ -48,11 +48,13 @@
 				{{ if site.Params.doks.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
 				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
+				{{ if and site.Params.doks.editPage (ne .Params.toc false) -}}
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
 			</div>
-			{{ partial "main/docs-navigation.html" . }}
+			{{ if ne .Params.toc false -}}
+				{{ partial "main/docs-navigation.html" . }}
+			{{ end -}}
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
 				{{ partial "main/docs-navigation.html" . }}

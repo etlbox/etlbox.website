@@ -2,10 +2,6 @@ const https = require('https');
 
 // List of NuGet packages
 const packages = [
-  'EFBox',
-  'EFBox.MySql',
-  'EFBox.Postgres',
-  'EFBox.SqlServer',
   'ETLBox',
   'ETLBox.Analysis',
   'ETLBox.AnalysisServices',
@@ -16,9 +12,8 @@ const packages = [
   'ETLBox.Couchbase',
   'ETLBox.Csv',
   'ETLBox.Db2',
+  'ETLBox.DbExtensions',
   'ETLBox.EntityFramework',
-  'ETLBox.EntityFramework.MySql',
-  'ETLBox.EntityFramework.SqlServer',
   'ETLBox.Excel',
   'ETLBox.Json',
   'ETLBox.Logging',

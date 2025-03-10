@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10182
+weight: 10184
 toc: false
 ---
 
@@ -61,6 +61,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_IgnoreMissingProperties">RowValidation&lt;ExpandoObject&gt;.IgnoreMissingProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_ValidCount">RowValidation&lt;ExpandoObject&gt;.ValidCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_InvalidCount">RowValidation&lt;ExpandoObject&gt;.InvalidCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_Reset">RowValidation&lt;ExpandoObject&gt;.Reset()</a>

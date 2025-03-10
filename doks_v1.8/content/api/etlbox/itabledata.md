@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10251
+weight: 10260
 toc: false
 ---
 
@@ -567,7 +567,7 @@ The key of the list is a unique sequence number, and the order matches also to e
     </tbody>
   </table>
   <a id="ETLBox_ITableData_RewindReadIndex_" data-uid="ETLBox.ITableData.RewindReadIndex*"></a>
-  <h4 id="ETLBox_ITableData_RewindReadIndex" data-uid="ETLBox.ITableData.RewindReadIndex">RewindReadIndex()</h4>
+  <h4 id="ETLBox_ITableData_RewindReadIndex_System_Int32_" data-uid="ETLBox.ITableData.RewindReadIndex(System.Int32)">RewindReadIndex(int)</h4>
   <div class="markdown level1 summary"><p>The IDataReader is iterated via the Read() method - once the last record was read,
 the Read() will return false. If you want to iterate again, you can use
 this method to &quot;rewind&quot; and start with the first record again.</p>
@@ -577,9 +577,26 @@ this method to &quot;rewind&quot; and start with the first record again.</p>
 {{< /rawhtml >}}
 
 ```C#
-    void RewindReadIndex()
+    void RewindReadIndex(int position)
 ```
 
 {{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 {{< /rawhtml >}}

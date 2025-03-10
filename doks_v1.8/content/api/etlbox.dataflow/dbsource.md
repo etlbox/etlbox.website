@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10141
+weight: 10143
 toc: false
 ---
 
@@ -71,6 +71,9 @@ Multiple database are supported. Use the corresponding connection manager that f
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_BulkSelectBatchSize">DbSource&lt;ExpandoObject&gt;.BulkSelectBatchSize</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver">DbSource&lt;ExpandoObject&gt;.ColumnToPropertyNamesResolver</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ConnectionManager">DbSource&lt;ExpandoObject&gt;.ConnectionManager</a>

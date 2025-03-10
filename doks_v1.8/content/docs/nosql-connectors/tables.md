@@ -7,13 +7,13 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
 # ETLBox.Azure.Tables package
 
-In order to use the Azure Tables connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Azure.Tables" text="ETLBox.Azure.Tables" >}} to your project. 
+In order to use the Azure Tables connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Azure.Tables" text="ETLBox.Azure.Tables" >}} to your project.
 
 ## Azure Tables Code examples
 
@@ -69,17 +69,17 @@ public static IEnumerable<TestEntity> GenerateDefaultTestData() {
     return new List<TestEntity>() {
         new TestEntity() {
             PartitionKey = "1",
-            RowKey = "1",           
+            RowKey = "1",
             SomeString = "Test String 1 (max 64kb!)"
         },
         new TestEntity() {
             PartitionKey = "1",
-            RowKey = "2",           
+            RowKey = "2",
             SomeString = "Test String 2 (max 64kb!)"
         },
         new TestEntity() {
             PartitionKey = "2",
-            RowKey = "3",           
+            RowKey = "3",
             SomeString = "Test String 3 - different partition!!!"
         },
     }
@@ -132,12 +132,12 @@ Network.Execute(source);
 
 ### Using transactional batches
 
-By default, data is inserted without an enclosing transaction. This leads to higher insert/update/delete performance, and also incoming data can be from different partitions. 
+By default, data is inserted without an enclosing transaction. This leads to higher insert/update/delete performance, and also incoming data can be from different partitions.
 
-The `TableDestination` has a property `UseTransactionalBatch`. If set to true, all records are inserted with an enclosing transaction for each batch. If one of the records in the batch is flawed (e.g. throws an exception or can't be inserted/updated/delete for some reason), the whole batch will not be inserted. 
-You can redirect erroneous batches in your data flow using 'LinkErrorsTo()' when linking your components. 
+The `TableDestination` has a property `UseTransactionalBatch`. If set to true, all records are inserted with an enclosing transaction for each batch. If one of the records in the batch is flawed (e.g. throws an exception or can't be inserted/updated/delete for some reason), the whole batch will not be inserted.
+You can redirect erroneous batches in your data flow using 'LinkErrorsTo()' when linking your components.
 
-Setting this property to true  will decrease performance. Also, a transactional batch can only be created for the same partition. Before inserted the data, it is grouped by the partition key and then inserted as a transactional batch for each partition key. 
+Setting this property to true  will decrease performance. Also, a transactional batch can only be created for the same partition. Before inserted the data, it is grouped by the partition key and then inserted as a transactional batch for each partition key.
 
 ## Dynamic object support
 

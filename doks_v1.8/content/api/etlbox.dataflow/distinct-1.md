@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10145
+weight: 10147
 toc: false
 ---
 
@@ -295,6 +295,62 @@ This collection dictates which properties are considered for uniqueness evaluati
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/distinctcolumn">DistinctColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Distinct_1_DistinctCount_" data-uid="ETLBox.DataFlow.Distinct`1.DistinctCount*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_DistinctCount" data-uid="ETLBox.DataFlow.Distinct`1.DistinctCount">DistinctCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that were distinct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int DistinctCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Distinct_1_DuplicateCount_" data-uid="ETLBox.DataFlow.Distinct`1.DuplicateCount*"></a>
+  <h4 id="ETLBox_DataFlow_Distinct_1_DuplicateCount" data-uid="ETLBox.DataFlow.Distinct`1.DuplicateCount">DuplicateCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that were detected as duplicates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int DuplicateCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>

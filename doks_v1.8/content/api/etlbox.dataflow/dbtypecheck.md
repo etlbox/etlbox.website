@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10143
+weight: 10145
 toc: false
 ---
 
@@ -78,6 +78,12 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_ConnectionManager">DbTypeCheck&lt;ExpandoObject&gt;.ConnectionManager</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_ValidCount">DbTypeCheck&lt;ExpandoObject&gt;.ValidCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_FlawedCount">DbTypeCheck&lt;ExpandoObject&gt;.FlawedCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_Reset">DbTypeCheck&lt;ExpandoObject&gt;.Reset()</a>

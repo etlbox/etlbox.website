@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10210
+weight: 10219
 toc: false
 ---
 
@@ -578,6 +578,33 @@ Be careful if you don't define a range and set this to true.</p>
 
 ```C#
     public bool IgnoreBlankRows { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Excel_ExcelSource_1_IgnoreHiddenSheets_" data-uid="ETLBox.Excel.ExcelSource`1.IgnoreHiddenSheets*"></a>
+  <h4 id="ETLBox_Excel_ExcelSource_1_IgnoreHiddenSheets" data-uid="ETLBox.Excel.ExcelSource`1.IgnoreHiddenSheets">IgnoreHiddenSheets</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IgnoreHiddenSheets { get; set; }
 ```
 
 {{< rawhtml >}}

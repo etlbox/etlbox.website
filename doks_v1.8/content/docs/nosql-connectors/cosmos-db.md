@@ -7,13 +7,13 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
 # ETLBox.Azure.CosmosDb package
 
-In order to use the Azure Cosmos Db connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Azure.CosmosDb" text="ETLBox.Azure.CosmosDb" >}} to your project. 
+In order to use the Azure Cosmos Db connector, you need to add the nuget package {{< link-ext url="https://www.nuget.org/packages/ETLBox.Azure.CosmosDb" text="ETLBox.Azure.CosmosDb" >}} to your project.
 
 ## Shared example code
 
@@ -136,7 +136,7 @@ public static void RecreateContainer(Database database, string containerName, st
 
 Now let's start with the examples for retrieving data from Cosmos Db.
 
-### Read all data 
+### Read all data
 
 Let's read all data from a table:
 
@@ -184,7 +184,7 @@ Network.Execute(source);
 
 ## Cosmos destination examples
 
-Next step is to insert data into a CosmosDb container. 
+Next step is to insert data into a CosmosDb container.
 
 ### Bulk insert
 
@@ -205,7 +205,7 @@ var dest = new CosmosDestination<Movie>() {
 
 ### Other bulk operations
 
-Azure Cosmos Db also offers different update modes, which can be adjusted for every record. 
+Azure Cosmos Db also offers different update modes, which can be adjusted for every record.
 
 Supported bulk operations are:
 - Create
@@ -255,15 +255,15 @@ Network.Execute(dest);
 
 ### Using transactional batches
 
-By default, data is inserted as bulk without an enclosing transaction. If you prefer to insert data as part of a transactional batch, set the property `UseTransactionBatch` to true. The maximum allowed batch size is then 100 (due to the limitation of Cosmos Db). 
+By default, data is inserted as bulk without an enclosing transaction. If you prefer to insert data as part of a transactional batch, set the property `UseTransactionBatch` to true. The maximum allowed batch size is then 100 (due to the limitation of Cosmos Db).
 
-This works best if all data has the same partition key. If the incoming data has different partition keys, the data is inserted in multiple batches, grouped by each partition key. 
+This works best if all data has the same partition key. If the incoming data has different partition keys, the data is inserted in multiple batches, grouped by each partition key.
 
-Make sure to add a partition key for each record using the <see cref="SetItemActionOptions"/> action. 
-If any of the records in the batch is flawed, the whole batch will not be inserted. 
-You can redirect erroneous batches using 'LinkErrorsTo()' when linking your components. 
+Make sure to add a partition key for each record using the <see cref="SetItemActionOptions"/> action.
+If any of the records in the batch is flawed, the whole batch will not be inserted.
+You can redirect erroneous batches using 'LinkErrorsTo()' when linking your components.
 
-Setting this property to true  will decrease performance. 
+Setting this property to true  will decrease performance.
 
 ## Alternatives to connection string
 
@@ -276,7 +276,7 @@ Instead of passing a connection string, the `CosmosDbSource` and `CosmosDbDestin
 
 ## Dynamic object support
 
-Like all other data flow components, Cosmos DB source and destination support the dynamic `ExpandoObject`. Simple use either `CosmosDbSource` or `CosmosDbSource<ExpandoObject>` instead of `CosmosDbSource<T>`. 
+Like all other data flow components, Cosmos DB source and destination support the dynamic `ExpandoObject`. Simple use either `CosmosDbSource` or `CosmosDbSource<ExpandoObject>` instead of `CosmosDbSource<T>`.
 
 Example for the source:
 

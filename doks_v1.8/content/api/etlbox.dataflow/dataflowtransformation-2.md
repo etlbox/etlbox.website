@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10135
+weight: 10137
 toc: false
 ---
 
@@ -26,6 +26,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/aggregation-2">Aggregation&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-2">BatchTransformation&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/columntransformation-1">ColumnTransformation&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1">ConditionalSplit&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbmerge-1">DbMerge&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1">DbTypeCheck&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/distinct-1">Distinct&lt;TInput&gt;</a></div>

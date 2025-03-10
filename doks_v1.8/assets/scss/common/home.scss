@@ -1,14 +1,12 @@
-.alteredColor {
-    background: #f3f3f3;
-}
+// .alteredColor {
+//     background: #f3f3f3;
+// }
 
-@include color-mode(dark) {
-    .alteredColor {
-        background: $gray-700 !important;
-    }
-}
-
-
+// @include color-mode(dark) {
+//     .alteredColor {
+//         background: $gray-700 !important;
+//     }
+// }
 
 .embedVideo video {
     width: 95%;
@@ -16,7 +14,7 @@
 
     @include media-breakpoint-up(lg) {
         width: 50%;
-      }
+    }
 }
 
 
@@ -26,15 +24,10 @@
     img {
         width: 50%;
 
-    @include media-breakpoint-up(lg) {
-        width: 30%;
-      }
+        @include media-breakpoint-up(lg) {
+            width: 30%;
+        }
     }
-}
-
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
 }
 
 
@@ -42,19 +35,97 @@
     white-space: pre-wrap;
     overflow: auto;
 }
-/* When embedding video via iFrame, use this
- https://css-tricks.com/fluid-width-video/
-.embedVideo {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+
+
+/** Image switches for light and dark mode */
+.light-mode-image {
+    display:inline;
 }
 
-.embedVideo iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.dark-mode-image {
+    display: none;
 }
-*/
+
+
+@include color-mode(dark) {
+    .light-mode-image {
+        display: none;
+    }
+
+    .dark-mode-image {
+        display: inline;
+    }
+}
+
+/** New common background colos */
+.bg-light-blue {
+    background-color: rgba(188, 195, 250, 0.5);
+    /* Helles Blau */
+}
+
+.bg-dark-blue {
+    background-color: rgba(35, 85, 147, 0.5);
+    /* Dunkles Blau */
+}
+
+
+/** Customer slide in the right of the home page: */
+.customer-slide-images {
+    // height: 9rem;
+    height: auto;
+    min-height: 8rem;
+}
+
+.customer-slide-logo {
+    left: 2.5rem;
+    bottom: 1rem;
+}
+
+.customer-slide-headshot {
+    right: 2rem;
+}
+
+@media (max-width: 576px) {
+    .customer-slide-images img {
+        max-width: 50%;
+        height: auto;
+        margin-top: 1rem;
+        justify-content: center;
+        justify-self: center;
+    }
+
+     .customer-slide-logo {
+         left: 0rem;
+         bottom: 0rem;
+     }
+
+     .customer-slide-headshot {
+         right: 0rem;
+     }
+
+     .rounded-bottom-sm {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      .rounded-top-sm {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+}
+
+/** Used in reference carousel on the home page */
+.fixed-size-logo {
+    width: 15rem;
+    /* Einheitliche Breite */
+    height: 4rem;
+    /* Einheitliche Höhe */
+    object-fit: contain;
+    /* Skaliert das Bild und schneidet es, falls nötig */
+}
+
+

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10139
+weight: 10141
 toc: false
 ---
 
@@ -50,7 +50,7 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_MergeMode">DbMerge&lt;ExpandoObject&gt;.MergeMode</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_DestinationTableDefinition">DbMerge&lt;ExpandoObject&gt;.DestinationTableDefinition</a>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_TableDefinition">DbMerge&lt;ExpandoObject&gt;.TableDefinition</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ColumnMapping">DbMerge&lt;ExpandoObject&gt;.ColumnMapping</a>

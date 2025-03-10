@@ -7,13 +7,13 @@ images: []
 menu:
   docs:
     parent: "control-flow"
-weight: 920
+weight: 720
 toc: true
 ---
 
 ## Create, Drop and IfExists tasks
 
-There are a lot of tasks that can help you to create, drop or check the existence of database objects. 
+There are a lot of tasks that can help you to create, drop or check the existence of database objects.
 In the following there will be example how to create tables, views, procedures, indexes or databases, how to drop them and
 how to check for their existence.
 
@@ -32,15 +32,15 @@ List<TableColumn> columns = new List<TableColumn>() {
     new TableColumn("value2", "DATE", allowNulls:true),
     new TableColumn("value3", "DECIMAL(10,2)",allowNulls:false) { DefaultValue = "3.12" },
     new TableColumn("compValue", "BIGINT",allowNulls:true) { ComputedColumn = "(value1 * value2)" }
-};            
-           
+};
+
 CreateTableTask.Create(connectionManager, "tablename", columns);
 ```
 
 A table column describe the column in the database with the most used attributes: Name, Data type (use the data type
 which you are most familiar with, there will be an attempt to convert the database type into the right database specific format),
 if the column is nullable, if the column is a primary key and if the column is used as identity column. (Serial for Postgres or
-auto increment for MySql). Additionally, you could specify if the column is a computed column or if it has a default value. 
+auto increment for MySql). Additionally, you could specify if the column is a computed column or if it has a default value.
 
 Here is an example for creating a `TableDefinition` and pass it to the CreateTableTask:
 
@@ -55,13 +55,13 @@ CreateTableTask.Create(connectionManager, CustomerTableDef);
 
 *Implicit data type conversions*:
 
-CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass "DATETIME" as data type for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert "DATETIME" into "TIMESTAMP". 
+CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass "DATETIME" as data type for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert "DATETIME" into "TIMESTAMP".
 
 *Adding your own data type conversion*
 
-If you need to change the default data type conversion, you can overwrite it with your  implementation. To achieve this, you 
+If you need to change the default data type conversion, you can overwrite it with your  implementation. To achieve this, you
 need to pass an object that implements IDataTypeConverter. The interface has one method: `TryConvertDbDataType` and 2 parameter. `dbSpecificTypeName` is the name that you define in your TableColumn, and connection type defines the connection manager type (e.g. SqlServer or Oracle).
-The return value is the converted data type. 
+The return value is the converted data type.
 Here is an example implementation:
 
 ```C
@@ -106,15 +106,15 @@ bool exists = IfTableOrViewExistsTask.IsExisting(connectionManager, "tablename")
 
 ### Table Definition
 
-If you are interesting in retrieving a TableDefinition object from an existing database table, use can use 
+If you are interesting in retrieving a TableDefinition object from an existing database table, use can use
 the static method `FromTableName` on the `TableDefinition` class:
 
 ```C#
 TableDefinition.FromTableName(connectionManager, "demoTable");
 ```
 
-You can also directly pass a type of an object or class, and ETLBox will try it's best to create the best suitable TableDefinition for this object. 
-The returned TableDefinition will vary for different database types. 
+You can also directly pass a type of an object or class, and ETLBox will try it's best to create the best suitable TableDefinition for this object.
+The returned TableDefinition will vary for different database types.
 
 ```C#
 TableDefinition td = TableDefinition.FromCLRType(ConnectionType.SqlServer, typeof(MyClass));
@@ -174,7 +174,7 @@ bool exists = IfProcedureExistsTask.IsExisting(connectionManager, "ProcedureName
 
 ### Schema
 
-Schema are only available for Sql Server and Postgres databases. For MySql, use Create/Drop/Exists Database instead. 
+Schema are only available for Sql Server and Postgres databases. For MySql, use Create/Drop/Exists Database instead.
 
 ```C#
 //Create a schema
@@ -189,7 +189,7 @@ bool exists = IfSchemaExistsTask.IsExisting(connectionManager, "SchemaName");
 
 ### Databases
 
-This is not supported with SQLite. 
+This is not supported with SQLite.
 
 ```C#
 //Create a database
@@ -218,7 +218,7 @@ in MySql).
 
 ## RowCount
 
-You can count rows in a table using the `RowCountTask`. 
+You can count rows in a table using the `RowCountTask`.
 
 Here an example for a simple count:
 
@@ -227,7 +227,7 @@ SqlConnectionManager connectionManager = new SqlConnectionManager("Data Source=.
 int count = RowCountTask.Count(connectionManager, "demotable");
 ```
 
-You can optionally add a condition for the count: 
+You can optionally add a condition for the count:
 
 ```C#
 int count = RowCountTask.Count(connectionManager, "demotable", "Co1 >= 3 AND Col2 == 'Test'");
@@ -243,21 +243,21 @@ TruncateTableTask.Truncate(connectionManager, "demo.table1");
 
 ## SqlTask
 
-This is the swiss-army knife for running sql on your database. It will use the underlying ADO.NET connection manager, 
-which allows you to do almost everything on the database, without the "overhead" and boilerplate code that ADO.NET brings with it. 
+This is the swiss-army knife for running sql on your database. It will use the underlying ADO.NET connection manager,
+which allows you to do almost everything on the database, without the "overhead" and boilerplate code that ADO.NET brings with it.
 
-SqlTask always expects a descriptive name when you use it - this name is used for logging purposes. 
+SqlTask always expects a descriptive name when you use it - this name is used for logging purposes.
 
 ```C#
-SqlTask.ExecuteNonQuery(connectionManager, 
+SqlTask.ExecuteNonQuery(connectionManager,
     $@"insert into demo.table1 (value) select * from (values ('Text'), ('More text')) as data(v)");
 ```
 
-ExecuteNonQuery will just execute the sql code without reading any results from the database. 
+ExecuteNonQuery will just execute the sql code without reading any results from the database.
 
 ### Using parameters
 
-You can pass parameterized sql code to have the database reuse existing plans in the cache. 
+You can pass parameterized sql code to have the database reuse existing plans in the cache.
 
 ```C#
 var parameter = new List<QueryParameter>
@@ -265,7 +265,7 @@ var parameter = new List<QueryParameter>
     new QueryParameter("value1", "INT", 1),
     new QueryParameter("value2", "NVARCHAR(100)", "Test1")
 };
-SqlTask.ExecuteNonQuery(connectionManager, 
+SqlTask.ExecuteNonQuery(connectionManager,
     $"INSERT INTO ParameterTest VALUES (@value1, @value2)", parameter);
 ```
 
@@ -277,7 +277,7 @@ If you result set contains only one row with one column, you can use the `Execut
 
 ```C#
 //without type conversion
-object result = SqlTask.ExecuteScalar(connectionManager, 
+object result = SqlTask.ExecuteScalar(connectionManager,
     $@"SELECT 'Hallo Welt' AS ScalarResult");
 
 //with type conversion
@@ -328,10 +328,10 @@ SqlTask.BulkInsert(connection, "Bulk insert demo data", data, "TableName");
 
 ### Bulk deletes
 
-You can use the `BulkDelete` method exposed on the `SqlTask` to perform a batch delete on the database. 
+You can use the `BulkDelete` method exposed on the `SqlTask` to perform a batch delete on the database.
 It allows you to delete data from a table by passing a `TableData` object which contains the columns names and the values of each column which you would like to delete.
 The `SqlTask` will then exceute a single `DELETE` statement on your database that removes all matching records in one execution.
- 
+
 Here is an example:
 
 ```Sql

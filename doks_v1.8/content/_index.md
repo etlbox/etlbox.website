@@ -1,11 +1,11 @@
 ---
 title : "ETLBox"
-lead: "A lightweight ETL (extract, transform, load) toolbox and data integration library for .NET"
+lead: "A complete ETL (extract, transform, load) toolbox and data integration library for .NET"
 draft: false
 images: []
 ---
 
- Use a simple syntax to create easy or complex data flows. Works with strongly typed and dynamic objects.
+ Create simple or complex data flows with ease. Supports both strongly typed and dynamic objects.
 
 {{< tabs "create-new-site" >}}
 {{< tab "Table Copy" >}}

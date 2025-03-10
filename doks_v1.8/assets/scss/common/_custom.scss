@@ -1,8 +1,28 @@
 @import "common/bootstrap-icons";
 @import "common/pricing";
 @import "common/home";
-@import "common/forms";
+@import "common/landing";
 @import "common/api-docs";
+
+@import "glide/glide.core";
+@import "glide/glide.theme";
+//@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+//Workaround for missing dark mode for mermaid diagrams
+.diagram {
+  border-radius: 0.375rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important; // Darker border for light mode
+  background-color: hsl(210, 17%, 98%) !important;
+  padding: 1rem;
+}
+@include color-mode(dark) {
+  .diagram {
+    background-color: hsla(210, 20%, 98%, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.125) !important; // Light border for dark mode
+    padding: 1rem;
+  }
+}
+
 
 //Custom fonts
 @font-face {
@@ -54,3 +74,4 @@
     url("/fonts/segoe-ue/bold/latest.ttf") format("truetype");
   font-weight: 700;
 }
+

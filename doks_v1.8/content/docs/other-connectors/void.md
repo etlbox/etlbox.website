@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "other-connectors"
-weight: 500
+weight: 400
 toc: true
 ---
 
@@ -30,9 +30,9 @@ source.LinkTo(destKeep, v => v.Value > 10);
 source.LinkTo(destVoid, v => v.Value <= 10);
 
 Network.Execute(source);
-``` 
+```
 
-### Implict use 
+### Implict use
 
 The example above can be simplified to use it without an explicit declaration of the VoidDestination.
 
@@ -48,6 +48,6 @@ var destKeep = new MemoryDestination<MyRow>();
 source.LinkTo(destKeep, v => v.Value > 10, v => v.Value <= 10>);
 
 Network.Execute(source);
-``` 
+```
 
 {{< alert text="Make sure that all records a are send to any kind of destination. If not all records arrive at a destination, you data flow may never complete as it will wait that all records are processed." >}}

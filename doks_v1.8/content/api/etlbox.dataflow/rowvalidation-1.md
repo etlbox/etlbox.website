@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10181
+weight: 10183
 toc: false
 ---
 
@@ -271,7 +271,10 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_RowValidation_1_AddValidationErrorToRow_" data-uid="ETLBox.DataFlow.RowValidation`1.AddValidationErrorToRow*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_AddValidationErrorToRow" data-uid="ETLBox.DataFlow.RowValidation`1.AddValidationErrorToRow">AddValidationErrorToRow</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to true (which is the default), the <a class="xref" href="/api/etlbox.dataflow/validationresult">ValidationResult</a>
+will be automatically added to the current object.
+For POCOs, make sure that the object contains a property of type <a class="xref" href="/api/etlbox.dataflow/validationresult">ValidationResult</a>.        ///</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -298,7 +301,9 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_RowValidation_1_IgnoreMissingProperties_" data-uid="ETLBox.DataFlow.RowValidation`1.IgnoreMissingProperties*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_IgnoreMissingProperties" data-uid="ETLBox.DataFlow.RowValidation`1.IgnoreMissingProperties">IgnoreMissingProperties</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Only relevant for dynamic object - if a <a class="xref" href="/api/etlbox/validatecolumn">ValidateColumn</a> is missing
+in the current object, this will be ignored and not result in an invalidation of the row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -319,6 +324,34 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_RowValidation_1_InvalidCount_" data-uid="ETLBox.DataFlow.RowValidation`1.InvalidCount*"></a>
+  <h4 id="ETLBox_DataFlow_RowValidation_1_InvalidCount" data-uid="ETLBox.DataFlow.RowValidation`1.InvalidCount">InvalidCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that were invalid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int InvalidCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -352,7 +385,8 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_RowValidation_1_SkipValidationOfRowAfterFirstError_" data-uid="ETLBox.DataFlow.RowValidation`1.SkipValidationOfRowAfterFirstError*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_SkipValidationOfRowAfterFirstError" data-uid="ETLBox.DataFlow.RowValidation`1.SkipValidationOfRowAfterFirstError">SkipValidationOfRowAfterFirstError</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will skip the validation of a row as soon as the first error has been encountered.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -437,9 +471,38 @@ toc: false
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
+  <a id="ETLBox_DataFlow_RowValidation_1_ValidCount_" data-uid="ETLBox.DataFlow.RowValidation`1.ValidCount*"></a>
+  <h4 id="ETLBox_DataFlow_RowValidation_1_ValidCount" data-uid="ETLBox.DataFlow.RowValidation`1.ValidCount">ValidCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that were valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int ValidCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_RowValidation_1_ValidateColumns_" data-uid="ETLBox.DataFlow.RowValidation`1.ValidateColumns*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_ValidateColumns" data-uid="ETLBox.DataFlow.RowValidation`1.ValidateColumns">ValidateColumns</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of <a class="xref" href="/api/etlbox.dataflow/rowvalidation-1#ETLBox_DataFlow_RowValidation_1_ValidateColumns">ValidateColumns</a> which are checked for each incoming row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -466,7 +529,8 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_RowValidation_1_ValidateRowFunc_" data-uid="ETLBox.DataFlow.RowValidation`1.ValidateRowFunc*"></a>
   <h4 id="ETLBox_DataFlow_RowValidation_1_ValidateRowFunc" data-uid="ETLBox.DataFlow.RowValidation`1.ValidateRowFunc">ValidateRowFunc</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A validation function, which will be evaluated first for each incoming row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

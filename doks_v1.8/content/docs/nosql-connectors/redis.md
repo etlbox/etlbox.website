@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "nosql-connectors"
-weight: 300
+weight: 220
 toc: true
 ---
 
@@ -17,7 +17,7 @@ The `RedisSource` will use the SCAN command to retrieve values that can be proce
 
 ```C#
 ConnectionMultiplexer RedisConnection = ConnectionMultiplexer.Connect("localhost:6379,allowAdmin=true");
-var source = new RedisSource<MyRow>();            
+var source = new RedisSource<MyRow>();
 source.RedisConnection = RedisConnection;
 source.ScanPattern = "a*";
 source.ScanCountSize = 2;
@@ -33,10 +33,10 @@ By default, the `RedisSource` assumes your stored value is a json. When retrievi
 
 ### Own deserialization function
 
-If you want to provide your own deserialization function, this is also possible. This is helpful e.g. if your stored value is not formatted as json. 
+If you want to provide your own deserialization function, this is also possible. This is helpful e.g. if your stored value is not formatted as json.
 
 ```C#
-var source = new RedisSource<MyRow>();            
+var source = new RedisSource<MyRow>();
 source.DeserializationFunc = s =>
 {
     var d = s.Split("|");
@@ -53,7 +53,7 @@ source.DeserializationFunc = s =>
 Use the `DatabaseNumber` property to specify the Redis database.
 
 ```C#
-var source = new RedisSource<MyRow>();            
+var source = new RedisSource<MyRow>();
 source.DatabaseNumber = 3;
 ```
 
@@ -73,7 +73,7 @@ public class MyRow
 var dest = new RedisDestination<MyRow>();
 ```
 
-Example when setting a property name for the `KeyColumn`. This is useful for dynamic object where you can't set attributes. 
+Example when setting a property name for the `KeyColumn`. This is useful for dynamic object where you can't set attributes.
 
 ```C#
 var dest = new RedisDestination<MyRow>();
@@ -86,7 +86,7 @@ By default, data that arrives in the `RedisDestination` is converted into Json u
 
 ### Own serialization function
 
-If you don't want to store your rows as json, you can define your own serialization function. 
+If you don't want to store your rows as json, you can define your own serialization function.
 
 ```C#
 var dest = new RedisDestination<MyRow>();

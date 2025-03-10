@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10136
+weight: 10138
 toc: false
 ---
 
@@ -645,6 +645,71 @@ Only needed when BulkOpteration is set to BulkOperation.Update or BulkOperation.
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbDestination_1_IgnoreDefaultColumnsOnInsert_" data-uid="ETLBox.DataFlow.DbDestination`1.IgnoreDefaultColumnsOnInsert*"></a>
+  <h4 id="ETLBox_DataFlow_DbDestination_1_IgnoreDefaultColumnsOnInsert" data-uid="ETLBox.DataFlow.DbDestination`1.IgnoreDefaultColumnsOnInsert">IgnoreDefaultColumnsOnInsert</h4>
+  <div class="markdown level1 summary"><p>If set to true, columns that have a default value declaration in the database are
+ignored when inserting data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool IgnoreDefaultColumnsOnInsert { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver_" data-uid="ETLBox.DataFlow.DbDestination`1.PropertyToColumnNamesResolver*"></a>
+  <h4 id="ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver" data-uid="ETLBox.DataFlow.DbDestination`1.PropertyToColumnNamesResolver">PropertyToColumnNamesResolver</h4>
+  <div class="markdown level1 summary"><p>A custom resolver function that maps property names in the target object
+to corresponding column names in the database.
+You can only use either the <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver">PropertyToColumnNamesResolver</a> or specify a <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ColumnMapping">ColumnMapping</a>, not both.
+Use this to define dynamic mappings, such as converting camelCase property names
+to lowercase or snake_case column names in the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<string, string> PropertyToColumnNamesResolver { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver_examples">Examples</h5>
+  <p>Assume your database columns are all lowercase (e.g., &quot;firstname&quot;, &quot;lastname&quot;),
+and your POCO properties are camelCase (e.g., &quot;FirstName&quot;, &quot;LastName&quot;).</p>
+<pre><code class="lang-csharp">dest.PropertyToColumnResolver = propName =&gt; propName.ToLower();</code></pre>
   <a id="ETLBox_DataFlow_DbDestination_1_TableDefinition_" data-uid="ETLBox.DataFlow.DbDestination`1.TableDefinition*"></a>
   <h4 id="ETLBox_DataFlow_DbDestination_1_TableDefinition" data-uid="ETLBox.DataFlow.DbDestination`1.TableDefinition">TableDefinition</h4>
   <div class="markdown level1 summary"><p>The table definition of the destination table. By default, the table definition is read from the database.

@@ -7,31 +7,31 @@ images: []
 menu:
   docs:
     parent: "stream-connectors"
-weight: 470
+weight: 320
 toc: true
 ---
 
 ## Parquet source
 
-The {{< link-ext url="https://nuget.org/packages/ETLBox.Parquet" text="ETLBox.Parquet" >}} package include the `ParquetSource` and `ParquetDestination` classes. 
+The {{< link-ext url="https://nuget.org/packages/ETLBox.Parquet" text="ETLBox.Parquet" >}} package include the `ParquetSource` and `ParquetDestination` classes.
 
 The csv connector package is based on the {{< link-ext text="Parquet .NET library created by Elastacloud" url="https://github.com/elastacloud/parquet-dotnet" >}}.
-The parquet source let you read data from a parquet file. 
+The parquet source let you read data from a parquet file.
 
-Parquet is an open source file format, which stores data in a columnar storage format (in opposite to e.g. csv files, where data is stored row based.) While storing data in a column based manner has many advantages regarding efficiency and storage size, parquet data needs to be read as rows from the files in order to work with ETLBox. 
-The `ParquetSource` will read all data from the parquet file as rows - starting with the first row until the end of the file (or a defined limit). Internally, the columnar format is translated into rows while reading data. 
+Parquet is an open source file format, which stores data in a columnar storage format (in opposite to e.g. csv files, where data is stored row based.) While storing data in a column based manner has many advantages regarding efficiency and storage size, parquet data needs to be read as rows from the files in order to work with ETLBox.
+The `ParquetSource` will read all data from the parquet file as rows - starting with the first row until the end of the file (or a defined limit). Internally, the columnar format is translated into rows while reading data.
 
 {{< alert text="All streaming connectors share a set of common properties. For example, instead of reading or writing from/into a file you can set ResourceType to ResourceType.Http or ResourceType.AzureBlob in order to read or write into a web endpoint or an Azure blob. See <a href=\"../streaming\">shared functionalities</a> for a list of all shared properties between all streaming connectors."  >}}
 
 ### Example
 
-Let's assume we have a parquet file "Demo.parquet" that has 2 columns, named `Col1` and `Col2`. Here is a simple example to read data all data from this parquet file and write it into an in-memory list. 
+Let's assume we have a parquet file "Demo.parquet" that has 2 columns, named `Col1` and `Col2`. Here is a simple example to read data all data from this parquet file and write it into an in-memory list.
 
 ```C#
 public class MyRow
 {
-    public int Col1 { get; set; }        
-    public string Col2 { get; set; }            
+    public int Col1 { get; set; }
+    public string Col2 { get; set; }
 }
 
 ParquetSource<MyRow> source = new ParquetSource<MyRow>();
@@ -55,7 +55,7 @@ public class MyRow
     public int Id { get; set; }
 
     [ParquetColumn(ColumnName = "Col2")]
-    public string Value { get; set; }            
+    public string Value { get; set; }
 }
 ```
 
@@ -67,7 +67,7 @@ If you don't want to use a strongly typed object, you can also use the dynamic v
 ParquetSource source = new ParquetSource();
 source.Uri = "Demo.parquet";
 MemoryDestination dest = new MemoryDestination();
-            
+
 source.LinkTo(dest);
 Network.Execute(source);
 //All rows available in dest.Data, stored in a list of ExpandoObjects
@@ -91,7 +91,7 @@ Network.Execute(source);
 
 ## Parquet Destination
 
-ETLBox makes writing into a parquet file very simple. The `ParquetDestinatinon` will convert the incoming rows from your source into a columnar format and then store the data into the file. Internally, the parquet file specifies row groups for a set of column - by default, ETLBox will create a new RowGroup foreach batch of 1000 records. This value can be changed by setting the `BatchSize` property. 
+ETLBox makes writing into a parquet file very simple. The `ParquetDestinatinon` will convert the incoming rows from your source into a columnar format and then store the data into the file. Internally, the parquet file specifies row groups for a set of column - by default, ETLBox will create a new RowGroup foreach batch of 1000 records. This value can be changed by setting the `BatchSize` property.
 
 ### Example
 
@@ -99,10 +99,10 @@ ETLBox makes writing into a parquet file very simple. The `ParquetDestinatinon` 
 public class MyRow
 {
     public int Col1 { get; set; }
-    public string Col2 { get; set; }            
+    public string Col2 { get; set; }
 }
 
-var source = new MemorySource<MyRow>();            
+var source = new MemorySource<MyRow>();
 source.DataAsList.Add(new MyRow() { Col1 = 1, Col2 = "Test1" });
 source.DataAsList.Add(new MyRow() { Col1 = 2, Col2 = null });
 source.DataAsList.Add(new MyRow() { Col1 = 3, Col2 = "Test3"});
@@ -115,11 +115,11 @@ Network.Execute(source);
 
 #### Mapping different column names
 
-Like in the ParquetSource, the `ParquetColumn` attribute can be used to store the columns with a different name in the file. For example, the following code snipped would store the data from the properties `Id` and `Value` in the file with the column names `Col1` and `Col2`. You can set a `WriteOrder` in the attribute if you want to specify a particular order when storing the columns. In this example the column `Col2` would be the first column in the parquet file. 
+Like in the ParquetSource, the `ParquetColumn` attribute can be used to store the columns with a different name in the file. For example, the following code snipped would store the data from the properties `Id` and `Value` in the file with the column names `Col1` and `Col2`. You can set a `WriteOrder` in the attribute if you want to specify a particular order when storing the columns. In this example the column `Col2` would be the first column in the parquet file.
 
 ```C#
 public class MyOrderedRow
-{    
+{
     [ParquetColumn(ColumnName = "Col1", WriteOrder =2)]
     public int Id { get; set; }
     public string Clutter { get; set; }
@@ -140,7 +140,7 @@ Network.Execute(source);
 
 ### Using dynamic objects
 
-Of course you can also make use of the dynamic ExpandoObject when storing data with the ParquetDestination. 
+Of course you can also make use of the dynamic ExpandoObject when storing data with the ParquetDestination.
 
 ```C#
 var source = new MemorySource();

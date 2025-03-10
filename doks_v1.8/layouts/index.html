@@ -1,30 +1,125 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1>
-        <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76" height="76" />
-        {{ .Title }}
-      </h1>
-    </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
-        role="button" aria-label="Get started with ETLBox">Get Started</a>
-      <p>
-        <a href="/support/get-trial/">Try for free.</a>
-        Get commercial licenses at <a href="/support/pricing/">low rates</a>.
-      </p>
-      <p>
-        <div class="d-flex justify-content-center align-items-center">
-          <span class="fs-5 me-2">
-            <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener nofollow" aria-label="View ETLBox packages on NuGet">
-              <b id="packages-count">0</b> packages </a> with over
-          </span>
-          <span class="badge bg-primary fs-5 p-3" id="downloads-badge">0</span>
-          <span class="ms-2 fs-5">Total downloads</span>
+<section class="section section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center align-items-center">
+
+    <div class="col-lg-8 order-lg-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-16 text-center">
+          <h1>
+            <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76"
+              height="76" class="light-mode-image"/>
+              <img src="/logos/svg/logo_etlbox_76x76_dark.svg" alt="ETLBox Logo - Simplify ETL with .NET" width="76"
+              height="76" class="dark-mode-image"/>
+            {{ .Title }}
+          </h1>
         </div>
-      </p>
+        <div class="col-lg-12 text-center">
+          <p class="lead">{{ .Params.lead | safeHTML }}</p>
+          <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/product/getting-started/welcome"
+            role="button" aria-label="Get started with ETLBox">Get Started</a>
+          <p>
+            <a href="/support/get-trial/">Try for free.</a>
+            Get commercial licenses at <a href="/pricing/">low rates</a>.
+          </p>
+          <p>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="fs-5 me-2">
+              <a href="https://www.nuget.org/profiles/ETLBoxperts" target="_blank" rel="noopener nofollow"
+                aria-label="View ETLBox packages on NuGet">
+                <b id="packages-count">0</b> packages </a> with over
+            </span>
+            <span class="badge bg-secondary fs-5 p-2" id="downloads-badge">0</span>
+            <span class="ms-2 fs-5">Total downloads</span>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8 order-lg-2 text-center text-lg-start card bg-light">
+
+      <div class="glide-single-customer">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+
+            {{ range .Site.Data.home.statements.statement }}
+            <li class="glide__slide">
+
+              <!-- Quote Row -->
+              <div class="row">
+                <div class="col-18 text-start">
+                  <p>
+                    <i>"{{ .quote }}"</i>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Images Row -->
+              <div class="row align-items-end customer-slide-images">
+                <!-- Logo -->
+                <div
+                  class="col-sm-5 order-2 order-sm-1 d-flex justify-content-center position-relative customer-slide-logo">
+                  <div>
+                    <img src="{{ .logo_light }}" alt="Logo" class="light-mode-image img-fluid" />
+                    <img src="{{ .logo_dark }}" alt="Logo (Dark Mode)" class="dark-mode-image img-fluid" />
+                  </div>
+                </div>
+                <!-- Desktop Image -->
+                <div class="col-sm-6 order-1 order-sm-2 d-flex justify-content-end align-items-end ms-3">
+                  <div>
+                    <img src="{{ .desktop }}" alt="Desktop Image" class="img-fluid" />
+                  </div>
+                </div>
+                <!-- Headshot -->
+                <div
+                  class="col-sm-4 order-3 order-sm-3 d-flex justify-content-center align-items-end position-relative customer-slide-headshot">
+                  <div>
+                    <img src="{{ .headshot }}" alt="Headshot" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Information Rows -->
+              <div class="row mx-1">
+                <div class="col-sm-9 order-2 order-sm-1 bg-light-blue rounded-top-sm rounded-start text-start">
+                  <p class="fs-6 lh-sm ps-2 pt-1">
+                    {{ .company_description }}
+                  </p>
+                </div>
+                <div class="col-sm-7 order-1 order-sm-2 bg-dark-blue rounded-bottom-sm rounded-end text-start">
+                  <p class="fs-6 ps-2 pt-1">
+                    <strong>{{ .name }}<br /></strong>
+                    {{ .position }}<br />
+                    {{ .company }}
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Additional Space -->
+              <div class="row mt-4"></div>
+            </li>
+            {{ end }}
+
+          </ul>
+
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span
+              class="carousel-control-prev carousel-control-prev-icon" aria-hidden="true"></span></button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span
+              class="carousel-control-next carousel-control-next-icon" aria-hidden="true"></span></button>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          {{ range $index, $_ := .Site.Data.home.statements.statement }}
+          <button class="glide__bullet" data-glide-dir="={{ $index }}"></button>
+          {{ end }}
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
@@ -36,109 +131,492 @@
 {{ end }}
 
 
-
 {{ define "sidebar-prefooter" }}
-<section class="section section-sm alteredColor">
-  <div class="container my-4">
-    <div class="text-center">
-      <h1><i class="bi-info-square"></i></h1>
+<section class="section section-sm">
+  <div class="d-flex justify-content-center align-items-center text-center mt-4 mx-3">
+    <h1 class="d-inline-flex align-items-center mb-0">
+      <i class="bi-heart text-danger me-2"></i>
+      <span class="fs-5">Making data dreams come true in <span class="badge bg-secondary fs-5"
+          id="country-count">0</span> countries (and counting!)</span>
+    </h1>
+  </div>
+
+  <div class="glide glide-carousel-reference">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+
+        {{ range .Site.Data.home.references.customer }}
+        <li class="glide__slide">
+          <div class="card bg-light mx-2">
+            <div class="card-body d-flex flex-column ps-4">
+              <p class="card-text">
+                <a href="{{ .link }}" target="_blank" rel="noopener nofollow">
+                  <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo"
+                    loading="lazy">
+                  <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo" loading="lazy">
+                </a>
+              </p>
+              <p class="card-text ps-2"><strong>{{ .name }}</strong><br />
+                {{ .country }}</p>
+            </div>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
     </div>
 
-    <div class="row">
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4"><i class="bi-toggles"></i>&nbsp;Highly customizable</h2>
-        <p>
-          Tired of using User Interfaces where complex requirements are almost
-          impossible to implement? With ETLBox it's easy to write code that fits
-          your unique needs. Plug in your own logic or modify existing behavior
-          to your specific requirements.
-        </p>
-      </div>
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4">
-          <i class="bi-bezier2"></i>&nbsp;Test driven data flows
-        </h2>
-        <p>
-          Always wanted to create your ETL jobs test driven? Still wondering if your data flow will still work
-          after you latest change?
-          Look no further. ETLBox integrates with all common test framework like xUnit, NUnit
-          or MSTest. Now you can write test for any part or logic of your data pipeline.
-        </p>
-      </div>
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4"><i class="bi-laptop"></i>&nbsp;Develop locally</h2>
-        <p>
-          Use the toolset that you and your
-          team is already familiar with. Develop your data pipeline locally with your
-          favorite development and debugging tools. No need to learn a new programming language.
-        </p>
-      </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span
+          class="carousel-control-prev carousel-control-prev-icon" aria-hidden="true"></span></button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span
+          class="carousel-control-next carousel-control-next-icon" aria-hidden="true"></span></button>
+    </div>
 
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4">
-          <i class="bi-card-checklist"></i>&nbsp;Manage your changes
-        </h2>
-        <p>
-          Track your changes with Git (or other source code controls), integrate
-          with your current code review process and connect with your existing
-          CI/CD platform.
-        </p>
-      </div>
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4"><i class="bi-box"></i>&nbsp;Build ETL in .NET</h2>
-        <p>
-          Code your ETL with your favorite .NET language fitting your team’s
-          skills and that is coming with a mature toolset.
-        </p>
-      </div>
-      <div class="col-lg-5 col-md-8">
-        <h2 class="h4"><i class="bi-clouds"></i>&nbsp;Runs everywhere</h2>
-        <p>
-          ETLBox runs on Linux, macOS, and Windows. It is written in the current
-          .NET Standard and successfully tested with the latest versions of .NET.
-        </p>
-      </div>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      {{ range $index, $customer := .Site.Data.references.customer }}
+      <button class="glide__bullet" data-glide-dir="={{ $index }}"></button>
+      {{ end }}
     </div>
   </div>
 </section>
 
+
+<section class="section section-sm bg-light">
+  <div class="container py-0 my-0">
+
+    <div class="mb-2">
+      <div class="row justify-content-center align-items-start">
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1">What is ETLBox?</h5>
+          <p class="small">
+            ETLBox is a complate ETL (Extract, Transform, Load) library and data integration toolbox for .NET.
+            It helps you create and manage data integration pipelines to extract data from different sources,
+            transform it into the format you need, and load it into databases, APIs, or files.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1">Why Skip the GUI?</h5>
+          <p class="small">
+            Unlike traditional ETL tools, ETLBox does not rely on a graphical user interface,
+            making it ideal for developers who prefer programmatic control.
+            It has a powerful data-flow engine with built-in parallel execution,
+            designed to handle large data volumes efficiently — even when the data exceeds available memory.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1">No GUI? That's the Advantage!</h5>
+          <p class="small">
+            ETLBox doesn’t rely on a graphical user interface — and that’s by design.
+            This gives you full control over your ETL directly within your .NET environment,
+            support for test-driven development <strong>(TDD)</strong>,
+            and allows you to build data flows as part of your existing applications.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-8">
+          <h5 class="mb-1">What’s Inside (the Box)?</h4>
+            <p class="small">
+              Explore the full scope of ETLBox and how it simplifies your ETL pipelines and data integration workflows.
+              ETLBox offers a wide range of components, from simple data
+              extraction to complex transformation and seamless loading into your target systems.
+            </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row g-2">
+
+      <div class="col-lg-4 col-md-5">
+        <div class="card m-0 h-100">
+          <div class="card-header text-center text-white bg-primary">
+            <h5 class="m-1"><i class="bi-tools me-2"></i> Supports Everything</h5>
+          </div>
+
+          <div class="card-body pb-0">
+            <p class="m-0"><strong>Runs on Latest .NET Versions</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i>.NET 8</li>
+              <li><i class="bi-dot"></i>.NET 9</li>
+              <li><i class="bi-dot"></i>.NET Framework 4.8.x</li>
+            </ul>
+
+            <p class="m-0"><strong>Supported Platforms</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i>Windows</li>
+              <li><i class="bi-dot"></i>Linux (all distros)</li>
+              <li><i class="bi-dot"></i>macOS</li>
+            </ul>
+
+            <p class="m-0"><strong>Cloud and Container-ready</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i>Docker</li>
+              <li><i class="bi-dot"></i>Kubernetes</li>
+              <li><i class="bi-dot"></i>Azure</li>
+              <li><i class="bi-dot"></i>AWS</li>
+              <li><i class="bi-dot"></i>Google Cloud</li>
+              <li><i class="bi-dot"></i>and more!</li>
+            </ul>
+
+            <p class="m-0"><strong>Multi-Architecture Support</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i>x86</li>
+              <li><i class="bi-dot"></i>x64</li>
+              <li><i class="bi-dot"></i>arm64</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card m-0 h-100">
+          <div class="card-header text-center text-white bg-dark">
+            <h5 class="m-1"><i class="bi-lightning-charge me-2"></i> High-Speed Processing</h5>
+          </div>
+          <div class="card-body pb-0">
+
+            <p class="m-0"><strong>Filtering & Routing</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/cached-batch/">CachedBatchTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/cached-row/">CachedRowTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/distinct/">Distinct</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/filter/">FilterTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/lookup/">LookupTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/multicast/">Multicast</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/wait/">WaitTransformation</a></li>
+            </ul>
+
+            <p class="m-0"><strong>Data Shaping</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/column-transformation/">ColumnTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/row-dupli/">RowDuplication</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/row-multi/">RowMultiplication</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/row/">RowTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/row-validation/">RowValidation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/xml-schema/">XmlSchemaValidation</a></li>
+            </ul>
+
+            <p class="m-0"><strong>Merging & Aggregation</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/cross-join/">CrossJoin</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/transformations/merge-join/">MergeJoin</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/aggregation/">Aggregation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/batch/">BatchTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/blocking/">BlockTransformation</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/pivot/">Pivot</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/blocking-transformations/sort/">Sort</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-5">
+        <div class="card m-0 h-100">
+          <div class="card-header bg-dark-blue text-center bg-secondary text-white">
+            <h5 class="m-1"><i class="bi-cloud-check me-2"></i> Cloud & On-Prem</h5>
+          </div>
+          <div class="card-body pb-0">
+            <p class="m-0"><strong>Relational & Column-Store</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">SQL Server</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">Postgres</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">SQLite</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">Oracle</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">MySql</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">MariaDB</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">IBM Db2</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">SAP ASE (Sybase)</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">SAP HANA</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">Snowflake</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">Apache Spark (SQL)</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">Microsoft Access</a></li>
+            </ul>
+
+            <p class="m-0"><strong>NoSQL Databases</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/mongo/">MongoDb</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/couchbase/">Couchbase</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/redis/">Redis</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/cosmos-db/">Azure Cosmos DB</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/overview/">Neo4j</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/tables">Azure Tables</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-5">
+        <div class="card m-0 h-100">
+          <div class="card-header bg-dark-blue text-center text-white">
+            <h5 class="m-1"><i class="bi-link-45deg me-2"></i> Universal Connectivity</h5>
+          </div>
+
+          <div class="card-body pb-0">
+            <p class="m-0"><strong>Formats</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/csv/">Csv</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/json/">Json</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/xml/">Xml</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/excel/">Excel</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/parquet/">Parquet</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/text/">Text</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/other-connectors/custom/">Binary</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-azureblob/">Azure Blob Storage</a></li>
+            </ul>
+
+            <p class="m-0"><strong>APIs</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-http">REST</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-http">GraphQL</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-http">ODATA</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-http">WebSockets</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/streaming/#resourcetype-http">SOAP</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">ODBC</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/relational-databases/overview/">OLEDB</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/stream-connectors/other-connectors/custom/">gRPC</a></li>
+            </ul>
+
+            <p class="m-0"><strong>Event & Streaming</strong></p>
+            <ul class="list-unstyled lh-sm small">
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/service-bus/">Azure Service Bus</a></li>
+              <li><i class="bi-dot"></i> <a href="/docs/nosql-connectors/kafka/">Apache Kafka</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-md bg-light">
+
+  <div class="glide glide-carousel-connector">
+
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+
+        {{ range .Site.Data.home.connectors.connector }}
+        <li class="glide__slide">
+          <div class="">
+            <p class="card-text">
+              {{/* <a href="{{ .link }}"> */}}
+                <img src="{{ .image_light }}" alt="{{ .alt }}" class="fixed-size-logo light-mode-image" loading="lazy">
+                <img src="{{ .image_dark }}" alt="{{ .alt }}" class="fixed-size-logo dark-mode-image" loading="lazy">
+                {{/* </a> */}}
+            </p>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<section class="section section-sm">
+  <div class="container my-4">
+    <div class="row align-items-center justify-content-center">
+
+      <!-- Left Column: Modern Structured Content -->
+      <div class="col-lg-8">
+        <h2 class="mb-3">Why Choose ETLBox?</h2>
+
+        <!-- Flexibility Section -->
+        <div class="mb-4">
+          <h5><i class="bi-arrows-move me-2"></i> Flexibility Without Limits</h5>
+          <p>
+            ETLBox adapts to your data integration needs, whether you're working with structured databases, APIs, or
+            unstructured flat files.
+            Build custom data pipelines effortlessly and extend functionalities to fit your specific requirements.
+          </p>
+        </div>
+
+        <!-- Performance Section -->
+        <div class="mb-4">
+          <h5><i class="bi-speedometer2 me-2"></i> Optimized for Performance</h5>
+          <p>
+            Powered by a high-performance data-flow engine with built-in parallel execution, ETLBox processes large
+            datasets efficiently,
+            even when data exceeds available memory. It’s built for speed and scalability.
+          </p>
+        </div>
+
+        <!-- Reliability Section -->
+        <div class="mb-4">
+          <h5><i class="bi-shield-check me-2"></i> Reliable & Developer-Friendly</h5>
+          <p>
+            ETLBox is trusted by developers who prefer code over graphical interfaces. It integrates seamlessly with
+            .NET environments,
+            offering stable, production-ready components for critical data workflows.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: FlowWright GUI Alternative -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0 bg-light">
+          <div class="card-body">
+
+            <div class="d-flex justify-content-center">
+              <img src="/images/customer/flowwright_desktop.png" alt="Placeholder 1" class="img-fluid w-50">
+
+            </div>
+
+            <h5><i class="bi-window me-2"></i> Still Need a GUI?</h5>
+            <p class="small">
+              If you're looking for a GUI, ETLBox might not be the right fit. However, there’s
+              <a href="/landing/flowwright" class=""><strong>FlowWright</strong></a> —
+              a fully-featured ETL tool powered by ETLBox under the hood, offering a user-friendly graphical interface
+              with the same performance and flexibility.
+            </p>
+
+            <div class="text-center my-3">
+              <a href="/landing/flowwright" class="btn btn-primary bg-flowwright">Learn More About FlowWright</a>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <img src="/images/references/flowwright.png" alt="Flowwright Logo" class="img-fluid w-50  light-mode-image">
+              <img src="/images/references/flowwright_dark.png" alt="Flowwright Logo"
+                class="img-fluid w-50  dark-mode-image">
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section section-sm bg-light">
+  <div class="container my-4">
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-terminal large"></i></h1>
+        <h5 class="m-1">Easy and Fast to Develop</h5>
+        <p class="m-1">Build complex data flows with minimal code and maximum efficiency. Use a developer friendly and
+          easy-to-use
+          API.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-book large"></i></h1>
+        <h5 class="m-1">Great Documentation</h5>
+        <p class="m-1">No great software without great documentation. We've got extensive documentation and code
+          examples for nearly
+          everything.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-lock large"></i></h1>
+        <h5 class="m-1">Stable, Reliable, and Here to Stay</h5>
+        <p class="m-1">A commercial C# library built by developers for developers.
+          Backed by our customer base ensuring long-term stability and support.
+        </p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-speedometer2 large"></i></h1>
+        <h5 class="m-1">Build for High Performance </h5>
+        <p class="m-1">Efficiently handles extract, transform, and load processes with in-memory data processing,
+          ensuring maximum
+          performance even for large datasets.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-cash-stack large"></i></h1>
+        <h5 class="m-1">Significant Time Savings</h5>
+        <p class="m-1">Save over 80% compared to custom development and reduce development time with ready-to-use ETL
+          components.
+        </p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-globe large"></i></h1>
+        <h5 class="m-1">Cross-Platform Compatibility</h5>
+        <p class="m-1">Runs on Windows, Linux, and macOS with full support for .NET and .NET Framework 4.8.X, ensuring
+          broad
+          compatibility.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-shield-check large"></i></h1>
+        <h5 class="m-1">Security and Stability</h5>
+        <p class="m-1">Proven in production across various industries, ETLBox offers enterprise-grade stability and
+          superior
+          security compared to open-source alternatives.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-people large"></i></h1>
+        <h5 class="m-1">Professional Support</h5>
+        <p class="m-1">Access expert support, coaching, and training to maximize the efficiency of your team and ensure
+          a smooth
+          implementation.</p>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h1 class="m-1"><i class="bi-gift large"></i></h1>
+        <h5 class="m-1">Flexible Licensing and Free Trial</h5>
+        <p class="m-1">Benefit from competitive licensing terms, free trials, and a money-back guarantee to minimize
+          investment
+          risks.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 <section class="section section-sm">
   <div class="container my-4">
     <div class="text-center">
-      <h1><i class="bi-code-square"></i></h1>
+      <h2>From Code to Data Flow in Minutes</h2>
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-lg-5">
-        <h2><i class="bi-lightning"></i>&nbsp;Fast and efficient</h2>
+      <!-- Left Column: Updated Content -->
+      <div class="col-lg-7">
+        <h5><i class="bi-lightning me-2"></i> Simple, Yet Powerful</h5>
         <p>
-          <b>Process your data in-Memory:</b><br />
-          Code your ETL with your favorite .NET language fitting your team’s
-          skills and that is coming with a mature toolset.
+          ETLBox makes it easy to design high-performance ETL processes with just a few lines of code.
+          Whether you’re handling small datasets or processing millions of records, ETLBox will scale to meet your
+          needs.
         </p>
 
-        <h2><i class="bi-minecart-loaded"></i>&nbsp;Made for big data</h2>
+        <h5><i class="bi-gear-wide-connected me-2"></i> Flexible Data Workflows</h5>
         <p>
-          <b>Process any workload:</b><br />
-          ETLBox relies on
-          <a href="https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library"
-            target="_blank" rel="noopener">Microsoft's System.Threading.TPL.Dataflow <i
-              class="bi-box-arrow-up-right"></i></a>
-          library and is designed to process efficiently big amounts of any
-          data.
+          ETLBox provides a flexible data-flow engine that allows you to customize transformations,
+          integrate with multiple data sources, and optimize performance without sacrificing simplicity.
         </p>
 
-        <h2><i class="bi-intersect"></i>&nbsp;Connect everything</h2>
-        <p>
-          <b>Process data from anywhere:</b><br />
-          ETLBox supports a wide range of Sql & NoSql databases, flat files, web
-          services, and more - perfect as a foundation for your tailor made data
-          integregation platform.
-        </p>
+        <h5><i class="bi-list-check me-2"></i> What You Can Do with ETLBox</h5>
+        <ul class="list-unstyled lh-sm">
+          <li><i class="bi-dot"></i> Convert data from various sources to a common format</li>
+          <li><i class="bi-dot"></i> Prepare data for analysis and visualization</li>
+          <li><i class="bi-dot"></i> Migrate data between databases</li>
+          <li><i class="bi-dot"></i> Reduce memory usage with optimized data streaming</li>
+          <li><i class="bi-dot"></i> Enrich data using lookups, joins, and aggregations</li>
+          <li><i class="bi-dot"></i> Synchronize data across multiple systems and environments</li>
+          <li><i class="bi-dot"></i> Export data to CSV, JSON, XML, Parquet, and more</li>
+          <li><i class="bi-dot"></i> Perform bulk data imports and exports efficiently</li>
+          <li><i class="bi-dot"></i> And so much more to explore with ETLBox!</li>
+
+        </ul>
       </div>
 
-      <div class="col-lg-10 offset-1">
-        <h2>ETL made easy</h2>
+      <!-- Right Column: Code Examples -->
+      <div class="col-lg-9">
+        <h5><i class="bi-code-square me-2"></i> ETL Made Easy</h5>
         <p>
           {{ .Content }}
         </p>
@@ -147,378 +625,98 @@
   </div>
 </section>
 
-<section class="section section-sm alteredColor">
+
+
+<section class="section section-sm bg-light">
   <div class="container my-4">
-    <div class="text-center">
-      <h1><i class="bi-camera-video"></i></h1>
-      <h2>Watch our short explainer video</h2>
-      <p><a href="https://www.youtube.com/watch/uErssvgjubg" target="_blank" rel="noopener">This video is also available
-          on youtube, if you want to like or share it.<i class="bi-box-arrow-up-right"></i></a></p>
-    </div>
-
-    <div class="text-center">
-      <div class="embedVideo">
-        <video controls>
-          <source src="videos/etlbox_introduction_with_subtitles.mp4" type="video/mp4">
-        </video>
-        <!-- Loading video from youtube may violate GDPR! -->
-        <!-- <div class="embedVideo">
-        <iframe width="560" height="349" title="ETLBox explainer video" src="https://www.youtube.com/embed/uErssvgjubg"
-          frameborder="0" allowfullscreen>
-        </iframe>
-      </div>
-      -->
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section section-sm">
-  <div class="text-center my-4">
-    <h2>Ask <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a> about ETLBox</h2>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-3 col-lg-1 align-self-start">
-        <img src="images/AinBox.jpg" height="42" width="42" alt="Andreas" />
-      </div>
-      <div class="col-13 col-lg-8 align-self-center">Hi ChatGPT, could you give me an introduction into ETLBox?</div>
-      <div class="col-lg-4"></div>
-    </div>
-  </div>
-</section>
-<section class="section section-sm alteredColor">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-3 col-lg-1 align-self-start">
-        <img src="images/OpenAI.jpg" height="42" width="42" alt="Andreas" />
-      </div>
-      <div class="col-13 col-lg-8 align-self-center">
-        <p>Yes, of course!</p>
-
-        <p>ETLBox is a commercial, .NET-based library for Extract-Transform-Load (ETL) processes. ETL is a critical
-          aspect
-          of data management, and is used to extract data from a variety of sources, clean and transform it into a
-          desired
-          format, and then load it into a target system, such as a data warehouse or a database. ETLBox provides a set
-          of
-          simple, yet powerful components that can be used to automate these tasks.</p>
-
-        <p>The key benefits of using ETLBox include:</p>
-
-        <ol>
-          <li>Simplicity: ETLBox provides an easy-to-use API that makes it simple to implement ETL processes.</li>
-
-          <li>Flexibility: ETLBox supports a wide range of data sources and targets, and provides the ability to
-            transform
-            data in many ways, such as by performing lookups, splitting columns, and aggregating data.</li>
-
-          <li>Performance: ETLBox is designed for high performance and can handle large amounts of data efficiently.
-          </li>
-
-          <li>.NET support: ETLBox is written in C# and is fully integrated with the .NET framework, making it a natural
-            choice for developers who are already familiar with .NET.</li>
-        </ol>
-        In conclusion, ETLBox is a great choice for anyone who needs to implement ETL processes and wants a powerful,
-        yet simple, solution that is commercially supported.
-      </div>
-      <div class="col-lg-4"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-sm">
-  <div class="container my-4">
-    <div class="text-center">
-      <h1><i class="bi-lightbulb"></i></h1>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h2>What is ETL</h2>
-
-        <p>
-          ETL is the foundation of modern Business Intelligence application. It
-          separates the analysis part from everything that comes before it. ETL
-          stands for extract, transform and load, and describes a three-step
-          process:
-        </p>
-
-        <p>
-          <em>Extracting</em> data is about acquiring it from a particular
-          source and doing so in a way that all relevant data is collected. For
-          ETL to work well, data needs to come directly from the source and in
-          its rawest form.
-        </p>
-
-        <p>
-          <em>Transforming</em> data requires it to be stripped of its various
-          formats, cleaned and harmonized. Put differently, it needs to become
-          easy for the end user to read. Ensuring the highest possible data
-          quality is crucial during this process, including detecting and
-          removing duplicates and sorting the data into relevant, predetermined
-          categories.
-        </p>
-
-        <p>
-          In the end, your ETL tool will help harmonize your data and
-          <em>load</em> it into a target location, which essentially is a
-          business intelligence (BI) or database tool of choice. There you can
-          find it ready for your analysis.
-        </p>
-      </div>
-
-      <div class="col-lg-8">
-        <h2>ETLBox core concepts</h2>
-
-        <p>
-          ETLBox is a powerful and versatile C# library for performing ETL operations. With its simple and intuitive
-          API, you can
-          quickly and easily extract data from various sources, transform it into the desired format, and load it into
-          your target system. Whether you need to move data from one database to another or process large amounts of
-          data
-          for business intelligence purposes, ETLBox provides a comprehensive set of tools to streamline your work. It's
-          highly customizable and flexible, so you can easily adapt it to your specific needs.
-        </p>
-
-        <h2>What you can do with ETLBox</h2>
-
-        <p>Here are a few things you can do with ETLBox:</p>
-
-        <ul>
-          <li>Convert incoming data to a common format.</li>
-          <li>Prepare data for analysis and visualization.</li>
-          <li>Migrate between databases.</li>
-          <li>
-            Share data processing logic across web apps, batch jobs, and APIs.
-          </li>
-          <li>Power your data ingestion and integration tools.</li>
-          <li>Consume large CSV, Excel or Json files.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-sm alteredColor">
-  <div class="container text-center pb-5 my-4">
-    <h1><i class="bi-heart text-danger"></i></h1>
-    <p><em>Loved by our customers across the globe</em></p>
-    <div id="testimonials" class="mt-5 carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
-      <div class="carousel-inner  flex align-items-center">
-        <div class="carousel-item active">
-          <a href="https://www.commbank.com.au/" target="_blank" rel="noopener">
-            <img src="images/references/cba_tb.png" alt="Commonwealth Bank of Australia">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://brunata.dk" target="_blank" rel="noopener">
-            <img src="images/references/brunata_logo.png" alt="Brunata">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://www.deloitte.com/" target="_blank" rel="noopener">
-            <img src="images/references/deloitte.svg" alt="Deloitte">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://www.meusburger.com/" target="_blank" rel="noopener">
-            <img src="images/references/meusburger.svg" alt="Meusburger">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://novogenia.com/" target="_blank" rel="noopener">
-            <img src="images/references/novogenia.png" alt="Novogenia">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://www.iwgplc.com/" target="_blank" rel="noopener">
-            <img src="images/references/iwg.svg" alt="IWG PLC">
-          </a>
-        </div>
-      </div>
-
-      <!-- Carousel Buttons -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonials" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-</section>
-
-<section class="section section-sm">
-  <div class="container my-4">
-    <div class="text-center">
-      <h1><i class="bi-clipboard-check"></i></h1>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-8">
-        <h2>Data integration</h2>
-
-        <p>
-          Data integration solves the problem of moving, transforming, and
-          consolidating information from various sources like databases,
-          applications, files, and web services. Bringing them together enables
-          you to cleanse, standardize, de-duplicate, manipulate, and synchronize
-          them. Data integration can play an important role in any project, and
-          it can be critical to have a rock-solid solution in place that is able
-          to integrate numerous applications, services and databases. ETLBox as
-          an Extract, transform, and load (ETL) tool is a perfect fit when you
-          need to create a data integration solution.
-        </p>
-
-        <h2>Common data API</h2>
-
-        <p>
-          ETLBox provides you with a single API for working with data. The API
-          treats all data the same regardless of their source. By developing
-          your applications against a single API, you can use the same
-          components to process data regardless of whether they're coming from a
-          database, Excel file, or 3rd-party API.
-        </p>
-
-        <h2>Embed inside your App</h2>
-
-        <p>
-          ETLBox fits well within your applications and services. It is a very
-          lightweight library and has a very small footprint. It's also
-          complication free - requiring no servers, installation, or config
-          files. You just add it as a package reference into your app and start
-          using it.
-        </p>
-      </div>
-      <div class="col-lg-8">
-        <h2>In-flight Processing</h2>
-
-        <p>
-          ETLBox can run completely in-memory. In most cases, there's no need to
-          store intermediate results in temporary databases or files on disk.
-          Processing data in-memory, while it moves through the pipeline, can be
-          more than 100 times faster than storing it to disk to query or process
-          later.
-        </p>
-
-        <h2>Flexible componentens</h2>
-
-        <p>
-          ETLBox comes with a set of components and tasks that simplify to read
-          data from various sources, transform it on the fly and write it into
-          different destinations. But all components offer you the ability to
-          add your own logic in C# - and you can benefit here from the full
-          power of the .NET framework. Even if your own data source or
-          destination is not supported out of the box, you can easily add it
-          yourself by extending the <em>CustomSource</em> or
-          <em>CustomDestination</em> components.
-        </p>
-
-        <h2>100% .NET</h2>
-
-        <p>
-          ETLBox is built on .NET and runs with the latest version of .NET, .NET Core
-          and .NET Framework. You can write data flows and transformations in C#
-          or any of the other .NET languages you know (e.g. VisualBasic or F#).
-          Also use your existing tools, IDEs, containers, and libraries.
-          Being built on .NET means ETLBox can run on all servers, operating
-          systems, and environments.
-        </p>
-      </div>
-    </div>
-</section>
-
-<section class="section section-sm alteredColor">
-  <div class="container">
-    <div class="text-center">
-      <h3>Explore Some of Our Supported Connectors:</h3>
-    </div>
-    <div>
-      <p>These are just a few of the many connectors ETLBox supports.
-        Whether you're integrating data from popular databases, cloud services, or other platforms, ETLBox makes
-        connecting
-        and transforming your data simple and efficient. Explore our full range of connectors to discover even more
-        possibilities for your data workflows.
+    <div class="text-center mb-4">
+      <h2> Discover ETLBox in Action</h2>
+      <p class="lead"> <i class="bi-camera-reels me-2"></i>
+        See how ETLBox's <strong>code first</strong> approach simplifies data integration and helps you build powerful
+        ETL pipelines.
       </p>
     </div>
-    <div class="row gx-4 align-items-center justify-content-center">
-      <div class="col">
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sqlserver.png" alt="SQLServer" width="180" /></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sql-azure.png" alt="SQLServer Azure" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/postgres.png" alt="Postgres" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/oracle.png" alt="Oracle" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/mysql.png" alt="MySql" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/mariadb.png" alt="MariaDB" class="m-3" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/db2logo.png" alt="IBM DB2" class="m-3" width="60"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sap-ase.png" alt="SAP ASE" class="m-3" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sap-hana.png" alt="SAP Hana" class="m-3" width="180"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/snowflake.png" alt="Snowflake" class="m-3" width="180"/></a>
-        <a href="/docs/db-connectors/access/#odbc-drivers"><img src="/images/supported/access.png" alt="Access"
-            class="m-3" width="40" /></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/spark.png" alt="ETLBox" class="m-3" width="120"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/odbc.png" alt="ETLBox" class="m-3" width="130"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/sql-lite.png" alt="ETLBox" class="m-3" width="120"/></a>
-        <a href="/docs/db-connectors/connection-manager/#supported-relational-databases"><img
-            src="/images/supported/oledb.png" alt="ETLBox" class="m-3" width="45" /></a>
-        <a href="/docs/nosql-connectors/mongo/"><img src="/images/supported/mongodb.png" alt="Mongo DB" class="m-3" width="170"/></a>
-        <a href="/docs/nosql-connectors/kafka/"><img src="/images/supported/kafka.png" alt="Apache Kafka" class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/cosmos-db/"><img src="/images/supported/cosmos.png" alt="Azure Cosmos DB"
-            class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/service-bus/"><img src="/images/supported/servicebus.png" alt="Azure Service Bus"
-            class="m-3" width="140" /></a>
-        <a href="/docs/nosql-connectors/tables/"><img src="/images/supported/tables.png" alt="Azure Tables" class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/couchbase/"><img src="/images/supported/couchbase.png" alt="Couchbase"
-            class="m-3" width="140"/></a>
-        <a href="/docs/nosql-connectors/redis/"><img src="/images/supported/redis.png" alt="Redis" class="m-3" width="140" /></a>
-        <a href="/docs/stream-connectors/parquet/"><img src="/images/supported/parquet.png" alt="Parquet"
-            class="m-3" width="140"/></a>
-        <a href="/docs/stream-connectors/xml/"><img src="/images/supported/xml.svg" alt="XML" class="m-3" height="70"
-            width="50" /></a>
-        <a href="/docs/stream-connectors/csv/"><img src="/images/supported/csv.svg" alt="CSV" class="m-3" height="70"
-            width="50" /></a>
-        <a href="/docs/stream-connectors/json/"><img src="/images/supported/json.svg" alt="JSON" class="m-3"
-            height="70" width="50" /></a>
-        <a href="/docs/stream-connectors/text/"><img src="/images/supported/txt.svg" alt="TEXT" class="m-3"
-            height="70" width="50" /></a>
-        <a href="/docs/stream-connectors/excel/"><img src="/images/supported/excel_s.png" alt="EXCEL" class="m-3"
-            height="90" width="140" /></a>
+
+    <div class="d-flex justify-content-center">
+      <div class="embed-responsive embed-responsive-16by9 text-center">
+        <video controls class="img-fluid rounded w-50">
+          <source src="/videos/etlbox_introduction_with_subtitles.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
-    <div class="text-center">
-      <h5><b>...or create your own with our <a href="/docs/other-connectors/custom/">CustomConnector</a>!</b></h5>
+
+    <div class="text-center mt-3">
+      <p>
+        Prefer YouTube? <a href="https://www.youtube.com/watch/uErssvgjubg" target="_blank" rel="noopener">
+          Watch it on YouTube <i class="bi-box-arrow-up-right"></i></a> and don’t forget to like or share!
+      </p>
     </div>
   </div>
 </section>
 
-<section class="section section-sm">
+<section class="section section-md">
   <div class="container">
-    <div class="text-center my-3 ">
-      <h3>Build Your Dataflows with Code</h3>
-      <p>Take the next step in simplifying your data integration.
-        With ETLBox, you can easily write code to set up, connect, and transform your data exactly the way you
-        need.<br />
-        Click below to begin crafting your ETL processes with our powerful C# library.</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/getting-started/quick-start"
-        role="button">Ready to start?</a>
+    <div>
+      <h2 class="text-center"><i class="bi-rocket-takeoff me-2"></i> Build Your First ETL Pipeline Now—It’s Easier Than
+        You Think!</h2>
+      <div class="row justify-content-center align-items-start">
+        <div class="col-lg-10">
+          <p class="lead">
+            You've seen what ETLBox can do—now it's your turn to get hands-on. Follow these simple steps to start
+            building powerful data pipelines with ease.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center text-start">
+      <!-- Step 1 -->
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-light border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-book me-2"></i> Step 1:<br/> Read the Overview</h5>
+            <p>
+              Understand the core concepts of ETLBox, its capabilities, and how it fits into your data workflows. Get a
+              solid foundation before you start coding.
+            </p>
+            <a href="/docs/overview" class="btn btn-link p-0 mt-auto">Read the Overview <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-light border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-download me-2"></i> Step 2:<br/> Install ETLBox</h5>
+            <p>
+              Get ETLBox up and running in minutes. Follow the simple installation guide for .NET environments and start
+              coding without hassle.
+            </p>
+            <a href="/docs/installation" class="btn btn-link p-0 mt-auto">Install ETLBox <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-light border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-terminal me-2"></i> Step 3:<br/> Quick Start Guide</h5>
+            <p>
+              Jump straight into action with our quick start guide. Write your first ETL pipeline and see how simple,
+              fast, and efficient ETLBox really is.
+            </p>
+            <a href="/docs/quick-start" class="btn btn-link p-0 mt-auto">Start Now <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Call-to-Action Button -->
+    <div class="text-center mt-5">
+      <a href="/product/getting-started/welcome" class="btn btn-primary btn-lg rounded-pill shadow-sm" role="button">
+        🚀 Get Started with ETLBox Now
+      </a>
     </div>
   </div>
 </section>
@@ -529,7 +727,7 @@
 {{ if site.Params.doks.sectionFooter -}}
 <section class="section section-md container-fluid bg-light">
   <div class="row justify-content-center text-center">
-    <div class="col-lg-7">(C) 2024 ETLBoxperts GmbH</div>
+    <div class="col-lg-7">(C) 2025 ETLBoxperts GmbH</div>
   </div>
 </section>
 {{ end -}}

@@ -2,8 +2,9 @@
 title: "Contact"
 description: "Fill out the form to get in touch"
 draft: false
+toc: false
 ---
 
-Thanks for your interest in ETLBox. Fill out a few details and we get back to you - usually within 24 hours.</p>
+We’d love to hear from you! Whether you have questions about ETLBox, need support, or just want to say hello, we’re here to help. Fill out the form below, and we’ll get back to you—usually within 24 hours.
 
 {{< contact-form >}}

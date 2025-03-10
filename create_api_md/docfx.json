@@ -96,6 +96,24 @@
           "files": [
             "**.csproj"
           ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.DbExtensions",
+          "properties": {
+            "TargetFramework": "net8.0"
+          }
+        },      
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "..\\..\\..\\etlbox.source\\ETLBox.EntityFramework",
+          "properties": {
+            "TargetFramework": "net8.0"
+          }
+        },          
+        {
+          "files": [
+            "**.csproj"
+          ],
           "src": "..\\..\\..\\etlbox.source\\ETLBox.Excel",
           "properties": {
             "TargetFramework": "netstandard2.0"

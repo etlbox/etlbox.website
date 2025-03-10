@@ -720,5 +720,59 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_TableDefinition_TryFromTableName_" data-uid="ETLBox.ControlFlow.TableDefinition.TryFromTableName*"></a>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_TryFromTableName_ETLBox_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.TryFromTableName(ETLBox.IConnectionManager,System.String,System.Boolean)">TryFromTableName(IConnectionManager, string, bool)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static TableDefinition TryFromTableName(IConnectionManager connManager, string tableName, bool readConstraints = true)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">readConstraints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 {{< /rawhtml >}}

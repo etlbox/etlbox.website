@@ -7,13 +7,13 @@ images: []
 menu:
   docs:
     parent: "control-flow"
-weight: 940
+weight: 740
 toc: true
 ---
 
 ## Logging Extensions
 
-The nuget package `ETLBox.Logging` comes with useful helper classes that can support you in setting up your logging environment. 
+The nuget package `ETLBox.Logging` comes with useful helper classes that can support you in setting up your logging environment.
 
 {{< alert text="Please note that you must add this package before you can use the classes described below." >}}
 
@@ -31,7 +31,7 @@ ReportTime      |DateTime |False
 Source          |Varchar(1000) |True
 Context         |Varchar(1000) |True
 
-The column names will match with the property names `ETLBoxError`, which is the output type when redirecting errors using `LinkErrorTo()`. 
+The column names will match with the property names `ETLBoxError`, which is the output type when redirecting errors using `LinkErrorTo()`.
 
 ```C#
 CreateErrorTableTask.Create(ConnectionManager, "etlbox_error");
@@ -41,14 +41,14 @@ CreateErrorTableTask.Create(ConnectionManager, "etlbox_error");
 
 ### LogSection
 
-The LogSection allows you to wrap custom code with your own logging messages - these messages created by the log output will have the same log items as all other log messages produce by ETLBox. 
+The LogSection allows you to wrap custom code with your own logging messages - these messages created by the log output will have the same log items as all other log messages produce by ETLBox.
 
-The following example will create 4 rows in your log output. Every time a tasks or component starts, 
-it will create a log entry with an action 'START'. When it's done with its execution, it will create 
+The following example will create 4 rows in your log output. Every time a tasks or component starts,
+it will create a log entry with an action 'START'. When it's done with its execution, it will create
 another log entry with action type 'END'
 
 ```C#
-LogSection.Execute("some custom code", () => { 
+LogSection.Execute("some custom code", () => {
     SqlTask.ExecuteNonQuery("Select 1 as test");
 });
 ```
@@ -73,14 +73,14 @@ LogTask.Fatal("Some text!");
 
 ## Logging of Load Processes
 
-Additionally to the traditional nlog setup where log information is send to any target by changing the configuration, 
+Additionally to the traditional nlog setup where log information is send to any target by changing the configuration,
 ETLBox comes with a set of Tasks to control your ETL processes - so called "Load processes".
 
 The use case for a load process table is simple - if you have one log table, this table will store a log messages for an ETL job.
 If the job run again, more or less the same log information is written in the log table - with different timestamps of course. If you
 need to identify which log entry relates to which job run, there are some information missing. This is where the load process table comes in.
 
-You can use the task `LoadProcessTask` to create and control a load process table. 
+You can use the task `LoadProcessTask` to create and control a load process table.
 
 ```C#
 LoadProcessTask.CreateTable(connection,"etlbox_loadprocess");
@@ -105,7 +105,7 @@ was_aborted     |Int16    |0 or 1
 
 
 The table will contain information about the ETL processes that you started in your code with the `Start(..)` method.
-To end or abort a process, there is the `End(..)` or `Abort(..)` methods. 
+To end or abort a process, there is the `End(..)` or `Abort(..)` methods.
 Let's look at the following  example for logging into the load process table.
 
 ```C#
@@ -120,22 +120,22 @@ try {
 ```
 
 After calling `Start()` a new entry was created in the `etlbox_loadprocess` table. This entry had a start date and contained
-the process name "Process 1" and the start message "Starting process". The column `is_running` is 0. 
-Calling the `End()` will set an end date and change the columns `is_running` to 0 and was_successful to 1. Vice versa will 
-`Abort())` set `is_running` to 0 and `was_aborted` to 1. The abort message would contain the exception as string. 
+the process name "Process 1" and the start message "Starting process". The column `is_running` is 0.
+Calling the `End()` will set an end date and change the columns `is_running` to 0 and was_successful to 1. Vice versa will
+`Abort())` set `is_running` to 0 and `was_aborted` to 1. The abort message would contain the exception as string.
 
 When the load process entry is added to the table, a new id is created.
 All information about the load process (including the id) can be accessed in the current `process` variable.
 
 
 
-## Logging to database 
+## Logging to database
 
-Of course logging to console output or to a file is perhaps not sufficient. If you want to have logging tables in your database, you can modify your logging setup to directly write into your database table. 
+Of course logging to console output or to a file is perhaps not sufficient. If you want to have logging tables in your database, you can modify your logging setup to directly write into your database table.
 
 ### Creation of log table
 
-First you need to create a database table that is capable of holding the log information that you are interested in 
+First you need to create a database table that is capable of holding the log information that you are interested in
 The `LogTask` does come with a `CreateLogTable` method that will create a table with the following structure:
 
 Column name     |Data type|Allow Nulls|
@@ -194,7 +194,7 @@ The modification to the nlog.config could  like this:
 
 The static `LogSettings` class in the namespace `ETLBox.Logging` contains the following variables:
 
-- `LogTable`: Name of the log table created by `LogTask.CreateLogTable` 
+- `LogTable`: Name of the log table created by `LogTask.CreateLogTable`
 - `LoadProcessTable`: Name of the load process table created by `LoadProcessTask.CreateTable`
 - `CurrentLoadProcess`: Information about the current running load processed initiated by `Start()` on a `LoadProcess`
 
