@@ -191,6 +191,41 @@ This file contains XML entries defining the configured package sources. If neede
 </configuration>
 ```
 
+### Authentication for the GitHub Package Feed
+
+When adding the GitHub NuGet package source, you will be prompted to authenticate. To access the feed, you need to use a Personal Access Token (classic) as your password.
+
+#### Generating a Personal Access Token (classic)
+
+1. Go to {{< link-ext text="GitHub Personal Access Tokens" url="https://github.com/settings/tokens" >}}.
+2. Click **Generate new token (classic)**.
+3. Select an **expiration date**.
+4. Under **Scopes**, enable:
+   - `read:packages` (allows access to NuGet packages).
+5. Click **Generate token** and **copy** it immediately — GitHub won’t show it again.
+
+For detailed steps, refer to {{< link-ext text="GitHub's official documentation" url=https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-to-github-packages" >}}.
+
+#### Storing the Access Token
+
+When prompted in Visual Studio or the CLI, use:
+
+- **Username**: Your GitHub username
+- **Password**: Your Personal Access Token (PAT)
+
+By default, Visual Studio and the NuGet CLI store your credentials in the Windows Credential Manager or the system keychain:
+
+- **Windows:** `Credential Manager` (search in Start Menu → "Manage Windows Credentials").
+- **Mac/Linux:** Stored in `~/.nuget/NuGet/NuGet.Config` or the OS keychain.
+
+If you want to store credentials manually in NuGet, run:
+
+```sh
+dotnet nuget add source "https://nuget.pkg.github.com/etlbox/index.json" -name "etlbox" --username YOUR_GITHUB_USERNAME --password YOUR_PERSONAL_ACCESS_TOKEN --store-password-in-clear-text
+```
+
+For further details, see {{< link-ext text="GitHub’s NuGet authentication guide" url="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry" >}}.
+
 ### Understanding Versioning for License-Free Packages
 
 To avoid conflicts when using both NuGet.org and GitHub package feeds, the license-free versions in the GitHub feed always have an additional `.1` at the end.
