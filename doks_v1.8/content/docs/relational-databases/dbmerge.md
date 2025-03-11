@@ -231,9 +231,15 @@ var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.IdColumns.Add(new IdColumn("Key"));
-merge.CompareColumns.Add(new CompareColumn("Value"));
-merge.UpdateColumns.Add(new UpdateColumn("Value"));
+merge.IdColumns = new[] {
+    new IdColumn() { IdPropertyName = "Key" }
+};
+merge.CompareColumns = new[] {
+    new CompareColumn() { ComparePropertyName = "Value" }
+};
+merge.UpdateColumns = new[] {
+    new UpdateColumn() { UpdatePropertyName = "Value" }
+};
 ```
 
 ### Example: Dynamic Merge with ExpandoObject
@@ -251,9 +257,12 @@ source.DataAsList.Add(row1);
 var merge = new DbMerge(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.IdColumns.Add(new IdColumn("Key"));
-merge.CompareColumns.Add(new CompareColumn("Value"));
-
+merge.IdColumns = new[] {
+    new IdColumn() { IdPropertyName = "Key" }
+};
+merge.CompareColumns = new[] {
+    new CompareColumn() { ComparePropertyName = "Value" }
+};
 source.LinkTo(merge);
 Network.Execute(source);
 ```
@@ -315,8 +324,12 @@ public class MyMergeRow : MergeableRow {
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.IdColumns.Add(new IdColumn("Key"));
-merge.CompareColumns.Add(new CompareColumn("Value"));
+merge.IdColumns = new[] {
+    new IdColumn() { IdPropertyName = "Key" }
+};
+merge.CompareColumns = new[] {
+    new CompareColumn() { ComparePropertyName = "Value" }
+};
 ```
 
 This ensures that `Key` is used to match records, and `Value` is checked to detect updates.
@@ -344,7 +357,10 @@ public class MyMergeRow : MergeableRow {
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.UpdateColumns.Add(new UpdateColumn("Value"));
+
+merge.UpdateColumns = new[] {
+    new UpdateColumn() { UpdatePropertyName = "Value" }
+};
 ```
 
 This ensures that only the `Value` column is updated, even if other fields have changed.
@@ -374,7 +390,9 @@ public class MyMergeRow : MergeableRow {
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Delta
 };
-merge.DeleteColumns.Add(new DeleteColumn() { DeletePropertyName = "DeleteFlag", DeleteOnMatchValue = "DELETE" });
+merge.DeleteColumns = new[] {
+    new DeleteColumn() { DeletePropertyName = "DeleteFlag", DeleteOnMatchValue = "DELETE" }
+};
 ```
 
 Records with `DeleteFlag = "DELETE"` will be removed from the destination table, while other changes are processed normally.
@@ -486,11 +504,18 @@ var merge = new DbMerge(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
 
-merge.IdColumns.Add(new IdColumn { IdPropertyName = "Key" });
-merge.CompareColumns.Add(new CompareColumn { ComparePropertyName = "Value" });
-
-merge.ColumnMapping.Add(new DbColumnMap { DbColumnName = "DB_Key", PropertyName = "Key" });
-merge.ColumnMapping.Add(new DbColumnMap { DbColumnName = "DB_Value", PropertyName = "Value" });
+merge.IdColumns = new[] {
+    new IdColumn() { IdPropertyName = "Key" }
+};
+merge.CompareColumns = new[] {
+    new CompareColumn() { ComparePropertyName = "Value" }
+};
+merge.ColumnMapping = new[] {
+    new DbColumnMap { DbColumnName = "DB_Key", PropertyName = "Key" }
+};
+merge.ColumnMapping = new[] {
+    new DbColumnMap { DbColumnName = "DB_Value", PropertyName = "Value" }
+};
 ```
 
 Specific columns can be ignored by setting `IgnoreColumn = true`. This ensures that the corresponding property is excluded from the database operation.
@@ -600,10 +625,12 @@ Column converters work for both POCOs and `ExpandoObject` and can be defined man
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.ColumnConverters.Add(new ColumnConverter {
-    ColumnName = "Value",
-    ConversionFunc = val => ((DateTime)val).ToString("yyyyMMdd")
-});
+merge.ColumnConverters = new[] {
+    new ColumnConverter {
+        ColumnName = "Value",
+        ConversionFunc = val => ((DateTime)val).ToString("yyyyMMdd")
+    }
+};
 ```
 
 In this example, the `Value` column is transformed into a specific date format before the merge operation.
@@ -622,9 +649,11 @@ Value-generated columns apply to both POCOs and `ExpandoObject` and can be confi
 var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     MergeMode = MergeMode.Full
 };
-merge.ValueGeneratedColumns.Add(new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) {
-    ValueGenerationPropertyName = "Id"
-});
+merge.ValueGeneratedColumns = new[] {
+    new ValueGenerationColumn(ValueGenerationEvent.OnAddOrUpdate) {
+        ValueGenerationPropertyName = "Id"
+    }
+};
 ```
 
 In this example, the `Id` column is populated by the database during insertion, and `DbMerge` retrieves the assigned values after the operation. This ensures that identity, computed, or default values are available in memory after the merge process completes.
