@@ -249,7 +249,7 @@ The `DbMerge` also supports the merge modes `InsertsAndUpdatesOnly` and `Updates
 | Handling deletions               | `DbMerge` (full or delta mode) |
 | Staging before final processing  | `DbDestination`, followed by processing |
 
-For more details on the Merge operation, see [Merge Overview](/recipes/data-integration/merge-overview/). Or refere to this example of [loading data into Star Schema](/recipes/etl/star-schema/).
+For more details on the Merge operation, see [Merge Overview](/recipes/data-integration/merge-overview/). Or refer to this example of [loading data into Star Schema](/recipes/etl/star-schema/).
 
 By using `DbDestination` and `DbMerge`, ETL workflows remain scalable, avoiding slow row-by-row operations while maximizing performance.
 

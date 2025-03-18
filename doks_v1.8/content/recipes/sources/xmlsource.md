@@ -101,7 +101,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 If attributes and elements are mixed in your source xml, you can use the Xml attributes provided by the {{< link-ext url="https://learn.microsoft.com/en-us/dotnet/api/system.xml.serialization" text="System.Xml.Serialization" >}} namespace.
 
 ```C#
-[XmlRoot("Element")]
+[XmlRoot("Element", Namespace = "http://foo.com")]
 public class ElementWA
 {
     [XmlElement("Inner")]
@@ -136,25 +136,25 @@ foreach (var row in dest.Data)
 Content of file 'ElementsAndAttributes.xml'
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<Root>
-    <CreationDate>2022-05-01</CreationDate>
-    <Element Id="1">
-    <Inner Number="1.1">
-        <Value>Test1</Value>
-    </Inner>
-    </Element>
-    <Element Id="2">
-    <Inner Number="1.2">
-        <Value></Value>
-    </Inner>
-    </Element>
-    <Element Id="3">
-    <Inner Number="1.3">
-        <Value>Test3</Value>
-    </Inner>
-    </Element>
-    <Confidential>false</Confidential>
-</Root>
+<ns:Root xmlns:ns="http://foo.com">
+    <ns:CreationDate>2022-05-01</ns:CreationDate>
+    <ns:Element Id="1">
+        <ns:Inner Number="1.1">
+            <ns:Value>Test1</ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Element Id="2">
+        <ns:Inner Number="1.2">
+            <ns:Value></ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Element Id="3">
+        <ns:Inner Number="1.3">
+            <ns:Value>Test3</ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Confidential>false</ns:Confidential>
+</ns:Root>
 ---
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
@@ -176,6 +176,7 @@ var source = new XmlSource() {
 };
 source.ElementName = "Element";
 source.AttributePrefixForDynamic = "at_";
+source.Namespace= "http://foo.com";
 
 var dest = new MemoryDestination();
 
@@ -189,25 +190,25 @@ foreach (dynamic row in dest.Data)
 Content of file 'ElementsAndAttributes.xml'
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<Root>
-    <CreationDate>2022-05-01</CreationDate>
-    <Element Id="1">
-    <Inner Number="1.1">
-        <Value>Test1</Value>
-    </Inner>
-    </Element>
-    <Element Id="2">
-    <Inner Number="1.2">
-        <Value></Value>
-    </Inner>
-    </Element>
-    <Element Id="3">
-    <Inner Number="1.3">
-        <Value>Test3</Value>
-    </Inner>
-    </Element>
-    <Confidential>false</Confidential>
-</Root>
+<ns:Root xmlns:ns="http://foo.com">
+    <ns:CreationDate>2022-05-01</ns:CreationDate>
+    <ns:Element Id="1">
+        <ns:Inner Number="1.1">
+            <ns:Value>Test1</ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Element Id="2">
+        <ns:Inner Number="1.2">
+            <ns:Value></ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Element Id="3">
+        <ns:Inner Number="1.3">
+            <ns:Value>Test3</ns:Value>
+        </ns:Inner>
+    </ns:Element>
+    <ns:Confidential>false</ns:Confidential>
+</ns:Root>
 ---
 Received Id: 1, Value1: Test1, Value2: 1.1
 Received Id: 2, Value1: , Value2: 1.2
@@ -680,7 +681,6 @@ public class XmlDataAddCol {
 
 PrintFile("res/Examples/input.xml");
 var source = new XmlSource<XmlDataAddCol>("res/Examples/input.xml", ETLBox.ResourceType.File);
-source.ElementName = "ag:Main";
 var rowTrans = new RowTransformation<XmlDataAddCol>();
 rowTrans.TransformationFunc = row => {
     row.NewColumn = "Additional data for id " + row.EmpID;
