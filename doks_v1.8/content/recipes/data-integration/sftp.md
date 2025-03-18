@@ -63,7 +63,7 @@ public class FileData {
 }
 ```
 
-The example is very straightforward - it utilizes a TextSource to read data from a simple text file (in this case a `readme.txt`). But the same approach can be easily transferred to all other ETLBox streaming connectors (e.g. JsonSource, XmlSource, TextSource, CsvSource, ...) - they all [offer you to pass an existing stream](https://www.etlbox.net/docs/stream-connectors/streaming/#pass-existing-stream) as a parameter.
+The example is very straightforward - it utilizes a TextSource to read data from a simple text file (in this case a `readme.txt`). But the same approach can be easily transferred to all other ETLBox streaming connectors (e.g. JsonSource, XmlSource, TextSource, CsvSource, ...) - they all [offer you to pass an existing stream](https://www.etlbox.net/docs/streaming-connectors/shared/#using-an-existing-stream) as a parameter.
 
 ## Example Code Output
 

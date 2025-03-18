@@ -131,37 +131,37 @@ image_dark = "/images/supported/redis.png"
 alt = "Redis"
 
 [[connector]]
-link = "/docs/stream-connector/parquet/"
+link = "/docs/streaming-connectors/parquet/"
 image_light = "/images/supported/parquet.png"
 image_dark = "/images/supported/parquet.png"
 alt = "Parquet"
 
 [[connector]]
-link = "/docs/stream-connector/xml/"
+link = "/docs/streaming-connectors/xml/"
 image_light = "/images/supported/xml.svg"
 image_dark = "/images/supported/xml.svg"
 alt = "XML"
 
 [[connector]]
-link = "/docs/stream-connector/csv/"
+link = "/docs/streaming-connectors/csv/"
 image_light = "/images/supported/csv.svg"
 image_dark = "/images/supported/csv.svg"
 alt = "CSV"
 
 [[connector]]
-link = "/docs/stream-connector/json/"
+link = "/docs/streaming-connectors/json/"
 image_light = "/images/supported/json.png"
 image_dark = "/images/supported/json_dark.png"
 alt = "JSON"
 
 [[connector]]
-link = "/docs/stream-connector/text/"
+link = "/docs/streaming-connectors/text/"
 image_light = "/images/supported/txt.png"
 image_dark = "/images/supported/txt_dark.png"
 alt = "TEXT"
 
 [[connector]]
-link = "/docs/stream-connector/excel/"
+link = "/docs/streaming-connectors/excel/"
 image_light = "/images/supported/excel_s.png"
 image_dark = "/images/supported/excel_s.png"
 alt = "EXCEL"

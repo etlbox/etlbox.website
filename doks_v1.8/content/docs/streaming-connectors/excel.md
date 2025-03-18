@@ -1,13 +1,13 @@
 ---
 title: "Excel"
-description: ""
-lead: ""
+description: "With the ETLBox Excel Connector, you can import and export data between Excel files and your ETL pipelines. ExcelSource supports reading from specific sheets, handling files without headers, and mapping columns dynamically. ExcelDestination enables writing structured data while offering options like custom sheet names, appending to existing files, and adjusting header settings. "
+lead: "The ETLBox Excel Connector allows you to integrate Excel files into your ETL workflows. You can read data from .xlsx files using ExcelSource or write structured data with ExcelDestination. Whether working with predefined headers, dynamic objects, or password-protected files, the connector provides flexibility for handling Excel data efficiently."
 draft: false
 images: []
 menu:
   docs:
-    parent: "stream-connectors"
-weight: 330
+    parent: "streaming-connectors"
+weight: 230
 toc: true
 chatgpt-review: true
 ---

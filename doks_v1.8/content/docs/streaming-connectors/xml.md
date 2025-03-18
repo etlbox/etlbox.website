@@ -6,8 +6,8 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "stream-connectors"
-weight: 330
+    parent: "streaming-connectors"
+weight: 230
 toc: true
 chatgpt-review: true
 ---

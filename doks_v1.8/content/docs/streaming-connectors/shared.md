@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "streaming-connectors"
-weight: 320
+weight: 220
 toc: true
 chatgpt-review: true
 ---
