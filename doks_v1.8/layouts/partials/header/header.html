@@ -23,6 +23,7 @@
       <img src="/logos/svg/logo_etlbox_32x32_dark.svg" class="dark-mode-image" alt="ETLBox" width="32" height="32">
       {{ .Site.Title }}
     </a>
+    <a class="btn btn-primary rounded-pill me-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl2 | absURL }}" role="button">{{ site.Params.doks.navBarButtonText2 }}</a>
 
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
