@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: "Introduction into ETLBox"
+description: "Introduction to ETLBox"
 draft: false
 weight: 10
 ---

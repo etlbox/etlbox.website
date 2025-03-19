@@ -1,6 +1,6 @@
 ---
-title: "NoSql databases"
-description: "An overview of nosql databases"
+title: "NoSql Databases"
+description: "NoSql Database"
 draft: false
-weight: 35
+weight: 40
 ---

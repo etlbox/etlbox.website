@@ -1,6 +1,6 @@
 ---
 title: "Relational Databases"
-description: "Overview of database connectors"
+description: "Overview of relational databases"
 draft: false
 weight: 20
 ---
