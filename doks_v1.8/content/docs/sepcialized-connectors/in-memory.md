@@ -6,8 +6,8 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "other-connectors"
-weight: 400
+    parent: "specialized-connectors"
+weight: 320
 toc: true
 ---
 

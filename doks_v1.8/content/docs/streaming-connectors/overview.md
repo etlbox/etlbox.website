@@ -74,7 +74,7 @@ For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/con
 | **Parquet** | `ETLBox.Parquet` | Optimized for big data, column-based storage |
 
 {{< callout context="tip" icon="outline/rocket" >}}
-If you need to read binary data, consider using [`CustomSource`](/docs/other-connectors/custom) and [`CustomDestination`](/docs/other-connectors/custom). These connectors allow you to implement custom parsing logic for non-standard data formats.
+If you need to read binary data, consider using [`CustomSource`](/docs/specialized-connectors/custom) and [`CustomDestination`](/docs/specialized-connectors/custom). These connectors allow you to implement custom parsing logic for non-standard data formats.
 {{< /callout >}}
 
 ## Key Features
