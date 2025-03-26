@@ -9,6 +9,7 @@ menu:
     parent: "specialized-connectors"
 weight: 320
 toc: true
+chatgpt-review: true
 ---
 
 ## Void Destination
@@ -69,7 +70,7 @@ Network.Execute(source);
 
 ### Automatic Complement Void Links
 
-{{< callout context="caution" icon="alert/triangle" >}}
+{{< callout context="caution" icon="outline/alert-triangle" >}}
 The `TryAddComplementVoidLinks` option is **disabled by default** and is **not recommended for production use**, as it may hide unintended filtering issues. It is intended for **debugging purposes**, helping to identify if a missing predicate is causing the network to hang by automatically discarding unhandled records.
 {{< /callout >}}
 

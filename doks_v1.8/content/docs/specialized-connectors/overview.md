@@ -9,6 +9,7 @@ menu:
     parent: "specialized-connectors"
 weight: 310
 toc: true
+chatgpt-review: true
 ---
 
 These connectors allow flexible data processing by supporting lists, collections, custom sources, and columnar storage with **Microsoft.Data.Analysis.DataFrame**.

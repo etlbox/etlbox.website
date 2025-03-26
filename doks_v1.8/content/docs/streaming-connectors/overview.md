@@ -64,7 +64,7 @@ For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/con
 
 ### Connector-Specific Highlights
 
-| Format  | Packge | Special Features |
+| Format  | Package | Special Features |
 |---------|-------------|-------------------|------------------|
 | **CSV**  | `ETLBox.Csv` | Uses CsvHelper, supports delimiter configuration |
 | **JSON** | `ETLBox.Json` | Supports nested structures, JSONPath queries |
