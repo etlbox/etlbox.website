@@ -89,43 +89,43 @@ image_dark =  "/images/supported/oledb.png"
 alt = "ETLBox"
 
 [[connector]]
-link = "/docs/nosql-connector/mongo/"
+link = "/docs/nosql-databases/mongo/"
 image_light = "/images/supported/mongodb.png"
 image_dark =  "/images/supported/mongodb.png"
 alt = "Mongo DB"
 
 [[connector]]
-link = "/docs/nosql-connector/kafka/"
+link = "/docs/messaging/kafka/"
 image_light = "/images/supported/kafka.png"
 image_dark =  "/images/supported/kafka_dark.png"
 alt = "Apache Kafka"
 
 [[connector]]
-link = "/docs/nosql-connector/cosmos-db/"
+link = "/docs/nosql-databases/cosmos/"
 image_light = "/images/supported/cosmos.png"
 image_dark =  "/images/supported/cosmos.png"
 alt = "Azure Cosmos DB"
 
 [[connector]]
-link = "/docs/nosql-connector/service-bus/"
+link = "/docs/messaging/service-bus/"
 image_light = "/images/supported/servicebus.png"
 image_dark =  "/images/supported/servicebus.png"
 alt = "Azure Service Bus"
 
 [[connector]]
-link = "/docs/nosql-connector/tables/"
+link = "/docs/nosql-databases/tables/"
 image_light = "/images/supported/tables.png"
 image_dark = "/images/supported/tables.png"
 alt = "Azure Tables"
 
 [[connector]]
-link = "/docs/nosql-connector/couchbase/"
+link = "/docs/nosql-databases/couchbase/"
 image_light = "/images/supported/couchbase.png"
 image_dark = "/images/supported/couchbase_dark.png"
 alt = "Couchbase"
 
 [[connector]]
-link = "/docs/nosql-connector/redis/"
+link = "/docs/nosql-databases/redis/"
 image_light = "/images/supported/redis.png"
 image_dark = "/images/supported/redis.png"
 alt = "Redis"

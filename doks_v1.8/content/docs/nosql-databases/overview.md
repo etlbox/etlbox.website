@@ -23,6 +23,7 @@ NoSQL databases are designed for flexibility and performance, especially when ha
 | [Azure Table Storage](../tables) | Key-Value/Table Store | `ETLBox.Azure.Tables`       |
 | [Couchbase](../couchbase) | Document Store     | `ETLBox.Couchbase`       |
 | [MongoDB](../mongo)  | Document Store     | `ETLBox.MongoDb`         |
+| [Neo4j](../neo4j)     | Graph Database     | `ETLBox.Neo4j`            |
 | [Redis](../redis) | Key-Value Store    | `ETLBox.Redis`           |
 
 Each connector is built around the ETLBox data flow model, supporting efficient integration with NoSQL sources and destinations. See the individual pages for details on configuration, usage examples, and limitations.
