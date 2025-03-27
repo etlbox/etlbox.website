@@ -1,13 +1,13 @@
 ---
 title: "Lookup Transformation"
-description: "Provides a comprehensive guide to using LookupTransformation in ETLBox to enrich data flows with external data sources. Covers full and partial caching, key matching strategies, dynamic object support, error handling, attribute-based configuration, and options for managing unmatched rows."
+description: "Details about the LookupTransformation"
 lead: "Improve your data with the LookupTransformation. This guide shows you how to add more information to your data as it moves through the process, making sure your data is complete and useful."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 525
 toc: true
 chatgpt-review: true
 ---
@@ -153,6 +153,22 @@ lookup.PartialCacheSettings.LoadCacheSql = inputs =>
 
 This is only necessary if you want full control over how the lookup retrieves data from the database source. If you provide the `MatchColumns` and `RetrieveColumns`, the SQL for retrieving data from the lookup database source is generated automatically.
 
+## Handling Missing Matches
+
+The `OnNoMatchFound` property allows you to define a custom action that is triggered when a lookup key is not found in the cache. This is useful for logging or diagnostic purposes.
+
+This property is **only applicable** if you do **not** define `ApplyRetrievedCacheToInput` or `ApplyRetrievedCacheForMultipleOutputs`.
+
+#### Example
+
+```csharp
+lookup.OnNoMatchFound = (inputRow, missingKey) => {
+    Console.WriteLine($"No match for key: {missingKey} in input row: {inputRow}");
+};
+```
+
+This will output a message whenever a lookup key is missing, helping to trace unmatched records.
+
 ## Handling Multiple Matches
 
 If your lookup key can match multiple records, you can enable handling multiple matches:
@@ -170,6 +186,7 @@ lookup.ApplyRetrievedCacheForMultipleOutputs = (input, cache) => {
 ```
 
 {{< alert text="The main difference between the <code>ApplyRetrievedCacheForMultipleOutputs</code> and <code>ApplyRetrievedCacheForInput</code> is that the first one can return an array of rows instead of a single row. This allows you to return multiple rows if necessary that can be processed by the next component. If you always want to return a single row, use the <code>ApplyRetrievedCacheForInput</code>" >}}
+
 
 ## Using the CachedData collections
 
@@ -464,3 +481,4 @@ Id: 3, Value: Value3
 ```
 
 This is especially useful when you only need rows that successfully match in the lookup, without having to write additional filtering logic.
+

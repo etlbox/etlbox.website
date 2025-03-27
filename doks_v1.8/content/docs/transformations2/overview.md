@@ -66,18 +66,18 @@ Settings.MaxBufferSize = 10000; // Global default
 
 | Transformation            | Description                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
-| RowTransformation         | Applies custom logic to each row                                            |
-| CachedRowTransformation   | Like RowTransformation, but caches previously processed rows               |
-| ColumnTransformation      | Renames, reorders, or removes columns; outputs dynamic ExpandoObject        |
-| FilterTransformation      | Filters rows based on a predicate                                           |
-| Distinct                  | Removes duplicate rows                                                      |
-| LookupTransformation      | Enriches rows using an in-memory lookup                                    |
-| MergeJoin                 | Joins two input streams using a match function                             |
-| Multicast                 | Forwards each row to multiple outputs                                       |
-| RowDuplication            | Duplicates rows a specified number of times                                 |
-| RowMultiplication         | Splits one row into multiple output rows                                    |
-| RowValidation             | Validates rows and separates valid/invalid rows                             |
-| XmlSchemaValidation       | Validates XML strings against an XSD schema                                 |
+| [RowTransformation](../row)         | Applies custom logic to each row                                            |
+| [CachedRowTransformation](../cached-row)   | Like RowTransformation, but caches previously processed rows               |
+| [ColumnTransformation](../column)      | Renames, reorders, or removes columns; outputs dynamic ExpandoObject        |
+| [Distinct](../distinct)                  | Removes duplicate rows                                                      |
+| [FilterTransformation](../filter)      | Filters rows based on a predicate                                           |
+| [LookupTransformation](../lookup)      | Enriches rows using an in-memory lookup                                    |
+| [MergeJoin](../merge-join)                 | Joins two input streams using a match function                             |
+| [Multicast](../multicast)                 | Forwards each row to multiple outputs                                       |
+| [RowDuplication](../row-duplication)            | Duplicates rows a specified number of times                                 |
+| [RowMultiplication](../row-multiplication)         | Splits one row into multiple output rows                                    |
+| [RowValidation](../row-validation)             | Validates rows and separates valid/invalid rows                             |
+| [XmlSchemaValidation](../xml-schema)       | Validates XML strings against an XSD schema                                 |
 
 ## Descriptions
 

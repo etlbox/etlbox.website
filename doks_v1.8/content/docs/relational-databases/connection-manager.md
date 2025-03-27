@@ -202,6 +202,19 @@ var sqlConnectionManager = new SqlConnectionManager("Data Source=.;Integrated Se
 
 For databases that do not support MARS, separate connections are required to avoid transaction conflicts.
 
+## Connection Retry Attempts
+
+Every connection manager in ETLBox includes the `MaxLoginAttempts` property, which controls how many times ETLBox will attempt to open a connection to the database if the initial attempt fails.
+
+By default, the value is set to **2**. Between each retry, there is a one-second delay.
+
+```csharp
+var conn = new SqlConnectionManager("Data Source=.;Initial Catalog=myDB;Integrated Security=SSPI;") {
+    MaxLoginAttempts = 5
+};
+```
+
+This property is especially helpful in environments where transient connection issues are expected (e.g. network latency, temporary outages, or slow database recovery). Increasing the value can improve resilience during startup or reconnection phases.
 
 ## Microsoft Access Connection
 
