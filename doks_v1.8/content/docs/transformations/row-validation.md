@@ -1,18 +1,28 @@
 ---
 title: "Row Validation"
-description: "The RowValidation transformation in ETLBox allows you to validate data rows using build-in or customizable rules."
-lead: "The RowValidation transformation in ETLBox allows you to validate rows in your data flow based on customizable rules. This ensures data quality by enforcing conditions such as non-null values, numeric ranges, or custom validation logic on individual columns or entire rows. You can apply validation rules at both the row and column level, with invalid rows being routed separately from valid rows for distinct processing."
+description: "RowValidation is a transformation that evaluates rows based on configurable validation rules. It supports both row-level and column-level validation using predicates or built-in validation methods. Invalid rows can be redirected, logged, or annotated with validation errors, making it suitable for comprehensive data quality checks in ETL workflows."
+lead: "The <code>RowValidation</code> transformation in ETLBox allows you to validate rows in your data flow based on customizable rules. This ensures data quality by enforcing conditions such as non-null values, numeric ranges, or custom validation logic on individual columns or entire rows."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 529
 toc: true
 chatgpt-review: true
 ---
 
 ## Overview
+
+You can apply validation rules at both the row and column level, with invalid rows being routed separately from valid rows for distinct processing.
+
+### Buffering Behavior
+
+- Non-blocking transformation
+- Single input buffer
+- Invalid rows can be redirected to a separate flow using `LinkInvalidTo`
+
+### Validation Methods
 
 Validation in `RowValidation` can be done in two primary ways:
 

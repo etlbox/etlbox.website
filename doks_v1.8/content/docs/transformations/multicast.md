@@ -1,48 +1,44 @@
 ---
-title: "Multicast (Broadcast)"
-description: "Details about the Multicast"
-lead: "The Multicast is a component which basically clones your data and send them to all connected target. It has one input and can have two or more outputs."
+title: "Multicast"
+description: "Explains how to use the MergeJoin transformation in ETLBox to combine rows from two input sources. Covers always-join and comparison-based join modes, buffering behavior, sorting requirements, support for typed and dynamic data, and how unmatched records are handled."
+lead: "The <code>Multicast</code> transformation is used to <b>broadcast</b> every incoming record to multiple downstream targets. It creates clones of each record, ensuring that each linked output receives an independent copy. <br /><br /> This is especially useful when you want to write the same data to multiple destinations, such as a database, a file, and an in-memory store simultaneously."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 526
 toc: true
+chatgpt-review: true
 ---
 
-## Overview
 
-The `Multicast` let you send duplicates of your data into each component that you linked to its output.
 
-{{< alert text="If you want to split instead of code duplication, you can use Predicates which allow you to let only certain rows pass to a linked destination. See below for further details." >}}
+## Behavior and Buffering
 
-#### Buffer
+- **Non-blocking transformation**
+- One **input buffer**
+- One **output buffer per target**
+- Each downstream target receives a **separate clone** of the input row
+- Supports linking to **any number** of outputs
 
-The Multicast is a non-blocking operation. It has one input buffer for each output.
+{{< callout context="note" icon="outline/info-circle" >}}
+If you need to **split** data conditionally (e.g., based on filters), consider [using predicates](#splitting-data-with-predicates) instead of `Multicast`.
+{{< /callout>}}
 
-### Code snippet
+By default, cloning uses reflection to copy public properties and fields. Non-public members are ignored. For custom cloning logic, implement `ICloneable` or use the `CustomCloningStrategy` property.
 
-```C#
-Multicast<MyDataRow> multicast = new Multicast<MyDataRow>();
-multicast.LinkTo(dest1);
-multicast.LinkTo(dest2);
-multicast.LinkTo(dest3);
-```
+## Basic Example: Broadcasting
 
-## Brodcast example
+This example shows how a row is duplicated and sent to two different memory destinations:
 
-The following code demonstrate a simple example where data would be duplicated and copied into two destinations - a database table and a Json file.
-
-```C#
-public class MyRow
-{
+```csharp
+public class MyRow {
     public int Id { get; set; }
-    public string Value{ get; set; }
+    public string Value { get; set; }
 }
 
-public static void Main()
-{
+public static void Main() {
     var source = new MemorySource<MyRow>();
     source.DataAsList.Add(new MyRow() { Id = 1, Value = "A" });
     source.DataAsList.Add(new MyRow() { Id = 2, Value = "B" });
@@ -51,50 +47,87 @@ public static void Main()
     var dest2 = new MemoryDestination<MyRow>();
 
     var multicast = new Multicast<MyRow>();
-
     source.LinkTo(multicast);
     multicast.LinkTo(dest1);
     multicast.LinkTo(dest2);
 
     Network.Execute(source);
 
-    Console.WriteLine($"Destination 1");
+    Console.WriteLine("Destination 1");
     foreach (var row in dest1.Data)
         Console.WriteLine($"{row.Id}{row.Value}");
 
-    Console.WriteLine($"Destination 2");
+    Console.WriteLine("Destination 2");
     foreach (var row in dest2.Data)
         Console.WriteLine($"{row.Id}{row.Value}");
 
-    //Outputs
-    //Destination 1
-    //1A
-    //2B
-    //Destination 2
-    //1A
-    //2B
+    // Outputs:
+    // Destination 1
+    // 1A
+    // 2B
+    // Destination 2
+    // 1A
+    // 2B
 }
 ```
 
-The multicast will create clones of the objects by creating new instances and copying the properties from the input data. Fields, Static values and non public properties will be ignored. If you want to customize how the clone is created, you can implement `ICloneable` on your object.
+## Custom Cloning Strategy
 
-### Splitting data
+If the default cloning behavior is not sufficient, you can define a custom clone function:
 
-The `Multicast` is useful when you want to broadcast your data to all linked target. If you want to split up your data on the connected target, you don't need to use the Multicast. You can simple use predicates for this purpose.  Predicates allow you to let only certain data pass to a target.  This works because you can always link every component to more than one output component. But without Multicast or predicates in place, all message would be send only to the target that was linked first.
+```csharp
+var multicast = new Multicast<MyRow>();
+multicast.CustomCloningStrategy = input => new MyRow {
+    Id = input.Id,
+    Value = string.Copy(input.Value)
+};
+```
 
-Predicates are conditions that describe to which target the data is send if the condition evaluates to true. Let's modify the example above so that we send the row with the Id 1 or smaller to destination 1 and the row with Id 2 or higher to destination 2.
+You can also implement `ICloneable` on your class to take full control of cloning logic.
 
-#### Splitting data example
+## Dynamic Object Support
 
-```C#
-public class MyRow
-{
+The `Multicast` transformation also supports `ExpandoObject`. This allows broadcasting rows with dynamic structures:
+
+```csharp
+dynamic row1 = new ExpandoObject();
+row1.Id = 1;
+row1.Value = "DynamicA";
+
+dynamic row2 = new ExpandoObject();
+row2.Id = 2;
+row2.Value = "DynamicB";
+
+var source = new MemorySource();
+source.DataAsList.Add(row1);
+source.DataAsList.Add(row2);
+
+var multicast = new Multicast(); // default: ExpandoObject
+var dest1 = new MemoryDestination();
+var dest2 = new MemoryDestination();
+
+source.LinkTo(multicast);
+multicast.LinkTo(dest1);
+multicast.LinkTo(dest2);
+
+Network.Execute(source);
+
+// Each destination will receive the full row data independently
+```
+
+## Splitting Data with Predicates
+
+If you want to conditionally route data to different targets (i.e., not every row to every target), use predicates with the `LinkTo` method instead of `Multicast`.
+
+### Example: Conditional Routing (Split)
+
+```csharp
+public class MyRow {
     public int Id { get; set; }
-    public string Value{ get; set; }
+    public string Value { get; set; }
 }
 
-public static void Main()
-{
+public static void Main() {
     var source = new MemorySource<MyRow>();
     source.DataAsList.Add(new MyRow() { Id = 1, Value = "A" });
     source.DataAsList.Add(new MyRow() { Id = 2, Value = "B" });
@@ -107,22 +140,22 @@ public static void Main()
 
     Network.Execute(source);
 
-    Console.WriteLine($"Destination 1");
+    Console.WriteLine("Destination 1");
     foreach (var row in dest1.Data)
         Console.WriteLine($"{row.Id}{row.Value}");
 
-    Console.WriteLine($"Destination 2");
+    Console.WriteLine("Destination 2");
     foreach (var row in dest2.Data)
         Console.WriteLine($"{row.Id}{row.Value}");
 
-    //Outputs
-    //Destination 1
-    //1A
-    //Destination 2
-    //2B
+    // Outputs:
+    // Destination 1
+    // 1A
+    // Destination 2
+    // 2B
 }
 ```
 
-{{< alert text="Make sure when using predicates that always all rows arrive at any kind of destination. Use a <code>VoidDestination</code> for records that you don't want to keep, or use the third parameter of the <code>LinkTo</code> method." >}}
-
-[You can also read more about predicates and linking here.](/docs/introduction/linking/)
+{{< callout context="caution" icon="outline/alert-triangle" >}}
+Make sure all rows are consumed — either by linking to a destination or by using a `VoidDestination` for rows you wish to discard.
+{{< /callout >}}

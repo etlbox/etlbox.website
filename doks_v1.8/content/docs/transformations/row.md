@@ -1,7 +1,7 @@
 ---
 title: "Row Transformation"
-description: "Details about the RowTransformation"
-lead: "The RowTransformation will apply a custom transformation function to each row of incoming data. This transformation is useful in many scenarios, as it allows you to apply any .NET code to your data."
+description: "Explains the usage of RowTransformation, a non-blocking transformation in ETLBox that processes each row individually using user-defined C# logic. Covers type conversion, dynamic object handling, and initialization behavior."
+lead: "The <code>RowTransformation</code> is one of the most flexible and commonly used transformations in ETLBox. It processes each row of input data individually and applies a user-defined transformation function to produce the output row. You can use this component to perform type conversion, data calculations, or enrich rows with additional logic using plain C#."
 draft: false
 images: []
 menu:
@@ -9,21 +9,27 @@ menu:
     parent: "transformations"
 weight: 520
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The `RowTransformation` is the simplest but most powerful transformation in ETLBox. The transformation has two types - the type of the input data and the type of the output data. When creating a `RowTransformation`, you pass a transformation functions describing how each record in the data flow is transformed. Here you can add any C# code that you like.
+- **Transformation Type**: Non-blocking
+- **Execution Mode**: Row-by-row processing
+- **Buffers**: One input buffer
 
-#### Buffer
+Each row is read from the input buffer, processed immediately using the transformation logic, and then passed on to the next component.
 
-The `RowTransformation` is a non blocking transformation, so it will only store the current row in memory (plus some additional rows in the input buffer to improve throughput). It has one input buffer.
+{{< callout context="note" icon="outline/info-circle" >}}
+If only one type parameter is specified, the same type is used for input and output:
+`RowTransformation<T,T>` is equivalent to `RowTransformation<T>`
+{{< /callout >}}
 
-### Code snippet
+### Code Snippet
 
-```C#
-RowTransformation<InputType,OutputType> trans =
-    new RowTransformation<InputType,OutputType> (
+```csharp
+RowTransformation<InputType, OutputType> trans =
+    new RowTransformation<InputType, OutputType>(
         row => {
             return new OutputType() { Value = row.Value + 1 };
         });
@@ -31,17 +37,15 @@ RowTransformation<InputType,OutputType> trans =
 
 ## Example
 
-The basic idea is simply explain with this example. Two data rows are created - both have the property `InputValue`, which is multiplied with two in the row transformation and the result stored in the property `Result`.
+The basic idea is simply explained with this example. Two data rows are created—both have the property `InputValue`, which is multiplied by two in the row transformation. The result is stored in the property `Result`.
 
-```C#
- public class MyRow
-{
+```csharp
+public class MyRow {
     public int InputValue { get; set; }
-    public int Result{ get; set; }
+    public int Result { get; set; }
 }
 
-public static void Main()
-{
+public static void Main() {
     var source = new MemorySource<MyRow>();
     source.DataAsList.Add(new MyRow() { InputValue = 1 });
     source.DataAsList.Add(new MyRow() { InputValue = 2 });
@@ -67,106 +71,115 @@ public static void Main()
 }
 ```
 
-{{< alert text="If there is only one type defined for the <code>RowTransformation</code>, this type is used for input <b>and</b> output" >}}
+## Converting Data Types
 
-### Converting data types
+In the example above, the input and output types were the same. This is a short form of `RowTransformation<MyRow, MyRow>`. You can also use different input and output types.
 
-In the example above only one data type was used. In this case, the `RowTransformation<MyRow>` is the short definition for `RowTransformation<MyRow,MyRow>` - input and output types are the same. But you can also have different input and output types.
+Here is an example that converts the incoming data into a different object type:
 
-Here is an example that converts a string array into an object, using both type parameters of the `RowTransformation`:
-
-```C#
-public class MyArray
-{
-    public int Col1 { get; set; }
+```csharp
+public class InputType {
+    public string Col1 { get; set; }
     public string Col2 { get; set; }
 }
 
-public static void Main()
-{
-    var source = new MemorySource<string[]>();
-    source.DataAsList.Add( new string[] { "1", "A"});
-    source.DataAsList.Add( new string[] { "2", "B"});
+public class OutputType {
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
 
-    var rowTrans = new RowTransformation<string[], MyArray>();
+public static void Main() {
+    var source = new MemorySource<InputType>();
+    source.DataAsList.Add(new InputType() { Col1 = "1", Col2 = "A" });
+    source.DataAsList.Add(new InputType() { Col1 = "2", Col2 = "B" });
+
+    var rowTrans = new RowTransformation<InputType, OutputType>();
     rowTrans.TransformationFunc =
-        row =>
-        {
-            return new MyArray()
-            {
-                Col1 = int.Parse(row[0]),
-                Col2 = row[1]
+        row => {
+            return new OutputType() {
+                Id = int.Parse(row.Col1),
+                Value = row.Col2
             };
         };
 
-    var dest = new MemoryDestination<MyArray>();
+    var dest = new MemoryDestination<OutputType>();
 
-    source.LinkTo<MyArray>(rowTrans).LinkTo(dest);
+    source.LinkTo(rowTrans);
+    rowTrans.LinkTo(dest);
     Network.Execute(source);
 
     foreach (var row in dest.Data)
-        Console.WriteLine($"Col1:{row.Col1} Col2:{row.Col2}");
-
-    //Output
-    //Col1:1 Col2:A
-    //Col1:2 Col2:B
-}
-```
-
-## Using dynamic objects
-
-THe default implementation of the RowTransform works with an ExpandoObject: `RowTransformation` and `RowTransformation<ExpandoObject,ExpandoObject>` are both the same. Working with ExpandoObject allows the user to access properties in the object during runtime - no object type is needed before compilation.
-
-Let's assume we have an example input csv file that looks like this:
-
-Id|Value
---|---------------
-1 |A
-2 |B
-3 |C
-
-Normally, you would create an object the contains the properties Id and Value to store the data. But you could also work with ExpandoObject. The default implementation of all connectors and transformations is using the ExpandoObject as type. So by using CsvSource and `RowTransformation` we can access the data from the source directly, without the need of creating any data object.
-
-```C#
- public static void Main()
-{
-    var source = new CsvSource("example_input.csv");
-
-    var rowTrans = new RowTransformation();
-    rowTrans.TransformationFunc =
-        row =>
-        {
-            dynamic dynrow = row as dynamic;
-            Console.WriteLine($"Id:{dynrow.Id} Value:{dynrow.Value}");
-            return row;
-        };
-
-    var dest = new VoidDestination();
-
-    source.LinkTo(rowTrans).LinkTo(dest);
-    Network.Execute(source);
+        Console.WriteLine($"Id:{row.Id} Value:{row.Value}");
 
     //Output
     //Id:1 Value:A
     //Id:2 Value:B
-    //Id:3 Value:C
 }
 ```
 
-As the `RowTransformation` is used to write the output already, we are not interested in storing the data somewhere. But a data flow can't complete if not all records arrived at a destination. As we just want to discard the data, we use the `VoidDestination` as target.
+## Using Dynamic Objects
+
+The default implementation of the `RowTransformation` works with an `ExpandoObject`, which allows for dynamic property access during runtime. This is useful when you don’t want to define a class for your data.
+
+Assume a CSV input file `example_input.csv` with the following content:
+
+```
+Col1,Col2
+1,A
+2,B
+3,C
+```
+
+Normally, you would create a class to store this data. But by using `ExpandoObject`, you can access and process the data directly, converting them on-the-fly in your desired object type:
+
+```csharp
+public class CsvData {
+    public int Id { get; set; }
+    public string Value { get;set; }
+}
+
+var source = new CsvSource("example_input.csv");
+
+var rowTrans = new RowTransformation<ExpandoObject, CsvData>();
+rowTrans.TransformationFunc =
+    row => {
+        dynamic dynrow = row as dynamic;
+        Console.WriteLine($"Col1:{dynrow.Col1} Col2:{dynrow.Value}");
+        return new CsvData() {
+            Id = int.Parse(dynrow.Col1),
+            Value = dynrow.Col2
+        };
+    };
+
+var dest = new MemoryDestination<CsvData>();
+
+source.LinkTo(rowTrans);
+rowTrans.LinkTo(dest);
+Network.Execute(source);
+
+foreach (var row in dest.Data)
+    Console.WriteLine($"Id:{row.Id} Value:{row.Value}");
+
+//Output
+//Col1:1 Col2:A
+//Col1:2 Col2:B
+//Col1:3 Col2:C
+//Id:1 Value:A
+//Id:2 Value:B
+//Id:3 Value:C
+```
+
 
 ## InitAction
 
-The `RowTransformation` allow to define custom code that is executed when the first data records arrives at the `RowTransformation`.
-This can be very useful as you can be sure that everything is properly initialized in your flow and the components before when the first record arrives at the transformation.
+The `RowTransformation` allows defining an `InitAction` that is executed once, just before the first data row is processed. This is useful when the transformation needs to execute code that should only run when the first data row enters the transformation.
 
-```C#
-var rowTrans = new RowTransformation();
-row.TransformationFunc = row => {
+```csharp
+var rowTrans = new RowTransformation<MyRow>();
+rowTrans.TransformationFunc = row => {
     row.Col1 += IdOffset;
     return row;
 };
-row.InitAction = () => IdOffset = 100;
+rowTrans.InitAction = () => IdOffset = 100;
 ```
-
 

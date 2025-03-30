@@ -1,83 +1,61 @@
 ---
 title: "Merge Join"
-description: "Details about the MergeJoin"
-lead: "The MergeJoin transformation joins the outcome of two sources or transformations into one data record. This allows you to merge the data of two inputs into one output. "
+description: "Explains how to use the MergeJoin transformation in ETLBox to combine rows from two input sources. Covers always-join and comparison-based join modes, buffering behavior, sorting requirements, support for typed and dynamic data, and how unmatched records are handled."
+lead: "The <code>MergeJoin</code> transformation in ETLBox allows you to combine rows from two separate input streams into one output. It functions similarly to a merge or join operation in relational databases. Each side of the join — <b>left</b> and <b>right</b> — is linked to a source or upstream transformation. You then define a function that describes how to merge the records from each side."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 526
 toc: true
+chatgpt-review: true
 ---
 
+The `MergeJoin` can operate in two modes:
 
-## Overview
+- **Always Join**: Each left row is joined with the corresponding right row in order.
+- **Conditional Join with Comparison**: Records are joined only if they meet a specified condition.
 
-If you want to merge data in your data flow, you can use the `MergeJoin`. This basically joins the outcome of two sources or transformations into one data record. The MergeJoin accepts two inputs and has one output. A function describes how the two inputs are combined into one output. E.g. you can link two sources with the MergeJoin, define  a method how to combine these records and produce a new merged output. If needed, you can define a comparison function which describes if two records should be joined if a match condition is met.
+## Buffering Behavior
 
-#### Buffer
+- The `MergeJoin` has one input buffer for each input (`LeftInput` and `RightInput`).
+- It behaves as **non-blocking** when performing an always join.
+- It behaves as **partially blocking** when using a comparison function, buffering rows until a matching pair is found.
 
-The `MergeJoin` has an input buffer for each input, and one output buffer. The `MergeJoin` will behave as a non blocking transformation if you use it to "always join" data. If you join with a comparison, then data from one input is stored in memory until the comparison condition is met. If the condition is never met, the `MergeJoin` will store all incoming data in memory before it can produce any output.
+## Always Join
 
-### Code snippet
+This is the default mode when no comparison function is set. The component joins records from the left and right inputs in the order they arrive. This mode is best suited when both inputs have the **same number of rows** and are naturally aligned.
 
-```C#
-MergeJoin<InputType1, InputType2, OutputType> join = new MergeJoin<InputType1, InputType2, OutputType>();
-join.MergeJoinFunc =  (leftRow, rightRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
-source1.LinkTo(join.LeftInput);
-source2.LinkTo(join.RightInput);
-join.LinkTo(dest);
-```
+If one input has more rows than the other, extra rows are joined with `null`.
 
-## Merging or joining data
+### Example: Always Join
 
-The `MergeJoin` accepts two inputs and has one output. The first input is referred as left input and the second input as right input. A function describes how the two inputs are combined into one output. E.g.,  you can link two sources with the `MergeJoin`, define a method how to combine these records and produce a new merged output. The data type of the output and the inputs can be different, as long as you handle it in the join function. If you want to join only two records if they match, you can pass a comparison function the join.
-
-### Always join
-
-By default, the `MergeJoin` will always join every row from the left in put with a row from the right input. This works best if data for both inputs has the exact same amount of rows. A row from the left will always be send together with a row from the right into the `MergeJoin` function. The `MergeJoin` function is a Func that defines how both records are combined. The result can be a new record of the same of a different type.
-
-{{< alert text="If there are more rows coming from one input than there is in the other input, the rest of the rows will be joined with null values." >}}
-
-#### Always join example
-
-An example for a simple merge join, where data is always joined:
-
-```C#
-public class MyLeftRow
-{
+```csharp
+public class MyLeftRow {
     public string FirstName { get; set; }
 }
 
-public class MyRightRow
-{
+public class MyRightRow {
     public string LastName { get; set; }
 }
 
-public class MyOutputRow
-{
+public class MyOutputRow {
     public string FullName { get; set; }
 }
 
-public static void Main()
-{
+public static void Main() {
     var source1 = new MemorySource<MyLeftRow>();
     source1.DataAsList.Add(new MyLeftRow() { FirstName = "Elvis" });
     source1.DataAsList.Add(new MyLeftRow() { FirstName = "Marilyn" });
+
     var source2 = new MemorySource<MyRightRow>();
     source2.DataAsList.Add(new MyRightRow() { LastName = "Presley" });
     source2.DataAsList.Add(new MyRightRow() { LastName = "Monroe" });
 
     var join = new MergeJoin<MyLeftRow, MyRightRow, MyOutputRow>(
-        (leftRow, rightRow) =>
-        {
-            return new MyOutputRow()
-            {
+        (leftRow, rightRow) => {
+            return new MyOutputRow() {
                 FullName = leftRow.FirstName + " " + rightRow.LastName
             };
         });
@@ -92,51 +70,48 @@ public static void Main()
     foreach (var row in dest.Data)
         Console.WriteLine(row.FullName);
 
-    //Outputs
+    //Outputs:
     //Elvis Presley
     //Marilyn Monroe
 }
 ```
 
-### Join with comparison
+## Join with Comparison
 
-The `MergeJoin` transformation allows you to specify a match and comparison function that determines which records should be joined. Only if both record match in the comparison function, they are joined. Otherwise, one side will be replaced with a NULL.
+The `MergeJoin` transformation allows you to specify a match and comparison function that determines which records should be joined. Only if both records match according to the comparison function will they be joined. Otherwise, one of the records will be passed through with a `null` as a placeholder for the unmatched side.
 
-For optimal performance, the `MergeJoin` requires sorted input from both sides. The rows should be ordered based on the property that is being used for comparison.
-You can pass a `ComparisonFunc<TInput1, TInput2, int>` to the MergeJoin, which returns an integer value based on the comparison of the two input records. This comparison function is based {{<link-ext text="on the default comparison delegate" url="https://learn.microsoft.com/en-us/dotnet/api/system.comparison-1?view=net-7.0" >}}.
+For optimal performance, the `MergeJoin` requires sorted input from both sources. The rows should be ordered based on the property used in the comparison. You can pass a `ComparisonFunc<TInput1, TInput2, int>` delegate to the `MergeJoin`, which returns an integer based on the comparison between the two input records. This function follows the standard comparison delegate pattern.
 
-- If the `ComparisonFunc` returns 0, both records match and are joined. The joined records are sent to the output.
-- If the `ComparisonFunc` returns a value less than 0, the record from the left input is considered to be in the correct sort order before the record from the right input - the left output is sent to the output together with a NULL value as a placeholder for the right side.
-- If the `ComparisonFunc` returns a value greater than 0, the record from the right input is considered to be in the correct sort order before the record from the left input - the right output is then sent to the output together with a NULL as a placeholder for the left side.
+- If the `ComparisonFunc` returns `0`, both records are considered a match and are joined. The joined result is sent to the output.
+- If the `ComparisonFunc` returns a value less than `0`, the record from the left input is considered to come before the right one. The left record is sent to the output along with a `null` as a placeholder for the right.
+- If the `ComparisonFunc` returns a value greater than `0`, the record from the right input comes first. The right record is sent to the output with a `null` placeholder for the left.
 
-Summarised, if the `ComparisonFunc` returns 0, both records are joined and send to the output. Otherwise, the MergeJoin will send the record from the right or left side to the output, together with NULL value for the non matching side.
+To summarize: when the comparison result is `0`, both rows are joined and passed on. If not, the record from one side is passed along with a `null` for the unmatched side.
 
-#### Join with comparison example
+If either input source has unmatched trailing rows, those records will be sent to the output with a null value for the other side — even when using a comparison function.
 
-Here an example how this would look like
+### Example: Join with Comparison
 
-```C#
-public class MyRow
-{
+```csharp
+public class MyRow {
     public int Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string FullName { get; set; }
 }
 
-public void JoinWithComparisonExample()
-{
+public void JoinWithComparisonExample() {
     var source1 = new MemorySource<MyRow>();
     source1.DataAsList.Add(new MyRow() { Id = 1, FirstName = "Elvis" });
     source1.DataAsList.Add(new MyRow() { Id = 2, FirstName = "Psy" });
     source1.DataAsList.Add(new MyRow() { Id = 3, FirstName = "Marilyn" });
+
     var source2 = new MemorySource<MyRow>();
     source2.DataAsList.Add(new MyRow() { Id = 1, LastName = "Presley" });
     source2.DataAsList.Add(new MyRow() { Id = 3, LastName = "Monroe" });
 
     var join = new MergeJoin<MyRow>(
-        (leftRow, rightRow) =>
-        {
+        (leftRow, rightRow) => {
             if (rightRow == null)
                 leftRow.FullName = leftRow.FirstName + " " + "Unknown";
             else
@@ -144,8 +119,7 @@ public void JoinWithComparisonExample()
             return leftRow;
         });
 
-    join.ComparisonFunc = (inputRow1, inputRow2) =>
-    {
+    join.ComparisonFunc = (inputRow1, inputRow2) => {
         if (inputRow1.Id == inputRow2.Id)
             return 0;
         else if (inputRow1.Id < inputRow2.Id)
@@ -164,18 +138,95 @@ public void JoinWithComparisonExample()
     foreach (var row in dest.Data)
         Console.WriteLine(row.FullName);
 
-    //Outputs
+    //Outputs:
     //Elvis Presley
     //Psy Unknown
     //Marilyn Monroe
 }
 ```
 
-## Types
+{{< callout context="tip" icon="outline/rocket" >}}
+When handling join logic, always check for `null` in either the `leftRow` or `rightRow` inside the `MergeJoinFunc`, as one side may be unmatched (depending on the comparison result or unmatched trailing rows in one input source).
+{{< /callout>}}
 
-The data type of the inputs and outputs can be different. The `MergeJoin` can accept three different type - two types for the inputs and one type for the output. There is a simplified `MergeJoin` that only accepts one type - then all inputs and output will be of the same type. If no type is given, the `MergeJoin` will use the ExpandoObject.
+## Sorting Requirements
 
-### Sorted input
+When using a `ComparisonFunc`, both inputs should be **sorted on the matching key**. This is critical to ensure correct and predictable behavior.
 
-Input data for both inputs needs to be sorted if you use the comparison function. Either use the [Sort transformation](/docs/blocking-transformations/sort/) or try to get sorted output from the source. The order of the incoming rows has a direct effect on the join behavior. The `MergeJoin` does not check if the input is sorted - it will either always join both incoming rows (no comparison function defined) or it will call the comparison func to identify matches and order for the current incoming rows. The latter one will lead to unexpected results if both inputs are not sorted on the same property that the comparison function uses.
+You can use the [Sort transformation](/docs/blocking-transformations/sort/) to sort the data explicitly if your source does not provide sorted output.
 
+{{< callout context="caution" icon="outline/alert-triangle" >}}
+The `MergeJoin` does not validate sort order; incorrect sorting can lead to incorrect joins or missing matches.
+{{< /callout >}}
+
+## Types and Constructors
+
+The `MergeJoin` supports:
+
+- Different types for left input (`TInput1`), right input (`TInput2`), and output (`TOutput`)
+- A simplified version: `MergeJoin<T>` for same input/output types
+- A dynamic version: `MergeJoin` (uses `ExpandoObject`)
+
+You can create it using:
+
+```csharp
+var join = new MergeJoin<TInput1, TInput2, TOutput>();
+join.MergeJoinFunc = (left, right) => { ... };
+```
+
+or using the constructor directly:
+
+```csharp
+var join = new MergeJoin<TInput, TInput, TInput>((left, right) => { ... });
+```
+
+Here is the additional section for **Dynamic Object Support** in `MergeJoin`, including a complete example. You can place this section before the **Summary** section in the documentation.
+
+---
+
+## Dynamic Object Support
+
+The `MergeJoin` also works with dynamic objects (`ExpandoObject`). This is especially useful when the schema is not known at compile time or varies across datasets. The dynamic version of `MergeJoin` allows you to work with property names as strings at runtime.
+
+### Example: Dynamic MergeJoin
+
+```csharp
+var source1 = new MemorySource();
+dynamic left1 = new ExpandoObject();
+left1.FirstName = "Elvis";
+dynamic left2 = new ExpandoObject();
+left2.FirstName = "Marilyn";
+source1.DataAsList.Add(left1);
+source1.DataAsList.Add(left2);
+
+var source2 = new MemorySource();
+dynamic right1 = new ExpandoObject();
+right1.LastName = "Presley";
+dynamic right2 = new ExpandoObject();
+right2.LastName = "Monroe";
+source2.DataAsList.Add(right1);
+source2.DataAsList.Add(right2);
+
+var join = new MergeJoin(
+    (left, right) => {
+        dynamic output = new ExpandoObject();
+        output.FullName = $"{((dynamic)left).FirstName} {((dynamic)right).LastName}";
+        return output;
+    });
+
+var dest = new MemoryDestination();
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
+join.LinkTo(dest);
+
+Network.Execute(source1, source2);
+
+foreach (dynamic row in dest.Data)
+    Console.WriteLine(row.FullName);
+
+// Output:
+// Elvis Presley
+// Marilyn Monroe
+```
+
+You can also use `ExpandoObject` with a `ComparisonFunc` if you want conditional joining, using similar runtime property access.

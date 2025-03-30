@@ -1,70 +1,70 @@
 ---
-chatgpt-review: true
 title: "Distinct"
-description: "Guide to Using the Distinct transformation"
-lead: "Efficiently filter out duplicate records with the Distinct transformation."
+description: "Explains how to use the Distinct transformation in ETLBox to remove duplicate rows based on selected properties or custom logic. Covers attribute-based configuration, dynamic object support, duplicate redirection, and runtime metrics for tracking distinct and duplicate rows."
+lead: "The <code>Distinct</code> transformation in ETLBox filters out duplicate records in a data flow by evaluating each row for uniqueness. It uses a hash-based mechanism to compare values and retain only the first occurrence of each unique row. All other duplicates are discarded or optionally redirected to a separate destination."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 523
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The `Distinct` transformation in ETLBox efficiently filters out duplicate records in your data flow. It operates by generating a unique hash value for each row based on specified properties. These hash values are stored internally; if a record with an identical hash appears, it is considered a duplicate and excluded. By default, the transformation considers all public properties for hash generation. However, you can specify particular properties using the `DistinctColumn` attribute for targeted filtering.
+- **Type**: Non-blocking transformation
+- **Execution**: Row-by-row with in-memory hash tracking
+- **Buffers**: One input buffer (keeps track of hashes)
 
-#### Buffer Mechanics
+By default, `Distinct` uses **all public properties** to compute a row's uniqueness. However, you can narrow this down using the `[DistinctColumn]` attribute or the `DistinctColumns` property to focus only on selected fields.
 
-As a non-blocking transformation, `Distinct` processes each row immediately upon hash generation, contributing to a slightly larger memory footprint as it retains a hash value for each incoming row.
+### Buffer Mechanics
 
-### Distinct Attribute Usage
+`Distinct` processes rows as they arrive and computes a hash to identify duplicates. These hash values are stored in memory, which can grow in size depending on the dataset and distinct criteria.
 
-For strongly-typed objects, the `DistinctColumn` attribute allows you to mark specific properties to identify a record as unique. Here's an example of how to set up a class using this attribute:
+## Using Attributes for Uniqueness
 
-```C#
- public class MyRow
- {
-     [DistinctColumn]
-     public int Id { get; set; }
-     [DistinctColumn]
-     public string Value { get; set; }
+If using POCOs, you can mark specific fields with `[DistinctColumn]` to define uniqueness.
 
-     public string TestId { get; set; }
+```csharp
+public class MyRow {
+    [DistinctColumn]
+    public int Id { get; set; }
+
+    [DistinctColumn]
+    public string Value { get; set; }
+
+    public string TestId { get; set; } // Not considered for distinct comparison
 }
 ```
 
-**Note**: The use of `DistinctColumn` attributes is optional. Without any specified attributes, all public properties are automatically used for distinctness checks.
+### Example: Basic Deduplication
 
-## Implementing Distinct
+This example uses the above `MyRow` class. Rows with the same `Id` and `Value` are treated as duplicates.
 
-To illustrate the Distinct transformation, consider a scenario with the `MyRow` class where `Id` and `Value` are marked as `DistinctColumn`. Records with identical `Id` and `Value` are identified as duplicates, while differing ones are treated as unique. The `TestId` property is disregarded in this distinction.
+**Input Data:**
 
-Consider the following dataset for transformation:
+| Id | Value | TestId |
+|----|-------|--------|
+| 1  | A     | Test1  |
+| 2  | A     | Test2  |
+| 2  | B     | Test3  |
+| 1  | A     | Test4  |
+| 2  | A     | Test5  |
+| 3  | B     | Test6  |
 
-Id|Value|TestId
---|-----|------
-1|A|Test1
-2|A|Test2
-2|B|Test3
-1|A|Test4
-2|A|Test5
-3|B|Test6
+**Output:**
 
-With the Distinct transformation applied, we expect to receive distinct rows:
+| Id | Value | TestId |
+|----|-------|--------|
+| 1  | A     | Test1  |
+| 2  | A     | Test2  |
+| 2  | B     | Test3  |
+| 3  | B     | Test6  |
 
-Id|Value|TestId
---|-----|-----
-1|A|Test1
-2|A|Test2
-2|B|Test3
-3|B|Test6
-
-Here's the implementation code:
-
-```C#
+```csharp
 var source = new MemorySource<MyRow>();
 source.DataAsList.Add(new MyRow() { Id = 1, Value = "A", TestId = "Test1" });
 source.DataAsList.Add(new MyRow() { Id = 2, Value = "A", TestId = "Test2" });
@@ -92,177 +92,93 @@ Id:3 Value:B TestId:Test6
 */
 ```
 
-### Handling Duplicates
+## Redirecting Duplicates
 
-Distinct can also redirect duplicates to a separate data flow. This is achieved using the `LinkDuplicatesTo` method. To enhance our previous example, we can direct duplicates to another destination:
+Duplicates can be routed to another data flow using `LinkDuplicatesTo`. This enables advanced handling such as logging, enrichment, or rerouting for further validation. For example, duplicates could be sent to a transformation chain that logs issues, stores them in a separate error table, or applies a different transformation logic depending on your data requirements.
 
-The Distinct also allows to send the duplicates into another data flow. This can be easily implemented with the `LinkDuplicatesTo` method. We could enhance the example above to redirect the duplicates into another destination. This method's output can be linked to an entirely new data flow. However, for simplicity in this example, we directly route the duplicates to a `MemoryDestination`.
-
-```C#
-var source = new MemorySource<MyRow>();
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "A", TestId = "Test1" });
-source.DataAsList.Add(new MyRow() { Id = 2, Value = "A", TestId = "Test2" });
-source.DataAsList.Add(new MyRow() { Id = 2, Value = "B", TestId = "Test3" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "A", TestId = "Test4" });
-source.DataAsList.Add(new MyRow() { Id = 2, Value = "A", TestId = "Test5" });
-source.DataAsList.Add(new MyRow() { Id = 3, Value = "B", TestId = "Test6" });
-
-var trans = new Distinct<MyRow>();
-var dest = new MemoryDestination<MyRow>();
+```csharp
 var duplicateDest = new MemoryDestination<MyRow>();
-
-source.LinkTo(trans);
-trans.LinkTo(dest);
 trans.LinkDuplicatesTo(duplicateDest);
-Network.Execute(source);
+```
 
-foreach (var row in dest.Data)
-    Console.WriteLine($"Id:{row.Id} Value:{row.Value} TestId:{row.TestId}");
-
-foreach (var row in duplicateDest.Data)
-    Console.WriteLine($"Duplicate - Id:{row.Id} Value:{row.Value} TestId:{row.TestId}");
-
-//Output
-/*
-Id:1 Value:A TestId:Test1
-Id:2 Value:A TestId:Test2
-Id:2 Value:B TestId:Test3
-Id:3 Value:B TestId:Test6
+**Output:**
+```
 Duplicate - Id:1 Value:A TestId:Test4
 Duplicate - Id:2 Value:A TestId:Test5
-*/
 ```
 
-#### Predicate Use in LinkDuplicatesTo
+You can also apply **predicates** when redirecting duplicates:
 
-The `LinkDuplicatesTo` method functions similarly to all `LinkTo` methods, allowing the output to be connected to various components through predicate logic. For illustration, consider the following example:
-
-```C#
+```csharp
 trans.LinkDuplicatesTo(destDuplicates1, row => row.Id == 1);
 trans.LinkDuplicatesTo(destDuplicates2, row => row.Id >= 2);
 ```
 
-### Dynamic Object Support
 
-Like all ETLBox components, Distinct also works with `ExpandoObject` for dynamic data handling. Adapting our previous example to dynamic objects:
+## Dynamic Object Support
 
-```C#
-var source = new MemorySource();
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 1, distinctCol2: "A", otherValue: "1"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 2, distinctCol2: "B", otherValue: "5"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 1, distinctCol2: "C", otherValue: "2"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 1, distinctCol2: "A", otherValue: "3"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 1, distinctCol2: "C", otherValue: "4"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 2, distinctCol2: "B", otherValue: "5"));
-source.DataAsList.Add(CreateDynamicRow(distinctCol1: 2, distinctCol2: "B", otherValue: "6"));
+`Distinct` works with `ExpandoObject`. Use `DistinctColumns` to define which fields determine uniqueness.
 
+```csharp
 var trans = new Distinct();
-trans.DistinctColumns = new DistinctColumn[]{
-    new DistinctColumn() { DistinctPropertyName = "DistinctCol1"},
-    new DistinctColumn() { DistinctPropertyName = "DistinctCol2" }
-};
-var dest = new MemoryDestination();
-var destDuplicates1 = new MemoryDestination();
-var destDuplicates2 = new MemoryDestination();
-
-source.LinkTo(trans);
-trans.LinkTo(dest);
-trans.LinkDuplicatesTo(destDuplicates1, row => (row as dynamic).DistinctCol1 == 1);
-trans.LinkDuplicatesTo(destDuplicates2, row => (row as dynamic).DistinctCol1 == 2);
-Network.Execute(source);
-
-foreach (dynamic row in dest.Data)
-    Console.WriteLine($"DistinctCol1:{row.DistinctCol1} DistinctCol2:{row.DistinctCol2} OtherValue:{row.OtherValue}");
-
-foreach (dynamic row in destDuplicates1.Data)
-    Console.WriteLine($"Duplicate 1 - DistinctCol1:{row.DistinctCol1} DistinctCol2:{row.DistinctCol2} OtherValue:{row.OtherValue}");
-
-foreach (dynamic row in destDuplicates2.Data)
-    Console.WriteLine($"Duplicate 2 - DistinctCol1:{row.DistinctCol1} DistinctCol2:{row.DistinctCol2} OtherValue:{row.OtherValue}");
-
-//Output
-/*
-DistinctCol1:1 DistinctCol2:A OtherValue:1
-DistinctCol1:2 DistinctCol2:B OtherValue:5
-DistinctCol1:1 DistinctCol2:C OtherValue:2
-Duplicate 1 - DistinctCol1:1 DistinctCol2:A OtherValue:3
-Duplicate 1 - DistinctCol1:1 DistinctCol2:C OtherValue:4
-Duplicate 2 - DistinctCol1:2 DistinctCol2:B OtherValue:5
-Duplicate 2 - DistinctCol1:2 DistinctCol2:B OtherValue:6
-*/
-
-public ExpandoObject CreateDynamicRow(int distinctCol1, string distinctCol2, string otherValue) {
-    dynamic r = new ExpandoObject();
-    r.DistinctCol1 = distinctCol1;
-    r.DistinctCol2 = distinctCol2;
-    r.OtherValue = otherValue;
-    return r;
-}
-```
-
-#### Manual Assignment of DistinctColumns
-
-You can explicitly set `DistinctColumns` when creating the Distinct transformation:
-
-```C#
-var trans = new Distinct();
-trans.DistinctColumns = new DistinctColumn[]{
-    new DistinctColumn() { DistinctPropertyName = "DistinctCol1"},
+trans.DistinctColumns = new[] {
+    new DistinctColumn() { DistinctPropertyName = "DistinctCol1" },
     new DistinctColumn() { DistinctPropertyName = "DistinctCol2" }
 };
 ```
 
-{{< alert text="If <code>DistinctColumns</code> are set this way, it overrides any class-defined attributes." >}}
-
-### Custom Distinct Function
-
-For more control, you can define a custom function to create a unique key:
-
-```C#
-trans.GetUniqueKeyFunc = (row) => row.Value;
+```csharp
+dynamic row = new ExpandoObject();
+row.DistinctCol1 = 1;
+row.DistinctCol2 = "A";
+row.OtherValue = "Example";
 ```
 
-For instance, you can match records based on the first letter of a property, ignoring case differences:
+You can still use `LinkDuplicatesTo()` with dynamic objects, including filtering by `ExpandoObject` properties.
 
-```C#
-var source = new MemorySource<MyRow>();
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "A", TestId = "Test1" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "B", TestId = "Test2" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "A_dupe", TestId = "Test3" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "b_dupe", TestId = "Test4" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "c", TestId = "Test5" });
-source.DataAsList.Add(new MyRow() { Id = 1, Value = "a", TestId = "Test6" });
+## Custom Uniqueness Logic
 
-var trans = new Distinct<MyRow>();
-trans.GetUniqueKeyFunc = (row) => row.Value.Substring(0, 1).ToLower();
-var dest = new MemoryDestination<MyRow>();
-var destDuplicates = new MemoryDestination<MyRow>();
+You can define a custom function to control how uniqueness is evaluated. This overrides attribute- or column-based logic.
 
-source.LinkTo(trans);
-trans.LinkTo(dest);
-trans.LinkDuplicatesTo(destDuplicates);
-
-Network.Execute(source);
-
-foreach (var row in dest.Data)
-    Console.WriteLine($"Id:{row.Id} Value:{row.Value} TestId:{row.TestId}");
-
-foreach (var row in destDuplicates.Data)
-    Console.WriteLine($"Duplicate - Id:{row.Id} Value:{row.Value} TestId:{row.TestId}");
-
-//Output
-/*
-Id:1 Value:A TestId:Test1
-Id:1 Value:B TestId:Test2
-Id:1 Value:c TestId:Test5
-Duplicate - Id:1 Value:A_dupe TestId:Test3
-Duplicate - Id:1 Value:b_dupe TestId:Test4
-Duplicate - Id:1 Value:a TestId:Test6
-*/
+```csharp
+trans.GetUniqueKeyFunc = row => row.Value.Substring(0, 1).ToLower();
 ```
 
+This allows advanced matching (e.g., case-insensitive, substring-based, etc.).
 
-## Conclusion
+## Manual DistinctColumn Setup
 
-The `Distinct` transformation in ETLBox is an essential tool for filtering out duplicate records in data flows. It efficiently identifies duplicates using unique hash values, tailored through the `DistinctColumn` attribute for specific filtering needs. Ideal for handling large datasets and ensuring data uniqueness, this transformation significantly enhances data quality and processing efficiency in ETL workflows.
+Instead of using attributes, you can set `DistinctColumns` programmatically:
+
+```csharp
+trans.DistinctColumns = new[] {
+    new DistinctColumn() { DistinctPropertyName = "Col1" },
+    new DistinctColumn() { DistinctPropertyName = "Col2" }
+};
+```
+
+{{< callout context="note" icon="outline/info-circle" >}}
+Setting `DistinctColumns` programmatically overrides any `[DistinctColumn]` attributes defined on your class.
+{{< /callout >}}
+
+
+## Monitoring Metrics
+
+The `Distinct` transformation provides the following runtime metrics to help track processing results:
+
+- **`DistinctCount`**
+  The number of rows that were identified as distinct and passed to the output.
+
+- **`DuplicateCount`**
+  The number of rows detected as duplicates and either discarded or redirected via `LinkDuplicatesTo`.
+
+These counters are automatically reset on each execution and are useful for validation, logging, or audit purposes.
+
+#### Example:
+
+```csharp
+Console.WriteLine($"Distinct Rows: {trans.DistinctCount}");
+Console.WriteLine($"Duplicate Rows: {trans.DuplicateCount}");
+```
+
 

@@ -1,40 +1,36 @@
 ---
 title: "Filter Transformation"
-description: "Details about the FilterTransformation"
-lead: "The FilterTransformation filters out row that do not match with a given predicate."
+description: "Explains how to use FilterTransformation to remove rows from a data flow based on a predicate. Includes usage with strongly typed and dynamic objects, alternative predicate-based linking, error handling, and row count tracking."
+lead: "The <code>FilterTransformation</code> is used to remove rows from a data flow based on a specified condition. It evaluates each row using a <b>predicate function</b> — if the predicate returns <code>true</code>, the row is kept; otherwise, it is filtered out and not passed on."
 draft: false
 images: []
 menu:
   docs:
     parent: "transformations"
-weight: 520
+weight: 524
 toc: true
 chatgpt-review: true
 ---
 
-## Overview
+{{< callout context="tip" icon="outline/rocket" >}}
+The `FilterTransformation` is not the only method to apply filtering. You can also use predicates directly when linking components. See the [Using predicates when linking](#using-predicates-when-linking) section for examples.
+{{< /callout >}}
 
-The `FilterTransformation` filters rows in a data flow based on a specified predicate. A predicate is a function that returns `true` or `false`; if `true`, the row is kept, otherwise, it is discarded.
+- **Type**: Non-blocking transformation
+- **Buffering**: One input buffer
+- **Execution**: Row-by-row in memory
 
-{{< alert text="The `FilterTransformation` is not the only method to filter values in a data flow. You can also use predicates directly when linking components. See below for details." >}}
+## Example
 
-### Buffer
-
-The `FilterTransformation` is a non-blocking transformation, meaning it only stores the current row in memory, plus a few additional rows in an input buffer to improve throughput. It has one input buffer and performs the filtering in-memory without blocking the flow of data.
-
-### Example
-
-Here’s how you can filter rows based on the `Id` field using the `FilterTransformation`:
+The following example demonstrates how to filter rows based on the `Id` property using a `FilterTransformation`.
 
 ```csharp
-public class MyRow
-{
+public class MyRow {
     public int Id { get; set; }
     public string Value { get; set; }
 }
 
-public static void Main()
-{
+public static void Main() {
     var source = new MemorySource<MyRow>();
     source.DataAsList.Add(new MyRow() { Id = 1, Value = "Test1" });
     source.DataAsList.Add(new MyRow() { Id = 2, Value = "Test2" });
@@ -57,9 +53,11 @@ public static void Main()
 }
 ```
 
-### Using predicates when linking
+## Using Predicates When Linking
 
-You can achieve the same filtering behavior without using the `FilterTransformation`, by applying predicates when linking components:
+Instead of using a dedicated `FilterTransformation`, you can apply filtering directly when linking components:
+
+### Example – Basic Predicate Filtering
 
 ```csharp
 var source = new MemorySource<MyRow>();
@@ -76,7 +74,7 @@ source.LinkTo(voidDest, row => row.Id == 2);
 Network.Execute(source);
 ```
 
-Alternatively, you can simplify the code by implicitly discarding unwanted rows:
+### Example – Simplified with Fallback Predicate
 
 ```csharp
 var source = new MemorySource<MyRow>();
@@ -93,20 +91,17 @@ Network.Execute(source);
 
 ## Dynamic Objects
 
-The `FilterTransformation` can also work with `ExpandoObject`. Here’s an example that uses dynamic objects:
+`FilterTransformation` also works with dynamic inputs (`ExpandoObject`). You can use dynamic access within the predicate function:
 
 ```csharp
-public void ExampleFilterDynamic()
-{
+public void ExampleFilterDynamic() {
     var source = new MemorySource();
-    dynamic r1 = new ExpandoObject();
-    r1.Id = 1; r1.Value = "Test1";
+    dynamic r1 = new ExpandoObject(); r1.Id = 1; r1.Value = "Test1";
+    dynamic r2 = new ExpandoObject(); r2.Id = 2; r2.Value = "Test2";
+    dynamic r3 = new ExpandoObject(); r3.Id = 3; r3.Value = "Test3";
+
     source.DataAsList.Add(r1);
-    dynamic r2 = new ExpandoObject();
-    r2.Id = 2; r2.Value = "Test2";
     source.DataAsList.Add(r2);
-    dynamic r3 = new ExpandoObject();
-    r3.Id = 3; r3.Value = "Test3";
     source.DataAsList.Add(r3);
 
     var filter = new FilterTransformation();
@@ -128,22 +123,25 @@ public void ExampleFilterDynamic()
 
 ## Error Handling
 
-`FilterTransformation` catches and forwards exceptions encountered during execution. By default, any exception will fault the entire data flow network. However, you can forward the exceptions to another part of the network using LinkErrorTo(). This behavior is not available when using predicates; in those cases, any uncaught exception will silently discard the record by default.
+`FilterTransformation` supports error redirection using `LinkErrorTo()`. If the predicate throws an exception, it can be caught and routed to another component:
 
 ```csharp
 var errorDest = new MemoryDestination<ETLBoxError>();
 filter.LinkErrorTo(errorDest);
 ```
 
+{{< callout context="note" icon="outline/info-circle" >}}
+This behavior is only available when using the `FilterTransformation`. If you use predicates directly in `LinkTo`, exceptions are silently ignored and the affected row is discarded.
+{{< /callout>}}
 
 ## FilteredCount and PassedCount
 
-The `FilterTransformation` provides two properties to track the number of rows that were processed during execution.
+To monitor the result of filtering, `FilterTransformation` exposes the following metrics:
 
-- `FilteredCount` keeps track of the number of rows that were filtered out (i.e., rows that did not pass the predicate).
-- `PassedCount` counts the number of rows that passed the predicate and were passed along to the next component in the data flow.
+- `FilteredCount`: Number of rows that were removed (predicate returned `false`)
+- `PassedCount`: Number of rows passed on (predicate returned `true`)
 
-Here’s an example usage:
+### Example:
 
 ```csharp
 var filter = new FilterTransformation<MyRow>();
@@ -156,4 +154,4 @@ Console.WriteLine($"Rows Passed: {filter.PassedCount}");
 Console.WriteLine($"Rows Filtered: {filter.FilteredCount}");
 ```
 
-In the above example, after executing the network, the `PassedCount` will reflect the number of rows that passed the filter, while `FilteredCount` shows how many were discarded.
+These properties are useful for auditing and debugging data flow logic.
