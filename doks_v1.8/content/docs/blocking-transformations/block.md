@@ -148,5 +148,5 @@ This approach is useful when your rows are dynamically constructed (e.g., from J
 - `BlockTransformationFunc` is mandatory and must return an `IEnumerable<TOutput>`.
 - If input and output types are the same, use `BlockTransformation<T>`.
 - Avoid this transformation with very large inputs unless you are confident the dataset fits into memory.
-- For logic that can work on each row or on smaller chunks, consider using [`RowTransformation`](../row) or [`BatchTransformation`](../batch).
+- For logic that can work on each row or on smaller chunks, consider using [`RowTransformation`](../../transformations/row) or [`BatchTransformation`](../batch).
 

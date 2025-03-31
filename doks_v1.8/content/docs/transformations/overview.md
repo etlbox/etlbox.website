@@ -47,7 +47,7 @@ Transformations are categorized based on how they handle input data:
 
 - **Blocking transformations** wait until all data (or a defined batch) has been received before producing output. These transformations are necessary for operations like sorting, aggregation, or complex joins.
 
-This article provides details about non-blocking transformations. For information on blocking transformations, see [Blocking Transformations Overview](../blocking-transformations/overview).
+This article provides details about non-blocking transformations. For information on blocking transformations, see [Blocking Transformations Overview](../../blocking-transformations/overview).
 
 ## Buffering
 
