@@ -49,7 +49,7 @@ Transformations are categorized based on how they handle input data:
 
 This article provides details about non-blocking transformations. For information on blocking transformations, see [Blocking Transformations Overview](../blocking-transformations/overview).
 
-## Input and Output Buffers
+## Buffering
 
 Each transformation has at least one input buffer. Buffers temporarily store rows during processing and ensure smooth data flow between components.
 
