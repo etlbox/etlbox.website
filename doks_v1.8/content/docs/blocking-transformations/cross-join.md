@@ -1,101 +1,144 @@
 ---
-title: "Cross join"
-description: "Details about the CrossJoin"
-lead: "The CrossJoin allows you to combine every record from one input with every record from the other input. This allows you to simulate a cross join like behavior as in sql (also known as Cartesian product)."
+title: "Cross Join"
+description: "The CrossJoin works by first loading all rows from one input (the in-memory target) into memory. Then, for each row from the other input (the passing target), it pairs it with every row from the in-memory side using your custom join logic. This produces a full cross-product of the two datasets."
+lead: "The <code>CrossJoin</code> transformation combines every row from one input with every row from another. It’s useful when you want to create all possible pairings between two datasets—like matching every product with every customer or every date with every region."
 draft: false
 images: []
 menu:
   docs:
     parent: "blocking-transformations"
-weight: 610
+weight: 650
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The CrossJoin allows you to combine every record from input with every records from the other input. E.g. if your left input has the input records 1 and 2, and your right input the records A, B and C, the CrossJoin will combine 1 with A, B and C and 2 with A, B and C.
+The `CrossJoin` transformation combines every record from one input (called the **InMemory target**) with every record from another input (called the **Passing target**). This operation is similar to a SQL cross join, where each row from the first table is paired with every row from the second.
 
-#### Buffer
+This transformation is useful for generating all possible combinations between two datasets. For example, if the left input contains records `1` and `2`, and the right input contains `A`, `B`, and `C`, the resulting output will be: `1-A`, `1-B`, `1-C`, `2-A`, `2-B`, `2-C`.
 
-The CrossJoin is a partial blocking transformation. The input for the first table will be loaded into memory before the actual join can start. After this, every incoming row will be joined with every row of the InMemory-Table using the cross join function. The InMemory target should always be the target with the smaller amount of data to reduce memory consumption and processing time. The passing target of the CrossJoin func does not store any rows in memory.
+### Buffering
 
-The `CrossJoin` has an input buffer for each input target.
+The `CrossJoin` transformation is a partial blocking transformation. Its buffering behavior depends on how the two input sources are connected:
 
-### Code snippet
+- **InMemoryTarget**: All incoming rows from this input are fully loaded into memory before any join operation begins. This side should be assigned to the smaller dataset to optimize memory usage.
+- **PassingTarget**: Rows from this input are processed one by one, but only after the InMemory side has been completely loaded.
+- **Output Buffer**: Like other transformations, `CrossJoin` includes a standard output buffer to hold processed rows.
 
-```C#
-CrossJoin<InputType1, InputType2, OutputType> crossJoin = new CrossJoin<InputType1, InputType2, OutputType>();
-crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) => {
-    return new OutputType() {
-        Result = leftRow.Value1 + rightRow.Value2
-    };
-});
+The `MaxBufferSize` property affects only the output buffer and has no influence on how many rows are stored in memory from the InMemory side. Because of this, careful consideration should be given to which input is assigned to `InMemoryTarget`, especially when working with large datasets.
+
+## Defining the Cross Join
+
+To use the `CrossJoin`, you must define the `CrossJoinFunc`, which describes how two input records are combined into an output record.
+
+```csharp
+var join = new CrossJoin<InputType1, InputType2, OutputType>(
+    (inMemoryRow, passingRow) => new OutputType {
+        Result = inMemoryRow.Value1 + passingRow.Value2
+    });
+```
+
+Then, link the sources to the `InMemoryTarget` and `PassingTarget` respectively, and the final output to a destination:
+
+```csharp
 source1.LinkTo(join.InMemoryTarget);
 source2.LinkTo(join.PassingTarget);
 join.LinkTo(dest);
+Network.Execute(source1, source2);
 ```
 
-## Example
+## Example: Joining First and Last Names
 
-Let's assume you have two input sets.
-Set one is a list of first names: "Elvis", "James" and "Marilyn". Set two is a list of last names: "Presley" and "Monroe". Our cross join should produce a list of all possible combinations of first and last name: "Elvis Presley", "Elvis Monroe", "James Presley", "James Monroe", "Marilyn Presley", "Marilyn Monroe".
+In the following example, we combine first names with last names to generate full names using a cross join. The left source provides first names, and the right source provides last names. The result includes every combination of first and last name.
 
-This is our code:
-
-```C#
-public class MyLeftRow
-{
+```csharp
+public class MyLeftRow {
     public string FirstName { get; set; }
 }
 
-public class MyRightRow
-{
+public class MyRightRow {
     public string LastName { get; set; }
 }
 
-public class MyOutputRow
-{
+public class MyOutputRow {
     public string FullName { get; set; }
 }
 
-public static void Main()
-{
-    var source1 = new MemorySource<MyLeftRow>();
-    source1.DataAsList.Add(new MyLeftRow() { FirstName = "Elvis" });
-    source1.DataAsList.Add(new MyLeftRow() { FirstName = "James" });
-    source1.DataAsList.Add(new MyLeftRow() { FirstName = "Marilyn" });
-    var source2 = new MemorySource<MyRightRow>();
-    source2.DataAsList.Add(new MyRightRow() { LastName = "Presley" });
-    source2.DataAsList.Add(new MyRightRow() { LastName = "Monroe" });
+var source1 = new MemorySource<MyLeftRow>();
+source1.DataAsList.AddRange(new[] {
+    new MyLeftRow { FirstName = "Elvis" },
+    new MyLeftRow { FirstName = "James" },
+    new MyLeftRow { FirstName = "Marilyn" }
+});
 
-    var join = new CrossJoin<MyLeftRow, MyRightRow, MyOutputRow>(
-        (leftRow, rightRow) =>
-        {
-            return new MyOutputRow()
-            {
-                FullName = leftRow.FirstName + " " + rightRow.LastName
-            };
-        });
+var source2 = new MemorySource<MyRightRow>();
+source2.DataAsList.AddRange(new[] {
+    new MyRightRow { LastName = "Presley" },
+    new MyRightRow { LastName = "Monroe" }
+});
 
-    var dest = new MemoryDestination<MyOutputRow>();
-    source1.LinkTo(join.InMemoryTarget);
-    source2.LinkTo(join.PassingTarget);
-    join.LinkTo(dest);
+var join = new CrossJoin<MyLeftRow, MyRightRow, MyOutputRow>(
+    (left, right) => new MyOutputRow {
+        FullName = $"{left.FirstName} {right.LastName}"
+    });
 
-    Network.Execute(source1, source2);
+var dest = new MemoryDestination<MyOutputRow>();
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);
+Network.Execute(source1, source2);
 
-    foreach (var row in dest.Data)
-        Console.WriteLine(row.FullName);
+foreach (var row in dest.Data)
+    Console.WriteLine(row.FullName);
 
-    //Outputs
-    //Elvis Presley
-    //James Presley
-    //Marilyn Presley
-    //Elvis Monroe
-    //James Monroe
-    //Marilyn Monroe
-}
+// Output:
+// Elvis Presley
+// James Presley
+// Marilyn Presley
+// Elvis Monroe
+// James Monroe
+// Marilyn Monroe
 ```
 
-{{< alert text="The source where you expect the smaller amount of incoming data should always go into the InMemory target of the CrossJoin. This is because the CrossJoin is a partial blocking transformation where all rows from the InMemoryTarget are stored in memory before the actual join can be performed." >}}
+{{< callout context="tip" icon="outline/rocket" >}}
+Assign the input with fewer rows to the `InMemoryTarget` to minimize memory usage.
+{{< /callout >}}
 
+## Dynamic Object Support
+
+The `CrossJoin` transformation supports dynamic types (`ExpandoObject`) through its non-generic `CrossJoin` class. This is useful when working with flexible schemas or integrating data from untyped sources (e.g., JSON, CSV).
+
+Example:
+
+```csharp
+MemorySource source1 = new MemorySource();
+MemorySource source2 = new MemorySource();
+
+dynamic row1 = new ExpandoObject(); row1.FirstName = "Ada";
+dynamic row2 = new ExpandoObject(); row2.LastName = "Lovelace";
+source1.DataAsList.Add(row1);
+source2.DataAsList.Add(row2);
+
+var join = new CrossJoin(
+    (left, right) => {
+        dynamic result = new ExpandoObject();
+        result.FullName = $"{(left as dynamic).FirstName} {(right as dynamic).LastName}";
+        return result;
+    });
+
+
+MemoryDestination dest = new MemoryDestination();
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);
+Network.Execute(source1, source2);
+
+foreach (dynamic row in dest.Data)
+    Console.WriteLine(row.FullName);
+
+// Output:
+// Ada Lovelace
+```
+
+This flexibility makes `CrossJoin` suitable for both strongly typed and dynamic data processing scenarios.

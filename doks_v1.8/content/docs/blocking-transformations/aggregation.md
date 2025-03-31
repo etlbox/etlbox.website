@@ -1,7 +1,7 @@
 ---
 title: "Aggregation"
-description: "The Aggregation class allows both standard aggregation methods, such as Sum, Count, and Average, along with custom aggregation functions and predicates."
-lead: "This guide provides an overview of using both standard aggregation methods and custom logic with predicates, offering full control over how data is filtered and processed during aggregation."
+description: "The Aggregation component in ETLBox is a blocking transformation used to compute aggregate values over data streams. It supports built-in functions like sum, count, min, max, and more, and enables custom logic through aggregation actions or functions."
+lead: "The <code>Aggregation</code> transformation allows you to compute aggregated values such as sums, counts, minimums, maximums, or any custom aggregation on a data stream. It supports both global aggregation and grouping similar to SQL's <code>GROUP BY</code>. You can use predefined aggregation methods or implement custom logic for complete flexibility."
 draft: false
 images: []
 menu:
@@ -9,61 +9,56 @@ menu:
     parent: "blocking-transformations"
 weight: 610
 toc: true
+chatgpt-review: true
 ---
 
 ## Overview
 
-The `Aggregation` class provides the ability to aggregate data as it flows through your system. You can either use predefined aggregation functions or define custom ones based on your needs. The default aggregation functions include **Sum**, **Min**, **Max**, **Count**,  and many more. You can also use your own logic.
+Whether aggregating over the entire dataset or applying group-based calculations, this component offers both flexibility and performance. Built-in methods and custom aggregation logic are supported, including use with dynamic or strongly typed objects.
 
-You have the flexibility to apply these functions across your entire dataset or to specific groups, much like using a `GROUP BY` clause in SQL. Grouping allows for targeted aggregation within subsets of data rather than aggregating the entire dataset.
+This component is particularly memory-efficient because it stores only the intermediate results for each group (if any), not the full input. This makes it suitable for large-scale datasets.
 
-The aggregation process is optimized for memory efficiency. Only the current aggregated value for each group is stored, rather than every individual record. Each time a new record is processed, the current aggregated value is updated in real time. This design is ideal for basic calculations such as sums, minimums, maximums, and counts, and enables further calculations, like averages (which can be derived by dividing the sum by the count).
+### Buffering
 
-For example, consider aggregating the sum of the values 5, 3, and 2:
-- First, the value 5 arrives, and the aggregated value starts at 0 (the default). The aggregation updates to 5.
-- When the value 3 arrives, it adds to the previous result, updating the total to 8.
-- Finally, the value 2 arrives, bringing the aggregated total to 10. This final result is then output.
+The `Aggregation` is a **blocking transformation** that processes rows in a buffered manner. All incoming records are received and aggregated internally before any output is sent. The internal buffer stores one aggregated object per group (or one if no grouping is applied). This means memory usage depends on the number of unique groups.
 
-If none of the built-in aggregation functions meet your requirements, you can implement a custom aggregation function. Custom functions have the same memory-efficient limitation: they only have access to the current aggregated value and the incoming record. For more complex needs, where you must process the entire dataset at once, refer to the **BlockTransformation** section.
+Unlike transformations such as `Sort`, which store all records, the `Aggregation` stores only intermediate results, leading to a smaller memory footprint. The `MaxBufferSize` property controls the size of the output buffer but does not limit the internal aggregation buffer.
 
 ### Aggregation Methods
 
-The `Aggregation` class offers several built-in aggregation methods:
+You can use any of the following predefined aggregation methods:
 
-- **Count**
-- **Sum**
-- **Min**
-- **Max**
-- **FirstValue** (including nulls)
-- **LastValue** (including nulls)
-- **FirstNotNullValue**
-- **LastNotNullValue**
-- **Median**
-- **Mean**
-- **Variance**
-- **StandardDeviation**
+- `Sum` – Adds all numeric values together.
+- `Min` – Finds the smallest value in the group.
+- `Max` – Finds the largest value in the group.
+- `Count` – Counts the total number of rows.
+- `FirstNotNullValue` – Returns the first non-null value encountered.
+- `LastNotNullValue` – Returns the last non-null value encountered.
+- `FirstValue` – Returns the first value, including nulls.
+- `LastValue` – Returns the last value, including nulls.
+- `Mean` – Calculates the average (sum divided by count).
+- `Median` – Returns the median value (middle value in a sorted list).
+- `Mode` – Returns the most frequently occurring value.
+- `Concatenate` – Concatenates all values into a single string
+- `CountDistinct` – Counts the number of distinct (unique) values.
+- `CountDistinctNotNull` – Counts distinct values, excluding nulls.
+- `Variance` – Calculates the population variance.
+- `VarianceSample` – Calculates the sample variance.
+- `StandardDeviation` – Calculates the population standard deviation.
+- `StandardDeviationSample` – Calculates the sample standard deviation.
+- `Custom` – Allows definition of a custom aggregation function.
 
-These methods, combined with the ability to group or classify data, cover most common aggregation needs. If these default methods do not meet your requirements, you have the option to write your own custom aggregation function.
+If needed, custom aggregation logic can be implemented using the `AggregationAction` property or by defining `CustomFunction` and `Predicate` within `AggregateColumn`.
 
-### Memory Footprint
-
-The `Aggregation` is essentially a blocking transformation, but with significantly lower memory consumption. Unlike `BlockTransformation`, which stores all incoming rows in memory before processing them, `Aggregation` operates row by row. This means that only the aggregated values are stored in memory, rather than the entire set of detail rows.
-
-Each time a record arrives, the calculation of the aggregated values is updated in real time, which explains the limitations on the types of calculations that can be performed. This approach is particularly efficient for operations like **Min**, **Max**, **Count**, **Sum**, **First**, and **Last**, where the result for each group is updated as new rows are processed.
-
-For certain operations, like **Mean**, `Aggregation` may store additional information (such as the sum and count of rows), but even in these cases, the memory footprint remains  smaller compared to `BlockTransformation`.
-
-In summary, `Aggregation` uses less memory because it only stores the results of the aggregation, not the input data. This makes it ideal when dealing with large numbers of rows and fewer groups or aggregation columns, significantly reducing memory usage compared to `BlockTransformation`.
-
-## Example Aggregation
+## Aggregation Columns
 
 ### Using AggregateColumn Attribute
 
-There are two ways to use the `Aggregation` class. The simpler approach is to utilize the `AggregateColumn` and `GroupColumn` attributes alongside the default aggregation functions. When using the `AggregateColumn` attribute, if no `GroupColumn` is defined, the aggregation is performed on all incoming data records.
+The easiest way to define aggregation behavior is by using the `[AggregateColumn]` attribute. This allows you to annotate properties in your aggregation result class to define how input values are processed.
 
-Here’s an example of how to use the `AggregateColumn` attribute for summing values:
+If you only want to aggregate all incoming rows without grouping, you simply define which column should be aggregated and which method to apply.
 
-```C#
+```csharp
 public class MyDetailValue
 {
     public int DetailValue { get; set; }
@@ -83,125 +78,60 @@ public static void Main()
     source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
 
     var agg = new Aggregation<MyDetailValue, MyAggRow>();
-
     var dest = new MemoryDestination<MyAggRow>();
-
-    source.LinkTo<MyAggRow>(agg).LinkTo(dest);
-    Network.Execute(source);
-
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
-
-    //Output
-    //Sum:10
-}
-```
-
-In this example, the `AggregateColumn` attribute is used to sum up the values of the `DetailValue` property from the incoming data. If no grouping is specified, the aggregation will apply to all records as a whole.
-
-### Define AggregationColumns Without Attributes
-
-When working with dynamic columns, it’s not possible to use attributes like `AggregateColumn` directly. In such cases, you can pass a list of `AggregateColumn` objects into the `Aggregation` class. This approach allows you to specify the property names for both the detail values and the aggregated values, as well as the aggregation method. This method can be used with both dynamic and normal objects and serves as an alternative to using attributes.
-
-Here’s an example of how to define aggregation columns without using attributes:
-
-```C#
-public static void Main()
-{
-    var source = new MemorySource();
-
-    dynamic val1 = new ExpandoObject();
-    val1.DetailValue = 5;
-    source.DataAsList.Add(val1);
-
-    dynamic val2 = new ExpandoObject();
-    val2.DetailValue = 3;
-    source.DataAsList.Add(val2);
-
-    dynamic val3 = new ExpandoObject();
-    val3.DetailValue = 2;
-    source.DataAsList.Add(val3);
-
-    var agg = new Aggregation();
-    agg.AggregateColumns = new List<AggregateColumn>()
-    {
-        new AggregateColumn() {
-            InputValuePropName = "DetailValue",
-            AggregatedValuePropName = "AggValue",
-            AggregationMethod = AggregationMethod.Sum
-        }
-    };
-
-    var dest = new MemoryDestination();
 
     source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
-    foreach (dynamic row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
-
-    //Output
-    //Sum:10
-}
-```
-
-This approach is useful when working with dynamic objects like `ExpandoObject`.
-
-### Using Aggregation Action
-
-You can achieve the same behavior as with predefined methods by defining your own aggregation function. To do this, you specify an action that determines how the aggregated value is updated when a new value arrives, using the `AggregationAction` property.
-
-Here’s an example of how to implement a custom sum using an aggregation action:
-
-```C#
-public class MyDetailValue
-{
-    public int DetailValue { get; set; }
-}
-
-public class MyAggRow2
-{
-    public int AggValue { get; set; }
-}
-
-public static void Main()
-{
-    var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
-
-    var agg = new Aggregation<MyDetailValue, MyAggRow2>();
-    agg.AggregationAction =
-        (detailValue, aggValue) =>
-            aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
-
-    var dest = new MemoryDestination<MyAggRow2>();
-
-    source.LinkTo<MyAggRow2>(agg).LinkTo(dest);
-    Network.Execute(source);
-
     foreach (var row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
+        Console.WriteLine($"Sum: {row.AggValue}");
 
-    //Output
-    //Sum:10
+    // Output:
+    // Sum: 10
 }
 ```
 
-In this example, the custom aggregation function is defined using an action that specifies how the sum is updated each time a new record arrives. This method allows for complete flexibility in how the aggregation is performed, enabling custom calculations beyond the default methods.
+### Define Aggregation Columns Programmatically
 
-### Custom Aggregation Method and Condition
+If you are working with dynamic data or prefer to define aggregation logic in code instead of using attributes, you can use the `AggregateColumns` property. This allows you to configure aggregation rules manually.
 
-In addition to defining custom aggregation actions, you can also use a overall condition to filter records before they are included in the aggregation process. A condition is a predicate that determines whether a particular record should be included in the aggregation. This adds flexibility in scenarios where you need to apply aggregation only to a subset of your data.
+```csharp
+var source = new MemorySource();
 
-You can also define a custom aggregation method, allowing you to calculate values in ways that go beyond the default functions like sum, min, or max. Both predicates and custom aggregation methods provide powerful ways to customize the aggregation process.
+dynamic row1 = new ExpandoObject(); row1.DetailValue = 5;
+dynamic row2 = new ExpandoObject(); row2.DetailValue = 3;
+dynamic row3 = new ExpandoObject(); row3.DetailValue = 2;
+source.DataAsList.AddRange(new[] { row1, row2, row3 });
 
-#### Example: Using a Condition
+var agg = new Aggregation();
+agg.AggregateColumns = new List<AggregateColumn>
+{
+    new AggregateColumn
+    {
+        InputValuePropName = "DetailValue",
+        AggregatedValuePropName = "AggValue",
+        AggregationMethod = AggregationMethod.Sum
+    }
+};
 
-In this example, we'll aggregate values only if they meet a specified condition by returning `true` or `false`.
+var dest = new MemoryDestination();
+source.LinkTo(agg).LinkTo(dest);
+Network.Execute(source);
 
-```C#
+foreach (dynamic row in dest.Data)
+    Console.WriteLine($"Sum: {row.AggValue}");
+
+// Output:
+// Sum: 10
+```
+
+This approach is especially useful for dynamic scenarios, such as processing rows from JSON or CSV without predefined schemas.
+
+## Using Aggregation Action
+
+Instead of using predefined aggregation methods, you can define custom aggregation logic using the `AggregationAction` property. This action is executed for each input row and updates the aggregated result accordingly.
+
+```csharp
 public class MyDetailValue
 {
     public int DetailValue { get; set; }
@@ -215,42 +145,78 @@ public class MyAggRow
 public static void Main()
 {
     var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 5 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 3 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 2 });
 
     var agg = new Aggregation<MyDetailValue, MyAggRow>();
-
-    agg.AggregationAction =
-        (detailValue, aggValue) =>
-            aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
-
-    // Adding a predicate to skip aggregation when DetailValue is 3
-    agg.AggregationCondition = (detailValue, aggregationMethod) =>
+    agg.AggregationAction = (input, output) =>
     {
-        return detailValue.DetailValue != 3;
+        output.AggValue += input.DetailValue;
     };
 
     var dest = new MemoryDestination<MyAggRow>();
-
-    source.LinkTo<MyAggRow>(agg).LinkTo(dest);
+    source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
     foreach (var row in dest.Data)
-        Console.WriteLine($"Sum:{row.AggValue}");
+        Console.WriteLine($"Sum: {row.AggValue}");
 
-    //Output
-    //Sum:7 (since the value 3 is skipped)
+    // Output:
+    // Sum: 10
 }
 ```
 
-In this example, the aggregation skips any record where `DetailValue` is 3, resulting in a sum of 7 instead of 10.
+This method is useful when default methods like `Sum` or `Count` don't match your specific needs, or when calculations involve multiple input fields or transformations.
 
-#### Example: Custom Aggregation Method
+### Aggregation with Condition
 
-You can also define a completely custom aggregation method. For example, you might want to calculate a weighted sum, where each value is multiplied by a weight before being added to the aggregation.
+In some cases, you may want to include only specific rows in the aggregation. The `AggregationCondition` property allows you to define a predicate that filters records before they are aggregated.
 
-```C#
+```csharp
+public class MyDetailValue
+{
+    public int DetailValue { get; set; }
+}
+
+public class MyAggRow
+{
+    public int AggValue { get; set; }
+}
+
+public static void Main()
+{
+    var source = new MemorySource<MyDetailValue>();
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 5 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 3 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 2 });
+
+    var agg = new Aggregation<MyDetailValue, MyAggRow>();
+    agg.AggregationAction = (input, output) =>
+    {
+        output.AggValue += input.DetailValue;
+    };
+    agg.AggregationCondition = (input, method) => input.DetailValue != 3;
+
+    var dest = new MemoryDestination<MyAggRow>();
+    source.LinkTo(agg).LinkTo(dest);
+    Network.Execute(source);
+
+    foreach (var row in dest.Data)
+        Console.WriteLine($"Conditional Sum: {row.AggValue}");
+
+    // Output:
+    // Conditional Sum: 7
+}
+```
+
+In this example, the value `3` is skipped due to the condition, resulting in a total of `7`.
+
+### Weighted Aggregation Example
+
+To perform calculations such as weighted sums, you can combine multiple fields within your custom aggregation action:
+
+```csharp
 public class MyDetailValue
 {
     public int DetailValue { get; set; }
@@ -265,94 +231,54 @@ public class MyAggRow
 public static void Main()
 {
     var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5, Weight = 2 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3, Weight = 1 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2, Weight = 3 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 5, Weight = 2 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 3, Weight = 1 });
+    source.DataAsList.Add(new MyDetailValue { DetailValue = 2, Weight = 3 });
 
     var agg = new Aggregation<MyDetailValue, MyAggRow>();
-
-    agg.AggregationAction = (detailValue, aggValue) =>
+    agg.AggregationAction = (input, output) =>
     {
-        aggValue.WeightedSum = detailValue.DetailValue * detailValue.Weight + aggValue.WeightedSum;
+        output.WeightedSum += input.DetailValue * input.Weight;
     };
 
     var dest = new MemoryDestination<MyAggRow>();
-
-    source.LinkTo<MyAggRow>(agg).LinkTo(dest);
+    source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Weighted Sum: {row.WeightedSum}");
 
-    //Output
-    //Weighted Sum: 22 ((5*2) + (3*1) + (2*3) = 10 + 3 + 6 = 19)
+    // Output:
+    // Weighted Sum: 19
 }
 ```
 
-In this example, the custom aggregation method calculates the weighted sum of `DetailValue` based on the `Weight` property. The result is 19, which is the sum of each value multiplied by its respective weight.
-
-#### Combining Predicate with Custom Aggregation
-
-You can also combine both a predicate and a custom aggregation method to apply more advanced filtering and calculations.
-
-```C#
-public static void Main()
-{
-    var source = new MemorySource<MyDetailValue>();
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 5, Weight = 2 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 3, Weight = 1 });
-    source.DataAsList.Add(new MyDetailValue() { DetailValue = 2, Weight = 3 });
-
-    var agg = new Aggregation<MyDetailValue, MyAggRow>();
-
-    // Define custom aggregation method (weighted sum)
-    agg.AggregationAction = (detailValue, aggValue) =>
-    {
-        aggValue.WeightedSum = detailValue.DetailValue * detailValue.Weight + aggValue.WeightedSum;
-    };
-
-    // Predicate to filter out records where Weight is less than 2
-    agg.AggregationCondition = (detailValue, aggregationMethod) =>
-    {
-        return detailValue.Weight >= 2;
-    };
-
-    var dest = new MemoryDestination<MyAggRow>();
-
-    source.LinkTo<MyAggRow>(agg).LinkTo(dest);
-    Network.Execute(source);
-
-    foreach (var row in dest.Data)
-        Console.WriteLine($"Filtered Weighted Sum: {row.WeightedSum}");
-
-    //Output
-    //Filtered Weighted Sum: 16 ((5*2) + (2*3) = 10 + 6 = 16)
-}
-```
-
-In this case, the predicate filters out records where the `Weight` is less than 2. The remaining records are then aggregated using the custom weighted sum calculation, resulting in a final value of 16.
+This allows precise control over how your data is calculated when simple arithmetic operations are not enough.
 
 
-## Example Aggregation with Grouping
+## Aggregation with Grouping
 
-### Using GroupingColumn
+### Using GroupColumn Attribute
 
-Aggregating all records together might not always be what you need. Often, you will want to classify your data based on certain properties and perform aggregation for each class separately. This process is called grouping, and it works similarly to the `GROUP BY` clause in SQL. You specify which properties are used for grouping, and the calculations are done for each group independently.
+Aggregating all rows together is not always sufficient. Often, you will want to group your data based on one or more properties and perform aggregation within each group. This works similarly to SQL's `GROUP BY`.
 
-Let’s illustrate this with a basic example:
+Let’s consider this dataset:
+`"A":3`, `"A":7`, `"B":4`, `"B":6`.
+Without grouping, the result is a single sum of `20`.
+With grouping by the string key, the results are:
+- `"A"` → `10`
+- `"B"` → `10`
 
-Our input data consists of the following records: "A":3, "A":7, "B":4, and "B":6. If we aggregate all records without grouping, the sum will be 20. However, if we group the data by the letter, we would get a sum of 10 for group "A" and a sum of 10 for group "B".
+This grouping can be expressed declaratively with attributes:
 
-Here’s how this looks in code when using the `GroupColumn` attribute:
-
-```C#
+```csharp
 public class DetailWithGroup
 {
     public int DetailValue { get; set; }
     public string Group { get; set; }
 }
 
-public class MyAggRow3
+public class MyAggRow
 {
     [AggregateColumn(nameof(DetailWithGroup.DetailValue), AggregationMethod.Sum)]
     public int AggValue { get; set; }
@@ -364,65 +290,69 @@ public class MyAggRow3
 public static void Main()
 {
     var source = new MemorySource<DetailWithGroup>();
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "A", DetailValue = 3 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "A", DetailValue = 7 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "B", DetailValue = 4 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "B", DetailValue = 6 });
 
-    var agg = new Aggregation<DetailWithGroup, MyAggRow3>();
+    var agg = new Aggregation<DetailWithGroup, MyAggRow>();
+    var dest = new MemoryDestination<MyAggRow>();
 
-    var dest = new MemoryDestination<MyAggRow3>();
-
-    source.LinkTo<MyAggRow3>(agg).LinkTo(dest);
+    source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
     foreach (var row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+        Console.WriteLine($"Sum for {row.Group}: {row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
+    // Output:
+    // Sum for A: 10
+    // Sum for B: 10
 }
 ```
 
-In this example, we use the `GroupColumn` attribute to group the data by the `Group` property, and we use the `AggregateColumn` attribute to sum the `DetailValue` for each group. The result is a separate sum for group "A" and group "B".
-
-Please note that the `GroupColumn` must specify the property name in the details object that the grouping is based on. This ensures the grouping is performed correctly for each distinct value of the specified property.
 
 ### Grouping with Dynamic Objects
 
-Similar to the use of `AggregateColumn`, when working with dynamic objects such as `ExpandoObject`, you can also pass a list of `GroupColumns` to the `Aggregation`. In this case, you specify the property name in the input object that will be used for grouping, as well as the corresponding property name in the output object. This approach allows you to perform group-based aggregation on dynamic objects, without needing to define attributes.
+If you're working with `ExpandoObject`, grouping can still be applied using `GroupColumns` directly:
 
-```C#
+```csharp
 public static void Main()
 {
     var source = new MemorySource();
-    dynamic val1 = new ExpandoObject();
-    val1.Group = "A"; val1.DetailValue = 3;
-    source.DataAsList.Add(val1);
-    dynamic val2 = new ExpandoObject();
-    val2.Group = "A"; val2.DetailValue = 7;
-    source.DataAsList.Add(val2);
-    dynamic val3 = new ExpandoObject();
-    val3.Group = "B"; val3.DetailValue = 4;
-    source.DataAsList.Add(val3);
-    dynamic val4 = new ExpandoObject();
-    val4.Group = "B"; val4.DetailValue = 6;
-    source.DataAsList.Add(val4);
+
+    dynamic row1 = new ExpandoObject();
+    row1.Group = "A";
+    row1.DetailValue = 3;
+    source.DataAsList.Add(row1);
+
+    dynamic row2 = new ExpandoObject();
+    row2.Group = "A";
+    row2.DetailValue = 7;
+    source.DataAsList.Add(row2);
+
+    dynamic row3 = new ExpandoObject();
+    row3.Group = "B";
+    row3.DetailValue = 4;
+    source.DataAsList.Add(row3);
+
+    dynamic row4 = new ExpandoObject();
+    row4.Group = "B";
+    row4.DetailValue = 6;
+    source.DataAsList.Add(row4);
 
     var agg = new Aggregation();
-    agg.AggregateColumns = new List<AggregateColumn>()
+    agg.AggregateColumns = new List<AggregateColumn>
     {
-        new AggregateColumn()
+        new AggregateColumn
         {
             InputValuePropName = "DetailValue",
             AggregatedValuePropName = "AggValue",
             AggregationMethod = AggregationMethod.Sum
         }
     };
-    agg.GroupColumns = new List<GroupColumn>()
+    agg.GroupColumns = new List<GroupColumn>
     {
-        new GroupColumn()
+        new GroupColumn
         {
             GroupPropNameInInput = "Group",
             GroupPropNameInOutput = "Group"
@@ -430,30 +360,40 @@ public static void Main()
     };
 
     var dest = new MemoryDestination();
-
     source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+        Console.WriteLine($"Sum for {row.Group}: {row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
+    // Output:
+    // Sum for A: 10
+    // Sum for B: 10
 }
 ```
 
+This approach allows full flexibility when schema information isn't available at compile time.
+
+
 ### Using Grouping Function
 
-You can also create your own grouping function to have full control over how data is grouped. To do this, you need to define two functions:
+If your grouping logic cannot be expressed via attributes or simple property mappings, you can use the `GroupingFunc` and `StoreKeyAction` delegates to define custom behavior.
 
-- **GroupingFunc**: This function defines the object used for grouping. While you can use any object, it’s recommended to create a unique string or number to use for comparison when grouping data.
-- **StoreKeyAction**: This function describes how the grouping object is stored in the aggregation output. It ensures that the grouped key is properly associated with each aggregated result.
+- **`GroupingFunc`** defines how to extract the key used for grouping.
+- **`StoreKeyAction`** specifies how to write the grouping key back into the aggregated output.
 
-By using these custom functions, you can implement more complex grouping logic and tailor the grouping behavior according to your specific requirements. This approach is especially useful when default grouping methods or attributes don’t meet your needs.
+This provides complete flexibility and is especially useful for complex group keys or composite identifiers.
 
-```C#
- public class MyAggRow4
+#### Example: Custom Grouping Function
+
+```csharp
+public class DetailWithGroup
+{
+    public int DetailValue { get; set; }
+    public string Group { get; set; }
+}
+
+public class MyAggRow
 {
     public int AggValue { get; set; }
     public string Group { get; set; }
@@ -462,46 +402,50 @@ By using these custom functions, you can implement more complex grouping logic a
 public static void Main()
 {
     var source = new MemorySource<DetailWithGroup>();
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 3 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "A", DetailValue = 7 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 4 });
-    source.DataAsList.Add(new DetailWithGroup() { Group = "B", DetailValue = 6 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "A", DetailValue = 3 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "A", DetailValue = 7 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "B", DetailValue = 4 });
+    source.DataAsList.Add(new DetailWithGroup { Group = "B", DetailValue = 6 });
 
-    var agg = new Aggregation<DetailWithGroup, MyAggRow4>();
+    var agg = new Aggregation<DetailWithGroup, MyAggRow>();
 
-    agg.AggregationAction =
-        (detailValue, aggValue) =>
-            aggValue.AggValue = detailValue.DetailValue + aggValue.AggValue;
+    agg.AggregationAction = (detail, result) =>
+        result.AggValue = result.AggValue + detail.DetailValue;
 
-    agg.GroupingFunc =
-        detailValue => detailValue.Group;
+    agg.GroupingFunc = detail => detail.Group;
 
-    agg.StoreKeyAction =
-        (groupingObject, aggValue) => aggValue.Group = (string)groupingObject;
+    agg.StoreKeyAction = (groupKey, result) =>
+        result.Group = (string)groupKey;
 
-    var dest = new MemoryDestination<MyAggRow4>();
-
-    source.LinkTo<MyAggRow4>(agg).LinkTo(dest);
+    var dest = new MemoryDestination<MyAggRow>();
+    source.LinkTo(agg).LinkTo(dest);
     Network.Execute(source);
 
     foreach (var row in dest.Data)
-        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+        Console.WriteLine($"Sum for {row.Group}: {row.AggValue}");
 
-    //Output
-    //Sum for A:10
-    //Sum for B:10
+    // Output:
+    // Sum for A: 10
+    // Sum for B: 10
 }
 ```
+
+This approach allows you to fully control how groups are created and how the resulting key is stored in the output. The grouping object can be any type (e.g., string, int, tuple), as long as it can be used as a dictionary key.
 
 ## Custom Configuration with Attributes
 
 ### Multiple Attributes
 
-Both `AggregateColumn` and `GroupColumn` attributes can be applied to as many properties as necessary. This allows for flexible and complex aggregation configurations. You can assign a different aggregation function to each `AggregateColumn`. When using multiple grouping columns, the combination of all grouping columns is used to generate the grouping key. This means that only records with matching values for all grouping columns will be aggregated together into the same group.
+The `Aggregation` transformation supports using multiple `[AggregateColumn]` and `[GroupColumn]` attributes on the output object. This allows you to:
 
-Here is an example of an object used as output for an aggregation with multiple attributes:
+- Apply multiple aggregation operations at once (e.g., sum and count).
+- Use multiple properties for grouping (like a composite key).
 
-```C#
+This behavior is similar to performing grouped aggregations in SQL using `GROUP BY` on multiple columns, combined with different aggregation functions for each column.
+
+#### Example: Multiple Aggregates and Grouping Keys
+
+```csharp
 public class MyAggRow
 {
     [AggregateColumn("Price", AggregationMethod.Sum)]
@@ -516,28 +460,39 @@ public class MyAggRow
     [GroupColumn("OrderDate")]
     public string OrderDateGroupKey { get; set; }
 
-    public decimal AveragePrices => AggPrice / CountOrders;
+    public decimal AveragePrice => CountOrders == 0 ? 0 : AggPrice / CountOrders;
 }
 ```
 
-In this example:
-- The `Price` column is aggregated using the `Sum` method.
-- The `OrderNumber` column is counted to track the number of orders.
-- Two group keys (`OrderNumber` and `OrderDate`) are used to group the data.
+In this configuration:
+- The property `AggPrice` sums the `Price` values.
+- `CountOrders` counts how many rows are in each group based on `OrderNumber` and `OrderDate`.
+- The computed property `AveragePrice` demonstrates how derived fields can be calculated from the aggregated values.
 
-Instead of using attributes, you can also achieve this by passing multiple aggregation and group columns programmatically to the `AggregateColumns` and `GroupColumns` properties. This gives you the flexibility to define dynamic columns when attributes are not practical.
+You can use this setup with an input class like the following:
+
+```csharp
+public class MyDetailRow
+{
+    public string OrderNumber { get; set; }
+    public string OrderDate { get; set; }
+    public int Price { get; set; }
+}
+```
+
+To use the aggregation, just link the source to the `Aggregation<MyDetailRow, MyAggRow>` component as before. The results will be grouped by `OrderNumber` and `OrderDate`, with aggregation applied as configured.
+
+
 
 ### Writing Custom AggregationMethod
 
-When working with `AggregationMethod.Custom`, you can define custom logic for your aggregation, allowing for calculations and processes beyond the default methods. Additionally, you can use a predicate to filter records before they are processed, ensuring only those that meet your conditions are included in the aggregation.
+In addition to using predefined aggregation methods (like `Sum`, `Count`, `Min`, etc.), you can define custom aggregation logic by setting the `AggregationMethod` to `Custom` and specifying a custom aggregation function via the `CustomFunction` property. You can also apply a `Predicate` to control which rows are included in the aggregation.
 
-The `Predicate` allows you to define conditions for including records, while the `CustomFunction` defines how the aggregated value is calculated.
+This is useful for specialized scenarios like conditional counting, weighted sums, or other non-standard calculations.
 
-#### Example: Custom Aggregation Method with Predicate
+#### Example: Count Only Positive Values + Custom Sum
 
-This example demonstrates the use of a predicate to filter values and a custom function for counting only positive values. Additionally, it shows a custom summing function.
-
-```C#
+```csharp
 public class MyRow {
     public int Id { get; set; }
     public double DetailValue { get; set; }
@@ -566,23 +521,22 @@ public static void Main()
         new AggregateColumn() {
             InputValuePropName = "DetailValue",
             AggregatedValuePropName = "CountIfValue",
-            Predicate = dv => (double)dv > 0, // Count only positive values
-            CustomFunction = (inputValue, aggValue) => (int)aggValue + 1 // Custom count function
+            Predicate = dv => (double)dv > 0,
+            CustomFunction = (inputValue, aggValue) => (int)aggValue + 1
         },
         new AggregateColumn() {
             InputValuePropName = "DetailValue",
             AggregatedValuePropName = "CustomSum",
             AggregationMethod = AggregationMethod.Custom,
-            CustomFunction = (inputValue, aggValue) => (double)inputValue + (double)aggValue // Custom summing function
+            CustomFunction = (inputValue, aggValue) => (double)inputValue + (double)aggValue
         }
     };
 
     MemoryDestination<MyAggRow> dest = new MemoryDestination<MyAggRow>();
 
-    // Link and execute
     source.LinkTo(agg);
     agg.LinkTo(dest);
-    source.Execute();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"CountIfValue: {row.CountIfValue}, CustomSum: {row.CustomSum}");
@@ -592,20 +546,22 @@ public static void Main()
 }
 ```
 
-In this example, for the aggregated value of `CountIfValue` we check whether `DetailValue` is greater than 0. If so, the custom function increments the `CountIfValue`.
-For the `CustomSum`, we simply add the current `DetailValue` to the existing aggregated sum, allowing us to to reimplement a simple sum function.
+Explanation:
+- `CountIfValue` only includes rows where `DetailValue > 0`.
+- `CustomSum` manually adds each value (replacing built-in `Sum`).
 
-#### Example 2: Custom Aggregation with Grouping and Dynamic Objects
 
-In this example, we use both a predicate and a custom aggregation function while grouping the data by a dynamic property.
+### Custom Aggregation with Dynamic Objects
 
-```C#
+When working with dynamic objects (e.g., `ExpandoObject`), you can combine grouping with custom aggregation logic. The following example groups rows by the `Group` property and calculates a custom sum from the `DetailValue`.
+
+```csharp
 MemorySource source = new MemorySource();
 source.DataAsList = new List<ExpandoObject>() {
-    CreateDetailExpandoWithGroup(20,"A"),
-    CreateDetailExpandoWithGroup(10,"A"),
-    CreateDetailExpandoWithGroup(5,"B"),
-    CreateDetailExpandoWithGroup(8,"B")
+    CreateDetailExpandoWithGroup(20, "A"),
+    CreateDetailExpandoWithGroup(10, "A"),
+    CreateDetailExpandoWithGroup(5, "B"),
+    CreateDetailExpandoWithGroup(8, "B")
 };
 
 Aggregation agg = new Aggregation();
@@ -619,22 +575,32 @@ agg.AggregateColumns = new[] {
 };
 
 agg.GroupColumns = new[] {
-    new GroupColumn() { GroupPropNameInInput = "Group", GroupPropNameInOutput = "Group" }
+    new GroupColumn() {
+        GroupPropNameInInput = "Group",
+        GroupPropNameInOutput = "Group"
+    }
 };
 
 MemoryDestination dest = new MemoryDestination();
 
 source.LinkTo(agg);
 agg.LinkTo(dest);
-source.Execute();
+Network.Execute(source);
 
 foreach (dynamic row in dest.Data)
     Console.WriteLine($"Group: {row.Group}, CustomSum: {row.CustomSum}");
 
-//Output:
-//Group: A, CustomSum: 30
-//Group: B, CustomSum: 13
+// Output:
+// Group: A, CustomSum: 30
+// Group: B, CustomSum: 13
+
+ExpandoObject CreateDetailExpandoWithGroup(double value, string group)
+{
+    dynamic obj = new ExpandoObject();
+    obj.DetailValue = value;
+    obj.Group = group;
+    return obj;
+}
 ```
 
-Here, the data is grouped by the dynamic `Group` property. For each group, a custom sum is calculated based on the `DetailValue` using the custom aggregation function.
-
+This example demonstrates how to dynamically generate input data, group by a property in the input and calculate a custom aggregation using a lambda function.

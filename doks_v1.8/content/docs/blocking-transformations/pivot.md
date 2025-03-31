@@ -1,24 +1,53 @@
 ---
 title: "Pivot"
-description: "The Pivot transformation in ETLBox reshapes data by turning rows into columns."
-lead: "The ETLBox Pivot transformation offers a simple way to reorganize your data by converting vertical lists into horizontal tables. This transformation can be helpful for summarizing data, allowing you to pivot one or more columns and aggregate their values"
+description: "The Pivot transformation reshapes your data by turning row values into column headers. Using [PivotColumn] and [PivotValue], it organizes values horizontally, making it easier to compare or summarize related data side by side."
+lead: "The Pivot transformation in ETLBox allows you to reshape row-based data into a columnar format by pivoting values. This is useful for scenarios such as transforming a long list of time-based values into a table format where each time period becomes a column, or summarizing grouped data into matrix-like output."
 draft: false
 images: []
 menu:
   docs:
     parent: "blocking-transformations"
-weight: 610
+weight: 660
 toc: true
+chatgpt-review: true
 ---
 
-## Introduction
+## Overview
 
-The `Pivot` transformation in ETLBox allows you to reshape data by converting rows into columns, effectively pivoting vertical data into a horizontal format. This is ideal for summarizing or restructuring data, such as turning a list of monthly values into a single row where each column represents a month.
+The transformation supports strongly-typed input as well as dynamic objects like ExpandoObject. Output is always a dynamic object (of type ExpandoObject), regardless of input type.
 
-### PivotValue and PivotColumns
+You can define:
+- **Pivot columns**: Columns that form the headers.
+- **Pivot values**: Values inserted under those columns.
+- **Pivot rows**: Rows grouped together to produce each output line.
 
-For example, given the following input data:
+This transformation can optionally perform aggregations (e.g., `Sum`, `Mean`) if multiple input rows correspond to the same pivot cell.
 
+### Output Schema
+
+- The output always consists of ExpandoObject instances.
+- Pivot rows (group keys) are preserved as columns.
+- Pivot column names are derived dynamically, either automatically or using ColumnNameCombination.
+- All pivot values are placed into columns, aggregated as configured.
+
+### Buffering
+
+The Pivot transformation is a blocking transformation:
+- **Input Buffer**: Stores all input rows before pivoting.
+- **Internal Buffer**: Holds rows grouped by pivot keys until processing.
+- **Output Buffer**: Stores generated output rows, subject to MaxBufferSize.
+
+Memory consumption depends on:
+- The number of distinct pivot rows (groups).
+- The number of distinct pivot columns.
+- Whether `AddGrandTotalColumn` or `AddGrandTotalRows` is enabled.
+- Whether `KeepEmptyValues` is `true` (results in more uniform, wider rows).
+
+## Simple Pivot Example
+
+This example uses the `[PivotColumn]` and `[PivotValue]` attributes to pivot data from rows to columns. Each unique value from the pivot column becomes a column header, and the corresponding pivot value fills in the data.
+
+**Input Data**:
 ```csv
 Month,MonthValue
 Jan,100
@@ -26,20 +55,13 @@ Feb,200
 Mar,300
 ```
 
-The `Pivot` transformation will rearrange it into a horizontal format:
-
+**Output**:
 ```csv
 Jan,Feb,Mar
 100,200,300
 ```
 
-This transformation involves specifying:
-- **Pivot columns** (headers in the resulting table),
-- **Pivot values** (values under those headers), and
-- **Pivot rows** (rows to be grouped together).
-
-Here’s how it’s implemented:
-
+**Implementation**:
 ```csharp
 public class MyRow {
     [PivotColumn]
@@ -49,26 +71,21 @@ public class MyRow {
 }
 
 var source = new MemorySource<MyRow>();
-source.DataAsList.Add(new MyRow() { Month = "Jan", MonthValue = 100 });
-source.DataAsList.Add(new MyRow() { Month = "Feb", MonthValue = 200 });
-source.DataAsList.Add(new MyRow() { Month = "Mar", MonthValue = 300 });
+source.DataAsList.Add(new MyRow { Month = "Jan", MonthValue = 100 });
+source.DataAsList.Add(new MyRow { Month = "Feb", MonthValue = 200 });
+source.DataAsList.Add(new MyRow { Month = "Mar", MonthValue = 300 });
 
 var pivot = new Pivot<MyRow>();
 var dest = new MemoryDestination();
 
 source.LinkTo(pivot);
 pivot.LinkTo(dest);
-
 Network.Execute(source);
 ```
+## Grouped Pivot Example
 
-The `Month` property is marked with the `PivotColumn` attribute, and the `MonthValue` property is marked with the `PivotValue` attribute.
+This example uses the `[PivotRow]` attribute to group rows by a specific property. Each group becomes a separate row in the output, with pivoted columns representing the unique values from the pivot column.
 
-{{< alert text="The Pivot transformation will always generate a (dynamic) ExpandoObject as the output object." >}}
-
-### Grouped Data with PivotRow
-
-When grouping data, the `PivotRow` attribute can be used to group rows by a specific property:
 
 **Input:**
 ```csv
@@ -89,7 +106,6 @@ B,400,500,600
 ```
 
 **Implementation:**
-
 ```csharp
 public class MyRow {
     [PivotRow]
@@ -117,26 +133,26 @@ pivot.LinkTo(dest);
 Network.Execute(source);
 ```
 
-### PivotColumn, PivotValue, and PivotRow
+## Dynamic Input Configuration
 
-You can define pivot columns, pivot values, and rows either by using attributes on a class (as shown above) or by directly setting the `PivotColumns`, `PivotValues`, and `PivotRows` properties when using dynamic objects like `ExpandoObject`. This flexibility allows you to handle both predefined and dynamic data structures.
-
-For example, if working with dynamic data, you can specify these properties directly:
+When using `ExpandoObject`, specify pivot definitions manually:
 
 ```csharp
 var pivot = new Pivot();
-pivot.PivotRows = new[] { new PivotRow() { PropertyName = "Group" } };
-pivot.PivotColumns = new[] { new PivotColumn() { PropertyName = "Month" } };
-pivot.PivotValues = new[] { new PivotValue() { PropertyName = "MonthValue" } };
+pivot.PivotRows = new[] { new PivotRow { PropertyName = "Group" } };
+pivot.PivotColumns = new[] { new PivotColumn { PropertyName = "Month" } };
+pivot.PivotValues = new[] { new PivotValue { PropertyName = "MonthValue" } };
 ```
 
-This approach will also work with the dynamic ExpandoObjects.
+## Aggregation Support
 
-## Aggregating Pivot Values with Built-in and Custom Methods
+The pivot transformation aggregates multiple values per pivot cell using:
 
-The `PivotValue` attribute allows you to aggregate values using built-in methods like `Sum` or with a custom function by specifying `AggregationMethod.Custom` and a `CustomFunction`.
+- Built-in methods: `Sum`, `Min`, `Max`, `Count`, etc. ([see Aggregation Methods](../aggregation/#aggregation-methods))
+- `CustomFunction`: For advanced logic
+- `CustomValueAggregation`: Global aggregation override
 
-### Built-in Aggregation
+### Built-in Methods Example
 
 Use the `AggregationMethod.Sum` to calculate the sum of all values for a pivot column.
 
@@ -165,11 +181,9 @@ Network.Execute(source);
 // 300, 300
 ```
 
-The Pivot provides the same aggregtion methods as the [Aggregation](/docs/blocking-transformations/aggregation/#aggregation-methods).
+### Custom Function Example
 
-### Custom Aggregation
-
-When `AggregationMethod.Custom` is used, a `CustomFunction` can be provided to define the aggregation logic.
+When `AggregationMethod.Custom` is used, a CustomFunction can be provided to define the aggregation logic.
 
 ```csharp
 public class MyRow {
@@ -201,11 +215,21 @@ Network.Execute(source);
 // 500, 300
 ```
 
-## Grand Totals for Rows and Columns
+
+### Generic Aggregation
+
+You can define an overall custom aggregation logic by setting the `CustomValueAggregation`. This will overwrite any custom aggregation methods that are
+specified on the pivot values.
+
+```csharp
+pivot.CustomValueAggregation = duplicateInfo => {
+    return (double)(duplicateInfo.PreviousValue ?? 0) + (double)(duplicateInfo.NewValue ?? 0);
+};
+```
+
+## Grand Totals
 
 To calculate aggregated totals for rows and columns, the `AddGrandTotalColumn` and `AddGrandTotalRows` properties can be used.
-
-**Example with Grand Totals:**
 
 **Input:**
 ```csv
@@ -234,9 +258,10 @@ pivot.AddGrandTotalColumn = true;
 pivot.AddGrandTotalRows = true;
 ```
 
-## Advanced Features
+This adds an extra row and column that sums up all values.
 
-### Custom Column Naming
+
+## Column Name Customization
 
 Use `ColumnNameCombination` to customize how pivot column names are formed. This only applies if there are at least 2 `PivotColumns` defined.
 By default, the column names are concatenated.
@@ -245,23 +270,16 @@ By default, the column names are concatenated.
 pivot.ColumnNameCombination = dict => $"{dict["Month"]}_{dict["Year"]}";
 ```
 
-### Generic Aggregation
 
-You can define an overall custom aggregation logic by setting the `CustomValueAggregation`. This will overwrite any custom aggregation methods that are
-specified on the pivot values.
+## Flattening Aggregation Results
 
-```csharp
-pivot.CustomValueAggregation = duplicateInfo => {
-    return (double)(duplicateInfo.PreviousValue ?? 0) + (double)(duplicateInfo.NewValue ?? 0);
-};
-```
+If multiple `[PivotValue]` exist per pivot cell, the result is a list of `PivotAggregationResult`.
 
-### Flatten Aggregation Results
-
-This only applies if you have 2 or more `PivotValues`,  the output will contain an object of type `PivotAggregationResult`. This type will contain a separated result for each defined pivot value. If you want to combine or "flatten" these two values into one (e.g. to extract the data into a csv file) , you can do this by defining the `FlattenAggregationResults` method.
+To flatten them:
 
 ```csharp
-pivot.FlattenAggregationResults = (pivotValues, columnName) => {
+pivot.FlattenAggregationResults = (pivotValues, columnName) =>
+{
     return (decimal)pivotValues[0].AggregatedValue + (decimal)pivotValues[1].AggregatedValue;
 };
 ```
@@ -279,14 +297,12 @@ If flattened:
 Jan2023 -> 1100
 ```
 
-### Managing Missing Values
+
+## Managing Missing Values
 
 The `KeepEmptyValues` property controls whether columns with no data are included in the output. By default, it is set to `true`. This is useful in cases where you want to maintain a consistent set of columns across all rows, even if some rows do not contain values for certain pivoted columns.
 
-{{< alert text="By default, the KeepEmptyValues property is turned on, meaning that all columns in the rows will be included in the output. " >}}
-
 Having this flag enable is important when writing dynamic output to a CSV file, as CSV writers require all header rows to be present in the first record. Without these columns, the structure of the CSV file could be inconsistent, leading to errors or missing data in the output file.  If you want to produce a more compact output by avoiding the inclusion of empty or null columns, simply set this property to `false`.
-
 
 Consider a scenario where you are pivoting sales data for different months, but not all months have data for each group.
 
