@@ -1,21 +1,29 @@
 ---
-title: "Data Validation Part 1"
-description: "ETLBox (Part 1): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part I)'"
+title: "A Developer’s Guide to Building Robust ETL Data Flows in C# and .NET (Part I)"
+description: "This article walks through a complete example of building an ETL pipeline with ETLBox. Along the way, the article explains key ETL concepts like data flows, transformations, and predicate-based filtering using real, working C# code."
+summary: "Connecting multiple data sources and dealing with raw, inconsistent data is a common problem — missing values, wrong formats, and duplicates often break downstream logic. This article shows how to build a structured, code-based process in .NET using a data flow architecture. Data is read, cleaned, validated, and stored in a database, while faulty records are logged. The flow processes records asynchronously and in parallel, making it suitable even for large data volumes."
+date: 2025-04-01
 draft: false
-images: []
-menu:
-  recipes:
-    parent: "etl"
-weight: 2230
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
 
-## Overview 
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" active="true" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
+{{< /series >}}
 
-In the world of data management, ETL is critical. It extracts data from a plethora of sources, transforms it into a desired format, and loads it into a target system like a data warehouse or database. This is where ETLBox shines. This nimble yet robust .NET library doesn’t come with a User Interface, setting it apart from other ETL tools like SQLServer Integration Services (SSIS) or Azure Data Factory. But no worries! This emphasizes the advantage of crafting data flows programmatically – a genuine game-changer for numerous ETL and data integration challenges.
+![Article Banner](banner.png)
+
 
 ### The Nitty-Gritty
+
+In the world of data management, ETL is critical. It extracts data from a plethora of sources, transforms it into a desired format, and loads it into a target system like a data warehouse or database. This is where ETLBox shines. This nimble yet robust .NET library doesn’t come with a User Interface, setting it apart from other ETL tools like SQLServer Integration Services (SSIS) or Azure Data Factory. But no worries! This emphasizes the advantage of crafting data flows programmatically – a genuine game-changer for numerous ETL and data integration challenges.
 
 ETLBox simplifies the extraction, transformation, and loading (ETL) of data, supporting a wide range of data sources and targets and providing a set of straightforward, yet powerful components for automating these tasks. Here’s what ETLBox brings to the table:
 
@@ -26,6 +34,7 @@ ETLBox simplifies the extraction, transformation, and loading (ETL) of data, sup
 - **Test-driven**: ETLBox is the only ETL framework that supports Test-driven development right from the start, underscoring its commitment to robust and reliable ETL processes.
 
 In a nutshell, ETLBox is not just a tool. It’s a comprehensive solution for your specific ETL needs. It allows developers to use .NET to code their ETL job, ensuring seamless data management from extraction to loading.
+
 
 ### Understanding ETL
 
@@ -41,9 +50,7 @@ ETLBox empowers you to construct an efficient ETL pipeline with its comprehensiv
 
 ### How to Get ETLBox
 
-ETLBox, developed in C#, targets .NET Standard 2.0 and higher, ensuring compatibility with various .NET versions, including .NET Framework 4.X and above, .NET Core 2.X and above, and .NET 5.0 and 6.0. All ETLBox packages are hosted on NuGet. Installing the core package is essential for working with ETLBox as it contains default connectors and transformations. Integrate it into your project using the NuGet package manager with the command: `dotnet add package ETLBox`. Choose the appropriate connector package based on your needs, for connecting to SQLServer databases or loading data from a Json file or REST endpoint, for example. {{< link-ext text="Visit the project home page for more information." url="https://www.etlbox.net" >}}
-
-
+ETLBox, developed in C#, targets .NET Standard 2.0 and higher, ensuring compatibility with various .NET versions, including .NET Framework 4.X and above, .NET Core 2.X and above, and .NET 5.0 and 6.0. All ETLBox packages are hosted on NuGet. Installing the core package is essential for working with ETLBox as it contains default connectors and transformations. Integrate it into your project using the NuGet package manager with the command: `dotnet add package ETLBox`. Choose the appropriate connector package based on your needs, for connecting to SQLServer databases or loading data from a Json file or REST endpoint, for example. [Visit the project home page for more information.](https://www.etlbox.net)
 
 ## Data Flow by Example
 
@@ -103,10 +110,10 @@ SqlTask.ExecuteNonQuery(connectionManager,
     @"INSERT INTO VendorMaster (VendorName, Code, Custom, Country, Contact, Info)
         VALUES('Big Holding', 'H1234', 'HD', 'US', 'Hans', 'T0')");
 SqlTask.ExecuteNonQuery(connectionManager,
-    @"INSERT INTO VendorMaster (VendorName, Code, Custom) 
+    @"INSERT INTO VendorMaster (VendorName, Code, Custom)
         VALUES('Unicorn', 'UNI10', 'U', 'NO')");
 SqlTask.ExecuteNonQuery(connectionManager,
-    @"INSERT INTO VendorMaster (VendorName, Code, Custom) 
+    @"INSERT INTO VendorMaster (VendorName, Code, Custom)
         VALUES('Another Unicorn', 'UNI20', 'U', 'SE')");
 ```
 
@@ -213,7 +220,7 @@ duplicateCheck.LinkTo(dbTarget);
 duplicateCheck.LinkDuplicatesTo(errorTarget);
 ```
 
-#### Predicates 
+#### Predicates
 
 When linking components in a data flow, you have the option to add a filter expression to the link, known as a predicate. This filter expression is assessed for every row that passes through the link. If the expression evaluates to true, the data will continue to the linked component. If it evaluates to false, the data flow will attempt the next link to transmit its data through.
 
@@ -336,10 +343,10 @@ SqlTask.ExecuteNonQuery(connectionManager,
     @"INSERT INTO VendorMaster (VendorName, Code, Custom, Country, Contact, Info)
         VALUES('BIG HOLDING', 'H1234', 'HD', 'US', 'Hans', 'T0')");
 SqlTask.ExecuteNonQuery(connectionManager,
-    @"INSERT INTO VendorMaster (VendorName, Code, Custom,Country) 
+    @"INSERT INTO VendorMaster (VendorName, Code, Custom,Country)
         VALUES('UNICORN', 'UNI10', 'U', 'NO')");
 SqlTask.ExecuteNonQuery(connectionManager,
-    @"INSERT INTO VendorMaster (VendorName, Code, Custom,Country) 
+    @"INSERT INTO VendorMaster (VendorName, Code, Custom,Country)
         VALUES('UNICORN TWO', 'UNI20', 'U', 'SE')");
 
 
@@ -438,3 +445,8 @@ In our example, we built a small ETL pipeline to process a CSV file, perform dat
 
 [In the **next step**, we will turn to improvements of this data flow](../data-validation-part2). In addition to enhanced error logging, we will address the issue of how to reconcile data when repeatedly loading different or the same supplier data. We aim to build a Slowly Changing Dimension Type 2 (SCD Type 2) that stores the corresponding changes in the CSV data.
 
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" active="true" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
+{{< /series >}}

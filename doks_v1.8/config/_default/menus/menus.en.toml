@@ -17,22 +17,28 @@ url = "/recipes/basics/basic-example"
 weight = 30
 
 [[main]]
+name = "Blog"
+url = "/blog/"
+identifier = "blog"
+weight = 40
+
+[[main]]
 name = "API"
 url = "/api/"
 identifier = "api"
-weight = 40
+weight = 50
 
 [[main]]
 name = "Pricing"
 url = "/pricing"
 identifier = "pricing"
-weight = 50
+weight = 60
 
 [[main]]
 name = "Support"
 url = "/support/options/"
 identifier = "support"
-weight = 60
+weight = 70
 
 [[social]]
 name = "Nuget"

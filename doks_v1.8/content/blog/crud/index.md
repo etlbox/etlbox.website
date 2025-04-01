@@ -1,15 +1,18 @@
 ---
-title: "CRUD to Dataflow"
+title: "Why CRUD Doesn’t Work for ETL (And What to Do Instead)"
 description: "Many developers struggle with applying traditional CRUD (Create, Read, Update, Delete) concepts in ETL workflows, leading to performance bottlenecks. This article explains why CRUD operations are inefficient in ETL and how ETLBox provides optimized alternatives like DbSource, DbDestination, DbMerge, and LookupTransformation."
-lead: "Traditional CRUD operations don’t scale well in ETL workflows. Handling data row by row creates unnecessary overhead, slowing down performance. This article explores how to transition from CRUD-based processing to a more efficient dataflow approach using ETLBox."
+summary: "Traditional CRUD operations don’t scale well in ETL workflows. Handling data row by row creates unnecessary overhead, slowing down performance. This article explores how to transition from CRUD-based processing to a more efficient dataflow approach using ETLBox."
+date: 2024-03-14
 draft: false
-images: []
-menu:
-  recipes:
-    parent: "etl"
-weight: 2520
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
+
+![Article Banner](banner.png)
 
 ## From CRUD to Dataflow: Optimizing ETL Performance with ETLBox
 
@@ -28,9 +31,7 @@ By the end, you’ll have a clear understanding of how to convert CRUD operation
 
 ### About ETLBox
 
-ETLBox is a flexible and high-performance ETL framework for .NET, designed to simplify data integration and processing. It supports control flow tasks, data transformations, bulk operations, and streaming dataflows, making it an efficient alternative to traditional row-by-row CRUD operations. With built-in support for multiple databases, ETLBox enables scalable and maintainable ETL workflows.
-
-You can learn more at [ETLBox.net](https://www.etlbox.net).
+ETLBox is a flexible and high-performance ETL framework for .NET, designed to simplify data integration and processing. It supports control flow tasks, data transformations, bulk operations, and streaming dataflows, making it an efficient alternative to traditional row-by-row CRUD operations. With built-in support for multiple databases, ETLBox enables scalable and maintainable ETL workflows. You can learn more at [ETLBox.net](https://www.etlbox.net).
 
 ## Handling "Create" Operations
 

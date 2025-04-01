@@ -1,16 +1,24 @@
 ---
-title: "Data validation Part 2"
-description: "ETLBox (Part 2): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part II)'"
+title: "A Developer’s Guide to Building Robust ETL Data Flows in C# and .NET (Part II)"
+description: "This part focuses on improving data quality and history tracking in ETLBox. We introduce row-level error messages for invalid or duplicate records and implement SCD Type 2 using ValidFrom/ValidTo columns to preserve change history. These enhancements make the ETL process more robust, auditable, and production-ready."
+summary: "In Part 2, we enhance the ETLBox data flow by adding custom error messages and implementing Slowly Changing Dimension Type 2 (SCD-2) to track changes in supplier data over time."
+date: 2025-04-01
 draft: false
-images: []
-menu:
-  recipes:
-    parent: "etl"
-weight: 2240
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
-This is Part 2 in a series of posts. [If you'd like to read **Part 1**, click here](../data-validation-part1).
+
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" active="true" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
+{{< /series >}}
+
+![Article Banner](banner.png)
 
 ## Enhancing the Data Flow
 
@@ -18,13 +26,14 @@ In Part 1, we explored ETLBox, a .NET library designed for efficient data manage
 
 In this part, we'll enhance this data flow. We'll not only boost error logging but also tackle the challenge of managing repeated or varied supplier data loads. Our goal is to create a Slowly Changing Dimension Type 2 (SCD Type 2) to capture changes in the CSV data.
 
+
 ### Enhanced Error Logging
 
 Errors are inevitable in any data processing task. Our solution in this example is to add a custom error message to each faulty record and store it in our pre-existing error file. If you are interested in a more sophisticated way of redirecting error, you can also have a look at the `LinkErrorTo` methods provided on each data flow component. To keep this example simple, we will just focus on adding a simple error message to the data itself.
 
 ### Implementing SCD Type 2
 
-SCD Type 2 (Slowly Changing Dimension Type 2) is a methodology used to track historical changes in data. We also want to improve our data flow to now work with a SCD Type 2. With Type 2, we get historical data tracking. This ensures that the data's history is preserved, and any changes can be tracked over time. To achieve this, each historical record in an SCD Type 2 gets a validity range, using a `ValidFrom` and `ValidTo` date column. When a new record is inserted, it gets a `ValidFrom` date which is in the past, before any of our transactional data starts. The `ValidTo` is a date in the far future. When a new record is created due to a change, the old record is given an "end date", which is also the start date of the new record. 
+SCD Type 2 (Slowly Changing Dimension Type 2) is a methodology used to track historical changes in data. We also want to improve our data flow to now work with a SCD Type 2. With Type 2, we get historical data tracking. This ensures that the data's history is preserved, and any changes can be tracked over time. To achieve this, each historical record in an SCD Type 2 gets a validity range, using a `ValidFrom` and `ValidTo` date column. When a new record is inserted, it gets a `ValidFrom` date which is in the past, before any of our transactional data starts. The `ValidTo` is a date in the far future. When a new record is created due to a change, the old record is given an "end date", which is also the start date of the new record.
 
 ## Adding custom error messages
 
@@ -60,7 +69,7 @@ Previously, when segregating valid from invalid records towards the error destin
 
 ```C#
 normalize.LinkTo(lookupExisting, row => row.IsValid());
-normalize.LinkTo(errorTarget, row => !row.IsValid()); 
+normalize.LinkTo(errorTarget, row => !row.IsValid());
 ```
 
 Nevertheless, invoking the `IsValid` method twice could boost readability but might also cause unintended side effects. Importantly, when creating links between components using predicates, the sequence in which these links are established becomes crucial. Predicates undergo tests in the order they're appended. Once a predicate evaluates as true, subsequent ones aren't examined. Hence, all valid rows dispatched to the lookup using the first link implies we can enhance our code for identical behaviour as shown:
@@ -157,7 +166,7 @@ Upon executing our refined code, the resultant error log file, `errors.json`, di
 
 ## Incorporating SCD Type 2
 
-### Introducing Validity Columns 
+### Introducing Validity Columns
 
 To accommodate SCD-2, it's essential to introduce `ValidFrom` and `ValidTo` date attributes in both our class definition and our SQL table.
 
@@ -175,7 +184,7 @@ public class VendorMaster {
 
 ```C#
 CreateTableTask.CreateIfNotExists(connectionManager, "VendorMaster",
-    new List<TableColumn>() {        
+    new List<TableColumn>() {
         ...
         new TableColumn() { Name = "ValidFrom", DataType = "DATETIME", AllowNulls = false },
         new TableColumn() { Name = "ValidTo", DataType = "DATETIME", AllowNulls = false },
@@ -358,10 +367,10 @@ public class VendorMaster
     [DbColumnMap("VendorName")]
     public string Name { get; set; }
 
-    [DistinctColumn]        
+    [DistinctColumn]
     public string Code { get; set; }
 
-    [DistinctColumn]        
+    [DistinctColumn]
     public string Custom { get; set; }
 
     public string Country { get; set; }
@@ -426,3 +435,9 @@ We've made big steps to improve our data process. First, we added error messages
 ### Up Next: Configurable Data Flows
 
 So far, we've enhanced error logging and integrated the SCD Type 2 methodology. [In **Part 3**, we're taking it up a notch](../data-validation-part3). Let's challenge the constraints of static types and aim for a dataflow that's entirely configurable. This means more flexibility, scalability, and adaptability without the rewrites. Stay tuned for a dynamic turn in our data management journey!
+
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" active="true" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
+{{< /series >}}

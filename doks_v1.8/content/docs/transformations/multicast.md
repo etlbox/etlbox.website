@@ -12,9 +12,7 @@ toc: true
 chatgpt-review: true
 ---
 
-
-
-## Behavior and Buffering
+## Buffering Behavior
 
 - **Non-blocking transformation**
 - One **input buffer**
@@ -26,7 +24,7 @@ chatgpt-review: true
 If you need to **split** data conditionally (e.g., based on filters), consider [using predicates](#splitting-data-with-predicates) instead of `Multicast`.
 {{< /callout>}}
 
-By default, cloning uses reflection to copy public properties and fields. Non-public members are ignored. For custom cloning logic, implement `ICloneable` or use the `CustomCloningStrategy` property.
+By default, cloning uses a specialized mechanism that copies all public properties and fields. Non-public members are not included.  For custom cloning logic, implement `ICloneable` or use the `CustomCloningStrategy` property.
 
 ## Basic Example: Broadcasting
 

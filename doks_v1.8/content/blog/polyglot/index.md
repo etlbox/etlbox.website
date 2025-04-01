@@ -1,16 +1,18 @@
 ---
-title: "Polyglot Notebooks"
-description: "This article shows how to use C# skills in polyglot notebooks for better data management and analysis. Learn how ETLBox simplifies tasks like data extraction and transformation, helping developers and analysts boost productivity and gain insights in a flexible notebook setup."
-lead: "This article was also published as a blog article 'Unlock the Power of C# in Polyglot Notebooks'"
+title: "Unlock the Power of C# in Polyglot Notebooks"
+description: "This article demonstrates how to use C# in polyglot notebooks (e.g., Jupyter with .NET Interactive) to perform ETL operations using ETLBox. It shows how to integrate C# with tools commonly used for data science, such as DataFrames and ScottPlot, to enable full data workflows—from database access to data visualization—within a single notebook."
+summary: "Explore how to build ETL pipelines in C# using ETLBox inside polyglot notebooks. Learn to extract data from SQL Server, transform it dynamically, analyze it with DataFrames, and visualize results using ScottPlot—all within a single interactive notebook environment powered by .NET Interactive."
+date: 2024-06-02
 draft: false
-menu:
-  recipes:
-    parent: "other"
-weight: 2310
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
 
-## Introduction
+![Article Banner](banner.png)
 
 ### C# and Polyglot Notebooks
 

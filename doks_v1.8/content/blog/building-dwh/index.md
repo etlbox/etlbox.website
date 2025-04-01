@@ -1,21 +1,18 @@
 ---
-title: "Star Schema"
-description: "Building a Data Warehouse with ETLBox"
-lead: "This article was also published as a blog article 'Building a Data Warehouse with ETLBox: A .NET Developer's Guide'"
+title: "Building a Data Warehouse with ETLBox: A .NET Developer's Guide"
+description: "This article introduces foundational data warehousing concepts, including star schemas, surrogate keys, dimension types, and fact tables. It then demonstrates how to implement a real-world DWH using ETLBox in .NET—covering OLTP/OLAP setup, SCD Type 1 and 2 loading strategies, date dimensions, and incremental fact loading with full C# code examples."
+summary: "In the world of data, transformation is key. But not just any transformation—it's about transforming raw data into actionable insights. That's where ETL (Extract, Transform, Load) processes shine, and ETLBox is a .NET star in this domain. ETLBox offers a set of tools and components to build scalable and efficient ETL processes with minimal hassle. Whether you're a seasoned data engineer or a developer venturing into data warehousing, ETLBox could be your toolkit of choice."
+date: 2023-11-10
 draft: false
-images: []
-menu:
-  recipes:
-    parent: "etl"
-weight: 2260
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
 
-## Introduction 
-
-In the world of data, transformation is key. But not just any transformation—it's about transforming raw data into actionable insights. That's where ETL (Extract, Transform, Load) processes shine, and ETLBox is a .NET star in this domain. ETLBox offers a set of tools and components to build scalable and efficient ETL processes with minimal hassle. Whether you're a seasoned data engineer or a developer venturing into data warehousing, ETLBox could be your toolkit of choice.
-
-## Data Warehousing Concepts
+![Article Banner](banner.png)
 
 Before we start to dive into a practical example, let's learn more about the basic building blocks of a data warehouse (DWH).
 
@@ -27,7 +24,7 @@ The star schema plays a vital role within the data warehouse architecture. Its d
 
 ### Understanding Surrogate IDs
 
-In data warehousing, a Surrogate ID (SID) is a unique identifier for each row in a dimension table, which is unrelated to any natural key or business identifier. This concept is essential in ensuring that dimension records are uniquely identifiable, simplifying the handling of slowly changing dimensions (SCDs), and maintaining historical accuracy in your data warehouse. 
+In data warehousing, a Surrogate ID (SID) is a unique identifier for each row in a dimension table, which is unrelated to any natural key or business identifier. This concept is essential in ensuring that dimension records are uniquely identifiable, simplifying the handling of slowly changing dimensions (SCDs), and maintaining historical accuracy in your data warehouse.
 
 In our example, we employ the use of the `IDENTITY` keyword in SQL Server to automatically generate these surrogate IDs. This feature is equivalent to `AUTO_INCREMENT` in MySQL or `SERIAL` in PostgreSQL. When a new record is inserted into a dimension table, the database engine auto-generates a sequential numeric value for the SID. This automated process alleviates the need for manual ID management and ensures that each new record can be tracked with a unique identifier throughout the lifecycle of the data warehouse.
 
@@ -41,9 +38,9 @@ TableDefinition CustomerDimTableDef = new TableDefinition("DimCustomer",
 });
 ```
 
-In the above table definition, `DimId` is the surrogate ID column. Its value is automatically incremented for each new record, starting with 1 and increasing by 1 for each new insert, thereby ensuring that each customer dimension record has a unique identifier. 
+In the above table definition, `DimId` is the surrogate ID column. Its value is automatically incremented for each new record, starting with 1 and increasing by 1 for each new insert, thereby ensuring that each customer dimension record has a unique identifier.
 
-### Dimensions and Facts 
+### Dimensions and Facts
 
 #### SCD Type 1
 
@@ -63,7 +60,7 @@ A unique aspect of data warehousing is the use of a date dimension, which is cru
 
 ## Implementing a DWH with ETLBox
 
-By mastering these data warehousing concepts and understanding the structure and function of elements like the star schema, surrogate IDs, SCDs, and fact tables, organizations can extract substantial value from their data, paving the way for informed decision-making and effective strategic planning. As this knowledge forms the foundation, the next step is to bring these concepts to life within the data warehousing environment. That's where ETLBox comes into play—a powerful .NET library designed to simplify the extract, transform, and load processes. In subsequent sections, we will delve into how ETLBox can be used to streamline these operations, ensuring your data warehousing efforts are as efficient and effective as possible. 
+By mastering these data warehousing concepts and understanding the structure and function of elements like the star schema, surrogate IDs, SCDs, and fact tables, organizations can extract substantial value from their data, paving the way for informed decision-making and effective strategic planning. As this knowledge forms the foundation, the next step is to bring these concepts to life within the data warehousing environment. That's where ETLBox comes into play—a powerful .NET library designed to simplify the extract, transform, and load processes. In subsequent sections, we will delve into how ETLBox can be used to streamline these operations, ensuring your data warehousing efforts are as efficient and effective as possible.
 
 ### Preparing the Database
 
@@ -82,9 +79,9 @@ public static void RecreateDatabase(string dbName, SqlConnectionString connectio
 }
 ```
 
-#### Prepare Connection Managers 
+#### Prepare Connection Managers
 
-Before we proceed to execution, we need to create the ETLBox connection managers that wrap the underlying ADO.NET connection. 
+Before we proceed to execution, we need to create the ETLBox connection managers that wrap the underlying ADO.NET connection.
 
 ```C#
 static string OLTP_ConnectionString = @"Data Source=localhost;Initial Catalog=OLTP_DB;Integrated Security=false;User=sa;password=YourStrong@Passw0rd;TrustServerCertificate=true";
@@ -141,7 +138,7 @@ public static void CreateOLTPTables(SqlConnectionString connectionString)
     //Create demo tables & fill with demo data
     OrderDataTableDef.CreateTable(connMan) ;
     CustomerTableDef.CreateTable(connMan);
-    ProductTableDef.CreateTable(connMan);            
+    ProductTableDef.CreateTable(connMan);
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Customer VALUES('C-1000', 'Kevin Doe')");
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Customer VALUES('C-1001','Nick Newman')");
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Customer VALUES('C-1002','Zoe Trunk')");
@@ -161,8 +158,8 @@ public static void CreateOLTPTables(SqlConnectionString connectionString)
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Orders VALUES(10193,'2023-01-01', 'P-00011', 'C-1002', 699)");
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Orders VALUES(10253,'2023-01-03', 'P-00012', 'C-1002', 799)");
     SqlTask.ExecuteNonQuery(connMan, "INSERT INTO Orders VALUES(10323,'2023-01-03', 'P-00013', 'C-1002', 1299)");
-    
-}    
+
+}
 ```
 
 The tables are schematically outlined with sample data as follows:
@@ -215,7 +212,7 @@ public static void CreateStarSchema(SqlConnectionString connectionString) {
             new TableColumn("SourceOrderId", "INT",allowNulls: false),
             new TableColumn("DateDim","INT", allowNulls: false),
             new TableColumn("ProductDim","INT", allowNulls: false),
-            new TableColumn("CustomerDim","INT", allowNulls: false),                    
+            new TableColumn("CustomerDim","INT", allowNulls: false),
             new TableColumn("ActualPriceFact","MONEY", allowNulls: false),
     });
 
@@ -240,7 +237,7 @@ public static void CreateStarSchema(SqlConnectionString connectionString) {
     //Create demo tables & fill with demo data
     OrderFactTableDef.CreateTable(connMan);
     CustomerDimTableDef.CreateTable(connMan);
-    ProductDimTableDef.CreateTable(connMan);          
+    ProductDimTableDef.CreateTable(connMan);
 }
 ```
 
@@ -256,7 +253,7 @@ DimId|ProductNumber|Name|Description|RecommendedPrice|ValidFrom|ValidTo
 
 FactId|SourceOrderId|DateDim|ProductDim|CustomerDim|ActualPriceFact
 ------|-------------|-------|----------|-----------|--------------
-1     | 10001       | 20230101 | 1 | 1 | 79.00 | 
+1     | 10001       | 20230101 | 1 | 1 | 79.00 |
 
 Let's also create the tables for our OLAP database:
 
@@ -283,7 +280,7 @@ Below is the C# code for loading SCD Type 1 dimensions:
 
 ```C#
 public class Customer : MergeableRow
-{            
+{
     public string Name { get; set; }
     [IdColumn]
     [DbColumnMap("CustomerNumber")]
@@ -318,7 +315,7 @@ LoadCustomer_SCD1();
 Console.WriteLine("Customer dimension successfully loaded!");
 ```
 
-This script is designed to be run in sequence: first to load initial data into the DWH, then to simulate changes in source data, and finally to reload the data, illustrating how the SCD Type 1 dimension is kept up-to-date. 
+This script is designed to be run in sequence: first to load initial data into the DWH, then to simulate changes in source data, and finally to reload the data, illustrating how the SCD Type 1 dimension is kept up-to-date.
 
 
 ### Loading SCD Type 2 Dimensions
@@ -331,7 +328,7 @@ For SCD Type 2, ETLBox must manage the complexity of maintaining historical chan
 
 ETLBox help with these tasks by providing control flow tasks and data flow components that manage the data transformations and loads.
 
-Here is the source code to load a SCD Type 2 with ETLBox: 
+Here is the source code to load a SCD Type 2 with ETLBox:
 
 ```C#
 public class Product
@@ -455,17 +452,17 @@ public class DateDimension
     [DbColumnMap(IgnoreColumn =true)]
     public DateTime Date { get; set; }
     public int DateID => int.Parse(this.Date.ToString("yyyyMMdd"));
-    public string DateString => this.Date.ToString("MM/dd/yyyy"); 
-    public int Month => this.Date.Month; 
-    public int Day => this.Date.Day; 
-    public int Year => this.Date.Year; 
-    public int DayofWeek => (int)this.Date.DayOfWeek; 
-    public string DayofWeekName => this.Date.DayOfWeek.ToString(); 
-    public int DayofYear => this.Date.DayOfYear; 
+    public string DateString => this.Date.ToString("MM/dd/yyyy");
+    public int Month => this.Date.Month;
+    public int Day => this.Date.Day;
+    public int Year => this.Date.Year;
+    public int DayofWeek => (int)this.Date.DayOfWeek;
+    public string DayofWeekName => this.Date.DayOfWeek.ToString();
+    public int DayofYear => this.Date.DayOfYear;
     public int WeekOfYear => this.GetWeekOfYear();
     public string MonthName => this.Date.ToString("MMMM");
     public int QuarterOfYear => this.GetQuarterOfYear();
-            
+
     private int GetQuarterOfYear() {
         return (int)Math.Floor(((decimal)this.Date.Month + 2) / 3);
     }
@@ -491,7 +488,7 @@ private static void CreateDateDimension() {
     CreateTableTask.CreateIfNotExists(OLAP_Connection, "DimDate",
         typeof(DateDimension).GetProperties()
         .Where(prop => prop.Name != nameof(DateDimension.Date))
-        .Select(prop => 
+        .Select(prop =>
             new TableColumn(
             name: prop.Name,
             dataType: prop.PropertyType == typeof(int) ? "INT" : "VARCHAR(30)",
@@ -532,7 +529,7 @@ ETLBox facilitates both incremental and full data loads, providing flexibility d
 - Incremental Loads are more efficient for production environments because they only add new or updated data.
 - Full Loads are more common during the initial setup of a DWH or when a complete data refresh is required.
 
-Deciding between incremental loads and full loads depends on the specific needs of your organization and the nature of your data. 
+Deciding between incremental loads and full loads depends on the specific needs of your organization and the nature of your data.
 
 #### Code example
 
@@ -617,7 +614,7 @@ private static void LoadOrders(DateTime lastLoadDate) {
     source.LinkTo(customerLookup);
     customerLookup.LinkTo(productLookup);
     productLookup.LinkTo(dest);
-                
+
     dest.LinkErrorTo(errorLog);
 
     Network.Execute(source);
@@ -630,7 +627,7 @@ This ETL process includes:
 2. **Data Transformation:** The `LookupTransformation` class enriches the data by retrieving dimension keys from the `DimCustomer` and `DimProduct` tables based on the incoming order's customer and product numbers.
 3. **Error Handling:** An `error.log` file is set up to capture any records that fail to load properly, outputting them in a JSON format for troubleshooting.
 4. **Data Loading:** The `DbDestination` class handles the insertion of transformed data into the `FactOrders` table, using bulk insert sql statements for efficiency.
-5. **Performance Tuning:** The `BatchSize` property of `DbDestination` could be adjusted to optimize performance. Larger batch sizes can increase throughput, though they may also increase resource consumption. The default batch size is 1000 rows per bulk insert. 
+5. **Performance Tuning:** The `BatchSize` property of `DbDestination` could be adjusted to optimize performance. Larger batch sizes can increase throughput, though they may also increase resource consumption. The default batch size is 1000 rows per bulk insert.
 
 If the insert of fact data fails for any reason, the entire flawed batch is redirected into an error file ("errors.log"). It's important to note that this file will contain all records from the batch, not just the flawed ones. For more granular error checking, it's advisable to incorporate data validation or cleansing transformations into the data flow beforehand. This would help in filtering out erroneous data before the insertion into the database occurs.
 

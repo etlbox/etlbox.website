@@ -1,0 +1,16 @@
+{{ $isActive := eq (.Get "active") "true" }}
+{{ if $isActive }}
+  <div class="list-group-item d-flex align-items-center gap-3 px-3 py-2 border-light active bg-primary text-white border-primary">
+    <div class="rounded-circle d-flex justify-content-center align-items-center bg-white text-primary" style="width: 32px; height: 32px; font-weight: 500;">
+      {{ .Get "index" }}
+    </div>
+    <span>{{ .Get "title" | safeHTML }}</span>
+  </div>
+{{ else }}
+  <a href="{{ .Get "link" }}" class="list-group-item list-group-item-action d-flex align-items-center gap-3 px-3 py-2 border-light">
+    <div class="rounded-circle d-flex justify-content-center align-items-center bg-light text-dark" style="width: 32px; height: 32px; font-weight: 500;">
+      {{ .Get "index" }}
+    </div>
+    <span>{{ .Get "title" | safeHTML }}</span>
+  </a>
+{{ end }}

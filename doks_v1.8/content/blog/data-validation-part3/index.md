@@ -1,16 +1,24 @@
 ---
-title: "Data validation Part 3"
-description: "ETLBox (Part 3): C#'s Answer to Seamless ETL Processing and Thorough Data Validation"
-lead: "This article was also published as a blog article 'Redefining ETL: Data Flows Powered by C# (Part III)'"
+title: "A Developer’s Guide to Building Robust ETL Data Flows in C# and .NET (Part III)"
+description: "This article shows how to build dynamic, type-agnostic ETL flows in ETLBox using ExpandoObject and configuration tables. By leveraging metadata and runtime mapping, we achieve a flexible, schema-independent data pipeline that adapts to evolving requirements."
+summary: "In Part 3, we transform our ETLBox data flow from a statically typed setup to a fully dynamic, configuration-driven process using ExpandoObject. This enables flexible handling of changing data structures and metadata-driven transformations."
+date: 2025-04-01
 draft: false
-images: []
-menu:
-  recipes:
-    parent: "etl"
-weight: 2250
-toc: true
+weight: 50
+categories: []
+tags: []
+contributors: [Andreas Lennartz]
+pinned: false
+homepage: false
 ---
-This is **Part 3** in a series of posts. [If you'd like to read **Part 2**, click here](../data-validation-part2). Or start with the [**first** post](../data-validation-part1).
+
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" active="true" >}}
+{{< /series >}}
+
+![Article Banner](banner.png)
 
 ## Creating Dynamic Dataflows
 
@@ -18,7 +26,7 @@ In Part 1, we delved into ETLBox, a robust .NET tool for data management. We exp
 
 In Part 2, we enhanced the data flow, focusing on adding custom error messages. We also addressed the challenge of handling repeated or different supplier data loads. To capture these changes effectively, we implemented a Slowly Changing Dimension Type 2 (SCD Type 2).
 
-Looking ahead to Part 3, we are going to convert the same data flow away from static types into a dynamic and configurable one 
+Looking ahead to Part 3, we are going to convert the same data flow away from static types into a dynamic and configurable one
 
 ### From static to dynamic types
 
@@ -40,7 +48,7 @@ Using `dynamic`, you can declare variables without a clearly defined type:
 dynamic value = "Hello, World!";
 Console.WriteLine(value);  // Outputs: Hello, World!
 
-value = 42;  
+value = 42;
 Console.WriteLine(value);  // Outputs: 42
 ```
 
@@ -180,7 +188,7 @@ It's important to note that we're still incorporating static columns, namely the
 
 ## Dynamically Crafting ETLBox Components
 
-ETLBox components are flexibly designed with both generic and non-generic class definitions. Often, in the context of ETL processes, developers define strongly-typed objects, or POCOs (Plain Old CLR Objects), to represent the data flow, as demonstrated in earlier sections. However, for more dynamic operations, using the `ExpandoObject` can be advantageous. 
+ETLBox components are flexibly designed with both generic and non-generic class definitions. Often, in the context of ETL processes, developers define strongly-typed objects, or POCOs (Plain Old CLR Objects), to represent the data flow, as demonstrated in earlier sections. However, for more dynamic operations, using the `ExpandoObject` can be advantageous.
 
 For instance, rather than using `RowTransformation<VendorMaster>`, we can employ `RowTransformation<ExpandoObject>`, which is equivalent to the simple `RowTransformation`.
 
@@ -217,7 +225,7 @@ var adjustValidFrom = new RowTransformation(row => {
     dynamic r = row as dynamic;
     if ((row as IDictionary<string,object>).ContainsKey("DbId") && r.DbId > 0)
         r.ValidFrom = DateTime.Now;
-    else 
+    else
         r.ValidFrom = new DateTime(1900, 1, 1);
     r.ValidTo = new DateTime(9999, 12, 31);
     return row;
@@ -237,7 +245,7 @@ UPDATE VendorMaster
 SET VendorMaster.ValidTo = calc.validto
 FROM (SELECT Id,
              Code,
-             Custom, 
+             Custom,
              ValidFrom,
              LEAD(ValidFrom)
                   OVER (
@@ -312,7 +320,7 @@ bool IsValid(IDictionary<string, object> row) {
 }
 ```
 
-We've refined the `IsValid` method to cater to the `ExpandoObject`. Moreover, this method also leverages the loaded configuration data for row validation. 
+We've refined the `IsValid` method to cater to the `ExpandoObject`. Moreover, this method also leverages the loaded configuration data for row validation.
 
 
 ### Complete code overview
@@ -417,7 +425,7 @@ var adjustValidFrom = new RowTransformation(row => {
     dynamic r = row as dynamic;
     if ((row as IDictionary<string,object>).ContainsKey("DbId") && r.DbId > 0)
         r.ValidFrom = DateTime.Now;
-    else 
+    else
         r.ValidFrom = new DateTime(1900, 1, 1);
     r.ValidTo = new DateTime(9999, 12, 31);
     return row;
@@ -437,7 +445,7 @@ UPDATE VendorMaster
 SET VendorMaster.ValidTo = calc.validto
 FROM (SELECT Id,
              Code,
-             Custom, 
+             Custom,
              ValidFrom,
              LEAD(ValidFrom)
                   OVER (
@@ -525,3 +533,9 @@ The second article brought enhancements to the table. We enhanced error reportin
 In the third segment, we shifted gears, handling data flow using dynamic data objects. We ventured into the realms of the `dynamic` keyword and `ExpandoObject` within C#, illustrating the power of moving beyond fixed data types. A new configuration table emerged, housing pivotal metadata and fostering the app's dynamic nature.
 
 To sum it all up, the series spotlighted ETLBox as a formidable ETL tool for the .NET community. Its range from foundational data flow setups to intricate enhancements like SCD Type 2 and dynamic data operations underscores its versatility, dependability, and adaptability. As ETLBox introduces dynamic data flows, it sets a new standard by addressing the ever-evolving challenges of data sourcing and structuring, offering an unparalleled level of flexibility. Although there's undeniable value in static typing, the embrace of a dynamic approach positions ETLBox prominently within the .NET ETL ecosystem.
+
+{{< series >}}
+  {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" >}}
+  {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
+  {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" active="true" >}}
+{{< /series >}}
