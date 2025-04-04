@@ -2,7 +2,8 @@
   <div class="container">
     <h2 class="text-center mb-4">Claim Your 15 % Discount</h2>
     <p class="text-center mb-5">Fill out the form below to receive your personalized discount code for your first FlowWright license.</p>
-    <form class="row justify-content-center" name="flowwright-discount-form" method="POST" data-netlify="true" action="/support/flowwright/success-discount/">
+    <form class="row justify-content-center" name="flowwright" method="POST" data-netlify="true" action="/support/flowwright/success-discount/">
+      <input type="hidden" name="form-name" value="flowwright">
       <div class="col-md-6">
         <div class="mb-3">
           <label for="name" class="form-label">Full Name *</label>
