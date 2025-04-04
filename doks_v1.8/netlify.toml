@@ -144,7 +144,7 @@
 
 [[redirects]]
   from = "/code-examples"
-  to = "https://www.etlbox.net/recipes/basics/basic-example/"
+  to = "https://www.etlbox.net/recipes/fundamentals/rating-orders/"
   status = 302
   force = true
 

@@ -63,7 +63,7 @@ This approach ensures your data pipelines are as reliable and maintainable as th
 ### Use the full .NET Ecosystem
 ETLBox is built 100% in .NET, which means it integrates fully with other .NET technologies. For example, you can use ETLBox in Polyglot Notebooks for interactive data exploration.
 
-Read the full blog article here: "[Unlock the Power of C# in Polyglot Notebooks](/recipes/other/polyglot/)".
+Read the full blog article here: "[Unlock the Power of C# in Polyglot Notebooks](/blog/polyglot/)".
 
 ### Dynamic object support
 
@@ -73,7 +73,7 @@ ETLBox supports both:
 - Dynamic Objects (ExpandoObject and `dynamic` keyword): For flexible, schema-less data processing.
 
 If you’re interested in dynamic data imports with built-in data validation, check out this example:
-"[Redefining ETL: Data Flows Powered by C# ](/recipes/etl/data-validation-part1/)"
+"[Redefining ETL: Data Flows Powered by C# ](/blog/data-validation-part1/)"
 
 {{< callout context="note" icon="outline/info-circle" >}}
 The `dynamic` keyword in .NET allows you to create objects whose members (properties and methods) are resolved at runtime instead of compile-time. This provides flexibility when working with data structures that don’t have a fixed schema.
@@ -92,21 +92,21 @@ While DbDestination allows for fast bulk inserts into supported databases, ETLBo
 - Insert, Update, Upsert, Delete, or Merge data.
 - Operate in either full or delta mode for optimized performance.
 
-Learn more about merging into a database in this article: "[Mastering Database Merging: Comparing Different Approaches](/recipes/data-integration/merge-overview/)"
+Learn more about merging into a database in this article: "[Mastering Database Merging: Comparing Different Approaches](/blog/merging/)"
 
 ### Loading Data into Star Schemas
 
 ETLBox is well-suited for data warehousing tasks. It is a full alternative to technologies like SSIS or Azure Data Factory.
 
-Read more in this article that shows how to use ETLBox to load data into a star schema or DWH: "[Building a Data Warehouse with ETLBox: A .NET Developer's Guide](/recipes/etl/star-schema/)"
+Read more in this article that shows how to use ETLBox to load data into a star schema or DWH: "[Building a Data Warehouse with ETLBox: A .NET Developer's Guide](/blog/building-dwh/)"
 
 
 ## Learn More
 
 To deepen your knowledge of ETLBox:
 
-- Start with the [Introduction section](/docs) in the docs for a comprehensive overview.
-- Check out real-world examples in the [Recipes section](/recipes).
+- Start with the [Introduction section](/docs/introduction/simple-flow/) in the docs for a comprehensive overview.
+- Check out real-world examples in the [Recipes section](/recipes/fundamentals/rating-orders/).
 - Refer to the [API Documentation](/api) for detailed reference on properties and methods.
 
 #### What's next

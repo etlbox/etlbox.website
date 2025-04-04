@@ -13,7 +13,7 @@ weight = 20
 [[main]]
 name = "Recipes"
 identifier = "recipes"
-url = "/recipes/basics/basic-example"
+url = "/recipes/fundamentals/rating-orders/"
 weight = 30
 
 [[main]]
@@ -64,7 +64,7 @@ weight = 510
 
 [[footer_1]]
 name = "Recipes"
-url = "/recipes/basics/basic-example/"
+url = "/recipes/fundamentals/rating-orders/"
 weight = 520
 
 [[footer_1]]
