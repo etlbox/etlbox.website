@@ -12,6 +12,8 @@ pinned: false
 homepage: false
 ---
 
+{{< discount_referral >}}
+
 {{< series >}}
   {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" active="true" >}}
   {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
@@ -450,3 +452,5 @@ In our example, we built a small ETL pipeline to process a CSV file, perform dat
   {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
   {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
 {{< /series >}}
+
+{{< discount_mail >}}

@@ -12,6 +12,8 @@ pinned: false
 homepage: false
 ---
 
+{{< discount_referral >}}
+
 {{< series >}}
   {{< series_item index="1" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;I)" link="../data-validation-part1/" >}}
   {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
@@ -539,3 +541,5 @@ To sum it all up, the series spotlighted ETLBox as a formidable ETL tool for the
   {{< series_item index="2" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;II)" link="../data-validation-part2/" >}}
   {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" active="true" >}}
 {{< /series >}}
+
+{{< discount_mail >}}
