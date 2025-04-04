@@ -131,6 +131,27 @@ var source = new DbSource<MyData>(conn) {
 };
 ```
 
+## Command Timeout
+
+The `CommandTimeout` setting controls how long a SQL command is allowed to run before it is terminated by the database engine. This is especially important for operations that may take longer to complete, such as large data manipulations or complex queries.
+
+In ETLBox, this setting is managed through the `CommandTimeout` property on the connection manager. You can assign a timeout in seconds:
+
+```csharp
+var connection = new SqlConnectionManager("YourConnectionString") {
+    CommandTimeout = 60  // Timeout after 60 seconds
+};
+```
+
+All SQL executions using this connection will apply the specified timeout.
+
+By default, ETLBox sets the `CommandTimeout` to `0`, which means **no timeout limit** is enforced. This allows SQL operations to run as long as needed unless explicitly constrained.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+If your connection string already includes a Command Timeout or Connection Timeout setting, it may override or interact with the default. Be sure to review both the connection string and the connection manager configuration when troubleshooting timeout behavior.
+{{< /callout >}}
+
+
 ## Connection Pooling
 
 ETLBox connection managers use ADO.NET connection pooling to optimize performance. Connections are automatically managed—when a component needs access to the database, ETLBox opens a connection, and once the operation is complete, the connection is returned to the pool for reuse. This minimizes the number of active connections and improves efficiency.
