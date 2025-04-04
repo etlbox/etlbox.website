@@ -1,5 +1,5 @@
 ---
-title: "Merge destination"
+title: "Merge Destination"
 description: "Examples and code recipes for the DbMerge component."
 lead: "This article contains example code that shows the usage of the DbMerge component."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2102
+weight: 47
 toc: true
 ---
 

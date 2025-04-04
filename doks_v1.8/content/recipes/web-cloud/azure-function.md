@@ -6,8 +6,8 @@ draft: false
 images: []
 menu:
   recipes:
-    parent: "basics"
-weight: 2020
+    parent: "web-cloud"
+weight: 30
 toc: true
 ---
 
@@ -15,15 +15,15 @@ In this example we will deploy a simple azure function. The function will receiv
 
 {{< alert text="Starting with <code>Microsoft.NET.Sdk.Functions versions 3.0.4</code> and above, a new feature was introduced that cleans the compiled output from unnecessary dlls in order to trim down the assemblies. This feature cleans the output too aggressively and will result in exceptions when referencing and using ETLBox packages. You need to either downgrade to <code>Microsoft.NET.Sdk.Functions 3.0.3</code> or to add <code>&lt;_FunctionsSkipCleanOutput&gt;true&lt;/_FunctionsSkipCleanOutput&gt;</code> to your project file" >}}
 
-This issue is already reported in different github issues ({{< link-ext text="e.g. here" url="https://github.com/Azure/Azure-Functions/issues/1525" >}} ). 
+This issue is already reported in different github issues ({{< link-ext text="e.g. here" url="https://github.com/Azure/Azure-Functions/issues/1525" >}} ).
 
 ## Preqrequisites
 
-This example was created using Visual Studio (latest version). Visual Studio offers emulators for Function Apps. If you are going to deploy this function to Azure, you will need a valid Azure subscription. 
+This example was created using Visual Studio (latest version). Visual Studio offers emulators for Function Apps. If you are going to deploy this function to Azure, you will need a valid Azure subscription.
 
 ### Create a azure function project
 
-You can create the function app using a template project or manually. 
+You can create the function app using a template project or manually.
 At then end, you should end up with a project file that looks similar to this:
 
 ```xml
@@ -99,18 +99,18 @@ namespace AzureFunctionApp
 
 ### Testing the function
 
-You can execute your function, either in your test environment or by deploying it to Azure. 
+You can execute your function, either in your test environment or by deploying it to Azure.
 Now you can send a POST request to your newly created endpoint:
 
 E.g. if you send the following POST body to your endpoint
 
 ```json
 [
-	{ 
+	{
 		"Id" : 1,
 		"Value" : "A"
 	},
-	{ 
+	{
 		"Id" : 2,
 		"Value" : "B"
 	},

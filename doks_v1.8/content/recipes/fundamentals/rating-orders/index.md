@@ -5,8 +5,8 @@ lead: "This example demonstrates how the different data flow components can be u
 draft: false
 menu:
   recipes:
-    parent: "etl"
-weight: 2140
+    parent: "fundamentals"
+weight: 1
 toc: true
 ---
 

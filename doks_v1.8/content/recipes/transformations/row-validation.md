@@ -1,5 +1,5 @@
 ---
-title: "Row validation"
+title: "Row Validation"
 description: "Examples and Code Recipes for the RowValidation Component."
 lead: "This article contains example code snippets that show how to use the RowValidation component."
 draft: false

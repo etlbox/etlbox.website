@@ -1,5 +1,5 @@
 ---
-title: "Database destination"
+title: "Database Destination"
 description: "Examples and code recipes for the DbDestination component."
 lead: "This article contains example code that shows the usage of the DbDestination component."
 draft: false
@@ -7,19 +7,19 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2102
+weight: 47
 toc: true
 ---
 
-## Setup 
+## Setup
 
 ### Using a different database
 
-The following examples are using SqlServer as destination database. In order to use SQLServer, we use the `SqlConnectionManager` in combination with a connection string for SQLServer. If you prefer to use a different database, simple replace the connection manager (and the connection string) with your database of choice. E.g. if you want to use Postgres, you can simply use the `PostgresConnectionManager` instead. 
+The following examples are using SqlServer as destination database. In order to use SQLServer, we use the `SqlConnectionManager` in combination with a connection string for SQLServer. If you prefer to use a different database, simple replace the connection manager (and the connection string) with your database of choice. E.g. if you want to use Postgres, you can simply use the `PostgresConnectionManager` instead.
 
 ### Shared method
 
-Throughout the following, all code examples will use a method `PrintTable(..)` which prints the content of a table onto the console output. 
+Throughout the following, all code examples will use a method `PrintTable(..)` which prints the content of a table onto the console output.
 
 ```C#
 private void PrintTable(IConnectionManager connMan, string tableName) {
@@ -38,9 +38,9 @@ private void PrintTable(IConnectionManager connMan, string tableName) {
 
 ## Example with strongly typed objects
 
-The following example shows a basic insert of strongly typed objects into a database table. The matching between column names and properties is based on name comparison - if both name match, the `DbInsert` will try to write the value into the column. 
+The following example shows a basic insert of strongly typed objects into a database table. The matching between column names and properties is based on name comparison - if both name match, the `DbInsert` will try to write the value into the column.
 
-The DbInsert will start inserted data as soon as all data has arrived or more data arrived than the defined `BatchSize`. It will then insert the batch using a bulk insert. 
+The DbInsert will start inserted data as soon as all data has arrived or more data arrived than the defined `BatchSize`. It will then insert the batch using a bulk insert.
 
 ```C#
 public class MyRow
@@ -83,7 +83,7 @@ Id:5, Value1:Test3, Value2:1.3
 
 ### Insert with DbColumnMap
 
-If the column names in your destination differ from your property names, you can use the `DbColumnMap` attribute to match them. Alternatively, if you don't want to use attribute, you can pass a collection of `DbColumnMap` objects to the `ColumnMapping` property of the `DbDestination`. 
+If the column names in your destination differ from your property names, you can use the `DbColumnMap` attribute to match them. Alternatively, if you don't want to use attribute, you can pass a collection of `DbColumnMap` objects to the `ColumnMapping` property of the `DbDestination`.
 
 ```C#
  public class MyRowWithCM
@@ -133,7 +133,7 @@ idcol:3, valuecol1:Test3, Value2:
 
 ### Ignoring Identity column
 
-If the destination table has an Identity column (or Auto-Increment for MySql or Serial in Postgres), you normally want to have your database generate the id column. If your input data has a property with the same name, the value in your property will be ignored. 
+If the destination table has an Identity column (or Auto-Increment for MySql or Serial in Postgres), you normally want to have your database generate the id column. If your input data has a property with the same name, the value in your property will be ignored.
 
 ```C#
 public class MyRowNoId
@@ -265,7 +265,7 @@ Id:5, Value1:Test3, Value2:1.3
 
 ## Creating an enclosing transaction
 
-Every connection managers supports to begin, end/commit or rollback a transaction. Even though the `DbDestination` will insert your data in batches, where each batch is either inserted completely or rejected, you can also create an enclosing transaction around your database insert. 
+Every connection managers supports to begin, end/commit or rollback a transaction. Even though the `DbDestination` will insert your data in batches, where each batch is either inserted completely or rejected, you can also create an enclosing transaction around your database insert.
 
 ```C#
 var source = new MemorySource<MyRow>();
@@ -293,7 +293,7 @@ Table contains 0 records.
 
 ## Redirect flawed batches
 
-Sometimes, you don't want your data flow to fail because a single records is flawed. ETLBox allows you to redirect flawed rows or batches into a different part of your data flow. For the `DbDestination` you can use the `LinkErrorTo` method to redirect a batch which could not be inserted due to an error in the data of that batch. Unfortunately, this will not insert the whole batch - you still need to determine which record cause the issue (by examining the `RecordsAsJson` property). Alternatively, you can reduce your used BatchSize to a smaller number, but this will have a great impact on your performance. 
+Sometimes, you don't want your data flow to fail because a single records is flawed. ETLBox allows you to redirect flawed rows or batches into a different part of your data flow. For the `DbDestination` you can use the `LinkErrorTo` method to redirect a batch which could not be inserted due to an error in the data of that batch. Unfortunately, this will not insert the whole batch - you still need to determine which record cause the issue (by examining the `RecordsAsJson` property). Alternatively, you can reduce your used BatchSize to a smaller number, but this will have a great impact on your performance.
 
 ```C#
 public class MyErrorRow
@@ -312,7 +312,7 @@ private void CreateTableSameColNames(IConnectionManager connMan, string tableNam
         new TableColumn("Value2", "VARCHAR(10)", allowNulls: false)
     });
     CreateTableTask.Create(connMan, td);
-}        
+}
 
 var source = new MemorySource<MyErrorRow>();
 source.DataAsList.Add(new MyErrorRow() { Id = "3", Value1 = "Test1", Value2 = 1.1 });
@@ -336,7 +336,7 @@ foreach (var error in errorDest.Data)
 
 /* Output
 Id:5, Value1:Test3, Value2:1.3
-Error record found:The given value 'X' of type String from the data source 
+Error record found:The given value 'X' of type String from the data source
 cannot be converted to type int for Column 0 [Id].
 */
 ```
@@ -402,7 +402,7 @@ idcol:3, valuecol1:XTest3, Value2:3.9
 
 ### Before and after batch write
 
-The `DbDestination` offer the `BeforeBatchWrite` and `AfterBatchWrite` functions to modify a batch right before or after insertion. 
+The `DbDestination` offer the `BeforeBatchWrite` and `AfterBatchWrite` functions to modify a batch right before or after insertion.
 
 ```C#
 public class MyRow
@@ -456,9 +456,9 @@ Id:5, Value1:XTest3, Value2:1.3
 
 ### Bulk update
 
-The `DbDestination` by default only inserts data into the destination. But you can also set the operation mode to `BulkUpdate`. Now you need to define an `IdColumn` (either as attribute or by passing a collection to the `IdColumns` property) which tells the DbDestination which properties and matching columns to use to identify the records that qualify for an update. The `UpdateColumn` attribute (or a collection passed into the `UpdateColumns` property) defines which columns should be updated. 
+The `DbDestination` by default only inserts data into the destination. But you can also set the operation mode to `BulkUpdate`. Now you need to define an `IdColumn` (either as attribute or by passing a collection to the `IdColumns` property) which tells the DbDestination which properties and matching columns to use to identify the records that qualify for an update. The `UpdateColumn` attribute (or a collection passed into the `UpdateColumns` property) defines which columns should be updated.
 
-The final update operation will then be executed as a batch, which will significantly improve your performance compared to single updates. 
+The final update operation will then be executed as a batch, which will significantly improve your performance compared to single updates.
 
 ```C#
 public class MyBulkUpdateRow

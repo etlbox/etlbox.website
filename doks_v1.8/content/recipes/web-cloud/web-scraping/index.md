@@ -1,24 +1,24 @@
 ---
-title: "Web scraping"
+title: "Web Scraping"
 description: "Example: Web scraping"
 lead: "This example demonstrates how content from a web site can be scraped and used to store, aggregate and display the retrieved data."
 draft: false
 menu:
   recipes:
-    parent: "other"
-weight: 2310
+    parent: "web-cloud"
+weight: 30
 toc: true
 ---
 
 
 ## Prerequisites
 
-This demo will scrape data from a website and sent it into a data flow using a custom source. 
-The raw data will be stored in a SQLite database. Also, the raw data is loaded into a in-memory list object, and then some base information about the scraped data is displayed. We will also aggregate the data and store the result in a csv file. 
+This demo will scrape data from a website and sent it into a data flow using a custom source.
+The raw data will be stored in a SQLite database. Also, the raw data is loaded into a in-memory list object, and then some base information about the scraped data is displayed. We will also aggregate the data and store the result in a csv file.
 
 ## Website to scrape
 
-We will use the {{< link-ext text="ASN Aviation Safety Database" url="https://aviation-safety.net/database/" >}} to retrieve data about tracked airline accidents. The database is a web site that contains information airline accidents that happened since 1919. We will query this database by querying the website for each year. For demonstration purposes, we will only query the years between 1920 and 1940. 
+We will use the {{< link-ext text="ASN Aviation Safety Database" url="https://aviation-safety.net/database/" >}} to retrieve data about tracked airline accidents. The database is a web site that contains information airline accidents that happened since 1919. We will query this database by querying the website for each year. For demonstration purposes, we will only query the years between 1920 and 1940.
 
 ## Preparation
 
@@ -26,7 +26,7 @@ We will use the {{< link-ext text="ASN Aviation Safety Database" url="https://av
 
 We define a class that can hold all data for an accidents:
 
-```C# 
+```C#
 public class Accident
 {
     public DateTime Date { get; set; }
@@ -45,8 +45,8 @@ We also want to aggregate this data. We are interest in the total of all Fatalat
 As we are using the Aggregation, we can create a class where we define our aggregation actions via the `AggregateColumn`  and `GroupColumn` attributes.
 
 ```C#
-public class AccidentsPerYear 
-{        
+public class AccidentsPerYear
+{
     [GroupColumn("Year")]
     public int Year { get; set; }
     [AggregateColumn("Fatalities", AggregationMethod.Sum)]
@@ -60,7 +60,7 @@ The demo already comes with file named `SQLite.db` - this is an empty SQLite dat
 
 ```C#
  public static SQLiteConnectionManager SQLiteConnection { get; set; }
-                
+
 static void PrepareSqlLiteDestination() {
     SQLiteConnection = new SQLiteConnectionManager("Data Source=.\\SQLite.db;Version=3;");
     CreateTableTask.Create(SQLiteConnection, new TableDefinition() {
@@ -83,7 +83,7 @@ static void PrepareSqlLiteDestination() {
 
 Before we start, we need a function that returns us all accidents that we scraped from the website for a particular year. E.g. we want to get a list of all accidents for 1920 for the url `https://aviation-safety.net/database/dblist.php?Year=1920`
 
-We will use the {{< link-ext text="Html Agilitiy Pack" url="https://html-agility-pack.net/" >}} to retrieve the data in very simple way. 
+We will use the {{< link-ext text="Html Agilitiy Pack" url="https://html-agility-pack.net/" >}} to retrieve the data in very simple way.
 Our scraping code for the url above would look like this:
 
 ```C#
@@ -118,12 +118,12 @@ static string ParseCountryFromImgTag(string imgHtml) {
         return string.Empty;
 }
 
-static int ConvertToNumber(string number) {            
+static int ConvertToNumber(string number) {
     //number: 5+1
     if (number.Contains("+")) {
         var numbers = number.Split("+");
         return Convert.ToInt32(numbers[0]) + Convert.ToInt32(numbers[1]);
-    }            
+    }
     //number: 3
     else if (!string.IsNullOrWhiteSpace(number))
         return Convert.ToInt32(number);
@@ -154,7 +154,7 @@ Next we want to use the scraped accident data and sent it into a data flow. We c
 ```C#
 int StartYear = 1920;
 int EndYear = 1940;
-       
+
 var currentYear = StartYear;
 
 var source = new CustomBatchSource<Accident>();
@@ -179,8 +179,8 @@ filter.FilterPredicate = accident => accident.Year <= 1;
 
 ### Storing, Displaying and Aggregating
 
-Now we are ready to "duplicate" our data. 
-We want to store the raw data in the SQLite table that we created. Also, we want to store the data in a in-memory list object, and then display some basic information about this data. Finally, we want to aggregate the data to Fatalities/Year and then store this information in a csv file. 
+Now we are ready to "duplicate" our data.
+We want to store the raw data in the SQLite table that we created. Also, we want to store the data in a in-memory list object, and then display some basic information about this data. Finally, we want to aggregate the data to Fatalities/Year and then store this information in a csv file.
 
 ```C#
 var multicast = new Multicast<Accident>();
@@ -188,13 +188,13 @@ var multicast = new Multicast<Accident>();
 var memDest = new MemoryDestination<Accident>();
 
 var sqlLiteDest = new DbDestination<Accident>(SQLiteConnection,"Accidents");
-            
-var aggregation = new Aggregation<Accident, AccidentsPerYear>();            
+
+var aggregation = new Aggregation<Accident, AccidentsPerYear>();
 var csvDest = new CsvDestination<AccidentsPerYear>("aggregated.csv");
 
 source.LinkTo(filter);
 filter.LinkTo(multicast);
-multicast.LinkTo(memDest);            
+multicast.LinkTo(memDest);
 multicast.LinkTo(sqlLiteDest);
 
 multicast.LinkTo(aggregation, row => row.Year > 1);
@@ -209,7 +209,7 @@ for (int year = StartYear;year<=EndYear;year++)
 
 ## Demo on Github
 
-{{< link-ext text="The whole demo code is available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/WebScraping" >}}. 
+{{< link-ext text="The whole demo code is available on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/WebScraping" >}}.
 
 
 

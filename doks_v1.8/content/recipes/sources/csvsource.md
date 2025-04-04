@@ -1,5 +1,5 @@
 ---
-title: "Csv source"
+title: "Csv Source"
 description: "Examples and code recipes for the CsvSource component."
 lead: "This article contains example code that shows the usage of the CsvSource component."
 draft: false
@@ -7,11 +7,11 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 
-The Csv source is your best choice if you want to load data from a file that is {{< link-ext url="https://www.rfc-editor.org/rfc/rfc4180" text="RFC-4180 compliant" >}}. The CsvSource (as well as the CsvDestination) relies on the 3rd party library {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper by Josh Close" >}}. Some of the Configuration properties from this library are directly exposed. 
+The Csv source is your best choice if you want to load data from a file that is {{< link-ext url="https://www.rfc-editor.org/rfc/rfc4180" text="RFC-4180 compliant" >}}. The CsvSource (as well as the CsvDestination) relies on the 3rd party library {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper by Josh Close" >}}. Some of the Configuration properties from this library are directly exposed.
 
 ## Shared code
 
@@ -81,7 +81,7 @@ source.RowModificationAction = (inputrow,_) => {
 };
 var dest = new MemoryDestination();
 
-source.LinkTo(dest); 
+source.LinkTo(dest);
 Network.Execute(source);
 
 foreach (dynamic row in dest.Data)
@@ -101,7 +101,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
-## Redirecting errors 
+## Redirecting errors
 
 We can use the error linking if we want to ignore flawed data in the source.
 
@@ -126,7 +126,7 @@ Network.Execute(source);
 foreach (var row in dest.Data)
     Console.WriteLine($"Received Id: {row.Id}, Value1: {row.Value1}, Value2: {row.Value2}");
 
-foreach (var err in errorDest.Data) 
+foreach (var err in errorDest.Data)
     Console.WriteLine($"Error record: {err.ErrorText.Substring(0,err.ErrorText.IndexOf(Environment.NewLine))} " +
         Environment.NewLine +
         $"{err.RecordAsJson}");
@@ -143,20 +143,20 @@ X,"Err",1.2
 ---
 Received Id: 1, Value1: OK, Value2: 1.1
 Received Id: 5, Value1: OK, Value2: 0
-Error record: The conversion cannot be performed. 
+Error record: The conversion cannot be performed.
 Row: 3 - Start Position: 43 -- RawRecord: X,"Err",1.2
 
-Error record: The conversion cannot be performed. 
+Error record: The conversion cannot be performed.
 Row: 4 - Start Position: 55 -- RawRecord: 3,"Err",NA
 
-Error record: The conversion cannot be performed. 
+Error record: The conversion cannot be performed.
 Row: 5 - Start Position: 63 -- RawRecord: 4,Err,
 */
 ```
 
 ## Configure underlying CsvReader
 
-This example shows how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to map different header names to our object properties. Also, we can use this configuration to set up various other parameters, e.g. reading with a different delimiter. 
+This example shows how we can use the {{< link-ext url="https://joshclose.github.io/CsvHelper/" text="CsvHelper" >}} `Configuration` to map different header names to our object properties. Also, we can use this configuration to set up various other parameters, e.g. reading with a different delimiter.
 
 {{< alert text="To use a different encoding, you need to use the <code>Encoding</code> property on the <code>CsvSource</code> directly. Do not use the Encoding property on the CsvHelper Configuration object." >}}
 
@@ -185,7 +185,7 @@ source.Configuration =
         //See also https://joshclose.github.io/CsvHelper/
 };
 source.SkipRows = 1;
-source.Encoding = Encoding.UTF8; 
+source.Encoding = Encoding.UTF8;
 
 var dest = new MemoryDestination<MyRowHN>();
 
@@ -215,7 +215,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ### Map header names to properties with class maps
 
-If you are not allowed to add attributes to your object, you can use the class mapping to match the header names in your csv file with the right property in your object. 
+If you are not allowed to add attributes to your object, you can use the class mapping to match the header names in your csv file with the right property in your object.
 
 ```C#
 public class ModelClassMap : ClassMap<MyRow>
@@ -258,7 +258,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ## Reading multiple files
 
-You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to go through a set a files. 
+You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to go through a set a files.
 
 ```C#
 public class MyRow
@@ -313,7 +313,7 @@ Received Id: 5, Value1: Test5, Value2: 1.5
 
 ## Csv files without header
 
-You can also read data from csv files without header. Set the `HasHeaderRecord` property in the Configuration to `false`, and the CsvSource will not try to interpret the first row as header row. 
+You can also read data from csv files without header. Set the `HasHeaderRecord` property in the Configuration to `false`, and the CsvSource will not try to interpret the first row as header row.
 
 ### With POCO
 
@@ -347,7 +347,7 @@ Content of file 'NoHeaders.csv'
 ---
 Received Value1: Test1, Value2: 1.1
 Received Value1: Test2, Value2: 1.2
-Received Value1: Test3, Value2: 1.3             
+Received Value1: Test3, Value2: 1.3
     */
 ```
 
@@ -381,13 +381,13 @@ Content of file 'NoHeaders.csv'
 ---
 Received Value1: Test1, Value2: 1.1
 Received Value1: Test2, Value2: 1.2
-Received Value1: Test3, Value2: 1.3             
+Received Value1: Test3, Value2: 1.3
     */
 ```
 
 ## Reading from Azure blob storage
 
-All streaming connectors support reading data from Azure blob storage instead of a file. 
+All streaming connectors support reading data from Azure blob storage instead of a file.
 
 ```C#
 public class MyRow
@@ -436,7 +436,7 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 
 ## Utilizing your own stream
 
-All streaming connector support that you provide your own stream. The following example shows how to use a memory stream to read csv data. 
+All streaming connector support that you provide your own stream. The following example shows how to use a memory stream to read csv data.
 
 ```C#
  byte[] firstString = Encoding.UTF8.GetBytes("Col1,Col2\n");
@@ -469,7 +469,7 @@ Received Col1: 3, Col2: Test3
 
 ## Reading data from MIME multipart response
 
-If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source. 
+If you receive data from as a MIME multipart response, you can use the `UseMulitpartContent` function to specify the content type that you would to process in your source.
 
 ```C#
 public void ReadingMultipartMessage() {
@@ -484,7 +484,7 @@ public void ReadingMultipartMessage() {
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Received Header1: {row.Header1}, Header2: {row.Header2}");
-    
+
 }
 
 private static int CreateMultipartContentServer() {

@@ -1,5 +1,5 @@
 ---
-title: "Row duplication"
+title: "Row Duplication"
 description: "Examples and code recipes for the RowDuplication component."
 lead: "This article contains example code that shows the usage of the RowDuplication component."
 draft: false
@@ -13,7 +13,7 @@ toc: true
 
 ## Duplicating data
 
-This example shows how RowDuplication can be used to duplicate incoming data.  
+This example shows how RowDuplication can be used to duplicate incoming data.
 
 ```C#
 public class MyRow
@@ -50,7 +50,7 @@ public void Duplicate() {
 
 ## Duplicating with condition
 
-This example shows how incoming data is only duplicated when a particular condition is met. 
+This example shows how incoming data is only duplicated when a particular condition is met.
 
 ```C#
 public class MyRow

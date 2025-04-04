@@ -1,5 +1,5 @@
 ---
-title: "Row multiplication"
+title: "Row Multiplication"
 description: "Examples and code recipes for the RowMultiplication component."
 lead: "This article contains example code that shows the usage of the RowMultiplication component."
 draft: false
@@ -13,7 +13,7 @@ toc: true
 
 ## Generate new output rows from input
 
-This example shows how RowMultiplication can be used to create 3 output records from one incoming record. 
+This example shows how RowMultiplication can be used to create 3 output records from one incoming record.
 
 ```C#
  public class MyRow
@@ -52,7 +52,7 @@ public void SplittingString() {
 
 ## Generating new output with different data type
 
-This example shows how incoming data is not only used to create 3 output rows, but also to convert the input type into a different output type.  
+This example shows how incoming data is not only used to create 3 output rows, but also to convert the input type into a different output type.
 
 ```C#
  public class MyString
@@ -95,7 +95,7 @@ public void SplittingStringDifferentTypes() {
 
 ## Normalizing document data
 
-Consider the following json document, which contains 2 invoices. The first invoice contains 3 items, the second invoice 2 items. 
+Consider the following json document, which contains 2 invoices. The first invoice contains 3 items, the second invoice 2 items.
 
 ```json
 {

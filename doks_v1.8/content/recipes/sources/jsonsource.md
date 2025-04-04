@@ -1,5 +1,5 @@
 ---
-title: "Json source"
+title: "Json Source"
 description: "Examples and code recipes for the JsonSource component."
 lead: "This article contains example code that shows the usage of the JsonSource component."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 

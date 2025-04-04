@@ -1,5 +1,5 @@
 ---
-title: "Json destination"
+title: "Json Destination"
 description: "Examples and code recipes for the JsonDestination component."
 lead: "This article contains example code that shows the usage of the JsonDestination component."
 draft: false
@@ -7,12 +7,12 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2102
+weight: 47
 toc: true
 ---
 
 
-The Json destination converts data from your data flow into json. Internally, it uses the {{< link-ext text="Newtonsoft Json library" url="https://www.newtonsoft.com/json" >}}.  
+The Json destination converts data from your data flow into json. Internally, it uses the {{< link-ext text="Newtonsoft Json library" url="https://www.newtonsoft.com/json" >}}.
 
 ## Shared code
 
@@ -106,7 +106,7 @@ Content of file 'SimpleWithPOCO.json'
 
 ### Configure Json serialization
 
-This example shows how we can use the Newtonsoft Json attributes to customize our json output. 
+This example shows how we can use the Newtonsoft Json attributes to customize our json output.
 
 ```C#
 public class RecordC
@@ -184,7 +184,7 @@ Content of file 'POCOWithConfig.json'
 
 ### Dynamic json file creation
 
-The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a json file, without the need to define any strongly typed object first. 
+The following example shows how a dynamic ExpandoObject can be used to copy a sql server table into a json file, without the need to define any strongly typed object first.
 
 ```C#
 public static SqlConnectionString ConnectionString => Config.SqlConnection.ConnectionString("DataFlow");
@@ -246,7 +246,7 @@ Content of file 'TableIntoJson.json'
 
 ## Writing into multiple files
 
-You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files. 
+You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to create multiple output  files.
 
 ```C#
 public class RecordC
@@ -365,7 +365,7 @@ Content of file 'multiple_files_2.json'
 */
 ```
 
-## Resource types 
+## Resource types
 
 ### Writing into Azure blob storage
 
@@ -521,7 +521,7 @@ Received POST request with body:
 
 ## Utilizing your own stream
 
-All streaming connector support that you provide your own stream. The following example shows how to use your own file stream. 
+All streaming connector support that you provide your own stream. The following example shows how to use your own file stream.
 
 ```C#
 public class RecordC

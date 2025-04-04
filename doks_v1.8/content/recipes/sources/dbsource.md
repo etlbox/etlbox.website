@@ -1,5 +1,5 @@
 ---
-title: "Database source"
+title: "Database Source"
 description: "Examples and code recipes for the DbSource component."
 lead: "This article contains example code that shows the usage of the DbSource component."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 

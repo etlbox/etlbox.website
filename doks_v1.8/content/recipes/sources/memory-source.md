@@ -1,5 +1,5 @@
 ---
-title: "Memory source"
+title: "Memory Source"
 description: "Examples and code recipes for the MemorySource component."
 lead: "This article contains example code that shows the usage of the MemorySource component."
 draft: false
@@ -7,11 +7,11 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 
-The memory source can be used to send data into your data flow which is stored in any of your C# enumerable. 
+The memory source can be used to send data into your data flow which is stored in any of your C# enumerable.
 
 ## Using strongly typed objects
 
@@ -33,8 +33,8 @@ source.Data = sourceData;
 
 CustomDestination<MyRow> dest = new CustomDestination<MyRow>();
 dest.WriteAction =
-    (row, _) => { 
-        Console.WriteLine("Received data with Id " + row.Id + " and Value " + row.Value); 
+    (row, _) => {
+        Console.WriteLine("Received data with Id " + row.Id + " and Value " + row.Value);
 };
 
 source.LinkTo(dest);

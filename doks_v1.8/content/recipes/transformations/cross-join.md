@@ -1,5 +1,5 @@
 ---
-title: "Cross join"
+title: "Cross Join"
 description: "Examples and code recipes for the CrossJoin component."
 lead: "This article contains example code that shows the usage of the CrossJoin component."
 draft: false
@@ -13,7 +13,7 @@ toc: true
 
 ## Cross joining names
 
-This example shows how to the cross join can be used to join names. The cross join basically create a Cartesian product of both inputs, means that every row of one input is joined with every row from the other input. 
+This example shows how to the cross join can be used to join names. The cross join basically create a Cartesian product of both inputs, means that every row of one input is joined with every row from the other input.
 
 
 ```C#

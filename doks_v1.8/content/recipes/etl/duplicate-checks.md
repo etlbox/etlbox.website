@@ -1,13 +1,13 @@
 ---
-title: "Duplicate checks"
+title: "Duplicate Checks"
 description: "Different methods to filter duplicates in your source"
 lead: "This example shows how different methods to filter out duplicates in your input data."
 draft: false
 images: []
 menu:
   recipes:
-    parent: "data-integration"
-weight: 2110
+    parent: "etl"
+weight: 10
 toc: true
 ---
 

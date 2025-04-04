@@ -6,8 +6,8 @@ draft: false
 images: []
 menu:
   recipes:
-    parent: "data-integration"
-weight: 2110
+    parent: "web-cloud"
+weight: 30
 toc: true
 ---
 

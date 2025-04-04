@@ -1,8 +1,9 @@
 ---
-title: "Sources"
-description: "Examples and recipes for all data flow sources of ETLBox."
+title: "Source Patterns"
+description: "This category includes targeted examples showing how to configure and use various sources in ETLBox, covering file-based, database, and other data endpoints in isolation."
 lead: ""
 draft: false
-weight: 15
 images: []
+weight: 45
 ---
+

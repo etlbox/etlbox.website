@@ -1,5 +1,5 @@
 ---
-title: "Custom destination"
+title: "Custom Destination"
 description: "Examples and code recipes for the CustomDestination component."
 lead: "This article contains example code that shows the usage of the CustomDestination component."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2102
+weight: 47
 toc: true
 ---
 

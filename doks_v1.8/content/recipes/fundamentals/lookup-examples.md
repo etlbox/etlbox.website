@@ -1,13 +1,13 @@
 ---
-title: "Data lookup"
+title: "Data Lookup"
 description: "Various examples how to use the lookup transformation"
 lead: "This article contains examples which show how to use the lookup transformation and shows other techniques to lookup data.."
 draft: false
 images: []
 menu:
   recipes:
-    parent: "basics"
-weight: 2040
+    parent: "fundamentals"
+weight: 3
 toc: true
 ---
 
@@ -17,7 +17,7 @@ The first of this section will contain example code that is also used in the [do
 
 #### Customer table
 
-The example from the docs use a SqlServer table to read additional customer data from a table. 
+The example from the docs use a SqlServer table to read additional customer data from a table.
 The table `customer` has two columns (Id and Name) and contains the following data:
 
 Id|Name
@@ -27,9 +27,9 @@ Id|Name
 
 ### Simple usage of lookup
 
-The following code snipped will enrich the incoming data rows with a customer Id using the `ApplyRetrievedCacheToInput` of the lookup transformation.  
+The following code snipped will enrich the incoming data rows with a customer Id using the `ApplyRetrievedCacheToInput` of the lookup transformation.
 
-``` C#  
+``` C#
 public class Order
 {
     public int OrderNumber { get; set; }
@@ -68,7 +68,7 @@ public class Customer
      Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
  //Output
- //Order:815 Name:John Id:1 
+ //Order:815 Name:John Id:1
  //Order:4711 Name:Jim Id:2
 ```
 
@@ -103,13 +103,13 @@ foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
 ### Attributes with dynamic objects
 
-If you are using the dynamic `ExpandoObject` for you data flow, you can't decorate properties with attributes as dynamic objects don't offer this language feature. Instead you can use the `MatchColumns` and `RetrieveColumns` properties on the lookup to configure it. 
+If you are using the dynamic `ExpandoObject` for you data flow, you can't decorate properties with attributes as dynamic objects don't offer this language feature. Instead you can use the `MatchColumns` and `RetrieveColumns` properties on the lookup to configure it.
 
 To achieve the same setup like in the previous example, use the following code:
 
@@ -149,7 +149,7 @@ foreach (dynamic row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
@@ -183,13 +183,13 @@ foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
 ### Using a partial cache
 
-By default, the lookup will always load the lookup source into memory once the first record arrives at the lookup transformation. For database tables, you can configure the lookup so that it will only load the records from the lookup source which are needed to process the current batch. 
+By default, the lookup will always load the lookup source into memory once the first record arrives at the lookup transformation. For database tables, you can configure the lookup so that it will only load the records from the lookup source which are needed to process the current batch.
 
 ```C#
 var orderSource = new MemorySource<Order>();
@@ -212,13 +212,13 @@ foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
 ### Partial cache with custom sql
 
-By default, the partical cache mode will use a simple `SELECT` query to retrieve data from the source table. You can define your own sql logic for reading data from the lookup table. 
+By default, the partical cache mode will use a simple `SELECT` query to retrieve data from the source table. You can define your own sql logic for reading data from the lookup table.
 
 ```C#
 var orderSource = new MemorySource<Order>();
@@ -245,7 +245,7 @@ foreach (var row in dest.Data)
     Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
 
 //Output
-//Order:815 Name:John Id:1 
+//Order:815 Name:John Id:1
 //Order:4711 Name:Jim Id:2
 ```
 
@@ -295,8 +295,8 @@ public void UsingGetInputRecordKeyFunc()
     source.LinkTo(lookup).LinkTo(dest);
 
     Network.Execute(source);
-                
-    PrintFile("InputData.csv");            
+
+    PrintFile("InputData.csv");
     PrintFile("output1.csv");
 }
 
@@ -310,7 +310,7 @@ private static void PrintFile(string filename)
 
 ### Overwriting default compare methods
 
- Internally, the lookup stores an object as dictionary key. If the used object for the key overrides GetHashCode and Equals, you can overwrite the default implementation to define your own matching logic.          
+ Internally, the lookup stores an object as dictionary key. If the used object for the key overrides GetHashCode and Equals, you can overwrite the default implementation to define your own matching logic.
 
  {{< alert text="We recommend to overwrite the Key Function (GetInputRecordKeyFunc/GetSourceRecordKeyFunc) as described in the previous example instead!" >}}
 
@@ -382,9 +382,9 @@ public void OverwritingComparisonInObject()
 
 ### BatchedRowTransformation
 
-You can also utilize the RowTransformation or the BatchRowTransformation to enrich your data with custom code. 
-Below an example for the BatchRowTransformation. 
-We used the BatchTransformation so that we can execute one sql statement for a set of data - 100 in this example. If we would execute the statement for every row, the lookup could become very slow (depending on your database connection speed). 
+You can also utilize the RowTransformation or the BatchRowTransformation to enrich your data with custom code.
+Below an example for the BatchRowTransformation.
+We used the BatchTransformation so that we can execute one sql statement for a set of data - 100 in this example. If we would execute the statement for every row, the lookup could become very slow (depending on your database connection speed).
 
 ```C#
 public class Order
@@ -437,9 +437,9 @@ foreach (var result in dest.Data)
     Console.WriteLine($"Customer {result.CustomerName} has id {result.CustomerId}");
 ```
 
-### MergeJoin 
+### MergeJoin
 
-Instead of using the lookup, a MergeJoin could also be used to enrich data from two tables or other data sources. 
+Instead of using the lookup, a MergeJoin could also be used to enrich data from two tables or other data sources.
 
 {{< alert text="The MergeJoin works best when the input data from both sorted is already sorted by the joining key!" >}}
 

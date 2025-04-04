@@ -1,5 +1,5 @@
 ---
-title: "Memory destination"
+title: "Memory Destination"
 description: "Examples and code recipes for the MemoryDestination component."
 lead: "This article contains example code that shows the usage of the MemoryDestination component."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "Destinations"
-weight: 2102
+weight: 47
 toc: true
 ---
 

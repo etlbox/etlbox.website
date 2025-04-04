@@ -1,5 +1,5 @@
 ---
-title: "Row transformation"
+title: "Row Transformation"
 description: "Examples and code recipes for the RowTransformation component."
 lead: "This article contains example code that shows the usage of the RowTransformation component."
 draft: false
@@ -13,7 +13,7 @@ toc: true
 
 ## Basic usage
 
-The row transformation is the Swiss army knife for any type of data transformation that you would like to apply to every row of your data. The `TransformationFunc` allows you to execute any code C# for every row in your data pipeline. 
+The row transformation is the Swiss army knife for any type of data transformation that you would like to apply to every row of your data. The `TransformationFunc` allows you to execute any code C# for every row in your data pipeline.
 
 ```C#
 public class MyRow
@@ -49,9 +49,9 @@ public void BasicExample() {
 }
 ```
 
-## Converting data types 
+## Converting data types
 
-The `RowTransformation` can not only used to apply custom C# code, it can also be used to convert the data type of your incoming data into a different output type. 
+The `RowTransformation` can not only used to apply custom C# code, it can also be used to convert the data type of your incoming data into a different output type.
 
 ```C#
 public class MyArray

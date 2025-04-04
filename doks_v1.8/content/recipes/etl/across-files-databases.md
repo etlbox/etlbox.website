@@ -1,13 +1,13 @@
 ---
-title: "From files to databases"
+title: "From Files to Databases"
 description: "Example: From files and databases"
 lead: "Sometimes you are in need to transfer data across databases on different server or to integrate flat files. ETLBox is an excellent tool of choice for integrating data from different sources. This example will guide you through the most common scenarios. "
 draft: false
 images: []
 menu:
   recipes:
-    parent: "data-integration"
-weight: 2110
+    parent: "etl"
+weight: 10
 toc: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Unit testing"
+title: "Unit Testing"
 description: "This example shows how unit tests could be constructed for data flow."
 lead: "This recipe demonstrate how unit tests could be written to test data flows. The described approaches should only be considered as a starting point - there are a lot of different possibilities to write unit tests for ETLBox - as the library is written in .NET, all test framework and other test packages are fully supported."
 draft: false
@@ -158,16 +158,16 @@ namespace ETLBox.DataFlowTests.ReplacingSourceAndDestinationExample
             var dbSource = new DbSource<DataTransferObject>();
                 dbSource.TableName = "SourceTable";
             Source = dbSource;
-            
+
             var dbDest = new DbDestination<DataTransferObject>();
             dbDest.TableName = "DestTable";
             Destination = dbDest;
 
             var trans = new RowTransformation<DataTransferObject>();
             trans.TransformationFunc = ChangeRow;
-            Transformation = trans;           
+            Transformation = trans;
 
-            
+
         }
 
         private DataTransferObject ChangeRow(DataTransferObject dto) {
@@ -210,7 +210,7 @@ namespace ETLBoxTests.DataFlow
                 new DataTransferObject() { Id = 2, Value = "Test2" },
                 new DataTransferObject() { Id = 3, Value = "Test3" }
             };
-            
+
 
             //Setting up moq source
             var moqSource = new Mock<IDataFlowExecutableSource<DataTransferObject>>();
@@ -262,16 +262,16 @@ namespace ETLBox.DataFlowTests.MoqDemo
             var dbSource = new DbSource<DataTransferObject>();
                 dbSource.TableName = "SourceTable";
             Source = dbSource;
-            
+
             var dbDest = new DbDestination<DataTransferObject>();
             dbDest.TableName = "DestTable";
             Destination = dbDest;
 
             var trans = new RowTransformation<DataTransferObject>();
             trans.TransformationFunc = ChangeRow;
-            Transformation = trans;           
+            Transformation = trans;
 
-            
+
         }
 
         private DataTransferObject ChangeRow(DataTransferObject dto) {
@@ -302,6 +302,6 @@ namespace ETLBox.DataFlowTests.MoqDemo
 
 ## Recommended supporting libraries
 
-- {{< link-ext url="https://github.com/moq/moq4" text="moq - The most popular and friendly mocking library for .NET" >}}. All dataflow compoments implement different interface which can be used for mocking objects. 
+- {{< link-ext url="https://github.com/moq/moq4" text="moq - The most popular and friendly mocking library for .NET" >}}. All dataflow compoments implement different interface which can be used for mocking objects.
 - {{< link-ext url="https://fluentassertions.com/" text="Fluent assertions" >}}. A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style unit tests.
 - {{< link-ext url="https://github.com/WireMock-Net/WireMock.Net" text="Wiremock.NET" >}}. A C# .NET version based on mock4net which mimics the functionality from the Java based Wiremock.org

@@ -1,5 +1,5 @@
 ---
-title: "Filter transformation"
+title: "Filter Transformation"
 description: "Examples and code recipes for the FilterTransformation component."
 lead: "This article contains example code that shows the usage of the FilterTransformation component."
 draft: false

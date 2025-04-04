@@ -1,8 +1,8 @@
 ---
-title: "Destinations"
-description: "Examples and recipes for all data flow destinations of ETLBox."
+title: "Destination Patterns"
+description: "This category includes targeted examples showing how to configure and use various destinations in ETLBox, covering file-based, database, and other data endpoints in isolation."
 lead: ""
 draft: false
-weight: 18
 images: []
+weight: 47
 ---

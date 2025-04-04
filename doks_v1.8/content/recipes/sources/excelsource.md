@@ -1,5 +1,5 @@
 ---
-title: "Excel source"
+title: "Excel Source"
 description: "Examples and code recipes for the ExcelSource component."
 lead: "This article contains example code that shows the usage of the ExcelSource component."
 draft: false
@@ -7,11 +7,11 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 
-The Excel source comes in handy when loading data from excel files. 
+The Excel source comes in handy when loading data from excel files.
 
 ## Read excel file with same column names
 
@@ -23,7 +23,7 @@ ColumnA|ColumnB|ColumnB|ColumnC
 2|B|Y|Test
 3|C|Z|Test
 
-Please note that `ColumnB` exists twice as header name. So we need to configure the ExcelColumn in the ExcelSource to avoid getting an exception when reading the data. 
+Please note that `ColumnB` exists twice as header name. So we need to configure the ExcelColumn in the ExcelSource to avoid getting an exception when reading the data.
 
 ### With POCO
 

@@ -1,5 +1,5 @@
 ---
-title: "Pivot data"
+title: "Pivot Data"
 description: "Example: pivot data from a csv file"
 lead: "This example shows how to pivot and unpivot data in a csv file."
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   recipes:
     parent: "etl"
-weight: 2220
+weight: 10
 toc: true
 ---
 

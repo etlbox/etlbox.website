@@ -1,5 +1,5 @@
 ---
-title: "Custom batch source"
+title: "Custom Batch Source"
 description: "Examples and code recipes for the CustomBatchSource component."
 lead: "This article contains example code that shows the usage of the CustomBatchSource component."
 draft: false
@@ -7,13 +7,13 @@ images: []
 menu:
   recipes:
     parent: "Sources"
-weight: 2101
+weight: 45
 toc: true
 ---
 
 If you need to create your source data not as single rows, but rather in batches of data, you can use the CustomBatchSource. For row by row creation use the [CustomSource](../custom-source) instead.
 
-## Example with strongly typed objects 
+## Example with strongly typed objects
 
 ```C#
 public class MyRow

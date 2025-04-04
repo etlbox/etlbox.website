@@ -1,5 +1,5 @@
 ---
-title: "Merge join transformation"
+title: "Merge Join Transformation"
 description: "Examples and code recipes for the MergeJoin component."
 lead: "This article contains example code that shows the usage of the MergeJoin component."
 draft: false
@@ -11,9 +11,9 @@ weight: 2088
 toc: true
 ---
 
-## Always join 
+## Always join
 
-This example shows how a MergeJoin can be used to always join records from both inputs. 
+This example shows how a MergeJoin can be used to always join records from both inputs.
 
 ```C#
 public class MyLeftRow
@@ -58,7 +58,7 @@ public void AlwaysJoinExample() {
 
     //Outputs
     //Elvis Presley
-    //Marilyn Monroe         
+    //Marilyn Monroe
 }
 ```
 

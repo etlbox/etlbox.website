@@ -1,5 +1,5 @@
 ---
-title: "Lookup transformation"
+title: "Lookup Transformation"
 description: "Examples and code recipes for the LookupTransformation component."
 lead: "This article contains example code that shows the usage of the LookupTransformation component."
 draft: false

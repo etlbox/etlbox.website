@@ -6,25 +6,25 @@ draft: false
 images: []
 menu:
   recipes:
-    parent: "data-integration"
-weight: 2110
+    parent: "flat-file-streaming"
+weight: 20
 toc: true
 ---
 
 ## Transforming csv to json
 
-This example demonstrates how to transform a csv into a json with only  a few lines of code. 
+This example demonstrates how to transform a csv into a json with only  a few lines of code.
 
-### CsvSource 
+### CsvSource
 
-Let's start with a simple example how to create a flat file source. In this scenario we are using the CsvSource. 
+Let's start with a simple example how to create a flat file source. In this scenario we are using the CsvSource.
 
 ```C#
 CsvSource<CsvType> source = new CsvSource<CsvType>("//share/demo.csv");
 ```
 
-As for the CsvSource, the `ResourceType` is `ResourceType.File` by default. It will read data from the path `//share/demo.cvs`. 
-By default, the CsvSource will try to use the header columns of the file to propagate the data into the right properties of the CsvType object. 
+As for the CsvSource, the `ResourceType` is `ResourceType.File` by default. It will read data from the path `//share/demo.cvs`.
+By default, the CsvSource will try to use the header columns of the file to propagate the data into the right properties of the CsvType object.
 
 If you need to read a csv file from a webservice, your code would look like this:
 
@@ -35,7 +35,7 @@ source.ResourceType = ResourceType.Http;
 
 {{< alert text="All streaming connectors (Json,Xml,Csv,Text,Excel,..) allow you to either read data from a file <b>or</b> from a web endpoint." >}}
 
-### Reading the csv file data 
+### Reading the csv file data
 
 Let's assume your csv would look like this:
 
@@ -45,7 +45,7 @@ Id;Value
 2;Test2
 ```
 
-Then this should be your CsvType class: 
+Then this should be your CsvType class:
 
 ```C#
 public class CsvType {

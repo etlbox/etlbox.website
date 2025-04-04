@@ -1,5 +1,5 @@
 ---
-title: "Block transformation"
+title: "Block Transformation"
 description: "Examples and code recipes for the BlockTransformation"
 lead: "This article contains example code that shows the usage of the BlockTransformation."
 draft: false
@@ -13,7 +13,7 @@ toc: true
 
 ## Average calculation
 
-This example uses the BlockTransformation to collect all orders from the source and then to calculate the average for each weekday. 
+This example uses the BlockTransformation to collect all orders from the source and then to calculate the average for each weekday.
 
 ```C#
 public class Order
@@ -72,7 +72,7 @@ foreach (var row in dest.Data)
 
 ## Sorting input data
 
-This example will wait for all input data to arrive, sort it and the return the sorted data into the flow. This example uses the dynamic ExpandoObject approach.  
+This example will wait for all input data to arrive, sort it and the return the sorted data into the flow. This example uses the dynamic ExpandoObject approach.
 
 ```C#
 var source = new MemorySource();
@@ -106,7 +106,7 @@ The blocking transformation will wait for all records to arrive, and then will r
 
 ```C#
 var source = new MemorySource();
-dynamic row1 = new ExpandoObject(); 
+dynamic row1 = new ExpandoObject();
 row1.Id = 1; row1.Value1 = "A"; row1.Value2 = null; row1.Value3 = null;
 source.DataAsList.Add(row1);
 dynamic row2 = new ExpandoObject();

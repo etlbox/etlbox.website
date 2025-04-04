@@ -1,5 +1,5 @@
 ---
-title: "Memory consumption"
+title: "Memory Consumption"
 description: "This recipe show a small command line utility that loads test data and allows to observer the memory consumption while loading this data."
 lead: "This sample application demonstrates the key database operations, including creating database tables, loading data, synchronizing data between tables, and prints out the current memory consumptions. The application listens for user commands to execute the specific ETL tasks. While the operations are performed, you can utilize the Resource Monitor to observer the current Memory Consumption of the process (and other metrics if needed.)"
 draft: false
@@ -16,13 +16,13 @@ The application should be directly run as a console application. Once started, i
 
 ### Setting up the environment
 
-Before diving into the code, ensure that you have access to a database. 
+Before diving into the code, ensure that you have access to a database.
 This example uses SQL Server, but you adjust the connection manager to work with your database of choice.
-The database name called in the current example connection string is `demo` - so if you are using the example as-is with SqlServer, make sure that this database exists. 
+The database name called in the current example connection string is `demo` - so if you are using the example as-is with SqlServer, make sure that this database exists.
 
 ### User Commands
 
-The user can enter one of the following commands: 
+The user can enter one of the following commands:
 
 - `create`: Initiates the creation of source and destination tables in the database.
 - `load`: Loads 100 000 sample data records into the source table.
@@ -35,14 +35,14 @@ The user can enter one of the following commands:
 
 The `create` command sets up the database environment by creating the necessary tables. It will create two tables: `SourceTable` and `TargetTable`.
 The `load` command showcases dynamic data generation and bulk insertion using MemorySource and DbDestination.
-Use these two commands to setup your test data as required. 
-Feel free to modify your test data if needed. 
+Use these two commands to setup your test data as required.
+Feel free to modify your test data if needed.
 
 The `sync` command performs a full load synchronization between the source and target tables. This process runs a full DbMerge, including potential insertions, updates, and deletions.
 
-The `read` command loads data into a memory list. The list is cleared and directly dereferenced after data was loaded into the list. Its purpose it to show the memory overhead of such operation. 
+The `read` command loads data into a memory list. The list is cleared and directly dereferenced after data was loaded into the list. Its purpose it to show the memory overhead of such operation.
 
-Coupled with the `gc` command, the application tries to give insight into the memory consumption of ETLBox within .NET applications. 
+Coupled with the `gc` command, the application tries to give insight into the memory consumption of ETLBox within .NET applications.
 
 {{< alert text="Please note that the printed out memory consumption only shows the memory consumption for the Heap, which is managed by the .NET garbage collection" >}}
 

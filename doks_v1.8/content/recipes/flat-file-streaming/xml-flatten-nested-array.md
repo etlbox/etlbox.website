@@ -1,13 +1,13 @@
 ---
-title: "Flatten nested array in xml"
+title: "Flatten Nested Array in Xml"
 description: "Example: flatten nested array in a xml file"
 lead: "This example shows how to denormalize a nested data array within a xml structure."
 draft: false
 images: []
 menu:
   recipes:
-    parent: "data-integration"
-weight: 2110
+    parent: "flat-file-streaming"
+weight: 20
 toc: true
 ---
 
