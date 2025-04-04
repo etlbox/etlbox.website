@@ -453,6 +453,4 @@ In our example, we built a small ETL pipeline to process a CSV file, perform dat
   {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
 {{< /series >}}
 
-{{< discount_mail_start >}}
-{{< discount_mail_form >}}
-{{< discount_mail_end >}}
+{{< discount_mail >}}
