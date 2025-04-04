@@ -1,5 +1,4 @@
 ---
-chatgpt-review: true
 title: "Distinct"
 description: "Examples and Code Recipes for the Distinct Component."
 lead: "This article contains example code snippets that show how to use the Distinct component."
