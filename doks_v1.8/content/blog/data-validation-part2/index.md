@@ -444,4 +444,6 @@ So far, we've enhanced error logging and integrated the SCD Type 2 methodology. 
   {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" >}}
 {{< /series >}}
 
-{{< discount_mail >}}
+{{< discount_mail_start >}}
+{{< discount_mail_form >}}
+{{< discount_mail_end >}}

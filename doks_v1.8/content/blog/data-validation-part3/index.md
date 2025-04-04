@@ -542,4 +542,7 @@ To sum it all up, the series spotlighted ETLBox as a formidable ETL tool for the
   {{< series_item index="3" title="Redefining ETL: Data Flows Powered by C# (Part&nbsp;III)" link="../data-validation-part3/" active="true" >}}
 {{< /series >}}
 
-{{< discount_mail >}}
+{{< discount_mail_start >}}
+{{< discount_mail_form >}}
+{{< discount_mail_end >}}
+
