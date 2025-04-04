@@ -3,11 +3,13 @@ title: "Customer Rating Demo"
 description: "Example: Rating orders"
 lead: "This example demonstrates how the different data flow components can be used together, simulating a real-life scenario.  In this scenario, we will to read some orders from a csv file, lookup the customer key by using the customer name, write the orders into an orders table  and also create a customer rating based on the total amount of purchases."
 draft: false
+images: []
 menu:
   recipes:
     parent: "fundamentals"
 weight: 1
 toc: true
+chatgpt-review: true
 ---
 
 
