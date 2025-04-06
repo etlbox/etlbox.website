@@ -122,7 +122,7 @@ This reads the CSV file and outputs each row as a `MyRow` object.
 We'll convert the CSV data into an Order object and calculate the total quantity:
 The output format of the `CsvSource` is an instance of  `MyRow`.
 
-### Step 2: Apply a Transformation
+#### Step 2: Apply a Transformation
 
 We'll convert the CSV data into an Order object and calculate the total quantity:
 
