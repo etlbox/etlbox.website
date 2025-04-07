@@ -20,7 +20,7 @@ Before you get started, make sure your environment meets the following requireme
 - Recommended IDEs: {{< link-ext url="https://visualstudio.microsoft.com/" text="Visual Studio 2022" >}}, {{< link-ext url="https://code.visualstudio.com/" text="Visual Studio Code" >}}, or {{< link-ext url="https://www.jetbrains.com/rider/" text="JetBrains Rider" >}}
 - Basic knowledge of {{< link-ext url="https://dotnet.microsoft.com/en-us/learn/csharp" text="C#" >}} and working with NuGet packages
 
-## Step 1: Install ETLBox.DbExtensions via NuGet
+## Install via NuGet
 
 Add the following packages to your project:
 
@@ -29,7 +29,7 @@ Add the following packages to your project:
 
 {{< tabs "nuget-options" >}}
 {{< tab "dotnet CLI" >}}
-```bash
+```cmd
 dotnet add package ETLBox.DbExtensions
 dotnet add package ETLBox.SqlServer
 ```
@@ -40,30 +40,31 @@ PM> NuGet\Install-Package ETLBox.DbExtensions
 PM> NuGet\Install-Package ETLBox.SqlServer
 ```
 {{< smallnote >}}
-Run this in the Package Manager Console inside Visual Studio.
+This command is intended to be used within the Package Manager Console in Visual Studio, as it uses the NuGet module's version of {{< link-ext url="https://docs.microsoft.com/nuget/reference/ps-reference/ps-ref-install-package" text="Install-Package" >}}.
 {{< /smallnote >}}
 {{< /tab >}}
 {{< tab "PackageReference" >}}
 ```xml
-<PackageReference Include="ETLBox.DbExtensions" Version="3.7.0" />
-<PackageReference Include="ETLBox.SqlServer" Version="3.7.0" />
+<PackageReference Include="ETLBox.DbExtensions" Version="latest" />
+<PackageReference Include="ETLBox.SqlServer" Version="latest" />
 ```
 {{< smallnote >}}
-Add these to your project file if you’re using `PackageReference`.
+For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files" text="PackageReference" >}}, copy this XML node into the project file to reference the package.
 {{< /smallnote >}}
 {{< /tab >}}
 {{< tab "Script and Interactive" >}}
-```csharp
-#r "nuget: ETLBox.DbExtensions, 3.7.0"
-#r "nuget: ETLBox.SqlServer, 3.7.0"
+```cmd
+> #r "nuget: ETLBox.DbExtensions, latest"
+> #r "nuget: ETLBox.SqlServer, latest"
 ```
 {{< smallnote >}}
-Useful in notebooks or scripts using C# Interactive.
+#r directive can be used in F# Interactive and Polyglot Notebooks. Copy this into the interactive tool or source code of the script to reference the package.
 {{< /smallnote >}}
 {{< /tab >}}
 {{< /tabs >}}
 
-## Step 2: Add ETLBox.DbExtensions to Your Code
+
+## Add to Your Code
 
 Add the necessary `using` directives:
 
@@ -71,15 +72,25 @@ Add the necessary `using` directives:
 using ETLBox.DbExtensions;
 using System.Data.SqlClient;
 ```
+> **Note**: For this example to work, you must also reference the ETLBox.SqlServer NuGet package.
 
-## Step 3: Run a Simple Test
+## Run a Simple Test
 
-This snippet inserts 10,000 rows into a database using a standard `IDbConnection`:
+Run the following SQL first to prepare your database:
+
+```sql
+CREATE TABLE dbo.Customer (
+    Id INT NOT NULL,
+    Name VARCHAR(100) NULL,
+    City VARCHAR(100) NULL
+)
+```
+This snippet inserts 4,999 rows into the `Customer` table using a standard `IDbConnection`:
 
 ```csharp
 var connection = new SqlConnection("your-connection-string");
 
-var customers = Enumerable.Range(1, 10_000)
+var customers = Enumerable.Range(1, 4_999)
     .Select(i => new Customer { Id = i, Name = $"Customer {i}", City = $"City {i % 50}" });
 
 connection.BulkInsert(customers.ToList());
@@ -93,18 +104,13 @@ public class Customer {
 
 ## Troubleshooting Installation
 
-- **Missing Provider?**
-  Make sure the correct ETLBox.* database provider package is referenced.
-- **Clear NuGet Cache:**
+- **Missing Provider?**: Make sure the correct `ETLBox.*` database provider package is referenced (e.g. `ETLBox.SqlServer`).
+
+- **Clear NuGet Cache:**:
   ```bash
   dotnet nuget locals all --clear
   ```
-- **Need Help?**
-  [Contact our support](/support/options)
 
----
+- **Need Help?**: [Contact our support](/support/options)
 
-### What’s Next?
-
-You're ready to use bulk operations in your app. Head over to the [Quick Start Guide](/docs/bulkinsert) to see more examples.
-```
+- **Example Project:**: See the {{< link-ext text="simple demo on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.SimpleTest" >}} for a working example.
