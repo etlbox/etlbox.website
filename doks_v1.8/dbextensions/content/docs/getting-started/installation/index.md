@@ -93,7 +93,7 @@ var connection = new SqlConnection("your-connection-string");
 var customers = Enumerable.Range(1, 4_999)
     .Select(i => new Customer { Id = i, Name = $"Customer {i}", City = $"City {i % 50}" });
 
-connection.BulkInsert(customers.ToList());
+connection.BulkInsert(customers);
 
 public class Customer {
     public int Id { get; set; }

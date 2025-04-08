@@ -69,12 +69,9 @@
   source = "node_modules/@thulite/inline-svg/layouts"
   target = "layouts"
 
-
-
 [[mounts]]
   source = "layouts"
   target = "layouts"
-
 
 [[mounts]]
   source = "dbextensions/layouts"
