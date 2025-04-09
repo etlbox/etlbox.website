@@ -10,3 +10,5 @@ contributors: []
 pinned: false
 homepage: false
 ---
+
+{{< blog-featured >}}

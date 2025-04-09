@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Animate both counters simultaneously within 3–4 seconds
-    const animationDuration = 1500; // 3.5 seconds
+    const animationDuration = 2500;
 
     animateValue(badgeElement, 0, totalDownloads, animationDuration);
     animateValue(packageElement, 0, packageCount, animationDuration);
