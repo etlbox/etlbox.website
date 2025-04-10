@@ -329,7 +329,54 @@ Bulk selection is optimized for handling large datasets by processing keys in ba
 source.BulkSelectBatchSize = 500;
 ```
 
-This groups queries into batches of 500 keys per request, ensuring efficient execution and avoiding query length limits imposed by some databases.
+### Selecting Specific Columns
+
+When using `BulkSelect`, you can reduce the number of columns retrieved from the database by explicitly marking which properties should be populated using the `[SelectColumn]` attribute. This helps optimize performance and reduce memory usage by excluding unnecessary columns.
+
+#### Example: Using `[SelectColumn]` Attribute
+
+```csharp
+public class MyRow {
+    [IdColumn]
+    public int Id { get; set; }
+
+    [SelectColumn]
+    public string Value { get; set; }
+
+    public DateTime Timestamp { get; set; } // This column will not be selected
+}
+
+var source = new DbSource<MyRow>(conn, "SourceTable") {
+    SelectMode = SelectOperation.BulkSelect,
+    FilterRows = new[] {
+        new MyRow { Id = 1 },
+        new MyRow { Id = 2 }
+    }
+};
+```
+
+In this example, only the `Value` property will be included in the SQL `SELECT` statement. The `Timestamp` property will be ignored during data retrieval.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+If no SelectColumn attributes or SelectColumns are specified, all properties that have a matching column name in the database will be included in the query.
+{{< /callout >}}
+
+#### Programmatic Alternative: Using `SelectColumns` Property
+
+Alternatively, you can define the list of properties to retrieve programmatically using the `SelectColumns` collection. This is useful when working with dynamic objects or when attributes are not available or preferred.
+
+```csharp
+var source = new DbSource<MyRow>(conn, "SourceTable") {
+    SelectMode = SelectOperation.BulkSelect,
+    FilterRows = new[] {
+        new MyRow { Id = 1 },
+        new MyRow { Id = 2 }
+    },
+    SelectColumns = new[] {
+        new SelectColumn { SelectPropertyName = "Value" }
+    }
+};
+```
 
 ## Error Handling
 
