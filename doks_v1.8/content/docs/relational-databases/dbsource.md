@@ -357,8 +357,9 @@ var source = new DbSource<MyRow>(conn, "SourceTable") {
 
 In this example, only the `Value` property will be included in the SQL `SELECT` statement. The `Timestamp` property will be ignored during data retrieval.
 
-{{< callout context="note" icon="outline/info-circle" >}}
-If no SelectColumn attributes or SelectColumns are specified, all properties that have a matching column name in the database will be included in the query.
+{{< callout context="tip" icon="outline/rocket" >}}
+If no `SelectColumn` attributes or `SelectColumns` are specified, all properties that have a matching column name in the database will be
+included in the query. Mappings defined via `[DbColumnMap]` attributes or the `ColumnMapping` property are also respected during bulk selection.
 {{< /callout >}}
 
 #### Programmatic Alternative: Using `SelectColumns` Property
