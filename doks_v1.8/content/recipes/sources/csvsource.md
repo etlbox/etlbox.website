@@ -256,6 +256,50 @@ Received Id: 3, Value1: Test3, Value2: 1.3
 */
 ```
 
+### Convert empty strings to NULL
+
+The following example shows how the CsvSource can be configured to automatically convert empty strings in the csv file into a null value.
+
+```C#
+string sourceFile = @"res/Examples/EmptyColumns.csv";
+PrintInputFile(sourceFile);
+var source = new CsvSource(sourceFile);
+source.CsvContext = c => c.TypeConverterOptionsCache.GetOptions<string>().NullValues.Add("");
+var dest = new MemoryDestination();
+
+source.LinkTo(dest);
+Network.Execute(source);
+
+foreach (IDictionary<string, object> row in dest.Data) {
+    foreach (var column in row) {
+        Console.WriteLine($"{column.Key}: {column.Value ?? "null"}");
+    }
+    Console.WriteLine("");
+}
+
+
+/* Output:
+Content of file 'EmptyColumns.csv'
+---
+Id,Value1,Value2
+1,"",1.1
+2,,
+3,"Test3",
+---
+Id: 1
+Value1: null
+Value2: 1.1
+
+Id: 2
+Value1: null
+Value2: null
+
+Id: 3
+Value1: Test3
+Value2: null
+*/
+```
+
 ## Reading multiple files
 
 You can use the `GetNextUri`/`HasNextUri` pattern (provided on all streaming connectors) to go through a set a files.
