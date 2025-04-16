@@ -1,20 +1,14 @@
 ---
 title: "Bulk Merge"
 description: ""
-lead: ""
+lead: "<code>BulkMerge<T>()</code> performs an upsert operation: it inserts new rows, updates existing ones, and optionally deletes missing rows from the target table. It’s the most powerful operation in the ETLBox.DbExtensions toolkit, suitable for full or delta synchronization of datasets."
 draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
-weight: 60
+    parent: "oeprations"
+weight: 40
 toc: true
----
-
-# BulkMerge
-
-`BulkMerge<T>()` performs an upsert operation: it inserts new rows, updates existing ones, and optionally deletes missing rows from the target table. It’s the most powerful operation in the ETLBox.DbExtensions toolkit, suitable for full or delta synchronization of datasets.
-
 ---
 
 ## Example
@@ -25,23 +19,27 @@ using ETLBox.DbExtensions;
 
 var connection = new SqlConnection("your-connection-string");
 
-var data = Enumerable.Range(5_000, 10_000)
-    .Select(i => new Customer {
-        Id = i,
-        Name = $"Customer {i}",
-        City = $"City {i % 50}"
-    });
+var customers = Enumerable.Range(1, 1_500)
+    .Select(i => new Customer { Id = i, Name = $"Update Customer {i}", City = $"City {i % 50}" })
+    .Union(
+        Enumerable.Range(3_000, 1500)
+        .Select(i => new Customer { Id = i, Name = $"New Customer {i}", City = $"City {i % 50}" })
+    );
 
-connection.BulkMerge(data.ToList());
+connection.BulkMerge(customers);
 
-public class Customer {
+public class Customer : IMergeableRow {
+    [IdColumn]
     public int Id { get; set; }
     public string Name { get; set; }
     public string City { get; set; }
+
+    [DbColumnDefinition(Ignore = true)]
+    public DateTime ChangeDate { get; set; }
+    [DbColumnDefinition(Ignore = true)]
+    public ChangeAction? ChangeAction { get; set; }
 }
 ```
-
----
 
 ## Method Signatures
 
@@ -57,57 +55,64 @@ IDbConnection BulkMerge<T>(
     Action<MergeBulkOptions<T>> options
 )
 ```
-
----
-
 ## Merge Modes
 
 - `Full` (default):
-  Inserts new rows, updates existing rows, deletes missing rows.
+  Inserts new rows, updates existing ones, and deletes records from the target table that are missing in your source data.
 
 - `Delta`:
   Inserts and updates only. Deletes only rows marked with `DeleteColumns`.
 
----
+- `InsertsAndUpdates`:
+   Inserts and updates only. No deletions.
 
-## Example with Options
+- `InsertsOnly`:
+   Will only execute inserts.
+
+- `UpdatesOnly`:
+   Will only execute updates.
+
+
+## Customization Options
+
+You can configure the operation using the optional `BulkOptions<T>` parameter:
 
 ```csharp
-connection.BulkMerge(data.ToList(), opt => {
-    opt.IdColumns = new[] { new IdColumn("Id") };
-    opt.CompareColumns = new[] { new CompareColumn("City") };
-    opt.UpdateColumns = new[] { new UpdateColumn("City") };
-    opt.MergeMode = MergeMode.Full;
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(1, 1_500)
+   .Select(i => new Customer { Id = i, Name = $"Options Customer {i}", City = $"New City {i % 50}" })
+   .Union(
+       Enumerable.Range(5_000, 500)
+       .Select(i => new Customer { Id = i, Name = $"New Customer {i}", City = $"New City {i % 50}" })
+   );
+
+connection.BulkMerge(customers, options => {
+    options.ReadGeneratedValues = true;
+    options.CompareColumns = new[] { new CompareColumn() { ComparePropertyName = "City" } };
+    options.UpdateColumns = new[] { new UpdateColumn() { UpdatePropertyName = "City" } };
+    options.MergeMode = MergeMode.Delta;
 });
 ```
 
----
+For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
-## Available Options
+## Table Naming Convention
 
-- `IdColumns` – Required to identify records
-- `CompareColumns` – Used to decide whether a row should be updated
-- `UpdateColumns` – Limit updates to specific fields
-- `DeleteColumns` – Used only in `Delta` mode for conditional deletion
-- `CompareFunc` – Custom comparison logic
-- `MergeMode` – Full or Delta
-- `CacheMode` – Full or Partial (controls memory vs performance)
-- `MaxCacheSize`, `EvictionPolicy` – Fine-tune merge performance
-- `BatchSize`, `AllowIdentityInsert`, `ColumnMapping`, etc. – standard options
+By default, the table name is inferred from the class name. For example:
 
----
+```csharp
+public class Customer { ... }
+```
 
-## When to Use
+This maps to either Customer or Customers.
 
-- Data synchronization from external sources
-- Staging-to-final table operations
-- Complex upsert scenarios
+You can override the name using `TableName`, or adjust it with `TablePrefix` and `TableSuffix` inside [BulkOptions](/docs/operations/bulk-options).
 
----
+## Example Code on GitHub
 
-## Related Topics
+You can find both examples — basic usage and usage with options — in the official demo project on GitHub:
 
-- [BulkInsert](/docs/bulkinsert)
-- [BulkUpdate](/docs/bulkupdate)
-- [BulkDelete](/docs/bulkdelete)
-- [Overview](/docs/overview)
+- {{< link-ext text="BulkInsert example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkMerge" >}}
+
+The demo is ready to run and shows how to configure the connection, create the table, and execute bulk operations with real data.

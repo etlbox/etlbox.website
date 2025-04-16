@@ -1,20 +1,14 @@
 ---
 title: "Bulk Insert"
-description: ""
-lead: ""
+description: "Learn how to use BulkInsert<T>() to efficiently insert large volumes of data into your database using ETLBox.DbExtensions. This article covers the basic usage, customization options, and table naming behavior."
+lead: "<code>BulkInsert<T>()</code> lets you efficiently insert large amounts of data into your database using native bulk loaders under the hood. It works directly on any <code>IDbConnection</code> and supports advanced options such as identity insert, batch size control, and column mapping."
 draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
-weight: 30
+    parent: "operations"
+weight: 10
 toc: true
----
-
-# BulkInsert
-
-`BulkInsert<T>()` lets you efficiently insert large amounts of data into your database using native bulk loaders under the hood. It works directly on any `IDbConnection` and supports advanced options such as identity insert, batch size control, and column mapping.
-
 ---
 
 ## Example
@@ -41,8 +35,6 @@ public class Customer {
 }
 ```
 
----
-
 ## Method Signatures
 
 ```csharp
@@ -58,30 +50,28 @@ IDbConnection BulkInsert<T>(
 )
 ```
 
----
-
 ## Customization Options
 
 You can configure the operation using the optional `BulkOptions<T>` parameter:
 
 ```csharp
-connection.BulkInsert(data.ToList(), opt => {
-    opt.BatchSize = 5000;
-    opt.AllowIdentityInsert = true;
-    opt.TableName = "MyCustomTable";
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(1, 4_999)
+    .Select(i => new Customer { Id = i, Name = $"Customer {i}", City = $"City {i % 50}" });
+
+connection.BulkInsert(customers, options => {
+    options.BatchSize = 500;
+    options.TablePrefix = "dim";
+    options.ReadGeneratedValues = true;
+    options.OnProgress = progress => {
+        if (progress % 1000 == 0)
+            Console.WriteLine($"Inserted {progress} rows.");
+    };
 });
 ```
 
-Available options include:
-
-- `BatchSize` – Number of rows per batch
-- `AllowIdentityInsert` – Enables inserting values into identity/auto-increment columns
-- `TableName`, `TablePrefix`, `TableSuffix` – Override or modify table naming
-- `ColumnMapping` – Map or ignore specific properties
-- `ColumnConverters` – Add custom value conversion
-- `OnProgress` – Callback after each batch
-
----
+For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
 ## Table Naming Convention
 
@@ -91,23 +81,16 @@ By default, the table name is inferred from the class name. For example:
 public class Customer { ... }
 ```
 
-...will target a table named `Customer` or `Customers`.
 
-Use `TableName`, `TablePrefix`, or `TableSuffix` in `BulkOptions` to override this behavior.
+This maps to either Customer or Customers.
 
----
+You can override the name using `TableName`, or adjust it with `TablePrefix` and `TableSuffix` inside [BulkOptions](/docs/operations/bulk-options).
 
-## Requirements
 
-- Your target table must exist in the database
-- Column names must match property names (unless mapped explicitly)
-- You must reference the correct ETLBox.* database provider for your DBMS
+## Example Code on GitHub
 
----
+You can find both examples — basic usage and usage with options — in the official demo project on GitHub:
 
-## Related Topics
+- {{< link-ext text="BulkInsert example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkInsert" >}}
 
-- [BulkUpdate](/docs/bulkupdate)
-- [BulkDelete](/docs/bulkdelete)
-- [BulkMerge](/docs/bulkmerge)
-- [Overview](/docs/overview)
+The demo is ready to run and shows how to configure the connection, create the table, and execute bulk operations with real data.

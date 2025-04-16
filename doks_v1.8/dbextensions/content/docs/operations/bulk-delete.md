@@ -1,20 +1,14 @@
 ---
 title: "Bulk Delete"
-description: ""
-lead: ""
+description: "Use `BulkDelete<T>()` to efficiently remove multiple records from your database in a single call. This article explains how to configure delete operations and customize behavior with options."
+lead: "<code>BulkDelete<T>()</code> removes multiple records from your database in a single operation. Rows are matched based on one or more ID columns, making it ideal for batch deletions without writing complex SQL."
 draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
-weight: 50
+    parent: "operations"
+weight: 30
 toc: true
----
-
-# BulkDelete
-
-`BulkDelete<T>()` removes multiple records from your database in a single operation. Rows are matched based on one or more ID columns, making it ideal for batch deletions without writing complex SQL.
-
 ---
 
 ## Example
@@ -25,17 +19,22 @@ using ETLBox.DbExtensions;
 
 var connection = new SqlConnection("your-connection-string");
 
-var data = Enumerable.Range(1, 10_000)
-    .Select(i => new Customer { Id = i });
+var customers = Enumerable.Range(1000, 1000)
+    .Select(i => new Customer { Id = i })
+    .Union(
+        Enumerable.Range(3000, 1500)
+        .Select(i => new Customer { Id = i })
+    );
 
-connection.BulkDelete(data.ToList());
+connection.BulkDelete(customers);
 
 public class Customer {
+    [IdColumn]
     public int Id { get; set; }
+    public string Name { get; set; }
+    public string City { get; set; }
 }
 ```
-
----
 
 ## Method Signatures
 
@@ -52,46 +51,44 @@ IDbConnection BulkDelete<T>(
 )
 ```
 
----
-
 ## Customization Options
 
+You can configure the operation using the optional `BulkOptions<T>` parameter:
+
 ```csharp
-connection.BulkDelete(data.ToList(), opt => {
-    opt.IdColumns = new[] { new IdColumn("Id") };
-    opt.BatchSize = 5000;
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(2_000, 500)
+    .Select(i => new Customer { Name = $"Customer {i}" });
+
+connection.BulkDelete(customers, options => {
+    options.BatchSize = 50;
+    options.IdColumns = new[] { new IdColumn() { IdPropertyName = "Name" } };
+    options.BeforeBatchWrite = (batch) => {
+        Console.WriteLine($"Before batch with {batch.Length} rows.");
+        return batch;
+    };
 });
 ```
 
-Available options:
+For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
-- `IdColumns` – Columns used to match rows for deletion (default: `Id`)
-- `BatchSize` – Number of rows per batch
-- `ColumnMapping` – Use if property names differ from column names
-- `OnProgress` – Callback after each batch
-- `RedirectErroneousBatches` – Skip faulty batches and collect errors
+## Table Naming Convention
 
----
+By default, the table name is inferred from the class name. For example:
 
-## Table Requirements
+```csharp
+public class Customer { ... }
+```
 
-- The target table must exist
-- Records must have a unique ID column (or columns) for matching
-- Only ID fields are required in your input object
+This maps to either Customer or Customers.
 
----
+You can override the name using `TableName`, or adjust it with `TablePrefix` and `TableSuffix` inside [BulkOptions](/docs/operations/bulk-options).
 
-## When to Use
+## Example Code on GitHub
 
-- Cleaning up old or processed records
-- Removing test data or imports
-- Deleting stale entries in bulk
+You can find both examples — basic usage and usage with options — in the official demo project on GitHub:
 
----
+- {{< link-ext text="BulkInsert example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkDelete" >}}
 
-## Related Topics
-
-- [BulkInsert](/docs/bulkinsert)
-- [BulkUpdate](/docs/bulkupdate)
-- [BulkMerge](/docs/bulkmerge)
-- [Overview](/docs/overview)
+The demo is ready to run and shows how to configure the connection, create the table, and execute bulk operations with real data.

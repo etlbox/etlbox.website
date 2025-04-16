@@ -1,7 +1,7 @@
 ---
 title: "Installation and Setup"
 description: ""
-lead: "ETLBox.DbExtensions makes it easy to add high-performance bulk operations to any ADO.NET or Dapper-based application. With just one NuGet package and a few lines of code, you can insert, update, delete, or merge thousands of rows—fast and reliably."
+lead: "Get started with <b>ETLBox.DbExtensions</b> in just a few minutes. This guide walks you through the installation via NuGet, setting up the required database provider, and running your first bulk operation."
 draft: false
 images: []
 menu:
@@ -72,7 +72,6 @@ Add the necessary `using` directives:
 using ETLBox.DbExtensions;
 using System.Data.SqlClient;
 ```
-> **Note**: For this example to work, you must also reference the ETLBox.SqlServer NuGet package.
 
 ## Run a Simple Test
 

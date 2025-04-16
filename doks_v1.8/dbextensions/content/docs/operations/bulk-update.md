@@ -1,20 +1,14 @@
 ---
 title: "Bulk Update"
-description: ""
-lead: ""
+description: "Learn how to update thousands of rows efficiently using `BulkUpdate<T>()` with ETLBox.DbExtensions. This article covers basic usage and customization options."
+lead: "<code>BulkUpdate<T>()</code> updates multiple records in your database in a single, efficient operation. It matches rows based on one or more ID columns and updates the specified fields. Ideal for high-volume updates with minimal database round-trips."
 draft: false
 images: []
 menu:
   docs:
-    parent: "getting-started"
-weight: 40
+    parent: "operations"
+weight: 20
 toc: true
----
-
-# BulkUpdate
-
-`BulkUpdate<T>()` updates multiple records in your database in a single, efficient operation. It matches rows based on one or more ID columns and updates the specified fields. Ideal for high-volume updates with minimal database round-trips.
-
 ---
 
 ## Example
@@ -25,14 +19,14 @@ using ETLBox.DbExtensions;
 
 var connection = new SqlConnection("your-connection-string");
 
-var data = Enumerable.Range(1, 10_000)
+var customers = Enumerable.Range(1, 2_500)
     .Select(i => new Customer {
         Id = i,
-        Name = $"Updated Customer {i}",
-        City = $"Updated City {i % 50}"
+        Name = $"Updated {i}",
+        City = $"City {i % 25}"
     });
 
-connection.BulkUpdate(data.ToList());
+connection.BulkUpdate(customers);
 
 public class Customer {
     public int Id { get; set; }
@@ -40,8 +34,6 @@ public class Customer {
     public string City { get; set; }
 }
 ```
-
----
 
 ## Method Signatures
 
@@ -58,51 +50,46 @@ IDbConnection BulkUpdate<T>(
 )
 ```
 
----
-
 ## Customization Options
 
-Configure the operation using `BulkOptions<T>`:
+You can configure the operation using the optional `BulkOptions<T>` parameter:
 
 ```csharp
-connection.BulkUpdate(data.ToList(), opt => {
-    opt.IdColumns = new[] { new IdColumn("Id") };
-    opt.UpdateColumns = new[] { new UpdateColumn("City") };
-    opt.BatchSize = 5000;
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(2_000, 4_500)
+    .Select(i => new Customer { Id = i, Name = $"Options update {i}", City = $"My City {i % 25}" });
+
+connection.BulkUpdate(customers, options => {
+    options.BatchSize = 500;
+    options.UpdateColumns = new[] { new UpdateColumn() { UpdatePropertyName = "Name" } };
+    options.BeforeBatchWrite = (batch) => {
+        Console.WriteLine($"Before batch with {batch.Length} rows.");
+        return batch;
+    };
 });
 ```
 
-Available options include:
+For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
-- `IdColumns` – Specify which columns identify a row (default: `Id`)
-- `UpdateColumns` – Limit which columns are updated
-- `BatchSize` – Control the size of each update batch
-- `ColumnMapping` – Rename or ignore properties
-- `ColumnConverters` – Modify values before update
-- `OnProgress` – Callback after each batch
+## Table Naming Convention
 
----
+By default, the table name is inferred from the class name. For example:
 
-## Table Requirements
+```csharp
+public class Customer { ... }
+```
 
-- The target table must exist in the database
-- The table must have a unique identifier column (e.g., `Id`)
-- Column names must match property names unless mapped
+This maps to either Customer or Customers.
 
----
+You can override the name using `TableName`, or adjust it with `TablePrefix` and `TableSuffix` inside [BulkOptions](/docs/operations/bulk-options).
 
-## Best Practices
+## Example Code on GitHub
 
-- Keep `UpdateColumns` minimal for faster execution
-- Use indexing on `IdColumns` for best performance
-- Validate mappings when using custom column names
+You can find both examples — basic usage and usage with options — in the official demo project on GitHub:
 
----
+- {{< link-ext text="BulkInsert example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkUpdate" >}}
 
-## Related Topics
+The demo is ready to run and shows how to configure the connection, create the table, and execute bulk operations with real data.
 
-- [BulkInsert](/docs/bulkinsert)
-- [BulkDelete](/docs/bulkdelete)
-- [BulkMerge](/docs/bulkmerge)
-- [Overview](/docs/overview)
 

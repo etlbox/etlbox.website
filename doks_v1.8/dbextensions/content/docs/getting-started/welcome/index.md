@@ -15,23 +15,23 @@ toc: true
 
 Whether you're working with raw `IDbConnection` or using Dapper, you can now perform bulk inserts, updates, deletes, and merges with just one line of code.
 
-**Bulk operations for ADO.NET**: Insert, update, delete, or merge thousands of records with a single method call.
+- **Bulk operations for ADO.NET**: Insert, update, delete, or merge thousands of records with a single method call.
 
-**Built for Dapper**: Designed to integrate naturally into your existing Dapper setup.
+- **Built for Dapper**: Designed to integrate naturally into your existing Dapper setup.
 
-**Minimal setup**: No configuration. Just install the NuGet package and start coding.
+- **Minimal setup**: No configuration. Just install the NuGet package and start coding.
 
 ## Supported Operations
 
 ![Bulk operations with ETLBox.DbExtensions](overview.png)
 
-- `BulkInsert<T>()`: Insert large sets of data efficiently using database-native bulk loaders.
+`BulkInsert<T>()`: Insert large sets of data efficiently using database-native bulk loaders.
 
-- `BulkUpdate<T>()`: Update multiple records at once by matching on key columns.
+`BulkUpdate<T>()`: Update multiple records at once by matching on key columns.
 
-- `BulkDelete<T>()`: Delete multiple rows in a single operation based on ID column(s).
+`BulkDelete<T>()`: Delete multiple rows in a single operation based on ID column(s).
 
-- `BulkMerge<T>()`: Perform insert, update, or delete in one step — also known as merge or upsert.
+`BulkMerge<T>()`: Perform insert, update, or delete in one step — also known as merge or upsert.
 
 ## Works with All Major Databases
 
@@ -68,4 +68,9 @@ connection.BulkDelete(dataToDelete);
 connection.BulkMerge(dataToMerge);
 ```
 
+## What’s Next?
+
+In the next article, we’ll walk through the **installation and initial setup** of ETLBox.DbExtensions — how to install the NuGet packages, add the right database provider, and run your first operation.
+
+After that, each bulk operation will be covered in detail, with full examples and customization options.
 
