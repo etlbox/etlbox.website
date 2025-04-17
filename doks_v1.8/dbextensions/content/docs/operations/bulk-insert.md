@@ -150,6 +150,6 @@ You can override the name using `TableName`, or adjust it with `TablePrefix` and
 
 You can find both examples — basic usage and usage with options — in the official demo project on GitHub:
 
-- {{< link-ext text="BulkInsert example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkInsert" >}}
+- {{< link-ext text="Bulk Operations Example on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/DbExtensions.BulkInsert" >}}
 
 The demo is ready to run and shows how to configure the connection, create the table, and execute bulk operations with real data.
