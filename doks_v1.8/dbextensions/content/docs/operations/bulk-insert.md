@@ -73,7 +73,66 @@ connection.BulkInsert(customers, options => {
 
 For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
-## Table Naming Convention
+### Reading Generated Values
+
+If your database table includes columns with auto-generated values (e.g., identity columns or default constraints), you can instruct ETLBox to read these values back into your objects after the insert.
+
+This is done by enabling the `ReadGeneratedValues` option:
+
+```csharp
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(0, 100)
+    .Select(i => new Customer { Name = $"Customer {i}", City = $"City {i % 10}" })
+    .ToList();
+
+connection.BulkInsert(customers, options => {
+    options.ReadGeneratedValues = true;
+});
+
+// After the insert, customers[i].Id will contain the auto-generated ID
+foreach (var c in customers.Take(3))
+    Console.WriteLine($"Inserted: {c.Id} - {c.Name}");
+```
+
+#### Requirements
+
+- The property must be included in your class (e.g., `Id`)
+- The target column in the database must be auto-generated (e.g., identity, serial)
+- The feature must be supported by the ETLBox database provider you're using
+
+
+### Inserting into Identity Columns
+
+By default, most databases automatically generate values for identity (auto-increment) columns. If you want to explicitly insert values into those columns (e.g., during data migration or replication), you can enable identity insert using the `AllowIdentityInsert` option:
+
+```csharp
+var connection = new SqlConnection("your-connection-string");
+
+var customers = Enumerable.Range(1, 100)
+    .Select(i => new Customer {
+        Id = i, // explicitly setting Id
+        Name = $"Imported Customer {i}",
+        City = $"City {i % 10}"
+    }).ToList();
+
+connection.BulkInsert(customers, options => {
+    options.AllowIdentityInsert = true;
+});
+```
+
+### Ignoring Default Columns on Insert
+
+Use `IgnoreDefaultColumnsOnInsert = true` to skip inserting values into columns that have `DEFAULT` constraints in the database. This allows the database to assign default values automatically.
+
+```csharp
+connection.BulkInsert(customers, options => {
+    options.IgnoreDefaultColumnsOnInsert = true;
+});
+```
+
+
+### Table Naming Convention
 
 By default, the table name is inferred from the class name. For example:
 

@@ -61,13 +61,16 @@ These options are available **only for `BulkMerge()`**:
 
 | Property          | Description |
 |-------------------|-------------|
-| `MergeMode`       | Either `MergeMode.Full` (default) or `MergeMode.Delta`. Determines deletion behavior. |
+| `MergeMode`       | Either `MergeMode.Full` (default), `MergeMode.Delta`, `MergeMode.InsertsOnly`, `MergeMode.UpdatesOnly` or `MergeMode.InsertsAndDeletes`.  Determines deletion behavior. |
 | `FindDuplicates`  | Enables duplicate detection in source data. |
 | `CompareColumns`  | Columns used to decide if a row needs to be updated. |
 | `UpdateColumns`   | Columns to be updated when a match is found. |
 | `DeleteColumns`   | Used in `Delta` mode to determine which rows to delete. |
 | `CompareFunc`     | Custom comparison function for update detection. |
-
+| `CacheMode`       | `Full` or `Partial`. Controls how much of the target table is cached for comparisons. |
+| `MaxCacheSize`    | Limit the number of records held in memory for merge. |
+| `EvictionPolicy`  | Controls how cached data is refreshed during a partial merge. |
+| `ReadConnection`  | Used only with `CacheMode.Partial`. A separate connection is required to read from the target table while writing. |
 
 
 

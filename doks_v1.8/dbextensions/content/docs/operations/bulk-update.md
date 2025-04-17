@@ -72,7 +72,7 @@ connection.BulkUpdate(customers, options => {
 
 For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
-## Table Naming Convention
+### Table Naming Convention
 
 By default, the table name is inferred from the class name. For example:
 
