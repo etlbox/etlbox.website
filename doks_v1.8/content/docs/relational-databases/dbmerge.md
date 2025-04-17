@@ -286,7 +286,7 @@ DbMerge provides several configuration options to control how data is processed.
 - **UpdateColumns** – Specifies which columns should be updated. If empty, all non-IdColumns are updated.
 - **DeleteColumns** – Identifies records to be deleted in Delta mode.
 - **BatchSize** – Defines the number of records processed per batch.
-- **CacheMode**, **MaxCacheSize**, **EvictionPolicy** – Controls how destination data is loaded into memory and manages cache behavior for large datasets.
+- **CacheMode**, **MaxCacheSize**, **EvictionPolicy**, **ReadConnectionManager** – Controls how destination data is cached and read. `ReadConnectionManager` is required when using partial caching with a transactional or persistent connection.
 - **ColumnMapping** – Maps object properties to different database column names.
 - **IgnoreDefaultColumnsOnInsert** – Prevents default column values from being explicitly inserted.
 - **UseTruncateMethod** – Truncates the destination table before merging instead of performing deletes.
@@ -717,6 +717,29 @@ var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
     CacheMode = CacheMode.Partial
 };
 ```
+
+### Partial Cache with Transactions
+
+When `CacheMode` is set to `Partial`, DbMerge reads individual records from the destination table on demand. This requires an active connection that is not blocked by ongoing write operations.
+
+If you are using a transaction or have set `LeaveOpen = true`, the same connection is reused throughout the flow. In this case, DbMerge cannot use the main connection for both reading and writing, especially on databases that don't support multiple active readers. To avoid this limitation, you must provide a second connection via `ReadConnectionManager`.
+
+This additional connection is only used for reading from the destination table and should not be enlisted in a transaction.
+
+```C#
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+conn.BeginTransaction();
+
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full,
+    CacheMode = CacheMode.Partial,
+    ReadConnectionManager = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;")
+};
+```
+
+{{< callout context="tip" icon="outline/rocket" >}}
+For SQL Server, enabling **Multiple Active Result Sets (MARS)** may also allow using a single connection with partial caching, but this is not supported by all databases and may have limitations in transactional scenarios.
+{{< /callout >}}
 
 ### Eviction Policies
 
