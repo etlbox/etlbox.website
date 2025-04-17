@@ -31,7 +31,7 @@ These options are available in both `BulkOptions<T>` and `MergeBulkOptions<T>`:
 
 | Property                  | Description |
 |---------------------------|-------------|
-| `BatchSize`               | Number of records per batch. Default is 0 (auto-tuned). |
+| `BatchSize`               | Number of records per batch. Default is 1000. |
 | `ReadGeneratedValues`     | If `true`, reads auto-generated values (e.g. identity columns). Only supported on some DBMSs. |
 | `AllowIdentityInsert`     | Enables manual values in identity/serial columns. |
 | `OnProgress`              | Callback after each batch with number of rows processed. |
@@ -44,7 +44,7 @@ These options are available in both `BulkOptions<T>` and `MergeBulkOptions<T>`:
 | `IgnoreDefaultColumnsOnInsert` | Ignores DB columns with a `DEFAULT` constraint when inserting. |
 | `IdColumns`               | Defines primary key columns used for update/delete/merge operations. |
 
-## Additional Options
+## Options for Insert/Update/Delete
 
 These apply only to `BulkInsert()`, `BulkUpdate()`, and `BulkDelete()`:
 
@@ -54,6 +54,95 @@ These apply only to `BulkInsert()`, `BulkUpdate()`, and `BulkDelete()`:
 | `AfterBatchWrite`   | Action executed after a batch has been written. |
 | `UpdateColumns`     | Explicitly specify which columns to update (optional). Applies to update operations only. |
 
+## Examples for Bulk Options
+
+The following examples apply to `BulkInsert`, `BulkUpdate`, and `BulkDelete`.
+Examples for `BulkMerge` options are provided in the section below.
+
+### OnProgress
+
+```csharp
+connection.BulkInsert(data, options => {
+    options.OnProgress = count => {
+        Console.WriteLine($"{count} rows processed.");
+    };
+});
+```
+
+### RedirectErroneousBatches / ErrorData
+
+Skip failed batches and collect errors for inspection:
+
+```csharp
+var errorList = new List<ETLBoxError>();
+
+connection.BulkInsert(data, options => {
+    options.RedirectErroneousBatches = true;
+    options.ErrorData = errorList;
+});
+
+// Handle/log errors
+foreach (var error in errorList)
+    Console.WriteLine($"Error: {error.ErrorText}, Failing Data: {error.RecordAsJson}");
+```
+
+### ColumnConverters
+
+Transform values before writing them to the database:
+
+```csharp
+connection.BulkInsert(data, options => {
+    options.ColumnConverters = new[] {
+        new ColumnConverter("Url", val => "PRE_" + val?.ToString())
+    };
+});
+```
+
+### ColumnMapping
+
+Map property names to different database column names, or ignore properties:
+
+```csharp
+connection.BulkInsert(data, options => {
+    options.ColumnMapping = new[] {
+        new DbColumnMap { PropertyName = "InternalName", DbColumnName = "DisplayName" },
+        new DbColumnMap { PropertyName = "TempFlag", IgnoreColumn = true }
+    };
+});
+```
+
+### BeforeBatchWrite / AfterBatchWrite
+
+Use these callbacks to run custom logic before and after each batch is processed.
+
+```csharp
+connection.BulkUpdate(data, options => {
+    options.BatchSize = 100;
+
+    options.BeforeBatchWrite = batch => {
+        Console.WriteLine($"Preparing batch of {batch.Length} records...");
+        return batch;
+    };
+
+    options.AfterBatchWrite = batch => {
+        Console.WriteLine($"Finished batch of {batch.Length} records.");
+    };
+});
+```
+
+### UpdateColumns
+
+Specify exactly which properties should be updated when a matching row is found.
+
+```csharp
+connection.BulkUpdate(data, options => {
+    options.IdColumns = new[] { new IdColumn("Id") };
+    options.UpdateColumns = new[] {
+        new UpdateColumn("City"),
+        new UpdateColumn("Name")
+    };
+});
+```
 
 ## Additional Options for BulkMerge
 
@@ -73,4 +162,35 @@ These options are available **only for `BulkMerge()`**:
 | `ReadConnection`  | Used only with `CacheMode.Partial`. A separate connection is required to read from the target table while writing. |
 
 
+## Additional Examples for BulkMerge
 
+### FindDuplicates
+
+Enable this option to automatically detect and skip duplicate records in the source data based on the ID columns.
+
+```csharp
+connection.BulkMerge(data, options => {
+    options.MergeMode = MergeMode.Full;
+    options.FindDuplicates = true;
+});
+```
+
+### CompareFunc
+
+Use `CompareFunc` to override comparison logic — for example, always force an update if a matching row exists.
+
+```csharp
+connection.BulkMerge(data, options => {
+    options.MergeMode = MergeMode.InsertsAndUpdates;
+    options.IdColumns = new[] {
+        new IdColumn("Id1"),
+        new IdColumn("OtherId")
+    };
+    options.CompareFunc = (source, target) => {
+        // Always update if the record exists
+        return false;
+    };
+});
+```
+
+Let me know if you want a version that conditionally compares values (e.g., only update if one column differs).

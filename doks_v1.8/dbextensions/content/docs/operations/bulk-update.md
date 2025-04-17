@@ -29,6 +29,7 @@ var customers = Enumerable.Range(1, 2_500)
 connection.BulkUpdate(customers);
 
 public class Customer {
+    [IdColumn]
     public int Id { get; set; }
     public string Name { get; set; }
     public string City { get; set; }
@@ -62,6 +63,7 @@ var customers = Enumerable.Range(2_000, 4_500)
 
 connection.BulkUpdate(customers, options => {
     options.BatchSize = 500;
+    options.IdColumns = new[] { new IdColumn() { IdPropertyName = "Id" }};
     options.UpdateColumns = new[] { new UpdateColumn() { UpdatePropertyName = "Name" } };
     options.BeforeBatchWrite = (batch) => {
         Console.WriteLine($"Before batch with {batch.Length} rows.");
@@ -71,6 +73,27 @@ connection.BulkUpdate(customers, options => {
 ```
 
 For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
+
+### IdColumns and UpdateColumns
+
+To identify which rows should be updated, ETLBox uses the `IdColumns`. These must uniquely identify a row in your table.
+By default, any property marked with `[IdColumn]` is used. You can override this manually in `BulkOptions`.
+
+If you only want to update specific fields, define them with `UpdateColumns`.
+
+```csharp
+connection.BulkUpdate(customers, options => {
+    options.IdColumns = new[] {
+        new IdColumn("Id")
+    };
+    options.UpdateColumns = new[] {
+        new UpdateColumn("Name"),
+        new UpdateColumn("City")
+    };
+});
+```
+
+If `UpdateColumns` are not set, all non-ID columns will be updated.
 
 ### Table Naming Convention
 

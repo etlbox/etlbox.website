@@ -73,6 +73,21 @@ connection.BulkDelete(customers, options => {
 
 For a complete list of available options, see the [BulkOptions reference](/docs/operations/bulk-options).
 
+### IdColumns
+
+Bulk delete operations require a way to uniquely identify which rows to remove.
+By default, ETLBox uses any property marked with `[IdColumn]`. You can also define `IdColumns` manually in `BulkOptions`.
+
+```csharp
+connection.BulkDelete(customers, options => {
+    options.IdColumns = new[] {
+        new IdColumn("Id")
+    };
+});
+```
+
+If no `IdColumns` are set and no `[IdColumn]` attribute is present, an exception will be thrown.
+
 ### Table Naming Convention
 
 By default, the table name is inferred from the class name. For example:
