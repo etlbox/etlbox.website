@@ -10,6 +10,7 @@
     "dev:ext": "set HUGO_ENV=next&& hugo server --disableFastRender --noHTTPCache",
     "format": "prettier **/** -w -c",
     "build": "hugo --minify --gc",
+    "build:ext": "set HUGO_ENV=next&& hugo --minify --gc",
     "preview": "vite preview --outDir public"
   },
   "dependencies": {
