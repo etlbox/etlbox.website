@@ -3,7 +3,12 @@
     <h5 class="card-title">Get a 10% discount on ETLBox</h5>
     <p class="card-text">Enter your email to receive a discount code on all purchases on ETLBox.</p>
 
-<form name="discount" method="POST" data-netlify="true" action="/support/discount/success-code">
+<form name="discount" method="POST" data-netlify="true" action="/support/discount/success-code" netlify-honeypot="bot-field">
+  <div class="d-none">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </div>
   <div class="mb-3">
     <input type="email" class="form-control" id="email" name="discountemail" placeholder="Your email" required>
   </div>
