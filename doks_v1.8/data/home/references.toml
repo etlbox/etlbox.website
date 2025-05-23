@@ -95,3 +95,10 @@ country = "Germany"
 link = "https://www.sew-eurodrive.de/"
 image_light = "/images/references/sew-eurodrive_light.svg"
 image_dark = "/images/references/sew-eurodrive_dark.svg"
+
+[[customer]]
+name = "ATD Solutions Ltd."
+country = "U.K."
+link = "https://www.atdsol.com/"
+image_light = "/images/references/atdsol_light.png"
+image_dark = "/images/references/atdsol_dark.png"
