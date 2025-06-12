@@ -35,7 +35,7 @@ company = "Fastec, Germany"
 link = "https://www.fastec.de"
 
 [[statement]]
-quote = "ETLBox is straightforward to implement, well-documented, and performs reliably out of the box. We use ETLBox to seamlessly process hundreds of millions of vehicle data points and records daily, and it consistently delivers high performance and dependability. Given its extensive functionality, it offers exceptional value"
+quote = "ETLBox is straightforward to implement, well-documented, and performs reliably out of the box. We use ETLBox to seamlessly process hundreds of millions of vehicle data points and records daily, and it consistently delivers high performance and dependability. </br>Given its extensive functionality, it offers exceptional value"
 logo_light = "/images/references/atdsol_light.png"
 logo_dark = "/images/references/atdsol_dark.png"
 company_description = "ATD Solutions Ltd. delivers advanced solutions such Complete Asset Analysis and Reporting Suite (CAARS), serving several leading blue-chip clients."
@@ -43,3 +43,13 @@ name = "Phil Burgin"
 position = "Development Director"
 company = "ATD Solutions Ltd., U.K."
 link = "https://www.atdsol.com"
+
+[[statement]]
+quote = "We have been using ETLBox for several years and have found it to be an invaluable tool. It has enabled us to develop a customized ETL solution with capabilities that were not available in commercial products. </br> Additionally, the ETLBox team has consistently provided prompt and helpful support whenever we had questions. </br>We highly recommend ETLBox."
+logo_light = "/images/references/empty50x50.png"
+logo_dark = "/images/references/empty50x50.png"
+company_description = "Asset Mgmt. Comp. is a well known family-run, privately held U.S. company that manages assets with multi-billion value with a long-term investment approach."
+name = "Dan"
+position = "Head of Development"
+company = "Asset Management Company, U.S.A"
+
