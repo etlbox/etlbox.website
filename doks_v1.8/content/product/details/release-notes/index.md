@@ -11,6 +11,21 @@ weight: 120
 toc: true
 ---
 
+## Version 3.7.1
+
+#### Features
+
+- Setting `MaxLoginAttempts` in ConnectionManagers to 2 as default value
+- `OdbcConnectionManager` (and derived) now supports setting ConnectionTimeout via property
+- Logging of Exceptions: The flawed record and Sql are now only visible if logging level is set to INFO
+- Introducing `Settings.SetLogLevelInfoToDebug`, which will downgrade INFO messages to DEBUG if set to true
+
+#### Bug Fixes:
+
+- Fixing SQL error for `ReadLastFinished()` in package `ETLBox.Logging`
+- Adding `ReadConnectionManager` to `DbMerge` (and DbExtensions BulkMerge)
+- Fixing issue with disposed HTTP streams when receiving 404
+
 ## Version 3.7.0
 
 #### Features
