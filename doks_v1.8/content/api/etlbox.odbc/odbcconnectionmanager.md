@@ -381,6 +381,34 @@ at least define the table and the columns names</li>
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_Odbc_OdbcConnectionManager_ConnectionTimeout_" data-uid="ETLBox.Odbc.OdbcConnectionManager.ConnectionTimeout*"></a>
+  <h4 id="ETLBox_Odbc_OdbcConnectionManager_ConnectionTimeout" data-uid="ETLBox.Odbc.OdbcConnectionManager.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>Set the connetion timeout for the ODBC connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int ConnectionTimeout { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Odbc_OdbcConnectionManager_ConnectionType_" data-uid="ETLBox.Odbc.OdbcConnectionManager.ConnectionType*"></a>
   <h4 id="ETLBox_Odbc_OdbcConnectionManager_ConnectionType" data-uid="ETLBox.Odbc.OdbcConnectionManager.ConnectionType">ConnectionType</h4>
   <div class="markdown level1 summary"><p>The database type for the connection manager.</p>
@@ -736,6 +764,22 @@ to change back settings made to improve bulk insert performance</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.Clone()</span></div>
+  <a id="ETLBox_Odbc_OdbcConnectionManager_CreateDbConnection_" data-uid="ETLBox.Odbc.OdbcConnectionManager.CreateDbConnection*"></a>
+  <h4 id="ETLBox_Odbc_OdbcConnectionManager_CreateDbConnection" data-uid="ETLBox.Odbc.OdbcConnectionManager.CreateDbConnection">CreateDbConnection()</h4>
+  <div class="markdown level1 summary"><p>By default, a db connection is created with the given connection string value.
+Override this method if you want to pass additional properties to the specific Ado.NET db connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public override void CreateDbConnection()
+```
+
+{{< rawhtml >}}
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DbConnectionManager&lt;System.Data.Odbc.OdbcConnection, System.Data.Odbc.OdbcTransaction, System.Data.Odbc.OdbcParameter&gt;.CreateDbConnection()</span></div>
   <a id="ETLBox_Odbc_OdbcConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Odbc.OdbcConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Odbc_OdbcConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Odbc.OdbcConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved

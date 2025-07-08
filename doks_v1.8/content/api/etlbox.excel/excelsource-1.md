@@ -598,7 +598,8 @@ Be careful if you don't define a range and set this to true.</p>
   </table>
   <a id="ETLBox_Excel_ExcelSource_1_IgnoreHiddenSheets_" data-uid="ETLBox.Excel.ExcelSource`1.IgnoreHiddenSheets*"></a>
   <h4 id="ETLBox_Excel_ExcelSource_1_IgnoreHiddenSheets" data-uid="ETLBox.Excel.ExcelSource`1.IgnoreHiddenSheets">IgnoreHiddenSheets</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to true, sheets that are hidden in the excel file will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

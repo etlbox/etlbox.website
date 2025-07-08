@@ -47,6 +47,9 @@ select * from (
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_ConnectionType">OdbcConnectionManager.ConnectionType</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_ConnectionTimeout">OdbcConnectionManager.ConnectionTimeout</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_QB">OdbcConnectionManager.QB</a>
     </div>
     <div>
@@ -63,6 +66,9 @@ select * from (
     </div>
     <div>
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_BulkSelect_ETLBox_ITableData_System_Collections_Generic_ICollection_System_String__System_Action_System_Action_System_Action_System_Object____">OdbcConnectionManager.BulkSelect(ITableData, ICollection&lt;string&gt;, Action, Action, params Action&lt;object&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_CreateDbConnection">OdbcConnectionManager.CreateDbConnection()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DbConnection">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DbConnection</a>

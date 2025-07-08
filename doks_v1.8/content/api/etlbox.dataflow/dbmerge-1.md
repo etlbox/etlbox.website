@@ -852,6 +852,36 @@ OnlyUpdates means that only updates are applied to the destination.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_ReadConnectionManager_" data-uid="ETLBox.DataFlow.DbMerge`1.ReadConnectionManager*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_ReadConnectionManager" data-uid="ETLBox.DataFlow.DbMerge`1.ReadConnectionManager">ReadConnectionManager</h4>
+  <div class="markdown level1 summary"><p>Only applies if <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CacheMode">CacheMode</a> is set to Partial.
+When using a transaction or a single connection that is left open, the DbMerge needs a second connection manager
+for reading the data from the destination table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public IConnectionManager ReadConnectionManager { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_SourceBlock_" data-uid="ETLBox.DataFlow.DbMerge`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_SourceBlock" data-uid="ETLBox.DataFlow.DbMerge`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>

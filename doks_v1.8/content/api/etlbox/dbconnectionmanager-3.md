@@ -298,7 +298,7 @@ acquired from the connection pool.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public TConnection DbConnection { get; protected set; }
+    public TConnection DbConnection { get; set; }
 ```
 
 {{< rawhtml >}}

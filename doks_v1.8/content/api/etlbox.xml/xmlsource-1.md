@@ -451,7 +451,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 </h3>
   <a id="ETLBox_Xml_XmlSource_1_AttributePrefixForDynamic_" data-uid="ETLBox.Xml.XmlSource`1.AttributePrefixForDynamic*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_AttributePrefixForDynamic" data-uid="ETLBox.Xml.XmlSource`1.AttributePrefixForDynamic">AttributePrefixForDynamic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The prefix used for XML attributes in dynamic objects.
+Default is &quot;at_&quot;. This helps distinguish attributes from elements when parsing XML dynamically.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -478,9 +480,9 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   </table>
   <a id="ETLBox_Xml_XmlSource_1_CollectUnparsedData_" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_CollectUnparsedData" data-uid="ETLBox.Xml.XmlSource`1.CollectUnparsedData">CollectUnparsedData</h4>
-  <div class="markdown level1 summary"><p>If set to true, the source will collect all xml data that
-is not parsed during the process and store it in the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData">UnparsedData</a>
-property. Default is false.</p>
+  <div class="markdown level1 summary"><p>If set to true, unparsed XML data that is not mapped to the output type
+will be collected and stored in <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData">UnparsedData</a>.
+Default is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -510,7 +512,9 @@ property. Default is false.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_CollectUnparsedData">DataFlowStreamSource&lt;TOutput&gt;.CollectUnparsedData</a></div>
   <a id="ETLBox_Xml_XmlSource_1_ElementName_" data-uid="ETLBox.Xml.XmlSource`1.ElementName*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_ElementName" data-uid="ETLBox.Xml.XmlSource`1.ElementName">ElementName</h4>
-  <div class="markdown level1 summary"><p>The element name of the document that contains an item of the data to be parsed</p>
+  <div class="markdown level1 summary"><p>The XML element name that contains an item of the data to be parsed.
+This setting applies only when reading dynamic objects.
+For POCOs, use XML attributes on the class instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -538,7 +542,9 @@ property. Default is false.</p>
   </table>
   <a id="ETLBox_Xml_XmlSource_1_Namespace_" data-uid="ETLBox.Xml.XmlSource`1.Namespace*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_Namespace" data-uid="ETLBox.Xml.XmlSource`1.Namespace">Namespace</h4>
-  <div class="markdown level1 summary"><p>Optional: The namespace of the element which name is specified in <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">ElementName</a></p>
+  <div class="markdown level1 summary"><p>Optional: The namespace of the element specified in <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">ElementName</a>.
+This setting applies only when reading dynamic objects.
+For POCOs, use XML attributes on the class instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -566,7 +572,9 @@ property. Default is false.</p>
   </table>
   <a id="ETLBox_Xml_XmlSource_1_RetrieveElementFunc_" data-uid="ETLBox.Xml.XmlSource`1.RetrieveElementFunc*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_RetrieveElementFunc" data-uid="ETLBox.Xml.XmlSource`1.RetrieveElementFunc">RetrieveElementFunc</h4>
-  <div class="markdown level1 summary"><p>Instead of deifning</p>
+  <div class="markdown level1 summary"><p>Dynamically determines the <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">ElementName</a> during XML reading.
+This function is applied only for dynamic objects and overrides any existing
+<a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_ElementName">ElementName</a> and <a class="xref" href="/api/etlbox.xml/xmlsource-1#ETLBox_Xml_XmlSource_1_Namespace">Namespace</a> settings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -594,7 +602,9 @@ property. Default is false.</p>
   </table>
   <a id="ETLBox_Xml_XmlSource_1_TextPrefixForDynamic_" data-uid="ETLBox.Xml.XmlSource`1.TextPrefixForDynamic*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_TextPrefixForDynamic" data-uid="ETLBox.Xml.XmlSource`1.TextPrefixForDynamic">TextPrefixForDynamic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The prefix used for text values outside of XML elements in dynamic objects.
+Default is &quot;tx_&quot;. This ensures text content is properly distinguished during parsing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -622,7 +632,8 @@ property. Default is false.</p>
   <a id="ETLBox_Xml_XmlSource_1_XmlReaderSettings_" data-uid="ETLBox.Xml.XmlSource`1.XmlReaderSettings*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_XmlReaderSettings" data-uid="ETLBox.Xml.XmlSource`1.XmlReaderSettings">XmlReaderSettings</h4>
   <div class="markdown level1 summary"><p>The XmlReaderSettings used when creating the XmlReader.
-Please see <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreadersettings">XmlReaderSettings</a> for more details.</p>
+This controls how XML is read, such as whether whitespace is ignored.
+Default: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreadersettings">XmlReaderSettings</a> with IgnoreWhitespace set to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -650,7 +661,7 @@ Please see <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.x
   </table>
   <a id="ETLBox_Xml_XmlSource_1_XmlSerializer_" data-uid="ETLBox.Xml.XmlSource`1.XmlSerializer*"></a>
   <h4 id="ETLBox_Xml_XmlSource_1_XmlSerializer" data-uid="ETLBox.Xml.XmlSource`1.XmlSerializer">XmlSerializer</h4>
-  <div class="markdown level1 summary"><p>The XmlSerializer used to deserialize the xml into the used data type.</p>
+  <div class="markdown level1 summary"><p>The XmlSerializer used to deserialize XML into the specified data type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

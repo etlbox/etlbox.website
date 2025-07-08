@@ -104,6 +104,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_AllowIdentityInsert">DbMerge&lt;ExpandoObject&gt;.AllowIdentityInsert</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ReadConnectionManager">DbMerge&lt;ExpandoObject&gt;.ReadConnectionManager</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ConnectionManager">DbMerge&lt;ExpandoObject&gt;.ConnectionManager</a>
     </div>
     <div>

@@ -36,6 +36,9 @@ toc: false
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_ConnectionType">OdbcConnectionManager.ConnectionType</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_ConnectionTimeout">OdbcConnectionManager.ConnectionTimeout</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_QB">OdbcConnectionManager.QB</a>
     </div>
     <div>
@@ -61,6 +64,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_CleanUpBulkInsert_System_String_">OdbcConnectionManager.CleanUpBulkInsert(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_CreateDbConnection">OdbcConnectionManager.CreateDbConnection()</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DbConnection">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DbConnection</a>

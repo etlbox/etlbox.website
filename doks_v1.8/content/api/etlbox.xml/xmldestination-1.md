@@ -407,8 +407,8 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 </h3>
   <a id="ETLBox_Xml_XmlDestination_1_DynamicElementName_" data-uid="ETLBox.Xml.XmlDestination`1.DynamicElementName*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_DynamicElementName" data-uid="ETLBox.Xml.XmlDestination`1.DynamicElementName">DynamicElementName</h4>
-  <div class="markdown level1 summary"><p>For ExpandoObject, the default xml element name is &lt;Dynamic&gt;
-Change this value for dynamic objects here.</p>
+  <div class="markdown level1 summary"><p>Defines the XML element name used when writing ExpandoObject data.
+By default, elements are wrapped in a &lt;Dynamic&gt; tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -466,9 +466,10 @@ Change this value for dynamic objects here.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpContentType">DataFlowStreamDestination&lt;TInput&gt;.HttpContentType</a></div>
   <a id="ETLBox_Xml_XmlDestination_1_NS_" data-uid="ETLBox.Xml.XmlDestination`1.NS*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_NS" data-uid="ETLBox.Xml.XmlDestination`1.NS">NS</h4>
-  <div class="markdown level1 summary"><p>Namespaces used for the serialization (not applicable for dynamic objects).
-By default an empty namespace is added - xml will be generated without any namespace,
-which most likely is the desired behavior.</p>
+  <div class="markdown level1 summary"><p>Defines the XML namespaces used for serialization (not applicable for dynamic objects).
+By default, an empty namespace is added, meaning the generated XML will not include
+namespace declarations, which is often the desired behavior.
+To include namespaces, add entries to this property before serialization.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -496,7 +497,8 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_Xml_XmlDestination_1_RootElementName_" data-uid="ETLBox.Xml.XmlDestination`1.RootElementName*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_RootElementName" data-uid="ETLBox.Xml.XmlDestination`1.RootElementName">RootElementName</h4>
-  <div class="markdown level1 summary"><p>The name of the root element for the xml output.  Default is &lt;root&gt;</p>
+  <div class="markdown level1 summary"><p>The name of the root element in the XML output.
+Default is &lt;Root&gt;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -524,7 +526,9 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_Xml_XmlDestination_1_RootElementNamespace_" data-uid="ETLBox.Xml.XmlDestination`1.RootElementNamespace*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_RootElementNamespace" data-uid="ETLBox.Xml.XmlDestination`1.RootElementNamespace">RootElementNamespace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The XML namespace associated with the root element.
+If set, the root element will include the specified namespace declaration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -551,7 +555,9 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_Xml_XmlDestination_1_RootElementPrefix_" data-uid="ETLBox.Xml.XmlDestination`1.RootElementPrefix*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_RootElementPrefix" data-uid="ETLBox.Xml.XmlDestination`1.RootElementPrefix">RootElementPrefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The XML prefix assigned to the root element's namespace.
+If a namespace is defined, this prefix is used for qualified names in the output.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -606,7 +612,9 @@ which most likely is the desired behavior.</p>
   </table>
   <a id="ETLBox_Xml_XmlDestination_1_ShouldConvertDynamicPropToAttribute_" data-uid="ETLBox.Xml.XmlDestination`1.ShouldConvertDynamicPropToAttribute*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_ShouldConvertDynamicPropToAttribute" data-uid="ETLBox.Xml.XmlDestination`1.ShouldConvertDynamicPropToAttribute">ShouldConvertDynamicPropToAttribute</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A predicate function that determines whether a dynamic property
+should be written as an XML attribute instead of an element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

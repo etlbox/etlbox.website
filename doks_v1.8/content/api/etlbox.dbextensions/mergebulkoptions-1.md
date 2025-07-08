@@ -349,6 +349,35 @@ Only applies if <a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DbExtensions_MergeBulkOptions_1_ReadConnection_" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.ReadConnection*"></a>
+  <h4 id="ETLBox_DbExtensions_MergeBulkOptions_1_ReadConnection" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.ReadConnection">ReadConnection</h4>
+  <div class="markdown level1 summary"><p>Only applies if <a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-1#ETLBox_DbExtensions_MergeBulkOptions_1_CacheMode">CacheMode</a> is set to <a class="xref" href="/api/etlbox/cachemode#ETLBox_CacheMode_Partial">Partial</a>.
+Another connection is needed to read from the destination table while the merge operation is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public IDbConnection ReadConnection { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DbExtensions_MergeBulkOptions_1_UpdateColumns_" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.UpdateColumns*"></a>
   <h4 id="ETLBox_DbExtensions_MergeBulkOptions_1_UpdateColumns" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.UpdateColumns">UpdateColumns</h4>
   <div class="markdown level1 summary"><p>Specify properties to be updated when a row needs updating,

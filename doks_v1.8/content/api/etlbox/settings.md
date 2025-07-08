@@ -320,6 +320,34 @@ This is the default value. Each maximum buffer size value can overwritten in a d
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Settings_SetLogLevelInfoToDebug_" data-uid="ETLBox.Settings.SetLogLevelInfoToDebug*"></a>
+  <h4 id="ETLBox_Settings_SetLogLevelInfoToDebug" data-uid="ETLBox.Settings.SetLogLevelInfoToDebug">SetLogLevelInfoToDebug</h4>
+  <div class="markdown level1 summary"><p>If set to true, all ETLBox log message that are targeted for INFO will be logged as DEBUG.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static bool SetLogLevelInfoToDebug { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <a id="ETLBox_Settings_ClearSettings_" data-uid="ETLBox.Settings.ClearSettings*"></a>
