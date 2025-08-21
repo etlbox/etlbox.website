@@ -216,7 +216,7 @@ var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
 ```
 
 {{< callout context="note" icon="outline/info-circle" >}}
-For ODBC and OleDb connections, the default batch size is 100 due to driver limitations.
+For ODBC and OLEDB connections, the default batch size is 100 due to driver limitations.
 {{< /callout >}}
 
 ### Inserting Identity Columns

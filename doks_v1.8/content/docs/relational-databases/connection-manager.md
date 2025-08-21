@@ -87,12 +87,13 @@ These managers use ODBC drivers to connect to databases. The correct driver must
 OleDb can be used as an alternative to ODBC, particularly for SQL Server.
 
 - **SQL Server OleDb**: `new SqlOleDbConnectionManager("Provider=MSOLEDBSQL;Server=myServer;Database=myDB;User Id=myUser;Password=myPass;");`
+- **Access OleDb**: `new AccessOleDbConnectionManager("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TestDatabase.accdb;");`
 - **Generic OleDb**: `new OleDbConnectionManager("Provider=MSDASQL;Data Source=myDSN;Uid=myUser;Pwd=myPass;");`
 
 
 ## Using Generic ODBC and OleDb Connections
 
-If a database is not fully supported by ETLBox, you can use the generic ODBC or OleDb connection manager to establish a connection. These connectors provide flexibility but come with some limitations compared to native database-specific connection managers.
+If a database is not fully supported by ETLBox, you can use the generic ODBC or OLEDB connection manager to establish a connection. These connectors provide flexibility but come with some limitations compared to native database-specific connection managers.
 
 ### Limitations
 
@@ -239,7 +240,12 @@ This property is especially helpful in environments where transient connection i
 
 ## Microsoft Access Connection
 
-Microsoft Access databases can only be accessed via ODBC. The correct driver must match your application's architecture (32-bit or 64-bit). Use the appropriate ODBC Data Source Administrator when configuring the connection.
+Microsoft Access databases can only be accessed via ODBC or OLEDB. The correct driver must match your application's architecture (32-bit or 64-bit).
+We recommend to use the Access ODBC driver when writing data into an Access database file.
+
+### Access ODBC
+
+For ODBC, use the appropriate ODBC Data Source Administrator when configuring the connection.
 
 Latest drivers:
 - {{< link-ext text="Access Driver >2016" url="https://www.microsoft.com/en-us/download/details.aspx?id=54920" >}}
@@ -250,11 +256,12 @@ Keeping `LeaveOpen = true` is recommended to avoid {{< link-ext text="multi-thre
 To connect, use `AccessOdbcConnectionManager`:
 
 ```csharp
-DbDestination dest = new DbDestination(
-    new AccessOdbcConnectionManager(
+DbDestination dest = new DbDestination() {
+    ConnectionManager = new AccessOdbcConnectionManager(
           "Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\\DB\\Test.mdb"
-    ), "DestinationTable"
-);
+    ),
+    TableName = "DestinationTable"
+};
 dest.BatchSize = 100;
 ```
 
@@ -263,3 +270,21 @@ Since Access does not support bulk inserts, `DbDestination` simulates this using
 {{< callout context="note" icon="outline/info-circle" >}}
 The batch size is limited—setting it too high may cause 'Query too complex' errors. Reduce the batch size if needed.
 {{< /callout >}}
+
+### Access OLEDB
+
+For OLEDB, only reading data from a MS Access database is supported. The installed driver must match your application's architecture (32-bit or 64-bit).
+
+Latest driver for OLEDB
+- {{< link-ext text="Access Driver >2016" url="https://www.microsoft.com/en-us/download/details.aspx?id=54920" >}}
+
+```csharp
+DbSource source = new DbSource() {
+    ConnectionManager = new AccessOleDbConnectionManager(
+          "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TestDatabase.accdb;"
+    ),
+    TableName = "SourceTable"
+};
+```
+
+Bulk inserts are not supported for the Access OLEDB driver.

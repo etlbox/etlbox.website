@@ -18,7 +18,7 @@ ETLBox supports the following databases:
 
 Database  | Native support | ODBC support | Remarks
 ----------|:--------------:|:------------:|:-------:
-SQL Server | ✓ | ✓ | + OleDb support
+SQL Server | ✓ | ✓ | + OLEDB support
 PostgreSQL | ✓ | ✓ |
 SQLite | ✓ | ✓ |
 Oracle | ✓ | ✓ |
@@ -28,12 +28,12 @@ Db2 | ✓ | X | LUW + z/OS + Cloud
 SAP ASE (Sybase) | ✓ | ✓ |
 SAP HANA | ✓ | ✓ |
 Snowflake | ✓ | ✓ |
-Microsoft Access | X | ✓ |
+Microsoft Access | X | ✓ | + OLEDB support
 Apache Spark (SQL) | X | ✓ |
-Other databases | X | * | Generic ODBC support
+Other databases | X | * | Generic ODBC & OLEDB support
 Custom connector | ** | ** | Using own implementation
 
-\* *Limited support for other databases is available through the generic ODBC or OleDb connection managers. However, these connections come with some limitations.*
+\* *Limited support for other databases is available through the generic ODBC or OLEDB connection managers. However, these connections come with some limitations.*
 
 \*\* *A `CustomSource` or `CustomDestination` can be implemented to create a database connector with custom logic.*
 
@@ -56,7 +56,7 @@ To use ETLBox with a specific database, you need to install the corresponding ET
 | Microsoft Access | `ETLBox.Odbc` |
 | Apache Spark (SQL) | `ETLBox.Odbc` |
 
-For ODBC-based connections, the generic `ETLBox.Odbc` package is available, but database-specific packages are recommended for best performance and feature support. For OleDB connections, reference the `ETLBox.OleDb` package.
+For ODBC-based connections, the generic `ETLBox.Odbc` package is available, but database-specific packages are recommended for best performance and feature support. For OLEDB connections, reference the `ETLBox.OleDb` package.
 
 #### Installing the Required Package
 

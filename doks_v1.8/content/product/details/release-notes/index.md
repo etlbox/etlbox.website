@@ -610,7 +610,7 @@ _This release includes an anonymous installation tracking feature to help us und
 #### Features
 
 *ConnectionManagers*:
-- ODBC/OleDb now have ConnectionManagerType property settable.
+- ODBC/OLEDB now have ConnectionManagerType property settable.
 
 *ControlFlow*:
 - Db2 now has support for schemas
