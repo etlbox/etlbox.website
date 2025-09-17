@@ -110,8 +110,8 @@ public class MyMergeRow : IMergeableRow {
     [UpdateColumn]
     public string Value { get; set; }
 
-    public string ChangeAction { get; set; } // Required for tracking changes
-    public DateTime? ChangeDate { get; set; } // Optional, used for auditing
+    public ChangeAction? ChangeAction { get; set; } // Required for tracking changes
+    public DateTime ChangeDate { get; set; } // Optional, used for auditing
 }
 ```
 
