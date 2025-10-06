@@ -122,7 +122,42 @@ Or generate a definition from a C# class type:
 TableDefinition def = TableDefinition.FromCLRType(ConnectionType.SqlServer, typeof(MyEntity));
 ```
 
-This automatically maps CLR properties to columns based on your database type.
+This automatically maps CLR properties to database columns based on your database  type. For more control, use the `DbColumnDefinition` attribute.
+
+
+### Using DbColumnDefinition Attribute
+
+The `[DbColumnDefinition]` attribute allows customization of how class properties are translated to table columns:
+
+* `DataType`: Specifies the database column type (e.g., `"BIGINT"`, `"VARCHAR(10)"`).
+* `AllowNulls`: Indicates if the column allows null values.
+* `IsIdentity`: Marks the column as auto-incrementing.
+* `IsPrimaryKey`: Marks the column as a primary key.
+* `DefaultValue`: Defines a default value for the column.
+* `Name`: Overrides the column name.
+* `Ignore`: Excludes the property from the schema.
+
+#### Example
+
+```csharp
+public class MyEntity {
+    [DbColumnDefinition(DataType = "BIGINT", IsIdentity = true, IsPrimaryKey = true)]
+    public int Id { get; set; }
+
+    [DbColumnDefinition(DataType = "VARCHAR(10)", AllowNulls = true, Name = "TestColumn")]
+    public string Name { get; set; }
+
+    [DbColumnDefinition(DefaultValue = "42")]
+    public int Count { get; set; }
+
+    [DbColumnDefinition(Ignore = true)]
+    public string TempData { get; set; }
+}
+
+var definition = TableDefinition.FromCLRType(connection, typeof(MyEntity));
+CreateTableTask.CreateIfNotExists(connection, definition);
+```
+
 
 
 ## View Tasks
