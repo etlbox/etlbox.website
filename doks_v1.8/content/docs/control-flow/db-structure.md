@@ -94,14 +94,32 @@ bool exists = IfSchemaExistsTask.IsExisting("reporting");
 
 ## Index Tasks
 
-Index tasks are useful when managing performance optimizations on tables.
+Index tasks are used to manage general-purpose indexes for performance optimization.
+
+
+{{< callout context="note" icon="outline/info-circle" >}}
+General indexes cannot be created as part of `CreateTableTask`. Only the following constraints are supported within table creation:
+- Primary Keys
+- Unique Constraints
+- Foreign Keys
+
+For all other indexes, use `CreateIndexTask` after the table is created.
+{{< /callout >}}
 
 ### CreateIndexTask
 
-Creates or recreates an index on a table.
+Creates or recreates an index on an existing table.
 
 ```csharp
-CreateIndexTask.CreateOrRecreate("idx_customer_name", "Customer", new List<string> { "Name" });
+CreateIndexTask.CreateOrRecreate(
+    connection: SqlConnection,
+    indexName: "ix_customer_name",
+    tableName: "Customer",
+    indexColumns: new List<string> { "Name" },
+    includeColumns: new List<string> { "Address", "Email" }, // optional
+    isUnique: false, // optional
+    isClustered: false // optional, SQL Server only
+);
 ```
 
 ### DropIndexTask
@@ -109,16 +127,36 @@ CreateIndexTask.CreateOrRecreate("idx_customer_name", "Customer", new List<strin
 Drops an index if it exists.
 
 ```csharp
-DropIndexTask.DropIfExists("idx_customer_name", "Customer");
+DropIndexTask.DropIfExists(SqlConnection, "ix_customer_name", "Customer");
 ```
 
 ### IfIndexExistsTask
 
-Checks if a given index exists on a table.
+Checks if an index exists on a table.
 
 ```csharp
-bool exists = IfIndexExistsTask.IsExisting("idx_customer_name", "Customer");
+bool exists = IfIndexExistsTask.IsExisting(SqlConnection, "ix_customer_name", "Customer");
 ```
+
+### Example
+
+```csharp
+CreateTableTask.CreateIfNotExists(SqlConnection, "dbo.IndexCreation3", new List<TableColumn> {
+    new TableColumn("Key1", "INT", allowNulls: false),
+    new TableColumn("Key2", "CHAR(2)", allowNulls: true),
+    new TableColumn("Value1", "NVARCHAR(10)", allowNulls: true),
+    new TableColumn("Value2", "DECIMAL(10,2)", allowNulls: false),
+});
+
+CreateIndexTask.CreateOrRecreate(
+    SqlConnection,
+    indexName: "ix_IndexTest3",
+    tableName: "dbo.IndexCreation3",
+    indexColumns: new List<string> { "Key1", "Key2" },
+    includeColumns: new List<string> { "Value1", "Value2" }
+);
+```
+
 
 ## Procedure Tasks
 
