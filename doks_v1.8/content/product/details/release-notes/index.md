@@ -11,9 +11,25 @@ weight: 120
 toc: true
 ---
 
+## Version 3.7.2
+
+#### Features:
+
+- Fixing issue with Equals comparison for DictionaryKey
+- Adding basic support for Access OLEDB driver
+- Class: MergeableRow, ChangeAction was extended with DbColumnConfiguration attribute
+- Extending logging messages on Debug leve
+- Improving exception messages when http client timeout is exceeded
+
+### Bug Fixes:
+
+- Fixed bug where Unparsed data of XmlSource led to invalid xml with special chars
+- Added default configuration for BadDataFound in CsvSource
+- CreateTableTask can now also create default values on primary keys
+
 ## Version 3.7.1
 
-#### Features
+#### Features:
 
 - Setting `MaxLoginAttempts` in ConnectionManagers to 2 as default value
 - `OdbcConnectionManager` (and derived) now supports setting ConnectionTimeout via property
@@ -28,7 +44,7 @@ toc: true
 
 ## Version 3.7.0
 
-#### Features
+#### Features:
 
 - Distinct: Added counter properties for distinct and duplicate values
 - DataTypeCheck: Added counter properties for valid and flawed rows
@@ -49,7 +65,7 @@ _Resolved issues with corrupted packaging in version 3.6.0. This release contain
 
 ## Version 3.6.0
 
-#### Features
+#### Features:
 
 _This release includes an anonymous installation tracking feature to help us understand how often ETLBox is installed and improve the product. No personal data is collected, and the tracking applies only to free users without a license key. If you want to disable this feature or would like to have more information about it, please contact us!_
 
