@@ -12,8 +12,6 @@ pinned: false
 homepage: false
 ---
 
-{{< discount_referral >}}
-
 ![Article Banner](banner.png)
 
 ## Basic Example Scenario
@@ -528,4 +526,3 @@ You could further enhance the dynamic nature of your data flow by creating targe
 
 Merging data is a key skill that helps keep your business information accurate and useful. Whether you're working with a few records or millions of them, using the right methods can save time, reduce mistakes, and make your processes smoother. Tools like ETLBox can make this even easier by helping you clean, transform, and load your data quickly and efficiently. By using these techniques and tools, you can ensure your data is always up-to-date and your business stays ahead in the data-driven world.
 
-{{< discount_mail >}}
