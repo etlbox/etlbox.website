@@ -46,3 +46,12 @@
 .pricing .plan-features {
   border-top: solid 1px #ddd;
 }
+
+.equal-switch-wrap {
+  position: relative;
+  min-height: 7rem;      /* Höhe für beide Textvarianten, anpassen nach Bedarf */
+}
+.equal-switch-wrap .switch-pane {
+  position: absolute;
+  inset: 0;
+}

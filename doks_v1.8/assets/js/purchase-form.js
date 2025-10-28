@@ -34,90 +34,89 @@ customerSlider.addEventListener('input', () => {
 });
 
 //Price calculation
-
 document.addEventListener("DOMContentLoaded", function () {
-  const licenseType = document.getElementById("licensetype");
-  const developers = document.getElementById("developers");
-  const isSaaS = document.getElementById("isSaaS");
-  const smallCompany = document.getElementById("smallCompany");
-  const country = document.getElementById("country");
-  const customersRow = document.getElementById("customers-row");
-  const priceDisplay = document.getElementById("license-price");
-  const vatInfo = document.getElementById("vat-info-row");
+  const licenseType   = document.getElementById("licensetype");
+  const developers    = document.getElementById("developers");
+  const isSaaS        = document.getElementById("isSaaS");
+  const smallCompany  = document.getElementById("smallCompany");
+  const country       = document.getElementById("country");
 
-  const payNowText = document.getElementById("pay-now-text");
-  const payNowButton = document.getElementById("pay-now-button");
-  const requestText = document.getElementById("request-text");
+  const customersRow  = document.getElementById("customers-row");
+  const priceDisplay  = document.getElementById("license-price");
+  const vatInfoRow    = document.getElementById("vat-info-row");
+  const vatInfoText   = document.getElementById("vat-info");
+
+  const payNowText    = document.getElementById("pay-now-text");
+  const payNowButton  = document.getElementById("pay-now-button");
+  const requestText   = document.getElementById("request-text");
   const requestButton = document.getElementById("request-button");
 
-  const devScale = [1,2,3,4,5,6,7,8,9,'10+'];
+  const devScale = [1, 2, 3, 4, 5, 6, 7, 8, 9, '10+'];
+
+  function setInvisible(el, yes) {
+    if (!el) return;
+    el.classList.toggle("invisible", yes);
+  }
+
+  function setHidden(el, yes) {
+    if (!el) return;
+    el.classList.toggle("d-none", yes);
+  }
 
   function updateFormState() {
-    const type = licenseType.value;
-    const devScaled = devScale[parseInt(developers.value, 10)];
-    const isTenPlus = devScaled === '10+';
-    const devCount = typeof devScaled === 'number' ? devScaled : null;
-    const saas = isSaaS.checked;
-    const small = smallCompany.checked;
-    const countryValue = country.value;
+    const type       = licenseType.value;
+    const devScaled  = devScale[parseInt(developers.value, 10)];
+    const isTenPlus  = devScaled === '10+';
+    const devCount   = typeof devScaled === 'number' ? devScaled : null;
+    const saas       = isSaaS.checked;
+    const small      = smallCompany.checked;
+    const countryVal = country.value;
 
-    // Toggle customer slider visibility
-    customersRow.style.display = (type === "purchaseenterprise") ? "" : "none";
+    // Customers block (Platz behalten)
+    // -> sichtbar bei Enterprise ODER Company + SaaS
+    const showCustomers = (type === "purchaseenterprise") || (type === "purchasecompany" && saas);
+    setInvisible(customersRow, !showCustomers);
 
-    // Determine price logic
-    let priceText = "Get a quote";
+    // Preislogik
     let isPayable = false;
-    let netPrice = 0;
+    let priceText = "Get a quote";
     let vatApplied = false;
 
     if (type === "purchasecompany" && !saas && !small && !isTenPlus && devCount >= 1 && devCount <= 9) {
-      netPrice = devCount * 999;
-      isPayable = true;
-
-      if (countryValue === "Germany") {
+      let net = devCount * 999;
+      if (countryVal === "Germany") {
         vatApplied = true;
-        const grossPrice = netPrice * 1.19;
-        priceText = `€ ${grossPrice.toLocaleString("de-DE", {minimumFractionDigits: 2})}`;
+        priceText = `€ ${(net * 1.19).toLocaleString("de-DE", { minimumFractionDigits: 2 })}`;
       } else {
-        priceText = `€ ${netPrice.toLocaleString("de-DE")}`;
+        priceText = `€ ${net.toLocaleString("de-DE")}`;
       }
+      isPayable = true;
     }
 
-    // Update price display
     priceDisplay.textContent = priceText;
 
-    // VAT info text
+    // VAT Info (Platz behalten)
     if (isPayable) {
-      vatInfo.style.display = "";
-      const infoText = vatApplied
+      setInvisible(vatInfoRow, false);
+      vatInfoText.textContent = vatApplied
         ? "Total including 19% VAT"
         : "Total without VAT (Reverse charge may apply)";
-      document.getElementById("vat-info").textContent = infoText;
     } else {
-      vatInfo.style.display = "none";
+      setInvisible(vatInfoRow, false);
+      vatInfoText.textContent = "Please get a quote for pricing details.";
     }
 
-    // Toggle Pay Now / Request sections
-    if (isPayable) {
-      payNowText.style.display = "";
-      payNowButton.style.display = "";
-      requestText.style.display = "none";
-      requestButton.style.display = "none";
-    } else {
-      payNowText.style.display = "none";
-      payNowButton.style.display = "none";
-      requestText.style.display = "";
-      requestButton.style.display = "";
-    }
+    // Pay Now vs Request (echtes Umschalten)
+    setHidden(payNowText,   !isPayable);
+    setHidden(payNowButton, !isPayable);
+    setHidden(requestText,   isPayable);
+    setHidden(requestButton, isPayable);
   }
 
-  // Initial setup
   updateFormState();
 
-  // Event listeners
   [licenseType, developers, isSaaS, smallCompany, country].forEach(el => {
     el.addEventListener("change", updateFormState);
     el.addEventListener("input", updateFormState);
   });
 });
-

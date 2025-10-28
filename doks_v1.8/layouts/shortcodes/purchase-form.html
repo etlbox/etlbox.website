@@ -302,6 +302,16 @@
         </div>
     </div>
 
+    <div class="row mb-2">
+        <div class="col-md-8 offset-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="smallCompany" name="smallCompany">
+                <label class="form-check-label small" for="smallCompany">
+                    I qualify for the Small-Company Discount (< 1 M € annual revenue) </label>
+            </div>
+        </div>
+    </div>
+
 
     <div class="row mb-2">
         <label class="col-md-4 col-form-label" for="developers">Number of Developers:</label>
@@ -313,7 +323,7 @@
         </div>
     </div>
 
-    <div class="row mb-2" id="customers-row">
+    <div class="row mb-2" id="customers-row" class="invisible">
         <label class="col-md-4 col-form-label" for="customers">Estimated Number of Customers:</label>
         <div class="col-md-8">
             <input type="range" class="form-range" id="customers" name="customers" min="0" max="9" step="1" value="0">
@@ -323,32 +333,38 @@
         </div>
     </div>
 
-    <div class="row mb-2">
+    <div class="row mb-4" id="price-row">
         <div class="col-md-8 offset-md-4">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="smallCompany" name="smallCompany">
-                <label class="form-check-label small" for="smallCompany">
-                    I qualify for the Small-Company Discount (< 1 M € annual revenue) </label>
+            <div class="border rounded p-3 d-flex justify-content-between align-items-center">
+                <div class="h5 fw-semibold text-primary mb-0">Total Price</div>
+                <div class="display-6 fw-bold mb-0" id="license-price">€ 999</div>
             </div>
         </div>
     </div>
 
-    <div class="row mb-4" id="price-row">
-        <div class="col-md-8 offset-md-4">
-          <div class="border rounded p-3 d-flex justify-content-between align-items-center">
-            <div class="h5 fw-semibold text-primary mb-0">Total Price</div>
-            <div class="display-6 fw-bold mb-0" id="license-price">€ 999</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-4" id="vat-info-row">
+    <div class="row mb-4" id="vat-info-row" class="invisible">
         <div class="col-md-8 offset-md-4 small text-muted" id="vat-info">
-          Total without VAT (Reverse charge may apply)
+            Total without VAT (Reverse charge may apply)
         </div>
-      </div>
+    </div>
 
-    <div class="row mb-2 mt-5" id="pay-now-text">
+    <div class="row" id="pay-now-button" class="invisible">
+        <div class="col-md-8 offset-md-4 mt-2">
+            <button type="submit" class="btn btn-primary rounded-pill btn-lg">
+                Pay Now <i class="bi-credit-card"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="row" id="request-button" class="hidden">
+        <div class="col-md-8 offset-md-4 mt-2">
+            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request Purchase <i
+                    class="bi-envelope"></i></button>
+        </div>
+    </div>
+
+    <div class="row mb-2 mt-5" id="pay-now-text" class="text-block-6rem">
         <div class="col-md-8 offset-md-4 text-muted">
             <b>You can now click the button below to proceed with your payment.</b><br /><br />
             You will be redirected to our secure payment provider <a href="https://stripe.com"
@@ -357,15 +373,7 @@
         </div>
     </div>
 
-    <div class="row" id="pay-now-button">
-        <div class="col-md-8 offset-md-4 mt-2">
-            <button type="submit" class="btn btn-primary rounded-pill btn-lg">
-                Pay Now <i class="bi-credit-card"></i>
-            </button>
-        </div>
-    </div>
-
-    <div class="row mb-2 mt-5" id="request-text">
+    <div class="row mb-2 mt-5" id="request-text" class="hidden text-block-6rem">
         <div class="col-md-8 offset-md-4 text-muted">
             <b>Your request will be reviewed before payment.</b><br /><br />
             Please click the button below to submit your purchase request.
@@ -373,10 +381,5 @@
         </div>
     </div>
 
-    <div class="row" id="request-button">
-        <div class="col-md-8 offset-md-4">
-            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request Purchase <i
-                    class="bi-envelope"></i></button>
-        </div>
-    </div>
+
 </form>
