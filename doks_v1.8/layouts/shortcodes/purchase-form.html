@@ -1,4 +1,4 @@
-<form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success" class="container mt-4">
+<form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success" class="container mt-4 needs-validation" novalidate>
 
     <div class="mb-3 h5">Contact Information</div>
 
@@ -52,7 +52,7 @@
         <label class="col-md-4 col-form-label" for="country">Country <span class="text-danger">(*)</span>:</label>
         <div class="col-md-8">
             <select id="country" name="country" required>
-                <option value="">Select your country</option>
+                <option value="" disabled selected hidden>Select your country</option>
                 <option>Afghanistan</option>
                 <option>Albania</option>
                 <option>Algeria</option>
@@ -247,6 +247,7 @@
                 <option>Zambia</option>
                 <option>Zimbabwe</option>
             </select>
+            <div class="invalid-feedback">Please select your country.</div>
         </div>
     </div>
 
@@ -359,7 +360,7 @@
 
     <div class="row" id="request-button" class="hidden">
         <div class="col-md-8 offset-md-4 mt-2">
-            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request Purchase <i
+            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request a Quote <i
                     class="bi-envelope"></i></button>
         </div>
     </div>

@@ -6,9 +6,8 @@ images: []
 toc: false
 ---
 
-Thanks for your interest in ETLBox.
-Please fill out the details below.
+Almost there!
 
-We will verify your request and get back to you normally within 24 hours.
+Provide a few quick details to complete your ETLBox license — or request a personalized quote if you need one.
 
 {{< purchase-form >}}
