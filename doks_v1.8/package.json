@@ -20,7 +20,8 @@
     "@thulite/images": "^3.3.0",
     "@thulite/inline-svg": "^1.1.0",
     "@thulite/seo": "^2.4.1",
-    "thulite": "^2.5.0"
+    "thulite": "^2.5.0",
+    "tom-select": "^2.3.1"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

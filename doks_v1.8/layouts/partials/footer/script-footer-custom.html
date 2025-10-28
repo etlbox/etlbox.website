@@ -17,6 +17,10 @@
   {{ partial "footer/esbuild" (dict "src" "js/glide-carousels.js" "load" "defer" "transpile" false) -}}
 {{ end -}}
 
+{{ if eq .RelPermalink "/support/contact/purchase/" }}
+  {{ partial "footer/esbuild" (dict "src" "js/purchase-form.js" "load" "defer" "transpile" true) }}
+{{ end }}
+
 {{ if eq (hugo.Environment) "production" -}}
   <script defer data-domain="etlbox.net" src="https://plausible.io/js/script.js" crossorigin="anonymous"></script>
 {{ end -}}
