@@ -49,6 +49,7 @@
     public,
     max-age=31536000'''
     Access-Control-Allow-Origin = "*"
+    User-Agent = "Hugo-Netlify-Build"
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
