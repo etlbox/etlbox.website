@@ -84,3 +84,7 @@ copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
   hint = "photo"
   quality = 85
   resampleFilter = "Lanczos"
+
+[markup.kroki]
+  enable = true
+  serverURL = "https://kroki.politemeadow-ee7e4ce9.westeurope.azurecontainerapps.io/"
