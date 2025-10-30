@@ -87,4 +87,4 @@ copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
 
 [markup.kroki]
   enable = true
-  serverURL = "https://kroki.politemeadow-ee7e4ce9.westeurope.azurecontainerapps.io/"
+  serverURL = "https://kroki.politemeadow-ee7e4ce9.westeurope.azurecontainerapps.io"
