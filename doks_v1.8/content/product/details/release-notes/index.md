@@ -11,6 +11,16 @@ weight: 120
 toc: true
 ---
 
+## Version 3.7.3
+
+#### Features:
+
+- Adding support for Oracle with .NET Framework
+
+#### Bug Fixes:
+
+- Fixing issue where DbMerge did not delete rows in full merge mode
+
 ## Version 3.7.2
 
 #### Features:
@@ -21,7 +31,7 @@ toc: true
 - Extending logging messages on Debug leve
 - Improving exception messages when http client timeout is exceeded
 
-### Bug Fixes:
+#### Bug Fixes:
 
 - Fixed bug where Unparsed data of XmlSource led to invalid xml with special chars
 - Added default configuration for BadDataFound in CsvSource
