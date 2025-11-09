@@ -50,8 +50,8 @@ dotnet add package ETLBox.Json
 {{< /tab >}}
 {{< tab "Package Manager" >}}
 ```ps1
-PM> NuGet\Install-Package ETLBox -Version 3.7.2
-PM> NuGet\Install-Package ETLBox.Json -Version 3.7.2
+PM> NuGet\Install-Package ETLBox -Version 3.7.3
+PM> NuGet\Install-Package ETLBox.Json -Version 3.7.3
 ```
 {{< smallnote >}}
 This command is intended to be used within the Package Manager Console in Visual Studio, as it uses the NuGet module's version of {{< link-ext url="https://docs.microsoft.com/nuget/reference/ps-reference/ps-ref-install-package" text="Install-Package" >}}.
@@ -59,8 +59,8 @@ This command is intended to be used within the Package Manager Console in Visual
 {{< /tab >}}
 {{< tab "PackageReference" >}}
 ```xml
-<PackageReference Include="ETLBox" Version="3.7.2" />
-<PackageReference Include="ETLBox.Json" Version="3.7.2" />
+<PackageReference Include="ETLBox" Version="3.7.3" />
+<PackageReference Include="ETLBox.Json" Version="3.7.3" />
 ```
 {{< smallnote >}}
 For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files" text="PackageReference" >}}, copy this XML node into the project file to reference the package.
@@ -68,8 +68,8 @@ For projects that support {{< link-ext url="https://docs.microsoft.com/nuget/con
 {{< /tab >}}
 {{< tab "Script and Interactive" >}}
 ```cmd
-> #r "nuget: ETLBox, 3.7.2"
-> #r "nuget: ETLBox.Json, 3.7.2"
+> #r "nuget: ETLBox, 3.7.3"
+> #r "nuget: ETLBox.Json, 3.7.3"
 ```
 {{< smallnote >}}
 #r directive can be used in F# Interactive and Polyglot Notebooks. Copy this into the interactive tool or source code of the script to reference the package.

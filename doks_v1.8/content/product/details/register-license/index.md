@@ -231,7 +231,7 @@ For further details, see {{< link-ext text="GitHub’s NuGet authentication guid
 To avoid conflicts when using both NuGet.org and GitHub package feeds, the license-free versions in the GitHub feed always have an additional `.1` at the end.
 
 For example:
-- If the official ETLBox version on NuGet.org is `3.7.2`,
-- The corresponding GitHub feed version will be `3.7.2.1`.
+- If the official ETLBox version on NuGet.org is `3.7.3`,
+- The corresponding GitHub feed version will be `3.7.3.1`.
 
 This ensures that you can install both feeds without versioning conflicts in your project.
