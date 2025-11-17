@@ -82,6 +82,9 @@ mainSections = ["product","docs","recipes"]
   docsRepoBranch = "main/doks_v1.8" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
+  #Kroki
+  #IMPORTANT: Always needs the / at the end
+  krokiURL = "https://kroki.etlbox.dev/"
 
   # SCSS colors
   # backGround = "yellowgreen"
