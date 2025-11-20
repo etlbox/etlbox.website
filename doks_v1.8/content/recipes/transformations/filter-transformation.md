@@ -1,7 +1,7 @@
 ---
-title: "Filter Transformation"
-description: "Examples and code recipes for the FilterTransformation component."
-lead: "This article contains example code that shows the usage of the FilterTransformation component."
+title: "Where Transformation"
+description: "Examples and code recipes for the WhereTransformation component."
+lead: "This article contains example code that shows the usage of the WhereTransformation component."
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-{{< alert text="Instead of the FilterTransformation, you can also use Linking with different Predicates to achieve the same behaviour. <a href=\"/docs/introduction/linking\">Read more about linking with predicates</a>" >}}
+{{< alert text="Instead of the WhereTransformation, you can also use Linking with different Predicates to achieve the same behaviour. <a href=\"/docs/introduction/linking\">Read more about linking with predicates</a>" >}}
 
 
 ## Filter with POCO
@@ -33,9 +33,9 @@ public void ExampleFilterPoco() {
     source.DataAsList.Add(new MyRow() { Id = 2, Value = "Test2" });
     source.DataAsList.Add(new MyRow() { Id = 3, Value = "Test3" });
 
-    var filter = new FilterTransformation<MyRow>();
-    filter.FilterPredicate = row => {
-        return row.Id == 2;
+    var filter = new WhereTransformation<MyRow>();
+    filter.Predicate = row => {
+        return row.Id != 2;
     };
 
     var dest = new MemoryDestination<MyRow>();
@@ -113,7 +113,7 @@ public void ExampleFilterLinkingWithPredicateAndImplicitVoid() {
 
 ## Filter transformation with dynamic
 
-This examples shows how the `FilterTransformation` can be used with dynamic `ExpandoObject`.
+This examples shows how the `WhereTransformation` can be used with dynamic `ExpandoObject`.
 
 ```C#
 var source = new MemorySource();
@@ -127,10 +127,10 @@ dynamic r3 = new ExpandoObject();
 r3.Id = 3; r3.Value = "Test3";
 source.DataAsList.Add(r3);
 
-var filter = new FilterTransformation();
-filter.FilterPredicate = row => {
+var filter = new WhereTransformation();
+filter.Predicate = row => {
     dynamic r = row;
-    return r.Id == 2;
+    return r.Id != 2;
 };
 
 var dest = new MemoryDestination();

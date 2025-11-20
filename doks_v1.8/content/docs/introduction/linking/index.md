@@ -103,17 +103,17 @@ source.LinkTo(voidDest, row => row.Id <= 0);
 
 This ignores rows where `Id <= 0`.
 
-### Filtering Data with FilterTransformation
+### Filtering Data with WhereTransformation
 
-The `FilterTransformation` component in ETLBox filters rows in your data flow based on a condition defined by a predicate. The predicate is a function that returns `true` for rows that should pass through and `false` for rows that should be discarded.
+The `WhereTransformation` component in ETLBox filters rows in your data flow based on a condition defined by a predicate. The predicate is a function that returns `true` for rows that should pass through and `false` for rows that should be discarded.
 
 Example usage:
 
 ```csharp
 var source = new CsvSource<MyRow>("data.csv");
 
-var filter = new FilterTransformation<MyRow>();
-filter.FilterPredicate = row => row.Id > 0;
+var filter = new WhereTransformation<MyRow>();
+filter.Predicate = row => row.Id > 0;
 
 var dest = new MemoryDestination<MyRow>();
 

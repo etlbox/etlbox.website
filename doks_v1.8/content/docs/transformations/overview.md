@@ -72,7 +72,7 @@ Settings.MaxBufferSize = 10000; // Global default
 | [ColumnTransformation](../column)      | Renames, reorders, or removes columns; outputs dynamic ExpandoObject        |
 | [DbTypeCheck](../../relational-databases/db-type-check)      | Checks incoming data against a table definition.   |
 | [Distinct](../distinct)                  | Removes duplicate rows                                                      |
-| [FilterTransformation](../filter)      | Filters rows based on a predicate                                           |
+| [WhereTransformation](../filter)      | Filters rows based on a predicate                                           |
 | [LookupTransformation](../lookup)      | Enriches rows using an in-memory lookup                                    |
 | [MergeJoin](../merge-join)                 | Joins two input streams using a match function                             |
 | [Multicast](../multicast)                 | Forwards each row to multiple outputs                                       |
@@ -95,7 +95,7 @@ Settings.MaxBufferSize = 10000; // Global default
 
 **Distinct**: Removes duplicate rows by comparing content and allowing only the first occurrence.
 
-**FilterTransformation**: Excludes rows that do not satisfy a specified condition.
+**WhereTransformation**: Excludes rows that do not satisfy a specified condition.
 
 **LookupTransformation**: Adds fields to each row by matching values from a preloaded lookup dataset.
 

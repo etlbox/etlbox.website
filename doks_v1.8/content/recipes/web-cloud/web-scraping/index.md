@@ -168,11 +168,11 @@ source.ReadingCompleted = _ => currentYear > EndYear;
 
 ### Filtering invalid data
 
-The scraper that we created above has a flaw: Some records don't have a valid year, the year contains the number 1. We can filter them out using the `FilterTransformation`.
+The scraper that we created above has a flaw: Some records don't have a valid year, the year contains the number 1. We can filter them out using the `WhereTransformation`.
 
 ```C#
-var filter = new FilterTransformation<Accident>();
-filter.FilterPredicate = accident => accident.Year <= 1;
+var filter = new WhereTransformation<Accident>();
+filter.Predicate = accident => accident.Year > 1;
 ```
 
 {{< alert text="There are other ways of handling flawed data. You can use Exceptions and the LinkErrorTo() to redirect exceptional data into different destinations." >}}

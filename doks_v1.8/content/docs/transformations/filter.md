@@ -1,7 +1,7 @@
 ---
-title: "Filter Transformation"
-description: "Explains how to use FilterTransformation to remove rows from a data flow based on a predicate. Includes usage with strongly typed and dynamic objects, alternative predicate-based linking, error handling, and row count tracking."
-lead: "The <code>FilterTransformation</code> is used to remove rows from a data flow based on a specified condition. It evaluates each row using a <b>predicate function</b> — if the predicate returns <code>true</code>, the row is kept; otherwise, it is filtered out and not passed on."
+title: "Where Transformation"
+description: "Explains how to use WhereTransformation to remove rows from a data flow based on a predicate. Includes usage with strongly typed and dynamic objects, alternative predicate-based linking, error handling, and row count tracking."
+lead: "The <code>WhereTransformation</code> is used to remove rows from a data flow based on a specified condition. It evaluates each row using a <b>predicate function</b> — if the predicate returns <code>true</code>, the row is kept; otherwise, it is filtered out and not passed on."
 draft: false
 images: []
 menu:
@@ -13,7 +13,7 @@ chatgpt-review: true
 ---
 
 {{< callout context="tip" icon="outline/rocket" >}}
-The `FilterTransformation` is not the only method to apply filtering. You can also use predicates directly when linking components. See the [Using predicates when linking](#using-predicates-when-linking) section for examples.
+The `WhereTransformation` is not the only method to apply filtering. You can also use predicates directly when linking components. See the [Using predicates when linking](#using-predicates-when-linking) section for examples.
 {{< /callout >}}
 
 - **Type**: Non-blocking transformation
@@ -22,7 +22,7 @@ The `FilterTransformation` is not the only method to apply filtering. You can al
 
 ## Example
 
-The following example demonstrates how to filter rows based on the `Id` property using a `FilterTransformation`.
+The following example demonstrates how to filter rows based on the `Id` property using a `WhereTransformation`.
 
 ```csharp
 public class MyRow {
@@ -36,8 +36,8 @@ public static void Main() {
     source.DataAsList.Add(new MyRow() { Id = 2, Value = "Test2" });
     source.DataAsList.Add(new MyRow() { Id = 3, Value = "Test3" });
 
-    var filter = new FilterTransformation<MyRow>();
-    filter.FilterPredicate = row => row.Id == 2;
+    var filter = new WhereTransformation<MyRow>();
+    filter.Predicate = row => row.Id != 2;
 
     var dest = new MemoryDestination<MyRow>();
 
@@ -55,7 +55,7 @@ public static void Main() {
 
 ## Using Predicates When Linking
 
-Instead of using a dedicated `FilterTransformation`, you can apply filtering directly when linking components:
+Instead of using a dedicated `WhereTransformation`, you can apply filtering directly when linking components:
 
 ### Example – Basic Predicate Filtering
 
@@ -91,7 +91,7 @@ Network.Execute(source);
 
 ## Dynamic Objects
 
-`FilterTransformation` also works with dynamic inputs (`ExpandoObject`). You can use dynamic access within the predicate function:
+`WhereTransformation` also works with dynamic inputs (`ExpandoObject`). You can use dynamic access within the predicate function:
 
 ```csharp
 public void ExampleFilterDynamic() {
@@ -104,8 +104,8 @@ public void ExampleFilterDynamic() {
     source.DataAsList.Add(r2);
     source.DataAsList.Add(r3);
 
-    var filter = new FilterTransformation();
-    filter.FilterPredicate = row => ((dynamic)row).Id == 2;
+    var filter = new WhereTransformation();
+    filter.Predicate = row => ((dynamic)row).Id != 2;
 
     var dest = new MemoryDestination();
 
@@ -123,7 +123,7 @@ public void ExampleFilterDynamic() {
 
 ## Error Handling
 
-`FilterTransformation` supports error redirection using `LinkErrorTo()`. If the predicate throws an exception, it can be caught and routed to another component:
+`WhereTransformation` supports error redirection using `LinkErrorTo()`. If the predicate throws an exception, it can be caught and routed to another component:
 
 ```csharp
 var errorDest = new MemoryDestination<ETLBoxError>();
@@ -131,12 +131,12 @@ filter.LinkErrorTo(errorDest);
 ```
 
 {{< callout context="note" icon="outline/info-circle" >}}
-This behavior is only available when using the `FilterTransformation`. If you use predicates directly in `LinkTo`, exceptions are silently ignored and the affected row is discarded.
+This behavior is only available when using the `WhereTransformation`. If you use predicates directly in `LinkTo`, exceptions are silently ignored and the affected row is discarded.
 {{< /callout>}}
 
 ## FilteredCount and PassedCount
 
-To monitor the result of filtering, `FilterTransformation` exposes the following metrics:
+To monitor the result of filtering, `WhereTransformation` exposes the following metrics:
 
 - `FilteredCount`: Number of rows that were removed (predicate returned `false`)
 - `PassedCount`: Number of rows passed on (predicate returned `true`)
@@ -144,8 +144,8 @@ To monitor the result of filtering, `FilterTransformation` exposes the following
 ### Example:
 
 ```csharp
-var filter = new FilterTransformation<MyRow>();
-filter.FilterPredicate = row => row.Id != 2;
+var filter = new WhereTransformation<MyRow>();
+filter.Predicate = row => row.Id != 2;
 
 source.LinkTo(filter).LinkTo(dest);
 Network.Execute(source);
