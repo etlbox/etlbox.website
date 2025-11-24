@@ -1,9 +1,0 @@
-[en]
-  languageName = "English"
-  contentDir = "content/en"
-  weight = 10
-  [en.params]
-    languageISO = "EN"
-    languageTag = "en-US"
-    footer = 'Brought to you by <a class="text-muted" href="https://www.etlboxperts.net/">ETLBoxperts</a>'
-    alertText = '<a class="alert-link stretched-link fw-normal" href="/product/release-notes/">A new version was just released!</a>'

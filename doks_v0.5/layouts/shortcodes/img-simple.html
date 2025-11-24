@@ -1,7 +1,0 @@
-{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
-{{ if ne $image.MediaType.SubType "svg" }}
-{{ $lqip := $image.Resize $.Site.Params.lqipWidth -}}
-<img class="img-simple img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
-{{ else -}}
-<img class="img-simple img-fluid lazyload blur-up" src="{{ $image.Permalink }}" data-src="{{ $image.Permalink }}" {{ with .Get "width" }}width="{{.}}"{{ end }} {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
-{{- end }}
