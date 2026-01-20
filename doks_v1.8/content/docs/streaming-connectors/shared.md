@@ -33,6 +33,15 @@ source.ResourceType = ResourceType.File; // Default setting
 CsvDestination dest = new CsvDestination("C:/data/output.csv");
 ```
 
+#### Reading whole Folder
+
+The `Folder` property is a shortcut to use all the files inside a folder as an input. When set, this will iterate through the folder and process these files.
+
+```csharp
+CsvSource source = new CsvSource();
+source.Folder = "C:/data";
+```
+
 ### HTTP-Based Processing (REST APIs, Web Services)
 
 Streaming connectors support REST API and Web Services integration by changing the `ResourceType` to `Http`.
