@@ -1,6 +1,6 @@
 ---
 title: "Installation and Setup"
-description: ""
+description: "Get up and running with ETLBox.DbExtensions in minutes. This overview covers installation via NuGet, configuring a database provider, and executing your first bulk operation."
 lead: "Get started with <b>ETLBox.DbExtensions</b> in just a few minutes. This guide walks you through the installation via NuGet, setting up the required database provider, and running your first bulk operation."
 draft: false
 images: []

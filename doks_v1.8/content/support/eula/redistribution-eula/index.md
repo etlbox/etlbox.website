@@ -1,19 +1,19 @@
 ---
 title: "Redistribution End-user License Agreement"
-description: "The redistribution EULA for the REDISTRIBUTABLE license."
-lead: "This EULA allows redistribution of ETLBox and comes with the REDISTRIBUTABLE package."
+description: "The redistribution EULA for the ENTERPRISE OEM license."
+lead: "This EULA allows redistribution of ETLBox and comes with the ENTERPRISE OEM license."
 draft: false
 images: []
 weight: 100
 toc: false
 ---
 
-For other licenses than our REDISTRIBUTABLE license, please refer to our [Standard EULA](/support/eula/standard-eula).
+For other licenses than our ENTERPRISE OEM license, please refer to our [Standard EULA](/support/eula/standard-eula).
 
 {{< nowrap-code >}}
 Redistribution End-user License Agreement
 
-(C) 2025 ETLBoxperts GmbH
+(C) 2026 ETLBoxperts GmbH
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 
@@ -25,7 +25,7 @@ Subject to the payment of the fee required and subject to the terms and conditio
 Additionally, you are permitted to use the Software as part of a customer solution, where the Software is integrated into a product or service you offer to end customers, provided that the Software is embedded within your own application and cannot be independently accessed or used by your customers. Your end customers are not permitted to use the Software outside the scope of the product or service you provide, nor are they allowed to redistribute it.
 
 2. PERMITTED USES, SOURCE CODE, MODIFICATIONS
-We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.
+Source Code Access is a paid add-on. We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.
 
 3. DISTRIBUTION
 You may distribute the Software as part of Your applications, frameworks, or solutions (collectively referred to as “Applications”) in accordance with this License Agreement, provided that the Software is embedded within Your Applications and cannot be used independently by end customers.

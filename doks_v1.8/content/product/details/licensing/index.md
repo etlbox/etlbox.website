@@ -63,9 +63,9 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 
 **Key Features:**
 - **Redistribution Rights:** Package ETLBox with your product, no end-user license checks required.
-- **Source Code Access:** Full access to ETLBox source code, included by default.
 - **White-Label Friendly:** No requirement to mention ETLBox in your product.
 - **SaaS Deployment**: Use ETLBox as part of a cloud-based, multi-tenant, or on-demand service.
+- **Source Code Access:** Available as an optional add-on.
 
 **License Details:**
 - **License Model:** Annual base fee + per-customer fee.
@@ -90,7 +90,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 | **Licensing Model**       | Not for commercial use             | Per-developer                          | Base fee + per-customer fee          |
 | **License Duration**      | Unlimited                          | 1 year (renewable annually)            | 1 year (renewable annually)          |
 | **Row Limit**             | 5,000 rows per DataFlow            | Unlimited                              | Unlimited                            |
-| **Source Code Access**    | Not included                       | Optional (paid add-on)                 | Included                             |
+| **Source Code Access**    | Not included                       | Optional (paid add-on)                 | Optional (paid add-on)                             |
 | **License Checks**        | Not required                       | Required                                | Not required                         |
 | **Branding Requirements** | Not for commercial use             | No ETLBox branding required            | No ETLBox branding required          |
 
