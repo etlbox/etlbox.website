@@ -574,3 +574,90 @@ A         5         A         null      A
 A         4         null      3         ToDelete
 */
 ```
+
+
+## Analyzing Delta Output
+
+This example performs a full database merge between an in-memory data set and an existing SQL Server table, detecting inserts, updates, deletes, and unchanged records based on the primary key.
+The merge output is then aggregated by change type (ChangeAction) to count how many records fall into each category.
+
+```C#
+// convert text source into pfCountry collection
+using ETLBox;
+using ETLBox.ControlFlow;
+using ETLBox.DataFlow;
+using ETLBox.SqlServer;
+using System.Dynamic;
+
+var connString = @"Data Source=localhost;User Id=sa;Password=YourStrong@Passw0rd;Initial Catalog=demo;TrustServerCertificate=true;";
+
+var conn = new SqlConnectionManager(connString);
+
+CreateTableTask.CreateIfNotExists(conn, new TableDefinition() {
+    Name = "Test",
+    Columns = new List<TableColumn>() {
+        new TableColumn() { Name = "Id", DataType = "INT", IsPrimaryKey = true },
+        new TableColumn() { Name = "Value", DataType = "NVARCHAR(100)" }
+    }
+});
+
+TruncateTableTask.Truncate(conn, "Test");
+
+SqlTask.ExecuteNonQuery(conn, "INSERT INTO Test (Id, Value) VALUES (1, 'Update1')");
+SqlTask.ExecuteNonQuery(conn, "INSERT INTO Test (Id, Value) VALUES (2, 'Update2')");
+SqlTask.ExecuteNonQuery(conn, "INSERT INTO Test (Id, Value) VALUES (3, 'Three')");
+SqlTask.ExecuteNonQuery(conn, "INSERT INTO Test (Id, Value) VALUES (7, 'Delete')");
+SqlTask.ExecuteNonQuery(conn, "INSERT INTO Test (Id, Value) VALUES (8, 'Delete')");
+
+var memorysource = new MemorySource();
+memorysource.DataAsList.Add(CreateEntry(1, "One"));
+memorysource.DataAsList.Add(CreateEntry(2, "Two"));
+memorysource.DataAsList.Add(CreateEntry(3, "Three"));
+memorysource.DataAsList.Add(CreateEntry(4, "Four"));
+memorysource.DataAsList.Add(CreateEntry(5, "Five"));
+memorysource.DataAsList.Add(CreateEntry(6, "Six"));
+
+ExpandoObject CreateEntry(int id, string value) {
+    dynamic entry = new ExpandoObject();
+    entry.Id = id;
+    entry.Value = value;
+    return entry;
+}
+
+var merge = new DbMerge() {
+    ConnectionManager = conn,
+    TableName = "Test",
+    MergeMode = MergeMode.Full,
+    IdColumns = new[] {
+        new IdColumn() { IdPropertyName = "Id"}
+    }
+};
+
+var agg = new Aggregation();
+agg.AggregateColumns = new[] {
+    new AggregateColumn() { AggregatedValuePropName = "Count", AggregationMethod = AggregationMethod.Count, InputValuePropName="Id"}
+};
+agg.GroupColumns = new[] {
+    new GroupColumn() { GroupPropNameInInput = "ChangeAction" }
+};
+
+var counterDestination = new MemoryDestination();
+
+
+memorysource.LinkTo(merge);
+merge.LinkTo(agg);
+agg.LinkTo(counterDestination);
+
+Network.Execute(merge);
+
+foreach (dynamic row in counterDestination.Data) {
+    Console.WriteLine($"{row.ChangeAction} : {row.Count} records");
+}
+
+/* Output
+Exists : 1 records
+Update : 2 records
+Insert : 3 records
+Delete : 2 records
+*/
+```
