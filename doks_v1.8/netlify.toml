@@ -52,9 +52,14 @@
     User-Agent = "Hugo-Netlify-Build"
 
 [[plugins]]
+  package = "./netlify-plugins/azure-kroki-vm"
+  [plugins.inputs]
+    krokiUrl = "https://kroki.etlbox.dev/"
+
+[[plugins]]
   package = "netlify-plugin-submit-sitemap"
 
-	[plugins.inputs]
+  [plugins.inputs]
     baseUrl = "https://www.etlbox.net"
     sitemapPath = "/sitemap.xml"
     ignorePeriod = 0

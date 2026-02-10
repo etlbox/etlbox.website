@@ -1,0 +1,7 @@
+name: azure-kroki-vm
+inputs:
+  - name: krokiUrl
+    description: URL of the Kroki endpoint to wait for before running the Netlify build.
+    default: https://kroki.etlbox.dev/
+    required: false
+
