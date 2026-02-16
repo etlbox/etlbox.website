@@ -310,7 +310,11 @@ If you want to measure the performance of the `DbMerge` in your environment, [ha
 
 ## DbMerge With Dynamic Object
 
-The DbMerge also supports the dynamic ExpandoObject. You can assign the id, update, compare and delete columns using the `IdColumns`, `UpdateColumns`, `CompareColumns` and `DeleteColumns` properties.
+The DbMerge also supports the dynamic ExpandoObject. You can assign the id, update, compare and delete columns using the `IdColumns`, `InsertColumns`, `UpdateColumns`, `CompareColumns` and `DeleteColumns` properties.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+By default, `UseUpdateColumnsForInserts` is set to `false`. If you want the same columns for both updates and inserts, you can set `UseUpdateColumnsForInserts = true`, which will automatically use `UpdateColumns` for inserts as well. If you need different columns for inserts, explicitly set `InsertColumns`.
+{{< /callout >}}
 
 ```C#
 private void CreateTableSinglePrimaryKey(IConnectionManager connMan, string tableName) {
@@ -362,6 +366,10 @@ dest.CompareColumns = new[] {
 dest.UpdateColumns = new[] {
     new UpdateColumn() { UpdatePropertyName = "Value1" },
     new UpdateColumn() { UpdatePropertyName= "Value2" },
+};
+dest.InsertColumns = new[] {
+    new InsertColumn() { InsertPropertyName = "Value1" },
+    new InsertColumn() { InsertPropertyName = "Value2" }
 };
 dest.DeleteColumns = new[] {
     new DeleteColumn() { DeleteOnMatchValue = -1, DeletePropertyName = "Value2" }

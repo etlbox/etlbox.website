@@ -284,6 +284,8 @@ DbMerge provides several configuration options to control how data is processed.
 
 - **CompareColumns** / **CompareFunc** – Defines which columns determine if a record has changed. Use either a list of column names or a custom comparison function.
 - **UpdateColumns** – Specifies which columns should be updated. If empty, all non-IdColumns are updated.
+- **InsertColumns** – Specifies which columns should be inserted when new records are added. If empty and `UseUpdateColumnsForInserts` is `true`, the `UpdateColumns` are used for inserts. Otherwise, all columns (except identity columns) are inserted, unless they are explicitly ignored via `DbColumnMap` with `IgnoreColumn = true`.
+- **UseUpdateColumnsForInserts** – If set to `true`, `UpdateColumns` will be used also for inserts when no `InsertColumns` are explicitly specified. Default is `false`.
 - **DeleteColumns** – Identifies records to be deleted in Delta mode.
 - **BatchSize** – Defines the number of records processed per batch.
 - **CacheMode**, **MaxCacheSize**, **EvictionPolicy**, **ReadConnectionManager** – Controls how destination data is cached and read. `ReadConnectionManager` is required when using partial caching with a transactional or persistent connection.
@@ -364,6 +366,26 @@ merge.UpdateColumns = new[] {
 ```
 
 This ensures that only the `Value` column is updated, even if other fields have changed.
+
+### Example: Using InsertColumns
+
+By default, all columns (except identity columns) are inserted when new records are added. If you want to use the same columns for inserts as for updates, you can set `UseUpdateColumnsForInserts = true`, which will automatically use `UpdateColumns` for inserts as well.
+
+If you want different columns for inserts than for updates, you can explicitly set `InsertColumns`.
+
+**Using Properties (POCOs & ExpandoObject)**
+
+```csharp
+var merge = new DbMerge<MyMergeRow>(conn, "DestinationTable") {
+    MergeMode = MergeMode.Full
+};
+
+merge.InsertColumns = new[] {
+    new InsertColumn() { InsertPropertyName = "Value" }
+};
+```
+
+This ensures that only the `Value` column is inserted.
 
 ### Example: Using DeleteColumns for Delta Mode
 

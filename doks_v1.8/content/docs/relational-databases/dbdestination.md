@@ -234,6 +234,28 @@ var dest = new DbDestination<MyRow>() {
 
 Make sure the database allows identity inserts.
 
+### Specifying Insert Columns
+
+By default, `DbDestination` inserts all columns except identity columns. However, you can explicitly specify which columns should be inserted using the `InsertColumns` property. This is useful when you want to exclude certain columns.
+
+```csharp
+var conn = new SqlConnectionManager("Data Source=.;Integrated Security=SSPI;");
+var dest = new DbDestination<MyRow>() {
+    ConnectionManager = conn,
+    TableName = "DestinationTable",
+    InsertColumns = new[] {
+        new InsertColumn() { InsertPropertyName = "Id" },
+        new InsertColumn() { InsertPropertyName = "Value" }
+    }
+};
+```
+
+In this example, only the `Value`, and `CreatedDate` columns will be included in the insert statements, even if the source object contains additional properties.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+Alternatively, you can also exlucde columns from insert operations when using the `DbColumnMap` with `IgnoreColumn = true`.
+{{< /callout >}}
+
 ### BeforeBatchWrite and AfterBatchWrite
 
 `DbDestination` provides two hooks, `BeforeBatchWrite` and `AfterBatchWrite`, which allow executing custom logic before and after each batch insert operation. These hooks can be useful for logging, data transformations, or triggering external processes.
