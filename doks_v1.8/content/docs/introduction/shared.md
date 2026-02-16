@@ -84,7 +84,7 @@ The `Settings` class provides global configuration options that affect all ETLBo
 
 **Buffering and Performance**
 
-- `MaxBufferSize` – Defines the default buffer size for all components (default: 100,000 rows). Each component can override this individually.
+- `MaxBufferSize` – Defines the default buffer size for all components (default: 30,000 rows). Each component can override this individually.
 
 **Database Connection**
 
