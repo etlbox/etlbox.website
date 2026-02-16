@@ -207,7 +207,7 @@ public class Customer : IMergeableRow {
     public string Name { get; set; }
     public string City { get; set; }
 
-    public DateTime ChangeDate { get; set; }
+    public DateTime? ChangeDate { get; set; }
     public ChangeAction? ChangeAction { get; set; }
 }
 ```

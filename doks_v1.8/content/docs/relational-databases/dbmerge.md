@@ -111,7 +111,7 @@ public class MyMergeRow : IMergeableRow {
     public string Value { get; set; }
 
     public ChangeAction? ChangeAction { get; set; } // Required for tracking changes
-    public DateTime ChangeDate { get; set; } // Optional, used for auditing
+    public DateTime? ChangeDate { get; set; } // Optional, used for auditing
 }
 ```
 
