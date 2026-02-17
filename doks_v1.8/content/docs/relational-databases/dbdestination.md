@@ -203,6 +203,19 @@ dest.PropertyToColumnNamesResolver = propName => $"col_{propName}";
 
 With this resolver, `Id` will map to `col_Id` and `Value` will map to `col_Value`.
 
+### Case-insensitive name matching
+
+If your database normalizes identifiers to upper-case or otherwise changes casing (for example, `ID` vs. `Id`), you can let `DbDestination` automatically create case-insensitive mappings between properties and columns.
+
+```csharp
+var dest = new DbDestination<MyRow>(conn, "DestinationTable") {
+    MatchCaseInsensitive = true
+};
+```
+
+When `MatchCaseInsensitive` is set to `true`, `DbDestination` reads the table definition from the database and matches property names to columns without considering case (for example, `value`, `Value`, and `VALUE` are treated as the same name).
+You cannot use this option together with a manually set `PropertyToColumnNamesResolver` or `ColumnMapping` – if you need custom mappings, you must handle case differences yourself.
+
 ## Configuring Inserts
 
 ### Batch Size

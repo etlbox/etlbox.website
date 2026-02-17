@@ -279,6 +279,19 @@ source.ColumnToPropertyNamesResolver = columnName => columnName.Replace("col_", 
 
 With this resolver, `col_Id` will map to `Id` and `col_Value` will map to `Value`. This approach avoids the need for manual column mappings when dealing with databases that use prefixes, different casing, or other variations in column naming.
 
+### Case-insensitive name matching
+
+Some databases store identifiers in upper-case or with inconsistent casing (for example, `COL_ID` vs. `Id`). Instead of configuring a custom resolver or explicit mappings, `DbSource` can automatically create case-insensitive mappings between property names and database columns.
+
+```csharp
+var source = new DbSource<MyRow>(conn, "SourceTable") {
+    MatchCaseInsensitive = true
+};
+```
+
+When `MatchCaseInsensitive` is set to `true`, `DbSource` reads the table definition from the database and matches property names to columns without considering case (for example, `id`, `Id`, and `ID` are treated as the same name).
+You cannot use this option together with a manually set `ColumnToPropertyNamesResolver` or `ColumnMapping` – if you need custom mappings, you must handle case differences yourself.
+
 ## Bulk Selection
 
 Bulk selection is useful when you need to retrieve specific records from a table based on a set of key values. Unlike using a `WHERE` clause in an SQL query, which is static and predefined, bulk selection allows for dynamic filtering at runtime. This is particularly helpful when working with lists of keys that are not known beforehand or need to be processed in batches.

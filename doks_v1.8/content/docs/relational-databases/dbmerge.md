@@ -290,6 +290,7 @@ DbMerge provides several configuration options to control how data is processed.
 - **BatchSize** – Defines the number of records processed per batch.
 - **CacheMode**, **MaxCacheSize**, **EvictionPolicy**, **ReadConnectionManager** – Controls how destination data is cached and read. `ReadConnectionManager` is required when using partial caching with a transactional or persistent connection.
 - **ColumnMapping** – Maps object properties to different database column names.
+- **MatchCaseInsensitive** – When set to `true`, `DbMerge` automatically creates column mappings for properties whose names match destination columns in a case-insensitive manner (for example, property `Key` matches column `KEY`). This is useful on databases that normalize identifiers to upper-case or lower-case. You cannot combine this option with a manually configured `ColumnMapping` – if you need custom mappings, you must handle case differences yourself.
 - **IgnoreDefaultColumnsOnInsert** – Prevents default column values from being explicitly inserted.
 - **UseTruncateMethod** – Truncates the destination table before merging instead of performing deletes.
 - **FindDuplicates** – Detects duplicate records in the input and prevents multiple operations on the same key within a batch.
