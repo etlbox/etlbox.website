@@ -1,7 +1,7 @@
 ---
-title: "DbMerge Performance Test"
-description: "This recipe demonstrates how the performance of the DbMerge could be tested. "
-lead: "This blog post provides a simplified example of how to conduct a performance test for the DbMerge component using the ETLBox library in a C# application."
+title: "Database Performance Tester"
+description: "This recipe shows how to use the MemoryTester console app to benchmark database performance (DbDestination and DbMerge) and observe ETLBox memory consumption while processing large data volumes."
+lead: "The MemoryTester sample application generates large test datasets, runs high-volume DbDestination loads and DbMerge operations, and continuously reports rows processed, elapsed time, and .NET heap usage so you can analyze both performance and memory behaviour of ETLBox in your environment."
 draft: false
 menu:
   recipes:
@@ -10,334 +10,184 @@ weight: 2310
 toc: true
 ---
 
-## Simple Guide to DbMerge Performance
+## Overview
 
-In this blog post, we will look at a simple example that shows how to test the performance of the `DbMerge` component using ETLBox in a C# application. The code includes three main parts: `MergeRow`, `Program`, and `DbHelper`. Let's break down what each part does.
+The **MemoryTester** sample is a console application that combines **performance testing** (for `DbDestination` and `DbMerge`) and **memory-consumption monitoring** in a single tool.
+It creates a simple target table, generates large volumes of synthetic data, and executes bulk loads and delta merges while continuously printing live diagnostics (rows, time, min/avg/max memory).
 
-### MergeRow Class
+The full sample, including supporting types like `DbRow`, is available on GitHub:
+{{< link-ext text="MemoryTester sample on GitHub" url="https://github.com/etlbox/etlbox.demo/tree/main/MemoryTester" >}}.
 
-The `MergeRow` class defines the structure of the data we are working with. It includes several properties that will be used to compare and update data during the merge process.
+## Running the MemoryTester
 
-```C#
-public class MergeRow : MergeableRow
-{
-    [IdColumn]
-    public long Id { get; set; }
+- **Database requirements**
+  - Uses SQL Server by default with a connection string like:
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue1 { get; set; }
+```csharp
+public static string DatabaseName => "demo";
+public static string ConnectionString =
+    $"Data Source=localhost;User Id=sa;Password=YourStrong@Passw0rd;Initial Catalog={DatabaseName};TrustServerCertificate=true;";
+```
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue2 { get; set; }
+  - Make sure the `demo` database exists (or adjust `DatabaseName` / `ConnectionString`).
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue3 { get; set; }
+- **Start the console app**
+  - Build and run the `MemoryTester` project.
+  - A menu is shown and the app waits for commands.
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue4 { get; set; }
+### Available commands
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue5 { get; set; }
+The main menu accepts the following commands:
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue6 { get; set; }
+- **create**: (Re)creates the `TargetTable` with a wide schema (10 BIGINT + 5 string columns, plus change tracking columns).
+- **load100k / load1m / load10m / load100m**:
+  Generate and insert the given number of rows into `TargetTable` using `CustomBatchSource<DbRow>` and `DbDestination<DbRow>`.
+- **merge100k / merge1m / merge10m / merge100m**:
+  Generate a delta of the given size and apply it with `DbMerge<DbRow>` in `MergeMode.Delta`, using partial caching for realistic memory usage.
+- **gc**: Force .NET garbage collection, then print diagnostics again (useful to see the effect of Gen0/1/2 collections).
+- **exit**: Stop the application.
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue7 { get; set; }
+You can also change runtime settings directly from the prompt:
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue8 { get; set; }
+- `batchsize=<value>` – sets `DbDestination.BatchSize` / `DbMerge.BatchSize`.
+- `maxbuffersize=<value>` – sets `ETLBox.Settings.MaxBufferSize`.
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue9 { get; set; }
+Example:
 
-    [CompareColumn]
-    [UpdateColumn]
-    public long LongValue10 { get; set; }
+```csharp
+public static int BatchSize = 1000;
+public static int MaxBufferSize = 20_000;
 
-    [CompareColumn]
-    [UpdateColumn]
-    public string StringValue1 { get; set; }
+ETLBox.Settings.MaxBufferSize = MaxBufferSize;
+```
 
-    [CompareColumn]
-    [UpdateColumn]
-    public string StringValue2 { get; set; }
+Typing `batchsize=5000` or `maxbuffersize=100000` in the console updates these values without restarting the app.
 
-    [CompareColumn]
-    [UpdateColumn]
-    public string StringValue3 { get; set; }
+## Core program structure
 
-    [CompareColumn]
-    [UpdateColumn]
-    public string StringValue4 { get; set; }
+The entry point configures ETLBox, then runs a simple input loop:
 
-    [CompareColumn]
-    [UpdateColumn]
-    public string StringValue5 { get; set; }
+```csharp
+public static async Task Main(string[] args) {
+    string input;
 
+    ETLBox.Licensing.LicenseService.CurrentKey = "... trial key ...";
+    ETLBox.Settings.MaxBufferSize = MaxBufferSize;
+
+    do {
+        Console.WriteLine("\n--- MemoryTester Menu ---");
+        Console.WriteLine("create | load100k | load1m | load10m | load100m | " +
+                          "merge100k | merge1m | merge10m | merge100m | gc | exit");
+        Console.WriteLine($"Current Settings: BatchSize={BatchSize:N0}, MaxBufferSize={MaxBufferSize:N0}");
+        Console.WriteLine("Settings: batchsize=<value> | maxbuffersize=<value>");
+        Console.Write("> ");
+        input = Console.ReadLine()?.Trim().ToLower() ?? "";
+
+        Console.WriteLine();
+
+        if (input.Contains("=")) {
+            HandleSettingChange(input);
+            continue;
+        }
+
+        switch (input) {
+            case "create":
+                CreateTargetTable();
+                break;
+            case "load100k":
+                await LoadDataAsync(100_000);
+                break;
+            case "merge100k":
+                await MergeDataAsync(100_000);
+                break;
+            // ... other load / merge sizes ...
+            case "gc":
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                Console.WriteLine("Garbage Collection completed.");
+                PrintDiagnostics();
+                break;
+        }
+    } while (input != "exit");
 }
 ```
 
-### Program Class
+The `LoadDataAsync` and `MergeDataAsync` methods both call a shared helper `ExecuteWithLiveDiagnostics(..)` that runs the ETL network while printing regular progress lines.
 
-The `Program` class is the main part of the application. It sets up the database connection, configures logging, and starts the ETL (Extract, Transform, Load) process.
+## Live diagnostics: performance and memory
 
-```C#
-internal class Program {
-    //Connection string for local SQL Server
-    //static string connectionString = "Data Source=localhost;User Id=sa;Password=YourStrong@Passw0rd;Initial Catalog=mergetest;TrustServerCertificate=true";
-    //Connection string for azure SQL Server
-    static string connectionString = "Server=tcp:azure.database.windows.net,1433;Initial Catalog=etlboxsupport;Persist Security Info=False;User ID=etlbox;Password=YourStrong@Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;";
+The **live diagnostics** loop periodically queries the current row count and heap usage and keeps track of min/avg/max values for the whole operation:
 
-    static void Main(string[] args) {
+```csharp
+private static async Task ExecuteWithLiveDiagnostics(Network network, string operationName) {
+    var cts = new CancellationTokenSource();
 
-        ETLBoxOffice.LicenseManager.LicenseCheck.LicenseKey =
-            @"2024-01-15|TRIAL|||Support|support@etlbox.net||Lhwz7nAQavV8oa/HHWvX2ukUehx0hIa5IkxoBGMjdPJ9p4tlnDt3iL0XHbj53gRDVqK5vST7Gi9WwM06kPZDLvYyrK8ymvdTFFX/KWkUhjpXZX8CUQ6C86BZzlwm6APLPjlFyXZjoo9OujRMtnyLI4YotO3s2ziPvkrKELhtDMk=";
+    var diagnosticsTask = Task.Run(() => {
+        while (!cts.Token.IsCancellationRequested) {
+            PrintProgressLine(operationName);
+            Thread.Sleep(500); // update every 500 ms
+        }
+    });
 
-        InitializeLoggingWithNlog();
-        Settings.DisableAllLogging = true;
-        var connMan = new SqlConnectionManager(connectionString);
-        DbHelper.CleanSourceTable = true;
-        DbHelper.CreateDatabaseIfNeeded("mergetest", connectionString);
-        DbHelper.CreateTables(connMan);
-
-        Console.WriteLine("Writing test data into source and destination tables ...");
-        Console.WriteLine("This might take a while ...");
-
-        //Test with small number of rows
-        //DbHelper.InsertTestDataSource(connMan, 55, 107);
-        //DbHelper.InsertTestDataDestination(connMan, 25, 70);
-        //Test with medium number of rows
-        //DbHelper.InsertTestDataSource(connMan, 550_123, 1_050_234);
-        //DbHelper.InsertTestDataDestination(connMan, 250_345, 700_456);
-        //Test with large number of rows
-        DbHelper.InsertTestDataSource(connMan, 5_000_123, 10_000_789);
-        DbHelper.InsertTestDataDestination(connMan, 2_500_345, 7_000_456);
-        Settings.DisableAllLogging = false;
-
-        DbSource<MergeRow> source = new() {
-            ConnectionManager = connMan,
-            TableName = "source",
-            DisableLogging = true
-        };
-        DbMerge<MergeRow> merge = new() {
-            ConnectionManager = connMan,
-            TableName = "destination",
-            MergeMode = MergeMode.Full,
-            CacheMode = CacheMode.Full,
-            DisableLogging = false
-        };
-
-        DbDestination<MergeRow> delta = new(connMan, "delta");
-        delta.DisableLogging = true;
-        source.LinkTo(merge);
-        merge.LinkTo(delta);
-        Network.Execute(source);
-
-
+    try {
+        await network.ExecuteAsync(cts.Token);
+    } finally {
+        cts.Cancel();
+        await diagnosticsTask;
+        Console.WriteLine();
     }
+}
 
-    private static void InitializeLoggingWithNlog() {
-        using var loggerFactory = LoggerFactory.Create(builder => {
-            builder
-                .AddFilter("Microsoft", Microsoft.Extensions.Logging.LogLevel.Warning)
-                .AddFilter("System", Microsoft.Extensions.Logging.LogLevel.Warning)
-                .SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace)
-                .AddNLog("nlog.config");
-        });
-        Settings.LogInstance = loggerFactory.CreateLogger("Default");
-        Settings.LogThreshold = 10000;
+private static void PrintProgressLine(string operationName) {
+    long memory = GC.GetTotalMemory(false) / 1024 / 1024;
+    int targetRowCount = GetRowCount("TargetTable");
 
-    }
+    // track min / max / avg memory
+    if (memory < _minMemoryConsumption) _minMemoryConsumption = memory;
+    if (memory > _maxMemoryConsumption) _maxMemoryConsumption = memory;
+    _totalMemoryConsumption += memory;
+    _memoryMeasurementCount++;
+
+    long avgMemory = _memoryMeasurementCount > 0
+        ? _totalMemoryConsumption / _memoryMeasurementCount
+        : 0;
+    TimeSpan elapsed = DateTimeOffset.Now - _operationStartTime;
+
+    string elapsedStr = elapsed.TotalSeconds < 60
+        ? $"{elapsed.TotalSeconds:F0}s"
+        : $"{elapsed.TotalMinutes:F0}m";
+
+    Console.Write($"\r Mem: {memory}MB | Avg: {avgMemory}MB | " +
+                  $"Rows: {targetRowCount:N0} | Time: {elapsedStr}   ");
 }
 ```
 
-### DbHelper Class
+At the end of each operation, `PrintDiagnostics()` summarizes:
 
-The `DbHelper` class includes helper functions for setting up the database, creating tables, and inserting test data. This class makes sure everything is ready for the ETL process.
+- **Row count** and **max ID** in `TargetTable`.
+- **Current, min, avg, max memory** in MB.
+- **Elapsed time** for the operation.
 
-```C#
-internal class DbHelper
-{
+This makes it easy to:
 
+- Compare different **batch sizes** and **MaxBufferSize** values.
+- Evaluate **CacheMode.Full vs. CacheMode.Partial** and eviction policies on the `DbMerge`.
+- Observe how DbMerge behaves when scaling from 100k rows up to tens or hundreds of millions.
 
-    public static bool CleanSourceTable = true;
-    public static void CreateDatabaseIfNeeded(string dbName, SqlConnectionString connectionString) {
-        var masterConnection = new SqlConnectionManager(connectionString.CloneWithMasterDbName());
-        if (!IfDatabaseExistsTask.IsExisting(masterConnection, dbName))
-            CreateDatabaseTask.Create(masterConnection, dbName);
-    }
+## Typical usage scenarios
 
-    public static void CreateTables(SqlConnectionManager connection) {
+- **Measure DbDestination and DbMerge throughput**
+  - Run `create`, then `load10m` or `load100m` to prepare data and stress `DbDestination`.
+  - Execute `merge10m` / `merge100m` and watch the live memory and time output for `DbMerge`.
 
-        TableDefinition SourceTableDef = new TableDefinition("source",
-            new List<TableColumn>() {
-                new TableColumn("IdentityKey", "int",allowNulls: false, isPrimaryKey:true, isIdentity: true),
-                new TableColumn("Id","BIGINT", allowNulls: false),
-                new TableColumn("LongValue1","BIGINT", allowNulls: false),
-                new TableColumn("LongValue2","BIGINT", allowNulls: false),
-                new TableColumn("LongValue3","BIGINT", allowNulls: false),
-                new TableColumn("LongValue4","BIGINT", allowNulls: false),
-                new TableColumn("LongValue5","BIGINT", allowNulls: false),
-                new TableColumn("LongValue6","BIGINT", allowNulls: false),
-                new TableColumn("LongValue7","BIGINT", allowNulls: false),
-                new TableColumn("LongValue8","BIGINT", allowNulls: false),
-                new TableColumn("LongValue9","BIGINT", allowNulls: false),
-                new TableColumn("LongValue10","BIGINT", allowNulls: false),
-                new TableColumn("StringValue1","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue2","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue3","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue4","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue5","VARCHAR(5)", allowNulls: false),
-        });
+- **Analyze memory consumption**
+  - Vary `MaxBufferSize` and `BatchSize` using the console commands.
+  - Repeat the same load/merge runs and compare min/avg/max memory between runs.
 
-        TableDefinition DestinationTableDef = new TableDefinition("destination",
-           new List<TableColumn>() {
-                new TableColumn("IdentityKey", "int",allowNulls: false, isPrimaryKey:true, isIdentity: true),
-                new TableColumn("Id","BIGINT", allowNulls: false),
-                new TableColumn("LongValue1","BIGINT", allowNulls: false),
-                new TableColumn("LongValue2","BIGINT", allowNulls: false),
-                new TableColumn("LongValue3","BIGINT", allowNulls: false),
-                new TableColumn("LongValue4","BIGINT", allowNulls: false),
-                new TableColumn("LongValue5","BIGINT", allowNulls: false),
-                new TableColumn("LongValue6","BIGINT", allowNulls: false),
-                new TableColumn("LongValue7","BIGINT", allowNulls: false),
-                new TableColumn("LongValue8","BIGINT", allowNulls: false),
-                new TableColumn("LongValue9","BIGINT", allowNulls: false),
-                new TableColumn("LongValue10","BIGINT", allowNulls: false),
-                new TableColumn("StringValue1","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue2","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue3","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue4","VARCHAR(5)", allowNulls: false),
-                new TableColumn("StringValue5","VARCHAR(5)", allowNulls: false),
-       });
+Combined, this gives you a repeatable way to validate that your environment (SQL Server, infrastructure, configuration) can handle the intended data volumes with acceptable **performance** and **memory usage** for both loading and merging.
 
+## Code on GitHub
 
-        TableDefinition DeltaTableDef = new TableDefinition("delta",
-            new List<TableColumn>() {
-                new TableColumn("IdentityKey", "int",allowNulls: false, isPrimaryKey:true, isIdentity: true),
-                new TableColumn("Id","BIGINT", allowNulls: false),
-                new TableColumn("ChangeDate","DATETIME2(7)", allowNulls: false),
-                new TableColumn("ChangeAction","VARCHAR(100)", allowNulls: false),
-        });
-
-        if (!IfTableOrViewExistsTask.IsExisting(connection, SourceTableDef.Name))
-            CreateTableTask.Create(connection, SourceTableDef);
-        else {
-            if (CleanSourceTable) TruncateTableTask.Truncate(connection, SourceTableDef.Name);
-        }
-        if (!IfTableOrViewExistsTask.IsExisting(connection, DestinationTableDef.Name))
-            CreateTableTask.Create(connection, DestinationTableDef);
-        else
-            TruncateTableTask.Truncate(connection, DestinationTableDef.Name);
-
-        if (!IfTableOrViewExistsTask.IsExisting(connection, DeltaTableDef.Name))
-            CreateTableTask.Create(connection, DeltaTableDef);
-        else
-            TruncateTableTask.Truncate(connection, DeltaTableDef.Name);
-    }
-
-    public static void InsertTestDataSource(SqlConnectionManager connection, int start, int end) {
-
-        if (!CleanSourceTable && RowCountTask.Count(connection, "source") > 0) return;
-        sourceStart = start;
-        sourceEnd = end;
-        var source = new MemorySource<MergeRow>();
-        source.Data = ProduceSource();
-        source.DisableLogging = true;
-        var dest = new DbDestination<MergeRow>(connection, "source");
-        dest.DisableLogging = true;
-
-        source.LinkTo(dest);
-        Network.Execute(source);
-
-    }
-
-    public static void InsertTestDataDestination(SqlConnectionManager connection, int start, int end) {
-
-        destinationStart = start;
-        destinationEnd = end;
-        var source = new MemorySource<MergeRow>();
-        source.Data = ProduceDest();
-        source.DisableLogging = true;
-        var dest = new DbDestination<MergeRow>(connection, "destination");
-        dest.DisableLogging = true;
-
-        source.LinkTo(dest);
-        Network.Execute(source);
-
-    }
-
-    static int sourceStart = 50;
-    static int sourceEnd = 100;
-    static IEnumerable<MergeRow> ProduceSource() {
-        while (sourceStart < sourceEnd) {
-            yield return new MergeRow() {
-                Id = sourceStart,
-                LongValue1 = sourceStart % 5,
-                LongValue2 = sourceStart % 5,
-                LongValue3 = sourceStart % 5,
-                LongValue4 = sourceStart % 5,
-                LongValue5 = sourceStart % 5,
-                LongValue6 = sourceStart % 5,
-                LongValue7 = sourceStart % 5,
-                LongValue8 = sourceStart % 5,
-                LongValue9 = sourceStart % 5,
-                LongValue10 = sourceStart % 5,
-                StringValue1 = "ABCD" + (sourceStart % 5),
-                StringValue2 = "ABCD" + (sourceStart % 5),
-                StringValue3 = "ABCD" + (sourceStart % 5),
-                StringValue4 = "ABCD" + (sourceStart % 5),
-                StringValue5 = "ABCDE",
-            };
-            sourceStart++;
-        }
-
-    }
-
-    static int destinationStart = 1;
-    static int destinationEnd = 75;
-    static IEnumerable<MergeRow> ProduceDest() {
-        while (destinationStart < destinationEnd) {
-            yield return new MergeRow() {
-                Id = destinationStart,
-                LongValue1 = destinationStart % 3,
-                LongValue2 = destinationStart % 3,
-                LongValue3 = destinationStart % 3,
-                LongValue4 = destinationStart % 3,
-                LongValue5 = destinationStart % 3,
-                LongValue6 = destinationStart % 5,
-                LongValue7 = destinationStart % 5,
-                LongValue8 = destinationStart % 5,
-                LongValue9 = destinationStart % 5,
-                LongValue10 = destinationStart % 5,
-                StringValue1 = "ABCD" + (destinationStart % 3),
-                StringValue2 = "ABCD" + (destinationStart % 3),
-                StringValue3 = "ABCD" + (destinationStart % 3),
-                StringValue4 = "ABCD" + (destinationStart % 5),
-                StringValue5 = "ABCDE",
-            };
-            destinationStart++;
-        }
-
-    }
-}
-```
-
-### Conclusion
-
-This example shows how to set up a simple performance test for the `DbMerge` component using ETLBox in C#. The `MergeRow` class defines the data structure, the `Program` class runs the ETL process, and the `DbHelper` class helps with setting up the database and inserting test data. This setup is useful for testing how well the `DbMerge` component handles large amounts of data.
-
-### Code on Github
-
-The entire code for this example, along with additional resources and documentation, {{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/DbMergePerformanceTests" >}}.
+The full `MemoryTester` sample, including all helper classes and scripts,
+{{< link-ext text="is available on GitHub for further exploration and contribution" url="https://github.com/etlbox/etlbox.demo/tree/main/MemoryTester" >}}.
 

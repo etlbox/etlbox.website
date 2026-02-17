@@ -306,7 +306,7 @@ dest.EvictionPolicy = CacheEvictionPolicy.LeastFrequentlyUsed;
 dest.MaxCacheSize = 5000;
 ```
 
-If you want to measure the performance of the `DbMerge` in your environment, [have a look at the DbMerge Performance Recipe](/recipes/performance/dbmerge-performance/).
+If you want to measure the performance and memory consumption of the `DbMerge` in your environment, [have a look at the Database Performance Tester recipe](/recipes/performance/dbmerge-performance/).
 
 ## DbMerge With Dynamic Object
 
