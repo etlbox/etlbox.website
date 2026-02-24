@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10138
+weight: 10137
 toc: false
 ---
 
@@ -656,6 +656,65 @@ ignored when inserting data.</p>
 
 ```C#
     public bool IgnoreDefaultColumnsOnInsert { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbDestination_1_InsertColumns_" data-uid="ETLBox.DataFlow.DbDestination`1.InsertColumns*"></a>
+  <h4 id="ETLBox_DataFlow_DbDestination_1_InsertColumns" data-uid="ETLBox.DataFlow.DbDestination`1.InsertColumns">InsertColumns</h4>
+  <div class="markdown level1 summary"><p>List of columns that are are insert when BulkOperation is set to BulkOperation.Insert</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<InsertColumn> InsertColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/insertcolumn">InsertColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbDestination_1_MatchCaseInsensitive_" data-uid="ETLBox.DataFlow.DbDestination`1.MatchCaseInsensitive*"></a>
+  <h4 id="ETLBox_DataFlow_DbDestination_1_MatchCaseInsensitive" data-uid="ETLBox.DataFlow.DbDestination`1.MatchCaseInsensitive">MatchCaseInsensitive</h4>
+  <div class="markdown level1 summary"><p>When set to true, property names are matched to column names in a case-insensitive manner.
+This automatically creates a <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ColumnMapping">ColumnMapping</a> to perform case-insensitive matching
+by reading the table definition from the database.
+You cannot use this property together with a manually set <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver">PropertyToColumnNamesResolver</a> or <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ColumnMapping">ColumnMapping</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool MatchCaseInsensitive { get; set; }
 ```
 
 {{< rawhtml >}}

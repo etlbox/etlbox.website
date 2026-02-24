@@ -45,6 +45,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Uri">DataFlowStreamSource&lt;TOutput&gt;.Uri</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Folder">DataFlowStreamSource&lt;TOutput&gt;.Folder</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri">DataFlowStreamSource&lt;TOutput&gt;.GetNextUri</a>
     </div>
     <div>
@@ -524,7 +527,7 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/b7322effa264da943718efdbca76d182b450b949/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
+        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/43ac9a8b69140a8635be1abf8109a6d9468ff9d2/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
         <td></td>
       </tr>
     </tbody>

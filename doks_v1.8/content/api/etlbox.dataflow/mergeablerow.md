@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10163
+weight: 10160
 toc: false
 ---
 
@@ -24,6 +24,10 @@ and the properties use to identify equal object flagged with the UpdateColumn at
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">MergeableRow</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="/api/etlbox/imergeablerow">IMergeableRow</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -55,7 +59,7 @@ and the properties use to identify equal object flagged with the UpdateColumn at
 {{< /rawhtml >}}
 
 ```C#
-    public abstract class MergeableRow
+    public abstract class MergeableRow : IMergeableRow
 ```
 
 {{< rawhtml >}}
@@ -71,7 +75,8 @@ and the properties use to identify equal object flagged with the UpdateColumn at
 {{< /rawhtml >}}
 
 ```C#
-    public ChangeAction? ChangeAction { get; set; }
+    [DbColumnDefinition(AllowNulls = true, DataType = &quot;INT&quot;)]
+public ChangeAction? ChangeAction { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -99,7 +104,8 @@ and the properties use to identify equal object flagged with the UpdateColumn at
 {{< /rawhtml >}}
 
 ```C#
-    public DateTime ChangeDate { get; set; }
+    [DbColumnDefinition(AllowNulls = true)]
+public DateTime? ChangeDate { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -113,10 +119,14 @@ and the properties use to identify equal object flagged with the UpdateColumn at
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="/api/etlbox/imergeablerow">IMergeableRow</a>
+  </div>
 
 {{< /rawhtml >}}

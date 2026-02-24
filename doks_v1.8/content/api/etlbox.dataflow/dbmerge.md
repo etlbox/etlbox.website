@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10141
+weight: 10140
 toc: false
 ---
 
@@ -56,6 +56,9 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ColumnMapping">DbMerge&lt;ExpandoObject&gt;.ColumnMapping</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_MatchCaseInsensitive">DbMerge&lt;ExpandoObject&gt;.MatchCaseInsensitive</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_IgnoreDefaultColumnsOnInsert">DbMerge&lt;ExpandoObject&gt;.IgnoreDefaultColumnsOnInsert</a>
     </div>
     <div>
@@ -71,7 +74,13 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_CompareFunc">DbMerge&lt;ExpandoObject&gt;.CompareFunc</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_InsertColumns">DbMerge&lt;ExpandoObject&gt;.InsertColumns</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_UpdateColumns">DbMerge&lt;ExpandoObject&gt;.UpdateColumns</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_UseUpdateColumnsForInserts">DbMerge&lt;ExpandoObject&gt;.UseUpdateColumnsForInserts</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_DeleteColumns">DbMerge&lt;ExpandoObject&gt;.DeleteColumns</a>
@@ -102,6 +111,24 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_AllowIdentityInsert">DbMerge&lt;ExpandoObject&gt;.AllowIdentityInsert</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_InsertedCount">DbMerge&lt;ExpandoObject&gt;.InsertedCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_UpdatedCount">DbMerge&lt;ExpandoObject&gt;.UpdatedCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_DeletedCount">DbMerge&lt;ExpandoObject&gt;.DeletedCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ExistsCount">DbMerge&lt;ExpandoObject&gt;.ExistsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_DuplicateCount">DbMerge&lt;ExpandoObject&gt;.DuplicateCount</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_NotFoundCount">DbMerge&lt;ExpandoObject&gt;.NotFoundCount</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_ReadConnectionManager">DbMerge&lt;ExpandoObject&gt;.ReadConnectionManager</a>

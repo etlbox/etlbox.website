@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.apache.kafka"
-weight: 10013
+weight: 10012
 toc: false
 ---
 

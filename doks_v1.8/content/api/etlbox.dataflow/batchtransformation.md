@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10095
+weight: 10094
 toc: false
 ---
 
@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.BatchTransformation">
   <h1 id="ETLBox_DataFlow_BatchTransformation" data-uid="ETLBox.DataFlow.BatchTransformation" class="text-break">Class BatchTransformation</h1>
-  <div class="markdown level0 summary"><p>A batch transformation will transform batches of data. The default batch size are 100000 rows.
+  <div class="markdown level0 summary"><p>A batch transformation will transform batches of data. The default batch size are 30000 rows.
 The batch transformation function allows you to process and modify each batch of data.
 You can use the BatchSize property to choose a smaller batch size. The batch size must always be smaller
 than the max buffer size. The default batch size are 1000 rows per batch.

@@ -212,7 +212,10 @@ toc: false
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.GetSchema(string)</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchemaFromTableName_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.GetSchemaFromTableName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchemaFromSql_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdTransaction, AdomdParameter&gt;.GetSchemaFromSql(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10114
+weight: 10113
 toc: false
 ---
 
@@ -28,6 +28,7 @@ All other rows are sent to a secondary output (linked via <a class="xref" href="
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">ConditionalSplit&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/conditionalsplit">ConditionalSplit</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>

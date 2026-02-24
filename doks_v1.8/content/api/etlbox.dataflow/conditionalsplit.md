@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10115
+weight: 10114
 toc: false
 ---
 
@@ -14,8 +14,10 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ConditionalSplit">
   <h1 id="ETLBox_DataFlow_ConditionalSplit" data-uid="ETLBox.DataFlow.ConditionalSplit" class="text-break">Class ConditionalSplit</h1>
-  <div class="markdown level0 summary"><p>The FilterTransformation allows you to filter out rows that evaluate to a given predicate.
-By default the filter transformation will filter out null values.</p>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1">ConditionalSplit&lt;TInput&gt;</a> transformation routes incoming rows
+based on a specified condition. Rows that match the <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_MatchPredicate">MatchPredicate</a>
+are sent to the primary output (linked via 'LinkTo()').
+All other rows are sent to a secondary output (linked via <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_LinkUnmatchedTo_ETLBox_IDataFlowDestination__0__">LinkUnmatchedTo(IDataFlowDestination&lt;TInput&gt;)</a>).</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -25,7 +27,7 @@ By default the filter transformation will filter out null values.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/filtertransformation-1">FilterTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1">ConditionalSplit</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level6"><span class="xref">ConditionalSplit</span></div>
   </div>
   <div class="implements">
@@ -41,34 +43,49 @@ By default the filter transformation will filter out null values.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_FilterPredicate">FilterTransformation&lt;ExpandoObject&gt;.FilterPredicate</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_MatchPredicate">ConditionalSplit&lt;ExpandoObject&gt;.MatchPredicate</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_TargetBlock">FilterTransformation&lt;ExpandoObject&gt;.TargetBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_TargetBlock">ConditionalSplit&lt;ExpandoObject&gt;.TargetBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_SourceBlock">FilterTransformation&lt;ExpandoObject&gt;.SourceBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_SourceBlock">ConditionalSplit&lt;ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_FilteredCount">FilterTransformation&lt;ExpandoObject&gt;.FilteredCount</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_UnmatchedSourceBlock">ConditionalSplit&lt;ExpandoObject&gt;.UnmatchedSourceBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_PassedCount">FilterTransformation&lt;ExpandoObject&gt;.PassedCount</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_MatchCount">ConditionalSplit&lt;ExpandoObject&gt;.MatchCount</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_Reset">FilterTransformation&lt;ExpandoObject&gt;.Reset()</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_UnmatchedCount">ConditionalSplit&lt;ExpandoObject&gt;.UnmatchedCount</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CheckParameter">FilterTransformation&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_Reset">ConditionalSplit&lt;ExpandoObject&gt;.Reset()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_InitComponent">FilterTransformation&lt;ExpandoObject&gt;.InitComponent()</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_CheckParameter">ConditionalSplit&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CleanUpOnSuccess">FilterTransformation&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_InitComponent">ConditionalSplit&lt;ExpandoObject&gt;.InitComponent()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CleanUpOnFaulted_System_Exception_">FilterTransformation&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_CleanUpOnSuccess">ConditionalSplit&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_CleanUpOnFaulted_System_Exception_">ConditionalSplit&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">ConditionalSplit&lt;ExpandoObject&gt;.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_LinkUnmatchedTo_ETLBox_IDataFlowDestination__0__">ConditionalSplit&lt;ExpandoObject&gt;.LinkUnmatchedTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_LinkUnmatchedTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__">ConditionalSplit&lt;ExpandoObject&gt;.LinkUnmatchedTo(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/conditionalsplit-1#ETLBox_DataFlow_ConditionalSplit_1_LinkUnmatchedTo_ETLBox_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">ConditionalSplit&lt;ExpandoObject&gt;.LinkUnmatchedTo(IDataFlowDestination&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;, Predicate&lt;ExpandoObject&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
@@ -123,9 +140,6 @@ By default the filter transformation will filter out null values.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">DataFlowComponent.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_ResetComponent">DataFlowComponent.ResetComponent()</a>
@@ -272,7 +286,7 @@ By default the filter transformation will filter out null values.</p>
 {{< /rawhtml >}}
 
 ```C#
-    public class ConditionalSplit : FilterTransformation<ExpandoObject>, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
+    public class ConditionalSplit : ConditionalSplit<ExpandoObject>, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}

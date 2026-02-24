@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10088
+weight: 10087
 toc: false
 ---
 
@@ -52,6 +52,9 @@ Data is read a as string from the source and dynamically converted into the corr
       <a class="xref" href="/api/etlbox.csv/csvsource-1#ETLBox_Csv_CsvSource_1_FieldHeaders">CsvSource&lt;ExpandoObject&gt;.FieldHeaders</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.csv/csvsource-1#ETLBox_Csv_CsvSource_1_BadDataException">CsvSource&lt;ExpandoObject&gt;.BadDataException</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.csv/csvsource-1#ETLBox_Csv_CsvSource_1_CheckParameter">CsvSource&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
@@ -68,6 +71,9 @@ Data is read a as string from the source and dynamically converted into the corr
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Uri">DataFlowStreamSource&lt;ExpandoObject&gt;.Uri</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Folder">DataFlowStreamSource&lt;ExpandoObject&gt;.Folder</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri">DataFlowStreamSource&lt;ExpandoObject&gt;.GetNextUri</a>

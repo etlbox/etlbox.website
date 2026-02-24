@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.azure.servicebus"
-weight: 10024
+weight: 10023
 toc: false
 ---
 

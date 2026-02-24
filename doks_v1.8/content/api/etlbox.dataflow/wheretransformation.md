@@ -1,21 +1,21 @@
 ---
-title: "FilterTransformation"
-description: "Details for Class FilterTransformation (ETLBox.DataFlow)"
+title: "WhereTransformation"
+description: "Details for Class WhereTransformation (ETLBox.DataFlow)"
 draft: false
 images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10151
+weight: 10196
 toc: false
 ---
 
 {{< rawhtml >}}
 
-            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.FilterTransformation">
-  <h1 id="ETLBox_DataFlow_FilterTransformation" data-uid="ETLBox.DataFlow.FilterTransformation" class="text-break">Class FilterTransformation</h1>
-  <div class="markdown level0 summary"><p>The FilterTransformation allows you to filter out rows that evaluate to a given predicate.
-By default the filter transformation will filter out null values.</p>
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.WhereTransformation">
+  <h1 id="ETLBox_DataFlow_WhereTransformation" data-uid="ETLBox.DataFlow.WhereTransformation" class="text-break">Class WhereTransformation</h1>
+  <div class="markdown level0 summary"><p>The WhereTransformation allows you to filter out rows where a defined predicate is false.
+By default the WhereTransformation will filter out null values.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -25,8 +25,8 @@ By default the filter transformation will filter out null values.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/filtertransformation-1">FilterTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
-    <div class="level6"><span class="xref">FilterTransformation</span></div>
+    <div class="level5"><a class="xref" href="/api/etlbox.dataflow/wheretransformation-1">WhereTransformation</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
+    <div class="level6"><span class="xref">WhereTransformation</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -41,34 +41,34 @@ By default the filter transformation will filter out null values.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_FilterPredicate">FilterTransformation&lt;ExpandoObject&gt;.FilterPredicate</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_Predicate">WhereTransformation&lt;ExpandoObject&gt;.Predicate</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_TargetBlock">FilterTransformation&lt;ExpandoObject&gt;.TargetBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_TargetBlock">WhereTransformation&lt;ExpandoObject&gt;.TargetBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_SourceBlock">FilterTransformation&lt;ExpandoObject&gt;.SourceBlock</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_SourceBlock">WhereTransformation&lt;ExpandoObject&gt;.SourceBlock</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_FilteredCount">FilterTransformation&lt;ExpandoObject&gt;.FilteredCount</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_FilteredCount">WhereTransformation&lt;ExpandoObject&gt;.FilteredCount</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_PassedCount">FilterTransformation&lt;ExpandoObject&gt;.PassedCount</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_PassedCount">WhereTransformation&lt;ExpandoObject&gt;.PassedCount</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_Reset">FilterTransformation&lt;ExpandoObject&gt;.Reset()</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_Reset">WhereTransformation&lt;ExpandoObject&gt;.Reset()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CheckParameter">FilterTransformation&lt;ExpandoObject&gt;.CheckParameter()</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_CheckParameter">WhereTransformation&lt;ExpandoObject&gt;.CheckParameter()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_InitComponent">FilterTransformation&lt;ExpandoObject&gt;.InitComponent()</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_InitComponent">WhereTransformation&lt;ExpandoObject&gt;.InitComponent()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CleanUpOnSuccess">FilterTransformation&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_CleanUpOnSuccess">WhereTransformation&lt;ExpandoObject&gt;.CleanUpOnSuccess()</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox.dataflow/filtertransformation-1#ETLBox_DataFlow_FilterTransformation_1_CleanUpOnFaulted_System_Exception_">FilterTransformation&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+      <a class="xref" href="/api/etlbox.dataflow/wheretransformation-1#ETLBox_DataFlow_WhereTransformation_1_CleanUpOnFaulted_System_Exception_">WhereTransformation&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
@@ -268,37 +268,37 @@ By default the filter transformation will filter out null values.</p>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_DataFlow_FilterTransformation_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_WhereTransformation_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public class FilterTransformation : FilterTransformation<ExpandoObject>, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
+    public class WhereTransformation : WhereTransformation<ExpandoObject>, IDataFlowTransformation<ExpandoObject, ExpandoObject>, IDataFlowSource<ExpandoObject>, IDataFlowSource, IDataFlowDestination<ExpandoObject>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
 </h3>
-  <a id="ETLBox_DataFlow_FilterTransformation__ctor_" data-uid="ETLBox.DataFlow.FilterTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation__ctor" data-uid="ETLBox.DataFlow.FilterTransformation.#ctor">FilterTransformation()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation__ctor_" data-uid="ETLBox.DataFlow.WhereTransformation.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation__ctor" data-uid="ETLBox.DataFlow.WhereTransformation.#ctor">WhereTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public FilterTransformation()
+    public WhereTransformation()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_FilterTransformation__ctor_" data-uid="ETLBox.DataFlow.FilterTransformation.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation__ctor_System_Predicate_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.FilterTransformation.#ctor(System.Predicate{System.Dynamic.ExpandoObject})">FilterTransformation(Predicate&lt;ExpandoObject&gt;)</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation__ctor_" data-uid="ETLBox.DataFlow.WhereTransformation.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation__ctor_System_Predicate_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.WhereTransformation.#ctor(System.Predicate{System.Dynamic.ExpandoObject})">WhereTransformation(Predicate&lt;ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public FilterTransformation(Predicate<ExpandoObject> filterPredicate)
+    public WhereTransformation(Predicate<ExpandoObject> predicate)
 ```
 
 {{< rawhtml >}}
@@ -314,7 +314,7 @@ By default the filter transformation will filter out null values.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</td>
-        <td><span class="parametername">filterPredicate</span></td>
+        <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
     </tbody>

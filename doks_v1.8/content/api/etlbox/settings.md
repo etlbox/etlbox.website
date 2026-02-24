@@ -94,7 +94,7 @@ Here you can set the threshold value when information about processed records sh
 {{< /rawhtml >}}
 
 ```C#
-    public const int DEFAULT_MAX_BUFFER_SIZE = 100000
+    public const int DEFAULT_MAX_BUFFER_SIZE = 30000
 ```
 
 {{< rawhtml >}}

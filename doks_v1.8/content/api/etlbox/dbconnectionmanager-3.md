@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10202
+weight: 10201
 toc: false
 ---
 
@@ -1829,15 +1829,59 @@ The order of the columns corresponds with the order of the passed actions.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DbConnectionManager_3_GetSchema_" data-uid="ETLBox.DbConnectionManager`3.GetSchema*"></a>
-  <h4 id="ETLBox_DbConnectionManager_3_GetSchema_System_String_" data-uid="ETLBox.DbConnectionManager`3.GetSchema(System.String)">GetSchema(string)</h4>
+  <a id="ETLBox_DbConnectionManager_3_GetSchemaFromSql_" data-uid="ETLBox.DbConnectionManager`3.GetSchemaFromSql*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_GetSchemaFromSql_System_String_" data-uid="ETLBox.DbConnectionManager`3.GetSchemaFromSql(System.String)">GetSchemaFromSql(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public virtual TableDefinition GetSchema(string tableName)
+    public virtual TableDefinition GetSchemaFromSql(string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DbConnectionManager_3_GetSchemaFromTableName_" data-uid="ETLBox.DbConnectionManager`3.GetSchemaFromTableName*"></a>
+  <h4 id="ETLBox_DbConnectionManager_3_GetSchemaFromTableName_System_String_" data-uid="ETLBox.DbConnectionManager`3.GetSchemaFromTableName(System.String)">GetSchemaFromTableName(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public virtual TableDefinition GetSchemaFromTableName(string tableName)
 ```
 
 {{< rawhtml >}}

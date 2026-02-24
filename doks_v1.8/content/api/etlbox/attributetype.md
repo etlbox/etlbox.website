@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10016
+weight: 10015
 toc: false
 ---
 
@@ -63,6 +63,10 @@ public enum AttributeType
       </tr>
       <tr>
         <td id="ETLBox_AttributeType_IdColumn">IdColumn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_AttributeType_InsertColumn">InsertColumn</td>
         <td></td>
       </tr>
       <tr>

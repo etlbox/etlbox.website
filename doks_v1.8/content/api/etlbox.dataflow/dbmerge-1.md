@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10140
+weight: 10139
 toc: false
 ---
 
@@ -674,6 +674,62 @@ You still need to define the CompareColumns to specify which columns should be r
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_DeletedCount_" data-uid="ETLBox.DataFlow.DbMerge`1.DeletedCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_DeletedCount" data-uid="ETLBox.DataFlow.DbMerge`1.DeletedCount">DeletedCount</h4>
+  <div class="markdown level1 summary"><p>Number of rows that were deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int DeletedCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_DuplicateCount_" data-uid="ETLBox.DataFlow.DbMerge`1.DuplicateCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_DuplicateCount" data-uid="ETLBox.DataFlow.DbMerge`1.DuplicateCount">DuplicateCount</h4>
+  <div class="markdown level1 summary"><p>Number of duplicate rows that were detected (if <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbMerge_1_FindDuplicates">FindDuplicates</a> is enabled).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int DuplicateCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy_" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_EvictionPolicy" data-uid="ETLBox.DataFlow.DbMerge`1.EvictionPolicy">EvictionPolicy</h4>
   <div class="markdown level1 summary"><p>The eviction policy used for the partial cache.
@@ -699,6 +755,34 @@ Only applies if the <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy">CacheEvictionPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_ExistsCount_" data-uid="ETLBox.DataFlow.DbMerge`1.ExistsCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_ExistsCount" data-uid="ETLBox.DataFlow.DbMerge`1.ExistsCount">ExistsCount</h4>
+  <div class="markdown level1 summary"><p>Number of rows that already existed and were not modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int ExistsCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -792,6 +876,93 @@ ignored when inserting data</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_InsertColumns_" data-uid="ETLBox.DataFlow.DbMerge`1.InsertColumns*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_InsertColumns" data-uid="ETLBox.DataFlow.DbMerge`1.InsertColumns">InsertColumns</h4>
+  <div class="markdown level1 summary"><p>Property names that describe which columns are actually insert (if an insert of the row is necessary).
+Can be left empty, then all matching columns will be inserted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<InsertColumn> InsertColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/insertcolumn">InsertColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_InsertedCount_" data-uid="ETLBox.DataFlow.DbMerge`1.InsertedCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_InsertedCount" data-uid="ETLBox.DataFlow.DbMerge`1.InsertedCount">InsertedCount</h4>
+  <div class="markdown level1 summary"><p>Number of rows that were inserted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int InsertedCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_MatchCaseInsensitive_" data-uid="ETLBox.DataFlow.DbMerge`1.MatchCaseInsensitive*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_MatchCaseInsensitive" data-uid="ETLBox.DataFlow.DbMerge`1.MatchCaseInsensitive">MatchCaseInsensitive</h4>
+  <div class="markdown level1 summary"><p>If set to true, the DbMerge will automatically create column mappings for properties
+that have a case-insensitive match with database columns (e.g., property &quot;col1&quot; matches database column &quot;COL1&quot;).
+Cannot be used together with ColumnMapping - if you have custom column mappings, you need to handle case differences manually.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool MatchCaseInsensitive { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_MaxCacheSize_" data-uid="ETLBox.DataFlow.DbMerge`1.MaxCacheSize*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_MaxCacheSize" data-uid="ETLBox.DataFlow.DbMerge`1.MaxCacheSize">MaxCacheSize</h4>
   <div class="markdown level1 summary"><p>Defines the max amount of rows stored in the partial cache if the eviction policy is set to a different value than <a class="xref" href="/api/etlbox.dataflow/cacheevictionpolicy#ETLBox_DataFlow_CacheEvictionPolicy_FullRefresh">FullRefresh</a>.
@@ -848,6 +1019,34 @@ OnlyUpdates means that only updates are applied to the destination.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox/mergemode">MergeMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_NotFoundCount_" data-uid="ETLBox.DataFlow.DbMerge`1.NotFoundCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_NotFoundCount" data-uid="ETLBox.DataFlow.DbMerge`1.NotFoundCount">NotFoundCount</h4>
+  <div class="markdown level1 summary"><p>Number of rows that were marked for deletion but not found in the destination table (only applies to Delta mode).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int NotFoundCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1029,6 +1228,34 @@ Can be left empty, then all non id columns will be updated.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_UpdatedCount_" data-uid="ETLBox.DataFlow.DbMerge`1.UpdatedCount*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_UpdatedCount" data-uid="ETLBox.DataFlow.DbMerge`1.UpdatedCount">UpdatedCount</h4>
+  <div class="markdown level1 summary"><p>Number of rows that were updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public int UpdatedCount { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbMerge_1_UseTruncateMethod_" data-uid="ETLBox.DataFlow.DbMerge`1.UseTruncateMethod*"></a>
   <h4 id="ETLBox_DataFlow_DbMerge_1_UseTruncateMethod" data-uid="ETLBox.DataFlow.DbMerge`1.UseTruncateMethod">UseTruncateMethod</h4>
   <div class="markdown level1 summary"><p>By default, the deletion of records are performed with a bulk delete.
@@ -1045,6 +1272,35 @@ and the <a class="xref" href="/api/etlbox.dataflow/dbmerge-1#ETLBox_DataFlow_DbM
 
 ```C#
     public bool UseTruncateMethod { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbMerge_1_UseUpdateColumnsForInserts_" data-uid="ETLBox.DataFlow.DbMerge`1.UseUpdateColumnsForInserts*"></a>
+  <h4 id="ETLBox_DataFlow_DbMerge_1_UseUpdateColumnsForInserts" data-uid="ETLBox.DataFlow.DbMerge`1.UseUpdateColumnsForInserts">UseUpdateColumnsForInserts</h4>
+  <div class="markdown level1 summary"><p>If set to true, the UpdateColumns will be used also for inserts (only if no insert
+columns are explicitly specified).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool UseUpdateColumnsForInserts { get; set; }
 ```
 
 {{< rawhtml >}}

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10139
+weight: 10138
 toc: false
 ---
 
@@ -58,6 +58,9 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_IdColumns">DbDestination&lt;ExpandoObject&gt;.IdColumns</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_InsertColumns">DbDestination&lt;ExpandoObject&gt;.InsertColumns</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_UpdateColumns">DbDestination&lt;ExpandoObject&gt;.UpdateColumns</a>
     </div>
     <div>
@@ -74,6 +77,9 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_PropertyToColumnNamesResolver">DbDestination&lt;ExpandoObject&gt;.PropertyToColumnNamesResolver</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_MatchCaseInsensitive">DbDestination&lt;ExpandoObject&gt;.MatchCaseInsensitive</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbdestination-1#ETLBox_DataFlow_DbDestination_1_ConnectionManager">DbDestination&lt;ExpandoObject&gt;.ConnectionManager</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10259
+weight: 10258
 toc: false
 ---
 
@@ -67,7 +67,7 @@ toc: false
 {{< /rawhtml >}}
 
 ```C#
-    DateTime ChangeDate { get; set; }
+    DateTime? ChangeDate { get; set; }
 ```
 
 {{< rawhtml >}}
@@ -81,14 +81,14 @@ toc: false
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
         <td><p>null means not determined yet</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="ETLBox_IMergeableRow_ChangeDate_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>When <a class="xref" href="/api/etlbox/imergeablerow#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a></p>
+  <div class="markdown level1 remarks"><p>When the <a class="xref" href="/api/etlbox/imergeablerow#ETLBox_IMergeableRow_ChangeAction">ChangeAction</a> is set, this value is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a></p>
 </div>
 
 {{< /rawhtml >}}

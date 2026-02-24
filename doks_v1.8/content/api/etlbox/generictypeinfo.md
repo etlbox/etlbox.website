@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10221
+weight: 10220
 toc: false
 ---
 
@@ -273,6 +273,33 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/idcolumn">IdColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_GenericTypeInfo_InsertColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.InsertColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_InsertColumnAttributes" data-uid="ETLBox.GenericTypeInfo.InsertColumnAttributes">InsertColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<InsertColumn> InsertColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/insertcolumn">InsertColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

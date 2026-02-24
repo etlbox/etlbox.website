@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.csv"
-weight: 10087
+weight: 10086
 toc: false
 ---
 
@@ -44,6 +44,9 @@ Data is read a as string from the source and dynamically converted into the corr
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Uri">DataFlowStreamSource&lt;TOutput&gt;.Uri</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Folder">DataFlowStreamSource&lt;TOutput&gt;.Folder</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri">DataFlowStreamSource&lt;TOutput&gt;.GetNextUri</a>
@@ -454,6 +457,36 @@ source.Configuration.Delimiter = ";";</code></pre>
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_Csv_CsvSource_1_BadDataException_" data-uid="ETLBox.Csv.CsvSource`1.BadDataException*"></a>
+  <h4 id="ETLBox_Csv_CsvSource_1_BadDataException" data-uid="ETLBox.Csv.CsvSource`1.BadDataException">BadDataException</h4>
+  <div class="markdown level1 summary"><p>If the current processed row contains bad data, this exception will be set with details about the bad data.
+If the <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_RowModificationAction">RowModificationAction</a> sets this exception to null,
+then the bad data exception will be ignore and the data will be processed as usual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ETLBoxException BadDataException { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/etlboxexception">ETLBoxException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Csv_CsvSource_1_Configuration_" data-uid="ETLBox.Csv.CsvSource`1.Configuration*"></a>
   <h4 id="ETLBox_Csv_CsvSource_1_Configuration" data-uid="ETLBox.Csv.CsvSource`1.Configuration">Configuration</h4>
   <div class="markdown level1 summary"><p>The CsvHelper Configuration.

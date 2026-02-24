@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.helper"
-weight: 10226
+weight: 10225
 toc: false
 ---
 
@@ -399,7 +399,7 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">isOdbcOrOleDb</span></td>
-        <td><p>Indicates if the target connection is either an Odbc or OLEDB connection</p>
+        <td><p>Indicates if the target connection is either an Odbc or OleDb connection</p>
 </td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10137
+weight: 10136
 toc: false
 ---
 
@@ -30,7 +30,6 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbmerge-1">DbMerge&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1">DbTypeCheck&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/distinct-1">Distinct&lt;TInput&gt;</a></div>
-      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/filtertransformation-1">FilterTransformation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/lookuptransformation-2">LookupTransformation&lt;TInput, TSource&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/multicast-1">Multicast&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/pivot-1">Pivot&lt;TInput&gt;</a></div>
@@ -40,6 +39,7 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowvalidation-1">RowValidation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/sort-1">Sort&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/waittransformation-1">WaitTransformation&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/wheretransformation-1">WhereTransformation&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.xml/xmlschemavalidation-1">XmlSchemaValidation&lt;TInput&gt;</a></div>
   </div>
   <div class="implements">

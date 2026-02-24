@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10220
+weight: 10219
 toc: false
 ---
 
@@ -96,6 +96,9 @@ in all sheets will be processed.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Uri">DataFlowStreamSource&lt;ExpandoObject&gt;.Uri</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_Folder">DataFlowStreamSource&lt;ExpandoObject&gt;.Folder</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1#ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri">DataFlowStreamSource&lt;ExpandoObject&gt;.GetNextUri</a>

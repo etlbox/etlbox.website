@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.excel"
-weight: 10218
+weight: 10217
 toc: false
 ---
 
@@ -58,6 +58,18 @@ toc: false
 {{< rawhtml >}}
   <h3 id="constructors">Constructors
 </h3>
+  <a id="ETLBox_Excel_ExcelRange__ctor_" data-uid="ETLBox.Excel.ExcelRange.#ctor*"></a>
+  <h4 id="ETLBox_Excel_ExcelRange__ctor" data-uid="ETLBox.Excel.ExcelRange.#ctor">ExcelRange()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ExcelRange()
+```
+
+{{< rawhtml >}}
   <a id="ETLBox_Excel_ExcelRange__ctor_" data-uid="ETLBox.Excel.ExcelRange.#ctor*"></a>
   <h4 id="ETLBox_Excel_ExcelRange__ctor_System_Int32_System_Int32_" data-uid="ETLBox.Excel.ExcelRange.#ctor(System.Int32,System.Int32)">ExcelRange(int, int)</h4>
   <div class="markdown level1 summary"></div>

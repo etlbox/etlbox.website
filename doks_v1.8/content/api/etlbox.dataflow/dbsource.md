@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10143
+weight: 10142
 toc: false
 ---
 
@@ -52,6 +52,12 @@ Multiple database are supported. Use the corresponding connection manager that f
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_TableName">DbSource&lt;ExpandoObject&gt;.TableName</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ViewName">DbSource&lt;ExpandoObject&gt;.ViewName</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_TableOrViewName">DbSource&lt;ExpandoObject&gt;.TableOrViewName</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_Sql">DbSource&lt;ExpandoObject&gt;.Sql</a>
     </div>
     <div>
@@ -74,6 +80,9 @@ Multiple database are supported. Use the corresponding connection manager that f
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver">DbSource&lt;ExpandoObject&gt;.ColumnToPropertyNamesResolver</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_MatchCaseInsensitive">DbSource&lt;ExpandoObject&gt;.MatchCaseInsensitive</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ConnectionManager">DbSource&lt;ExpandoObject&gt;.ConnectionManager</a>

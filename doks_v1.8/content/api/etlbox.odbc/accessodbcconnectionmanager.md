@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.odbc"
-weight: 10294
+weight: 10293
 toc: false
 ---
 
@@ -251,7 +251,10 @@ select * from (
       <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_DropTableOnCurrentConnection_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.DropTableOnCurrentConnection(string)</a>
     </div>
     <div>
-      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchema_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchemaFromTableName_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchemaFromTableName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/dbconnectionmanager-3#ETLBox_DbConnectionManager_3_GetSchemaFromSql_System_String_">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchemaFromSql(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -491,15 +494,15 @@ to change back settings made to improve bulk insert performance</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.odbc/odbcconnectionmanager#ETLBox_Odbc_OdbcConnectionManager_Clone">OdbcConnectionManager.Clone()</a></div>
-  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchema_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchema*"></a>
-  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchema_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchema(System.String)">GetSchema(string)</h4>
+  <a id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchemaFromTableName_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchemaFromTableName*"></a>
+  <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_GetSchemaFromTableName_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.GetSchemaFromTableName(System.String)">GetSchemaFromTableName(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public override TableDefinition GetSchema(string tableName)
+    public override TableDefinition GetSchemaFromTableName(string tableName)
 ```
 
 {{< rawhtml >}}
@@ -536,7 +539,7 @@ to change back settings made to improve bulk insert performance</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchema(string)</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">DbConnectionManager&lt;OdbcConnection, OdbcTransaction, OdbcParameter&gt;.GetSchemaFromTableName(string)</a></div>
   <a id="ETLBox_Odbc_AccessOdbcConnectionManager_PrepareBulkInsert_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.PrepareBulkInsert*"></a>
   <h4 id="ETLBox_Odbc_AccessOdbcConnectionManager_PrepareBulkInsert_System_String_" data-uid="ETLBox.Odbc.AccessOdbcConnectionManager.PrepareBulkInsert(System.String)">PrepareBulkInsert(string)</h4>
   <div class="markdown level1 summary"><p>Performs preparations needed to improved

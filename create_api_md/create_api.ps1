@@ -34,7 +34,7 @@ dotnet build ..\..\etlbox.tests --configuration Debug
 dotnet build apitransform\DocFxToHugoMD --configuration Debug
 
 docfx docfx_project/docfx.json
-./apitransform/DocFxToHugoMD/bin/Debug/net6.0/DocFxToHugoMD.exe
+./apitransform/DocFxToHugoMD/bin/Debug/net8.0/DocFxToHugoMD.exe
 remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.8\content\api' -Recurse
 move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.8\content\'
 pause

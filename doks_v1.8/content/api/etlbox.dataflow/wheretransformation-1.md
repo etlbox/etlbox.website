@@ -1,21 +1,21 @@
 ---
-title: "FilterTransformation<TInput>"
-description: "Details for Class FilterTransformation<TInput> (ETLBox.DataFlow)"
+title: "WhereTransformation<TInput>"
+description: "Details for Class WhereTransformation<TInput> (ETLBox.DataFlow)"
 draft: false
 images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10150
+weight: 10195
 toc: false
 ---
 
 {{< rawhtml >}}
 
-            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.FilterTransformation`1">
-  <h1 id="ETLBox_DataFlow_FilterTransformation_1" data-uid="ETLBox.DataFlow.FilterTransformation`1" class="text-break">Class FilterTransformation&lt;TInput&gt;</h1>
-  <div class="markdown level0 summary"><p>The FilterTransformation allows you to filter out rows that evaluate to a given predicate.
-By default the filter transformation will filter out null values.</p>
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.WhereTransformation`1">
+  <h1 id="ETLBox_DataFlow_WhereTransformation_1" data-uid="ETLBox.DataFlow.WhereTransformation`1" class="text-break">Class WhereTransformation&lt;TInput&gt;</h1>
+  <div class="markdown level0 summary"><p>The WhereTransformation allows you to filter out rows where a defined predicate is false.
+By default the WhereTransformation will filter out null values.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -25,9 +25,8 @@ By default the filter transformation will filter out null values.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
-    <div class="level5"><span class="xref">FilterTransformation&lt;TInput&gt;</span></div>
-      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/conditionalsplit">ConditionalSplit</a></div>
-      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/filtertransformation">FilterTransformation</a></div>
+    <div class="level5"><span class="xref">WhereTransformation&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/wheretransformation">WhereTransformation</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -239,11 +238,11 @@ By default the filter transformation will filter out null values.</p>
   </div>
 <h6><strong>Namespace</strong>: ETLBox.DataFlow</h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_DataFlow_FilterTransformation_1_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_WhereTransformation_1_syntax">Syntax</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public class FilterTransformation<TInput> : DataFlowTransformation<TInput, TInput>, IDataFlowTransformation<TInput, TInput>, IDataFlowSource<TInput>, IDataFlowSource, IDataFlowDestination<TInput>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
+    public class WhereTransformation<TInput> : DataFlowTransformation<TInput, TInput>, IDataFlowTransformation<TInput, TInput>, IDataFlowSource<TInput>, IDataFlowSource, IDataFlowDestination<TInput>, IDataFlowDestination, IDataFlowComponent, ILoggableTask
 ```
 
 {{< rawhtml >}}
@@ -265,27 +264,27 @@ By default the filter transformation will filter out null values.</p>
   </table>
   <h3 id="constructors">Constructors
 </h3>
-  <a id="ETLBox_DataFlow_FilterTransformation_1__ctor_" data-uid="ETLBox.DataFlow.FilterTransformation`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1__ctor" data-uid="ETLBox.DataFlow.FilterTransformation`1.#ctor">FilterTransformation()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1__ctor_" data-uid="ETLBox.DataFlow.WhereTransformation`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1__ctor" data-uid="ETLBox.DataFlow.WhereTransformation`1.#ctor">WhereTransformation()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public FilterTransformation()
+    public WhereTransformation()
 ```
 
 {{< rawhtml >}}
-  <a id="ETLBox_DataFlow_FilterTransformation_1__ctor_" data-uid="ETLBox.DataFlow.FilterTransformation`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1__ctor_System_Predicate__0__" data-uid="ETLBox.DataFlow.FilterTransformation`1.#ctor(System.Predicate{`0})">FilterTransformation(Predicate&lt;TInput&gt;)</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1__ctor_" data-uid="ETLBox.DataFlow.WhereTransformation`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1__ctor_System_Predicate__0__" data-uid="ETLBox.DataFlow.WhereTransformation`1.#ctor(System.Predicate{`0})">WhereTransformation(Predicate&lt;TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public FilterTransformation(Predicate<TInput> filterPredicate)
+    public WhereTransformation(Predicate<TInput> predicate)
 ```
 
 {{< rawhtml >}}
@@ -301,43 +300,15 @@ By default the filter transformation will filter out null values.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
-        <td><span class="parametername">filterPredicate</span></td>
+        <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
 </h3>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_FilterPredicate_" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilterPredicate*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_FilterPredicate" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilterPredicate">FilterPredicate</h4>
-  <div class="markdown level1 summary"><p>The filter predicates is true for all rows that should be filtered out. The default value will filter out null values.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public Predicate<TInput> FilterPredicate { get; set; }
-```
-
-{{< rawhtml >}}
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_FilteredCount_" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilteredCount*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_FilteredCount" data-uid="ETLBox.DataFlow.FilterTransformation`1.FilteredCount">FilteredCount</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_FilteredCount_" data-uid="ETLBox.DataFlow.WhereTransformation`1.FilteredCount*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_FilteredCount" data-uid="ETLBox.DataFlow.WhereTransformation`1.FilteredCount">FilteredCount</h4>
   <div class="markdown level1 summary"><p>Numbers of rows that were filtered out.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -364,9 +335,9 @@ By default the filter transformation will filter out null values.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_PassedCount_" data-uid="ETLBox.DataFlow.FilterTransformation`1.PassedCount*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_PassedCount" data-uid="ETLBox.DataFlow.FilterTransformation`1.PassedCount">PassedCount</h4>
-  <div class="markdown level1 summary"><p>Numbers of rows that were not filtered out.</p>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_PassedCount_" data-uid="ETLBox.DataFlow.WhereTransformation`1.PassedCount*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_PassedCount" data-uid="ETLBox.DataFlow.WhereTransformation`1.PassedCount">PassedCount</h4>
+  <div class="markdown level1 summary"><p>Numbers of rows that were kept.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -392,8 +363,37 @@ By default the filter transformation will filter out null values.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_SourceBlock_" data-uid="ETLBox.DataFlow.FilterTransformation`1.SourceBlock*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_SourceBlock" data-uid="ETLBox.DataFlow.FilterTransformation`1.SourceBlock">SourceBlock</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_Predicate_" data-uid="ETLBox.DataFlow.WhereTransformation`1.Predicate*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_Predicate" data-uid="ETLBox.DataFlow.WhereTransformation`1.Predicate">Predicate</h4>
+  <div class="markdown level1 summary"><p>The predicate returns true for rows that should be kept.
+The default implementation of the predicate will filter out null values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Predicate<TInput> Predicate { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_SourceBlock_" data-uid="ETLBox.DataFlow.WhereTransformation`1.SourceBlock*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_SourceBlock" data-uid="ETLBox.DataFlow.WhereTransformation`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -422,8 +422,8 @@ By default the filter transformation will filter out null values.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_TargetBlock_" data-uid="ETLBox.DataFlow.FilterTransformation`1.TargetBlock*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_TargetBlock" data-uid="ETLBox.DataFlow.FilterTransformation`1.TargetBlock">TargetBlock</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_TargetBlock_" data-uid="ETLBox.DataFlow.WhereTransformation`1.TargetBlock*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_TargetBlock" data-uid="ETLBox.DataFlow.WhereTransformation`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -454,8 +454,8 @@ By default the filter transformation will filter out null values.</p>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a></div>
   <h3 id="methods">Methods
 </h3>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_CheckParameter_" data-uid="ETLBox.DataFlow.FilterTransformation`1.CheckParameter*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_CheckParameter" data-uid="ETLBox.DataFlow.FilterTransformation`1.CheckParameter">CheckParameter()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_CheckParameter_" data-uid="ETLBox.DataFlow.WhereTransformation`1.CheckParameter*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_CheckParameter" data-uid="ETLBox.DataFlow.WhereTransformation`1.CheckParameter">CheckParameter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -468,8 +468,8 @@ By default the filter transformation will filter out null values.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CheckParameter">DataFlowComponent.CheckParameter()</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.FilterTransformation`1.CleanUpOnFaulted*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.FilterTransformation`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.WhereTransformation`1.CleanUpOnFaulted*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.WhereTransformation`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -499,8 +499,8 @@ By default the filter transformation will filter out null values.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.FilterTransformation`1.CleanUpOnSuccess*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.FilterTransformation`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.WhereTransformation`1.CleanUpOnSuccess*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.WhereTransformation`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -513,8 +513,8 @@ By default the filter transformation will filter out null values.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_InitComponent_" data-uid="ETLBox.DataFlow.FilterTransformation`1.InitComponent*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_InitComponent" data-uid="ETLBox.DataFlow.FilterTransformation`1.InitComponent">InitComponent()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_InitComponent_" data-uid="ETLBox.DataFlow.WhereTransformation`1.InitComponent*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_InitComponent" data-uid="ETLBox.DataFlow.WhereTransformation`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -527,8 +527,8 @@ By default the filter transformation will filter out null values.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_InitComponent">DataFlowComponent.InitComponent()</a></div>
-  <a id="ETLBox_DataFlow_FilterTransformation_1_Reset_" data-uid="ETLBox.DataFlow.FilterTransformation`1.Reset*"></a>
-  <h4 id="ETLBox_DataFlow_FilterTransformation_1_Reset" data-uid="ETLBox.DataFlow.FilterTransformation`1.Reset">Reset()</h4>
+  <a id="ETLBox_DataFlow_WhereTransformation_1_Reset_" data-uid="ETLBox.DataFlow.WhereTransformation`1.Reset*"></a>
+  <h4 id="ETLBox_DataFlow_WhereTransformation_1_Reset" data-uid="ETLBox.DataFlow.WhereTransformation`1.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10142
+weight: 10141
 toc: false
 ---
 
@@ -620,6 +620,37 @@ the record will be read from the source.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DbSource_1_MatchCaseInsensitive_" data-uid="ETLBox.DataFlow.DbSource`1.MatchCaseInsensitive*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource_1_MatchCaseInsensitive" data-uid="ETLBox.DataFlow.DbSource`1.MatchCaseInsensitive">MatchCaseInsensitive</h4>
+  <div class="markdown level1 summary"><p>When set to true, column names are matched to property names in a case-insensitive manner.
+This automatically sets up the <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver">ColumnToPropertyNamesResolver</a> to perform case-insensitive matching
+by reading the table definition from the database.
+You cannot use this property together with a manually set <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnToPropertyNamesResolver">ColumnToPropertyNamesResolver</a> or <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_ColumnMapping">ColumnMapping</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public bool MatchCaseInsensitive { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_DbSource_1_SelectColumns_" data-uid="ETLBox.DataFlow.DbSource`1.SelectColumns*"></a>
   <h4 id="ETLBox_DataFlow_DbSource_1_SelectColumns" data-uid="ETLBox.DataFlow.DbSource`1.SelectColumns">SelectColumns</h4>
   <div class="markdown level1 summary"><p>Applies only when <a class="xref" href="/api/etlbox.dataflow/dbsource-1#ETLBox_DataFlow_DbSource_1_SelectMode">SelectMode</a> is set to <a class="xref" href="/api/etlbox/selectoperation#ETLBox_SelectOperation_BulkSelect">BulkSelect</a>.
@@ -785,6 +816,60 @@ as they appear in the sql statement.</p>
 
 ```C#
     public string TableName { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbSource_1_TableOrViewName_" data-uid="ETLBox.DataFlow.DbSource`1.TableOrViewName*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource_1_TableOrViewName" data-uid="ETLBox.DataFlow.DbSource`1.TableOrViewName">TableOrViewName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string TableOrViewName { get; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DbSource_1_ViewName_" data-uid="ETLBox.DataFlow.DbSource`1.ViewName*"></a>
+  <h4 id="ETLBox_DataFlow_DbSource_1_ViewName" data-uid="ETLBox.DataFlow.DbSource`1.ViewName">ViewName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public string ViewName { get; set; }
 ```
 
 {{< rawhtml >}}

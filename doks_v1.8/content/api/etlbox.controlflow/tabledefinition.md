@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10078
+weight: 10077
 toc: false
 ---
 
@@ -569,6 +569,55 @@ toc: false
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_TableDefinition_FromSql_" data-uid="ETLBox.ControlFlow.TableDefinition.FromSql*"></a>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_FromSql_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.FromSql(ETLBox.IConnectionManager,System.String)">FromSql(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static TableDefinition FromSql(IConnectionManager connection, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_ControlFlow_TableDefinition_FromTableName_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName*"></a>
   <h4 id="ETLBox_ControlFlow_TableDefinition_FromTableName_ETLBox_IConnectionManager_System_String_System_Boolean_" data-uid="ETLBox.ControlFlow.TableDefinition.FromTableName(ETLBox.IConnectionManager,System.String,System.Boolean)">FromTableName(IConnectionManager, string, bool)</h4>
   <div class="markdown level1 summary"><p>Gather a table definition from an existing table in the database.</p>
@@ -627,15 +676,64 @@ toc: false
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_TableDefinition_GetSchema_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchema*"></a>
-  <h4 id="ETLBox_ControlFlow_TableDefinition_GetSchema_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchema(ETLBox.IConnectionManager,System.String)">GetSchema(IConnectionManager, string)</h4>
+  <a id="ETLBox_ControlFlow_TableDefinition_GetSchemaFromSql_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchemaFromSql*"></a>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_GetSchemaFromSql_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchemaFromSql(ETLBox.IConnectionManager,System.String)">GetSchemaFromSql(IConnectionManager, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
 
 ```C#
-    public static TableDefinition GetSchema(IConnectionManager connection, string tableName)
+    public static TableDefinition GetSchemaFromSql(IConnectionManager connection, string sql)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox/iconnectionmanager">IConnectionManager</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="/api/etlbox.controlflow/tabledefinition">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_TableDefinition_GetSchemaFromTableName_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchemaFromTableName*"></a>
+  <h4 id="ETLBox_ControlFlow_TableDefinition_GetSchemaFromTableName_ETLBox_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.TableDefinition.GetSchemaFromTableName(ETLBox.IConnectionManager,System.String)">GetSchemaFromTableName(IConnectionManager, string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static TableDefinition GetSchemaFromTableName(IConnectionManager connection, string tableName)
 ```
 
 {{< rawhtml >}}
