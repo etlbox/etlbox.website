@@ -11,6 +11,26 @@ weight: 120
 toc: true
 ---
 
+## Version 3.8.0
+
+#### Features:
+
+- Reducing MaxBufferSize and other cache's default value to 30000
+- Added MatchCaseInsensitive Flag to DbSource, DbDestination and DbMerge
+- Depreacting FilterTransformation, renaming to WhereTransformation and switching the behaviour \(predicate = true will keep the records\)
+- DbSource: Adding property ViewName
+- DbSource: Adding automatic table definition detection when using SELECT \* sql
+- DbDestination and DbMerge now offer InsertColumns
+- DbMerge: add counter for inserted/udpated/exists/duplicates/deletes
+- DbMerge: Fixed memory leak in Cache Managers
+- IMergeableRow: Changed data type of ChangeDate to Nullable DateTime
+
+#### Bug Fixes:
+
+- Fixing issue with eviction policy LIFO for .NET Framework in Lookup
+- Fixing issues with null values that enter ColumnTransformation
+- Postgres/Oracle Fixing issues with CleanUpSchemaTask and current versions
+
 ## Version 3.7.3
 
 #### Features:
