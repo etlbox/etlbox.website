@@ -10,17 +10,17 @@ position = "CTO"
 company = "FlowWright, USA"
 link = "https://www.flowwright.com"
 
-[[statement]]
-quote = "ETLBox is a great foundation for platform independent development of Extract-Transform-Load processes. We are saving a significant amount of work, time and money by using ETLBox for our products."
-logo_light = "/images/references/vis.svg"
-logo_dark = "/images/references/vis.svg"
-desktop = "/images/customer/vis_desktop.png"
-headshot = "/images/customer/vis_headshot.png"
-company_description = "VIS Performance A/S from Denmark are experts for Corporate Performance Management (CPM). They use ETLBox for integrating multiple systems."
-name = "Flemming Nielsen"
-position = "Advisor & Business Developer"
-company = "VIS Performance, Denmark"
-link = "https://www.vis-performance.dk"
+#[[statement]]
+#quote = "ETLBox is a great foundation for platform independent development of Extract-Transform-Load processes. We are saving a significant amount of work, time and money by using ETLBox for our products."
+#logo_light = "/images/references/vis.svg"
+#logo_dark = "/images/references/vis.svg"
+#desktop = "/images/customer/vis_desktop.png"
+#headshot = "/images/customer/vis_headshot.png"
+#company_description = "VIS Performance A/S from Denmark are experts for Corporate Performance Management (CPM). They use ETLBox for integrating multiple systems."
+#name = "Flemming Nielsen"
+#position = "Advisor & Business Developer"
+#company = "VIS Performance, Denmark"
+#link = "https://www.vis-performance.dk"
 
 [[statement]]
 quote = "ETLBox has been ideal for us to create a fast integration with Microsoft Azure. ETLBox scales very well and we can process large amounts of data between the cloud and our on-premises applications"
