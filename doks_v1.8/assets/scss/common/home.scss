@@ -128,4 +128,29 @@
     /* Skaliert das Bild und schneidet es, falls nötig */
 }
 
+/** DirectSync CTA on home — matches logo blue (rgb(49,145,218)) */
+.btn-directsync {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #3191da;
+    --bs-btn-border-color: #3191da;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #2878b8;
+    --bs-btn-hover-border-color: #2672af;
+    --bs-btn-focus-shadow-rgb: 49, 145, 218;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #2570ad;
+    --bs-btn-active-border-color: #2269a3;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #3191da;
+    --bs-btn-disabled-border-color: #3191da;
+}
+
+.directsync-btn-icon {
+    flex-shrink: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 
