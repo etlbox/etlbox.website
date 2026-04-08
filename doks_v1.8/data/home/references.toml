@@ -29,7 +29,7 @@ image_dark = "/images/references/iwg.svg"
 [[customer]]
 name = "Flowwright"
 country = "USA"
-link = "https://www.flowwright.com/etl-extract-transform-load"
+link = "/landing/flowwright/"
 image_light = "/images/references/flowwright.png"
 image_dark = "/images/references/flowwright_dark.png"
 
