@@ -135,24 +135,16 @@ In this code:
 📦 **Built on .NET**: ETLBox runs on Windows, Linux, and macOS. It also integrates well with cloud services, making it a versatile choice for modern data integration tasks.
 
 
-## Want a GUI Instead? Meet FlowWright
+## Want a GUI instead? Meet DirectSync
 
-While ETLBox is a powerful code-first ETL solution, we understand that some users prefer a **graphical user interface** to manage data workflows. That’s where **FlowWright** comes in.
+**ETLBox Direct Sync** is a Windows desktop app and CLI on the same ETLBox engine—streaming pipelines, common databases, and file formats (CSV, Excel, JSON, XML, Parquet, and more).
 
-{{< img-centered src_light="/images/references/flowwright.png" src_dark="/images/references/flowwright_dark.png" alt="FlowWright Logo" link="/landing/flowwright" >}}
+- **In the app** — connect source and target, map columns, preview data, run jobs
+- **Automation** — export the configuration as JSON and run the same job from the CLI (scheduled tasks, CI/CD, containers)
 
+![DirectSync Screenshot](screen1.png)
 
-### FlowWright – The UI-Driven ETL Alternative
-
-FlowWright is a fully GDPR-compliant, on-premise ETL tool that provides:
-
-- **Drag & Drop ETL Designer** – Build data workflows visually, without coding.
-- **Powered by ETLBox** – Enjoy the same high-performance processing, now with a UI.
-- **C# Extensibility** – When the UI isn’t enough, extend your workflows with custom C# scripts.
-
-If you’re looking for a **UI-driven ETL experience**:
-
-👉 [Learn More About FlowWright](/landing/flowwright)
+👉 {{< link-ext text="Learn more about DirectSync" url="https://www.direct-sync.net" >}}
 
 ## What's Next?
 
