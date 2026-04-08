@@ -137,14 +137,14 @@ In this code:
 
 ## Want a GUI instead? Meet DirectSync
 
-**ETLBox Direct Sync** is a Windows desktop app and CLI on the same ETLBox engine—streaming pipelines, common databases, and file formats (CSV, Excel, JSON, XML, Parquet, and more).
+**ETLBox DirectSync** is a Windows desktop app and CLI on the same ETLBox engine—streaming pipelines, common databases, and file formats (CSV, Excel, JSON, XML, Parquet, and more).
 
 - **In the app** — connect source and target, map columns, preview data, run jobs
 - **Automation** — export the configuration as JSON and run the same job from the CLI (scheduled tasks, CI/CD, containers)
 
 ![DirectSync Screenshot](screen1.png)
 
-👉 {{< link-ext text="Learn more about DirectSync" url="https://www.direct-sync.net" >}}
+👉 {{< link-ext text="Learn more about DirectSync" url="https://www.directsync.net" >}}
 
 ## What's Next?
 
