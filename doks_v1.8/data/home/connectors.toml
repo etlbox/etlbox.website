@@ -59,6 +59,12 @@ image_dark =  "/images/supported/snowflake.png"
 alt = "Snowflake"
 
 [[connector]]
+link = "/docs/db-connector/connection-manager/#supported-relational-databases"
+image_light = "/images/supported/clickhouse-logo-black.png"
+image_dark = "/images/supported/clickhouse-logo-white.png"
+alt = "ClickHouse"
+
+[[connector]]
 link = "/docs/db-connector/access/#odbc-drivers"
 image_light = "/images/supported/access.png"
 image_dark = "/images/supported/access.png"

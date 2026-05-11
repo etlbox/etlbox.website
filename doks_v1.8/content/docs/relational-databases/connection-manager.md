@@ -67,6 +67,7 @@ Below is a list of all available native, ODBC, and OleDb connection managers.
 - **SAP ASE (Sybase)**: `new AseConnectionManager("Server=myServer;Database=myDB;User=myUser;Password=myPass;");`
 - **SAP HANA**: `new HanaConnectionManager("Server=myServer;Database=myDB;User=myUser;Password=myPass;");`
 - **Snowflake**: `new SnowflakeConnectionManager("Account=myAccount;User=myUser;Password=myPass;Database=myDB;Schema=mySchema;");`
+- **ClickHouse**: `new ClickHouseConnectionManager("Host=myServer;Port=8123;Username=myUser;Password=myPass;Database=myDB;");`
 
 ### ODBC
 

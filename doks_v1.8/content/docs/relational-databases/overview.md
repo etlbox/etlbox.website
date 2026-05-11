@@ -28,6 +28,7 @@ Db2 | ✓ | X | LUW + z/OS + Cloud
 SAP ASE (Sybase) | ✓ | ✓ |
 SAP HANA | ✓ | ✓ |
 Snowflake | ✓ | ✓ |
+ClickHouse | ✓ | X |
 Microsoft Access | X | ✓ | + OLEDB support
 Apache Spark (SQL) | X | ✓ |
 Other databases | X | * | Generic ODBC & OLEDB support
@@ -53,6 +54,7 @@ To use ETLBox with a specific database, you need to install the corresponding ET
 | SAP ASE (Sybase) | `ETLBox.Sap.Ase` |
 | SAP HANA | `ETLBox.Sap.Hana` |
 | Snowflake | `ETLBox.Snowflake` |
+| ClickHouse | `ETLBox.ClickHouse` |
 | Microsoft Access | `ETLBox.Odbc` |
 | Apache Spark (SQL) | `ETLBox.Odbc` |
 
