@@ -11,13 +11,27 @@ weight: 120
 toc: true
 ---
 
+## Version 3.9.0
+
+#### Features:
+
+- New connector: Clickhouse
+- SqlConnectionManager: KeepNulls (when inserting values into default columns) is now true by default
+- .NET 10 support and package upgrades
+
+### Bug Fixes:
+
+- Fixed issue for hanging network when trying to write into locked file of error destination
+- Fixed issue when reading schema definition from Postgres
+- Fixed issue for SqlServer and reading from destination table in DbMerge using Transactions
+
 ## Version 3.8.0
 
 #### Features:
 
 - Reducing MaxBufferSize and other cache's default value to 30000
 - Added MatchCaseInsensitive Flag to DbSource, DbDestination and DbMerge
-- Depreacting FilterTransformation, renaming to WhereTransformation and switching the behaviour \(predicate = true will keep the records\)
+- Depreacting FilterTransformation, renaming to WhereTransformation and switching the behaviour (predicate = true will keep the records)
 - DbSource: Adding property ViewName
 - DbSource: Adding automatic table definition detection when using SELECT \* sql
 - DbDestination and DbMerge now offer InsertColumns

@@ -17,11 +17,31 @@ The first of this section will contain example code that is also used in the [do
 
 #### Customer table
 
-The example from the docs use a SqlServer table to read additional customer data from a table.
-The table `customer` has two columns (Id and Name) and contains the following data:
+The examples from the docs use a SqlServer table to read additional customer data from a table.
+Before running these examples, create the lookup table and insert sample data as follows:
+
+```C#
+DropTableTask.DropIfExists(SqlConnection, "CustomerTable");
+var td = new TableDefinition("CustomerTable"
+    , new List<TableColumn>() {
+    new TableColumn("Id", "INT", allowNulls: false),
+    new TableColumn("Name", "NVARCHAR(100)", allowNulls: true)
+});
+td.CreateTable(SqlConnection);
+
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (0,'XX')");
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (1,'John')");
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (2,'Jim')");
+```
+
+The table `CustomerTable` has two columns (Id and Name) and contains the following data:
 
 Id|Name
 --|----
+0|XX
 1|John
 2|Jim
 

@@ -11,6 +11,34 @@ weight: 2087
 toc: true
 ---
 
+## Database setup
+
+Several examples in this article use a `DbSource` to read customer data from a SQL Server table. Before running these examples, create the lookup table and insert sample data as follows:
+
+```C#
+DropTableTask.DropIfExists(SqlConnection, "CustomerTable");
+var td = new TableDefinition("CustomerTable"
+    , new List<TableColumn>() {
+    new TableColumn("Id", "INT", allowNulls: false),
+    new TableColumn("Name", "NVARCHAR(100)", allowNulls: true)
+});
+td.CreateTable(SqlConnection);
+
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (0,'XX')");
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (1,'John')");
+SqlTask.ExecuteNonQuery(SqlConnection,
+    "INSERT INTO CustomerTable VALUES (2,'Jim')");
+```
+
+The `CustomerTable` has two columns (`Id` and `Name`) and contains the following data:
+
+Id|Name
+--|----
+0|XX
+1|John
+2|Jim
 
 ## Using lookup with custom retrieval function
 
@@ -234,7 +262,62 @@ foreach (var row in dest.Data)
 
 //Output
 //Order:815 Name:John Id:1
-//Order:4711 Name:Jim Id:2>
+//Order:4711 Name:Jim Id:2
+```
+
+## Partial DB cache with case-insensitive matching
+
+This example shows how to combine partial cache mode with custom key selectors for case-insensitive string matching. The `InputKeySelector` and `SourceKeySelector` normalize keys by trimming whitespace and converting to lowercase, while `ApplyRetrievedCacheToInput` performs the same comparison when retrieving the customer id.
+
+```C#
+public class OrderCase
+{
+    public int OrderNumber { get; set; }
+    public string CustomerName { get; set; }
+    public int CustomerId { get; set; }
+}
+
+public class CustomerCase
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+var orderSource = new MemorySource<OrderCase>();
+orderSource.DataAsList.Add(new OrderCase() { OrderNumber = 815, CustomerName = "jOHN" });
+orderSource.DataAsList.Add(new OrderCase() { OrderNumber = 4711, CustomerName = "jIM " });
+orderSource.DataAsList.Add(new OrderCase() { OrderNumber = 13, CustomerName = "XXX" });
+orderSource.DataAsList.Add(new OrderCase() { OrderNumber = 45, CustomerName = "john" });
+
+var lookupSource = new DbSource<CustomerCase>(SqlConnection, "CustomerTable");
+
+var lookup = new LookupTransformation<OrderCase, CustomerCase>();
+lookup.Source = lookupSource;
+lookup.CacheMode = CacheMode.Partial;
+lookup.PartialCacheSettings.LoadBatchSize = 1;
+lookup.InputKeySelector = inputrow => inputrow.CustomerName.Trim().ToLower();
+lookup.SourceKeySelector = sourceRow => sourceRow.Name.Trim().ToLower();
+lookup.RemoveUnmatchedRows = true;
+ //Optional: Define own function to apply the retrieved cache to the input row.
+ //lookup.ApplyRetrievedCacheToInput = (row, cache) => {
+ //    row.CustomerId = cache.List.Where(cust => cust.Name.Trim().ToLower() == row.CustomerName.Trim().ToLower())
+ //                          .Select(cust => cust.Id)
+ //                          .FirstOrDefault();
+ //    return row;
+ //};
+
+var dest = new MemoryDestination<OrderCase>();
+
+orderSource.LinkTo(lookup).LinkTo(dest);
+Network.Execute(orderSource);
+
+foreach (var row in dest.Data)
+    Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
+
+//Output
+//Order: 815 Name: jOHN Id:1
+//Order: 4711 Name: jIM  Id:2
+//Order: 45 Name: john Id:1
 ```
 
 ## Partial DB cache with custom sql
