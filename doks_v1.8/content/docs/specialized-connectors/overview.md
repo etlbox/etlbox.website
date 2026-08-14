@@ -30,6 +30,7 @@ Some connectors are included in the **ETLBox core package**, while others requir
 | **DataFrameSource**            | `ETLBox.Analysis`    | Reads data from a `Microsoft.Data.Analysis.DataFrame`. |
 | **DataFrameDestination**       | `ETLBox.Analysis`    | Writes processed data into a `Microsoft.Data.Analysis.DataFrame`. |
 | **VoidDestination**            | `ETLBox` (Core)      | Discards records, useful for filtering operations. |
+| **LogDestination**             | `ETLBox` (Core)      | Writes each record into a log output using a Microsoft `ILogger`. |
 
 ### Installation
 
