@@ -30,7 +30,7 @@ toc: true
 - SqlConnectionManager: KeepNulls (when inserting values into default columns) is now true by default
 - .NET 10 support and package upgrades
 
-### Bug Fixes:
+#### Bug Fixes:
 
 - Fixed issue for hanging network when trying to write into locked file of error destination
 - Fixed issue when reading schema definition from Postgres
