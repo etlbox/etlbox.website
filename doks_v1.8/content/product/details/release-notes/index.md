@@ -11,6 +11,17 @@ weight: 120
 toc: true
 ---
 
+## Version 3.10.0
+
+#### Features:
+
+- New destination: LogDestination & ErrorLogDestination
+- Package update
+
+#### Bug fixes:
+
+- Fixing bugs in Snowflake connector, removing leave-open restriction
+
 ## Version 3.9.0
 
 #### Features:
