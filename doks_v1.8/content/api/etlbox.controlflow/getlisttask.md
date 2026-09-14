@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10057
+weight: 10059
 toc: false
 ---
 
@@ -25,7 +25,10 @@ In MySql, this will return a list of all schemas.</p>
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">GetListTask</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/getdatabaselisttask">GetDatabaseListTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/getdatabaselisttask">GetDatabaseListTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/gettablelisttask">GetTableListTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/gettablelisttask">GetTableListTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/getviewlisttask">GetViewListTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/getviewlisttask">GetViewListTask</a></div>
   </div>
   <div class="implements">

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10143
+weight: 10145
 toc: false
 ---
 
@@ -29,6 +29,7 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">DbTypeCheck&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbtypecheck">DbTypeCheck</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbtypecheck">DbTypeCheck</a></div>
   </div>
   <div class="implements">

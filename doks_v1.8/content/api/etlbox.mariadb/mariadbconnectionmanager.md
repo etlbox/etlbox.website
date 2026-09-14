@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.mariadb"
-weight: 10278
+weight: 10282
 toc: false
 ---
 

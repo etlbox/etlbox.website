@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10131
+weight: 10133
 toc: false
 ---
 
@@ -31,10 +31,16 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tablesource-1">TableSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasesource-1">CouchbaseSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchsource-1">CustomBatchSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchsource-1">CustomBatchSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/customsource-1">CustomSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/customsource-1">CustomSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1">DataFlowStreamSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1">DataFlowStreamSource&lt;TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbsource-1">DbSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbsource-1">DbSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/errorsource">ErrorSource</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/errorsource">ErrorSource</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/memorysource-1">MemorySource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/memorysource-1">MemorySource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.mongodb/mongodbsource-1">MongoDbSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.neo4j/neo4jsource-1">Neo4jSource&lt;TOutput&gt;</a></div>

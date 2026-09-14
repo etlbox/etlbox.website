@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../clonebox"
+		},
+		{
+			"path": "create_api_md"
 		}
 	],
 	"settings": {}

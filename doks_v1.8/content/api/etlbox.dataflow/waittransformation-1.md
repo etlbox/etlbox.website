@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10193
+weight: 10197
 toc: false
 ---
 
@@ -26,6 +26,7 @@ Alternatively, the WaitTransformation can wait for one or more TaskCompletionSou
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">WaitTransformation&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/waittransformation">WaitTransformation</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/waittransformation">WaitTransformation</a></div>
   </div>
   <div class="implements">

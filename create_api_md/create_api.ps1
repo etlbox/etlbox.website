@@ -3,6 +3,15 @@
 # copy docfx.json into docfx_project folder
 # dotnet build DocFxToHugoMD
 
+Set-Location $PSScriptRoot
+
+function Remove-FolderIfExists([string]$path) {
+    if (Test-Path $path) {
+        Write-Host "Removing folder $path"
+        Remove-Item $path -Recurse -Force
+    }
+}
+
 # We need to clean up the bin/obj folders (we also need to docfx cache folder stored there)
 # in order to make sure that the xdoc folders used by docfx are removed from the obj/bin folders, otherwise cached data is used which
 # can lead to incorrect result
@@ -14,27 +23,32 @@
 #dotnet clean ..\..\etlbox.tests --configuration RelNoLic
 
 #dotnet clean does not always clean up properly, so let's do it the hard way
-$dir = dir ..\..\etlbox.source | ?{$_.PSISContainer}
-foreach ($d in $dir){
-    $binPath = Join-Path -Path $d.FullName -ChildPath \bin
-    $objPath = Join-Path -Path $d.FullName -ChildPath \obj
-    write-host "Removing folder $binPath"
-    write-host "Removing folder $objPath"
-    remove-item $binPath -Recurse
-    remove-item $objPath -Recurse
+$dir = Get-ChildItem ..\..\etlbox.source | Where-Object { $_.PSIsContainer }
+foreach ($d in $dir) {
+    $binPath = Join-Path -Path $d.FullName -ChildPath bin
+    $objPath = Join-Path -Path $d.FullName -ChildPath obj
+    Remove-FolderIfExists $binPath
+    Remove-FolderIfExists $objPath
 }
 
 #The _site and some obj folder created by docfx may contain some cached date, so we remove it as well
 #remove-item ./obj -Recurse
-remove-item docfx_project/obj -Recurse
-remove-item docfx_project/_site -Recurse
+Remove-FolderIfExists (Join-Path $PSScriptRoot "docfx_project\obj")
+Remove-FolderIfExists (Join-Path $PSScriptRoot "docfx_project\_site")
 
 #Then run the API migration (tested, should work like this)
 dotnet build ..\..\etlbox.tests --configuration Debug
+if ($LASTEXITCODE -ne 0) { throw "dotnet build etlbox.tests failed" }
+
 dotnet build apitransform\DocFxToHugoMD --configuration Debug
+if ($LASTEXITCODE -ne 0) { throw "dotnet build DocFxToHugoMD failed" }
 
 docfx docfx_project/docfx.json
+if ($LASTEXITCODE -ne 0) { throw "docfx failed" }
+
 ./apitransform/DocFxToHugoMD/bin/Debug/net8.0/DocFxToHugoMD.exe
-remove-item 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.8\content\api' -Recurse
-move-item './Output/api' 'C:\Users\andreaslennartz\Github\etlbox\etlbox.website\doks_v1.8\content\'
+
+$websiteApi = Join-Path $PSScriptRoot "..\doks_v1.8\content\api"
+Remove-FolderIfExists $websiteApi
+move-item './Output/api' $websiteApi
 pause

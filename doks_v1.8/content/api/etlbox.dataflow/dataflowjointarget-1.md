@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10132
+weight: 10134
 toc: false
 ---
 
@@ -24,6 +24,8 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><span class="xref">DataFlowJoinTarget&lt;TInput&gt;</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow.crossjoin-3/inmemorydestination-1">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow.crossjoin-3/inmemorydestination-1">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/jointarget-1">JoinTarget&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/jointarget-1">JoinTarget&lt;TInput&gt;</a></div>
   </div>
   <div class="implements">

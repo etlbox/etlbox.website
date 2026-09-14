@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10053
+weight: 10055
 toc: false
 ---
 
@@ -23,10 +23,16 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">DropTask&lt;T&gt;</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropdatabasetask">DropDatabaseTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropdatabasetask">DropDatabaseTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropindextask">DropIndexTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropindextask">DropIndexTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropproceduretask">DropProcedureTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropproceduretask">DropProcedureTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropschematask">DropSchemaTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropschematask">DropSchemaTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/droptabletask">DropTableTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/droptabletask">DropTableTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropviewtask">DropViewTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/dropviewtask">DropViewTask</a></div>
   </div>
   <div class="implements">

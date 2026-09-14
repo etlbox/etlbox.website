@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10195
+weight: 10199
 toc: false
 ---
 
@@ -26,6 +26,7 @@ By default the WhereTransformation will filter out null values.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">WhereTransformation&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/wheretransformation">WhereTransformation</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/wheretransformation">WhereTransformation</a></div>
   </div>
   <div class="implements">

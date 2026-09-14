@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10168
+weight: 10172
 toc: false
 ---
 
@@ -25,6 +25,7 @@ toc: false
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level5"><span class="xref">Pivot&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/pivot">Pivot</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/pivot">Pivot</a></div>
   </div>
   <div class="implements">

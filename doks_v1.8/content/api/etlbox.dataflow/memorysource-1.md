@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10158
+weight: 10162
 toc: false
 ---
 
@@ -26,6 +26,7 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">MemorySource&lt;TOutput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/memorysource">MemorySource</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/memorysource">MemorySource</a></div>
   </div>
   <div class="implements">

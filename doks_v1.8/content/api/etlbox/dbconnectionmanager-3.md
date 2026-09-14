@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10201
+weight: 10205
 toc: false
 ---
 
@@ -22,6 +22,7 @@ toc: false
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox.analysisservices/adomdconnectionmanager">AdomdConnectionManager</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.clickhouse/clickhouseconnectionmanager">ClickHouseConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.db2/db2connectionmanager">Db2ConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.mariadb/mariadbconnectionmanager">MariaDbConnectionManager</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.mysql/mysqlconnectionmanager">MySqlConnectionManager</a></div>

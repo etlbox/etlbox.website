@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10047
+weight: 10049
 toc: false
 ---
 
@@ -23,6 +23,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">DbTask</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.analysisservices/xmlatask">XmlaTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/sqltask">SqlTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/sqltask">SqlTask</a></div>
   </div>
   <div class="implements">

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10095
+weight: 10097
 toc: false
 ---
 
@@ -31,6 +31,7 @@ But as this block any processing until all data is buffered, it will also need t
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-2">BatchTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level6"><a class="xref" href="/api/etlbox.dataflow/blocktransformation-2">BlockTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level7"><span class="xref">BlockTransformation&lt;TInput&gt;</span></div>
+      <div class="level8"><a class="xref" href="/api/etlbox.dataflow/blocktransformation">BlockTransformation</a></div>
       <div class="level8"><a class="xref" href="/api/etlbox.dataflow/blocktransformation">BlockTransformation</a></div>
   </div>
   <div class="implements">

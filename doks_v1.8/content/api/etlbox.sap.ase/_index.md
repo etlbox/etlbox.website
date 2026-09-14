@@ -2,5 +2,5 @@
 title : "ETLBox.Sap.Ase"
 description: "All classes of the namespace ETLBox.Sap.Ase"
 draft: false
-weight: 2900
+weight: 3000
 ---

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10184
+weight: 10188
 toc: false
 ---
 
@@ -283,7 +283,8 @@ toc: false
 </h3>
   <a id="ETLBox_DataFlow_StreamMetaData_ToString_" data-uid="ETLBox.DataFlow.StreamMetaData.ToString*"></a>
   <h4 id="ETLBox_DataFlow_StreamMetaData_ToString" data-uid="ETLBox.DataFlow.StreamMetaData.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -304,7 +305,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>A string that represents the current object.</p>
+</td>
       </tr>
     </tbody>
   </table>

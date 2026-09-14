@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10037
+weight: 10039
 toc: false
 ---
 
@@ -47,6 +47,10 @@ toc: false
       </tr>
       <tr>
         <td id="ETLBox_ConnectionType_Ase">Ase</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="ETLBox_ConnectionType_ClickHouse">ClickHouse</td>
         <td></td>
       </tr>
       <tr>

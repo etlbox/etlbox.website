@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10039
+weight: 10041
 toc: false
 ---
 
@@ -21,7 +21,10 @@ toc: false
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">Constraint</span></div>
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/foreignkeyconstraint">ForeignKeyConstraint</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.controlflow/foreignkeyconstraint">ForeignKeyConstraint</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/primarykeyconstraint">PrimaryKeyConstraint</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.controlflow/primarykeyconstraint">PrimaryKeyConstraint</a></div>
+      <div class="level2"><a class="xref" href="/api/etlbox.controlflow/uniquekeyconstraint">UniqueKeyConstraint</a></div>
       <div class="level2"><a class="xref" href="/api/etlbox.controlflow/uniquekeyconstraint">UniqueKeyConstraint</a></div>
   </div>
   <div class="implements">

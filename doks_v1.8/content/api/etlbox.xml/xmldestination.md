@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10352
+weight: 10356
 toc: false
 ---
 
@@ -70,9 +70,6 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_WriteIntoStream__0_">XmlDestination&lt;ExpandoObject&gt;.WriteIntoStream(ExpandoObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_SetDefaultNamespace_System_Xml_Linq_XElement_System_Xml_Linq_XNamespace_">XmlDestination&lt;ExpandoObject&gt;.SetDefaultNamespace(XElement, XNamespace)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.xml/xmldestination-1#ETLBox_Xml_XmlDestination_1_CloseStream">XmlDestination&lt;ExpandoObject&gt;.CloseStream()</a>

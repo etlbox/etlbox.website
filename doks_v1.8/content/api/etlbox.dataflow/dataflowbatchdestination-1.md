@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10128
+weight: 10130
 toc: false
 ---
 
@@ -29,6 +29,8 @@ toc: false
       <div class="level5"><a class="xref" href="/api/etlbox.azure.tables/tabledestination-1">TableDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.couchbase/couchbasedestination-1">CouchbaseDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination-1">CustomBatchDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination-1">CustomBatchDestination&lt;TInput&gt;</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbdestination-1">DbDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dbdestination-1">DbDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.mongodb/mongodbdestination-1">MongoDbDestination&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.neo4j/neo4jdestination-1">Neo4jDestination&lt;TInput&gt;</a></div>

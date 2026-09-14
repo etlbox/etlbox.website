@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10120
+weight: 10122
 toc: false
 ---
 
@@ -27,6 +27,7 @@ which can be processed with the WriteBatchAction.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div class="level5"><span class="xref">CustomBatchDestination&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination">CustomBatchDestination</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/custombatchdestination">CustomBatchDestination</a></div>
   </div>
   <div class="implements">

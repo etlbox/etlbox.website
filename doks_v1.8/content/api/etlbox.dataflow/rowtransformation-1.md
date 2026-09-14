@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10177
+weight: 10181
 toc: false
 ---
 
@@ -26,6 +26,7 @@ toc: false
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow/rowtransformation-2">RowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level6"><span class="xref">RowTransformation&lt;TInput&gt;</span></div>
+      <div class="level7"><a class="xref" href="/api/etlbox.dataflow/rowtransformation">RowTransformation</a></div>
       <div class="level7"><a class="xref" href="/api/etlbox.dataflow/rowtransformation">RowTransformation</a></div>
   </div>
   <div class="implements">

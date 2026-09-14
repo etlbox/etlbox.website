@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10191
+weight: 10195
 toc: false
 ---
 
@@ -26,6 +26,7 @@ Use this target for data that you don't want to use in a destination, but you st
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><span class="xref">VoidDestination&lt;TInput&gt;</span></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/voiddestination">VoidDestination</a></div>
   </div>
   <div class="implements">

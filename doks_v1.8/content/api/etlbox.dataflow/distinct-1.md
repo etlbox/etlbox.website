@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10148
 toc: false
 ---
 
@@ -28,6 +28,7 @@ and the ability to define custom functions for unique key generation. It is idea
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">Distinct&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/distinct">Distinct</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/distinct">Distinct</a></div>
   </div>
   <div class="implements">

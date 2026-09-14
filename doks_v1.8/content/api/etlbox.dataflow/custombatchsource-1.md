@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10122
+weight: 10124
 toc: false
 ---
 
@@ -26,6 +26,7 @@ which are then send subsequently into your data flow.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">CustomBatchSource&lt;TOutput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/custombatchsource">CustomBatchSource</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/custombatchsource">CustomBatchSource</a></div>
   </div>
   <div class="implements">

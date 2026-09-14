@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10040
+weight: 10042
 toc: false
 ---
 
@@ -22,17 +22,30 @@ toc: false
     <div class="level1"><a class="xref" href="/api/etlbox/loggabletask">LoggableTask</a></div>
     <div class="level2"><span class="xref">ControlFlowTask</span></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/cleanupschematask">CleanUpSchemaTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/cleanupschematask">CleanUpSchemaTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createdatabasetask">CreateDatabaseTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createdatabasetask">CreateDatabaseTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createindextask">CreateIndexTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createindextask">CreateIndexTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createproceduretask">CreateProcedureTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createproceduretask">CreateProcedureTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createschematask">CreateSchemaTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createschematask">CreateSchemaTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createtabletask">CreateTableTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createtabletask">CreateTableTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createviewtask">CreateViewTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/createviewtask">CreateViewTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/dbtask">DbTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/droptask-1">DropTask&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/getlisttask">GetListTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/getlisttask">GetListTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/ifexiststask">IfExistsTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/ifexiststask">IfExistsTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/rowcounttask">RowCountTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/rowcounttask">RowCountTask</a></div>
+      <div class="level3"><a class="xref" href="/api/etlbox.controlflow/truncatetabletask">TruncateTableTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.controlflow/truncatetabletask">TruncateTableTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.logging/createerrortabletask">CreateErrorTableTask</a></div>
       <div class="level3"><a class="xref" href="/api/etlbox.logging/loadprocesstask">LoadProcessTask</a></div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10141
+weight: 10143
 toc: false
 ---
 
@@ -26,6 +26,7 @@ Multiple database are supported. Use the corresponding connection manager that f
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">DbSource&lt;TOutput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbsource">DbSource</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbsource">DbSource</a></div>
   </div>
   <div class="implements">

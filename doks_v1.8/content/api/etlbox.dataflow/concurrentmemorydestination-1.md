@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10111
+weight: 10113
 toc: false
 ---
 
@@ -28,6 +28,7 @@ the <a class="xref" href="/api/etlbox.dataflow/memorydestination">MemoryDestinat
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/memorydestination-1">MemoryDestination</a>&lt;TInput&gt;</div>
     <div class="level5"><span class="xref">ConcurrentMemoryDestination&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">ConcurrentMemoryDestination</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">ConcurrentMemoryDestination</a></div>
   </div>
   <div class="implements">

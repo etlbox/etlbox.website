@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10135
+weight: 10137
 toc: false
 ---
 
@@ -25,6 +25,7 @@ toc: false
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><span class="xref">DataFlowStreamSource&lt;TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.csv/csvsource-1">CsvSource&lt;TOutput&gt;</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/textsource-1">TextSource&lt;TOutput&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/textsource-1">TextSource&lt;TOutput&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.excel/excelsource-1">ExcelSource&lt;TOutput&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.json/jsonsource-1">JsonSource&lt;TOutput&gt;</a></div>
@@ -425,7 +426,9 @@ You can create a stream reader for each requested URI.</p>
   </table>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_Folder_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.Folder*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_Folder" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.Folder">Folder</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the path of the folder with the files to process. This will overwrite the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_HasNextUri">HasNextUri</a> and
+<a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_GetNextUri">GetNextUri</a> functions, so it should only be used if you want to read all files from a folder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}

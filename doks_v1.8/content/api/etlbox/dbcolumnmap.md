@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10200
+weight: 10204
 toc: false
 ---
 
@@ -339,7 +339,8 @@ as data type</p>
 </h3>
   <a id="ETLBox_DbColumnMap_Clone_" data-uid="ETLBox.DbColumnMap.Clone*"></a>
   <h4 id="ETLBox_DbColumnMap_Clone" data-uid="ETLBox.DbColumnMap.Clone">Clone()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -360,7 +361,8 @@ as data type</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
       </tr>
     </tbody>
   </table>

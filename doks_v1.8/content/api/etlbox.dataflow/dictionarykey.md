@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10145
+weight: 10147
 toc: false
 ---
 
@@ -170,7 +170,8 @@ toc: false
   </table>
   <a id="ETLBox_DataFlow_DictionaryKey_Equals_" data-uid="ETLBox.DataFlow.DictionaryKey.Equals*"></a>
   <h4 id="ETLBox_DataFlow_DictionaryKey_Equals_System_Object_" data-uid="ETLBox.DataFlow.DictionaryKey.Equals(System.Object)">Equals(object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -193,7 +194,8 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -208,7 +210,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -216,7 +219,8 @@ toc: false
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a></div>
   <a id="ETLBox_DataFlow_DictionaryKey_GetHashCode_" data-uid="ETLBox.DataFlow.DictionaryKey.GetHashCode*"></a>
   <h4 id="ETLBox_DataFlow_DictionaryKey_GetHashCode" data-uid="ETLBox.DataFlow.DictionaryKey.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -237,7 +241,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>A hash code for the current object.</p>
+</td>
       </tr>
     </tbody>
   </table>

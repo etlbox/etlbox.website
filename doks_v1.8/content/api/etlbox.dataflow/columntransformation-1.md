@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10109
+weight: 10111
 toc: false
 ---
 
@@ -27,6 +27,7 @@ It will always convert the input type into an ExpandoObject as output.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject">ExpandoObject</a>&gt;</div>
     <div class="level5"><span class="xref">ColumnTransformation&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/columntransformation">ColumnTransformation</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/columntransformation">ColumnTransformation</a></div>
   </div>
   <div class="implements">

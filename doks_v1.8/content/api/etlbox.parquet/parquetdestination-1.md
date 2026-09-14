@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.parquet"
-weight: 10312
+weight: 10316
 toc: false
 ---
 
@@ -530,7 +530,7 @@ The default batch size is 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/43ac9a8b69140a8635be1abf8109a6d9468ff9d2/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
+        <td><a class="xref" href="https://github.com/aloneguid/parquet-dotnet/blob/4b08ecdcebf3e3a71e42ad4071a6e1934453bd8f/src/Parquet/ParquetOptions.cs">ParquetOptions</a></td>
         <td></td>
       </tr>
     </tbody>

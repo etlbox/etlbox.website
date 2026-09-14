@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10251
+weight: 10255
 toc: false
 ---
 
@@ -42,6 +42,9 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_Uri">IDataFlowStreamSource.Uri</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_Folder">IDataFlowStreamSource.Folder</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_GetNextUri">IDataFlowStreamSource.GetNextUri</a>

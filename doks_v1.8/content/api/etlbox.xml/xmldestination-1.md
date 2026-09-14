@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.xml"
-weight: 10351
+weight: 10355
 toc: false
 ---
 
@@ -683,42 +683,6 @@ should be written as an XML attribute instead of an element.</p>
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1#ETLBox_DataFlow_DataFlowStreamDestination_1_InitStream">DataFlowStreamDestination&lt;TInput&gt;.InitStream()</a></div>
-  <a id="ETLBox_Xml_XmlDestination_1_SetDefaultNamespace_" data-uid="ETLBox.Xml.XmlDestination`1.SetDefaultNamespace*"></a>
-  <h4 id="ETLBox_Xml_XmlDestination_1_SetDefaultNamespace_System_Xml_Linq_XElement_System_Xml_Linq_XNamespace_" data-uid="ETLBox.Xml.XmlDestination`1.SetDefaultNamespace(System.Xml.Linq.XElement,System.Xml.Linq.XNamespace)">SetDefaultNamespace(XElement, XNamespace)</h4>
-  <div class="markdown level1 summary"><p>Sets the default XML namespace of this System.Xml.Linq.XElement
-and all its descendants</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-{{< /rawhtml >}}
-
-```C#
-    public void SetDefaultNamespace(XElement element, XNamespace newXmlns)
-```
-
-{{< rawhtml >}}
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement">XElement</a></td>
-        <td><span class="parametername">element</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xnamespace">XNamespace</a></td>
-        <td><span class="parametername">newXmlns</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Xml_XmlDestination_1_WriteIntoStream_" data-uid="ETLBox.Xml.XmlDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_Xml_XmlDestination_1_WriteIntoStream__0_" data-uid="ETLBox.Xml.XmlDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
   <div class="markdown level1 summary"></div>

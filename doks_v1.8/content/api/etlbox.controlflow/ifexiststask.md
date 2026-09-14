@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10061
+weight: 10063
 toc: false
 ---
 
@@ -23,9 +23,14 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.controlflow/controlflowtask">ControlFlowTask</a></div>
     <div class="level3"><span class="xref">IfExistsTask</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifdatabaseexiststask">IfDatabaseExistsTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifdatabaseexiststask">IfDatabaseExistsTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifindexexiststask">IfIndexExistsTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifindexexiststask">IfIndexExistsTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifprocedureexiststask">IfProcedureExistsTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifprocedureexiststask">IfProcedureExistsTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifschemaexiststask">IfSchemaExistsTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/ifschemaexiststask">IfSchemaExistsTask</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.controlflow/iftableorviewexiststask">IfTableOrViewExistsTask</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.controlflow/iftableorviewexiststask">IfTableOrViewExistsTask</a></div>
   </div>
   <div class="implements">

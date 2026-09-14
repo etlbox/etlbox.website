@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10130
+weight: 10132
 toc: false
 ---
 
@@ -24,9 +24,16 @@ toc: false
     <div class="level3"><span class="xref">DataFlowDestination&lt;TInput&gt;</span></div>
       <div class="level4"><a class="xref" href="/api/etlbox.analysis/dataframedestination-1">DataFrameDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/customdestination-1">CustomDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/customdestination-1">CustomDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1">DataFlowStreamDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamdestination-1">DataFlowStreamDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/logdestination-1">LogDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/logdestination-1">LogDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/memorydestination-1">MemoryDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/memorydestination-1">MemoryDestination&lt;TInput&gt;</a></div>
+      <div class="level4"><a class="xref" href="/api/etlbox.dataflow/voiddestination-1">VoidDestination&lt;TInput&gt;</a></div>
       <div class="level4"><a class="xref" href="/api/etlbox.dataflow/voiddestination-1">VoidDestination&lt;TInput&gt;</a></div>
   </div>
   <div class="implements">

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10252
+weight: 10256
 toc: false
 ---
 
@@ -229,6 +229,35 @@ You can create a stream reader for each requested URI.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_IDataFlowStreamSource_Folder_" data-uid="ETLBox.IDataFlowStreamSource.Folder*"></a>
+  <h4 id="ETLBox_IDataFlowStreamSource_Folder" data-uid="ETLBox.IDataFlowStreamSource.Folder">Folder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the path of the folder with the files to process. This will overwrite the <a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_HasNextUri">HasNextUri</a> and
+<a class="xref" href="/api/etlbox/idataflowstreamsource#ETLBox_IDataFlowStreamSource_GetNextUri">GetNextUri</a> functions, so it should only be used if you want to read all files from a folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    string Folder { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10137
+weight: 10139
 toc: false
 ---
 
@@ -26,6 +26,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1">DataFlowDestination</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowbatchdestination-1">DataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div class="level5"><span class="xref">DbDestination&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbdestination">DbDestination</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/dbdestination">DbDestination</a></div>
   </div>
   <div class="implements">

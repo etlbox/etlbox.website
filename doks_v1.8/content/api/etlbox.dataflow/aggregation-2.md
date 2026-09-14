@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10088
+weight: 10090
 toc: false
 ---
 
@@ -27,6 +27,7 @@ When all rows have been processed by the aggregation, the aggregated values are 
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TOutput&gt;</div>
     <div class="level5"><span class="xref">Aggregation&lt;TInput, TOutput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/aggregation">Aggregation</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/aggregation">Aggregation</a></div>
   </div>
   <div class="implements">

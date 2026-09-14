@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10162
+weight: 10166
 toc: false
 ---
 
@@ -31,6 +31,8 @@ can be compared with a left or right join.</p>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><span class="xref">MergeJoin&lt;TInput1, TInput2, TOutput&gt;</span></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/mergejoin">MergeJoin</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/mergejoin">MergeJoin</a></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.dataflow/mergejoin-1">MergeJoin&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.dataflow/mergejoin-1">MergeJoin&lt;TInput&gt;</a></div>
   </div>
   <div class="implements">

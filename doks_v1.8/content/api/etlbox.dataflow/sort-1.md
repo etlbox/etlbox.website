@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10182
+weight: 10186
 toc: false
 ---
 
@@ -26,6 +26,7 @@ This is a blocking transformation - no output will be produced until all input d
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TInput&gt;</div>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div class="level5"><span class="xref">Sort&lt;TInput&gt;</span></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/sort">Sort</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/sort">Sort</a></div>
   </div>
   <div class="implements">

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.controlflow"
-weight: 10076
+weight: 10078
 toc: false
 ---
 
@@ -299,7 +299,8 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_TableData_Depth_" data-uid="ETLBox.ControlFlow.TableData.Depth*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_Depth" data-uid="ETLBox.ControlFlow.TableData.Depth">Depth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating the depth of nesting for the current row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -320,7 +321,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>The level of nesting.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -354,7 +356,8 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_TableData_FieldCount_" data-uid="ETLBox.ControlFlow.TableData.FieldCount*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_FieldCount" data-uid="ETLBox.ControlFlow.TableData.FieldCount">FieldCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the number of columns in the current row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -375,13 +378,15 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>When not positioned in a valid recordset, 0; otherwise, the number of columns in the current record. The default is -1.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_IsClosed_" data-uid="ETLBox.ControlFlow.TableData.IsClosed*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_IsClosed" data-uid="ETLBox.ControlFlow.TableData.IsClosed">IsClosed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the data reader is closed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -402,13 +407,15 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the data reader is closed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_Item_" data-uid="ETLBox.ControlFlow.TableData.Item*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_Item_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.Item(System.Int32)">this[int]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the column located at the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -431,7 +438,8 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based index of the column to get.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -446,13 +454,31 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td></td>
+        <td><p>The column located at the specified index as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_Item_" data-uid="ETLBox.ControlFlow.TableData.Item*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_Item_System_String_" data-uid="ETLBox.ControlFlow.TableData.Item(System.String)">this[string]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the column with the specified name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -475,7 +501,8 @@ toc: false
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of the column to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -490,7 +517,24 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td></td>
+        <td><p>The column with the specified name as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>No column with the specified name was found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -552,7 +596,8 @@ toc: false
   </table>
   <a id="ETLBox_ControlFlow_TableData_RecordsAffected_" data-uid="ETLBox.ControlFlow.TableData.RecordsAffected*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_RecordsAffected" data-uid="ETLBox.ControlFlow.TableData.RecordsAffected">RecordsAffected</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the number of rows changed, inserted, or deleted by execution of the SQL statement.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -573,7 +618,8 @@ toc: false
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>The number of rows changed, inserted, or deleted; 0 if no rows were affected or the statement failed; and -1 for SELECT statements.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -750,7 +796,8 @@ The key of the list is a unique sequence number, and the order matches also to e
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetBoolean_" data-uid="ETLBox.ControlFlow.TableData.GetBoolean*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetBoolean_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetBoolean(System.Int32)">GetBoolean(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of the specified column as a Boolean.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -773,7 +820,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -788,13 +836,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p>The value of the column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetByte_" data-uid="ETLBox.ControlFlow.TableData.GetByte*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetByte_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetByte(System.Int32)">GetByte(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the 8-bit unsigned integer value of the specified column.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -817,7 +883,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -832,13 +899,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></td>
-        <td></td>
+        <td><p>The 8-bit unsigned integer value of the specified column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetBytes_" data-uid="ETLBox.ControlFlow.TableData.GetBytes*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">GetBytes(int, long, byte[], int, int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads a stream of bytes from the specified column offset into the buffer as an array, starting at the given buffer offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -861,27 +946,32 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
         <td><span class="parametername">fieldOffset</span></td>
-        <td></td>
+        <td><p>The index within the field from which to start the read operation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
         <td><span class="parametername">buffer</span></td>
-        <td></td>
+        <td><p>The buffer into which to read the stream of bytes.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">bufferoffset</span></td>
-        <td></td>
+        <td><p>The index for <code class="paramref">buffer</code> to start the read operation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>The number of bytes to read.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -896,13 +986,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
-        <td></td>
+        <td><p>The actual number of bytes read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetChar_" data-uid="ETLBox.ControlFlow.TableData.GetChar*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetChar_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetChar(System.Int32)">GetChar(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the character value of the specified column.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -925,7 +1033,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -940,13 +1049,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></td>
-        <td></td>
+        <td><p>The character value of the specified column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetChars_" data-uid="ETLBox.ControlFlow.TableData.GetChars*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">GetChars(int, long, char[], int, int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads a stream of characters from the specified column offset into the buffer as an array, starting at the given buffer offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -969,27 +1096,32 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The zero-based column ordinal.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
         <td><span class="parametername">fieldoffset</span></td>
-        <td></td>
+        <td><p>The index within the row from which to start the read operation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>[]</td>
         <td><span class="parametername">buffer</span></td>
-        <td></td>
+        <td><p>The buffer into which to read the stream of bytes.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">bufferoffset</span></td>
-        <td></td>
+        <td><p>The index for <code class="paramref">buffer</code> to start the read operation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>The number of bytes to read.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1004,13 +1136,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
-        <td></td>
+        <td><p>The actual number of characters read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetData_" data-uid="ETLBox.ControlFlow.TableData.GetData*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetData_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetData(System.Int32)">GetData(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> for the specified column ordinal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1033,7 +1183,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1048,13 +1199,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> for the specified column ordinal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetDataTypeName_" data-uid="ETLBox.ControlFlow.TableData.GetDataTypeName*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetDataTypeName_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetDataTypeName(System.Int32)">GetDataTypeName(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the data type information for the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1077,7 +1246,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1092,7 +1262,24 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The data type information for the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1145,7 +1332,8 @@ The key of the list is a unique sequence number, and the order matches also to e
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetDateTime_" data-uid="ETLBox.ControlFlow.TableData.GetDateTime*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetDateTime_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetDateTime(System.Int32)">GetDateTime(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the date and time data value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1168,7 +1356,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1183,13 +1372,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
-        <td></td>
+        <td><p>The date and time data value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetDecimal_" data-uid="ETLBox.ControlFlow.TableData.GetDecimal*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetDecimal_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetDecimal(System.Int32)">GetDecimal(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the fixed-position numeric value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1212,7 +1419,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1227,13 +1435,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></td>
-        <td></td>
+        <td><p>The fixed-position numeric value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetDouble_" data-uid="ETLBox.ControlFlow.TableData.GetDouble*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetDouble_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetDouble(System.Int32)">GetDouble(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the double-precision floating point number of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1256,7 +1482,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1271,13 +1498,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td></td>
+        <td><p>The double-precision floating point number of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetFieldType_" data-uid="ETLBox.ControlFlow.TableData.GetFieldType*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetFieldType_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetFieldType(System.Int32)">GetFieldType(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> information corresponding to the type of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> that would be returned from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getvalue">GetValue(int)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1300,7 +1545,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1315,13 +1561,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> information corresponding to the type of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> that would be returned from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getvalue">GetValue(int)</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetFloat_" data-uid="ETLBox.ControlFlow.TableData.GetFloat*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetFloat_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetFloat(System.Int32)">GetFloat(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the single-precision floating point number of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1344,7 +1608,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1359,13 +1624,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td></td>
+        <td><p>The single-precision floating point number of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetGuid_" data-uid="ETLBox.ControlFlow.TableData.GetGuid*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetGuid_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetGuid(System.Int32)">GetGuid(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the GUID value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1388,7 +1671,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1403,13 +1687,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td></td>
+        <td><p>The GUID value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetInt16_" data-uid="ETLBox.ControlFlow.TableData.GetInt16*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetInt16_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetInt16(System.Int32)">GetInt16(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the 16-bit signed integer value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1432,7 +1734,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1447,13 +1750,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></td>
-        <td></td>
+        <td><p>The 16-bit signed integer value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetInt32_" data-uid="ETLBox.ControlFlow.TableData.GetInt32*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetInt32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetInt32(System.Int32)">GetInt32(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the 32-bit signed integer value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1476,7 +1797,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1491,13 +1813,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>The 32-bit signed integer value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetInt64_" data-uid="ETLBox.ControlFlow.TableData.GetInt64*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetInt64_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetInt64(System.Int32)">GetInt64(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the 64-bit signed integer value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1520,7 +1860,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1535,13 +1876,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
-        <td></td>
+        <td><p>The 64-bit signed integer value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetName_" data-uid="ETLBox.ControlFlow.TableData.GetName*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetName_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetName(System.Int32)">GetName(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name for the field to find.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1564,7 +1923,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1579,13 +1939,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The name of the field or the empty string (&quot;&quot;), if there is no value to return.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetOrdinal_" data-uid="ETLBox.ControlFlow.TableData.GetOrdinal*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetOrdinal_System_String_" data-uid="ETLBox.ControlFlow.TableData.GetOrdinal(System.String)">GetOrdinal(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the index of the named field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1608,7 +1986,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1623,13 +2002,16 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>The index of the named field.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetSchemaTable_" data-uid="ETLBox.ControlFlow.TableData.GetSchemaTable*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetSchemaTable" data-uid="ETLBox.ControlFlow.TableData.GetSchemaTable">GetSchemaTable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> that describes the column metadata of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a>.</p>
+<p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the executed command returned no resultset, or after <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader.nextresult">NextResult()</a> returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1650,13 +2032,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></td>
-        <td></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> that describes the column metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> is closed.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetString_" data-uid="ETLBox.ControlFlow.TableData.GetString*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetString_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetString(System.Int32)">GetString(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the string value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1679,7 +2079,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1694,7 +2095,24 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The string value of the specified field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1746,7 +2164,8 @@ The key of the list is a unique sequence number, and the order matches also to e
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetValue_" data-uid="ETLBox.ControlFlow.TableData.GetValue*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetValue_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.GetValue(System.Int32)">GetValue(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of the specified field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1769,7 +2188,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1784,13 +2204,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td></td>
+        <td><p>The field value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_GetValues_" data-uid="ETLBox.ControlFlow.TableData.GetValues*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_GetValues_System_Object___" data-uid="ETLBox.ControlFlow.TableData.GetValues(System.Object[])">GetValues(object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Populates an array of objects with the column values of the current record.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1813,7 +2251,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
         <td><span class="parametername">values</span></td>
-        <td></td>
+        <td><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to copy the attribute fields into.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1828,13 +2267,15 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
+        <td><p>The number of instances of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> in the array.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_IsDBNull_" data-uid="ETLBox.ControlFlow.TableData.IsDBNull*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_IsDBNull_System_Int32_" data-uid="ETLBox.ControlFlow.TableData.IsDBNull(System.Int32)">IsDBNull(int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return whether the specified field is set to null.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1857,7 +2298,8 @@ The key of the list is a unique sequence number, and the order matches also to e
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">i</span></td>
-        <td></td>
+        <td><p>The index of the field to find.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1872,13 +2314,31 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified field is set to null; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>The index passed was outside the range of 0 through <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.fieldcount">FieldCount</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_NextResult_" data-uid="ETLBox.ControlFlow.TableData.NextResult*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_NextResult" data-uid="ETLBox.ControlFlow.TableData.NextResult">NextResult()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Advances the data reader to the next result, when reading the results of batch SQL statements.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1899,13 +2359,15 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if there are more rows; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="ETLBox_ControlFlow_TableData_Read_" data-uid="ETLBox.ControlFlow.TableData.Read*"></a>
   <h4 id="ETLBox_ControlFlow_TableData_Read" data-uid="ETLBox.ControlFlow.TableData.Read">Read()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Advances the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> to the next record.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -1926,7 +2388,8 @@ The key of the list is a unique sequence number, and the order matches also to e
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if there are more rows; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>

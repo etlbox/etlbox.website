@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10093
+weight: 10095
 toc: false
 ---
 
@@ -31,7 +31,10 @@ memory to store a whole batch.</p>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2">DataFlowTransformation</a>&lt;TInput, TOutput&gt;</div>
     <div class="level5"><span class="xref">BatchTransformation&lt;TInput, TOutput&gt;</span></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-1">BatchTransformation&lt;TInput&gt;</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/batchtransformation-1">BatchTransformation&lt;TInput&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/blocktransformation-2">BlockTransformation&lt;TInput, TOutput&gt;</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/blocktransformation-2">BlockTransformation&lt;TInput, TOutput&gt;</a></div>
+      <div class="level6"><a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3">CachedBatchTransformation&lt;TInput, TOutput, TCache&gt;</a></div>
       <div class="level6"><a class="xref" href="/api/etlbox.dataflow/cachedbatchtransformation-3">CachedBatchTransformation&lt;TInput, TOutput, TCache&gt;</a></div>
   </div>
   <div class="implements">

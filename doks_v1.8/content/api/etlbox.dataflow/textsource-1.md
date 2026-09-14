@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10187
+weight: 10191
 toc: false
 ---
 
@@ -29,6 +29,7 @@ or a carriage return immediately followed by a line feed(&quot;\r\n&quot;).</p>
     <div class="level4"><a class="xref" href="/api/etlbox.dataflow/dataflowexecutablesource-1">DataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div class="level5"><a class="xref" href="/api/etlbox.dataflow/dataflowstreamsource-1">DataFlowStreamSource</a>&lt;TOutput&gt;</div>
     <div class="level6"><span class="xref">TextSource&lt;TOutput&gt;</span></div>
+      <div class="level7"><a class="xref" href="/api/etlbox.dataflow/textsource">TextSource</a></div>
       <div class="level7"><a class="xref" href="/api/etlbox.dataflow/textsource">TextSource</a></div>
   </div>
   <div class="implements">
