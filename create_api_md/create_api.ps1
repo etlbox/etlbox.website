@@ -50,5 +50,9 @@ if ($LASTEXITCODE -ne 0) { throw "docfx failed" }
 
 $websiteApi = Join-Path $PSScriptRoot "..\doks_v1.8\content\api"
 Remove-FolderIfExists $websiteApi
-move-item './Output/api' $websiteApi
+Move-Item './Output/api' $websiteApi
+
+$dbExtApi = Join-Path $PSScriptRoot "..\doks_v1.8\dbextensions\content\api\etlbox.dbextensions"
+Remove-FolderIfExists $dbExtApi
+Copy-Item (Join-Path $websiteApi "etlbox.dbextensions") $dbExtApi -Recurse
 pause

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dbextensions"
-weight: 10209
+weight: 10212
 toc: false
 ---
 
@@ -180,7 +180,7 @@ if an update is needed.</p>
   <h4 id="ETLBox_DbExtensions_MergeBulkOptions_1_CompareFunc" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.CompareFunc">CompareFunc</h4>
   <div class="markdown level1 summary"><p>By default, the CompareColumns are used to determine if a row needs to be updated.
 You can override the matching behavior using your own compare function which takes the current row and the
-row from the destination table as input and returns true if the row needs to be updated, and false if not.
+row from the destination table as input and returns true if the rows are equal (no update), and false if the destination row should be updated.
 You still need to define the CompareColumns to specify which columns should be retrieved from the destination table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -345,6 +345,35 @@ Only applies if <a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-
     <tbody>
       <tr>
         <td><a class="xref" href="/api/etlbox/mergemode">MergeMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DbExtensions_MergeBulkOptions_1_ReadConnection_" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.ReadConnection*"></a>
+  <h4 id="ETLBox_DbExtensions_MergeBulkOptions_1_ReadConnection" data-uid="ETLBox.DbExtensions.MergeBulkOptions`1.ReadConnection">ReadConnection</h4>
+  <div class="markdown level1 summary"><p>Only applies if <a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-1#ETLBox_DbExtensions_MergeBulkOptions_1_CacheMode">CacheMode</a> is set to <a class="xref" href="/api/etlbox/cachemode#ETLBox_CacheMode_Partial">Partial</a>.
+Another connection is needed to read from the destination table while the merge operation is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public IDbConnection ReadConnection { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a></td>
         <td></td>
       </tr>
     </tbody>

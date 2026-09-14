@@ -6,7 +6,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "oeprations"
+    parent: "operations"
 weight: 60
 toc: true
 ---

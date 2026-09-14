@@ -150,7 +150,7 @@ These options are available **only for `BulkMerge()`**:
 
 | Property          | Description |
 |-------------------|-------------|
-| `MergeMode`       | Either `MergeMode.Full` (default), `MergeMode.Delta`, `MergeMode.InsertsOnly`, `MergeMode.UpdatesOnly` or `MergeMode.InsertsAndDeletes`.  Determines deletion behavior. |
+| `MergeMode`       | Either `MergeMode.Full` (default), `MergeMode.Delta`, `MergeMode.InsertsAndUpdates`, `MergeMode.InsertsOnly`, or `MergeMode.UpdatesOnly`. Determines deletion behavior. |
 | `FindDuplicates`  | Enables duplicate detection in source data. |
 | `CompareColumns`  | Columns used to decide if a row needs to be updated. |
 | `UpdateColumns`   | Columns to be updated when a match is found. |
@@ -177,7 +177,7 @@ connection.BulkMerge(data, options => {
 
 ### CompareFunc
 
-Use `CompareFunc` to override comparison logic — for example, always force an update if a matching row exists.
+Use `CompareFunc` to override comparison logic. The function returns `true` if the rows are equal (no update) and `false` if the destination row should be updated.
 
 ```csharp
 connection.BulkMerge(data, options => {
@@ -187,10 +187,8 @@ connection.BulkMerge(data, options => {
         new IdColumn("OtherId")
     };
     options.CompareFunc = (source, target) => {
-        // Always update if the record exists
+        // false = not equal → always update if the record exists
         return false;
     };
 });
 ```
-
-Let me know if you want a version that conditionally compares values (e.g., only update if one column differs).

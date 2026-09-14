@@ -592,7 +592,7 @@ the DbMerge can decide if the column needs to be updated.</p>
   <h4 id="ETLBox_DataFlow_DbMerge_1_CompareFunc" data-uid="ETLBox.DataFlow.DbMerge`1.CompareFunc">CompareFunc</h4>
   <div class="markdown level1 summary"><p>By default, the CompareColumns are used to determine if a row needs to be updated.
 You can override the matching behavior using your own compare function which takes the current row and the
-row from the destination table as input and returns true if the row needs to be updated, and false if not.
+row from the destination table as input and returns true if the rows are equal (no update), and false if the destination row should be updated.
 You still need to define the CompareColumns to specify which columns should be retrieved from the destination table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

@@ -14,7 +14,7 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.ClickHouse.ClickHouseConnectionManager">
   <h1 id="ETLBox_ClickHouse_ClickHouseConnectionManager" data-uid="ETLBox.ClickHouse.ClickHouseConnectionManager" class="text-break">Class ClickHouseConnectionManager</h1>
-  <div class="markdown level0 summary"><p>Connection manager of a classic ADO.NET connection to a (Microsoft) Sql Server.</p>
+  <div class="markdown level0 summary"><p>Connection manager of a classic ADO.NET connection to a ClickHouse database.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -250,7 +250,7 @@ toc: false
 
 {{< rawhtml >}}
   <h5 id="ETLBox_ClickHouse_ClickHouseConnectionManager_examples"><strong>Examples</strong></h5>
-  <pre><code class="lang-csharp">ControlFlow.DefaultDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;"));</code></pre>
+  <pre><code class="lang-csharp">ControlFlow.DefaultDbConnection = new ClickHouseConnectionManager("Host=localhost;Port=8123;Username=default;Database=default;");</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <a id="ETLBox_ClickHouse_ClickHouseConnectionManager__ctor_" data-uid="ETLBox.ClickHouse.ClickHouseConnectionManager.#ctor*"></a>

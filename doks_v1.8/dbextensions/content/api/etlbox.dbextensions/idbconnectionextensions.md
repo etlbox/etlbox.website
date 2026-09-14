@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dbextensions"
-weight: 10208
+weight: 10211
 toc: false
 ---
 
@@ -14,7 +14,8 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DbExtensions.IDbConnectionExtensions">
   <h1 id="ETLBox_DbExtensions_IDbConnectionExtensions" data-uid="ETLBox.DbExtensions.IDbConnectionExtensions" class="text-break">Class IDbConnectionExtensions</h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Extension methods that add bulk insert, update, delete, and merge operations to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -349,7 +350,7 @@ toc: false
   <h4 id="ETLBox_DbExtensions_IDbConnectionExtensions_BulkMerge__1_System_Data_IDbConnection_System_Collections_Generic_IEnumerable___0__" data-uid="ETLBox.DbExtensions.IDbConnectionExtensions.BulkMerge``1(System.Data.IDbConnection,System.Collections.Generic.IEnumerable{``0})">BulkMerge&lt;T&gt;(IDbConnection, IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a merge operation on the specified database connection.
 The merge operation is a combination of insert, update, and delete operations.
-By default, the Merge will operation in full, which tries to delete rows in the target table
+By default, the merge operates in Full mode, which tries to delete rows in the target table
 that don't exist in the source data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -380,7 +381,7 @@ that don't exist in the source data.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td><p>The data to be deleted.</p>
+        <td><p>The data to be merged.</p>
 </td>
       </tr>
     </tbody>
@@ -421,7 +422,7 @@ that don't exist in the source data.</p>
   <h4 id="ETLBox_DbExtensions_IDbConnectionExtensions_BulkMerge__1_System_Data_IDbConnection_System_Collections_Generic_IEnumerable___0__System_Action_ETLBox_DbExtensions_MergeBulkOptions___0___" data-uid="ETLBox.DbExtensions.IDbConnectionExtensions.BulkMerge``1(System.Data.IDbConnection,System.Collections.Generic.IEnumerable{``0},System.Action{ETLBox.DbExtensions.MergeBulkOptions{``0}})">BulkMerge&lt;T&gt;(IDbConnection, IEnumerable&lt;T&gt;, Action&lt;MergeBulkOptions&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Performs a merge operation on the specified database connection.
 The merge operation is a combination of insert, update, and delete operations.
-By default, the Merge will operation in full, which tries to delete rows in the target table
+By default, the merge operates in Full mode, which tries to delete rows in the target table
 that don't exist in the source data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -452,13 +453,13 @@ that don't exist in the source data.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td><p>The data to be deleted.</p>
+        <td><p>The data to be merged.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-1">MergeBulkOptions</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">options</span></td>
-        <td><p>The configurable options for the bulk delete operation.</p>
+        <td><p>The configurable options for the bulk merge operation.</p>
 </td>
       </tr>
     </tbody>

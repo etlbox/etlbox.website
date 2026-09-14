@@ -14,7 +14,9 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.EntityFramework.DbContextExtensions">
   <h1 id="ETLBox_EntityFramework_DbContextExtensions" data-uid="ETLBox.EntityFramework.DbContextExtensions" class="text-break">Class DbContextExtensions</h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Extension methods that add bulk insert, update, delete, and merge operations to Entity Framework Core <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a>.
+Table name, column mapping, and identity columns are derived from the EF model.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -59,7 +61,8 @@ toc: false
 </h3>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkDelete_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkDelete*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkDelete__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkDelete``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0})">BulkDelete&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk delete of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -108,7 +111,8 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkDelete_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkDelete*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkDelete__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__System_Action_ETLBox_DbExtensions_BulkOptions___0___" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkDelete``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0},System.Action{ETLBox.DbExtensions.BulkOptions{``0}})">BulkDelete&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;, Action&lt;BulkOptions&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk delete of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -162,7 +166,8 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkInsert_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkInsert*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkInsert__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkInsert``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0})">BulkInsert&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk insert of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -211,7 +216,8 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkInsert_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkInsert*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkInsert__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__System_Action_ETLBox_DbExtensions_BulkOptions___0___" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkInsert``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0},System.Action{ETLBox.DbExtensions.BulkOptions{``0}})">BulkInsert&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;, Action&lt;BulkOptions&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk insert of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -265,7 +271,9 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkMerge_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkMerge*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkMerge__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkMerge``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0})">BulkMerge&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk merge of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.
+The merge combines insert, update, and optionally delete operations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -314,7 +322,9 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkMerge_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkMerge*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkMerge__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__System_Action_ETLBox_DbExtensions_MergeBulkOptions___0___" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkMerge``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0},System.Action{ETLBox.DbExtensions.MergeBulkOptions{``0}})">BulkMerge&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;, Action&lt;MergeBulkOptions&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk merge of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.
+The merge combines insert, update, and optionally delete operations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -368,7 +378,8 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkUpdate_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkUpdate*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkUpdate__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkUpdate``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0})">BulkUpdate&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk update of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
@@ -417,7 +428,8 @@ toc: false
   </table>
   <a id="ETLBox_EntityFramework_DbContextExtensions_BulkUpdate_" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkUpdate*"></a>
   <h4 id="ETLBox_EntityFramework_DbContextExtensions_BulkUpdate__1_Microsoft_EntityFrameworkCore_DbContext_System_Collections_Generic_IEnumerable___0__System_Action_ETLBox_DbExtensions_BulkOptions___0___" data-uid="ETLBox.EntityFramework.DbContextExtensions.BulkUpdate``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IEnumerable{``0},System.Action{ETLBox.DbExtensions.BulkOptions{``0}})">BulkUpdate&lt;T&gt;(DbContext, IEnumerable&lt;T&gt;, Action&lt;BulkOptions&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk update of the given entities using the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a> connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
 {{< /rawhtml >}}
