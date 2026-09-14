@@ -1,5 +1,6 @@
 <!--
   Based on: https://github.com/alex-shpak/hugo-book/blob/master/layouts/shortcodes/tabs.html
+  Strip spaces from data-toggle-tab / data-pane so tabs.js querySelectorAll stays valid.
 -->
 
 {{ if .Inner }}{{ end }}

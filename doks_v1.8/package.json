@@ -1,6 +1,6 @@
 {
   "name": "etlbox",
-  "version": "1.8.0",
+  "version": "1.9.3",
   "description": "ETLBox Website",
   "author": "ETLBoxperts GmbH",
   "license": "MIT",
@@ -15,17 +15,21 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
-    "@tabler/icons": "^3.12.0",
-    "@thulite/doks-core": "^1.8.0",
-    "@thulite/images": "^3.3.0",
-    "@thulite/inline-svg": "^1.1.0",
-    "@thulite/seo": "^2.4.1",
-    "thulite": "^2.5.0",
+    "@tabler/icons": "^3.36.1",
+    "@thulite/doks-core": "^1.9.3",
+    "@thulite/images": "^3.3.4",
+    "@thulite/inline-svg": "^1.2.2",
+    "@thulite/seo": "^2.4.3",
+    "thulite": "^2.6.5",
     "tom-select": "^2.3.1"
   },
+  "overrides": {
+    "minimatch": "^10.2.2",
+    "glob": "^13.0.6"
+  },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "vite": "^5.4.2"
+    "prettier": "^3.8.1",
+    "vite": "^7.3.1"
   },
   "engines": {
     "node": ">=20.11.0"

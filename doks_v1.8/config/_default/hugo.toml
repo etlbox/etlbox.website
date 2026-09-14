@@ -8,7 +8,6 @@ enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
 languageCode = "en-US"
-pagerSize = 10
 rssLimit = 10
 summarylength = 20 # 70 (default)
 
@@ -17,14 +16,17 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
+copyRight = "Copyright (c) 2020-2026 ETLBoxperts GmbH"
 
 [build.buildStats]
   enable = true
 
 [outputs]
-  home = ["HTML", "RSS", "searchIndex"]
-  section = ["HTML", "RSS", "SITEMAP"]
+  home = ["html", "rss", "sitemap", "searchIndex", "llms"]
+  page = ["html", "markdown"]
+  section = ["html", "rss", "sitemap"]
+  taxonomy = ["html", "rss", "sitemap"]
+  term = ["html", "rss", "sitemap"]
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
@@ -32,14 +34,26 @@ copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
   isPlainText = true
   notAlternative = true
 
+[outputFormats.markdown]
+  baseName = "index"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/markdown"
+
+[outputFormats.llms]
+  baseName = "llms"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/plain"
+
 # Add output format for section sitemap.xml
-[outputFormats.SITEMAP]
+[outputFormats.sitemap]
   mediaType = "application/xml"
   baseName = "sitemap"
   isHTML = false
   isPlainText = true
   noUgly = true
-  rel  = "sitemap"
+  rel = "sitemap"
 
 [sitemap]
   changefreq = "monthly"
@@ -47,7 +61,7 @@ copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
   priority = 0.5
 
 [caches]
-  [caches.getjson]
+  [caches.getresource]
     dir = ":cacheDir/:project"
     maxAge = -1 # "30m"
 
@@ -62,7 +76,11 @@ copyRight = "Copyright (c) 2020-2025 ETLBoxperts GmbH"
 # docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
+  keepComments = true # If set to false, build signatures are removed
   keepWhitespace = false
+
+[pagination]
+  pagerSize = 10
 
 [related]
   threshold = 80

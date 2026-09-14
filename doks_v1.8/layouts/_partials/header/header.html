@@ -7,7 +7,7 @@
 {{ end -}}
 
 {{ if site.Params.doks.headerBar -}}
-<div class="header-bar"></div>
+    <div class="header-bar"></div>
 {{ end -}}
 
 <header class="navbar navbar-expand-lg">
@@ -23,7 +23,9 @@
       <img src="/logos/svg/logo_etlbox_32x32_dark.svg" class="dark-mode-image" alt="ETLBox" width="32" height="32">
       {{ .Site.Title }}
     </a>
+    {{ if site.Params.doks.navBarButtonUrl2 -}}
     <a class="btn btn-primary rounded-pill me-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl2 | absURL }}" role="button">{{ site.Params.doks.navBarButtonText2 }}</a>
+    {{ end -}}
 
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
@@ -64,6 +66,9 @@
       </div>
       <div class="offcanvas-body">
         <aside class="doks-sidebar mt-n3">
+          {{ if site.Params.doks.sectionSwitcher -}}
+            {{ partial "sidebar/section-switcher.html" . }}
+          {{ end -}}
           <nav id="doks-docs-nav" aria-label="Tertiary navigation">
             {{ partial "sidebar/section-menu.html" . }}
           </nav>
@@ -115,7 +120,7 @@
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
-            {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
+            {{- $active = or $active (eq .Name ($section | humanize)) -}}
             {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
             {{ if .HasChildren -}}
               <li class="nav-item dropdown">
@@ -231,7 +236,7 @@
 
         <!-- Color mode toggler -->
         {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+        <button id="buttonColorMode" class="btn btn-link nav-link mt-3 mt-lg-0 p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
           <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
@@ -245,7 +250,7 @@
 
         <!-- Social menu -->
         {{ if .Site.Menus.social -}}
-        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+        <ul id="socialMenu" class="nav flex-row order-lg-4">
           {{ range .Site.Menus.social -}}
             <li class="nav-item">
               <a class="nav-link social-link" href="{{ .URL | relURL }}" target="_blank" rel="noopener">{{ .Pre | safeHTML }}<small class="ms-2 visually-hidden">{{ .Name | safeHTML }}</small></a>
@@ -258,7 +263,9 @@
         <!-- Navbar button mobile -->
         {{ if site.Params.doks.navBarButton -}}
           <a class="btn btn-secondary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+          {{ if site.Params.doks.navBarButtonUrl2 -}}
           <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl2 | absURL }}" role="button">{{ site.Params.doks.navBarButtonText2 }}</a>
+          {{ end -}}
         {{ end -}}
       </div>
     </div>
@@ -266,7 +273,9 @@
     <!-- Navbar button desktop -->
     {{ if site.Params.doks.navBarButton -}}
       <a class="btn btn-secondary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+      {{ if site.Params.doks.navBarButtonUrl2 -}}
       <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Params.doks.navBarButtonUrl2 | absURL }}" role="button">{{ site.Params.doks.navBarButtonText2 }}</a>
+      {{ end -}}
     {{ end -}}
 
   </div>
@@ -279,5 +288,3 @@
 {{ if site.Params.doks.flexSearch -}}
 {{ partial "header/search-modal" . }}
 {{ end -}}
-
-

@@ -1,7 +1,10 @@
 {{ define "main" }}
-	<div class="row flex-lg-nowrap">
+	<div class="row flex-xl-nowrap">
 		{{ if (in site.Params.doks.sectionNav .Section) -}}
 		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
+			{{ if site.Params.doks.sectionSwitcher -}}
+				{{ partial "sidebar/section-switcher.html" . }}
+			{{ end -}}
 			{{ partial "sidebar/section-menu.html" . }}
 		</div>
 		{{ end -}}
@@ -13,15 +16,20 @@
 			{{ partial "sidebar/docs-toc-desktop.html" . }}
 		</nav>
 		{{ end -}}
-		{{ if .Params.toc -}}
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") .Params.toc -}}
+		<main class="docs-content col-lg-16 col-xl-9">
+		{{ else if ne .Params.toc false -}}
 		<main class="docs-content col-lg-11 col-xl-9">
+		{{ else if eq .Section "api" -}}
+		<main class="api-content col-lg-11 col-xl-12 mx-xl-auto">
 		{{ else -}}
-			{{ if eq .Section "api" -}}
-			<main class="api-content col-lg-11 col-xl-12 mx-xl-auto">
-			{{ else -}}
-			<main class="docs-content col-lg-15 col-xl-12 mx-xl-auto">
-			{{ end -}}
+		<main class="docs-content col-lg-15 col-xl-12 mx-xl-auto">
 		{{ end -}}
+			{{ if ne .Params.toc false -}}
+			<nav class="toc-mobile toc-mobile-sticky d-xl-none" aria-label="Quaternary navigation">
+				{{ partial "sidebar/docs-toc-mobile.html" . }}
+			</nav>
+			{{ end -}}
 			{{ if site.Params.doks.breadcrumbTrail -}}
 				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
 				<nav aria-label="breadcrumb">
@@ -31,14 +39,19 @@
 					</ol>
 				</nav>
 			{{ end }}
-			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-			{{ if ne .Params.toc false -}}
-			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				{{ partial "sidebar/docs-toc-mobile.html" . }}
-			</nav>
-			{{ end -}}
-
+			<div class="page-header d-flex flex-row justify-content-between align-items-start">
+				<div>
+					<h1>{{ .Title }}</h1>
+					{{ with .Params.lead -}}
+					<p class="lead">{{ . | safeHTML }}</p>
+					{{ end -}}
+				</div>
+				{{ if site.Params.doks.aiButtons -}}
+				<div>
+					{{ partial "main/ai-buttons.html" . }}
+				</div>
+				{{ end -}}
+			</div>
 			{{ if site.Params.doks.headlineHash -}}
 				{{ partial "main/headline-hash" .Content }}
 			{{ else -}}
@@ -55,13 +68,6 @@
 			{{ if ne .Params.toc false -}}
 				{{ partial "main/docs-navigation.html" . }}
 			{{ end -}}
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
 		</main>
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
 			</div>

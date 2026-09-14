@@ -6,6 +6,10 @@ images = ["cover.png"]
 # mainSections
 mainSections = ["product","docs","recipes"]
 
+# Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
+math = false # false (default) or true
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
+
 #[social]
   #twitter = "etlbox"
 
@@ -48,6 +52,7 @@ mainSections = ["product","docs","recipes"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
+  sectionSwitcher = false # true or false (default)
   sectionNav = ["product", "docs","recipes","api"] # (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = true # false (default) or true
   breadcrumbTrail = false # false (default) or true
@@ -65,6 +70,7 @@ mainSections = ["product","docs","recipes"]
   # UX
   headerBar = true # true (default) or false
   backgroundDots = true # true (default) or false
+  aiButtons = true # true (default) or false
 
   # Homepage
   sectionFooter = false # false (default) or true
@@ -122,12 +128,15 @@ mainSections = ["product","docs","recipes"]
 # Inline SVG (@thulite/inline-svg)
 [inline_svg]
   iconSetDir = "tabler-icons" # "tabler-icons" (default)
+  iconSetVariant = "outline" # outline (default) or filled
 
 # SEO (@thulite/seo)
 [seo]
   [seo.title]
     separator = " | "
     suffix = ""
+  [seo.description]
+    summaryFallback = "" # "" (default)
   [seo.favicons]
     sizes = []
     icon = "favicon.png" # favicon.png (default)
