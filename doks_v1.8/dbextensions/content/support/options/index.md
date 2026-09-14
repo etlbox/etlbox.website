@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "Get in touch."
+description: "Support for ETLBox.DbExtensions: contact sales, start a trial, or ask for help with bulk insert, update, delete, and merge on ADO.NET in .NET."
 draft: false
 images: []
 toc: false

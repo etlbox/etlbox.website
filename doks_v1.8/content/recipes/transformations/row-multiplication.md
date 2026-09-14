@@ -1,6 +1,6 @@
 ---
 title: "Row Multiplication"
-description: "Examples and code recipes for the RowMultiplication component."
+description: "C# recipes for RowMultiplication in ETLBox. Expand one row into many with examples for unnesting and generating records in .NET."
 lead: "This article contains example code that shows the usage of the RowMultiplication component."
 draft: false
 images: []

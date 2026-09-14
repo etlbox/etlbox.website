@@ -1,6 +1,6 @@
 ---
 title: "Merge Join Transformation"
-description: "Examples and code recipes for the MergeJoin component."
+description: "C# recipes for MergeJoin in ETLBox. Join two sorted inputs row by row with examples for merging streams in .NET data flows."
 lead: "This article contains example code that shows the usage of the MergeJoin component."
 draft: false
 images: []

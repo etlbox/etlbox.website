@@ -1,6 +1,6 @@
 ---
 title: ""
-description: "ETLBox Direct Sync"
+description: "ETLBox DirectSync is a desktop app and CLI for moving data between systems. Built on the ETLBox engine with a UI, JSON config, and scriptable bulk sync."
 draft: false
 toc: false
 ---

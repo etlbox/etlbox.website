@@ -1,6 +1,6 @@
 ---
 title: "Exclusive Launch Offer"
-description: "Submit the form to get your exclusive 15% discount code for FlowWright — our way of welcoming you onboard."
+description: "Request an exclusive 15 percent FlowWright launch discount. Submit the form to receive your code and get started with workflow automation."
 draft: false
 images: []
 toc: false

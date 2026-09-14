@@ -1,6 +1,6 @@
 ---
 title: "Linking Components"
-description: "Details how to link the components of a data flow."
+description: "Learn how to link ETLBox sources, transformations, and destinations into a working data flow. Linking is required before you can execute a pipeline in .NET."
 lead: "Before you can execute a data flow, you need to link your sources, transformations and destinations. The linking is quite easy - every source component and every transformation offers a LinkTo() method. This method accepts a link target, which either is another transformation or a destination. "
 draft: false
 images: []

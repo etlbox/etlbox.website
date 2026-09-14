@@ -1,6 +1,6 @@
 ---
 title: "Control & Dataflow Basics"
-description: "Example: Control and data flow basics"
+description: "ETLBox control flow and data flow basics in C#. A short example that creates a simple pipeline and runs ControlFlow tasks in .NET."
 lead: "This purpose of this example is to give you a brief overview of the basic concepts of ETLBox. It demonstrates the basic idea of a very simple data flow and shows how to use the ControlFlow objects to manage your database metadata. "
 draft: false
 images: []

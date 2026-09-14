@@ -1,6 +1,6 @@
 ---
 title: "Complete your purchase"
-description: "Last step to complete your purchase"
+description: "Complete your ETLBox purchase: confirm order details and finish checkout so we can issue your license for the .NET ETL library."
 draft: false
 ---
 

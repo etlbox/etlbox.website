@@ -1,6 +1,6 @@
 ---
 title: "Sort"
-description: "Examples and code recipes for the Sort component."
+description: "C# recipes for Sort in ETLBox. Order rows in a data flow with examples of blocking sorts before joins or grouped writes in .NET."
 lead: "This article contains example code that shows the usage of the Sort component."
 draft: false
 images: []

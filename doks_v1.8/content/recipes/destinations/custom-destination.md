@@ -1,6 +1,6 @@
 ---
 title: "Custom Destination"
-description: "Examples and code recipes for the CustomDestination component."
+description: "C# recipes for CustomDestination in ETLBox. Send each pipeline row to your own writer logic with practical examples for .NET ETL flows."
 lead: "This article contains example code that shows the usage of the CustomDestination component."
 draft: false
 images: []

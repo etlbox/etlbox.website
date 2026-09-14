@@ -1,6 +1,6 @@
 ---
 title: "Row Transformation"
-description: "Examples and code recipes for the RowTransformation component."
+description: "C# recipes for RowTransformation in ETLBox. Map each row with C# logic—the core transform for custom .NET ETL pipeline steps."
 lead: "This article contains example code that shows the usage of the RowTransformation component."
 draft: false
 images: []

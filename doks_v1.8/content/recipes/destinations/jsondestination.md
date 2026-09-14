@@ -1,6 +1,6 @@
 ---
 title: "Json Destination"
-description: "Examples and code recipes for the JsonDestination component."
+description: "C# recipes for JsonDestination in ETLBox. Write pipeline data as JSON files or streams with examples for .NET data integration flows."
 lead: "This article contains example code that shows the usage of the JsonDestination component."
 draft: false
 images: []

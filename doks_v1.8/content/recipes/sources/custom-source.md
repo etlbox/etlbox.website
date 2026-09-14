@@ -1,6 +1,6 @@
 ---
 title: "Custom Source"
-description: "Examples and code recipes for the CustomSource component."
+description: "C# recipes for CustomSource in ETLBox. Produce pipeline rows from your own reader logic with practical examples for .NET ETL flows."
 lead: "This article contains example code that shows the usage of the CustomSource component."
 draft: false
 images: []

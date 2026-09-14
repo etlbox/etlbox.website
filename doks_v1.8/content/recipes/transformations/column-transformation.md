@@ -1,6 +1,6 @@
 ---
 title: "Column Transformation"
-description: "Examples and code recipes for the ColumnTransformation component."
+description: "C# recipes for ColumnTransformation in ETLBox. Rename, convert, or reshape columns with examples for .NET data flow mappings."
 lead: "This article contains example code that shows the usage of the ColumnTransformation component."
 draft: false
 images: []

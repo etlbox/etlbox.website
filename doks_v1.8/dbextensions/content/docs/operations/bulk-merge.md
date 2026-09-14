@@ -1,6 +1,6 @@
 ---
 title: "Bulk Merge"
-description: ""
+description: "BulkMerge in ETLBox.DbExtensions upserts rows: insert new records, update existing ones, and optionally delete missing rows. C# merge guide for ADO.NET."
 lead: "<code>BulkMerge<T>()</code> performs an upsert operation: it inserts new rows, updates existing ones, and optionally deletes missing rows from the target table. It’s the most powerful operation in the ETLBox.DbExtensions toolkit, suitable for full or delta synchronization of datasets."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Lookup Transformation"
-description: "Examples and code recipes for the LookupTransformation component."
+description: "C# recipes for LookupTransformation in ETLBox. Enrich incoming rows from a reference set with copyable examples for .NET pipelines."
 lead: "This article contains example code that shows the usage of the LookupTransformation component."
 draft: false
 images: []

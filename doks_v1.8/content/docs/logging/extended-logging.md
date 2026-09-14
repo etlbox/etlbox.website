@@ -1,6 +1,6 @@
 ---
 title: "Logging Extensions"
-description: "Provides helpers for log output, load process tracking, and database-based logging in ETLBox."
+description: "ETLBox.Logging helpers for load-process tracking, custom log entries, error tables, and database-backed logging across your .NET ETL workflows."
 lead: "The ETLBox.Logging package adds helper tasks for managing log data and tracking ETL execution. It includes support for load process management, custom log entries, error tables, and database log storage—extending the built-in logging with practical tooling."
 draft: false
 images: []

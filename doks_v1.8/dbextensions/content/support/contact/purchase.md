@@ -1,6 +1,6 @@
 ---
 title: "Purchase ETLBox"
-description: "Fill out the form to purchase ETLBox."
+description: "Purchase ETLBox.DbExtensions through this form. Share your plan and company details so we can complete your bulk-operations license for .NET."
 draft: false
 images: []
 toc: false

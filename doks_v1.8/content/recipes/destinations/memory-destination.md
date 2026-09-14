@@ -1,6 +1,6 @@
 ---
 title: "Memory Destination"
-description: "Examples and code recipes for the MemoryDestination component."
+description: "C# recipes for MemoryDestination in ETLBox. Collect pipeline output in memory for tests, debugging, or further processing in .NET."
 lead: "This article contains example code that shows the usage of the MemoryDestination component."
 draft: false
 images: []

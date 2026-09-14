@@ -1,6 +1,6 @@
 ---
 title: "Customer Rating Demo"
-description: "Example: Rating orders"
+description: "A full ETLBox demo that rates customer orders: read CSV, transform and look up data, then write results. A realistic C# pipeline for .NET."
 lead: "This example demonstrates how the different data flow components can be used together, simulating a real-life scenario.  In this scenario, we will to read some orders from a csv file, lookup the customer key by using the customer name, write the orders into an orders table  and also create a customer rating based on the total amount of purchases."
 draft: false
 images: []

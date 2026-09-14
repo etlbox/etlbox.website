@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "Fill out the form to get in touch"
+description: "Contact ETLBoxperts about DbExtensions. Use this form for sales, licensing, and technical questions on ADO.NET bulk operations in .NET."
 draft: false
 toc: false
 ---

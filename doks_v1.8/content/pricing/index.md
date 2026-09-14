@@ -1,6 +1,6 @@
 ---
 title: "Pricing"
-description: "Pricing and licensing options for ETLBox."
+description: "ETLBox pricing and licensing for business customers. Compare plans for internal use or redistribution. Net prices, VAT extra, verified company purchase."
 lead: "All prices are net without VAT. Prices only apply for business customers (verified before purchase)."
 draft: false
 toc: false

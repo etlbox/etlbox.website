@@ -1,6 +1,6 @@
 ---
 title: "Duplicate Checks"
-description: "Different methods to filter duplicates in your source"
+description: "Filter duplicate rows in ETLBox sources. C# examples of distinct checks and other techniques to keep your .NET data pipeline output unique."
 lead: "This example shows how different methods to filter out duplicates in your input data."
 draft: false
 images: []

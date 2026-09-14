@@ -1,6 +1,6 @@
 ---
 title: "Release notes"
-description: "ETLBox Release notes (starting with 2.3.1)"
+description: "ETLBox release notes from version 2.3 onward. See new connectors, fixes, and breaking changes for the code-first ETL library for .NET and C#."
 lead: "Release notes are starting with version 2.3.0."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "We’ve Received Your Request!"
-description: "Thanks for your request."
+description: "We received your ETLBox.DbExtensions request and will reply by email. Thank you for contacting ETLBoxperts about bulk operations for ADO.NET."
 draft: false
 toc: false
 ---

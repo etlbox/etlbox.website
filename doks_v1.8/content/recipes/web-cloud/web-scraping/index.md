@@ -1,6 +1,6 @@
 ---
 title: "Web Scraping"
-description: "Example: Web scraping"
+description: "Scrape a website with ETLBox, then store, aggregate, and display the result. A C# example of turning HTML into structured .NET data."
 lead: "This example demonstrates how content from a web site can be scraped and used to store, aggregate and display the retrieved data."
 draft: false
 menu:

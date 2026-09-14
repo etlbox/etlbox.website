@@ -1,6 +1,6 @@
 ---
 title: "Conditional Split"
-description: "Split your data flow based on conditions, routing matching and non-matching rows to separate outputs."
+description: "ConditionalSplit routes each ETLBox row to different outputs based on a predicate. Send matching and non-matching records down separate pipeline paths."
 lead: "The ConditionalSplit transformation evaluates each incoming row against a predicate. If the condition is met, the row is routed to the main output; otherwise, it can be sent to a secondary path. This component is useful for branching logic in data flows, allowing clean separation of matching and non-matching records."
 draft: false
 images: []

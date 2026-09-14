@@ -1,6 +1,6 @@
 ---
 title: "Excel Source"
-description: "Examples and code recipes for the ExcelSource component."
+description: "C# recipes for ExcelSource in ETLBox. Read worksheets into a pipeline with examples for spreadsheet-based .NET data integration."
 lead: "This article contains example code that shows the usage of the ExcelSource component."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Json Source"
-description: "Examples and code recipes for the JsonSource component."
+description: "C# recipes for JsonSource in ETLBox. Stream JSON files or payloads into a data flow with copyable C# examples for .NET."
 lead: "This article contains example code that shows the usage of the JsonSource component."
 draft: false
 images: []

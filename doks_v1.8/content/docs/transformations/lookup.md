@@ -1,6 +1,6 @@
 ---
 title: "Lookup Transformation"
-description: "Details about the LookupTransformation"
+description: "LookupTransformation enriches ETLBox rows with related data as they flow through the pipeline. Add reference data and keep your .NET ETL output complete."
 lead: "Improve your data with the LookupTransformation. This guide shows you how to add more information to your data as it moves through the process, making sure your data is complete and useful."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Register License Key"
-description: "How to register an ETLBox license key"
+description: "Register your ETLBox license key locally, in CI, or in production. This guide covers the methods to unlock the full .NET ETL library without limitations."
 lead: "To unlock the full functionality of ETLBox, you need to register your license key. This guide explains the different methods to register your license, whether you're working locally or in cloud environments like Azure."
 draft: false
 images: []

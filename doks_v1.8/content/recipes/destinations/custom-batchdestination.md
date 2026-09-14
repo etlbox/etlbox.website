@@ -1,6 +1,6 @@
 ---
 title: "Custom Batch Destination"
-description: "Examples and code recipes for the CustomBatchDestination component."
+description: "C# recipes for CustomBatchDestination in ETLBox. Write rows in batches to any sink you implement, with examples for custom .NET destinations."
 lead: "This article contains example code that shows the usage of the CustomBatchDestination component."
 draft: false
 images: []

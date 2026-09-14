@@ -1,6 +1,6 @@
 ---
 title: "From Files to Databases"
-description: "Example: From files and databases"
+description: "Move data across files and databases with ETLBox. A C# example of integrating CSV or other files with SQL servers in one .NET data flow."
 lead: "Sometimes you are in need to transfer data across databases on different server or to integrate flat files. ETLBox is an excellent tool of choice for integrating data from different sources. This example will guide you through the most common scenarios. "
 draft: false
 images: []

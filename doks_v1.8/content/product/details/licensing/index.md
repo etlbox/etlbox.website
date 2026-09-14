@@ -1,6 +1,6 @@
 ---
 title: "Licensing Options"
-description: "ETLBox Licensing Options: Choose the Right Plan for Your Needs"
+description: "ETLBox licensing options for internal projects and commercial redistribution. Choose Standard or Enterprise OEM plans that fit how you ship .NET software."
 lead: "Whether you're using ETLBox for internal projects or integrating it into commercial products, we offer flexible licensing options tailored to fit your business needs."
 draft: false
 images: []

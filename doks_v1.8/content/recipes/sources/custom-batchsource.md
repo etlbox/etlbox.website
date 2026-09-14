@@ -1,6 +1,6 @@
 ---
 title: "Custom Batch Source"
-description: "Examples and code recipes for the CustomBatchSource component."
+description: "C# recipes for CustomBatchSource in ETLBox. Pull rows in batches from any origin you implement, with examples for custom .NET sources."
 lead: "This article contains example code that shows the usage of the CustomBatchSource component."
 draft: false
 images: []

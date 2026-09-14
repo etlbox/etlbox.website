@@ -1,6 +1,6 @@
 ---
 title: "Flat File & Streaming"
-description: "This category focuses on processing data from flat files and streaming formats such as JSON and CSV."
+description: "Recipes for flat files and streaming formats in ETLBox: CSV, JSON, and XML examples that read, transform, and write data in C# .NET pipelines."
 lead: ""
 draft: false
 images: []

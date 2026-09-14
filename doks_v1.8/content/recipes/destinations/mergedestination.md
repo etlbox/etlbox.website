@@ -1,6 +1,6 @@
 ---
 title: "Merge Destination"
-description: "Examples and code recipes for the DbMerge component."
+description: "C# recipes for DbMerge in ETLBox. Insert, update, and delete destination rows in one merge with examples for SQL upserts in .NET."
 lead: "This article contains example code that shows the usage of the DbMerge component."
 draft: false
 images: []

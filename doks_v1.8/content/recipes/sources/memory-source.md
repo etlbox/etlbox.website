@@ -1,6 +1,6 @@
 ---
 title: "Memory Source"
-description: "Examples and code recipes for the MemorySource component."
+description: "C# recipes for MemorySource in ETLBox. Feed in-memory collections into a pipeline for tests, demos, or chained .NET data flows."
 lead: "This article contains example code that shows the usage of the MemorySource component."
 draft: false
 images: []

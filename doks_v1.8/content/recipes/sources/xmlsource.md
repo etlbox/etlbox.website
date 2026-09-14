@@ -1,6 +1,6 @@
 ---
 title: "Xml Source"
-description: "Examples and code recipes for the XmlSource component."
+description: "C# recipes for XmlSource in ETLBox. Read XML into a data flow with examples you can adapt for nested documents in .NET."
 lead: "This article contains example code that shows the usage of the XmlSource component."
 draft: false
 images: []

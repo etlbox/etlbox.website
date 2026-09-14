@@ -1,6 +1,6 @@
 ---
 title: "Unit Testing"
-description: "This example shows how unit tests could be constructed for data flow."
+description: "Unit-test ETLBox data flows in C#. Starting points for asserting transformation logic, using memory sources, and automating .NET ETL tests."
 lead: "This recipe demonstrate how unit tests could be written to test data flows. The described approaches should only be considered as a starting point - there are a lot of different possibilities to write unit tests for ETLBox - as the library is written in .NET, all test framework and other test packages are fully supported."
 draft: false
 menu:

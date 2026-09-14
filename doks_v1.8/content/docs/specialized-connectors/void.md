@@ -1,6 +1,6 @@
 ---
 title: "Void Destination"
-description: "Details about the VoidDestination"
+description: "VoidDestination discards rows in an ETLBox data flow. Use it to drop unused branches, measure throughput, or complete a pipeline without writing output."
 lead: "The Void destination can be used to discard records"
 draft: false
 images: []

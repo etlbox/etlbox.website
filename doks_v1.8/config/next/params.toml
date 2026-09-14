@@ -134,6 +134,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
     suffix = ""
   [seo.description]
     summaryFallback = "" # "" (default)
+    lengthIgnores = ["^/categories", "^/tags", "^/contributors"]
   [seo.favicons]
     sizes = []
     icon = "favicon.png" # favicon.png (default)

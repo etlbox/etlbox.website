@@ -1,6 +1,6 @@
 ---
 title: "Json Path in Dynamic Object"
-description: "Example: Using json path with dynamic objects"
+description: "Use JSON path with dynamic objects in ETLBox. C# examples that simplify navigation in nested JSON while streaming data in .NET."
 lead: "This purpose of this example is demonstrate how json path can be used to simplify navigation in dynamic objects."
 draft: false
 images: []

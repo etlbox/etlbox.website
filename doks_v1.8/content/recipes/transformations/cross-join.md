@@ -1,6 +1,6 @@
 ---
 title: "Cross Join"
-description: "Examples and code recipes for the CrossJoin component."
+description: "C# recipes for CrossJoin in ETLBox. Combine every row from two inputs with examples of cartesian joins in .NET data pipelines."
 lead: "This article contains example code that shows the usage of the CrossJoin component."
 draft: false
 images: []

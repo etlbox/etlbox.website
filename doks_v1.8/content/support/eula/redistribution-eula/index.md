@@ -1,6 +1,6 @@
 ---
 title: "Redistribution End-user License Agreement"
-description: "The redistribution EULA for the ENTERPRISE OEM license."
+description: "Redistribution EULA for the ETLBox Enterprise OEM license. Read the terms for embedding and redistributing the .NET ETL library with your software."
 lead: "This EULA allows redistribution of ETLBox and comes with the ENTERPRISE OEM license."
 draft: false
 images: []

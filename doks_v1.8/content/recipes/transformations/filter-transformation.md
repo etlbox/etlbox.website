@@ -1,6 +1,6 @@
 ---
 title: "Where Transformation"
-description: "Examples and code recipes for the WhereTransformation component."
+description: "C# recipes for WhereTransformation in ETLBox. Filter rows with predicates and keep only matching records in your .NET data flows."
 lead: "This article contains example code that shows the usage of the WhereTransformation component."
 draft: false
 images: []

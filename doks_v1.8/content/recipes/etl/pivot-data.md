@@ -1,6 +1,6 @@
 ---
 title: "Pivot Data"
-description: "Example: pivot data from a csv file"
+description: "Pivot and unpivot CSV data with ETLBox. C# examples that reshape rows and columns in a .NET data flow before you write the result."
 lead: "This example shows how to pivot and unpivot data in a csv file."
 draft: false
 images: []

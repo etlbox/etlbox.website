@@ -1,6 +1,6 @@
 ---
 title: "Parallel Execution"
-description: "Example: how to run multiple data flows in parallel"
+description: "Run multiple ETLBox data flows in parallel in C#. Examples that overlap pipeline work to improve throughput in .NET ETL jobs."
 lead: "This purpose of this example is to show how multiple data flows can be executed in parallel."
 draft: false
 images: []

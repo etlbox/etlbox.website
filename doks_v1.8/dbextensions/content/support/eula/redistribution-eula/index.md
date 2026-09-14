@@ -1,6 +1,6 @@
 ---
 title: "Redistribution End-user License Agreement"
-description: "The redistribution EULA for the REDISTRIBUTABLE license."
+description: "Redistribution EULA for the ETLBox.DbExtensions redistributable license. Terms for embedding bulk insert, update, delete, and merge in your .NET software."
 lead: "This EULA allows redistribution of ETLBox and comes with the REDISTRIBUTABLE package."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Flatten Nested Array in Xml"
-description: "Example: flatten nested array in a xml file"
+description: "Flatten nested XML arrays with ETLBox. A C# example that denormalizes repeating elements into rows for easier processing in .NET."
 lead: "This example shows how to denormalize a nested data array within a xml structure."
 draft: false
 images: []

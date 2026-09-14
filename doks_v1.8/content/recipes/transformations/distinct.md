@@ -1,6 +1,6 @@
 ---
 title: "Distinct"
-description: "Examples and Code Recipes for the Distinct Component."
+description: "C# recipes for Distinct in ETLBox. Remove duplicate rows in a data flow with examples for unique keys and .NET ETL cleanup."
 lead: "This article contains example code snippets that show how to use the Distinct component."
 draft: false
 images: []

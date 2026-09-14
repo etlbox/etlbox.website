@@ -1,6 +1,6 @@
 ---
 title: "Csv to Json"
-description: "Example code how to transform a Csv to a Json"
+description: "Convert CSV to JSON with ETLBox using typed objects or ExpandoObject. C# examples for streaming file transformations in .NET."
 lead: "This example shows how to read data from a csv and transform it into a json - one time using strongly typed object and also using the dynamic ExpandoObject."
 draft: false
 images: []

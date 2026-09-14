@@ -1,6 +1,6 @@
 ---
 title: "Going Further"
-description: "Going Further with ETLBox: Unlocking Advanced Capabilities"
+description: "Go beyond the basics with ETLBox: advanced data flows, more connectors, logging, and patterns for production-grade ETL pipelines in C# and .NET."
 lead: "By now, you’ve seen how ETLBox simplifies building ETL pipelines and enables you to manage data flows with ease. But the real power of ETLBox lies in its ability to handle complex pipelines, its efficiency, and the possibilities of a fully code-first approach. Let’s explore how you can unlock ETLBox’s advanced capabilities and take your data pipelines to the next level."
 draft: false
 images: []

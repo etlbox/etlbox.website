@@ -1,6 +1,6 @@
 ---
 title: "We’ve Received Your Request!"
-description: "Thanks for your request."
+description: "We received your ETLBox request and will follow up by email. Thanks for contacting ETLBoxperts about licensing, trials, or technical support."
 draft: false
 toc: false
 ---

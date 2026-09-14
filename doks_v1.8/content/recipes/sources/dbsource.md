@@ -1,6 +1,6 @@
 ---
 title: "Database Source"
-description: "Examples and code recipes for the DbSource component."
+description: "C# recipes for DbSource in ETLBox. Stream query results from SQL databases into a data flow with examples for .NET ETL projects."
 lead: "This article contains example code that shows the usage of the DbSource component."
 draft: false
 images: []

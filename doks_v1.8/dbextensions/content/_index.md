@@ -1,5 +1,6 @@
 ---
 title : "DB Extensions"
+description: "ETLBox.DbExtensions adds bulk insert, update, delete, and merge to ADO.NET and Dapper. High-performance bulk operations for .NET with a one-line API."
 lead: "Adds the missing bulk operations to ADO.NET. Built on ETLBox, made for Dapper, ready for big data."
 draft: false
 images: []

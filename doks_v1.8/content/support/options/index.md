@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "Get in touch."
+description: "ETLBox support options: contact sales, request a trial, or open a ticket. Get help with licensing, installation, and using the .NET ETL library."
 draft: false
 images: []
 toc: false

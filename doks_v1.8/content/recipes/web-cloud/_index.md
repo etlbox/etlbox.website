@@ -1,6 +1,6 @@
 ---
 title: "Web & Cloud"
-description: "This category covers integration scenarios where ETLBox is used in web-based or cloud-hosted environments."
+description: "Web and cloud recipes for ETLBox: Azure Functions, REST JSON, SFTP, and scraping examples that run data flows in hosted .NET environments."
 lead: ""
 draft: false
 images: []

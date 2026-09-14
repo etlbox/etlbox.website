@@ -1,6 +1,6 @@
 ---
 title: "Standard End-user License Agreement"
-description: "The standard end-user license agreement for most packages."
+description: "Standard ETLBox end-user license agreement for most packages. Read the terms that apply unless you purchased a redistributable OEM license."
 lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
 draft: false
 images: []

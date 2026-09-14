@@ -1,6 +1,6 @@
 ---
 title: "Structured Logging"
-description: "ETLBox logging captures structured execution details for all tasks and components."
+description: "Structured logging in ETLBox records task execution, duration, and errors via Microsoft logging extensions so you can monitor .NET ETL pipelines in production."
 lead: "Logging in ETLBox provides insight into task execution, performance, and errors across your data workflows. Built on top of Microsoft’s logging extensions, it supports structured log output, flexible integration with logging frameworks like NLog and Serilog, and detailed context for each task. Whether you're running pipelines in production or debugging locally, ETLBox logging helps you track exactly what happened, when, and why."
 draft: false
 images: []

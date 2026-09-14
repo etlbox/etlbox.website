@@ -1,6 +1,6 @@
 ---
 title: "Register License Key"
-description: "How to register an ETLBox license key"
+description: "Register your ETLBox.DbExtensions license key locally or in production. Unlock bulk insert, update, delete, and merge on IDbConnection and Dapper."
 lead: "To unlock the full functionality of ETLBox, you need to register your license key. This guide explains the different methods to register your license, whether you're working locally or in cloud environments like Azure."
 draft: false
 images: []

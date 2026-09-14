@@ -1,6 +1,6 @@
 ---
 title: "Standard End-user License Agreement"
-description: "The standard end-user license agreement for most packages."
+description: "Standard EULA for ETLBox.DbExtensions packages except redistributable editions. Read the end-user terms for ADO.NET bulk operations in .NET."
 lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
 draft: false
 images: []

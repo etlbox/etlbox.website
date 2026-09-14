@@ -1,6 +1,6 @@
 ---
 title: "Multicast"
-description: "Examples and code recipes for the Multicast component."
+description: "C# recipes for Multicast in ETLBox. Duplicate a stream to several destinations with examples for branching .NET data pipelines."
 lead: "This article contains example code that shows the usage of the Multicast component."
 draft: false
 images: []

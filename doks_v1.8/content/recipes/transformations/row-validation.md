@@ -1,6 +1,6 @@
 ---
 title: "Row Validation"
-description: "Examples and Code Recipes for the RowValidation Component."
+description: "C# recipes for RowValidation in ETLBox. Validate rows, route failures, and keep bad data out of downstream .NET destinations."
 lead: "This article contains example code snippets that show how to use the RowValidation component."
 draft: false
 images: []

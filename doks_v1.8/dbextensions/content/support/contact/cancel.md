@@ -1,6 +1,6 @@
 ---
 title: "Ups, something went wrong!"
-description: "There was something not working out as expected"
+description: "Your ETLBox.DbExtensions checkout or request did not complete. Return to pricing or contact us so we can help finish your license or trial order."
 draft: false
 toc: false
 ---

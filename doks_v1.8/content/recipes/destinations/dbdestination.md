@@ -1,6 +1,6 @@
 ---
 title: "Database Destination"
-description: "Examples and code recipes for the DbDestination component."
+description: "C# recipes for DbDestination in ETLBox. Bulk-load pipeline data into SQL databases with copyable examples for .NET ETL projects."
 lead: "This article contains example code that shows the usage of the DbDestination component."
 draft: false
 images: []

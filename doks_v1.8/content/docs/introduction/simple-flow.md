@@ -1,6 +1,6 @@
 ---
 title: "Simple Flow"
-description: "A simple data flow with ETLBox"
+description: "Build your first ETLBox data flow in C#: connect a source, add transformations, and write to a destination. A short introduction to ETL pipelines in .NET."
 lead: "Data Flow is at the heart of ETLBox. These components form the foundation of an ETL pipeline, allowing you to extract, transform, and load data seamlessly. In this guide, we’ll walk through a simple data flow step-by-step."
 draft: false
 images: []

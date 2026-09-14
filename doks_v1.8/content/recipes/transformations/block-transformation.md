@@ -1,6 +1,6 @@
 ---
 title: "Block Transformation"
-description: "Examples and code recipes for the BlockTransformation"
+description: "C# recipes for BlockTransformation in ETLBox. Process a full batch of rows at once with examples for blocking transforms in .NET pipelines."
 lead: "This article contains example code that shows the usage of the BlockTransformation."
 draft: false
 images: []

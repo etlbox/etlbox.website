@@ -1,6 +1,6 @@
 ---
 title: "Csv Source"
-description: "Examples and code recipes for the CsvSource component."
+description: "C# recipes for CsvSource in ETLBox. Read CSV files into a data flow with examples you can copy into your .NET ETL pipelines."
 lead: "This article contains example code that shows the usage of the CsvSource component."
 draft: false
 images: []

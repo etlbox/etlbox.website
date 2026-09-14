@@ -1,5 +1,6 @@
 ---
 title : "ETLBox"
+description: "ETLBox is a complete ETL and data integration library for .NET. Build typed or dynamic data flows in C# to extract, transform, and load data."
 lead: "A complete ETL (extract, transform, load) toolbox and data integration library for .NET"
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Xml Destination"
-description: "Examples and code recipes for the XmlDestination component."
+description: "C# recipes for XmlDestination in ETLBox. Write pipeline data to XML with examples you can adapt for your .NET ETL destinations."
 lead: "This article contains example code that shows the usage of the XmlDestination component."
 draft: false
 images: []

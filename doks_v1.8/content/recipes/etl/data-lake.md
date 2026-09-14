@@ -1,6 +1,6 @@
 ---
 title: "Data Lake"
-description: "Example: Copy data from Sql Server into Azure blob storage"
+description: "Copy SQL Server rows into Azure Blob Storage with ETLBox. A C# example using an Azure Function to land fresh data in a cloud data lake."
 lead: "This example shows how data from SqlServer are transferred into Azure blob storage. It shows how to setup an Azure function that runs periodically to move freshly created data rows from the database into a blob container."
 draft: false
 images: []

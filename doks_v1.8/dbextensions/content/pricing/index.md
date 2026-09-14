@@ -1,6 +1,6 @@
 ---
 title: "Pricing"
-description: "Pricing and licensing options for ETLBox."
+description: "ETLBox.DbExtensions pricing for business customers. License bulk insert, update, delete, and merge for ADO.NET and Dapper. Net prices, VAT extra."
 lead: "All prices are net without VAT. Prices only apply for business customers (verified before purchase)."
 draft: false
 toc: false

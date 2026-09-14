@@ -1,6 +1,6 @@
 ---
 title: "Legal Notice & Privacy Policy"
-description: "We do not collect any personal data - and we are an official company in Berlin, Germany."
+description: "Legal notice and privacy policy for ETLBoxperts GmbH, the company behind ETLBox.DbExtensions. Based in Berlin; we do not collect extra personal analytics."
 draft: false
 images: []
 toc: false

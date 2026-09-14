@@ -1,6 +1,6 @@
 ---
 title: "Ups, something went wrong!"
-description: "There was something not working out as expected"
+description: "Your ETLBox checkout or request did not complete. Return to pricing or contact support so we can help you finish the purchase or trial."
 draft: false
 toc: false
 ---

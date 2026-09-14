@@ -1,6 +1,6 @@
 ---
 title: "Azure Function App"
-description: "Example: how to use ETLBox with Azure Functions"
+description: "Run ETLBox inside an Azure Function. A C# example that deploys a serverless .NET job with ETLBox as a dependency for cloud ETL."
 lead: "This example shows the basics deployment of an Azure Function App using ETLBox as dependency."
 draft: false
 images: []

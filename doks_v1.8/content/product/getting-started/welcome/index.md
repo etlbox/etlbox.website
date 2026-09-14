@@ -1,6 +1,6 @@
 ---
 title: "Welcome to ETLBox"
-description: "Welcome to ETLBox - Effortless Data Integration for C# Developers"
+description: "Welcome to ETLBox, the code-first ETL library for C# and .NET. Build reliable data integration workflows in your IDE instead of using graphical ETL tools."
 lead: "ETLBox is designed to help developers working with .NET build reliable data integration workflows. Instead of relying on complex graphical tools, ETLBox focuses on giving you full control through code, making it easier to create, manage, and adjust data pipelines as needed."
 draft: false
 images: []

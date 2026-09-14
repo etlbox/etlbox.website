@@ -1,6 +1,6 @@
 ---
 title: "Csv Destination"
-description: "Examples and code recipes for the CsvDestination component."
+description: "C# recipes for CsvDestination in ETLBox. Write pipeline output to CSV files with examples you can copy into your .NET data flows."
 lead: "This article contains example code that shows the usage of the CsvDestination component."
 draft: false
 images: []

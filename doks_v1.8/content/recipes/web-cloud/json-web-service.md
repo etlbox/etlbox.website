@@ -1,6 +1,6 @@
 ---
 title: "Integrate REST Endpoints"
-description: "Example code how to use Json from REST endpoints or other web services"
+description: "Read and post JSON with ETLBox against REST endpoints. A C# example that transforms properties while moving data between web services."
 lead: "This example demonstrates how json data can be received and send between web endpoints. It will read json data from a REST endpoint, rename some properties and send each entry from the source into a different endpoint. "
 draft: false
 images: []

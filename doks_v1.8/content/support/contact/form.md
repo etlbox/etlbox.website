@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "Fill out the form to get in touch"
+description: "Contact ETLBoxperts in Berlin. Use this form for sales, licensing, and technical questions about the .NET ETL library and related products."
 draft: false
 toc: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Aggregation"
-description: "Examples and code recipes for the aggregation"
+description: "C# recipes for Aggregation in ETLBox. Group and summarize rows in a data flow with examples for totals, counts, and related .NET patterns."
 lead: "This article contains example codes that demonstrate the usage of the Aggregation transformation."
 draft: false
 images: []

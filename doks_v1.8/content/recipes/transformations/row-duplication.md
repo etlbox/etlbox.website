@@ -1,6 +1,6 @@
 ---
 title: "Row Duplication"
-description: "Examples and code recipes for the RowDuplication component."
+description: "C# recipes for RowDuplication in ETLBox. Emit extra copies of a row with examples for fan-out scenarios in .NET data flows."
 lead: "This article contains example code that shows the usage of the RowDuplication component."
 draft: false
 images: []

@@ -1,6 +1,6 @@
 ---
 title: "Data Lookup"
-description: "Various examples how to use the lookup transformation"
+description: "Lookup examples in ETLBox: enrich rows from reference data with LookupTransformation and related C# patterns for .NET data flows."
 lead: "This article contains examples which show how to use the lookup transformation and shows other techniques to lookup data.."
 draft: false
 images: []

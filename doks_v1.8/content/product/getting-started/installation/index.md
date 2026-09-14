@@ -1,6 +1,6 @@
 ---
 title: "Installation and Setup"
-description: "Installation and Setup of ETLBox."
+description: "Install ETLBox from NuGet and add the database or file connectors you need. A short setup guide so you can start building C# ETL pipelines quickly."
 lead: "Setting up ETLBox is quick and straightforward. In just a few steps, you can integrate ETLBox into your project and start building powerful, code-first ETL pipelines."
 draft: false
 images: []
