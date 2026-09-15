@@ -6,12 +6,12 @@ draft: false
 toc: false
 ---
 
-{{< pricing >}}
+{{< pricing-dbext >}}
 
 ## Frequently Asked Questions
 
 #### Is there a trial version?
-Absolutely. By downloading the official NuGet package of ETLBox, you can set it up and use it for testing purposes. The connectors are limited to 5,000 rows. For further testing, you can request a trial valid for 45 days. The trial key will remove all limitations, and you can fully evaluate the library. If you need a renewal of the trial period, no problem, just contact us. Please note that the trial is not eligible for commercial use.
+Absolutely. By downloading the official NuGet package of ETLBox.DbExtensions, you can set it up and use it for testing purposes. The connectors are limited to 5,000 rows. For further testing, you can request a trial valid for 45 days. The trial key will remove all limitations, and you can fully evaluate the library. If you need a renewal of the trial period, no problem, just contact us. Please note that the trial is not eligible for commercial use.
 
 #### What about VAT?
 All prices are net without VAT or other local taxes that may apply.
@@ -26,15 +26,15 @@ If you are interested in other licensing options, please contact us and describe
 Not a problem. Just let us know, and we'll create a custom invoice so that you only pay the difference. You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
 
 #### What does "Chargable option: Source code access" mean?
-You can optionally purchase access to the ETLBox source code.
+You can optionally purchase access to the DB Extensions source code.
 
 #### What does "Company-wide use" mean?
-The standard licenses (Personal Use, Company-Wide Use) allows usage of ETLBox inside your own company only.
-Only developers from the registered company may build software or apps on top of ETLBox.
-If you plan to distribute ETLBox as part of your products to 3rd parties, or want to integrate it in your SaaS solution, please contact us so that we can select the best license model for you.
+The standard licenses (Personal Use, Company-Wide Use) allows usage of DB Extensions inside your own company only.
+Only developers from the registered company may build software or apps on top of DB Extensions.
+If you plan to distribute DB Extensions as part of your products to 3rd parties, or want to integrate it in your SaaS solution, please contact us so that we can select the best license model for you.
 
 #### Software as a Service - which license should I choose?
 Please ask for a quote and provide us with a short description of your setup, we will find the best license model for you.
 
 #### What is the ENTERPRISE OEM license for?
-The ENTERPRISE license lets you use ETLBox in software products you sell or ship to customers, or in SaaS solutions. It provides license-check-free packages, enabling you to integrate ETLBox into your own product for distribution.
+The ENTERPRISE license lets you use DB Extensions in software products you sell or ship to customers, or in SaaS solutions. It provides license-check-free packages, enabling you to integrate DB Extensions into your own product for distribution.

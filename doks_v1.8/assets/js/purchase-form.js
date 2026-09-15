@@ -101,8 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let priceText = "Get a quote";
     let vatApplied = false;
     let payableDevCount = null;
+    const unitPrice = parseInt(priceDisplay?.dataset.unitPrice || "999", 10) || 999;
 
     // PayNow nur bei Company, 1–9 Developer, kein SaaS, kein SmallCompany, CreditCard/DirectDebit
+    // Stripe Checkout links are for the ETLBox 999 € plans only.
     const validPayment = paymentVal === "creditcard" || paymentVal === "directdebit";
 
     if (
@@ -113,22 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
       !isTenPlus &&
       devCount >= 1 && devCount <= 9
     ) {
-      let net = devCount * 999;
+      let net = devCount * unitPrice;
       if (countryVal === "Germany") {
         vatApplied = true;
         priceText = `€ ${(net * 1.19).toLocaleString("de-DE", { minimumFractionDigits: 2 })}`;
       } else {
         priceText = `€ ${net.toLocaleString("de-DE")}`;
       }
-      isPayable = true;
-      payableDevCount = devCount;
+      isPayable = unitPrice === 999;
+      payableDevCount = isPayable ? devCount : null;
     }
 
     priceDisplay.textContent = priceText;
     setInvisible(vatInfoRow, false);
     vatInfoText.textContent = isPayable
       ? (vatApplied ? "Total including 19% VAT" : "Total without VAT (Reverse charge may apply)")
-      : "Please get a quote for pricing details.";
+      : (priceText === "Get a quote"
+        ? "Please get a quote for pricing details."
+        : "Indicative total. Request a quote to complete your order.");
 
     setHidden(payNowText,   !isPayable);
     setHidden(payNowButton, !isPayable);
