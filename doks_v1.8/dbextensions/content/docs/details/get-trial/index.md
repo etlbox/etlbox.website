@@ -6,7 +6,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "product"
+    parent: "details"
 weight: 100
 toc: true
 ---

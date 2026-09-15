@@ -11,6 +11,8 @@ weight: 50
 toc: true
 ---
 
+Use `BulkDelete` to remove a known set of keys without building a giant `IN (...)` list or issuing one `DELETE` per row. Identify rows with `[IdColumn]` (or `IdColumns` in options).
+
 ## Example
 
 ```csharp

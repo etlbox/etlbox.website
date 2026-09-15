@@ -11,6 +11,8 @@ weight: 40
 toc: true
 ---
 
+Use `BulkUpdate` when many rows change at once (status flags, recalculated fields, sync from another system). Mark the key with `[IdColumn]` (or set `IdColumns` in options). A Dapper `UPDATE` in a loop is simpler for a few rows and much slower for thousands.
+
 ## Example
 
 ```csharp

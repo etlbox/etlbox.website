@@ -11,6 +11,8 @@ weight: 60
 toc: true
 ---
 
+Use `BulkMerge` when the source set should become the table (or a delta of it): insert missing rows, update existing ones, optionally delete rows that are no longer in the source. That is the operation where a Dapper select-then-insert-or-update loop hurts most.
+
 ## Example
 
 ```csharp

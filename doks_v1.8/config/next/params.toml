@@ -1,6 +1,6 @@
 # Hugo
 title = "DB Extensions"
-description = "Adds bulk insert, update, delete, and merge to ADO.NET with full Dapper support. Built on ETLBox. Simple syntax, high performance, ready for big data."
+description = "Extends IDbConnection like Dapper: bulk insert, update, delete, and merge on the connection you already use. Built on ETLBox."
 images = ["cover.png"]
 
 # mainSections

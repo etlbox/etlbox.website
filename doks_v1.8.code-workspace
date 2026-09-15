@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "create_api_md"
+		},
+		{
+			"path": "../etlbox.demo"
 		}
 	],
 	"settings": {}

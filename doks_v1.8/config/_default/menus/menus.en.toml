@@ -48,7 +48,7 @@ weight = 80
 [[main]]
 name = "DirectSync"
 parent = "more"
-url = "https://www.direct-sync.net"
+url = "https://www.directsync.net"
 weight = 81
 
 [[main]]

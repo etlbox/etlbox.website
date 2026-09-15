@@ -11,6 +11,8 @@ weight: 30
 toc: true
 ---
 
+Use `BulkInsert` when you would otherwise loop `INSERT` statements — imports, staging loads, test data. On SQL Server this is SqlBulkCopy under the hood; you keep your POCOs instead of a `DataTable`.
+
 ## Example
 
 ```csharp

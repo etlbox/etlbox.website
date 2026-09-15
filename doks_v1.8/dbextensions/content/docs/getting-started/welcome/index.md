@@ -1,7 +1,7 @@
 ---
 title: "Welcome to DbExtensions"
-description: "Use familiar IDbConnection or Dapper APIs and execute bulk inserts, updates, deletes, and merges with minimal code and maximum efficiency — powered by ETLBox."
-lead: "<b>ETLBox.DbExtensions</b> adds the missing bulk operations to your ADO.NET stack. Built on top of the ETLBox framework, it enables high-performance data operations with a clean and simple API."
+description: "Add bulk insert, update, delete, and merge to IDbConnection and Dapper. ETLBox.DbExtensions replaces row-by-row Execute with one-line native bulk operations."
+lead: "<b>ETLBox.DbExtensions</b> adds the missing bulk writes to ADO.NET. Keep Dapper for queries. Replace <code>foreach</code> + <code>Execute</code> with one method call that is also much faster."
 draft: false
 images: []
 menu:
@@ -13,29 +13,29 @@ toc: true
 
 ## Why ETLBox.DbExtensions?
 
-Whether you're working with raw `IDbConnection` or using Dapper, you can now perform bulk inserts, updates, deletes, and merges with just one line of code.
+Dapper is excellent at reading data. It is not a bulk writer. The usual workaround — a loop of `INSERT`/`UPDATE`/`DELETE` — is not only verbose. It costs one round-trip per row and gets slow as soon as the set grows.
 
-- **Bulk operations for ADO.NET**: Insert, update, delete, or merge thousands of records with a single method call.
+DbExtensions extends the same `IDbConnection` you already use:
 
-- **Built for Dapper**: Designed to integrate naturally into your existing Dapper setup.
+- **Bulk operations for ADO.NET**: insert, update, delete, or merge thousands of records in one call.
+- **Built for Dapper**: query with Dapper, write with `BulkInsert` / `BulkUpdate` / `BulkDelete` / `BulkMerge`.
+- **Minimal setup**: install the NuGet package and the matching ETLBox database provider.
 
-- **Minimal setup**: No configuration. Just install the NuGet package and start coding.
+On a local SQL Server, 5,000 inserts took **8 seconds** with a Dapper loop and **70 ms** with `BulkInsert()` — not just less code, about **110×** faster. [How we measured that](/docs/getting-started/performance/).
 
 ## Supported Operations
 
-![Bulk operations with ETLBox.DbExtensions](overview.png)
+`BulkInsert<T>()`: Insert large sets using the database-native bulk loader (SqlBulkCopy on SQL Server, and the equivalent path on other providers).
 
-`BulkInsert<T>()`: Insert large sets of data efficiently using database-native bulk loaders.
+`BulkUpdate<T>()`: Update many rows by matching on key columns — without a statement per row.
 
-`BulkUpdate<T>()`: Update multiple records at once by matching on key columns.
+`BulkDelete<T>()`: Delete many rows by ID column(s) in one operation.
 
-`BulkDelete<T>()`: Delete multiple rows in a single operation based on ID column(s).
-
-`BulkMerge<T>()`: Perform insert, update, or delete in one step — also known as merge or upsert.
+`BulkMerge<T>()`: Insert, update, and optionally delete in one step (upsert / table sync).
 
 ## Works with All Major Databases
 
-ETLBox.DbExtensions supports any ADO.NET connection backed by an ETLBox database provider, including:
+Any ADO.NET connection backed by an ETLBox database provider, including:
 
 - SQL Server
 - PostgreSQL
@@ -50,27 +50,20 @@ ETLBox.DbExtensions supports any ADO.NET connection backed by an ETLBox database
 
 ## How It Works
 
-The package extends `IDbConnection` with bulk operation methods. Internally, it converts the ADO.NET connection to an ETLBox `IConnectionManager` and uses the ETLBox data flow engine for optimized performance.
+The package extends `IDbConnection`. Internally it maps the ADO.NET connection to an ETLBox `IConnectionManager` and runs the ETLBox bulk engine.
 
 ```csharp
 var connection = new SqlConnection("your-connection-string");
 
-// var dataToInsert = ...
 connection.BulkInsert(dataToInsert);
-
-// var dataToUpdate = ...
 connection.BulkUpdate(dataToUpdate);
-
-// var dataToDelete = ...
 connection.BulkDelete(dataToDelete);
-
-// var dataToMerge = ...
 connection.BulkMerge(dataToMerge);
 ```
 
 ## What’s Next?
 
-In the next article, we’ll walk through the **installation and initial setup** of ETLBox.DbExtensions — how to install the NuGet packages, add the right database provider, and run your first operation.
-
-After that, each bulk operation will be covered in detail, with full examples and customization options.
-
+- [Installation](/docs/getting-started/installation/) — packages, provider, first insert.
+- [Performance](/docs/getting-started/performance/) — Dapper loop vs DbExtensions vs SqlBulkCopy.
+- [Compared to](/docs/getting-started/compared/) — Dapper, SqlBulkCopy, and Dapper Plus.
+- Then each bulk operation, with options and examples.

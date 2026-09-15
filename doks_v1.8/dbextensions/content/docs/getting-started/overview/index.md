@@ -261,13 +261,13 @@ targetConnection.BulkInsert(transformed);
 
 ### Performance Considerations
 
-Compared to row-by-row operations, DbExtensions significantly reduces database round-trips and add the missing bulk extensions to `IDbConnection` and Dapper. This makes it well-suited for:
+Compared to row-by-row operations, DbExtensions cuts round-trips and uses the database bulk path. See the [Performance](/docs/getting-started/performance/) page for a SQL Server run (Dapper loop vs `BulkInsert` / `BulkUpdate` / `BulkDelete` / `BulkMerge`, plus SqlBulkCopy on insert) and [Compared to](/docs/getting-started/compared/) for when to keep Dapper or SqlBulkCopy.
 
-* Large imports/exports
+Typical fit:
+
+* Large imports
 * Synchronization jobs
 * Batch processing workloads
-
-Actual performance gains depend on the database system, schema, and environment, but the architectural advantage over per-row execution is substantial.
 
 ## Sample Code
 
