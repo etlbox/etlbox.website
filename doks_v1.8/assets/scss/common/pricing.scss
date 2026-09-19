@@ -33,10 +33,6 @@
   .pricing-cards-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
-  .pricing-cards-grid-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 .pricing-hero {
@@ -151,13 +147,4 @@
 
 .pricing .plan-features .small {
   font-size: 0.68rem;
-}
-
-.equal-switch-wrap {
-  position: relative;
-  min-height: 7rem;      /* Höhe für beide Textvarianten, anpassen nach Bedarf */
-}
-.equal-switch-wrap .switch-pane {
-  position: absolute;
-  inset: 0;
 }

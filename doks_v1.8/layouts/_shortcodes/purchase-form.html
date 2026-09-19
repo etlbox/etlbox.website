@@ -1,4 +1,8 @@
+{{ $type := site.Params.licenseProduct | default "etlbox" }}
+{{ $lic := index site.Params.license $type | default dict }}
+{{ $unitPrice := $lic.unitPrice | default 999 }}
 <form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success" class="container mt-4 needs-validation" novalidate>
+    <input type="hidden" name="source" value="{{ $lic.source | default $type }}">
 
     <div class="mb-3 h5">Contact Information</div>
 
@@ -338,7 +342,6 @@
         <div class="col-md-8 offset-md-4">
             <div class="border rounded p-3 d-flex justify-content-between align-items-center">
                 <div class="h5 fw-semibold text-primary mb-0">Total Price</div>
-                {{ $unitPrice := site.Params.licenseUnitPrice | default 999 }}
                 <div class="display-6 fw-bold mb-0" id="license-price" data-unit-price="{{ $unitPrice }}">€ {{ $unitPrice }}</div>
             </div>
         </div>

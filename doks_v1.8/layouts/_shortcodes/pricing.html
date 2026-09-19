@@ -1,8 +1,22 @@
+{{ $type := .Get 0 | default (.Get "type") | default site.Params.licenseProduct | default "etlbox" }}
+{{ $lic := index site.Params.license $type | default (index site.Params.license "etlbox") }}
+{{ $name := $lic.name | default "ETLBox" }}
+{{ $price := int ($lic.unitPrice | default 0) }}
+{{ $showPrice := $lic.showPrice }}
+{{ $trialUrl := $lic.trialUrl | default "/product/getting-started/get-trial/" }}
+{{ $trialHeroLabel := $lic.trialHeroLabel | default "Get your trial key" }}
+{{ $trialCardLabel := $lic.trialCardLabel | default "Try now" }}
+{{ $hero := $lic.hero | default (printf "Try before you buy - evaluate %s for 45 days completely free!" $name) }}
+{{ $ctaUrl := $lic.ctaUrl | default "/support/contact/purchase/" }}
+{{ $ctaLabel := $lic.ctaLabel | default "Purchase" }}
+{{ $companyPrice := cond $showPrice (printf "Starting at %d € *" $price) "Request a quote" }}
+{{ $ctaCompany := printf "%s?plan=company" $ctaUrl }}
+{{ $ctaProject := printf "%s?plan=project" $ctaUrl }}
+{{ $ctaOem := printf "%s?plan=enterprise-oem" $ctaUrl }}
 <div class="pricing pricing-bleed">
 <div class="pricing-hero text-center">
-    <b>Try before you buy - evaluate ETLBox for 45 days completely free!</b>
-    <a href="/product/getting-started/get-trial/" class="btn btn-primary btn-cta btn-sm rounded-pill m-2">Get your trial
-        key</a>
+    <b>{{ $hero }}</b>
+    <a href="{{ $trialUrl }}" class="btn btn-primary btn-cta btn-sm rounded-pill m-2">{{ $trialHeroLabel }}</a>
 </div>
 
 <div class="pricing-cards pricing-cards-grid">
@@ -14,18 +28,18 @@
                 <div class="small mb-0">Personal Use and Testing</div>
             </div>
             <div class="card-body">
-                <p class="pricing-lead mb-2">Use ETLBox as a developer to experience and test all of its functionality.
+                <p class="pricing-lead mb-2">Use {{ $name }} as a developer to experience and test all of its functionality.
                 </p>
                 <div class="plan-price text-center py-2">
                     <div class="pricing-price-title">Free</div>
                     <div class="pricing-price-sub">Ideal for testing</div>
-                    <a href="/product/getting-started/get-trial/" class="btn btn-light btn-cta btn-sm rounded-pill my-1">Try now</a><br />
+                    <a href="{{ $trialUrl }}" class="btn btn-light btn-cta btn-sm rounded-pill my-1">{{ $trialCardLabel }}</a><br />
                     <a href="/support/options/" class="btn btn-light btn-sm rounded-pill mt-1">Contact us</a>
                 </div>
                 <div class="plan-features">
                     <h6 class="pricing-features-heading">Features</h6>
                     <ul class="pricing-features-list">
-                        <li>Perfect for individual developers to explore and test ETLBox</li>
+                        <li>Perfect for individual developers to explore and test {{ $name }}</li>
                         <li>All components and functionalities included</li>
                         <li>Limited to 5000 rows per data flow</li>
                     </ul>
@@ -48,12 +62,12 @@
                 <div class="small mb-0">Company-Wide Use</div>
             </div>
             <div class="card-body">
-                <p class="pricing-lead mb-2">Use ETLBox in all your developments inside your company.</p>
+                <p class="pricing-lead mb-2">Use {{ $name }} in all your developments inside your company.</p>
                 <div class="plan-price text-center py-2">
-                    <div class="pricing-price-title">Starting at 999 € *</div>
+                    <div class="pricing-price-title">{{ $companyPrice }}</div>
                     <div class="pricing-price-sub">per developer / year</div>
-                    <a href="/support/contact/purchase/"
-                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">Purchase</a><br />
+                    <a href="{{ $ctaCompany }}"
+                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">{{ $ctaLabel }}</a><br />
                     <a href="/support/options/" class="btn btn-light btn-sm rounded-pill mt-1">Contact us</a>
                 </div>
                 <div class="plan-features">
@@ -61,14 +75,16 @@
                     <ul class="pricing-features-list">
                         <li>Licensed by developer</li>
                         <li>Unlimited application and server installations of software</li>
-                        <li>Company-wide use of ETLBox</li>
+                        <li>Company-wide use of {{ $name }}</li>
                     </ul>
                     <h6 class="pricing-features-heading">Licensing</h6>
                     <ul class="pricing-features-list">
                         <li><a href="/support/eula/standard-eula/">Standard EULA</a></li>
                         <li>New license key provided annually</li>
                     </ul>
+                    {{ if $showPrice }}
                     <p class="small text-muted mb-0">* Indicative pricing for new customers</p>
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -86,8 +102,8 @@
                 <div class="plan-price text-center py-2">
                     <div class="pricing-price-title">Request a quote</div>
                     <div class="pricing-price-sub">vendor contract / year</div>
-                    <a href="/support/contact/purchase/"
-                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">Purchase</a><br />
+                    <a href="{{ $ctaProject }}"
+                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">{{ $ctaLabel }}</a><br />
                     <a href="/support/options/" class="btn btn-light btn-sm rounded-pill mt-1">Contact us</a>
                 </div>
                 <div class="plan-features">
@@ -115,20 +131,20 @@
                 <div class="small mb-0">Redistributable</div>
             </div>
             <div class="card-body">
-                <p class="pricing-lead mb-2">Redistributable ETLBox for integration into your software products.</p>
+                <p class="pricing-lead mb-2">Redistributable {{ $name }} for integration into your software products.</p>
                 <div class="plan-price text-center py-2">
                     <div class="pricing-price-title">Request a quote</div>
                     <div class="pricing-price-sub">per customer / year</div>
-                    <a href="/support/contact/purchase/"
-                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">Purchase</a><br />
+                    <a href="{{ $ctaOem }}"
+                        class="btn btn-success btn-cta btn-sm rounded-pill my-1">{{ $ctaLabel }}</a><br />
                     <a href="/support/options/" class="btn btn-light btn-sm rounded-pill mt-1">Contact us</a>
                 </div>
                 <div class="plan-features">
                     <h6 class="pricing-features-heading">Features</h6>
                     <ul class="pricing-features-list">
-                        <li>Integrate ETLBox functionality into your software products.</li>
-                        <li>Redistribution rights for ETLBox packages in your own products</li>
-                        <li>No back-linking or mentioning of ETLBox</li>
+                        <li>Integrate {{ $name }} functionality into your software products.</li>
+                        <li>Redistribution rights for {{ $name }} packages in your own products</li>
+                        <li>No back-linking or mentioning of {{ $name }}</li>
                         <li>Source code access (chargable option)</li>
                     </ul>
                     <h6 class="pricing-features-heading">Licensing</h6>

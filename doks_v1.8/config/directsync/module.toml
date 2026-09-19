@@ -12,6 +12,11 @@
   source = "directsync/content"
   target = "content"
 
+# Shared EULA — product trees do not inherit default content/
+[[mounts]]
+  source = "content/support/eula"
+  target = "content/support/eula"
+
 ## data
 [[mounts]]
   source = "node_modules/@thulite/doks-core/data"

@@ -2,7 +2,7 @@
 title = "DB Extensions"
 description = "Extends IDbConnection like Dapper: bulk insert, update, delete, and merge on the connection you already use. Built on ETLBox."
 images = ["cover.png"]
-licenseUnitPrice = 299
+licenseProduct = "dbext"
 
 # mainSections
 mainSections = ["docs"]

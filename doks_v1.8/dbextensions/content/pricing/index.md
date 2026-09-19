@@ -6,7 +6,7 @@ draft: false
 toc: false
 ---
 
-{{< pricing-dbext >}}
+{{< pricing >}}
 
 ## Frequently Asked Questions
 

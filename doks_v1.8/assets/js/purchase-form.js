@@ -37,6 +37,18 @@ customerSlider.addEventListener('input', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const form          = document.querySelector('form[name="purchase-form"]');
   const licenseType   = document.getElementById("licensetype");
+  const planParam     = new URLSearchParams(window.location.search).get("plan") || "";
+  const planMap       = {
+    company: "purchasecompany",
+    project: "purchaseproject",
+    "enterprise-oem": "purchaseenterprise",
+    purchasecompany: "purchasecompany",
+    purchaseproject: "purchaseproject",
+    purchaseenterprise: "purchaseenterprise"
+  };
+  if (licenseType && planMap[planParam]) {
+    licenseType.value = planMap[planParam];
+  }
   const developers    = document.getElementById("developers");
   const isSaaS        = document.getElementById("isSaaS");
   const smallCompany  = document.getElementById("smallCompany");

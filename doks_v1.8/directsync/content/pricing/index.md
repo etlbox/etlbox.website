@@ -6,7 +6,7 @@ draft: false
 toc: false
 ---
 
-{{< pricing-directsync >}}
+{{< pricing >}}
 
 ## Frequently Asked Questions
 

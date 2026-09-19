@@ -3,6 +3,45 @@ title = "ETLBox"
 description = "Simple API to code ETL jobs in .NET & C#. Extremely fast data processing engine. Runs inside your applications, APIs, and jobs. Extract, filter, transform, migrate data on-the-fly."
 images = ["cover.png"]
 
+# Pricing / purchase / quote — pick a key with licenseProduct, or {{< pricing "dbext" >}}
+licenseProduct = "etlbox"
+
+[license.etlbox]
+  name = "ETLBox"
+  source = "etlbox"
+  unitPrice = 999
+  showPrice = true
+  trialUrl = "/product/getting-started/get-trial/"
+  trialHeroLabel = "Get your trial key"
+  trialCardLabel = "Try now"
+  hero = "Try before you buy - evaluate ETLBox for 45 days completely free!"
+  ctaUrl = "/support/contact/purchase/"
+  ctaLabel = "Purchase"
+
+[license.dbext]
+  name = "DB Extensions"
+  source = "dbext"
+  unitPrice = 299
+  showPrice = true
+  trialUrl = "/docs/details/get-trial/"
+  trialHeroLabel = "Get your trial key"
+  trialCardLabel = "Try now"
+  hero = "Try before you buy - evaluate DB Extensions for 45 days completely free!"
+  ctaUrl = "/support/contact/purchase/"
+  ctaLabel = "Purchase"
+
+[license.directsync]
+  name = "DirectSync"
+  source = "directsync"
+  unitPrice = 0
+  showPrice = false
+  trialUrl = "/#download"
+  trialHeroLabel = "Download"
+  trialCardLabel = "Download"
+  hero = "Start free — evaluate DirectSync with the full desktop app and CLI."
+  ctaUrl = "/support/contact/quote/"
+  ctaLabel = "Request a quote"
+
 # mainSections
 mainSections = ["product","docs","recipes"]
 

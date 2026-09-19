@@ -1,19 +1,21 @@
 ---
 title: "Standard End-user License Agreement"
-description: "Standard ETLBox end-user license agreement for most packages. Read the terms that apply unless you purchased a redistributable OEM license."
-lead: "The Standard EULA comes with all packages except REDISTRIBUTABLE."
+description: "Standard EULA for ETLBoxperts products (ETLBox, DirectSync, and DB Extensions), except redistributable OEM licenses."
+lead: "The Standard EULA applies to ETLBox, DirectSync, and DB Extensions, except redistributable OEM licenses."
 draft: false
 images: []
 weight: 100
 toc: false
 ---
 
+This agreement applies to the products of ETLBoxperts GmbH: ETLBox, DirectSync, and DB Extensions.
+
 If you plan to purchase the REDISTRIBUTABLE package, please see our [Redistribution EULA](../redistribution-eula/).
 
 {{< nowrap-code >}}
 Standard End-user License Agreement
 
-(C) 2025 ETLBoxperts GmbH
+(C) 2026 ETLBoxperts GmbH
 
 THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.
 

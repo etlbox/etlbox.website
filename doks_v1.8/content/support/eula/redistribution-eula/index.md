@@ -1,12 +1,14 @@
 ---
 title: "Redistribution End-user License Agreement"
-description: "Redistribution EULA for the ETLBox Enterprise OEM license. Read the terms for embedding and redistributing the .NET ETL library with your software."
-lead: "This EULA allows redistribution of ETLBox and comes with the ENTERPRISE OEM license."
+description: "Redistribution EULA for the Enterprise OEM license of ETLBoxperts products (ETLBox, DirectSync, and DB Extensions)."
+lead: "This EULA allows redistribution of ETLBox, DirectSync, and DB Extensions and comes with the ENTERPRISE OEM license."
 draft: false
 images: []
 weight: 100
 toc: false
 ---
+
+This agreement applies to the products of ETLBoxperts GmbH: ETLBox, DirectSync, and DB Extensions.
 
 For other licenses than our ENTERPRISE OEM license, please refer to our [Standard EULA](/support/eula/standard-eula).
 

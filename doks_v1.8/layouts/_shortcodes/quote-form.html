@@ -1,5 +1,8 @@
+{{ $type := site.Params.licenseProduct | default "etlbox" }}
+{{ $lic := index site.Params.license $type | default dict }}
 <form class="my-4" name="request-quote" method="POST" data-netlify="true" action="/support/contact/success" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="request-quote">
+    <input type="hidden" name="source" value="{{ $lic.source | default $type }}">
     <input type="hidden" name="plan" id="quotePlan" value="">
     <p class="visually-hidden">
         <label>Don’t fill this out: <input name="bot-field"></label>
@@ -63,6 +66,7 @@
         <div class="col-lg-8 col-md-12">
             <select class="form-select" id="licensetype" name="licensetype">
                 <option value="company">Company license</option>
+                <option value="project">Project license</option>
                 <option value="enterprise-oem">Enterprise OEM license</option>
             </select>
         </div>
@@ -123,7 +127,7 @@
     var hidden = document.getElementById('quotePlan');
     var select = document.getElementById('licensetype');
     if (hidden) hidden.value = plan;
-    if (select && (plan === 'company' || plan === 'enterprise-oem')) {
+    if (select && (plan === 'company' || plan === 'project' || plan === 'enterprise-oem')) {
       select.value = plan;
     }
   })();

@@ -2,6 +2,7 @@
 title = "DirectSync"
 description = "Windows desktop app and etlrun directsync CLI for data migration and sync. Simple to configure, powerful. Deploy anywhere: Windows, Linux, containers, Azure."
 images = ["cover.png"]
+licenseProduct = "directsync"
 
 # mainSections
 mainSections = []
