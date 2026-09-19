@@ -132,6 +132,11 @@
     /* Skaliert das Bild und schneidet es, falls nötig */
 }
 
+.experts-ref-grid .fixed-size-logo {
+    max-width: 100%;
+    width: 12rem;
+}
+
 /** DirectSync CTA on home — matches logo blue (rgb(49,145,218)) */
 .btn-directsync {
     --bs-btn-color: #fff;

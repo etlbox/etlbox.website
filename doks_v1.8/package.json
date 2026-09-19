@@ -9,10 +9,12 @@
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "dev:ext": "set HUGO_ENV=next&& hugo server --disableFastRender --noHTTPCache",
     "dev:clone": "set HUGO_ENV=clone&& hugo server --disableFastRender --noHTTPCache",
+    "dev:experts": "hugo server --environment experts --disableFastRender --noHTTPCache",
     "format": "prettier **/** -w -c",
     "build": "hugo --minify --gc",
     "build:ext": "set HUGO_ENV=next&& hugo --minify --gc",
     "build:clone": "set HUGO_ENV=clone&& hugo --minify --gc",
+    "build:experts": "hugo --environment experts --minify --gc",
     "preview": "vite preview --outDir public"
   },
   "dependencies": {

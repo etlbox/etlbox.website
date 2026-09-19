@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="row flex-xl-nowrap">
+  <main class="docs-content col-lg-15 col-xl-12 mx-xl-auto">
+    <div class="page-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead -}}
+      <p class="lead">{{ . | safeHTML }}</p>
+      {{ end -}}
+    </div>
+    {{ .Content }}
+  </main>
+</div>
+{{ end }}

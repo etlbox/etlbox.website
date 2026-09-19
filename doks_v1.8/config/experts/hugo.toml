@@ -1,0 +1,7 @@
+# Overrides for experts environment
+baseurl = "/"
+title = "ETLBoxperts"
+
+# Do not inherit Product / Docs / Recipes / API from _default menus.
+[menus]
+_merge = "none"

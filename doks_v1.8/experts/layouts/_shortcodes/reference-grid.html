@@ -1,0 +1,2 @@
+{{ $highlight := eq (.Get 0) "highlight" }}
+{{ partial "reference-grid.html" (dict "highlight" $highlight) }}
