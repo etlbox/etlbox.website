@@ -1,0 +1,87 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <main class="col-12 col-xl-10">
+    <div class="page-header mb-5">
+      <p class="experts-kicker">What we deliver</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead -}}
+      <p class="lead mb-0">{{ . | safeHTML }}</p>
+      {{ end -}}
+    </div>
+
+    {{ with .Content }}
+    <div class="mb-5">{{ . }}</div>
+    {{ end }}
+
+    <section class="mb-5">
+      <div class="experts-engage">
+        <div class="experts-engage-col">
+          <p class="experts-kicker">With your team</p>
+          <h2 class="h3">We join the work</h2>
+          <p class="mb-0">Your developers already ship C#. We sit with them — train, review, write the hard flows, leave a repo they can keep changing.</p>
+        </div>
+        <div class="experts-engage-col">
+          <p class="experts-kicker">On us</p>
+          <h2 class="h3">We take the project</h2>
+          <p class="mb-0">First source to first reliable load. You get code, tests, and a fixed price after a free proof of concept on your data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experts-service-list">
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-code-slash"></i></div>
+        <div>
+          <h2 class="h3">Custom ETL in C#</h2>
+          <p class="mb-0">Bespoke flows when the mapping is ugly, the volume is high, or the source will not sit still. Incremental loads, merges, slowly changing dimensions — the work that looks simple on a whiteboard and is not. You get a repository you can build, test, and change.</p>
+        </div>
+      </article>
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-mortarboard"></i></div>
+        <div>
+          <h2 class="h3">Training and enablement</h2>
+          <p class="mb-0">Your developers should not depend on us for every new connector. Focused training on ETLBox and on how we structure testable pipelines. Useful when a team is adopting the library, inheriting a flow, or wants a review before the next release.</p>
+        </div>
+      </article>
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-window-sidebar"></i></div>
+        <div>
+          <h2 class="h3">Surfaces around the flow</h2>
+          <p class="mb-0">Ops screens, sync tools, dashboards, retry buttons — the kind of surface we ship as <a href="https://www.directsync.net">DirectSync</a>. Same C#, same tests, not a second product bolted on.</p>
+        </div>
+      </article>
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-diagram-3"></i></div>
+        <div>
+          <h2 class="h3">APIs and system integration</h2>
+          <p class="mb-0">REST, SOAP, GraphQL, files, queues, and the databases behind them. An API is a first-class source or destination — not an afterthought on a warehouse job.</p>
+        </div>
+      </article>
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-database-gear"></i></div>
+        <div>
+          <h2 class="h3">Warehouse, lake, or vault</h2>
+          <p class="mb-0">When the project needs a home for the data, we build that too. We pick the shape that matches how you query — we do not start from a methodology slide.</p>
+        </div>
+      </article>
+      <article class="experts-service-band">
+        <div class="experts-service-mark" aria-hidden="true"><i class="bi-arrow-left-right"></i></div>
+        <div>
+          <h2 class="h3">Migration</h2>
+          <p class="mb-0">Legacy systems, messy mappings, one-way or ongoing. Extract, reshape, land clean — then keep it running if you want us to.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="mb-4">
+      <div class="experts-poc">
+        <span class="badge mb-3">Free · no obligation</span>
+        <h2 class="h3 mb-3">How we deliver</h2>
+        <p class="mb-2">A real proof of concept first — a substantial slice of <em>your</em> integration, not a demo dataset. Then a fixed price if it fits.</p>
+        <p class="mb-4">On-prem, Kubernetes, Azure Functions, App Service, or anywhere .NET runs. You operate the jobs, or we keep them running.</p>
+        <a href="/contact/" class="btn btn-light rounded-pill">Talk to us</a>
+      </div>
+    </section>
+  </main>
+</div>
+{{ end }}

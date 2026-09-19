@@ -1,0 +1,139 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <main class="col-12 col-xl-10">
+    <div class="page-header mb-4">
+      <p class="experts-kicker">How we work</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead -}}
+      <p class="lead mb-0">{{ . | safeHTML }}</p>
+      {{ end -}}
+    </div>
+
+    {{ with .Content }}
+    <div class="mb-5">{{ . }}</div>
+    {{ end }}
+
+    <section class="mb-5">
+      <div class="experts-compare">
+        <div class="experts-compare-col experts-compare-own">
+          <p class="experts-kicker">Code-first</p>
+          <h3>You own the code</h3>
+          <ul>
+            <li><i class="bi-check2"></i> ETLBox</li>
+            <li><i class="bi-check2"></i> C# / .NET</li>
+            <li><i class="bi-check2"></i> TDD — tests before the flow</li>
+            <li><i class="bi-check2"></i> Custom solutions, no canvas ceiling</li>
+            <li><i class="bi-check2"></i> Diff it, build it, keep it</li>
+          </ul>
+        </div>
+        <div class="experts-compare-vs" aria-hidden="true">vs</div>
+        <div class="experts-compare-col experts-compare-rent">
+          <p class="experts-kicker">Low-code</p>
+          <h3>You rent the tool</h3>
+          <ul>
+            <li><i class="bi-dash"></i> SSIS · ADF · Talend · Alteryx</li>
+            <li><i class="bi-dash"></i> Drag &amp; drop until the rule is ugly</li>
+            <li><i class="bi-dash"></i> Hard to test, harder to review</li>
+            <li><i class="bi-dash"></i> Vendor limits and license lock-in</li>
+            <li><i class="bi-dash"></i> The job lives in someone else’s product</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-3">Why testable ETL is a better result</h2>
+      <p>If the flow is code, it can have tests. We do not wait for a nightly run to learn that a null in column 14 broke the load. We use TDD: write the test for the rule, watch it fail, then write the transform.</p>
+      <div class="row g-4 my-3">
+        <div class="col-md-8">
+          <div class="card experts-tile h-100">
+            <div class="card-body">
+              <span class="experts-icon" aria-hidden="true"><i class="bi-bug"></i></span>
+              <h3>Catch it in CI</h3>
+              <p>A renamed API field, a late invoice, a currency rule — they show up as a red test before they show up in finance. Production should not be the first place the rule runs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card experts-tile h-100">
+            <div class="card-body">
+              <span class="experts-icon" aria-hidden="true"><i class="bi-shield-check"></i></span>
+              <h3>Change without a war room</h3>
+              <p>That is how we keep incremental loads idempotent and prove a merge does not double-count. Your team can open the repo in six months and change the flow without a war room.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mb-0">A typical example: “net amount is gross minus discount, unless the currency is not EUR, in which case convert first.” That is a unit test, not a workshop. The destination table is an integration test.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-2">We built the tools we use</h2>
+      <p class="mb-0">ETLBox exists because we needed a .NET library that could pull from databases and APIs, transform in memory, and load hard — without becoming a product you have to rent. Customer projects are where the library stays honest. When we take a job, we bring the connectors, not a certification slide.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-4">A simple map of the work</h2>
+      <div class="experts-map">
+        <div class="experts-step">
+          <div class="experts-step-num">1</div>
+          <h3 class="h5">Sources</h3>
+          <p class="small text-body-secondary mb-0">ERPs, CRMs, files, SaaS APIs, the database nobody wants to touch.</p>
+        </div>
+        <div class="experts-step">
+          <div class="experts-step-num">2</div>
+          <h3 class="h5">Integration</h3>
+          <p class="small text-body-secondary mb-0">Extract, clean, join, keep history, reject what is wrong.</p>
+        </div>
+        <div class="experts-step">
+          <div class="experts-step-num">3</div>
+          <h3 class="h5">Store</h3>
+          <p class="small text-body-secondary mb-0">Warehouse, lake, or vault — only if you actually need a home.</p>
+        </div>
+        <div class="experts-step">
+          <div class="experts-step-num">4</div>
+          <h3 class="h5">Consumers</h3>
+          <p class="small text-body-secondary mb-0">Reports, other APIs, an ops UI, the next service in the chain.</p>
+        </div>
+      </div>
+      <p class="text-body-secondary mt-4 mb-0">Not every integration deserves a warehouse. Not every warehouse needs a lake.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-2">What “good” looks like</h2>
+      <p class="mb-4">A pipeline nobody has to babysit. Four checks we use on every project — not a methodology, just what we refuse to skip.</p>
+      <div class="experts-good">
+        <div class="experts-good-row">
+          <h3>Incremental</h3>
+          <p>Load what changed. A full reload is a last resort — when the source is tiny and the night is long.</p>
+        </div>
+        <div class="experts-good-row">
+          <h3>Idempotent</h3>
+          <p>Run the job twice. The table does not grow. Yesterday’s load and today’s load agree.</p>
+        </div>
+        <div class="experts-good-row">
+          <h3>Observable</h3>
+          <p>You can see what ran, what failed, and which row caused it — without opening a debugger on the server.</p>
+        </div>
+        <div class="experts-good-row">
+          <h3>Yours</h3>
+          <p>The repo is yours when we leave. We are not a runtime you cannot walk away from.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="card experts-split-card">
+          <div class="card-body align-items-center">
+            <span class="experts-icon experts-icon-lg" aria-hidden="true"><i class="bi-building"></i></span>
+          <div>
+            <h2 class="h4 mb-2">Who you work with</h2>
+            <p class="mb-3">A small team of <strong>three</strong> in Berlin — ETLBoxperts GmbH, not a freelance slide. We take the work ourselves. If the project needs more hands, we bring in developers we already know.</p>
+            <a class="btn btn-primary rounded-pill" href="/contact/">Tell us what should move</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+{{ end }}

@@ -1,12 +1,12 @@
 {{ $highlight := .highlight }}
 {{ $highlightNames := slice "Commonwealth Bank of Australia" "Deloitte" "IWG" "SEW Eurodrive" "Health Catalyst" "Regal Rexnord" }}
 {{ $customers := site.Data.home.references.customer }}
-{{ $col := "col-6 col-md-4 col-lg-3" }}
+{{ $gridClass := "experts-ref-grid" }}
 {{ if $highlight }}
-  {{ $col = "col-6 col-md-4" }}
+  {{ $gridClass = "experts-ref-grid experts-ref-grid-3" }}
 {{ end }}
 
-<div class="row justify-content-center g-4 experts-ref-grid">
+<div class="{{ $gridClass }}">
   {{ range $customers }}
     {{ $show := true }}
     {{ if $highlight }}
@@ -14,23 +14,21 @@
     {{ end }}
     {{ if $show }}
       {{ $external := hasPrefix .link "http" }}
-      <div class="{{ $col }}">
-        <div class="card h-100 bg-light border-0">
-          <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-            {{ if $external }}
-            <a href="{{ .link }}" target="_blank" rel="noopener nofollow" class="text-decoration-none">
-              <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo mb-3" loading="lazy">
-              <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo mb-3" loading="lazy">
-            </a>
-            {{ else }}
+      <div class="card h-100 bg-light border-0">
+        <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+          {{ if $external }}
+          <a href="{{ .link }}" target="_blank" rel="noopener nofollow" class="text-decoration-none">
             <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo mb-3" loading="lazy">
             <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo mb-3" loading="lazy">
-            {{ end }}
-            <p class="card-text mb-0">
-              <strong>{{ .name }}</strong><br>
-              <span class="text-body-secondary">{{ .country }}</span>
-            </p>
-          </div>
+          </a>
+          {{ else }}
+          <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo mb-3" loading="lazy">
+          <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo mb-3" loading="lazy">
+          {{ end }}
+          <p class="card-text mb-0">
+            <strong>{{ .name }}</strong><br>
+            <span class="text-body-secondary">{{ .country }}</span>
+          </p>
         </div>
       </div>
     {{ end }}

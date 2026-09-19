@@ -1,46 +1,62 @@
 <div class="experts-contact">
-  <section class="mb-5 pb-4 border-bottom">
-    <h2 class="h3">Book a meeting</h2>
-    <p>Want to walk through a project, a stuck pipeline, or whether we are the right fit? Pick a slot and we will come prepared.</p>
-    <a class="btn btn-primary rounded-pill" href="https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/" target="_blank" rel="noopener">
-      Book a meeting <i class="bi-box-arrow-up-right"></i>
-    </a>
-  </section>
+  <div class="card experts-contact-card experts-contact-featured">
+    <div class="card-body">
+      <span class="experts-icon mb-3" style="background:#fff;color:hsl(206,100%,28%)" aria-hidden="true"><i class="bi-calendar-check"></i></span>
+      <h2 class="h3">Book a meeting</h2>
+      <p>Walk through a project, a stuck pipeline, or whether we are the right fit. Pick a slot — we come prepared.</p>
+      <a class="btn btn-light rounded-pill" href="https://outlook.office365.com/owa/calendar/ETLBox@etlbox.net/bookings/" target="_blank" rel="noopener">
+        Book a meeting <i class="bi-box-arrow-up-right"></i>
+      </a>
+    </div>
+  </div>
 
-  <section class="mb-5 pb-4 border-bottom">
-    <h2 class="h3">Contact form</h2>
-    <p>Tell us what you need to move. We normally reply within one business day.</p>
-    <form class="my-4" name="consulting-contact" method="POST" data-netlify="true" action="/contact/success/">
-      <input type="hidden" name="form-name" value="consulting-contact">
-      <div class="mb-3">
-        <label class="form-label fw-bold" for="contactname">Your name</label>
-        <input class="form-control" type="text" id="contactname" name="contactname" placeholder="Ada Lovelace" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label fw-bold" for="contactemail">Your email</label>
-        <input class="form-control" type="email" id="contactemail" name="contactemail" placeholder="you@company.com" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label fw-bold" for="contactmessage">Your message</label>
-        <textarea class="form-control" rows="8" id="contactmessage" name="contactmessage" placeholder="What should the data do that it cannot do today?" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-cta rounded-pill px-4 py-2">
-        Send your message <i class="bi-envelope"></i>
-      </button>
-    </form>
-  </section>
+  <div class="card experts-contact-card">
+    <div class="card-body">
+      <span class="experts-icon mb-3" aria-hidden="true"><i class="bi-pencil-square"></i></span>
+      <h2 class="h3">Write to us</h2>
+      <p>Tell us what you need to move. We normally reply within one business day.</p>
+      <form class="mt-3" name="consulting-contact" method="POST" data-netlify="true" action="/contact/success/">
+        <input type="hidden" name="form-name" value="consulting-contact">
+        <div class="mb-3">
+          <label class="form-label fw-bold" for="contactname">Your name</label>
+          <input class="form-control" type="text" id="contactname" name="contactname" placeholder="Ada Lovelace" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold" for="contactemail">Your email</label>
+          <input class="form-control" type="email" id="contactemail" name="contactemail" placeholder="you@company.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold" for="contactmessage">Your message</label>
+          <textarea class="form-control" rows="6" id="contactmessage" name="contactmessage" placeholder="What should the data do that it cannot do today?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-cta rounded-pill px-4">
+          Send your message <i class="bi-envelope"></i>
+        </button>
+      </form>
+    </div>
+  </div>
 
-  <section class="mb-5 pb-4 border-bottom">
-    <h2 class="h3">Prefer writing an email?</h2>
-    <p class="mb-3">Send the same brief to <a href="mailto:mail@etlbox.net">mail@etlbox.net</a>. We will get back to you as soon as we can.</p>
-    <a class="btn btn-outline-primary rounded-pill" href="mailto:mail@etlbox.net">Write an email</a>
-  </section>
+  <div class="card experts-contact-card">
+    <div class="card-body d-flex gap-3 align-items-start">
+      <span class="experts-icon" aria-hidden="true"><i class="bi-envelope"></i></span>
+      <div class="flex-grow-1">
+        <h2 class="h5 mb-2">Email</h2>
+        <p class="mb-3">Same brief, no form. Send it to <a href="mailto:mail@etlbox.net">mail@etlbox.net</a>.</p>
+        <a class="btn btn-outline-primary rounded-pill" href="mailto:mail@etlbox.net">Write an email</a>
+      </div>
+    </div>
+  </div>
 
-  <section class="mb-2">
-    <h2 class="h3">Create a support ticket</h2>
-    <p>Already a client, or you want a trackable thread? Open a ticket in our service desk.</p>
-    <a class="btn btn-outline-primary rounded-pill" href="https://etlbox.atlassian.net/servicedesk/customer/portal/1" target="_blank" rel="noopener">
-      Open service desk <i class="bi-box-arrow-up-right"></i>
-    </a>
-  </section>
+  <div class="card experts-contact-card">
+    <div class="card-body d-flex gap-3 align-items-start">
+      <span class="experts-icon" aria-hidden="true"><i class="bi-ticket-perforated"></i></span>
+      <div class="flex-grow-1">
+        <h2 class="h5 mb-2">Support ticket</h2>
+        <p class="mb-3">Already a client, or you want a trackable thread? Open a ticket in our service desk.</p>
+        <a class="btn btn-outline-primary rounded-pill" href="https://etlbox.atlassian.net/servicedesk/customer/portal/1" target="_blank" rel="noopener">
+          Open service desk <i class="bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

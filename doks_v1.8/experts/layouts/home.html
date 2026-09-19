@@ -1,26 +1,20 @@
 {{ define "main" }}
-<section class="section section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center align-items-center">
-    <div class="row justify-content-center">
-      <div class="col-lg-16 text-center">
-        <h1>
-          <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBoxperts" width="76" height="76"
-            class="light-mode-image" />
-          <img src="/logos/svg/logo_etlbox_76x76_dark.svg" alt="ETLBoxperts" width="76" height="76"
-            class="dark-mode-image" />
-          {{ .Title }}
-        </h1>
-      </div>
-      <div class="col-lg-12 text-center">
-        <p class="lead">{{ .Params.lead | safeHTML }}</p>
-        <p class="fs-5 mb-3">Code-first. Testable. Built with TDD.</p>
-        <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/contact/"
+<section class="experts-hero container-fluid">
+  <div class="container">
+    <div class="row align-items-center justify-content-center gy-4">
+      <div class="col-lg-7 text-center text-lg-start">
+        <p class="experts-kicker mb-2">Consulting. From the heart of Berlin</p>
+        <h1>{{ .Params.lead | plainify }}</h1>
+        <p class="lead mb-4">Code-first. Testable. Built with TDD.</p>
+        <a class="btn btn-primary btn-cta rounded-pill btn-lg me-2 mb-2" href="/contact/"
           role="button" aria-label="Talk to ETLBoxperts">Talk to us</a>
-        <p class="mb-0">
-          <a href="/code-first/">See how we work</a>
-          &nbsp;·&nbsp;
-          <a href="/services/">What we deliver</a>
-        </p>
+        <a class="btn btn-outline-primary rounded-pill btn-lg mb-2" href="/code-first/">See how we work</a>
+      </div>
+      <div class="col-lg-4 text-center px-lg-4">
+        <img src="/logos/svg/logo_etlbox_76x76.svg" alt="ETLBoxperts" width="160" height="160"
+          class="light-mode-image experts-hero-logo" />
+        <img src="/logos/svg/logo_etlbox_76x76_dark.svg" alt="ETLBoxperts" width="160" height="160"
+          class="dark-mode-image experts-hero-logo" />
       </div>
     </div>
   </div>
@@ -37,93 +31,100 @@
 
 <section class="section section-sm">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 text-start">
-        {{ .Content }}
+    <div class="row g-4 justify-content-center experts-split-pair">
+      <div class="col-lg-5 col-md-6">
+        <div class="card experts-split-card">
+          <div class="card-body">
+            <span class="experts-icon experts-icon-lg" aria-hidden="true"><i class="bi-code-slash"></i></span>
+            <div>
+              <h2 class="h4 mb-2">C# you own</h2>
+              <p class="mb-0">The integration is code, not a black box. Because it is code, we test it — TDD, so the pipeline you get is the one we already proved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6">
+        <div class="card experts-split-card">
+          <div class="card-body">
+            <span class="experts-icon experts-icon-lg" aria-hidden="true"><i class="bi-people"></i></span>
+            <div>
+              <h2 class="h4 mb-2">Help — or we take the project</h2>
+              <p class="mb-0">Your team already on ETLBox? We train, review, and write the hard flows with you. Need the whole integration? We run it.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section section-sm bg-light">
-  <div class="container">
+  <div class="container my-4">
     <div class="row justify-content-center text-center mb-4">
-      <div class="col-lg-10">
-        <h2>Two ways to work with us</h2>
-        <p class="lead mb-0">Need help on an ETLBox project — or someone to take the integration off your plate?</p>
+      <div class="col-lg-8">
+        <h2>What we take on</h2>
+        <p class="mb-0">From a single stubborn flow to the warehouse around it. Same toolkit. Same tests.</p>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-5 col-md-8 mb-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body d-flex flex-column">
-            <h3 class="h5"><i class="bi-wrench-adjustable me-2"></i>Help with ETLBox</h3>
-            <p>Your team already uses the library — or wants to. We train, review, and write the hard flows with you. You keep the code.</p>
-            <p class="mb-0 mt-auto"><a href="/services/">Training, reviews, custom flows <i class="bi-arrow-right"></i></a></p>
-          </div>
-        </div>
+    <div class="row align-items-start justify-content-center gy-5">
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-code-slash large"></i></h1>
+        <h5 class="m-1">Custom ETL in C#</h5>
+        <p class="m-1">Pipelines you can read, test, and own — built on ETLBox, the library we created.</p>
       </div>
-      <div class="col-lg-5 col-md-8 mb-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body d-flex flex-column">
-            <h3 class="h5"><i class="bi-kanban me-2"></i>We run the project</h3>
-            <p>Migration, warehouse, APIs, or an ops surface like DirectSync. We take it from the first source to a reliable load — in your environment or ours.</p>
-            <p class="mb-0 mt-auto"><a href="/services/">Full-project delivery <i class="bi-arrow-right"></i></a></p>
-          </div>
-        </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-mortarboard large"></i></h1>
+        <h5 class="m-1">Training that sticks</h5>
+        <p class="m-1">Enable your developers to ship the next integration without waiting on a vendor.</p>
+      </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-window-sidebar large"></i></h1>
+        <h5 class="m-1">Surfaces on the flow</h5>
+        <p class="m-1">Ops UIs, sync tools, and small apps — the kind of surface we ship as DirectSync.</p>
+      </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-diagram-3 large"></i></h1>
+        <h5 class="m-1">APIs and systems</h5>
+        <p class="m-1">REST, SOAP, GraphQL, files, queues. An API is a first-class source or destination.</p>
+      </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-database-gear large"></i></h1>
+        <h5 class="m-1">Warehouse, lake, vault</h5>
+        <p class="m-1">A home for the data when you need one — the shape that matches how you query.</p>
+      </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 class="m-1"><i class="bi-arrow-left-right large"></i></h1>
+        <h5 class="m-1">Migration</h5>
+        <p class="m-1">Legacy systems, messy mappings, one-way or ongoing. Extract, reshape, land clean.</p>
       </div>
     </div>
+    <p class="text-center mt-2 mb-0"><a href="/services/">All services <i class="bi-arrow-right"></i></a></p>
   </div>
 </section>
 
 <section class="section section-sm">
   <div class="container">
     <div class="row justify-content-center text-center mb-4">
-      <div class="col-lg-10">
+      <div class="col-lg-8">
         <h2>Teams that already trust this work</h2>
-        <p class="mb-0">A few of the companies we have built data integration with. <a href="/references/">See the full list</a>.</p>
+        <p class="mb-0">Companies that have shipped data with us — and with the library we built. <a href="/references/">See everyone</a>.</p>
       </div>
     </div>
     {{ partial "reference-grid.html" (dict "highlight" true) }}
   </div>
 </section>
 
-<section class="section section-sm bg-light">
-  <div class="container my-4">
-    <div class="row align-items-start justify-content-center">
-      <div class="col-lg-5 col-md-7 mb-4">
-        <h1 class="m-1"><i class="bi-code-slash large"></i></h1>
-        <h5 class="m-1">Custom ETL in C#</h5>
-        <p class="m-1">Pipelines you can read, test, and own — built on ETLBox, the library we created.</p>
-      </div>
-      <div class="col-lg-5 col-md-7 mb-4">
-        <h1 class="m-1"><i class="bi-mortarboard large"></i></h1>
-        <h5 class="m-1">Training that sticks</h5>
-        <p class="m-1">Enable your developers to ship the next integration without waiting on a vendor.</p>
-      </div>
-    </div>
-    <div class="row align-items-start justify-content-center">
-      <div class="col-lg-5 col-md-7 mb-4">
-        <h1 class="m-1"><i class="bi-window-sidebar large"></i></h1>
-        <h5 class="m-1">Surfaces on top of the flow</h5>
-        <p class="m-1">Ops UIs, sync tools, and APIs around the pipeline — not just the batch job.</p>
-      </div>
-      <div class="col-lg-5 col-md-7 mb-4">
-        <h1 class="m-1"><i class="bi-database-gear large"></i></h1>
-        <h5 class="m-1">Warehouse and integration</h5>
-        <p class="m-1">DWH, lake, or vault when the project needs a home for the data — not a lecture on the terms.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section-md">
-  <div class="container text-center">
-    <h2>Tell us what you need to move</h2>
-    <p class="lead">A free proof of concept on a real slice of your project. Then a fixed-price offer if it fits.</p>
-    <a href="/contact/" class="btn btn-primary btn-lg rounded-pill shadow-sm" role="button">
-      Talk to us
-    </a>
+  <div class="container">
+    <div class="experts-poc text-center">
+      <span class="badge mb-3">Free · no obligation</span>
+      <h2 class="mb-3">A real proof of concept. On your data. At no cost.</h2>
+      <p class="lead mb-3">Not a slide deck and not a toy dataset. We build a substantial slice of <em>your</em> integration — the awkward source, the rule that actually matters.</p>
+      <p class="mb-4">If it fits, you get a fixed-price offer for the rest. If it does not, you still keep what we learned. No retainer to start.</p>
+      <a href="/contact/" class="btn btn-light btn-lg rounded-pill px-4" role="button">
+        Start a free PoC
+      </a>
+    </div>
   </div>
 </section>
 

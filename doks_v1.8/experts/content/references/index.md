@@ -1,19 +1,15 @@
 ---
 title: "References"
 description: "Companies that have built data integration with ETLBox and ETLBoxperts — banks, industry, healthcare, and more."
-lead: "Teams that already ship data with us — and with the library we built."
+lead: "We have run integration with banks, industry, healthcare, and consulting firms — in C#, on ETLBox. These are some of the names. We do not invent case studies."
 draft: false
 toc: false
 ---
 
-We do not invent case studies. Here are companies that have used ETLBox or worked with us on integration. A few names first, then the full set.
-
-## Highlights
-
-{{< reference-grid highlight >}}
-
-## All references
-
 {{< reference-grid >}}
 
-Want to talk through a similar project? [Contact us](/contact/).
+<div class="experts-poc text-center experts-ref-close">
+  <h2 class="h3 mb-3">Want to join this circle?</h2>
+  <p class="lead mb-3">We can introduce you to a customer — or start yours, and put your name on the next card.</p>
+  <a href="/contact/" class="btn btn-light btn-lg rounded-pill px-4">Talk to us</a>
+</div>

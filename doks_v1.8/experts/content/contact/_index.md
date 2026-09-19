@@ -6,6 +6,6 @@ draft: false
 toc: false
 ---
 
-Pick the path that is easiest. Company details are on the [legal notice](/legal-notice/).
+Company details sit on the [legal notice](/legal-notice/). Pick the path that is easiest.
 
 {{< consulting-contact >}}

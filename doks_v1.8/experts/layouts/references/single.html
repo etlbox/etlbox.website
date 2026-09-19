@@ -1,11 +1,11 @@
 {{ define "main" }}
 <div class="row justify-content-center">
-  <main class="col-lg-8">
-    <div class="page-header mb-4">
-      <p class="experts-kicker">Get in touch</p>
+  <main class="col-lg-14 col-xl-13">
+    <div class="page-header mb-5">
+      <p class="experts-kicker">Who we have worked with</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.lead -}}
-      <p class="lead">{{ . | safeHTML }}</p>
+      <p class="lead mb-0">{{ . | safeHTML }}</p>
       {{ end -}}
     </div>
     {{ .Content }}
