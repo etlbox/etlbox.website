@@ -113,7 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let priceText = "Get a quote";
     let vatApplied = false;
     let payableDevCount = null;
-    const unitPrice = parseInt(priceDisplay?.dataset.unitPrice || "999", 10) || 999;
+    const rawUnit = priceDisplay?.dataset.unitPrice;
+    const unitPrice = rawUnit === undefined || rawUnit === "" ? 999 : parseInt(rawUnit, 10);
 
     // PayNow nur bei Company, 1–9 Developer, kein SaaS, kein SmallCompany, CreditCard/DirectDebit
     // Stripe Checkout links are for the ETLBox 999 € plans only.
@@ -125,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       !saas &&
       !small &&
       !isTenPlus &&
+      unitPrice > 0 &&
       devCount >= 1 && devCount <= 9
     ) {
       let net = devCount * unitPrice;

@@ -7,8 +7,8 @@
 {{ $trialHeroLabel := $lic.trialHeroLabel | default "Get your trial key" }}
 {{ $trialCardLabel := $lic.trialCardLabel | default "Try now" }}
 {{ $hero := $lic.hero | default (printf "Try before you buy - evaluate %s for 45 days completely free!" $name) }}
-{{ $ctaUrl := $lic.ctaUrl | default "/support/contact/purchase/" }}
-{{ $ctaLabel := $lic.ctaLabel | default "Purchase" }}
+{{ $ctaUrl := "/support/contact/purchase/" }}
+{{ $ctaLabel := "Purchase" }}
 {{ $companyPrice := cond $showPrice (printf "Starting at %d € *" $price) "Request a quote" }}
 {{ $ctaCompany := printf "%s?plan=company" $ctaUrl }}
 {{ $ctaProject := printf "%s?plan=project" $ctaUrl }}

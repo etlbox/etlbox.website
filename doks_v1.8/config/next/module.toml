@@ -12,10 +12,14 @@
   source = "dbextensions/content"
   target = "content"
 
-# Shared EULA — product trees do not inherit default content/
+# Shared legal + purchase pages — product trees do not inherit default content/
 [[mounts]]
   source = "content/support/eula"
   target = "content/support/eula"
+
+[[mounts]]
+  source = "content/support/contact/purchase.md"
+  target = "content/support/contact/purchase.md"
 
 ## data
 [[mounts]]

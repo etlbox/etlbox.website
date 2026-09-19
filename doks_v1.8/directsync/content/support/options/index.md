@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "DirectSync support options: contact sales, request a quote, or open a ticket. Get help with licensing, installation, and using the desktop app and CLI."
+description: "DirectSync support options: contact sales, purchase a license, or open a ticket. Get help with licensing, installation, and using the desktop app and CLI."
 draft: false
 images: []
 toc: false

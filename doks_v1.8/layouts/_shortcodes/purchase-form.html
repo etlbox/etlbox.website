@@ -1,6 +1,8 @@
 {{ $type := site.Params.licenseProduct | default "etlbox" }}
 {{ $lic := index site.Params.license $type | default dict }}
-{{ $unitPrice := $lic.unitPrice | default 999 }}
+{{ $showPrice := $lic.showPrice }}
+{{ $unitPrice := $lic.unitPrice }}
+{{ if not $showPrice }}{{ $unitPrice = 0 }}{{ end }}
 <form name="purchase-form" method="POST" data-netlify="true" action="/support/contact/success" class="container mt-4 needs-validation" novalidate>
     <input type="hidden" name="source" value="{{ $lic.source | default $type }}">
 
@@ -342,7 +344,7 @@
         <div class="col-md-8 offset-md-4">
             <div class="border rounded p-3 d-flex justify-content-between align-items-center">
                 <div class="h5 fw-semibold text-primary mb-0">Total Price</div>
-                <div class="display-6 fw-bold mb-0" id="license-price" data-unit-price="{{ $unitPrice }}">€ {{ $unitPrice }}</div>
+                <div class="display-6 fw-bold mb-0" id="license-price" data-unit-price="{{ $unitPrice }}">{{ if $showPrice }}€ {{ $unitPrice }}{{ else }}Get a quote{{ end }}</div>
             </div>
         </div>
     </div>
@@ -364,7 +366,7 @@
 
     <div class="row" id="request-button" class="hidden">
         <div class="col-md-8 offset-md-4 mt-2">
-            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Request a Quote <i
+            <button type="submit" class="btn btn-primary rounded-pill btn-lg">Purchase <i
                     class="bi-envelope"></i></button>
         </div>
     </div>

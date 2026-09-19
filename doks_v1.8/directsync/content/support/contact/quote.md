@@ -1,11 +1,11 @@
 ---
-title: "Request a quote"
-description: "Request a DirectSync Company or Enterprise OEM quote. Tell us how you plan to use the desktop app and the CLI."
-lead: "Tell us how you plan to use DirectSync so we can prepare the right offer."
+title: "Purchase"
+description: "Purchase a license. Tell us your plan and company details so we can complete your order or prepare a custom offer."
 draft: false
 toc: false
 ---
 
-Almost there! Provide a few quick details to complete your DirectSync license request — or ask for a personalized quote.
+<meta http-equiv="refresh" content="0; url=/support/contact/purchase/">
+<script>window.location.replace("/support/contact/purchase/" + window.location.search);</script>
 
-{{< quote-form >}}
+This page has moved to [Purchase](/support/contact/purchase/).

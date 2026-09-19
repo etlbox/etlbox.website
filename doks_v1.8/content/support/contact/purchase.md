@@ -1,13 +1,15 @@
 ---
-title: "Purchase ETLBox"
-description: "Purchase ETLBox licenses through this form. Tell us your plan and company details so we can complete your order for the .NET ETL library."
+title: "Purchase"
+description: "Purchase a license. Tell us your plan and company details so we can complete your order or prepare a custom offer."
 draft: false
 images: []
 toc: false
+aliases:
+  - /support/contact/quote/
 ---
 
 Almost there!
 
-Provide a few quick details to complete your ETLBox license — or request a personalized quote if you need one.
+Provide a few quick details to complete your license — or send a purchase request if you need a custom offer.
 
 {{< purchase-form >}}
