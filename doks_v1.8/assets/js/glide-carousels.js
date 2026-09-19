@@ -1,4 +1,4 @@
-// Loaded & Executed on the start page only
+// Loaded & Executed on the main ETLBox start page only
 
 /*
 XL (Extra Large): Desktop screens (≥1200px or ≥1400px depending on the framework).
@@ -9,22 +9,23 @@ XS (Extra Small): Small mobile devices (<576px).
 */
 import Glide from '@glidejs/glide'
 
-// Neuer Glider mit 1 Element per View
-var customerGlide = new Glide('.glide-single-customer', {
+function mountGlide(selector, options) {
+  if (!document.querySelector(selector)) return
+  new Glide(selector, options).mount()
+}
+
+mountGlide('.glide-single-customer', {
   type: 'carousel',
   startAt: 0,
   focusAt: 'center',
   peek: 0,
   gap: 0,
   perView: 1 // Always show only 1 element
-});
+})
 
-customerGlide.mount();
-
-var referenceGlide = new Glide('.glide-carousel-reference', {
+mountGlide('.glide-carousel-reference', {
   type: 'carousel',
   startAt: 0,
-
   perView: 4, // Default for xl
   breakpoints: {
     1400: { // Medium screens (M)
@@ -39,9 +40,7 @@ var referenceGlide = new Glide('.glide-carousel-reference', {
   }
 })
 
-referenceGlide.mount()
-
-var connectorGlide = new Glide('.glide-carousel-connector', {
+mountGlide('.glide-carousel-connector', {
   type: 'carousel',
   startAt: 0,
   autoplay: 3000,
@@ -60,5 +59,3 @@ var connectorGlide = new Glide('.glide-carousel-connector', {
     }
   }
 })
-
-connectorGlide.mount()
