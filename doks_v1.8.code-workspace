@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../etlbox.demo"
+		},
+		{
+			"path": "../etlboxperts.website"
 		}
 	],
 	"settings": {}
