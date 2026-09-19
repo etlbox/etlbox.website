@@ -1,0 +1,3 @@
+# Overrides for clone environment
+baseurl = "/"
+title = "CloneBox"

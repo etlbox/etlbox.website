@@ -57,6 +57,12 @@ parent = "more"
 url = "https://www.dbextensions.net"
 weight = 82
 
+[[main]]
+name = "CloneBox"
+parent = "more"
+url = "https://www.clonebox.io"
+weight = 83
+
 
 [[social]]
 name = "Nuget"

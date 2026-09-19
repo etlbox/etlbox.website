@@ -1,20 +1,8 @@
 [[main]]
 name = "Docs"
-url = "/docs/getting-started/welcome/"
+url = "/docs/guide/getting-started/"
 identifier = "docs"
 weight = 20
-
-[[main]]
-name = "API"
-url = "/api/etlbox.dbextensions/bulkoperations/"
-identifier = "api"
-weight = 50
-
-[[main]]
-name = "Pricing"
-url = "/pricing"
-identifier = "pricing"
-weight = 60
 
 [[main]]
 name = "Support"
@@ -40,16 +28,22 @@ url = "https://www.directsync.net"
 weight = 82
 
 [[main]]
-name = "CloneBox"
+name = "DB Extensions"
 parent = "more"
-url = "https://www.clonebox.io"
+url = "https://www.dbextensions.net"
 weight = 83
 
 [[social]]
 name = "Nuget"
 pre = "<svg width=\"20px\" height=\"20px\" viewBox=\"0 0 512 512\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><defs><polygon id=\"path-1\" points=\"0 46.021103 0 3.7002935 84.6521577 3.7002935 84.6521577 88.3419125 0 88.3419125\"></polygon></defs><g id=\"Symbols\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g id=\"nuget\"><g id=\"Global/Logo\" transform=\"translate(0.000000, 6.000000)\"><path d=\"M374.424959,454.856991 C327.675805,454.856991 289.772801,416.950177 289.772801,370.196324 C289.772801,323.463635 327.675805,285.535656 374.424959,285.535656 C421.174113,285.535656 459.077116,323.463635 459.077116,370.196324 C459.077116,416.950177 421.174113,454.856991 374.424959,454.856991 M205.565067,260.814741 C176.33891,260.814741 152.657469,237.109754 152.657469,207.901824 C152.657469,178.672728 176.33891,154.988907 205.565067,154.988907 C234.791225,154.988907 258.472666,178.672728 258.472666,207.901824 C258.472666,237.109754 234.791225,260.814741 205.565067,260.814741 M378.170817,95.6417786 L236.886365,95.6417786 C164.889705,95.6417786 106.479717,154.057639 106.479717,226.082702 L106.479717,367.360191 C106.479717,439.40642 164.889705,497.77995 236.886365,497.77995 L378.170817,497.77995 C450.209803,497.77995 508.577466,439.40642 508.577466,367.360191 L508.577466,226.082702 C508.577466,154.057639 450.209803,95.6417786 378.170817,95.6417786\" id=\"Fill-12\" fill=\"currentColor\" fill-rule=\"evenodd\"></path><mask id=\"mask-2\" fill=\"white\"><use xlink:href=\"#path-1\"></use></mask><g id=\"Clip-15\"></g><path d=\"M84.6521577,46.0115787 C84.6521577,69.3990881 65.6900744,88.3419125 42.3260788,88.3419125 C18.9409203,88.3419125 0,69.3990881 0,46.0115787 C0,22.6452344 18.9409203,3.68124485 42.3260788,3.68124485 C65.6900744,3.68124485 84.6521577,22.6452344 84.6521577,46.0115787\" id=\"Fill-14\" fill=\"currentColor\" fill-rule=\"evenodd\" mask=\"url(#mask-2)\"></path></g></g></g></svg>"
-url = "https://www.nuget.org/packages/ETLBox.DbExtensions"
+url = "https://www.nuget.org/packages/CloneBox"
 weight = 490
+
+[[social]]
+name = "GitHub"
+pre = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg>"
+url = "https://github.com/etlbox/clonebox"
+weight = 489
 
 [[social]]
 name = "LinkedIn"
@@ -59,28 +53,33 @@ weight = 491
 
 [[footer_1]]
 name = "Docs"
-url = "/docs/getting-started/welcome/"
+url = "/docs/guide/getting-started/"
 weight = 510
 
 [[footer_1]]
-name = "API"
-url = "/api/etlbox.dbextensions/bulkoperations/"
+name = "GitHub"
+url = "https://github.com/etlbox/clonebox"
+weight = 520
+
+[[footer_1]]
+name = "NuGet"
+url = "https://www.nuget.org/packages/CloneBox"
 weight = 530
 
 [[footer_2]]
-name = "Pricing"
-url = "/pricing"
+name = "ETLBox"
+url = "https://www.etlbox.net"
 weight = 540
 
 [[footer_2]]
-name = "Try yourself"
-url = "/docs/details/get-trial/"
-weight = 560
+name = "DB Extensions"
+url = "https://www.dbextensions.net"
+weight = 550
 
 [[footer_2]]
-name = "Register license"
-url = "/docs/details/register-license/"
-weight = 570
+name = "DirectSync"
+url = "https://www.directsync.net"
+weight = 560
 
 [[footer_3]]
 name = "Contact"

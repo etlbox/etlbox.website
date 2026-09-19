@@ -1,0 +1,346 @@
+{{ define "main" }}
+<section class="section section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-16 text-center">
+        <h1>
+          <img src="/logos/svg/logo_etlbox_76x76.svg" alt="CloneBox" width="76" height="76"
+            class="light-mode-image" />
+          <img src="/logos/svg/logo_etlbox_76x76_dark.svg" alt="CloneBox" width="76" height="76"
+            class="dark-mode-image" />
+          {{ .Title }}
+        </h1>
+      </div>
+      <div class="col-lg-12 text-center">
+        <p class="lead">{{ .Params.lead | safeHTML }}</p>
+        <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/guide/getting-started/"
+          role="button" aria-label="Get started with CloneBox">Get Started</a>
+        <p class="mb-3">
+          <a href="https://www.nuget.org/packages/CloneBox" class="me-1">
+            <img src="https://img.shields.io/nuget/v/CloneBox.svg" alt="NuGet version" />
+          </a>
+          {{/*  <a href="https://www.nuget.org/packages/CloneBox" class="me-1">
+            <img src="https://img.shields.io/nuget/dt/CloneBox.svg" alt="NuGet downloads" />
+          </a>  */}}
+          <a href="https://github.com/etlbox/clonebox/blob/main/LICENSE" class="me-1">
+            <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
+          </a>
+          <a href="https://github.com/etlbox/clonebox">
+            <img src="https://img.shields.io/badge/.NET-netstandard2.0%20%7C%20net47%20%7C%20net48%20%7C%20net10.0-512bd4" alt=".NET targets" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ if site.Params.doks.backgroundDots -}}
+<div class="d-flex justify-content-start">
+  <div class="bg-dots"></div>
+</div>
+{{ end -}}
+{{ end }}
+
+
+{{ define "sidebar-prefooter" }}
+
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-start">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm bg-light">
+  <div class="container my-4">
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-5 col-md-7 mb-4">
+        <h1 class="m-1"><i class="bi-files large"></i></h1>
+        <h5 class="m-1">Real deep clones</h5>
+        <p class="m-1"><code>CloneX()</code> copies nested objects, collections, arrays, and dictionaries — including cycles — without shared identity.</p>
+      </div>
+      <div class="col-lg-5 col-md-7 mb-4">
+        <h1 class="m-1"><i class="bi-arrow-left-right large"></i></h1>
+        <h5 class="m-1">Clone into existing objects</h5>
+        <p class="m-1"><code>CloneXTo()</code> fills a different type or an instance you already have. Extra target fields stay put.</p>
+      </div>
+    </div>
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-5 col-md-7 mb-4">
+        <h1 class="m-1"><i class="bi-braces-asterisk large"></i></h1>
+        <h5 class="m-1">Dynamics included</h5>
+        <p class="m-1"><code>ExpandoObject</code> and mixed graphs work the same way as typed POCOs — including clone-into a DTO.</p>
+      </div>
+      <div class="col-lg-5 col-md-7 mb-4">
+        <h1 class="m-1"><i class="bi-lightning-charge large"></i></h1>
+        <h5 class="m-1">Very fast</h5>
+        <p class="m-1">Built for hot paths. Competitive with specialized cloners on simple graphs — and still correct when the graph gets hard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-center">Benchmarks at a glance</h2>
+        <p class="text-center text-body-secondary mb-4">
+          Release / net10.0. A time is only listed when the result was correct — <code>—</code> means wrong output or a crash.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle table-sm">
+            <thead>
+              <tr>
+                <th>Library</th>
+                <th class="text-end">simple</th>
+                <th class="text-end">cyclic</th>
+                <th class="text-end">dynamic</th>
+                <th class="text-end">into</th>
+                <th class="text-end">pass</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">CloneBox</th>
+                <td class="text-end">0.35 µs</td>
+                <td class="text-end">0.33 ms</td>
+                <td class="text-end">1.92 µs</td>
+                <td class="text-end">0.91 µs</td>
+                <td class="text-end"><strong>4/4</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">DeepCloner</th>
+                <td class="text-end">0.20 µs</td>
+                <td class="text-end">0.37 ms</td>
+                <td class="text-end">1.18 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">3/4</td>
+              </tr>
+              <tr>
+                <th scope="row">FastDeepCloner</th>
+                <td class="text-end">2.76 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">1/4</td>
+              </tr>
+              <tr>
+                <th scope="row">CloneExtensions</th>
+                <td class="text-end">0.17 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">1/4</td>
+              </tr>
+              <tr>
+                <th scope="row">AnyClone</th>
+                <td class="text-end">3.40 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">1/4</td>
+              </tr>
+              <tr>
+                <th scope="row">Mapster / AutoMapper</th>
+                <td class="text-end">~0.2 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">1/4</td>
+              </tr>
+              <tr>
+                <th scope="row">Newtonsoft.Json</th>
+                <td class="text-end">2.31 µs</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">—</td>
+                <td class="text-end">1/4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center mb-0">
+          <a href="/docs/guide/benchmarks/">Full benchmark notes</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-center">How CloneBox compares</h2>
+        <p class="text-center text-body-secondary mb-4">
+          Same libraries as above. Correctness first — speed only counts when the copy is right.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle table-sm">
+            <thead>
+              <tr>
+                <th>Library</th>
+                <th>cyclic</th>
+                <th>dynamic</th>
+                <th>into</th>
+                <th>Tests &amp; maintenance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">CloneBox</th>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td><strong>280+ tests</strong>, actively maintained by <a href="https://www.etlbox.net">ETLBoxperts</a></td>
+              </tr>
+              <tr>
+                <th scope="row">DeepCloner</th>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Limited</td>
+                <td>Mature, slower cadence</td>
+              </tr>
+              <tr>
+                <th scope="row">FastDeepCloner</th>
+                <td>Crash</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Thin coverage, often unmaintained</td>
+              </tr>
+              <tr>
+                <th scope="row">CloneExtensions</th>
+                <td>—</td>
+                <td>Wrong key types</td>
+                <td>—</td>
+                <td>Thin coverage, often unmaintained</td>
+              </tr>
+              <tr>
+                <th scope="row">AnyClone</th>
+                <td>—</td>
+                <td>Shared nested refs</td>
+                <td>—</td>
+                <td>Thin coverage, often unmaintained</td>
+              </tr>
+              <tr>
+                <th scope="row">Mapster / AutoMapper</th>
+                <td>Shared refs</td>
+                <td>Fail / wrong</td>
+                <td>New instance</td>
+                <td>Mappers — not cloners</td>
+              </tr>
+              <tr>
+                <th scope="row">Newtonsoft.Json</th>
+                <td>Shape / key loss</td>
+                <td>Wrong</td>
+                <td>New instance</td>
+                <td>Serializer round-trip</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-center">Need more control?</h2>
+        <p class="text-center text-body-secondary mb-4">
+          Defaults cover most cases. When they don’t, <code>CloneSettings</code> lets you skip members, limit visibility, opt into <code>ICloneable</code>, or plug in logging.
+        </p>
+        <div class="mx-auto" style="max-width: 40rem;">
+          {{ .RenderString (dict "display" "block") "```csharp\nvar clone = source.CloneX(new CloneSettings {\n    DoNotCloneProperty = p => p.Name == \"Password\",\n    IncludeNonPublicFields = false,\n    Logger = logger\n});\n```" }}
+        </div>
+        <p class="text-center mb-0 mt-3">
+          <a href="/docs/guide/settings/">Settings</a>
+          ·
+          <a href="/docs/guide/skip-members/">Skip members</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-md bg-light">
+  <div class="container">
+    <div>
+      <h2 class="text-center">Add CloneBox to your project</h2>
+      <div class="row justify-content-center align-items-start">
+        <div class="col-lg-10">
+          <p class="lead text-center">
+            MIT licensed, no trial key — from the makers of <a href="https://www.etlbox.net">ETLBox</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center text-start">
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-body border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-download me-2"></i> 1.<br /> Install the package</h5>
+            <p>
+              <code>dotnet add package CloneBox</code> — netstandard2.0, net47, net48, and net10.0.
+            </p>
+            <a href="https://www.nuget.org/packages/CloneBox" class="btn btn-link p-0 mt-auto">Open on NuGet <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-body border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-files me-2"></i> 2.<br /> Clone your first object</h5>
+            <p>
+              Use <code>CloneX()</code> for a deep copy, or <code>CloneXTo()</code> to fill an existing instance.
+            </p>
+            <a href="/docs/guide/getting-started/" class="btn btn-link p-0 mt-auto">Getting started <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-8 mb-4 col-12">
+        <div class="card h-100 bg-body border-0">
+          <div class="card-body d-flex flex-column h-100">
+            <h5><i class="bi-book me-2"></i> 3.<br /> Dig into the guide</h5>
+            <p>
+              Clone-into details, settings, skip rules, and benchmarks — when you need to go deeper.
+            </p>
+            <a href="/docs/guide/deep-clone/" class="btn btn-link p-0 mt-auto">Browse the guide <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="/docs/guide/getting-started/" class="btn btn-primary btn-lg rounded-pill shadow-sm" role="button">
+        Get started with CloneBox
+      </a>
+      <p class="mt-3 mb-0 text-body-secondary">
+        <a href="https://github.com/etlbox/clonebox">GitHub</a>
+        ·
+        <a href="https://www.nuget.org/packages/CloneBox">NuGet</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+
+{{ define "sidebar-footer" }}
+{{ if site.Params.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">(C) 2026 ETLBoxperts GmbH</div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}
