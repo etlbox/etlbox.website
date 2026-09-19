@@ -18,9 +18,12 @@
   {{ end -}}
 
     <!-- Site title -->
+    {{ $navbarLogo := site.Params.navbarLogo | default "/logos/svg/logo_etlbox_32x32.svg" -}}
+    {{ $navbarLogoDark := site.Params.navbarLogoDark | default "/logos/svg/logo_etlbox_32x32_dark.svg" -}}
+    {{ $navbarLogoAlt := site.Params.navbarLogoAlt | default .Site.Title -}}
     <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">
-      <img src="/logos/svg/logo_etlbox_32x32.svg" class="light-mode-image" alt="ETLBox" width="32" height="32">
-      <img src="/logos/svg/logo_etlbox_32x32_dark.svg" class="dark-mode-image" alt="ETLBox" width="32" height="32">
+      <img src="{{ $navbarLogo }}" class="light-mode-image" alt="{{ $navbarLogoAlt }}" width="32" height="32">
+      <img src="{{ $navbarLogoDark }}" class="dark-mode-image" alt="{{ $navbarLogoAlt }}" width="32" height="32">
       {{ .Site.Title }}
     </a>
     {{ if site.Params.doks.navBarButtonUrl2 -}}

@@ -1,0 +1,7 @@
+# Overrides for directsync environment
+baseurl = "/"
+title = "DirectSync"
+
+# Do not inherit Product / Docs / Recipes / API from _default menus.
+[menus]
+_merge = "none"

@@ -1,0 +1,143 @@
+# Hugo
+title = "DirectSync"
+description = "Windows desktop app and etlrun directsync CLI for data migration and sync. Simple to configure, powerful. Deploy anywhere: Windows, Linux, containers, Azure."
+images = ["cover.png"]
+
+# mainSections
+mainSections = []
+
+# Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
+math = false # false (default) or true
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
+
+# Brand logos (DirectSync cube)
+navbarLogo = "/logos/svg/logo_etlbox_directsync_filled.svg"
+navbarLogoDark = "/logos/svg/logo_etlbox_directsync_filled_dark.svg"
+navbarLogoAlt = "DirectSync"
+footerLogo = "/logos/svg/logo_etlbox_directsync_filled.svg"
+footerLogoDark = "/logos/svg/logo_etlbox_directsync_filled_dark.svg"
+footerBrandName = "DirectSync"
+
+# Doks (@thulite/doks-core)
+[doks]
+  # Color mode
+  colorMode = "auto" # auto (default), light or dark
+  colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
+
+  # Navbar
+  navbarSticky = true # true (default) or false
+  containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+
+  ## Button
+  navBarButton = true # false (default) or true
+  navBarButtonUrl = "/#download"
+  navBarButtonText = "Download"
+
+  ## Button 2 — empty so Buy from _default is not inherited
+  navBarButtonUrl2 = ""
+  navBarButtonText2 = ""
+
+  # FlexSearch
+  flexSearch = false # true (default) or false
+  searchExclKinds = []
+  searchExclTypes = []
+  showSearch = []
+  indexSummary = false
+
+  ## Search results
+  showDate = false
+  showSummary = true
+  searchLimit = 99
+
+  # Global alert
+  alert = false
+  alertDismissable = true
+
+  # Bootstrap
+  bootstrapJavascript = true
+
+  # Nav
+  sectionSwitcher = false
+  sectionNav = []
+  toTopButton = true
+  breadcrumbTrail = false
+  headlineHash = false
+  scrollSpy = true
+
+  # Multilingual
+  multilingualMode = false
+  showMissingLanguages = true
+
+  # Versioning
+  docsVersioning = false
+  docsVersion = "1.0"
+
+  # UX
+  headerBar = true
+  backgroundDots = true
+  aiButtons = false
+
+  # Homepage
+  sectionFooter = false
+
+  # Blog
+  relatedPosts = false
+  imageList = true
+  imageSingle = true
+
+  # Repository
+  editPage = false
+  lastMod = false
+  repoHost = "GitHub"
+  docsRepo = "https://github.com/etlbox/directsync.website"
+  docsRepoBranch = "main"
+  docsRepoSubPath = ""
+
+# Debug
+[render_hooks.image]
+  errorLevel = 'ignore'
+
+[render_hooks.link]
+  errorLevel = 'ignore'
+  highlightBroken = false
+
+# Images (@thulite/images)
+[thulite_images]
+  [thulite_images.defaults]
+    decoding = "async"
+    fetchpriority = "auto"
+    loading = "lazy"
+    widths = [480, 576, 768, 1025, 1200, 1440]
+    sizes = "auto"
+    process = ""
+    lqip = "16x webp q20"
+
+# Inline SVG (@thulite/inline-svg)
+[inline_svg]
+  iconSetDir = "tabler-icons"
+  iconSetVariant = "outline"
+
+# SEO (@thulite/seo)
+[seo]
+  [seo.title]
+    separator = " | "
+    suffix = ""
+  [seo.description]
+    summaryFallback = ""
+    lengthIgnores = ["^/categories", "^/tags", "^/contributors"]
+  [seo.favicons]
+    sizes = []
+    icon = "favicon.png"
+    svgIcon = "favicon-directsync.svg"
+    maskIcon = "mask-icon.svg"
+    maskIconColor = "white"
+  [seo.schemas]
+    type = "Organization"
+    logo = "favicon-512x512.png"
+    name = "ETLBoxperts"
+    sameAs = []
+    images = ["cover.png"]
+    article = []
+    newsArticle = []
+    blogPosting = []
+    product = []

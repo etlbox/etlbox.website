@@ -13,9 +13,12 @@
 */}}
 
 {{ if .IsHome -}}
-  {{/* Carousels + NuGet badges exist only on the main ETLBox home, not CloneBox / DbExtensions. */}}
-  {{ if not (in (slice "next" "clone" "experts") hugo.Environment) -}}
+  {{/* Carousels + NuGet badges exist only on the main ETLBox home, not CloneBox / DbExtensions / Experts. */}}
+  {{ if not (in (slice "next" "clone" "experts" "directsync") hugo.Environment) -}}
     {{ partial "footer/esbuild" (dict "src" "js/download-badge.js" "load" "defer" "transpile" false) -}}
+    {{ partial "footer/esbuild" (dict "src" "js/glide-carousels.js" "load" "defer" "transpile" false) -}}
+  {{ end -}}
+  {{ if eq hugo.Environment "directsync" -}}
     {{ partial "footer/esbuild" (dict "src" "js/glide-carousels.js" "load" "defer" "transpile" false) -}}
   {{ end -}}
 {{ end -}}

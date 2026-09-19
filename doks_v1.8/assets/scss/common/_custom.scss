@@ -8,6 +8,16 @@
 @import "glide/glide.core";
 @import "glide/glide.theme";
 
+.glide.glide-carousel-screenshots .glide__bullets {
+  position: static;
+  transform: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.15rem;
+  left: auto;
+  bottom: auto;
+}
+
 @import "tom-select/tom-select.bootstrap5";
 //@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 

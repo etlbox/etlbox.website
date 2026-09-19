@@ -2,10 +2,13 @@
   <div class="container-{{ site.Params.doks.containerBreakpoint | default "lg" }}">
     <div class="row justify-content-md-center">
       <div class="col-lg-3 mb-3">
-        <a class="d-inline-flex align-items-center mb-2 mt-4 text-body-secondary text-decoration-none" href="/" aria-label="ETLBox">
-          <img src="/logos/svg/logo_etlbox_76x76.svg" class="light-mode-image" alt="ETLBox" width="76" height="76" />
-          <img src="/logos/svg/logo_etlbox_76x76_dark.svg" class="dark-mode-image" alt="ETLBox" width="76" height="76" />
-          <span class="fs-3 ps-2">ETLBox</span>
+        {{ $footerLogo := site.Params.footerLogo | default "/logos/svg/logo_etlbox_76x76.svg" -}}
+        {{ $footerLogoDark := site.Params.footerLogoDark | default "/logos/svg/logo_etlbox_76x76_dark.svg" -}}
+        {{ $footerBrand := site.Params.footerBrandName | default "ETLBox" -}}
+        <a class="d-inline-flex align-items-center mb-2 mt-4 text-body-secondary text-decoration-none" href="/" aria-label="{{ $footerBrand }}">
+          <img src="{{ $footerLogo }}" class="light-mode-image" alt="{{ $footerBrand }}" width="76" height="76" />
+          <img src="{{ $footerLogoDark }}" class="dark-mode-image" alt="{{ $footerBrand }}" width="76" height="76" />
+          <span class="fs-3 ps-2">{{ $footerBrand }}</span>
         </a>
         <ul class="list-unstyled small">
           <li class="mt-4">Crafted with

@@ -1,0 +1,307 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center align-items-center gy-4">
+    <div class="col-lg-6 text-center text-lg-start">
+      <p class="experts-kicker mb-3">The desktop UI for ETLBox</p>
+      <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 mb-3">
+        <img src="/logos/svg/logo_etlbox_directsync_filled.svg" alt="" width="56" height="56"
+          class="light-mode-image ds-hero-logo" />
+        <img src="/logos/svg/logo_etlbox_directsync_filled_dark.svg" alt="" width="56" height="56"
+          class="dark-mode-image ds-hero-logo" />
+        <h1 class="mb-0">{{ .Title }}</h1>
+      </div>
+      <p class="lead mb-4">{{ .Params.lead | safeHTML }}</p>
+      <div class="ds-hero-actions justify-content-center justify-content-lg-start">
+        <a class="btn btn-primary btn-cta rounded-pill btn-lg" href="#download"
+          role="button" aria-label="Download DirectSync">Download</a>
+        <a class="btn btn-outline-primary rounded-pill btn-lg" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+    <div class="col-lg-10 text-center">
+      <img src="/images/directsync/impressions.png" alt="DirectSync desktop app" class="img-fluid ds-hero-shot" width="1100" height="733" />
+    </div>
+  </div>
+  <div class="row justify-content-center text-center mt-5 pt-3 g-4 ds-stats">
+    <div class="col-md-5">
+      <div class="h3 mb-1">Simple</div>
+      <p class="text-body-secondary mb-0 small text-uppercase">Easy configuration — no code required</p>
+    </div>
+    <div class="col-md-5">
+      <div class="h3 mb-1">Streaming</div>
+      <p class="text-body-secondary mb-0 small text-uppercase">Large datasets; ETLBox processes in stream</p>
+    </div>
+    <div class="col-md-5">
+      <div class="h3 mb-1">Deploy anywhere</div>
+      <p class="text-body-secondary mb-0 small text-uppercase">CLI runs on Windows, Linux, containers — it's .NET</p>
+    </div>
+  </div>
+</section>
+{{ if site.Params.doks.backgroundDots -}}
+<div class="d-flex justify-content-start">
+  <div class="bg-dots"></div>
+</div>
+{{ end -}}
+{{ end }}
+
+
+{{ define "sidebar-prefooter" }}
+
+<section id="video" class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>See it in action</h2>
+        <p class="mb-0">Watch a short walkthrough of DirectSync configuring a sync and running it end-to-end.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-14">
+        <div class="ratio ratio-16x9 ds-video rounded-4 overflow-hidden shadow-sm">
+          <iframe src="https://www.youtube.com/embed/zKrkaGrcvkE" title="DirectSync product walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="text-center text-body-secondary mt-3 mb-0">
+          Or watch it on
+          <a href="https://youtu.be/zKrkaGrcvkE" target="_blank" rel="noopener noreferrer">YouTube</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="section section-sm bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>How it works</h2>
+        <p class="mb-0">Pick source, set target, define mapping — run in the app or deploy with the CLI.</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-8 col-lg-4">
+        <div class="experts-step">
+          <div class="experts-step-num">1</div>
+          <h3 class="h5">Configure source</h3>
+          <p class="mb-0">Choose source type: database (SQL Server, PostgreSQL, MySQL, Oracle, etc.) or file (CSV, Excel, JSON, XML, Parquet). Connection and format options are validated.</p>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-4">
+        <div class="experts-step">
+          <div class="experts-step-num">2</div>
+          <h3 class="h5">Configure target</h3>
+          <p class="mb-0">Set the target — database or file. Configure table, insert/merge behavior, or output path and format.</p>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-4">
+        <div class="experts-step">
+          <div class="experts-step-num">3</div>
+          <h3 class="h5">Mapping &amp; transformation</h3>
+          <p class="mb-0">Map source columns to target columns, rename and adjust types. Use options like distinct, merge strategies, and transformations.</p>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-4">
+        <div class="experts-step">
+          <div class="experts-step-num">4</div>
+          <h3 class="h5">Run or export</h3>
+          <p class="mb-0">Execute in the app or export configuration as JSON. Run the same pipeline with <code>etlrun directsync --config &lt;path&gt;</code> on Windows, Linux, in containers, or in the cloud.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="carousel" class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>Impressions</h2>
+        <p class="mb-0">See how DirectSync looks in action.</p>
+      </div>
+    </div>
+    <div class="glide glide-carousel-screenshots">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          {{ range $i := seq 8 }}
+          <li class="glide__slide">
+            <img src="/images/directsync/screenshots/screen{{ $i }}.png"
+              alt="DirectSync screenshot {{ $i }}" class="img-fluid ds-screenshot rounded-3" loading="lazy" />
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Previous screenshot"><span
+            class="carousel-control-prev carousel-control-prev-icon" aria-hidden="true"></span></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next screenshot"><span
+            class="carousel-control-next carousel-control-next-icon" aria-hidden="true"></span></button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        {{ range $i := seq 8 }}
+        <button class="glide__bullet" data-glide-dir="={{ sub $i 1 }}" aria-label="Go to screenshot {{ $i }}"></button>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section section-sm bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>Features</h2>
+        <p class="mb-0">Simple to configure, powerful to run — database and file sync, streaming engine, and a CLI that runs anywhere.</p>
+      </div>
+    </div>
+    <div class="row align-items-start justify-content-center gy-5">
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-database large"></i></h1>
+        <h5 class="m-1">Database &amp; file sync</h5>
+        <p class="m-1">Sync between databases, database to file, or file to database. Staging to warehouse, CSV/Excel/JSON into tables, or export from DB to files.</p>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-lightning-charge large"></i></h1>
+        <h5 class="m-1">Streaming engine</h5>
+        <p class="m-1">ETLBox processes in stream: large datasets without full memory load, with pipeline-based throughput.</p>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-shuffle large"></i></h1>
+        <h5 class="m-1">Mapping &amp; transformation</h5>
+        <p class="m-1">Map columns, rename, adjust types. Distinct, merge options, and extensible transformation rules.</p>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-shield-check large"></i></h1>
+        <h5 class="m-1">Error handling</h5>
+        <p class="m-1">Configurable error destination: redirect faulty rows to file or table; rest of the run continues.</p>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-terminal large"></i></h1>
+        <h5 class="m-1">CLI &amp; automation</h5>
+        <p class="m-1">Export as JSON and run with <code>etlrun directsync --config &lt;path&gt;</code> on Windows, Linux, in containers, or in the cloud.</p>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="m-1"><i class="bi-table large"></i></h1>
+        <h5 class="m-1">Data preview</h5>
+        <p class="m-1">View first rows of the source in the app, sort and filter — verify connection and parsing before running.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comparison" class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>Manual vs. DirectSync</h2>
+        <p class="mb-0">One configuration in the app — deploy the same pipeline anywhere with the CLI.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-16">
+        <div class="experts-compare">
+          <div class="experts-compare-col experts-compare-rent">
+            <p class="experts-kicker">Manual / scripts</p>
+            <h3>Without DirectSync</h3>
+            <ul>
+              <li><i class="bi-x-circle text-danger"></i> <span><strong>Script maintenance:</strong> Custom ETL scripts per source/target, hard to reuse.</span></li>
+              <li><i class="bi-x-circle text-danger"></i> <span><strong>No single model:</strong> UI and batch often separate, double configuration effort.</span></li>
+              <li><i class="bi-x-circle text-danger"></i> <span><strong>Memory load:</strong> Large datasets can push custom solutions to their limits.</span></li>
+              <li><i class="bi-x-circle text-danger"></i> <span><strong>Error handling:</strong> Often all-or-nothing — one bad row stops the run.</span></li>
+            </ul>
+          </div>
+          <div class="experts-compare-vs" aria-hidden="true">vs</div>
+          <div class="experts-compare-col experts-compare-own">
+            <p class="experts-kicker">ETLBox DirectSync</p>
+            <h3>With DirectSync</h3>
+            <ul>
+              <li><i class="bi-check-circle"></i> <span><strong>One configuration:</strong> Configure in the desktop app — same config for the CLI and automation.</span></li>
+              <li><i class="bi-check-circle"></i> <span><strong>Streaming engine:</strong> ETLBox processes in stream — no memory issues even with large data.</span></li>
+              <li><i class="bi-check-circle"></i> <span><strong>Error destination:</strong> Redirect bad rows; rest of the pipeline keeps running.</span></li>
+              <li><i class="bi-check-circle"></i> <span><strong>Deploy anywhere:</strong> Run <code>etlrun directsync</code> on Windows, Linux, containers, Azure.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section section-sm bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2>FAQ</h2>
+        <p class="mb-0">Answers about DirectSync, data sources, and automation.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="ds-faq">
+          <article class="ds-faq-item">
+            <h3>What data sources and targets are supported?</h3>
+            <p>DirectSync uses the ETLBox engine: databases (SQL Server, PostgreSQL, MySQL/MariaDB, Oracle, DB2, Snowflake, SQLite, SAP ASE, and more) plus files (CSV, Excel, JSON, XML, Parquet). Source and target can be combined freely.</p>
+          </article>
+          <article class="ds-faq-item">
+            <h3>What are the technical requirements?</h3>
+            <p>The desktop app runs on Windows. The CLI (<code>etlrun directsync</code>) is .NET-based and runs on Windows, Linux, in containers, and in the cloud — use it for CI/CD, scheduled tasks, or Azure.</p>
+          </article>
+          <article class="ds-faq-item">
+            <h3>How are large datasets handled?</h3>
+            <p>ETLBox works in a streaming way: data is not fully loaded into memory but read, transformed, and written in pipelines. That allows reliable processing of very large datasets.</p>
+          </article>
+          <article class="ds-faq-item">
+            <h3>Can I reuse configurations?</h3>
+            <p>Yes. Configure once in the desktop app and export as JSON. Run the same pipeline with <code>etlrun directsync --config</code> anywhere — ideal for repeated or automated runs.</p>
+          </article>
+          <article class="ds-faq-item">
+            <h3>What happens when errors occur during execution?</h3>
+            <p>You can enable an error-destination option: problematic rows are redirected to a file or target of your choice without failing the whole run.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section ds-poc-section">
+  <div class="container">
+    <div class="experts-poc text-center">
+      <span class="badge mb-3">Powered by ETLBox</span>
+      <h2>The surface for the library you already trust</h2>
+      <p class="lead mb-4">DirectSync is the Windows desktop and CLI front end for <a href="https://www.etlbox.net" class="link-light text-decoration-underline">ETLBox</a>. Configure visually, then run the same pipeline anywhere .NET runs.</p>
+      <a href="https://www.etlbox.net" class="btn btn-light rounded-pill btn-lg" target="_blank" rel="noopener noreferrer">Visit ETLBox</a>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="section section-md bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <p class="experts-kicker"><i class="bi-download me-1" aria-hidden="true"></i> Get started for free</p>
+        <h2>Download DirectSync</h2>
+        <p class="lead mb-4">
+          Get the free version for Windows. Use the desktop app for migrations, testing, and development — then deploy with the CLI anywhere.
+        </p>
+        <a href="https://github.com/etlbox/directsync.website/releases/download/v1.0.0/ETLBox.DirectSync_1.0.0.0_x64.msix"
+          class="btn btn-primary btn-lg rounded-pill shadow-sm" role="button">
+          <i class="bi-windows me-2"></i> Windows (MSIX)
+        </a>
+        <p class="mt-3 mb-0 text-body-secondary">Version 1.X</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+
+{{ define "sidebar-footer" }}
+{{ if site.Params.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">(C) 2026 ETLBoxperts GmbH</div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}

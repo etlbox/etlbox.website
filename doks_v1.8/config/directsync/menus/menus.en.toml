@@ -1,0 +1,103 @@
+[[main]]
+name = "Video"
+url = "/#video"
+identifier = "video"
+weight = 20
+
+[[main]]
+name = "Impressions"
+url = "/#carousel"
+identifier = "impressions"
+weight = 30
+
+[[main]]
+name = "Pricing"
+url = "/pricing/"
+identifier = "pricing"
+weight = 60
+
+[[main]]
+name = "Support"
+url = "/support/options/"
+identifier = "support"
+weight = 70
+
+[[main]]
+name = "More"
+identifier = "more"
+weight = 80
+
+[[main]]
+name = "ETLBox"
+parent = "more"
+url = "https://www.etlbox.net"
+weight = 81
+
+[[main]]
+name = "DB Extensions"
+parent = "more"
+url = "https://www.dbextensions.net"
+weight = 82
+
+[[main]]
+name = "CloneBox"
+parent = "more"
+url = "https://www.clonebox.io"
+weight = 83
+
+[[main]]
+name = "ETLBoxperts"
+parent = "more"
+url = "https://www.etlboxperts.net"
+weight = 84
+
+[[social]]
+name = "LinkedIn"
+pre = "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z\"/></svg>"
+url = "https://www.linkedin.com/company/etlboxperts"
+weight = 491
+
+[[footer_1]]
+name = "How it works"
+url = "/#how-it-works"
+weight = 510
+
+[[footer_1]]
+name = "Features"
+url = "/#features"
+weight = 520
+
+[[footer_1]]
+name = "Download"
+url = "/#download"
+weight = 530
+
+[[footer_2]]
+name = "Pricing"
+url = "/pricing/"
+weight = 540
+
+[[footer_2]]
+name = "ETLBox"
+url = "https://www.etlbox.net"
+weight = 550
+
+[[footer_2]]
+name = "DB Extensions"
+url = "https://www.dbextensions.net"
+weight = 560
+
+[[footer_3]]
+name = "Contact"
+url = "/support/options"
+weight = 590
+
+[[footer_3]]
+name = "Legal notice"
+url = "/support/legal-notice/"
+weight = 600
+
+[[footer_3]]
+name = "Privacy Policy"
+url = "/support/legal-notice/#privacy-policy"
+weight = 610

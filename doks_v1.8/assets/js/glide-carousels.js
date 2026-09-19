@@ -40,6 +40,15 @@ mountGlide('.glide-carousel-reference', {
   }
 })
 
+mountGlide('.glide-carousel-screenshots', {
+  type: 'carousel',
+  startAt: 0,
+  autoplay: 5000,
+  hoverpause: true,
+  rewind: true,
+  perView: 1
+})
+
 mountGlide('.glide-carousel-connector', {
   type: 'carousel',
   startAt: 0,

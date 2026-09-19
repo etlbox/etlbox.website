@@ -1,0 +1,130 @@
+<form class="my-4" name="request-quote" method="POST" data-netlify="true" action="/support/contact/success" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="request-quote">
+    <input type="hidden" name="plan" id="quotePlan" value="">
+    <p class="visually-hidden">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+    </p>
+
+    <h2 class="h4 mt-4 mb-3">Contact information</h2>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="email">Email <span class="text-danger">*</span></label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="name">Name <span class="text-danger">*</span></label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="company">Company <span class="text-danger">*</span></label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="company" name="company" placeholder="Your company name" required>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="vat">VAT number</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="vat" name="vat" placeholder="(EU companies only)">
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="phone">Phone number</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="phone" name="phone" placeholder="Include country prefix, e.g. +49 ...">
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="country">Country</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="text" id="country" name="country" placeholder="Your country">
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="address">Address</label>
+        <div class="col-lg-8 col-md-12">
+            <textarea class="form-control" id="address" name="address" rows="3" placeholder="Street, ZIP code, city"></textarea>
+        </div>
+    </div>
+
+    <h2 class="h4 mt-5 mb-3">License configuration</h2>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="licensetype">License type</label>
+        <div class="col-lg-8 col-md-12">
+            <select class="form-select" id="licensetype" name="licensetype">
+                <option value="company">Company license</option>
+                <option value="enterprise-oem">Enterprise OEM license</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <div class="col-md-4"></div>
+        <div class="col-lg-8 col-md-12">
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="isSaaS" name="isSaaS">
+                <label class="form-check-label" for="isSaaS">I offer a SaaS-based solution</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="smallCompany" name="smallCompany">
+                <label class="form-check-label" for="smallCompany">I qualify for a small-company discount (&lt; 1 M € annual revenue)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="developers">Number of developers</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="number" id="developers" name="developers" min="1" placeholder="e.g. 3">
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="customers">Estimated number of customers</label>
+        <div class="col-lg-8 col-md-12">
+            <input class="form-control" type="number" id="customers" name="customers" min="0" placeholder="e.g. 10, 50, 100 ...">
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+        <label class="col-md-4 col-form-label fw-bold" for="message">Remarks / use case</label>
+        <div class="col-lg-8 col-md-12">
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your use case, timelines, or additional questions..."></textarea>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-cta rounded-pill px-4 py-2">
+                Request a quote <i class="bi-envelope"></i>
+            </button>
+            <p class="small text-body-secondary mt-3 mb-0">
+                By submitting you agree to our <a href="/support/legal-notice/">Terms</a> and
+                <a href="/support/legal-notice/#privacy-policy">Privacy</a>.
+            </p>
+        </div>
+    </div>
+</form>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var plan = params.get('plan') || '';
+    var hidden = document.getElementById('quotePlan');
+    var select = document.getElementById('licensetype');
+    if (hidden) hidden.value = plan;
+    if (select && (plan === 'company' || plan === 'enterprise-oem')) {
+      select.value = plan;
+    }
+  })();
+</script>
