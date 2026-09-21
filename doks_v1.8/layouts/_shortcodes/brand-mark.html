@@ -1,0 +1,10 @@
+{{- $letters := .Get 0 -}}
+{{- $name := .Get 1 -}}
+{{- $color := .Get "color" | default (.Get 2) -}}
+{{- if not (findRE `^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$` $color) -}}
+  {{- $color = "" -}}
+{{- end -}}
+<div class="brand-mark">
+  <span class="brand-mark-badge" aria-hidden="true"{{ with $color }} style="--brand-mark-bg: {{ . | safeCSS }}"{{ end }}>{{ $letters | htmlEscape }}</span>
+  <span>{{ $name | htmlEscape }}</span>
+</div>

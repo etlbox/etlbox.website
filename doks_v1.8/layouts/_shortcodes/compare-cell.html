@@ -1,0 +1,12 @@
+{{- $yes := eq (.Get 0) "yes" -}}
+{{- $note := .Get 1 -}}
+<div class="compare-cell">
+  {{- if $yes -}}
+  <i class="bi-check-circle-fill compare-yes" aria-label="Yes"></i>
+  {{- else -}}
+  <i class="bi-x-circle-fill compare-no" aria-label="No"></i>
+  {{- end -}}
+  {{- with $note -}}
+  <span class="compare-note">{{ . }}</span>
+  {{- end -}}
+</div>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <main class="col-12 col-xl-14">
+    <section class="experts-hero mb-4">
+      <p class="experts-kicker">A comparison of .NET ETL libraries</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead }}
+      <p class="lead mb-0">{{ . | safeHTML }}</p>
+      {{ end }}
+    </section>
+
+    {{ .Content }}
+  </main>
+</div>
+{{ end }}

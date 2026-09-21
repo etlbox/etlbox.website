@@ -1,0 +1,23 @@
+{{ $customers := site.Data.home.references.customer }}
+<div class="experts-ref-grid">
+  {{ range $customers }}
+    {{ $external := hasPrefix .link "http" }}
+    <div class="card h-100 bg-light border-0">
+      <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+        {{ if $external }}
+        <a href="{{ .link }}" target="_blank" rel="noopener nofollow" class="text-decoration-none">
+          <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo mb-3" loading="lazy">
+          <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo mb-3" loading="lazy">
+        </a>
+        {{ else }}
+        <img src="{{ .image_light }}" alt="{{ .name }}" class="light-mode-image fixed-size-logo mb-3" loading="lazy">
+        <img src="{{ .image_dark }}" alt="{{ .name }}" class="dark-mode-image fixed-size-logo mb-3" loading="lazy">
+        {{ end }}
+        <p class="card-text mb-0">
+          <strong>{{ .name }}</strong><br>
+          <span class="text-body-secondary">{{ .country }}</span>
+        </p>
+      </div>
+    </div>
+  {{ end }}
+</div>

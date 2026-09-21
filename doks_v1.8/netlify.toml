@@ -161,3 +161,21 @@
   to = "https://www.etlbox.net/product/details/release-notes/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/compare/etlkit"
+  to = "/etlkit/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare/etl-net"
+  to = "/etlkit/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare/actionetl"
+  to = "/etlkit/"
+  status = 301
+  force = true

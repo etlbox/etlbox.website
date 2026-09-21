@@ -1,4 +1,4 @@
-// Shared extras — cards, kickers, compare, PoC band. Loaded on every brand.
+// Shared extras — cards, kickers, compare, PoC band, brand marks. Loaded on every brand.
 
 i.large {
   font-size: 2.5rem;
@@ -133,8 +133,13 @@ i.large {
 
 .experts-poc h2,
 .experts-poc p,
-.experts-poc .lead {
+.experts-poc .lead,
+.experts-poc .experts-kicker {
   color: #fff;
+}
+
+.experts-poc .experts-kicker {
+  opacity: 0.85;
 }
 
 .experts-poc .badge {
@@ -201,6 +206,13 @@ i.large {
   gap: 0.55rem;
   padding: 0.45rem 0;
   font-weight: 600;
+}
+
+.experts-compare-col li i {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 .experts-compare-vs {
@@ -510,4 +522,121 @@ i.large {
     column-gap: 0.75rem;
     row-gap: 1.5rem;
   }
+}
+
+.compare-yes {
+  color: #198754;
+}
+
+.compare-no {
+  color: #dc3545;
+}
+
+.compare-matrix {
+  --bs-table-bg: transparent;
+}
+
+.compare-matrix thead th {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.compare-matrix thead th:nth-child(2),
+.compare-matrix tbody td:nth-child(2) {
+  background-color: var(--bs-primary-bg-subtle, rgba(13, 110, 253, 0.08));
+}
+
+.compare-matrix th[scope="row"] {
+  min-width: 8.5rem;
+  font-weight: 700;
+}
+
+.compare-matrix td {
+  text-align: center;
+  vertical-align: top;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.compare-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.compare-cell i {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.compare-note {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--bs-secondary-color);
+  max-width: 11rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.brand-mark img {
+  width: 36px;
+  height: 36px;
+}
+
+.brand-mark-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--brand-mark-bg, var(--bs-secondary));
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.compare-box {
+  background: #eef1f4;
+  color: #111;
+  padding: 1rem 1.15rem 1.05rem;
+}
+
+.compare-box h3,
+.compare-box li,
+.compare-box .brand-mark {
+  color: #111;
+}
+
+.compare-box h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.compare-box li {
+  padding: 0.22rem 0;
+  font-weight: 500;
+}
+
+.compare-box .brand-mark {
+  margin-bottom: 0.45rem;
+  font-size: 1.15rem;
+}
+
+.compare-box .brand-mark img,
+.compare-box .brand-mark-badge {
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 0.62rem;
 }

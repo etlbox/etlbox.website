@@ -46,7 +46,7 @@
 					<p class="lead">{{ . | safeHTML }}</p>
 					{{ end -}}
 				</div>
-				{{ if site.Params.doks.aiButtons -}}
+				{{ if and site.Params.doks.aiButtons (ne .Params.hideAiButtons true) -}}
 				<div>
 					{{ partial "main/ai-buttons.html" . }}
 				</div>
