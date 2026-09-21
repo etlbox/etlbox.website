@@ -4,7 +4,7 @@
 {{- if not (findRE `^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$` $color) -}}
   {{- $color = "" -}}
 {{- end -}}
-<div class="brand-mark">
-  <span class="brand-mark-badge" aria-hidden="true"{{ with $color }} style="--brand-mark-bg: {{ . | safeCSS }}"{{ end }}>{{ $letters | htmlEscape }}</span>
+<div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
+  <span class="brand-mark-badge d-inline-flex align-items-center justify-content-center flex-shrink-0 rounded-2 text-white fw-bold" aria-hidden="true"{{ with $color }} style="--brand-mark-bg: {{ . | safeCSS }}"{{ end }}>{{ $letters | htmlEscape }}</span>
   <span>{{ $name | htmlEscape }}</span>
 </div>

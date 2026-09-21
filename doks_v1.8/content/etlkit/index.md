@@ -17,7 +17,7 @@ sitemap_exclude: true
   <p>ETLBox used to be MIT open source, around 2018–2020. ETLKit continues that <strong>1.x</strong> line — previously published as EtlBox.Classic, then renamed. ETLKit states the 2.0 rename is a package and namespace change, <strong>not a redesign</strong>: the public API stays the 1.x surface. Matching class names is the leftover of a shared starting point, not six years of product work.</p>
   <div class="experts-compare">
     <div class="experts-compare-col compare-box">
-      <div class="brand-mark">
+      <div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
         <img src="/logos/svg/logo_etlbox_32x32.svg" alt="" width="32" height="32">
         <span>ETLBox</span>
       </div>
@@ -51,7 +51,7 @@ sitemap_exclude: true
   <p>ETL.NET never shared the ETLBox codebase. It is a Linq-style, reactive pipeline library. The maintainer has publicly asked for help with documentation and tests, and reported that unit tests were largely dropped in v2. Occasional releases do not make it a supported product.</p>
   <div class="experts-compare">
     <div class="experts-compare-col compare-box">
-      <div class="brand-mark">
+      <div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
         <img src="/logos/svg/logo_etlbox_32x32.svg" alt="" width="32" height="32">
         <span>ETLBox</span>
       </div>
@@ -85,7 +85,7 @@ sitemap_exclude: true
   <p>actionETL is another separate open-source .NET ETL experiment, built around workers rather than a data-flow network. The last NuGet package is from January 2024. There has been no meaningful product movement since then.</p>
   <div class="experts-compare">
     <div class="experts-compare-col compare-box">
-      <div class="brand-mark">
+      <div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
         <img src="/logos/svg/logo_etlbox_32x32.svg" alt="" width="32" height="32">
         <span>ETLBox</span>
       </div>
@@ -117,51 +117,51 @@ sitemap_exclude: true
   <h2 class="h3">All four at a glance</h2>
   <p>The same criteria, one table. Green means ETLBox covers it as a product. Red means the open-source project does not.</p>
   <div class="table-responsive">
-  <table class="table align-middle compare-matrix">
+  <table class="table align-top text-center compare-matrix">
     <thead>
       <tr>
-        <th scope="col"></th>
-        <th scope="col">ETLBox</th>
-        <th scope="col">ETLKit</th>
-        <th scope="col">ETL.NET</th>
-        <th scope="col">actionETL</th>
+        <th scope="col" class="text-nowrap"></th>
+        <th scope="col" class="text-nowrap bg-primary-subtle">ETLBox</th>
+        <th scope="col" class="text-nowrap">ETLKit</th>
+        <th scope="col" class="text-nowrap">ETL.NET</th>
+        <th scope="col" class="text-nowrap">actionETL</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Product engine</th>
-        <td>{{< compare-cell yes "Hardened streaming data flow" >}}</td>
-        <td>{{< compare-cell no "Same generation as old 1.x" >}}</td>
-        <td>{{< compare-cell no "Linq model; tests dropped in v2" >}}</td>
-        <td>{{< compare-cell no "Last NuGet release in 2024" >}}</td>
+        <th scope="row" class="text-start">Product engine</th>
+        <td class="bg-primary-subtle py-3">{{< compare-cell yes "Hardened streaming data flow" >}}</td>
+        <td class="py-3">{{< compare-cell no "Same generation as old 1.x" >}}</td>
+        <td class="py-3">{{< compare-cell no "Linq model; tests dropped in v2" >}}</td>
+        <td class="py-3">{{< compare-cell no "Last NuGet release in 2024" >}}</td>
       </tr>
       <tr>
-        <th scope="row">Automated tests</th>
-        <td>{{< compare-cell yes "Thousands of tests" >}}</td>
-        <td>{{< compare-cell no "Community tests" >}}</td>
-        <td>{{< compare-cell no "Author asked for help restoring them" >}}</td>
-        <td>{{< compare-cell no "No commercial test story" >}}</td>
+        <th scope="row" class="text-start">Automated tests</th>
+        <td class="bg-primary-subtle py-3">{{< compare-cell yes "Thousands of tests" >}}</td>
+        <td class="py-3">{{< compare-cell no "Community tests" >}}</td>
+        <td class="py-3">{{< compare-cell no "Author asked for help restoring them" >}}</td>
+        <td class="py-3">{{< compare-cell no "No commercial test story" >}}</td>
       </tr>
       <tr>
-        <th scope="row">Vendor support</th>
-        <td>{{< compare-cell yes "Support, trial, licenses" >}}</td>
-        <td>{{< compare-cell no "Maintainer / community" >}}</td>
-        <td>{{< compare-cell no "Maintainer asking for contributors" >}}</td>
-        <td>{{< compare-cell no "Effectively stalled" >}}</td>
+        <th scope="row" class="text-start">Vendor support</th>
+        <td class="bg-primary-subtle py-3">{{< compare-cell yes "Support, trial, licenses" >}}</td>
+        <td class="py-3">{{< compare-cell no "Maintainer / community" >}}</td>
+        <td class="py-3">{{< compare-cell no "Maintainer asking for contributors" >}}</td>
+        <td class="py-3">{{< compare-cell no "Effectively stalled" >}}</td>
       </tr>
       <tr>
-        <th scope="row">Production proof</th>
-        <td>{{< compare-cell yes "Banks, energy, healthcare, manufacturing" >}}</td>
-        <td>{{< compare-cell no "No comparable public references" >}}</td>
-        <td>{{< compare-cell no "Community scale" >}}</td>
-        <td>{{< compare-cell no "Community scale" >}}</td>
+        <th scope="row" class="text-start">Production proof</th>
+        <td class="bg-primary-subtle py-3">{{< compare-cell yes "Banks, energy, healthcare, manufacturing" >}}</td>
+        <td class="py-3">{{< compare-cell no "No comparable public references" >}}</td>
+        <td class="py-3">{{< compare-cell no "Community scale" >}}</td>
+        <td class="py-3">{{< compare-cell no "Community scale" >}}</td>
       </tr>
       <tr>
-        <th scope="row">If the author stops</th>
-        <td>{{< compare-cell yes "Customers fund ongoing development" >}}</td>
-        <td>{{< compare-cell no "The project stalls" >}}</td>
-        <td>{{< compare-cell no "The project stalls" >}}</td>
-        <td>{{< compare-cell no "Already stalled" >}}</td>
+        <th scope="row" class="text-start">If the author stops</th>
+        <td class="bg-primary-subtle py-3">{{< compare-cell yes "Customers fund ongoing development" >}}</td>
+        <td class="py-3">{{< compare-cell no "The project stalls" >}}</td>
+        <td class="py-3">{{< compare-cell no "The project stalls" >}}</td>
+        <td class="py-3">{{< compare-cell no "Already stalled" >}}</td>
       </tr>
     </tbody>
   </table>
@@ -173,7 +173,7 @@ sitemap_exclude: true
   <p>Commonwealth Bank of Australia, Deloitte, Health Catalyst, SEW Eurodrive, Calpine, FASTEC: these are not GitHub stars. They run ETLBox because a nightly load cannot depend on a maintainer’s spare time. That is what a commercial license actually buys — a library that already survived production.</p>
 </section>
 
-<div class="experts-poc mb-5">
+<div class="experts-poc text-white mb-5">
   <p class="experts-kicker mb-2">Evaluate ETLBox</p>
   <h2 class="h3 mb-3">Try the commercial library, not the 1.x lookalike</h2>
   <p class="mb-4">If the API looks familiar, that is expected — ETLKit froze the old surface. A trial key unlocks the product that was built after that. NuGet without a key is limited to 5,000 rows per data flow.</p>
