@@ -12,9 +12,14 @@
               height="76" class="dark-mode-image" />
             {{ .Title }}
           </h1>
-        </div>
-        <div class="col-lg-12 text-center">
-          <p class="lead">{{ .Params.lead | safeHTML }}</p>
+          <p class="hero-promise">Build production-ready data pipelines in .NET</p>
+          <p class="lead mb-3">{{ .Params.lead | safeHTML }}</p>
+          <ul class="hero-checks">
+            <li><i class="bi-check2" aria-hidden="true"></i> Code-first</li>
+            <li><i class="bi-check2" aria-hidden="true"></i> High performance</li>
+            <li><i class="bi-check2" aria-hidden="true"></i> Runs anywhere .NET runs</li>
+            <li><i class="bi-check2" aria-hidden="true"></i> Production proven</li>
+          </ul>
           <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/product/getting-started/welcome"
             role="button" aria-label="Get started with ETLBox">Get Started</a>
           <p>
@@ -196,54 +201,67 @@
   </div>
 </section>
 
+<div class="directsync-bridge">
+  <span class="directsync-bridge-logo">
+    <img src="/logos/svg/logo_etlbox_directsync_filled.svg" alt="" width="44" height="44"
+      class="light-mode-image" />
+    <img src="/logos/svg/logo_etlbox_directsync_filled_dark.svg" alt="" width="44" height="44"
+      class="dark-mode-image" />
+  </span>
+  <p class="directsync-bridge-copy"><b>NEW:</b>
+    <a class="directsync-bridge-link" href="https://www.directsync.net" target="_blank" rel="noopener noreferrer">DirectSync</a>
+    is a simple UI for ETLBox you can use.
+    <br>
+    Run it as a CLI, or integrate the surface into your product.
+  </p>
+  <span class="directsync-new">New</span>
+</div>
+
+<section class="section section-sm">
+  <div class="container">
+    <h2 class="text-center mb-3">Why ETLBox instead of another ETL platform?</h2>
+    <div class="experts-compare">
+      <div class="experts-compare-col compare-box">
+        <div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
+          <span class="brand-mark-badge d-inline-flex align-items-center justify-content-center flex-shrink-0 rounded-2 text-white fw-bold" aria-hidden="true" style="--brand-mark-bg: #6c757d">ETL</span>
+          <span>Traditional ETL</span>
+        </div>
+        <h3>Low-code, with a UI</h3>
+        <ul>
+          <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> SSIS and Azure Data Factory</li>
+          <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Drag &amp; drop until the rule is ugly</li>
+          <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Hard to test, harder to review</li>
+          <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> A canvas AI cannot see into</li>
+          <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Vendor limits and license lock-in</li>
+        </ul>
+      </div>
+      <div class="experts-compare-vs" aria-hidden="true">vs</div>
+      <div class="experts-compare-col compare-box">
+        <div class="brand-mark d-inline-flex align-items-center gap-2 fw-bold lh-sm">
+          <img src="/logos/svg/logo_etlbox_32x32.svg" alt="" width="32" height="32">
+          <span>ETLBox</span>
+        </div>
+        <h3>You own the code</h3>
+        <ul>
+          <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> C# / .NET</li>
+          <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Custom solutions, no canvas ceiling</li>
+          <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> TDD — tests before the flow</li>
+          <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> AI can read, write, and review it</li>
+          <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Diff it, build it, keep it</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fs-5 text-center fw-bold mt-3 mb-0">
+      Your data pipelines become regular .NET code: testable, versionable and deployable with the rest of your application.
+    </p>
+  </div>
+</section>
+
 
 <section class="section section-sm bg-light">
   <div class="container py-0 my-0">
 
-    <div class="mb-2">
-      <div class="row justify-content-center align-items-start">
-        <div class="col-lg-4 col-md-8">
-          <h5 class="mb-1">What is ETLBox?</h5>
-          <p class="small">
-            ETLBox is a complete ETL (Extract, Transform, Load) library and data integration toolbox for .NET.
-            It helps you create and manage data integration pipelines to extract data from different sources,
-            transform it into the format you need, and load it into databases, APIs, or files.
-          </p>
-        </div>
-
-        <div class="col-lg-4 col-md-8">
-          <h5 class="mb-1">Why Skip the GUI?</h5>
-          <p class="small">
-            Unlike traditional ETL tools, ETLBox does not rely on a graphical user interface,
-            making it ideal for developers who prefer programmatic control.
-            It has a powerful data-flow engine with built-in parallel execution,
-            designed to handle large data volumes efficiently — even when the data exceeds available memory.
-          </p>
-        </div>
-
-        <div class="col-lg-4 col-md-8">
-          <h5 class="mb-1">No GUI? That's the Advantage!</h5>
-          <p class="small">
-            ETLBox doesn’t rely on a graphical user interface — and that’s by design.
-            This gives you full control over your ETL directly within your .NET environment,
-            support for test-driven development <strong>(TDD)</strong>,
-            and allows you to build data flows as part of your existing applications.
-            If you prefer a GUI, there's <a href="https://www.directsync.net" target="_blank" rel="noopener noreferrer"><strong>DirectSync</strong></a>.
-          </p>
-        </div>
-
-        <div class="col-lg-4 col-md-8">
-          <h5 class="mb-1">What’s Inside (the Box)?</h4>
-            <p class="small">
-              Explore the full scope of ETLBox and how it simplifies your ETL pipelines and data integration workflows.
-              ETLBox offers a wide range of components, from simple data
-              extraction to complex transformation and seamless loading into your target systems.
-            </p>
-        </div>
-
-      </div>
-
-    </div>
+    <h2 class="text-center mb-3">What’s inside</h2>
 
     <div class="row g-2">
 
