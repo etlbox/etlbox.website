@@ -25,11 +25,11 @@ sitemap_exclude: true
       </div>
       <h3>The product since 1.x</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Streaming engine hardened after the closed-source cut</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Vendor support, trial, commercial licenses</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Named companies in production</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Paying customers fund the next year</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Streaming engine hardened after the closed-source cut</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Vendor support, trial, commercial licenses</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Named companies in production</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Paying customers fund the next year</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -37,11 +37,11 @@ sitemap_exclude: true
       {{< brand-mark "EK" "ETLKit" "#6538b2" >}}
       <h3>The 1.x continuation</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Same generation as the old 1.x engine</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Community tests, not a product test suite</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Maintainer and GitHub, not a vendor</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> No comparable public enterprise references</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Stalls when the author stops</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Same generation as the old 1.x engine</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Community tests, not a product test suite</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Maintainer and GitHub, not a vendor</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> No comparable public enterprise references</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Stalls when the author stops</li>
       </ul>
     </div>
   </div>
@@ -59,11 +59,11 @@ sitemap_exclude: true
       </div>
       <h3>A library you can buy support for</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Component data-flow model teams already know</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Docs, recipes, and a support channel</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Used in production at named companies</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> A vendor that answers when something breaks</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Component data-flow model teams already know</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Docs, recipes, and a support channel</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Used in production at named companies</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> A vendor that answers when something breaks</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -71,11 +71,11 @@ sitemap_exclude: true
       {{< brand-mark "EN" "ETL.NET" "#da541b" >}}
       <h3>A community experiment</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Different programming model (Linq / reactive)</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Author reports tests were dropped in v2</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Maintainer publicly asking for contributors</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Community scale, not enterprise references</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Stalls if the maintainer moves on</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Different programming model (Linq / reactive)</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Author reports tests were dropped in v2</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Maintainer publicly asking for contributors</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Community scale, not enterprise references</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Stalls if the maintainer moves on</li>
       </ul>
     </div>
   </div>
@@ -93,11 +93,11 @@ sitemap_exclude: true
       </div>
       <h3>Still shipping</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Actively maintained commercial engine</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Trial, licenses, and vendor support</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Named production customers</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> A roadmap funded by customers</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Actively maintained commercial engine</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Thousands of automated tests</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Trial, licenses, and vendor support</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Named production customers</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> A roadmap funded by customers</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -105,11 +105,11 @@ sitemap_exclude: true
       {{< brand-mark "aE" "actionETL" "#555c6d" >}}
       <h3>No longer moving</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Different worker-style model</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> No commercial test story</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Last package: January 2024</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Community scale</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Already stalled</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Different worker-style model</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> No commercial test story</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Last package: January 2024</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Community scale</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Already stalled</li>
       </ul>
     </div>
   </div>

@@ -36,10 +36,10 @@ hideAiButtons: true
       <div class="compare-box h-100">
         <h3>We ship faster</h3>
         <ul class="list-unstyled mb-0">
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> The toolbox is C# on ETLBox</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> AI drafts, reviews, writes the boring glue</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Tests catch the rule before production does</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> A drag-and-drop job gives AI nothing to hold on to</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> The toolbox is C# on ETLBox</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> AI drafts, reviews, writes the boring glue</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Tests catch the rule before production does</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> A drag-and-drop job gives AI nothing to hold on to</li>
         </ul>
       </div>
     </div>
@@ -47,10 +47,10 @@ hideAiButtons: true
       <div class="compare-box h-100">
         <h3>AI in your pipeline</h3>
         <ul class="list-unstyled mb-0">
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> ETLBox has AI support</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Extract, classify, decide — where a mapping table runs out</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> The rest stays as tests you run in CI</li>
-          <li class="d-flex gap-2 py-1"><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Next level, not a science project</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> ETLBox has AI support</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Extract, classify, decide — where a mapping table runs out</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> The rest stays as tests you run in CI</li>
+          <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Next level, not a science project</li>
         </ul>
       </div>
     </div>
@@ -61,28 +61,28 @@ hideAiButtons: true
   <h2 class="h3">What we take on</h2>
   <p>From a single stubborn flow to the warehouse around it. Same toolkit. Same tests.</p>
   <article class="d-flex align-items-center gap-4 py-4 border-bottom">
-    <div class="experts-service-mark" aria-hidden="true"><i class="bi-code-slash"></i></div>
+    <div class="experts-service-mark" aria-hidden="true"><i class="bi bi-code-slash"></i></div>
     <div>
       <h3 class="h5 mb-1">Custom ETL in C#</h3>
       <p class="mb-0">Pipelines you can read, test, and own — built on the library we created.</p>
     </div>
   </article>
   <article class="d-flex align-items-center gap-4 py-4 border-bottom">
-    <div class="experts-service-mark" aria-hidden="true"><i class="bi-mortarboard"></i></div>
+    <div class="experts-service-mark" aria-hidden="true"><i class="bi bi-mortarboard"></i></div>
     <div>
       <h3 class="h5 mb-1">Training that sticks</h3>
       <p class="mb-0">Enable your developers to ship the next integration without waiting on a vendor.</p>
     </div>
   </article>
   <article class="d-flex align-items-center gap-4 py-4 border-bottom">
-    <div class="experts-service-mark" aria-hidden="true"><i class="bi-stars"></i></div>
+    <div class="experts-service-mark" aria-hidden="true"><i class="bi bi-stars"></i></div>
     <div>
       <h3 class="h5 mb-1">AI in the flow</h3>
       <p class="mb-0">Where the work is messy — extract, classify, decide — and keep the rest as tests.</p>
     </div>
   </article>
   <article class="d-flex align-items-center gap-4 py-4">
-    <div class="experts-service-mark" aria-hidden="true"><i class="bi-arrow-left-right"></i></div>
+    <div class="experts-service-mark" aria-hidden="true"><i class="bi bi-arrow-left-right"></i></div>
     <div>
       <h3 class="h5 mb-1">Migration</h3>
       <p class="mb-0">SSIS estates, legacy systems, messy mappings. Extract, reshape, land clean.</p>

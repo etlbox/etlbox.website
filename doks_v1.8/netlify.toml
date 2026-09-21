@@ -191,3 +191,21 @@
   to = "/ssis/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/compare/sqlbulkcopy"
+  to = "/sqlbulkcopy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/csv-to-sql"
+  to = "/csv/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare/csvhelper"
+  to = "/csv/"
+  status = 301
+  force = true

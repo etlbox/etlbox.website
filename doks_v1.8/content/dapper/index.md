@@ -9,7 +9,7 @@ toc: false
 hideAiButtons: true
 ---
 
-Dapper is excellent at reading data. It is not a bulk writer. The usual workaround — a loop of `INSERT` / `UPDATE` / `DELETE` — costs one round-trip per row and gets slow as soon as the set grows. **ETLBox.DbExtensions** adds `BulkInsert`, `BulkUpdate`, `BulkDelete`, and `BulkMerge` to the same connection. One extra `using`. No new client.
+Dapper is excellent at reading data. It is not a bulk writer. The usual workaround — a loop of `INSERT` / `UPDATE` / `DELETE` — costs one round-trip per row and gets slow as soon as the set grows. **ETLBox.DbExtensions** adds `BulkInsert`, `BulkUpdate`, `BulkDelete`, and `BulkMerge` to the same connection. One extra `using`. No new client. If the class you already use is `SqlBulkCopy`, see [Beyond SqlBulkCopy](/sqlbulkcopy/).
 
 **Still writing this?**
 
@@ -39,11 +39,11 @@ The second snippet is not just shorter. On SQL Server, 5,000 inserts took **8 se
       </div>
       <h3>One line, many databases</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Same <code>IDbConnection</code> as Dapper</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Insert, update, delete, merge</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Your POCOs — no <code>DataTable</code></li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> SQL Server, Postgres, MySQL, Oracle, SQLite, …</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Same bulk engine as ETLBox data flows</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Same <code>IDbConnection</code> as Dapper</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Insert, update, delete, merge</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Your POCOs — no <code>DataTable</code></li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> SQL Server, Postgres, MySQL, Oracle, SQLite, …</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Same bulk engine as ETLBox data flows</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -51,11 +51,11 @@ The second snippet is not just shorter. On SQL Server, 5,000 inserts took **8 se
       {{< brand-mark "Dp" "Dapper loop" "#b8352c" >}}
       <h3>One round-trip per row</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Great for queries, not for bulk writes</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> <code>foreach</code> + <code>Execute</code> does not scale</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Merge becomes select-then-insert-or-update</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> SqlBulkCopy is insert-only, SQL Server only</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> A second client is more than you asked for</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Great for queries, not for bulk writes</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> <code>foreach</code> + <code>Execute</code> does not scale</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Merge becomes select-then-insert-or-update</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> SqlBulkCopy is insert-only, SQL Server only</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> A second client is more than you asked for</li>
       </ul>
     </div>
   </div>

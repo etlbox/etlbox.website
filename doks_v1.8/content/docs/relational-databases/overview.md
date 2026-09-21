@@ -272,4 +272,4 @@ The following sections provide more details on each component:
 - **DbDestination** – How bulk inserts improve performance
 - **DbMerge** – How to synchronize datasets efficiently
 
-If you already query with Dapper and the next step is writing many rows — without a data-flow network — [DbExtensions adds bulk operations on the same connection](/dapper/).
+If you already query with Dapper and the next step is writing many rows — without a data-flow network — [DbExtensions adds bulk operations on the same connection](/dapper/). If the API you already use is `SqlBulkCopy`, [Beyond SqlBulkCopy](/sqlbulkcopy/) is the comparison: insert-only, SQL Server only; ETLBox uses that path for inserts and adds merge and other databases.

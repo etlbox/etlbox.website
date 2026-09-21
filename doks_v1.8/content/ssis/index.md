@@ -23,11 +23,11 @@ hideAiButtons: true
       </div>
       <h3>The package is code</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Git diffs you can review</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Unit tests and CI/CD</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Streaming engine and bulk loads</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Lookup, split, merge join, multicast</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Runs anywhere .NET runs</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Git diffs you can review</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Unit tests and CI/CD</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Streaming engine and bulk loads</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Lookup, split, merge join, multicast</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Runs anywhere .NET runs</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -35,11 +35,11 @@ hideAiButtons: true
       {{< brand-mark "SS" "SSIS" "#a12100" >}}
       <h3>The package is a canvas</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> A <code>.dtsx</code> diff is XML, not a reviewable patch</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Script Components nobody runs in a test</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Fast engine, stalled product</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> One extra Lookup rearranges the canvas</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Tied to SQL Server / Integration Runtime</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> A <code>.dtsx</code> diff is XML, not a reviewable patch</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Script Components nobody runs in a test</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Fast engine, stalled product</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> One extra Lookup rearranges the canvas</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Tied to SQL Server / Integration Runtime</li>
       </ul>
     </div>
   </div>
@@ -57,11 +57,11 @@ hideAiButtons: true
       </div>
       <h3>Leave the designer</h3>
       <ul>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> C#, not a second expression language</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> The same Control Flow / Data Flow split</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Range lookups the SSIS toolbox cannot do</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> Debug in Visual Studio or Rider</li>
-        <li><i class="bi-check-circle-fill compare-yes" aria-hidden="true"></i> On-prem, cloud, or a container — your call</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> C#, not a second expression language</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> The same Control Flow / Data Flow split</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Range lookups the SSIS toolbox cannot do</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> Debug in Visual Studio or Rider</li>
+        <li><i class="bi bi-check-circle-fill compare-yes" aria-hidden="true"></i> On-prem, cloud, or a container — your call</li>
       </ul>
     </div>
     <div class="experts-compare-vs" aria-hidden="true">vs</div>
@@ -69,11 +69,11 @@ hideAiButtons: true
       {{< brand-mark "AF" "ADF" "#0078d4" >}}
       <h3>Swap one canvas for another</h3>
       <ul>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Heavier UI, slower debugging</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Still a canvas as the unit of reuse</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Awkward for lookup-heavy SSIS work</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Integration Runtime is a holding pattern</li>
-        <li><i class="bi-x-circle-fill compare-no" aria-hidden="true"></i> Does not fix Git, tests, or maintainability</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Heavier UI, slower debugging</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Still a canvas as the unit of reuse</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Awkward for lookup-heavy SSIS work</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Integration Runtime is a holding pattern</li>
+        <li><i class="bi bi-x-circle-fill compare-no" aria-hidden="true"></i> Does not fix Git, tests, or maintainability</li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,12 @@
+{{ $group := .Get 0 | default "databases" }}
+{{ $items := index site.Data.landing.connectors $group }}
+{{ if $items }}
+<div class="connector-strip" role="list">
+  {{ range $items }}
+  <div class="connector-strip-item" role="listitem">
+    <img src="{{ .image_light }}" alt="{{ .alt }}" class="light-mode-image" width="120" height="36" loading="lazy">
+    <img src="{{ .image_dark }}" alt="{{ .alt }}" class="dark-mode-image" width="120" height="36" loading="lazy">
+  </div>
+  {{ end }}
+</div>
+{{ end }}

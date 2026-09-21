@@ -557,3 +557,26 @@ i.large {
   height: 1.75rem;
   font-size: 0.62rem;
 }
+
+.connector-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+
+.connector-strip-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
+
+.connector-strip-item img.light-mode-image,
+.connector-strip-item img.dark-mode-image {
+  width: auto;
+  height: 2.25rem;
+  max-width: 7.5rem;
+  object-fit: contain;
+}

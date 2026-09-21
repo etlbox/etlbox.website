@@ -1,0 +1,109 @@
+[[databases]]
+image_light = "/images/supported/sqlserver.png"
+image_dark = "/images/supported/sqlserver_dark.png"
+alt = "SQL Server"
+
+[[databases]]
+image_light = "/images/supported/sql-azure.png"
+image_dark = "/images/supported/sql-azure_dark.png"
+alt = "Azure SQL"
+
+[[databases]]
+image_light = "/images/supported/postgresql.svg"
+image_dark = "/images/supported/postgresql_dark.svg"
+alt = "PostgreSQL"
+
+[[databases]]
+image_light = "/images/supported/oracle.png"
+image_dark = "/images/supported/oracle.png"
+alt = "Oracle"
+
+[[databases]]
+image_light = "/images/supported/mysql.png"
+image_dark = "/images/supported/mysql.png"
+alt = "MySQL"
+
+[[databases]]
+image_light = "/images/supported/mariadb.png"
+image_dark = "/images/supported/mariadb.png"
+alt = "MariaDB"
+
+[[databases]]
+image_light = "/images/supported/sql-lite.png"
+image_dark = "/images/supported/sql-lite.png"
+alt = "SQLite"
+
+[[databases]]
+image_light = "/images/supported/db2logo.png"
+image_dark = "/images/supported/db2logo.png"
+alt = "IBM Db2"
+
+[[databases]]
+image_light = "/images/supported/sap-ase.png"
+image_dark = "/images/supported/sap-ase.png"
+alt = "SAP ASE"
+
+[[databases]]
+image_light = "/images/supported/sap-hana.png"
+image_dark = "/images/supported/sap-hana.png"
+alt = "SAP HANA"
+
+[[databases]]
+image_light = "/images/supported/snowflake.png"
+image_dark = "/images/supported/snowflake.png"
+alt = "Snowflake"
+
+[[databases]]
+image_light = "/images/supported/clickhouse-logo-black.png"
+image_dark = "/images/supported/clickhouse-logo-white.png"
+alt = "ClickHouse"
+
+[[databases]]
+image_light = "/images/supported/access.png"
+image_dark = "/images/supported/access.png"
+alt = "Microsoft Access"
+
+[[databases]]
+image_light = "/images/supported/spark.png"
+image_dark = "/images/supported/spark.png"
+alt = "Apache Spark"
+
+[[databases]]
+image_light = "/images/supported/odbc.png"
+image_dark = "/images/supported/odbc.png"
+alt = "ODBC"
+
+[[databases]]
+image_light = "/images/supported/oledb.png"
+image_dark = "/images/supported/oledb.png"
+alt = "OLE DB"
+
+[[files]]
+image_light = "/images/supported/csv.svg"
+image_dark = "/images/supported/csv.svg"
+alt = "CSV"
+
+[[files]]
+image_light = "/images/supported/excel_s.png"
+image_dark = "/images/supported/excel_s.png"
+alt = "Excel"
+
+[[files]]
+image_light = "/images/supported/json.png"
+image_dark = "/images/supported/json_dark.png"
+alt = "JSON"
+
+[[files]]
+image_light = "/images/supported/xml.svg"
+image_dark = "/images/supported/xml.svg"
+alt = "XML"
+
+[[files]]
+image_light = "/images/supported/parquet.png"
+image_dark = "/images/supported/parquet.png"
+alt = "Parquet"
+
+[[files]]
+image_light = "/images/supported/txt.png"
+image_dark = "/images/supported/txt_dark.png"
+alt = "Text"

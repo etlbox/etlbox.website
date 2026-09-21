@@ -54,6 +54,9 @@ const purgecss = purgeCSSPlugin({
         /^ts-/,
         /^tom-select/,
         /^bi-/,
+        'bi',
+        '[class^="bi-"]',
+        '[class*=" bi-"]',
         /^hljs/,
         /^chroma/
     ]
