@@ -22,18 +22,11 @@ What has changed is where the product goes next. New SSIS features have effectiv
 
 That is a comfortable place until it is not. The expensive moment is the one where a platform decision, a hiring constraint, or a cloud migration forces the move, and the only packages you have are designer canvases nobody wants to reopen.
 
-## Why UI-driven data flows become the thing you will not touch
+## Why UI-driven packages get so hard to change
 
-SSIS earned its popularity for a reason. Control Flow plus Data Flow is a clear mental model. The engine streams rows. Lookups, Conditional Splits, Merge Joins, and Multicast are the vocabulary a generation of data engineers learned.
+SSIS is popular for good reasons. Control Flow and Data Flow are easy to explain, the engine is fast, and Lookup, Conditional Split, Merge Join, and Multicast are still how a lot of people think about ETL.
 
-The designer is also why those packages rot.
-
-- A `.dtsx` file is XML plus layout. Pull requests show noise, not intent.
-- Copy-paste is the reuse story. Script Components sit outside any test runner.
-- Package configurations, expressions, and parameters accumulate until a “small change” means opening the canvas and hoping the metadata still lines up.
-- One extra Lookup no-match path, one extra derived column, and the surface area of the Data Flow jumps. People stop changing the package because they can no longer see what it does.
-
-The irony is familiar: the reason nobody wants to migrate is the same reason the migration gets harder every year. The flows are unreadable.
+The designer does not age as well. After a few years you have copied Data Flows, Script Components that nobody runs in a test, and a pile of configurations and expressions. A `.dtsx` diff is mostly XML and control positions. Adding one extra Lookup path means rearranging the canvas and hoping the metadata still matches. So the package stays as it is — and that is usually why the migration never starts.
 
 ## Azure Data Factory is the official successor. It is not the better designer.
 
@@ -105,7 +98,7 @@ Lookup Price as-of OrderDate
 
 ### Sample data
 
-`orders.csv` is the inbound file. Two rows share `WIDGET-A` on different dates. One customer code does not exist. One order is dated before any price is valid.
+A partner file, a customer table, and a price history. `WIDGET-A` has two validity windows, so a Lookup on SKU alone is not enough.
 
 ```csv
 OrderId,OrderDate,CustomerCode,ProductSku,Quantity
@@ -116,24 +109,16 @@ OrderId,OrderDate,CustomerCode,ProductSku,Quantity
 1005,2024-06-01,BETA,WIDGET-A,3
 ```
 
-Customers are a classic equality lookup:
-
 | Id | Code | Name |
 |----|------|------|
 | 1 | ACME | Acme Corp |
 | 2 | BETA | Beta GmbH |
-
-Prices are the part SSIS Lookup cannot express. `WIDGET-A` has two validity windows:
 
 | Sku | Price | ValidFrom | ValidTo |
 |-----|-------|-----------|---------|
 | WIDGET-A | 9.99 | 2025-01-01 | 2026-02-28 |
 | WIDGET-A | 12.50 | 2026-03-01 | 9999-12-31 |
 | WIDGET-B | 4.00 | 2025-01-01 | 9999-12-31 |
-
-Order 1001 (15 Mar 2026) should get **12.50**. Order 1004 (2 Jan 2026) should get **9.99**. A Lookup on `Sku` alone either fails on multiple matches or silently picks the wrong row. Typical SSIS workarounds are an OLE DB Command that runs SQL per row, a Script Component, or a Merge Join plus a date filter. All of those are slower or harder to read than the rule you actually wanted. Mapping Data Flows have the same equality-join limitation.
-
-In ETLBox the customer lookup stays a normal key match. The price lookup is a function over the cached price list.
 
 ### Control Flow: prepare, then truncate staging
 
@@ -197,11 +182,9 @@ public class ProductPrice
 
 ### Data Flow: normalize, lookup, split
 
-`RowTransformation` is the Derived Column: trim and uppercase the keys so the lookup is not at the mercy of `"acme "` in the file.
+The idea is the same as in SSIS: read the file, clean the keys, look up the customer, then find the price that was valid on the order date. Rows that have both go to staging. The rest stay readable order rows in `errors.csv` — not the stripped SSIS error output.
 
-The customer lookup is full-cache against `Customers`, keyed by code — the SSIS Lookup you already know.
-
-The price lookup loads `ProductPrices` once, then applies the as-of rule with [`ApplyRetrievedCacheToInput`](/docs/transformations/lookup/). `PermitMultipleEntriesPerKey` keeps every price row in the cache when the same SKU appears more than once; the function then picks the row whose validity window contains `OrderDate`. That is the Script Component you would have written in SSIS, except it is a few lines sitting in the same file as the rest of the flow.
+The customer lookup is the equality match you already know. The price lookup is the one the SSIS toolbox does not have: keep the price list in cache and pick the row whose date range covers `OrderDate`. In SSIS that usually becomes a Script Component or an OLE DB Command per row.
 
 ```csharp
 var source = new CsvSource<OrderRow>("orders.csv");
@@ -233,7 +216,7 @@ var staging = new DbDestination<OrderRow>(connectionManager, "StagingOrders");
 var errors = new CsvDestination<OrderRow>("errors.csv");
 ```
 
-Linking is the Conditional Split. Complete rows go to staging. Everything else keeps the original columns and lands in `errors.csv`. You do not get the SSIS error-output metadata scramble where redirected rows lose their useful columns.
+Link the path like a Conditional Split, then run it. Complete rows to staging, everything else to the error file.
 
 ```csharp
 source.LinkTo(normalize);
@@ -244,8 +227,6 @@ priceLookup.LinkTo(errors, row => !row.IsComplete);
 
 await Network.ExecuteAsync(source);
 ```
-
-Orders stream through. The price list is small, so a full lookup cache is the right trade: one read of `ProductPrices`, then an in-memory range match per order. That is the opposite of an OLE DB Command per row.
 
 ### After the stream: MERGE and counts
 
@@ -272,6 +253,11 @@ SqlTask.ExecuteNonQuery(connectionManager, @"
 int staged = SqlTask.ExecuteScalar<int>(connectionManager, "SELECT COUNT(*) FROM StagingOrders");
 int loaded = SqlTask.ExecuteScalar<int>(connectionManager, "SELECT COUNT(*) FROM Orders");
 Console.WriteLine($"Staged {staged} orders. Orders table now has {loaded} rows. Errors: {errors.ProgressCount}");
+
+Console.WriteLine("Errors:");
+Console.WriteLine(File.ReadAllText("errors.csv"));
+Console.WriteLine("Press ENTER to exit.");
+Console.ReadLine();
 ```
 
 If you prefer a component to a SQL `MERGE`, [`DbMerge`](/docs/relational-databases/dbmerge/) does the same job inside the data flow. [Mastering Database Merging](/blog/merging/) walks through the options.
@@ -373,6 +359,11 @@ SqlTask.ExecuteNonQuery(connectionManager, @"
 int staged = SqlTask.ExecuteScalar<int>(connectionManager, "SELECT COUNT(*) FROM StagingOrders");
 int loaded = SqlTask.ExecuteScalar<int>(connectionManager, "SELECT COUNT(*) FROM Orders");
 Console.WriteLine($"Staged {staged} orders. Orders table now has {loaded} rows. Errors: {errors.ProgressCount}");
+
+Console.WriteLine("Errors:");
+Console.WriteLine(File.ReadAllText("errors.csv"));
+Console.WriteLine("Press ENTER to exit.");
+Console.ReadLine();
 ```
 
 ## Conclusion
