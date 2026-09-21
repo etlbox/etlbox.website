@@ -98,7 +98,9 @@ Learn more about merging into a database in this article: "[Mastering Database M
 
 ETLBox is well-suited for data warehousing tasks. It is a full alternative to technologies like SSIS or Azure Data Factory.
 
-Read more in this article that shows how to use ETLBox to load data into a star schema or DWH: "[Building a Data Warehouse with ETLBox: A .NET Developer's Guide](/blog/building-dwh/)"
+Read more in this article that shows how to use ETLBox to load data into a star schema or DWH: "[Building a Data Warehouse with ETLBox: A .NET Developer's Guide](/blog/building-dwh/)".
+
+If you are moving off SSIS specifically, this walkthrough maps a typical Control Flow and Data Flow to C#, including a range lookup the SSIS Lookup transform cannot express: "[Leaving SSIS Without Losing Speed: A Code-First Path in C#](/blog/leaving-ssis/)".
 
 
 ## Learn More
