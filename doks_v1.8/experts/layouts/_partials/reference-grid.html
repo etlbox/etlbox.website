@@ -1,12 +1,8 @@
 {{ $highlight := .highlight }}
 {{ $highlightNames := slice "Commonwealth Bank of Australia" "Deloitte" "IWG" "SEW Eurodrive" "Health Catalyst" "Regal Rexnord" }}
 {{ $customers := site.Data.home.references.customer }}
-{{ $gridClass := "experts-ref-grid" }}
-{{ if $highlight }}
-  {{ $gridClass = "experts-ref-grid experts-ref-grid-3" }}
-{{ end }}
 
-<div class="{{ $gridClass }}">
+<div class="experts-ref-grid">
   {{ range $customers }}
     {{ $show := true }}
     {{ if $highlight }}
