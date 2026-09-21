@@ -29,7 +29,7 @@ Not a problem. Just let us know, and we'll create a custom invoice so that you o
 You can optionally purchase access to the DB Extensions source code.
 
 #### What does "Company-wide use" mean?
-The standard licenses (Personal Use, Company-Wide Use) allows usage of DB Extensions inside your own company only.
+The standard licenses (PERSONAL, Company-Wide Use) allow usage of DB Extensions inside your own company only.
 Only developers from the registered company may build software or apps on top of DB Extensions.
 Software-as-a-Service (SaaS) is not included. If you plan to distribute DB Extensions as part of your products to 3rd parties, or to offer it as part of a SaaS solution, please obtain an ENTERPRISE OEM license.
 
