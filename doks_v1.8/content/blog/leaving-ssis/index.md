@@ -1,5 +1,5 @@
 ---
-title: "Leaving SSIS Without Losing Speed: A Code-First Path in C#"
+title: "Replacing SSIS with a C# data flow"
 summary: "SSIS is still supported and still fast, but it is no longer where Microsoft invests. Graphical packages age badly; Azure Data Factory is the official cloud successor, yet it struggles with the control-flow and data-flow complexity SSIS teams actually run. This article shows how to keep streaming performance and SSIS-style components — in C# with ETLBox."
 description: "SQL Server Integration Services still runs a large share of production ETL, but feature work has stalled while Microsoft puts its cloud ETL investment into Azure Data Factory and Fabric. This article explains why designer-driven packages become hard to maintain, why ADF is not a drop-in home for complex SSIS workloads, and how a code-first data flow in C# with ETLBox preserves Control Flow, Data Flow, and streaming performance — including a range lookup that the SSIS Lookup transform cannot do."
 date: 2026-09-21

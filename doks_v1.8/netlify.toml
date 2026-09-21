@@ -179,3 +179,15 @@
   to = "/etlkit/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/compare/ssis"
+  to = "/ssis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare/adf"
+  to = "/ssis/"
+  status = 301
+  force = true

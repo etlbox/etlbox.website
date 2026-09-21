@@ -2,6 +2,8 @@
 title: "ETLKit vs ETLBox"
 description: "ETLKit continues the last open-source 1.x line of ETLBox. Matching APIs do not mean the same product. Also compared: ETL.NET and actionETL."
 lead: "This page compares ETLBox with three open-source .NET ETL libraries you may have found while searching: ETLKit, ETL.NET, and actionETL. ETLBox is the commercial product. The others are not."
+kicker: "A comparison of .NET ETL libraries"
+layout: landing-funnel
 draft: false
 toc: false
 exclude_search: true

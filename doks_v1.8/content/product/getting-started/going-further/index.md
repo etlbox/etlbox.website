@@ -100,8 +100,15 @@ ETLBox is well-suited for data warehousing tasks. It is a full alternative to te
 
 Read more in this article that shows how to use ETLBox to load data into a star schema or DWH: "[Building a Data Warehouse with ETLBox: A .NET Developer's Guide](/blog/building-dwh/)".
 
-If you are moving off SSIS specifically, this walkthrough maps a typical Control Flow and Data Flow to C#, including a range lookup the SSIS Lookup transform cannot express: "[Leaving SSIS Without Losing Speed: A Code-First Path in C#](/blog/leaving-ssis/)".
+If you are moving off SSIS specifically, start with the [SSIS landing page](/ssis/) — why the designer ages badly, why Azure Data Factory is not a drop-in home, and the toolbox mapping to C#. The full Control Flow / Data Flow walkthrough, including a range lookup the SSIS Lookup transform cannot express, is "[Replacing SSIS with a C# data flow](/blog/leaving-ssis/)".
 
+### Dapper and bulk writes
+
+If you already query with Dapper and the next step is writing thousands of rows, you do not need a data-flow network. [ETLBox.DbExtensions](/dapper/) adds `BulkInsert`, `BulkUpdate`, `BulkDelete`, and `BulkMerge` to the same `IDbConnection`.
+
+### Need us to build it?
+
+The people who write ETLBox also take projects — training, a hard flow, or the whole integration, including AI in the pipeline where a mapping table runs out. [Consulting from ETLBoxperts](/consulting/).
 
 ## Learn More
 

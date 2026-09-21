@@ -271,3 +271,5 @@ The following sections provide more details on each component:
 - **DbSource** – How to extract data efficiently
 - **DbDestination** – How bulk inserts improve performance
 - **DbMerge** – How to synchronize datasets efficiently
+
+If you already query with Dapper and the next step is writing many rows — without a data-flow network — [DbExtensions adds bulk operations on the same connection](/dapper/).
