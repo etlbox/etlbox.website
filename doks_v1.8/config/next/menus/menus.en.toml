@@ -23,7 +23,7 @@ identifier = "support"
 weight = 70
 
 [[main]]
-name = "More"
+name = "Solutions"
 identifier = "more"
 weight = 80
 
