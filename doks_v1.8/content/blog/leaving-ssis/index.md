@@ -69,6 +69,10 @@ Consider a package most SSIS shops have in some form. A partner drops an order C
 
 On the Control Flow tab it would look like this: create tables if they are missing, truncate staging, run the Data Flow, `MERGE` staging into `Orders`, write row counts.
 
+{{< img-centered src_light="control_flow.jpg" src_dark="control_flow.jpg" alt="SSIS Control Flow for the partner-order import" >}}
+
+In ETLBox that is the same vertical sequence:
+
 ```text
 CreateTable (if missing)
         ↓
@@ -82,6 +86,10 @@ SqlTask: write row counts
 ```
 
 The Data Flow is ordinary until the second lookup. Flat File Source, a Derived Column to normalize keys, a Lookup on `Customers` by code, then a lookup against a price history. Valid rows go to staging. Missing customers or missing prices go to an error CSV.
+
+{{< img-centered src_light="data_flow.jpg" src_dark="data_flow.jpg" alt="SSIS Data Flow for Load orders" >}}
+
+Mapped to ETLBox components:
 
 ```text
 CsvSource (orders.csv)
