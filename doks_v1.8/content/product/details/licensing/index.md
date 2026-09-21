@@ -14,15 +14,15 @@ toc: true
 ## Which License is Right for You?
 
 ETLBox offers three main licensing models:
-- 🆓 **FREE**, for testing and personal use
+- 🆓 **PERSONAL**, for testing and personal use
 - 🏢 **COMPANY**, for company-wide use
 - 📦 **ENTERPRISE OEM**, allowing Redistribution as part of your product
 
 Let's break down the differences.
 
-### 🆓 Free License
+### 🆓 Personal License
 
-The **FREE License** is perfect for developers who want to explore ETLBox or use it for personal projects.
+The **PERSONAL** License is perfect for developers who want to explore ETLBox or use it for personal projects.
 
 **Key Features:**
 - **No Cost:** Completely free to use for testing and evaluation.
@@ -84,7 +84,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 
 ## Feature Comparison
 
-| **Feature**               | 🆓 **Free License**                | 🏢 **COMPANY**                        | 📦 **ENTERPRISE OEM**                |
+| **Feature**               | 🆓 **PERSONAL**                    | 🏢 **COMPANY**                        | 📦 **ENTERPRISE OEM**                |
 |---------------------------|------------------------------------|----------------------------------------|-------------------------------------|
 | **Intended Use**          | Testing & personal projects        | Internal company use                   | Redistribution/SaaS in commercial products |
 | **Licensing Model**       | Not for commercial use             | Per-developer                          | Base fee + per-customer fee          |
@@ -97,7 +97,7 @@ The **ENTERPRISE OEM** License (also known as the **Redistributable** License) i
 
 ## Choosing the Right License
 
-- **Choose the Free License** if you’re testing ETLBox or working on personal projects.
+- **Choose the PERSONAL License** if you’re testing ETLBox or working on personal projects.
 - **Go with the COMPANY License** if you’re using ETLBox internally or within your organization’s infrastructure.
 - **Opt for the ENTERPRISE OEM License** if you’re embedding ETLBox in commercial software distributed to third-party customers, or as part of a SaaS solution.
 

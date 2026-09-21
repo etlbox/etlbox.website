@@ -32,7 +32,7 @@ Not a problem. Just let us know, and we'll create a custom invoice so that you o
 You can optionally purchase access to the ETLBox source code.
 
 #### What does "Company-wide use" mean?
-The standard licenses (Personal Use, Company-Wide Use, and Project) allow usage of ETLBox inside your own company or for a specific customer project only.
+The standard licenses (PERSONAL, Company-Wide Use, and Project) allow usage of ETLBox inside your own company or for a specific customer project only.
 Only developers from the registered company may build software or apps on top of ETLBox.
 Software-as-a-Service (SaaS) is not included. If you plan to distribute ETLBox as part of your products to 3rd parties, or to offer it as part of a SaaS solution, please obtain a REDISTRIBUTABLE license.
 
