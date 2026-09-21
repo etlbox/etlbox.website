@@ -24,8 +24,8 @@ A key concept in ETLBox is its ability to read from various sources, transform, 
 ```kroki {type=mermaid}
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
-  source[↻ Source ] --> transformation(↻ Transformation)
-  transformation --> destination[↻ Destination ]
+  source[↻ Source] --> transformation(↻ Transformation)
+  transformation --> destination[↻ Destination]
 ```
 
 - The source starts reading data.

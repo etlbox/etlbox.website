@@ -32,12 +32,12 @@ Not a problem. Just let us know, and we'll create a custom invoice so that you o
 You can optionally purchase access to the ETLBox source code.
 
 #### What does "Company-wide use" mean?
-The standard licenses (Personal Use, Company-Wide Use) allows usage of ETLBox inside your own company only.
+The standard licenses (Personal Use, Company-Wide Use, and Project) allow usage of ETLBox inside your own company or for a specific customer project only.
 Only developers from the registered company may build software or apps on top of ETLBox.
-If you plan to distribute ETLBox as part of your products to 3rd parties, please obtain a REDISTRIBUTABLE license.
+Software-as-a-Service (SaaS) is not included. If you plan to distribute ETLBox as part of your products to 3rd parties, or to offer it as part of a SaaS solution, please obtain a REDISTRIBUTABLE license.
 
 #### Software as a Service - which license should I choose?
-If your SaaS is deployed on servers under your control, you may choose between the Company-Wide Use and Redistributable licenses. Please ask for a quote and provide us with a short description of your setup.
+SaaS is allowed only with the Redistributable license (ENTERPRISE OEM). The Company and Project licenses do not cover SaaS — including when the service runs on servers you control. If you offer ETLBox as part of a cloud-based, multi-tenant, or on-demand service, choose Redistributable. Please ask for a quote and provide us with a short description of your setup.
 
 #### What is the REDISTRIBUTABLE license for?
-The REDISTRIBUTABLE license lets you use ETLBox in software products you sell or ship to customers. It provides license-check-free packages and source code access, enabling you to integrate ETLBox into your own product for distribution.
+The REDISTRIBUTABLE license lets you use ETLBox in software products you sell or ship to customers, and in Software-as-a-Service (SaaS) solutions. It provides license-check-free packages and source code access, enabling you to integrate ETLBox into your own product for distribution. SaaS is not covered by the Company or Project licenses.

@@ -31,10 +31,10 @@ You can optionally purchase access to the DB Extensions source code.
 #### What does "Company-wide use" mean?
 The standard licenses (Personal Use, Company-Wide Use) allows usage of DB Extensions inside your own company only.
 Only developers from the registered company may build software or apps on top of DB Extensions.
-If you plan to distribute DB Extensions as part of your products to 3rd parties, or want to integrate it in your SaaS solution, please contact us so that we can select the best license model for you.
+Software-as-a-Service (SaaS) is not included. If you plan to distribute DB Extensions as part of your products to 3rd parties, or to offer it as part of a SaaS solution, please obtain an ENTERPRISE OEM license.
 
 #### Software as a Service - which license should I choose?
-Please ask for a quote and provide us with a short description of your setup, we will find the best license model for you.
+SaaS is allowed only with the Redistributable license (ENTERPRISE OEM). The Company and Project licenses do not cover SaaS. If you offer DB Extensions as part of a cloud-based, multi-tenant, or on-demand service, choose ENTERPRISE OEM. Please ask for a quote and provide us with a short description of your setup.
 
 #### What is the ENTERPRISE OEM license for?
-The ENTERPRISE license lets you use DB Extensions in software products you sell or ship to customers, or in SaaS solutions. It provides license-check-free packages, enabling you to integrate DB Extensions into your own product for distribution.
+The ENTERPRISE license lets you use DB Extensions in software products you sell or ship to customers, and in Software-as-a-Service (SaaS) solutions. It provides license-check-free packages, enabling you to integrate DB Extensions into your own product for distribution. SaaS is not covered by the Company or Project licenses.
