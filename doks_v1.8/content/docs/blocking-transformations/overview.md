@@ -77,6 +77,8 @@ See also: [Non-Blocking Transformations Overview](../../transformations/overview
 | [Pivot](../pivot)                   | Transforms row-level data into column-oriented output                   |
 | [Sort](../sort)                     | Sorts all rows using a comparison function                              |
 | [WaitTransformation](../wait)       | Holds execution until one or more sources complete                      |
+| [ChatBatchTransformation](../chat-batch) | Sends each batch to a chat client as one request                   |
+| [EmbeddingBatchTransformation](../embedding-batch) | Creates embeddings for a batch of rows in one generator call |
 
 ## Descriptions
 
@@ -93,3 +95,7 @@ See also: [Non-Blocking Transformations Overview](../../transformations/overview
 **Sort**: Buffers all input rows and produces sorted output when all data is received.
 
 **WaitTransformation**: Pauses execution until one or more input components complete. Useful for orchestration.
+
+**ChatBatchTransformation**: Sends a batch of rows to an `IChatClient` as one request and emits the returned items. Part of `ETLBox.AI`.
+
+**EmbeddingBatchTransformation**: Creates embeddings for a batch of rows with one generator call and writes each vector back onto its row. Part of `ETLBox.AI`.

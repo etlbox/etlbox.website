@@ -81,5 +81,24 @@ Network.Execute(source);
 ```
 
 {{< /tab >}}
+{{< tab "Classify with AI" >}}
+
+```C#
+var client = new OpenAIClient(apiKey)
+    .GetChatClient("gpt-4o-mini").AsIChatClient();
+var source = new MemorySource<Review>();
+source.DataAsList.Add(new Review { Id = 1, Text = "I love this." });
+source.DataAsList.Add(new Review { Id = 2, Text = "I hate this." });
+
+var chat = new ChatBatchTransformation<Review, Label>(client, 10) {
+    SystemPrompt = "You classify product reviews.",
+    UserPrompt = "Keep Id. Set Sentiment and Score from 0 to 100."
+};
+var dest = new MemoryDestination<Label>();
+source.LinkTo<Label>(chat).LinkTo(dest);
+Network.Execute(source);
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 

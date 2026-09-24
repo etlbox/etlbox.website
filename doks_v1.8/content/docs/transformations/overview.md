@@ -80,6 +80,8 @@ Settings.MaxBufferSize = 10000; // Global default
 | [RowMultiplication](../row-multiplication)         | Splits one row into multiple output rows                                    |
 | [RowValidation](../row-validation)             | Validates rows and separates valid/invalid rows                             |
 | [XmlSchemaValidation](../xml-schema)       | Validates XML strings against an XSD schema                                 |
+| [ChatTransformation](../chat)              | Sends each row to a chat client and writes the returned object back         |
+| [EmbeddingTransformation](../embedding)    | Creates one embedding per row and stores the vector on the same object      |
 
 ## Descriptions
 
@@ -110,4 +112,8 @@ Settings.MaxBufferSize = 10000; // Global default
 **RowValidation**: Checks rows against defined validation rules and routes valid and invalid rows separately.
 
 **XmlSchemaValidation**: Validates the contents of an XML string field in a row against a given XML Schema Definition (XSD).
+
+**ChatTransformation**: Sends each row as JSON to an `IChatClient` and deserializes the response into the output type. Part of `ETLBox.AI`.
+
+**EmbeddingTransformation**: Creates one vector per row with an `IEmbeddingGenerator` and writes it back onto the same object. Part of `ETLBox.AI`.
 

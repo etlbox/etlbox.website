@@ -110,6 +110,16 @@ If you already query with Dapper and the next step is writing thousands of rows,
 
 The people who write ETLBox also take projects — training, a hard flow, or the whole integration, including AI in the pipeline where a mapping table runs out. [Consulting from ETLBoxperts](/consulting/).
 
+## AI Support
+
+ETLBox.AI adds chat, embeddings, and vector stores to the same data flow. The package is `ETLBox.AI`. You bring the model client and the vector store. The components only see `IChatClient`, `IEmbeddingGenerator`, and `VectorStoreCollection` from Microsoft.Extensions.AI and Microsoft.Extensions.VectorData.
+
+- **ChatTransformation** sends each row to a chat client and writes the returned object downstream. Use it to classify, extract, or reshape a row. [Chat (AI)](/docs/transformations/chat/)
+- **ChatBatchTransformation** sends a whole batch in one request. The default batch size is 10. [Chat Batch (AI)](/docs/blocking-transformations/chat-batch/)
+- **EmbeddingTransformation** creates one vector per row and stores it on the same object. [Embedding (AI)](/docs/transformations/embedding/)
+- **EmbeddingBatchTransformation** embeds a batch with one generator call. The default batch size is 64. [Embedding Batch (AI)](/docs/blocking-transformations/embedding-batch/)
+- **VectorStoreSource** and **VectorStoreDestination** read a similarity search or a filtered collection, and upsert records in batches. The destination does not create embeddings. Put an embedding transformation in front of it. [Vector Store (AI)](/docs/specialized-connectors/vector/)
+
 ## Learn More
 
 To deepen your knowledge of ETLBox:

@@ -31,10 +31,12 @@ Some connectors are included in the **ETLBox core package**, while others requir
 | **DataFrameDestination**       | `ETLBox.Analysis`    | Writes processed data into a `Microsoft.Data.Analysis.DataFrame`. |
 | **VoidDestination**            | `ETLBox` (Core)      | Discards records, useful for filtering operations. |
 | **LogDestination**             | `ETLBox` (Core)      | Writes each record into a log output using a Microsoft `ILogger`. |
+| **VectorStoreSource**          | `ETLBox.AI`          | Reads records from a vector store by similarity search or filter. |
+| **VectorStoreDestination**     | `ETLBox.AI`          | Upserts records into a vector store collection. |
 
 ### Installation
 
-All connectors except **DataFrameSource** and **DataFrameDestination** are included in the **ETLBox core package**.
+All connectors except the **DataFrame** and **Vector** connectors are included in the **ETLBox core package**. The vector connectors are described on [Vector Store (AI)](../vector/).
 
 To use the **DataFrame connectors**, install the `ETLBox.Analysis` package:
 

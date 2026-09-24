@@ -13,10 +13,10 @@
 			"path": "../etlbox.demo"
 		},
 		{
-			"path": "../etlboxperts.website"
+			"path": "../etlbox.tests"
 		},
 		{
-			"path": "../directsync.website"
+			"path": "../etlbox.source"
 		}
 	],
 	"settings": {}
