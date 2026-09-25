@@ -357,3 +357,25 @@ foreach (var node in nodes)
 ```
 
 These methods help visualize how data flows through the network without executing it.
+
+## Testing a linked network
+
+`NetworkHelper` replaces a source, destination, or error destination after the flow is already linked. A unit test can swap a `DbSource` or `DbDestination` for a `MemorySource` or `MemoryDestination`, then call `Network.Execute` on the replacement. The production linking code stays as it is. Predicates on the original links are kept.
+
+```csharp
+var testSource = new MemorySource<MyRow>();
+testSource.Data = new List<MyRow> {
+    new MyRow { Id = 1, Value = "A" },
+    new MyRow { Id = 2, Value = "B" }
+};
+var received = new List<MyRow>();
+var testDestination = new CustomDestination<MyRow>((row, count) => received.Add(row));
+
+NetworkHelper.ReplaceSource(flow.Source, sources => sources[0], testSource);
+NetworkHelper.ReplaceDestination(testSource, destinations => destinations[0], testDestination);
+Network.Execute(testSource);
+
+Assert.Equal(2, received.Count);
+```
+
+Replace the nodes before execution. The replacement has to be a real data flow component. See the [unit testing recipe](/recipes/testing/unit-testing/#replacing-nodes-in-an-already-linked-flow) for a complete example, including a match by `TaskName` and an error destination.

@@ -135,6 +135,28 @@ This example demonstrates how in-memory data can be transformed using an ETLBox 
 
 This approach enables a true ETL pipeline for in-memory data, making it easier to extend the process with additional steps like error handling, filtering, merging, or multicasting. Instead of manually iterating over a collection with a `foreach` loop, the pipeline ensures that transformations, validations, and data flow control are handled in a structured and scalable way.
 
+## Unit tests
+
+`MemorySource` and `MemoryDestination` are the usual stand-ins when a linked flow should run without a database or file. `NetworkHelper` replaces a source, a destination, or an error destination in a flow that is already linked. Give the helper a real component and call it before `Network.Execute`. Link predicates stay attached to the replacement. A `CustomDestination` can collect the rows so the test can assert them.
+
+```csharp
+var testSource = new MemorySource<MyRow>();
+testSource.Data = new List<MyRow> {
+    new MyRow { Id = 1, Value = "A" },
+    new MyRow { Id = 2, Value = "B" }
+};
+var received = new List<MyRow>();
+var testDestination = new CustomDestination<MyRow>((row, count) => received.Add(row));
+
+NetworkHelper.ReplaceSource(flow.Source, sources => sources[0], testSource);
+NetworkHelper.ReplaceDestination(testSource, destinations => destinations[0], testDestination);
+Network.Execute(testSource);
+
+Assert.Equal(2, received.Count);
+```
+
+The same methods accept a match, for example by `TaskName`, and `ReplaceErrorDestination` covers a destination linked with `LinkErrorTo`. A full example is in the [unit testing recipe](/recipes/testing/unit-testing/#replacing-nodes-in-an-already-linked-flow).
+
 ## Concurrent Memory Destination
 
 The `ConcurrentMemoryDestination<T>` is a thread-safe alternative to `MemoryDestination<T>`.

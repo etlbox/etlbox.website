@@ -1,7 +1,7 @@
 ---
 title: "Unit Testing"
-description: "Unit-test ETLBox data flows in C#. Starting points for asserting transformation logic, using memory sources, and automating .NET ETL tests."
-lead: "This recipe demonstrate how unit tests could be written to test data flows. The described approaches should only be considered as a starting point - there are a lot of different possibilities to write unit tests for ETLBox - as the library is written in .NET, all test framework and other test packages are fully supported."
+description: "Unit-test ETLBox data flows in C#. Starting points for asserting transformation logic, replacing linked sources and destinations with NetworkHelper, and automating .NET ETL tests."
+lead: "This recipe demonstrates how unit tests can be written for data flows. The approaches are starting points. ETLBox is a .NET library, so any test framework and supporting package can be used."
 draft: false
 menu:
   recipes:
@@ -192,6 +192,43 @@ namespace ETLBox.DataFlowTests.ReplacingSourceAndDestinationExample
     }
 }
 ```
+
+## Replacing nodes in an already linked flow
+
+`NetworkHelper` swaps sources, destinations, and error destinations in a flow that is already linked. The production class that called `LinkTo` stays unchanged. The test supplies real components such as `MemorySource`, `MemoryDestination`, `CustomSource`, or `CustomDestination`, then runs `Network.Execute` on the replacement source.
+
+Call the helper before `Network.Execute`. A replacement has to be a real data flow component. An interface-only mock is not a node in the network. Link predicates stay on the link, so a filtered destination still receives only the rows that matched.
+
+Pick the node by index, or match exactly one component, for example by `TaskName`:
+
+```C#
+var flow = new ProductionFlow();
+flow.Link();
+
+var testSource = new MemorySource<Row>();
+testSource.Data = new List<Row> {
+    new Row { Id = 1, Value = "A" },
+    new Row { Id = 2, Value = "B" }
+};
+var testDestination = new MemoryDestination<Row>();
+
+NetworkHelper.ReplaceSource(flow.Source, sources => sources[0], testSource);
+NetworkHelper.ReplaceDestination(testSource, destinations => destinations[0], testDestination);
+Network.Execute(testSource);
+
+Assert.Equal(new[] { "Adjusted A", "Adjusted B" }, testDestination.Data.Select(row => row.Value));
+```
+
+`ProductionFlow` in this example already links a `DbSource` named `DbSource` through a row transformation to a `DbDestination` named `DbDestination`. The same swap can select those ends by name:
+
+```C#
+NetworkHelper.ReplaceSource(flow.Source,
+    source => ((IDataFlowComponent)source).TaskName == "DbSource", testSource);
+NetworkHelper.ReplaceDestination(testSource,
+    destination => ((IDataFlowComponent)destination).TaskName == "DbDestination", testDestination);
+```
+
+`ReplaceErrorDestination` works the same way for a destination linked with `LinkErrorTo`. To assert a write without a database, use a `CustomDestination` and let Moq verify the action inside it. Moq replaces the side effect, while the destination itself remains an ETLBox component.
 
 ## Unit tests using Moq for Source
 
