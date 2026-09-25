@@ -44,8 +44,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     animateValue(countryElement, 0, countryCount, animationDuration);
   } catch (error) {
     console.error('Error fetching data:', error);
-    badgeElement.textContent = '1M+';
-    packageElement.textContent = '36+';
-    countryElement.textContent = '18+';
   }
 });

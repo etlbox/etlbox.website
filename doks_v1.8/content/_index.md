@@ -1,6 +1,8 @@
 ---
 title : "ETLBox"
 description: "Build production-ready data pipelines in .NET. Extract, transform and load data directly in C# — without introducing another ETL platform."
+seo:
+  title: "ETLBox | Code-First ETL Library for .NET and C#"
 lead: "Extract, transform and load data directly in C# — without introducing another ETL platform."
 draft: false
 images: []

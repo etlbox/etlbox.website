@@ -27,6 +27,13 @@ image_light = "/images/references/iwg.svg"
 image_dark = "/images/references/iwg.svg"
 
 [[customer]]
+name = "National Bank of Serbia"
+country = "Serbia"
+link = "https://www.nbs.rs/"
+image_light = "/images/references/nbs.svg"
+image_dark = "/images/references/nbs.svg"
+
+[[customer]]
 name = "Flowwright"
 country = "USA"
 link = "/landing/flowwright/"
@@ -83,18 +90,11 @@ image_light = "/images/references/normandin-beaudry.png"
 image_dark = "/images/references/normandin-beaudry.png"
 
 [[customer]]
-name = "EECO"
-country = "USA"
-link = "https://eecoonline.com/"
-image_light = "/images/references/eeco.png"
-image_dark = "/images/references/eeco.png"
-
-[[customer]]
-name = "SEW Eurodrive"
-country = "Germany"
-link = "https://www.sew-eurodrive.de/"
-image_light = "/images/references/sew-eurodrive_light.svg"
-image_dark = "/images/references/sew-eurodrive_dark.svg"
+name = "Djøf"
+country = "Denmark"
+link = "https://djoef.dk/"
+image_light = "/images/references/djof_light.svg"
+image_dark = "/images/references/djof_dark.svg"
 
 [[customer]]
 name = "ATD Solutions Ltd."
