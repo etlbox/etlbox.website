@@ -1,6 +1,8 @@
 ---
 title: "CloneBox"
 description: "CloneBox deep-clones any .NET object graph. Clone into another type or an existing instance. Free MIT library from ETLBox."
+seo:
+  title: "CloneBox | Deep-Clone .NET Object Graphs"
 lead: "Deep-clone any .NET object — or copy into another. Super easy, very fast, and it just works across the graphs you actually use. Free and open source from the makers of <a href=\"https://www.etlbox.net\">ETLBox</a>."
 draft: false
 images: []

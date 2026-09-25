@@ -1,6 +1,8 @@
 ---
 title : "DB Extensions"
 description: "ETLBox.DbExtensions extends IDbConnection like Dapper does — with bulk insert, update, delete, and merge on the connection you already use."
+seo:
+  title: "DB Extensions | Bulk SQL for Dapper and ADO.NET"
 lead: "Like Dapper, we extend your <code>IDbConnection</code>. Keep querying with Dapper. Write thousands of rows with one extra method — much faster than a loop."
 draft: false
 images: []
