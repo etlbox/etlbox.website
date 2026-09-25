@@ -69,7 +69,7 @@ Settings.MaxBufferSize = 10000; // Global default
 | [RowTransformation](../row)         | Applies custom logic to each row                                            |
 | [CachedRowTransformation](../cached-row)   | Like RowTransformation, but caches previously processed rows               |
 | [ConditionalSplit](../conditional-split)   | Condition-based row routing with counters.                |
-| [ColumnTransformation](../column)      | Renames, reorders, or removes columns; outputs dynamic ExpandoObject        |
+| [ColumnTransformation](../column)      | Renames, reorders, removes, or adds columns; outputs dynamic ExpandoObject        |
 | [DbTypeCheck](../../relational-databases/db-type-check)      | Checks incoming data against a table definition.   |
 | [Distinct](../distinct)                  | Removes duplicate rows                                                      |
 | [WhereTransformation](../filter)      | Filters rows based on a predicate                                           |
@@ -91,7 +91,7 @@ Settings.MaxBufferSize = 10000; // Global default
 
 **ConditionalSplit**: Evaluates each incoming row against a predicate. If the condition is met, the row is routed to the main output; otherwise, it can be sent to a secondary path.
 
-**ColumnTransformation**: Changes the structure of the row by renaming, reordering, or removing properties. Always returns a dynamic object.
+**ColumnTransformation**: Changes the structure of the row by renaming, reordering, removing, or adding properties. Always returns a dynamic object.
 
 **DbTypeCheck**: Validates incoming data against database column types, ensuring consistency before insertion.
 

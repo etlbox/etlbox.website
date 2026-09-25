@@ -1,7 +1,7 @@
 ---
 title: "Column Transformation"
-description: "ColumnTransformation is a transformation that renames, reorders, or removes columns. Column mappings can be provided manually or through attributes like RenameColumn, ReorderColumn, and RemoveColumn."
-lead: "The ColumnTransformation allows you to rename, reorder, and remove column or property names from your ingoing data. You can provide mappings for renaming and reordering, or flag columns for removal."
+description: "ColumnTransformation is a transformation that renames, reorders, removes, or adds columns. Column mappings can be provided manually or through attributes like RenameColumn, ReorderColumn, RemoveColumn, and AddColumn."
+lead: "The ColumnTransformation allows you to rename, reorder, remove, and add columns or properties on your ingoing data. You can provide mappings, attributes, or functions for each change."
 draft: false
 images: []
 menu:
@@ -14,10 +14,10 @@ chatgpt-review: true
 
 ## Overview
 
-The `ColumnTransformation` component modifies the structure of incoming data by allowing you to **rename**, **reorder**, or **remove** columns (or properties). It supports both **strongly typed objects (POCOs)** and **dynamic `ExpandoObject`** inputs, and it is designed to work seamlessly across both styles.
+The `ColumnTransformation` component modifies the structure of incoming data by allowing you to **rename**, **reorder**, **remove**, or **add** columns (or properties). It supports both **strongly typed objects (POCOs)** and **dynamic `ExpandoObject`** inputs, and it is designed to work seamlessly across both styles.
 
 Transformations can be defined using:
-1. **Attributes** on POCO properties
+1. **Attributes** on POCO properties, or on the class when adding columns
 2. **Explicit mappings** assigned to the transformation
 3. **Dynamic functions** for rule-based changes
 
@@ -166,6 +166,68 @@ When using `RemoveColumns`, attribute-based removal is ignored.
 
 ```csharp
 columnTrans.RemoveFunc = colName => colName == "RemoveCol";
+```
+
+## Adding Columns
+
+You can append new properties to each output row. Added columns are written after the columns that remain from the input.
+
+#### Supported Methods
+
+- **Attributes**: Apply `[AddColumn]` to the class. Several attributes can be used together. Each one sets a constant value.
+- **Mappings**: Assign `AddColumn` objects to `AddColumns`. Use `ValueFunc` when the value comes from the current row.
+- **Functions**: Use `AddFunc` to append one more property for each row. Return `null` when that row should stay unchanged.
+
+#### Example – Using Attributes (POCO)
+
+`[AddColumn]` is placed on the class. The first argument is the new property name, the second is the constant value.
+
+```csharp
+[AddColumn("Source", "ETL")]
+[AddColumn("Active", true)]
+public class MyInputRow {
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+var source = new MemorySource<MyInputRow>();
+source.DataAsList.Add(new MyInputRow { Id = 1, Name = "A" });
+var map = new ColumnTransformation<MyInputRow>();
+var dest = new MemoryDestination();
+source.LinkTo<ExpandoObject>(map).LinkTo(dest);
+```
+
+The output keeps `Id` and `Name`, then appends `Source` (`"ETL"`) and `Active` (`true`).
+
+#### Example – Using Mappings
+
+The same `AddColumn` objects can be passed in a list. `ValueFunc` calculates the value from the current row and is used instead of a constant.
+
+```csharp
+var map = new ColumnTransformation<MyInputRow>();
+map.AddColumns = new List<AddColumn> {
+    new AddColumn("FullName") {
+        ValueFunc = row => row.Id.ToString() + "-" + row.Name
+    },
+    new AddColumn("Source", "FILE")
+};
+```
+
+{{< callout context="caution" icon="outline/alert-triangle" >}}
+When `AddColumns` is set, `[AddColumn]` attributes on the class are ignored.
+{{< /callout >}}
+
+#### Example – Using AddFunc
+
+`AddFunc` is called once for every input row, after the columns from `AddColumns`. It receives that input row, for example your POCO, and returns the extra property as an `AddedColumn`. The name and the value can differ from row to row. Return `null` to add nothing for that row.
+
+```csharp
+var map = new ColumnTransformation<MyInputRow>();
+map.AddFunc = row => {
+    if (row.Id == 2)
+        return new AddedColumn("Other", row.Id);
+    return new AddedColumn("Added", "row-" + row.Id);
+};
 ```
 
 ## Nested Object Handling
