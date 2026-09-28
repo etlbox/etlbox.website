@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": "doks_v1.8"
-		},
-		{
 			"path": "../clonebox"
 		},
 		{
@@ -17,6 +14,9 @@
 		},
 		{
 			"path": "../etlbox.source"
+		},
+		{
+			"path": "doks"
 		}
 	],
 	"settings": {}
