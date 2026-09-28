@@ -3,6 +3,15 @@
 const DEFAULT_TIMEOUT_MS = 10 * 60 * 1000; // 10 minutes
 const POLL_INTERVAL_MS = 10 * 1000; // 10 seconds
 
+// Other product sites set HUGO_ENV in Netlify. Only the main ETLBox deploy
+// (unset or production) should start the Kroki VM.
+const SKIP_HUGO_ENVS = new Set(['next', 'clone', 'experts', 'directsync']);
+
+function shouldRunKroki() {
+  const hugoEnv = process.env.HUGO_ENVIRONMENT || process.env.HUGO_ENV || '';
+  return !SKIP_HUGO_ENVS.has(hugoEnv);
+}
+
 const AZURE_MANAGEMENT_RESOURCE = 'https://management.azure.com/';
 const AZURE_API_VERSION = '2023-07-01';
 
@@ -140,6 +149,15 @@ module.exports = {
    *  2. Waits until the Kroki endpoint responds successfully
    */
   onPreBuild: async ({ utils, inputs }) => {
+    if (!shouldRunKroki()) {
+      const hugoEnv = process.env.HUGO_ENVIRONMENT || process.env.HUGO_ENV;
+      utils.status.show({
+        title: 'Azure Kroki VM skipped',
+        summary: `HUGO_ENV is "${hugoEnv}". The VM starts only for the ETLBox deploy.`,
+      });
+      return;
+    }
+
     const krokiUrl = (inputs && inputs.krokiUrl) || 'https://kroki.etlbox.dev/';
 
     try {
@@ -164,6 +182,10 @@ module.exports = {
    *  1. Stops (deallocates) the Azure VM to avoid unnecessary costs.
    */
   onEnd: async ({ utils }) => {
+    if (!shouldRunKroki()) {
+      return;
+    }
+
     try {
       if (typeof fetch !== 'function') {
         utils.status.show({
