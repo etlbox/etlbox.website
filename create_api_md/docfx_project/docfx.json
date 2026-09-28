@@ -2,8 +2,7 @@
   "metadata": [
     {
       "src": [
-        { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox" },
-        { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer" },
+        { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox" },         
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Analysis" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.AnalysisServices" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Apache.Kafka" },
@@ -26,6 +25,7 @@
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Sap.Ase" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Snowflake" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.SQLite" },
+        { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.SqlServer" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Xml" }
       ],
       "dest": "api",
@@ -36,6 +36,7 @@
     {
       "src": [
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox" },
+        { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.AI" },       
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.ClickHouse" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.Db2" },
         { "files": [ "**.csproj" ], "src": "..\\..\\..\\etlbox.source\\ETLBox.DbExtensions" },
