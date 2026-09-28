@@ -27,6 +27,24 @@
 [context.next.environment]
   HUGO_ENV = "next"
 
+[context.clone]
+  command = "npm run build"
+
+[context.clone.environment]
+  HUGO_ENV = "clone"
+
+[context.experts]
+  command = "npm run build"
+
+[context.experts.environment]
+  HUGO_ENV = "experts"
+
+[context.directsync]
+  command = "npm run build"
+
+[context.directsync.environment]
+  HUGO_ENV = "directsync"
+
 [dev]
   framework = "#custom"
   command = "npm run dev"
