@@ -1,22 +1,28 @@
 {
 	"folders": [
 		{
+			"name": "doks",
+			"path": "doks"
+		},
+		{
+			"name": "clonebox",
 			"path": "../clonebox"
 		},
 		{
+			"name": "create_api_md",
 			"path": "create_api_md"
 		},
 		{
+			"name": "etlbox.demo",
 			"path": "../etlbox.demo"
 		},
 		{
+			"name": "etlbox.tests",
 			"path": "../etlbox.tests"
 		},
 		{
+			"name": "etlbox.source",
 			"path": "../etlbox.source"
-		},
-		{
-			"path": "doks"
 		}
 	],
 	"settings": {}
