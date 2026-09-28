@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10224
+weight: 10245
 toc: false
 ---
 
@@ -88,6 +88,33 @@ toc: false
   </table>
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_GenericTypeInfo_AddColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.AddColumnAttributes*"></a>
+  <h4 id="ETLBox_GenericTypeInfo_AddColumnAttributes" data-uid="ETLBox.GenericTypeInfo.AddColumnAttributes">AddColumnAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public List<AddColumn> AddColumnAttributes { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="/api/etlbox/addcolumn">AddColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_GenericTypeInfo_AggregateColumnAttributes_" data-uid="ETLBox.GenericTypeInfo.AggregateColumnAttributes*"></a>
   <h4 id="ETLBox_GenericTypeInfo_AggregateColumnAttributes" data-uid="ETLBox.GenericTypeInfo.AggregateColumnAttributes">AggregateColumnAttributes</h4>
   <div class="markdown level1 summary"></div>

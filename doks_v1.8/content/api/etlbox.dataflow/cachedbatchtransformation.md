@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10103
+weight: 10123
 toc: false
 ---
 
@@ -101,6 +101,12 @@ toc: false
       <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_CleanUpOnFaulted_System_Exception_">BatchTransformation&lt;ExpandoObject, ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_CompleteBuffer">BatchTransformation&lt;ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_FaultBuffer_System_Exception_">BatchTransformation&lt;ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_InvokeInitActionOnce">BatchTransformation&lt;ExpandoObject, ExpandoObject&gt;.InvokeInitActionOnce()</a>
     </div>
     <div>
@@ -192,6 +198,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a>

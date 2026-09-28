@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10180
+weight: 10201
 toc: false
 ---
 
@@ -59,6 +59,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/rowmultiplication-2#ETLBox_DataFlow_RowMultiplication_2_CleanUpOnFaulted_System_Exception_">RowMultiplication&lt;ExpandoObject, ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -149,6 +155,12 @@ toc: false
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a>

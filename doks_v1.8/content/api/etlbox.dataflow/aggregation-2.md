@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10090
+weight: 10110
 toc: false
 ---
 
@@ -44,6 +44,12 @@ When all rows have been processed by the aggregation, the aggregated values are 
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;TInput, TOutput&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;TInput, TOutput&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;TOutput&gt;.LinkTo(IDataFlowDestination&lt;TOutput&gt;)</a>
@@ -706,6 +712,51 @@ or pass a list to the <a class="xref" href="/api/etlbox.dataflow/aggregation-2#E
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <a id="ETLBox_DataFlow_Aggregation_2_CompleteBuffer_" data-uid="ETLBox.DataFlow.Aggregation`2.CompleteBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_Aggregation_2_CompleteBuffer" data-uid="ETLBox.DataFlow.Aggregation`2.CompleteBuffer">CompleteBuffer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void CompleteBuffer()
+```
+
+{{< rawhtml >}}
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;TInput, TOutput&gt;.CompleteBuffer()</a></div>
+  <a id="ETLBox_DataFlow_Aggregation_2_FaultBuffer_" data-uid="ETLBox.DataFlow.Aggregation`2.FaultBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_Aggregation_2_FaultBuffer_System_Exception_" data-uid="ETLBox.DataFlow.Aggregation`2.FaultBuffer(System.Exception)">FaultBuffer(Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void FaultBuffer(Exception e)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;TInput, TOutput&gt;.FaultBuffer(Exception)</a></div>
   <a id="ETLBox_DataFlow_Aggregation_2_InitComponent_" data-uid="ETLBox.DataFlow.Aggregation`2.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_Aggregation_2_InitComponent" data-uid="ETLBox.DataFlow.Aggregation`2.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>

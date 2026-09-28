@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10161
+weight: 10181
 toc: false
 ---
 
@@ -67,6 +67,12 @@ see the <a class="xref" href="/api/etlbox.dataflow/concurrentmemorydestination">
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_TargetAction">DataFlowDestination&lt;ExpandoObject&gt;.TargetAction</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_CompleteBuffer">DataFlowDestination&lt;ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_FaultBuffer_System_Exception_">DataFlowDestination&lt;ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowdestination-1#ETLBox_DataFlow_DataFlowDestination_1_UseBufferBlock">DataFlowDestination&lt;ExpandoObject&gt;.UseBufferBlock</a>

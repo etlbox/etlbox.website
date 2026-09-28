@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10121
+weight: 10141
 toc: false
 ---
 
@@ -68,6 +68,12 @@ The InMemory target should always be the target of the smaller amount of data to
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_Buffer">CrossJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.Buffer</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_CompleteBuffer">CrossJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/crossjoin-3#ETLBox_DataFlow_CrossJoin_3_FaultBuffer_System_Exception_">CrossJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -158,6 +164,12 @@ The InMemory target should always be the target of the smaller amount of data to
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a>

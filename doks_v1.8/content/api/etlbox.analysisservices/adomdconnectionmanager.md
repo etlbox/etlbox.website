@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.analysisservices"
-weight: 10007
+weight: 10027
 toc: false
 ---
 

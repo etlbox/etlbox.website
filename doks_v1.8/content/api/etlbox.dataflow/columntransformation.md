@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10112
+weight: 10132
 toc: false
 ---
 
@@ -14,9 +14,12 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ColumnTransformation">
   <h1 id="ETLBox_DataFlow_ColumnTransformation" data-uid="ETLBox.DataFlow.ColumnTransformation" class="text-break">Class ColumnTransformation</h1>
-  <div class="markdown level0 summary"><p>Allows you to rename, remove or reorders the columns/properties of your ingoing data.
-This transformation works with objects and dynamic ExpandoObjects as input data type.<br>
-It will always convert the input type into an ExpandoObject as output.</p>
+  <div class="markdown level0 summary"><p>Allows you to rename, remove, reorder, or add columns/properties of your ingoing data.
+This transformation works with objects and dynamic ExpandoObjects as input data type.
+It will always convert the input type into an ExpandoObject as output.
+Added properties are appended after the reorganized input columns.
+A non-empty <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_AddColumns">AddColumns</a> list replaces <a class="xref" href="/api/etlbox/addcolumn">AddColumn</a> attributes.
+If <a class="xref" href="/api/etlbox/addcolumn#ETLBox_AddColumn_ValueFunc">ValueFunc</a> is set, it replaces the constant value.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -57,6 +60,12 @@ It will always convert the input type into an ExpandoObject as output.</p>
       <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_RemoveColumns">ColumnTransformation&lt;ExpandoObject&gt;.RemoveColumns</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_AddColumns">ColumnTransformation&lt;ExpandoObject&gt;.AddColumns</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_AddFunc">ColumnTransformation&lt;ExpandoObject&gt;.AddFunc</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_RenameFunc">ColumnTransformation&lt;ExpandoObject&gt;.RenameFunc</a>
     </div>
     <div>
@@ -87,10 +96,22 @@ It will always convert the input type into an ExpandoObject as output.</p>
       <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_CleanUpOnFaulted_System_Exception_">ColumnTransformation&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_CompleteBuffer">ColumnTransformation&lt;ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_FaultBuffer_System_Exception_">ColumnTransformation&lt;ExpandoObject&gt;.FaultBuffer(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_LinkErrorTo_ETLBox_IDataFlowDestination_ETLBox_ETLBoxError__">ColumnTransformation&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>

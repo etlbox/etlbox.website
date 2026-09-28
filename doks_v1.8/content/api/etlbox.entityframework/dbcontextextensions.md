@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.entityframework"
-weight: 10215
+weight: 10236
 toc: false
 ---
 
@@ -85,12 +85,14 @@ Table name, column mapping, and identity columns are derived from the EF model.<
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be deleted.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -105,7 +107,8 @@ Table name, column mapping, and identity columns are derived from the EF model.<
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -135,17 +138,20 @@ Table name, column mapping, and identity columns are derived from the EF model.<
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be deleted.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox.dbextensions/bulkoptions-1">BulkOptions</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The configurable options for the bulk delete operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -160,7 +166,8 @@ Table name, column mapping, and identity columns are derived from the EF model.<
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -190,12 +197,14 @@ Table name, column mapping, and identity columns are derived from the EF model.<
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be inserted.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -210,7 +219,8 @@ Table name, column mapping, and identity columns are derived from the EF model.<
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -240,17 +250,20 @@ Table name, column mapping, and identity columns are derived from the EF model.<
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be inserted.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox.dbextensions/bulkoptions-1">BulkOptions</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The configurable options for the bulk insert operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -265,7 +278,8 @@ Table name, column mapping, and identity columns are derived from the EF model.<
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -296,12 +310,14 @@ The merge combines insert, update, and optionally delete operations.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be merged.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -316,7 +332,8 @@ The merge combines insert, update, and optionally delete operations.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -347,17 +364,20 @@ The merge combines insert, update, and optionally delete operations.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be merged.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox.dbextensions/mergebulkoptions-1">MergeBulkOptions</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The configurable options for the bulk merge operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -372,7 +392,8 @@ The merge combines insert, update, and optionally delete operations.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -402,12 +423,14 @@ The merge combines insert, update, and optionally delete operations.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be updated.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -422,7 +445,8 @@ The merge combines insert, update, and optionally delete operations.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -452,17 +476,20 @@ The merge combines insert, update, and optionally delete operations.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></td>
         <td><span class="parametername">dbContext</span></td>
-        <td></td>
+        <td><p>The Entity Framework Core context.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
         <td><span class="parametername">entities</span></td>
-        <td></td>
+        <td><p>The entities to be updated.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="/api/etlbox.dbextensions/bulkoptions-1">BulkOptions</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The configurable options for the bulk update operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -477,7 +504,8 @@ The merge combines insert, update, and optionally delete operations.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The entity type used for the bulk operation.</p>
+</td>
       </tr>
     </tbody>
   </table>

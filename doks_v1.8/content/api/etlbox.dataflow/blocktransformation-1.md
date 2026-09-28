@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10097
+weight: 10117
 toc: false
 ---
 
@@ -95,6 +95,12 @@ But as this block any processing until all data is buffered, it will also need t
       <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_CleanUpOnFaulted_System_Exception_">BatchTransformation&lt;TInput, TInput&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_CompleteBuffer">BatchTransformation&lt;TInput, TInput&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_FaultBuffer_System_Exception_">BatchTransformation&lt;TInput, TInput&gt;.FaultBuffer(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/batchtransformation-2#ETLBox_DataFlow_BatchTransformation_2_InvokeInitActionOnce">BatchTransformation&lt;TInput, TInput&gt;.InvokeInitActionOnce()</a>
     </div>
     <div>
@@ -102,6 +108,12 @@ But as this block any processing until all data is buffered, it will also need t
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;TInput, TInput&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;TInput, TInput&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TInput&gt;.SourceBlock</a>
@@ -192,6 +204,12 @@ But as this block any processing until all data is buffered, it will also need t
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a>

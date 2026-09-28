@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox"
-weight: 10340
+weight: 10361
 toc: false
 ---
 
@@ -170,6 +170,35 @@ But to avoid unexpected behavior, this property is set to true by default.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_Settings_CloneSettings_" data-uid="ETLBox.Settings.CloneSettings*"></a>
+  <h4 id="ETLBox_Settings_CloneSettings" data-uid="ETLBox.Settings.CloneSettings">CloneSettings</h4>
+  <div class="markdown level1 summary"><p>The default settings for the CloneBox library, which is used for cloning objects in ETLBox.
+Objects are cloned in components like Multicast or Merge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public static CloneSettings CloneSettings { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://github.com/etlbox/clonebox/blob/874ef574f38586c85cb0fddf9e022b74ccc5e230/CloneBox.Source/CloneSettings.cs">CloneSettings</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10111
+weight: 10131
 toc: false
 ---
 
@@ -14,9 +14,12 @@ toc: false
 
             <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.ColumnTransformation`1">
   <h1 id="ETLBox_DataFlow_ColumnTransformation_1" data-uid="ETLBox.DataFlow.ColumnTransformation`1" class="text-break">Class ColumnTransformation&lt;TInput&gt;</h1>
-  <div class="markdown level0 summary"><p>Allows you to rename, remove or reorders the columns/properties of your ingoing data.
-This transformation works with objects and dynamic ExpandoObjects as input data type.<br>
-It will always convert the input type into an ExpandoObject as output.</p>
+  <div class="markdown level0 summary"><p>Allows you to rename, remove, reorder, or add columns/properties of your ingoing data.
+This transformation works with objects and dynamic ExpandoObjects as input data type.
+It will always convert the input type into an ExpandoObject as output.
+Added properties are appended after the reorganized input columns.
+A non-empty <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_AddColumns">AddColumns</a> list replaces <a class="xref" href="/api/etlbox/addcolumn">AddColumn</a> attributes.
+If <a class="xref" href="/api/etlbox/addcolumn#ETLBox_AddColumn_ValueFunc">ValueFunc</a> is set, it replaces the constant value.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -44,6 +47,12 @@ It will always convert the input type into an ExpandoObject as output.</p>
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>
@@ -271,6 +280,65 @@ It will always convert the input type into an ExpandoObject as output.</p>
 {{< rawhtml >}}
   <h3 id="properties">Properties
 </h3>
+  <a id="ETLBox_DataFlow_ColumnTransformation_1_AddColumns_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.AddColumns*"></a>
+  <h4 id="ETLBox_DataFlow_ColumnTransformation_1_AddColumns" data-uid="ETLBox.DataFlow.ColumnTransformation`1.AddColumns">AddColumns</h4>
+  <div class="markdown level1 summary"><p>Defines new properties appended to the output object, in list order.
+A non-empty list replaces <a class="xref" href="/api/etlbox/addcolumn">AddColumn</a> attributes on the input type.
+If an entry has <a class="xref" href="/api/etlbox/addcolumn#ETLBox_AddColumn_ValueFunc">ValueFunc</a> set, that function replaces its constant value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public ICollection<AddColumn> AddColumns { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="/api/etlbox/addcolumn">AddColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_ColumnTransformation_1_AddFunc_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.AddFunc*"></a>
+  <h4 id="ETLBox_DataFlow_ColumnTransformation_1_AddFunc" data-uid="ETLBox.DataFlow.ColumnTransformation`1.AddFunc">AddFunc</h4>
+  <div class="markdown level1 summary"><p>Optional function invoked once per row after <a class="xref" href="/api/etlbox.dataflow/columntransformation-1#ETLBox_DataFlow_ColumnTransformation_1_AddColumns">AddColumns</a>.
+Return a name and value to append one more property, or null to append nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    public Func<TInput, AddedColumn> AddFunc { get; set; }
+```
+
+{{< rawhtml >}}
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInput, <a class="xref" href="/api/etlbox/addedcolumn">AddedColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_ColumnTransformation_1_ProgressCount_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.ProgressCount*"></a>
   <h4 id="ETLBox_DataFlow_ColumnTransformation_1_ProgressCount" data-uid="ETLBox.DataFlow.ColumnTransformation`1.ProgressCount">ProgressCount</h4>
   <div class="markdown level1 summary"></div>
@@ -594,6 +662,51 @@ the <a class="xref" href="/api/etlbox/reordercolumn">ReorderColumn</a> attribute
 {{< rawhtml >}}
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <a id="ETLBox_DataFlow_ColumnTransformation_1_CompleteBuffer_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.CompleteBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_ColumnTransformation_1_CompleteBuffer" data-uid="ETLBox.DataFlow.ColumnTransformation`1.CompleteBuffer">CompleteBuffer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void CompleteBuffer()
+```
+
+{{< rawhtml >}}
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.CompleteBuffer()</a></div>
+  <a id="ETLBox_DataFlow_ColumnTransformation_1_FaultBuffer_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.FaultBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_ColumnTransformation_1_FaultBuffer_System_Exception_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.FaultBuffer(System.Exception)">FaultBuffer(Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void FaultBuffer(Exception e)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;TInput, ExpandoObject&gt;.FaultBuffer(Exception)</a></div>
   <a id="ETLBox_DataFlow_ColumnTransformation_1_InitComponent_" data-uid="ETLBox.DataFlow.ColumnTransformation`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_ColumnTransformation_1_InitComponent" data-uid="ETLBox.DataFlow.ColumnTransformation`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>

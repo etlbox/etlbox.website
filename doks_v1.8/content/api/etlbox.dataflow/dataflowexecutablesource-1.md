@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10133
+weight: 10153
 toc: false
 ---
 
@@ -24,6 +24,7 @@ toc: false
     <div class="level2"><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent">DataFlowComponent</a></div>
     <div class="level3"><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1">DataFlowSource</a>&lt;TOutput&gt;</div>
     <div class="level4"><span class="xref">DataFlowExecutableSource&lt;TOutput&gt;</span></div>
+      <div class="level5"><a class="xref" href="/api/etlbox.ai/vectorstoresource-2">VectorStoreSource&lt;TKey, TRecord&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.analysis/dataframesource-1">DataFrameSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.apache.kafka/kafkasource-1">KafkaSource&lt;TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="/api/etlbox.azure.cosmosdb/cosmossource-1">CosmosSource&lt;TOutput&gt;</a></div>
@@ -485,6 +486,20 @@ toc: false
   <div><a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;TOutput&gt;.SourceBlock</a></div>
   <h3 id="methods">Methods
 </h3>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_CompleteBuffer_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.CompleteBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_CompleteBuffer" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.CompleteBuffer">CompleteBuffer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void CompleteBuffer()
+```
+
+{{< rawhtml >}}
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a></div>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_Execute" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.Execute">Execute()</h4>
   <div class="markdown level1 summary"><p>Starts the data flow for all connected components (also for other sources in the network).
@@ -606,6 +621,37 @@ Waits until all destinations run to completion.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_FaultBuffer_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.FaultBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_FaultBuffer_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.FaultBuffer(System.Exception)">FaultBuffer(Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected override void FaultBuffer(Exception e)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a></div>
   <a id="ETLBox_DataFlow_DataFlowExecutableSource_1_InitComponent_" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InitComponent*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowExecutableSource_1_InitComponent" data-uid="ETLBox.DataFlow.DataFlowExecutableSource`1.InitComponent">InitComponent()</h4>
   <div class="markdown level1 summary"></div>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10167
+weight: 10187
 toc: false
 ---
 
@@ -74,6 +74,12 @@ can be compared with a left or right join.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_Buffer">MergeJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.Buffer</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_CompleteBuffer">MergeJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/mergejoin-3#ETLBox_DataFlow_MergeJoin_3_FaultBuffer_System_Exception_">MergeJoin&lt;ExpandoObject, ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_SourceBlock">DataFlowSource&lt;ExpandoObject&gt;.SourceBlock</a>
@@ -164,6 +170,12 @@ can be compared with a left or right join.</p>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CompleteBuffer">DataFlowComponent.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_">DataFlowComponent.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowcomponent#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a>

@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10131
+weight: 10151
 toc: false
 ---
 
@@ -757,6 +757,18 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
 ```
 
 {{< rawhtml >}}
+  <a id="ETLBox_DataFlow_DataFlowComponent_CompleteBuffer_" data-uid="ETLBox.DataFlow.DataFlowComponent.CompleteBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_CompleteBuffer" data-uid="ETLBox.DataFlow.DataFlowComponent.CompleteBuffer">CompleteBuffer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected abstract void CompleteBuffer()
+```
+
+{{< rawhtml >}}
   <a id="ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_" data-uid="ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultBufferOnPredecessorCompletion_System_Threading_Tasks_Task_" data-uid="ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultBufferOnPredecessorCompletion(System.Threading.Tasks.Task)">CompleteOrFaultBufferOnPredecessorCompletion(Task)</h4>
   <div class="markdown level1 summary"></div>
@@ -782,6 +794,35 @@ If you want to cancel the whole network, use Network.Cancel(..) instead</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><span class="parametername">WhenAllPredecessorCompletionTasks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_DataFlowComponent_FaultBuffer_" data-uid="ETLBox.DataFlow.DataFlowComponent.FaultBuffer*"></a>
+  <h4 id="ETLBox_DataFlow_DataFlowComponent_FaultBuffer_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowComponent.FaultBuffer(System.Exception)">FaultBuffer(Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+{{< /rawhtml >}}
+
+```C#
+    protected abstract void FaultBuffer(Exception e)
+```
+
+{{< rawhtml >}}
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
     </tbody>

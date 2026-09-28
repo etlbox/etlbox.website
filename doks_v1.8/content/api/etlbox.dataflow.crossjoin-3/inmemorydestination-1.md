@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow.crossjoin`3"
-weight: 10120
+weight: 10140
 toc: false
 ---
 
@@ -33,6 +33,12 @@ toc: false
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowjointarget-1#ETLBox_DataFlow_DataFlowJoinTarget_1_CompleteBuffer">DataFlowJoinTarget&lt;TInput&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowjointarget-1#ETLBox_DataFlow_DataFlowJoinTarget_1_FaultBuffer_System_Exception_">DataFlowJoinTarget&lt;TInput&gt;.FaultBuffer(Exception)</a>
+    </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowjointarget-1#ETLBox_DataFlow_DataFlowJoinTarget_1_CreateLinkInInternalFlow_ETLBox_DataFlow_DataFlowComponent_">DataFlowJoinTarget&lt;TInput&gt;.CreateLinkInInternalFlow(DataFlowComponent)</a>
     </div>

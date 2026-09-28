@@ -6,7 +6,7 @@ images: []
 menu:
   api:
     parent: "etlbox.dataflow"
-weight: 10146
+weight: 10166
 toc: false
 ---
 
@@ -107,6 +107,12 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_CleanUpOnFaulted_System_Exception_">DbTypeCheck&lt;ExpandoObject&gt;.CleanUpOnFaulted(Exception)</a>
     </div>
     <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_CompleteBuffer">DbTypeCheck&lt;ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_FaultBuffer_System_Exception_">DbTypeCheck&lt;ExpandoObject&gt;.FaultBuffer(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="/api/etlbox.dataflow/dbtypecheck-1#ETLBox_DataFlow_DbTypeCheck_1_AddComplementVoidLinkToOtherTargets_System_Func_System_Type_ETLBox_IDataFlowDestination__System_Delegate_">DbTypeCheck&lt;ExpandoObject&gt;.AddComplementVoidLinkToOtherTargets(Func&lt;Type, IDataFlowDestination&gt;, Delegate)</a>
     </div>
     <div>
@@ -120,6 +126,12 @@ can be redirected as an <a class="xref" href="/api/etlbox/etlboxerror">ETLBoxErr
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_CompleteBuffer">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.CompleteBuffer()</a>
+    </div>
+    <div>
+      <a class="xref" href="/api/etlbox.dataflow/dataflowtransformation-2#ETLBox_DataFlow_DataFlowTransformation_2_FaultBuffer_System_Exception_">DataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;.FaultBuffer(Exception)</a>
     </div>
     <div>
       <a class="xref" href="/api/etlbox.dataflow/dataflowsource-1#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_IDataFlowDestination__0__">DataFlowSource&lt;ExpandoObject&gt;.LinkTo(IDataFlowDestination&lt;ExpandoObject&gt;)</a>

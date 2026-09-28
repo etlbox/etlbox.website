@@ -2,5 +2,5 @@
 title : "ETLBox.ClickHouse"
 description: "All classes of the namespace ETLBox.ClickHouse"
 draft: false
-weight: 700
+weight: 800
 ---
