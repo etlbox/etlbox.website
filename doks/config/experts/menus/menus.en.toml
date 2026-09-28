@@ -30,25 +30,25 @@ weight = 80
 [[main]]
 name = "ETLBox"
 parent = "more"
-url = "https://www.etlbox.net"
+url = "https://etlbox.net"
 weight = 81
 
 [[main]]
 name = "DirectSync"
 parent = "more"
-url = "https://www.directsync.net"
+url = "https://directsync.net"
 weight = 82
 
 [[main]]
 name = "DB Extensions"
 parent = "more"
-url = "https://www.dbextensions.net"
+url = "https://dbextensions.net"
 weight = 83
 
 [[main]]
 name = "CloneBox"
 parent = "more"
-url = "https://www.clonebox.io"
+url = "https://clonebox.io"
 weight = 84
 
 [[social]]
