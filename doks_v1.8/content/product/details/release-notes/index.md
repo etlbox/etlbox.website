@@ -11,6 +11,19 @@ weight: 120
 toc: true
 ---
 
+## Version 3.11.0
+
+#### Features:
+
+- ColumnTransfomration: Allow to add columns
+- License check continues search on all locations until valid key is found
+- Introducing ETLBox.AI package
+- ETLBox.AI: Added ChatTransformation & ChatBatchTransformation for AI
+- ETLBox.AI: Added EmbeddingTransformation & EmbeddingBatchTransfomration for AI
+- ETLBox.AI: Added VectorSource & VectorDestination
+- Adding NetworkHelper to replace Source & Destinations in existing dataflows
+- New cloning library: CloneBox
+
 ## Version 3.10.0
 
 #### Features:
