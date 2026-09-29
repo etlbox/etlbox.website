@@ -17,7 +17,7 @@ $bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap
   src: $bootstrap-icons-font-src;
 }
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
@@ -32,7 +32,7 @@ $bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 $bootstrap-icons-map: (
   "123": "\f67f",
