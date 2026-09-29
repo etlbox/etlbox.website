@@ -102,3 +102,10 @@ country = "U.K."
 link = "https://www.atdsol.com/"
 image_light = "/images/references/atdsol_light.png"
 image_dark = "/images/references/atdsol_dark.png"
+
+[[customer]]
+name = "Source Technology "
+country = "Australia"
+link = "https://www.sourcetechnology.com.au/"
+image_light = "/images/references/source_technology_light.svg"
+image_dark = "/images/references/source_technology_dark.svg"
