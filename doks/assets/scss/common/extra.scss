@@ -38,10 +38,15 @@ i.large {
   padding: 2.75rem 0 1.25rem;
 }
 
-.experts-hero h1 {
+.home .experts-hero .experts-kicker {
+  margin-bottom: 1.25rem;
+}
+
+.home .experts-hero h1 {
   font-size: clamp(2rem, 4vw, 2.85rem);
   line-height: 1.18;
   letter-spacing: -0.03em;
+  margin-top: 0;
 }
 
 .experts-hero .lead {
